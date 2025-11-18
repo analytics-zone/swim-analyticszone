@@ -153,55 +153,16 @@
 
     
     <style>
-/* Critical CSS - Editorial Magazine Style - Above the fold */
+/* Critical CSS - Above the fold */
 :root {
-  /* Navy palette - primary text and headings */
-  --color-navy-900: #0A1628;
-  --color-navy-800: #15283E;
-  --color-navy-700: #1E3A54;
-
-  /* Emerald palette - accents and CTAs */
-  --color-emerald-600: #047857;
-  --color-emerald-500: #10B981;
-  --color-emerald-400: #34D399;
-
-  /* Cream palette - backgrounds */
-  --color-cream-50: #FDFBF7;
-  --color-cream-100: #F8F6F1;
-  --color-cream-200: #F0EDE5;
-
-  /* Text colors */
-  --color-text: var(--color-navy-900);
-  --color-text-secondary: #546E7A;
-  --color-bg: var(--color-cream-50);
-
-  /* Spacing scale */
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-
-  /* Typography */
-  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-body: 'Crimson Pro', Georgia, serif;
-  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-
-  /* Header */
-  --header-height: 72px;
-
-  /* Transitions */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-html.dark-mode {
-  --color-text: #ECEFF1;
-  --color-text-secondary: #B0BEC5;
-  --color-bg: var(--color-navy-900);
-  --color-cream-50: #0F1B2E;
-  --color-cream-100: #15283E;
-  --color-cream-200: #1E3A54;
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 * {
@@ -211,255 +172,88 @@ html.dark-mode {
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
   line-height: 1.6;
   color: var(--color-text);
   background: var(--color-bg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--space-4);
+  padding: 0 1rem;
 }
 
-/* Header - Editorial Style */
 .site-header {
-  background: rgba(253, 251, 247, 0.95);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 100;
-  height: var(--header-height);
-  display: flex;
-  align-items: center;
-  backdrop-filter: blur(12px);
-  transition: all var(--transition-base);
-}
-
-html.dark-mode .site-header {
-  background: rgba(10, 22, 40, 0.95);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.site-header.is-scrolled {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--space-8);
+  padding: 1rem 0;
 }
 
 .site-logo {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 700;
+  gap: 0.5rem;
+  text-decoration: none;
   color: var(--color-text);
-  text-decoration: none;
-  transition: all var(--transition-base);
-  letter-spacing: -0.01em;
+  font-weight: 600;
 }
 
-.site-logo img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  transition: transform var(--transition-base);
-}
-
-.site-logo:hover {
-  color: var(--color-emerald-600);
-  text-decoration: none;
-}
-
-.site-logo:hover img {
-  transform: scale(1.05);
-}
-
-/* Hero - Editorial Style */
-.hero, .app-hero {
-  background: linear-gradient(135deg, var(--color-navy-900) 0%, var(--color-navy-700) 100%);
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #ffffff;
-  padding: var(--space-8) var(--space-4);
+  padding: 4rem 2rem;
   text-align: center;
-  position: relative;
-  overflow: hidden;
 }
 
-.hero::before, .app-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, transparent 0%, rgba(16, 185, 129, 0.1) 100%);
-  pointer-events: none;
-}
-
-.hero h1, .app-hero h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: var(--space-4);
-  line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .lead {
-  font-family: var(--font-body);
-  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-  line-height: 1.6;
+  font-size: 1.25rem;
   opacity: 0.95;
-  max-width: 700px;
-  margin: 0 auto var(--space-6);
+  max-width: 800px;
+  margin: 0 auto 2rem;
 }
 
-/* Buttons - Editorial Style */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: var(--color-emerald-600);
+  background: var(--color-primary);
   color: #ffffff;
   text-decoration: none;
-  border-radius: 6px;
-  font-family: var(--font-ui);
+  border-radius: 0.375rem;
   font-weight: 600;
-  font-size: 0.9375rem;
-  transition: all var(--transition-base);
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(4, 120, 87, 0.2);
-}
-
-.btn:hover {
-  background: #059669;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(4, 120, 87, 0.3);
+  transition: all 0.2s;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-emerald-600) 0%, var(--color-emerald-500) 100%);
+  background: #0066CC;
 }
 
 .btn-large {
   padding: 1rem 2rem;
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
 }
 
-/* Utility */
 .hidden {
-  display: none !important;
+  display: none;
 }
 
-/* Navigation - Editorial Style */
-.nav-primary {
-  display: flex;
-  gap: var(--space-4);
-  align-items: center;
-}
-
-.nav-primary ul {
-  display: flex;
-  gap: var(--space-2);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-primary a {
-  font-family: var(--font-ui);
-  font-weight: 500;
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
-  padding: var(--space-2) var(--space-4);
-  border-radius: 4px;
-  transition: all var(--transition-fast);
-  white-space: nowrap;
-  display: inline-block;
-  position: relative;
-}
-
-.nav-primary a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: var(--space-4);
-  right: var(--space-4);
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-emerald-600), var(--color-emerald-500));
-  transform: scaleX(0);
-  transition: transform var(--transition-base);
-}
-
-.nav-primary a:hover {
-  color: var(--color-emerald-600);
-  background: transparent;
-  text-decoration: none;
-}
-
-.nav-primary a:hover::after {
-  transform: scaleX(1);
-}
-
-/* Dropdown label buttons */
-.nav-primary button.nav-label {
-  background: none;
-  border: none;
-  margin: 0;
-  font: inherit;
-  text-align: left;
-  font-family: var(--font-ui);
-  font-weight: 500;
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
-  padding: var(--space-2) var(--space-4);
-  border-radius: 4px;
-  transition: all var(--transition-fast);
-  white-space: nowrap;
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-}
-
-.nav-primary button.nav-label::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: var(--space-4);
-  right: var(--space-4);
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-emerald-600), var(--color-emerald-500));
-  transform: scaleX(0);
-  transition: transform var(--transition-base);
-}
-
-.nav-primary button.nav-label:hover {
-  color: var(--color-emerald-600);
-  background: transparent;
-}
-
-.nav-primary button.nav-label:hover::after {
-  transform: scaleX(1);
-}
-
-/* Loading spinner for async CSS */
-.css-loading {
-  opacity: 0;
-  transition: opacity 0.3s ease-in;
-}
-
-.css-loaded {
-  opacity: 1;
-}
+/* App Banner - Dual Platform (iOS + Android) */
+.app-banner{background:linear-gradient(135deg,#0066CC 0%,#004C99 100%);color:#fff;padding:1rem 1.5rem;position:relative;box-shadow:0 2px 12px rgba(0,102,204,.15);animation:slideDown .4s cubic-bezier(.4,0,.2,1);z-index:1000}.app-banner.hidden,.app-banner[data-dismissed=true]{display:none}@keyframes slideDown{from{transform:translateY(-100%);opacity:0}to{transform:translateY(0);opacity:1}}.app-banner__container{max-width:1200px;margin:0 auto;position:relative}.app-banner__close{position:absolute;top:-.5rem;right:0;background:rgba(255,255,255,.15);border:none;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s ease;color:#fff;z-index:10}.app-banner__close:focus,.app-banner__close:hover{background:rgba(255,255,255,.25);transform:scale(1.1)}.app-banner__close:focus{outline:2px solid rgba(255,255,255,.8);outline-offset:2px}.app-banner__content{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}.app-banner__icon{flex-shrink:0}.app-banner__icon svg{display:block;filter:drop-shadow(0 4px 8px rgba(0,0,0,.15))}.app-banner__text{flex:1 1 200px;min-width:200px}.app-banner__title{font-size:1.125rem;font-weight:700;margin:0 0 .25rem 0;line-height:1.3;color:#fff}.app-banner__description{font-size:.875rem;margin:0;opacity:.95;line-height:1.4;color:rgba(255,255,255,.95)}.app-banner__badges{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center}.app-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);border-radius:8px;color:#fff;text-decoration:none;font-size:.875rem;font-weight:600;transition:all .3s cubic-bezier(.4,0,.2,1);opacity:.85;transform:scale(.98);min-width:140px}.app-badge:focus,.app-badge:hover{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.5);opacity:1;transform:scale(1.02);box-shadow:0 4px 12px rgba(0,0,0,.2)}.app-badge:focus{outline:2px solid rgba(255,255,255,.8);outline-offset:3px}.app-badge--highlighted{opacity:1;transform:scale(1);background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.6);box-shadow:0 0 0 3px rgba(255,255,255,.2),0 4px 12px rgba(0,0,0,.15);animation:subtle-pulse 3s ease-in-out infinite}@keyframes subtle-pulse{0%,100%{box-shadow:0 0 0 3px rgba(255,255,255,.2),0 4px 12px rgba(0,0,0,.15)}50%{box-shadow:0 0 0 4px rgba(255,255,255,.3),0 6px 16px rgba(0,0,0,.2)}}.app-badge__icon{width:20px;height:20px;flex-shrink:0}.app-badge__text{white-space:nowrap}.visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media (max-width:640px){.app-banner{padding:1rem}.app-banner__content{flex-direction:column;text-align:center;gap:1rem}.app-banner__icon{margin:0 auto}.app-banner__icon svg{width:48px;height:48px}.app-banner__badges{justify-content:center;width:100%;flex-direction:column}.app-badge{width:100%;max-width:280px;justify-content:center}.app-banner__title{font-size:1rem}.app-banner__description{font-size:.8125rem}.app-banner__close{top:.5rem;right:.5rem}}@media (min-width:641px) and (max-width:1024px){.app-banner__icon{display:none}.app-banner__content{justify-content:space-between}.app-banner__badges{flex-direction:row}}@media (min-width:1025px){.app-banner__content{justify-content:space-between}.app-banner__badges{flex-shrink:0}}@media (prefers-reduced-motion:reduce){.app-banner{animation:none}.app-badge--highlighted{animation:none}.app-badge,.app-banner__close{transition:none}}@media print{.app-banner{display:none!important}}[dir=rtl] .app-banner__content{direction:rtl}[dir=rtl] .app-banner__close{left:0;right:auto}[dir=rtl] .app-badge{flex-direction:row-reverse}
 </style>
 
     
@@ -469,13 +263,8 @@ html.dark-mode .site-header {
     
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Crimson+Pro:wght@400;600&family=Inter:wght@400;500&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Crimson+Pro:wght@400;600&family=Inter:wght@400;500&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Crimson+Pro:wght@400;600&family=Inter:wght@400;500&display=swap"></noscript>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -590,6 +379,84 @@ html.dark-mode .site-header {
     <a href="#main-content" class="skip-to-content">İçeriğe atla</a>
 
     
+    <aside
+        role="banner"
+        aria-label="SwimAnalytics Uygulamasını Edinin"
+        class="app-banner hidden"
+        data-dismissed="false"
+        id="appDownloadBanner">
+        <div class="app-banner__container">
+            
+            <button
+                type="button"
+                class="app-banner__close"
+                aria-label="Afişi kapat"
+                data-action="dismiss-banner">
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20">
+                    <path d="M6 6L14 14M14 6L6 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <span class="visually-hidden">Afişi kapat</span>
+            </button>
+
+            
+            <div class="app-banner__content">
+                
+                <div class="app-banner__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                        <rect width="56" height="56" rx="12" fill="url(#swimGradient)"/>
+                        <path d="M28 12C34.6274 12 40 17.3726 40 24C40 30.6274 34.6274 36 28 36C21.3726 36 16 30.6274 16 24C16 17.3726 21.3726 12 28 12Z" fill="white" opacity="0.3"/>
+                        <path d="M28 16C32.4183 16 36 19.5817 36 24C36 28.4183 32.4183 32 28 32C23.5817 32 20 28.4183 20 24C20 19.5817 23.5817 16 28 16Z" fill="white"/>
+                        <path d="M25 22L31 24L25 26V22Z" fill="url(#swimGradient)"/>
+                        <defs>
+                            <linearGradient id="swimGradient" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0066CC"/>
+                                <stop offset="1" stop-color="#004C99"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                
+                <div class="app-banner__text">
+                    <h2 class="app-banner__title">SwimAnalytics Uygulamasını Edinin</h2>
+                    <p class="app-banner__description">Yüzme performansınızı hareket halinde takip edin</p>
+                </div>
+
+                
+                <div class="app-banner__badges" role="group" aria-label="İndirme seçenekleri">
+                    
+                    <a
+                        href="https://apps.apple.com/app/swimanalytics/id6753306284"
+                        class="app-badge app-badge--ios"
+                        data-platform="ios"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-label="App Store&#39;dan İndirin">
+                        <svg class="app-badge__icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                        </svg>
+                        <span class="app-badge__text">App Store&#39;dan İndirin</span>
+                    </a>
+
+                    
+                    <a
+                        href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics"
+                        class="app-badge app-badge--android"
+                        data-platform="android"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-label="Google Play&#39;den Edinin">
+                        <svg class="app-badge__icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35m13.81-5.24L6.05 21.34l8.49-8.49 2.27 2.27m1.19-6.5C18.66 9 19 9.5 19 10.1c0 .59-.34 1.1-.84 1.35L16 12.74 14.27 11 16 9.26m-9.95-6.61l10.76 6.08-2.27 2.27L6.05 2.66z"/>
+                        </svg>
+                        <span class="app-badge__text">Google Play&#39;den Edinin</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    
     <header class="site-header">
     <div class="container">
         <div class="header-inner">
@@ -628,9 +495,7 @@ html.dark-mode .site-header {
                             
                             
                                 
-                                <button type="button" class="nav-label" aria-haspopup="true" aria-expanded="false">
-                                    Öğren
-                                </button>
+                                <span class="nav-label">Öğren</span>
                             
                             <ul class="submenu">
                                 
@@ -683,9 +548,7 @@ html.dark-mode .site-header {
                             
                             
                                 
-                                <button type="button" class="nav-label" aria-haspopup="true" aria-expanded="false">
-                                    Bilim
-                                </button>
+                                <span class="nav-label">Bilim</span>
                             
                             <ul class="submenu">
                                 
@@ -1890,7 +1753,6 @@ html.dark-mode .site-header {
     <script src="/assets/js/lazy-load.min.js" defer></script>
     <script src="/assets/js/carousel.min.js" defer></script>
     <script src="/assets/js/css-calculator.min.js" defer></script>
-    <script src="/assets/js/scroll-animations.min.js" defer></script>
 
     
     <script src="/assets/js/fuse.min.js" defer></script>
