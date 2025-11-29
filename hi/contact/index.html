@@ -704,12 +704,14 @@ body {
                 </button>
 
                 
-                <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="header-download-btn" target="_blank" rel="noopener" aria-label="Download on App Store">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
-                    </svg>
-                    <span class="download-text">Download</span>
-                </a>
+                <div class="header-download-badges">
+                    <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="header-badge" target="_blank" rel="noopener" aria-label="Download on App Store">
+                        <img src="/assets/images/badge-app-store.svg" alt="App Store" width="90" height="30">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-badge" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+                        <img src="/assets/images/badge-google-play.svg" alt="Google Play" width="90" height="30">
+                    </a>
+                </div>
             </nav>
 
             
@@ -726,11 +728,11 @@ body {
     <main id="main-content" class="main-content">
         <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-md">संपर्क करें</h1>
-        <p class="mb-3xl">हम आपसे सुनना पसंद करेंगे। फॉर्म भरें और हम जल्द से जल्द जवाब देंगे।</p>
+        <h1 class="mb-md">संपर्क</h1>
+        <p class="mb-3xl">हम आपसे सुनने के लिए उत्सुक हैं। फॉर्म भरें, हम जल्द से जल्द जवाब देंगे।</p>
 
-        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="post">
-            <!-- Web3Forms Access Key (from config.json) -->
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key -->
             <input type="hidden" name="access_key" value="d7b6922a-f426-43d3-8bad-d97da69801e2">
 
             <!-- Language identifier -->
@@ -756,19 +758,21 @@ body {
             </div>
 
             <div class="form-group">
-                <label for="subject" class="form-label">विषय</label>
-                <input type="text" id="subject" name="subject" class="form-input">
+                <label for="user-subject" class="form-label">विषय</label>
+                <input type="text" id="user-subject" name="user_subject" class="form-input">
             </div>
 
             <div class="form-group">
                 <label for="message" class="form-label required">संदेश</label>
-                <textarea id="message" name="message" class="form-textarea" required></textarea>
+                <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
                 <span class="form-error" id="message-error"></span>
             </div>
 
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-large">संदेश भेजें</button>
             </div>
+
+            <div id="form-status" class="form-status hidden"></div>
         </form>
 
         <div class="divider-top-xl">
@@ -779,8 +783,8 @@ body {
                     <p><a href="mailto:swimanalytics@onmedic.org">swimanalytics@onmedic.org</a></p>
                 </div>
                 <div>
-                    <h3 class="text-lg-tight mb-sm">फोन</h3>
-                    <p><a href="tel:+34123456789">+34 123 456 789</a></p>
+                    <h3 class="text-lg-tight mb-sm">सोशल मीडिया</h3>
+                    <p><a href="https://twitter.com/swimanalytics" target="_blank" rel="noopener">@swimanalytics</a></p>
                 </div>
             </div>
         </div>
