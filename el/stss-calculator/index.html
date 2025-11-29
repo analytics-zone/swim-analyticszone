@@ -759,396 +759,351 @@ body {
     
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
-    <div class="container">
-        <h1>Δωρεάν Υπολογιστής TSS Κολύμβησης</h1>
-        <p class="lead">Υπολογίστε το Σκορ Στρες Προπόνησης για προπονήσεις κολύμβησης - Ο μόνος δωρεάν υπολογιστής sTSS
+<div class="container">
+<h1>Δωρεάν Υπολογιστής TSS Κολύμβησης</h1>
+<p class="lead">Υπολογίστε το Σκορ Στρες Προπόνησης για προπονήσεις κολύμβησης - Ο μόνος δωρεάν υπολογιστής sTSS
         </p>
-    </div>
+</div>
 </section>
-
 <section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>Τι είναι το TSS Κολύμβησης (sTSS);</h2>
-            <p><strong>Το Σκορ Στρες Προπόνησης Κολύμβησης (sTSS)</strong> ποσοτικοποιεί το φορτίο προπόνησης μιας
+<div class="container container-narrow">
+<div class="callout callout-info mb-xl">
+<h2>Τι είναι το TSS Κολύμβησης (sTSS);</h2>
+<p><strong>Το Σκορ Στρες Προπόνησης Κολύμβησης (sTSS)</strong> ποσοτικοποιεί το φορτίο προπόνησης μιας
                 συνεδρίας κολύμβησης συνδυάζοντας ένταση και διάρκεια. Είναι προσαρμοσμένο από τη μεθοδολογία TSS της
                 ποδηλασίας, χρησιμοποιώντας την Κρίσιμη Ταχύτητα Κολύμβησης (CSS) ως ρυθμό κατωφλίου. Μια προπόνηση 1
                 ώρας σε ρυθμό CSS = 100 sTSS.</p>
-        </div>
-
-        <h2 class="mt-3xl">Δωρεάν Υπολογιστής sTSS</h2>
-        <p class="lead mb-xl">Υπολογίστε το στρες προπόνησης για οποιαδήποτε συνεδρία κολύμβησης. Απαιτεί τον ρυθμό CSS
+</div>
+<h2 class="mt-3xl">Δωρεάν Υπολογιστής sTSS</h2>
+<p class="lead mb-xl">Υπολογίστε το στρες προπόνησης για οποιαδήποτε συνεδρία κολύμβησης. Απαιτεί τον ρυθμό CSS
             σας.</p>
-
-        <div class="css-calculator">
-            <form id="stssCalculatorForm">
-                <div class="calculator-inputs">
-                    <div class="form-group">
-                        <label for="cssPace" class="form-label">Ο Ρυθμός CSS σας (λλ:δδ ανά 100μ)</label>
-                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
-                        <small id="cssPace-help" class="form-help">Ο ρυθμός κατωφλίου σας από το τεστ CSS (π.χ.
+<div class="css-calculator">
+<form id="stssCalculatorForm">
+<div class="calculator-inputs">
+<div class="form-group">
+<label class="form-label" for="cssPace">Ο Ρυθμός CSS σας (λλ:δδ ανά 100μ)</label>
+<input aria-describedby="cssPace-help" aria-required="true" class="form-input" id="cssPace" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="1:49" type="text"/>
+<small class="form-help" id="cssPace-help">Ο ρυθμός κατωφλίου σας από το τεστ CSS (π.χ.
                             1:49)</small>
-                        <div class="form-error" id="cssPace-error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Διάρκεια Προπόνησης (λεπτά)</label>
-                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
-                            aria-required="true" aria-describedby="duration-help" />
-                        <small id="duration-help" class="form-help">Συνολικός χρόνος προπόνησης συμπεριλαμβανομένων των
+<div class="form-error" id="cssPace-error"></div>
+</div>
+<div class="form-group">
+<label class="form-label" for="workoutDuration">Διάρκεια Προπόνησης (λεπτά)</label>
+<input aria-describedby="duration-help" aria-required="true" class="form-input" id="workoutDuration" max="300" min="1" placeholder="60" type="number"/>
+<small class="form-help" id="duration-help">Συνολικός χρόνος προπόνησης συμπεριλαμβανομένων των
                             διαλειμμάτων (1-300 λεπτά)</small>
-                        <div class="form-error" id="duration-error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="avgPace" class="form-label">Μέσος Ρυθμός Προπόνησης (λλ:δδ ανά 100μ)</label>
-                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
-                        <small id="pace-help" class="form-help">Ο μέσος ρυθμός σας κατά τη διάρκεια της προπόνησης (π.χ.
+<div class="form-error" id="duration-error"></div>
+</div>
+<div class="form-group">
+<label class="form-label" for="avgPace">Μέσος Ρυθμός Προπόνησης (λλ:δδ ανά 100μ)</label>
+<input aria-describedby="pace-help" aria-required="true" class="form-input" id="avgPace" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="2:05" type="text"/>
+<small class="form-help" id="pace-help">Ο μέσος ρυθμός σας κατά τη διάρκεια της προπόνησης (π.χ.
                             2:05)</small>
-                        <div class="form-error" id="pace-error"></div>
-                    </div>
-
-                    <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Υπολογισμός sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Καθαρισμός</button>
-                    </div>
-                </div>
-            </form>
-
-            <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Το Training Stress Score σας</h3>
-                <div class="results-summary">
-                    <div class="result-item">
-                        <div class="result-label">sTSS</div>
-                        <div class="css-result-value" id="stssValue">--</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-label">Συντελεστής Έντασης (IF)</div>
-                        <div class="css-result-value" id="intensityFactor">--</div>
-                    </div>
-                </div>
-
-                <div class="zones-result">
-                    <h4>Ερμηνεία Φορτίου Προπόνησης</h4>
-                    <p class="mb-md text-secondary" id="stssInterpretation">
-                        <!-- Filled by JavaScript -->
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">Πώς Υπολογίζεται το sTSS</h2>
-
-        <div class="formula-box">
-            <h3>Τύπος</h3>
-            <div class="formula">
+<div class="form-error" id="pace-error"></div>
+</div>
+<div class="calculator-buttons">
+<button class="btn btn-primary" id="calculateStssBtn" type="submit">Υπολογισμός sTSS</button>
+<button class="btn btn-ghost" id="resetStssBtn" type="reset">Καθαρισμός</button>
+</div>
+</div>
+</form>
+<div aria-live="polite" class="calculator-results hidden" id="stssResults">
+<h3>Το Training Stress Score σας</h3>
+<div class="results-summary">
+<div class="result-item">
+<div class="result-label">sTSS</div>
+<div class="css-result-value" id="stssValue">--</div>
+</div>
+<div class="result-item">
+<div class="result-label">Συντελεστής Έντασης (IF)</div>
+<div class="css-result-value" id="intensityFactor">--</div>
+</div>
+</div>
+<div class="zones-result">
+<h4>Ερμηνεία Φορτίου Προπόνησης</h4>
+<p class="mb-md text-secondary" id="stssInterpretation">
+ Filled by JavaScript 
+</p>
+</div>
+</div>
+</div>
+<h2 class="mt-3xl">Πώς Υπολογίζεται το sTSS</h2>
+<div class="formula-box">
+<h3>Τύπος</h3>
+<div class="formula">
                 sTSS = (Διάρκεια σε ώρες) × (Συντελεστής Έντασης)² × 100
             </div>
-            <div class="formula-explanation">
-                <p>Όπου:</p>
-                <ul>
-                    <li><strong>Συντελεστής Έντασης (IF)</strong> = Ρυθμός CSS / Μέσος Ρυθμός Προπόνησης</li>
-                    <li><strong>Διάρκεια</strong> = Συνολικός χρόνος προπόνησης σε ώρες</li>
-                    <li><strong>Ρυθμός CSS</strong> = Ο ρυθμός κατωφλίου σας από το τεστ CSS</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3 class="mt-xl">Πρακτικό Παράδειγμα</h3>
-        <div class="example-box">
-            <h4>Λεπτομέρειες Προπόνησης:</h4>
-            <ul>
-                <li>Ρυθμός CSS: <strong>1:49/100μ</strong> (109 δευτερόλεπτα)</li>
-                <li>Διάρκεια Προπόνησης: <strong>60 λεπτά</strong> (1 ώρα)</li>
-                <li>Μέσος Ρυθμός: <strong>2:05/100μ</strong> (125 δευτερόλεπτα)</li>
-            </ul>
-
-            <h4>Βήμα 1: Υπολογισμός Συντελεστή Έντασης</h4>
-            <div class="calculation">
-                IF = Ρυθμός CSS / Ρυθμός Προπόνησης<br>
-                IF = 109 / 125<br>
+<div class="formula-explanation">
+<p>Όπου:</p>
+<ul>
+<li><strong>Συντελεστής Έντασης (IF)</strong> = Ρυθμός CSS / Μέσος Ρυθμός Προπόνησης</li>
+<li><strong>Διάρκεια</strong> = Συνολικός χρόνος προπόνησης σε ώρες</li>
+<li><strong>Ρυθμός CSS</strong> = Ο ρυθμός κατωφλίου σας από το τεστ CSS</li>
+</ul>
+</div>
+</div>
+<h3 class="mt-xl">Πρακτικό Παράδειγμα</h3>
+<div class="example-box">
+<h4>Λεπτομέρειες Προπόνησης:</h4>
+<ul>
+<li>Ρυθμός CSS: <strong>1:49/100μ</strong> (109 δευτερόλεπτα)</li>
+<li>Διάρκεια Προπόνησης: <strong>60 λεπτά</strong> (1 ώρα)</li>
+<li>Μέσος Ρυθμός: <strong>2:05/100μ</strong> (125 δευτερόλεπτα)</li>
+</ul>
+<h4>Βήμα 1: Υπολογισμός Συντελεστή Έντασης</h4>
+<div class="calculation">
+                IF = Ρυθμός CSS / Ρυθμός Προπόνησης<br/>
+                IF = 109 / 125<br/>
                 IF = <strong>0.872</strong>
-            </div>
-
-            <h4>Βήμα 2: Υπολογισμός sTSS</h4>
-            <div class="calculation">
-                sTSS = 1.0 ώρες × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
+</div>
+<h4>Βήμα 2: Υπολογισμός sTSS</h4>
+<div class="calculation">
+                sTSS = 1.0 ώρες × (0.872)² × 100<br/>
+                sTSS = 1.0 × 0.760 × 100<br/>
                 sTSS = <strong>76</strong>
-            </div>
-
-            <p class="mt-md"><strong>Ερμηνεία:</strong> Αυτή η προπόνηση 60 λεπτών σε χαλαρό ρυθμό (πιο αργό από το CSS)
+</div>
+<p class="mt-md"><strong>Ερμηνεία:</strong> Αυτή η προπόνηση 60 λεπτών σε χαλαρό ρυθμό (πιο αργό από το CSS)
                 παρήγαγε 76 sTSS - ένα μέτριο φορτίο προπόνησης κατάλληλο για χτίσιμο αερόβιας βάσης.</p>
-        </div>
-
-        <h2 class="mt-3xl">Ερμηνεία Τιμών sTSS</h2>
-
-        <div class="zones-table-container">
-            <table class="zones-table">
-                <thead>
-                    <tr>
-                        <th>Εύρος sTSS</th>
-                        <th>Φορτίο Προπόνησης</th>
-                        <th>Χρόνος Ανάκαμψης</th>
-                        <th>Παράδειγμα Προπόνησης</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt; 50</td>
-                        <td>Χαμηλό</td>
-                        <td>Ίδια μέρα</td>
-                        <td>Χαλαρό κολύμπι 30 λεπτά, τεχνικές ασκήσεις</td>
-                    </tr>
-                    <tr>
-                        <td>50-100</td>
-                        <td>Μέτριο</td>
-                        <td>1 μέρα</td>
-                        <td>Αντοχή 60 λεπτά, σταθερός ρυθμός</td>
-                    </tr>
-                    <tr>
-                        <td>100-200</td>
-                        <td>Υψηλό</td>
-                        <td>1-2 μέρες</td>
-                        <td>Σετ κατωφλίου 90 λεπτά, διαλειμματική σε ρυθμό αγώνα</td>
-                    </tr>
-                    <tr>
-                        <td>200-300</td>
-                        <td>Πολύ Υψηλό</td>
-                        <td>2-3 μέρες</td>
-                        <td>Σκληρή προπόνηση 2 ωρών, πολλαπλά μπλοκ κατωφλίου</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; 300</td>
-                        <td>Ακραίο</td>
-                        <td>3+ μέρες</td>
-                        <td>Μεγάλος αγώνας (&gt;2 ώρες), υπερ-αντοχή</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 class="mt-3xl">Εβδομαδιαίος Οδηγός sTSS</h2>
-
-        <p class="mb-md">Το στοχευμένο εβδομαδιαίο sTSS εξαρτάται από το επίπεδο προπόνησης και τους στόχους σας:</p>
-
-        <div class="grid grid-2 mb-xl">
-            <div class="card">
-                <h3 class="card-title">Κολυμβητές Αναψυχής</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Εβδομαδιαίο sTSS:</strong> 150-300</p>
-                    <p>2-3 προπονήσεις την εβδομάδα, 50-100 sTSS η καθεμία. Εστίαση στην τεχνική και το χτίσιμο αερόβιας
+</div>
+<h2 class="mt-3xl">Ερμηνεία Τιμών sTSS</h2>
+<div class="zones-table-container">
+<table class="zones-table">
+<thead>
+<tr>
+<th>Εύρος sTSS</th>
+<th>Φορτίο Προπόνησης</th>
+<th>Χρόνος Ανάκαμψης</th>
+<th>Παράδειγμα Προπόνησης</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; 50</td>
+<td>Χαμηλό</td>
+<td>Ίδια μέρα</td>
+<td>Χαλαρό κολύμπι 30 λεπτά, τεχνικές ασκήσεις</td>
+</tr>
+<tr>
+<td>50-100</td>
+<td>Μέτριο</td>
+<td>1 μέρα</td>
+<td>Αντοχή 60 λεπτά, σταθερός ρυθμός</td>
+</tr>
+<tr>
+<td>100-200</td>
+<td>Υψηλό</td>
+<td>1-2 μέρες</td>
+<td>Σετ κατωφλίου 90 λεπτά, διαλειμματική σε ρυθμό αγώνα</td>
+</tr>
+<tr>
+<td>200-300</td>
+<td>Πολύ Υψηλό</td>
+<td>2-3 μέρες</td>
+<td>Σκληρή προπόνηση 2 ωρών, πολλαπλά μπλοκ κατωφλίου</td>
+</tr>
+<tr>
+<td>&gt; 300</td>
+<td>Ακραίο</td>
+<td>3+ μέρες</td>
+<td>Μεγάλος αγώνας (&gt;2 ώρες), υπερ-αντοχή</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 class="mt-3xl">Εβδομαδιαίος Οδηγός sTSS</h2>
+<p class="mb-md">Το στοχευμένο εβδομαδιαίο sTSS εξαρτάται από το επίπεδο προπόνησης και τους στόχους σας:</p>
+<div class="grid grid-2 mb-xl">
+<div class="card">
+<h3 class="card-title">Κολυμβητές Αναψυχής</h3>
+<div class="card-content">
+<p class="mb-sm"><strong>Εβδομαδιαίο sTSS:</strong> 150-300</p>
+<p>2-3 προπονήσεις την εβδομάδα, 50-100 sTSS η καθεμία. Εστίαση στην τεχνική και το χτίσιμο αερόβιας
                         βάσης.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Κολυμβητές Fitness / Τριαθλητές</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Εβδομαδιαίο sTSS:</strong> 300-500</p>
-                    <p>3-4 προπονήσεις την εβδομάδα, 75-125 sTSS η καθεμία. Μίξη αερόβιας αντοχής και δουλειάς
+</div>
+</div>
+<div class="card">
+<h3 class="card-title">Κολυμβητές Fitness / Τριαθλητές</h3>
+<div class="card-content">
+<p class="mb-sm"><strong>Εβδομαδιαίο sTSS:</strong> 300-500</p>
+<p>3-4 προπονήσεις την εβδομάδα, 75-125 sTSS η καθεμία. Μίξη αερόβιας αντοχής και δουλειάς
                         κατωφλίου.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Αγωνιστικοί Κολυμβητές Masters</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Εβδομαδιαίο sTSS:</strong> 500-800</p>
-                    <p>4-6 προπονήσεις την εβδομάδα, 80-150 sTSS η καθεμία. Δομημένη προπόνηση με περιοδισμό.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Ελίτ / Πανεπιστημιακοί Κολυμβητές</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Εβδομαδιαίο sTSS:</strong> 800-1200+</p>
-                    <p>8-12 προπονήσεις την εβδομάδα, διπλές συνεδρίες. Υψηλός όγκος με κρίσιμη διαχείριση ανάκαμψης.
+</div>
+</div>
+<div class="card">
+<h3 class="card-title">Αγωνιστικοί Κολυμβητές Masters</h3>
+<div class="card-content">
+<p class="mb-sm"><strong>Εβδομαδιαίο sTSS:</strong> 500-800</p>
+<p>4-6 προπονήσεις την εβδομάδα, 80-150 sTSS η καθεμία. Δομημένη προπόνηση με περιοδισμό.</p>
+</div>
+</div>
+<div class="card">
+<h3 class="card-title">Ελίτ / Πανεπιστημιακοί Κολυμβητές</h3>
+<div class="card-content">
+<p class="mb-sm"><strong>Εβδομαδιαίο sTSS:</strong> 800-1200+</p>
+<p>8-12 προπονήσεις την εβδομάδα, διπλές συνεδρίες. Υψηλός όγκος με κρίσιμη διαχείριση ανάκαμψης.
                     </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-warning">
-            <h3>⚠️ Σημαντικές Σημειώσεις</h3>
-            <ul>
-                <li><strong>Απαιτεί ακριβές CSS:</strong> Το CSS σας πρέπει να είναι ενημερωμένο (ελεγμένο εντός 6-8
+</div>
+</div>
+</div>
+<div class="callout callout-warning">
+<h3>⚠️ Σημαντικές Σημειώσεις</h3>
+<ul>
+<li><strong>Απαιτεί ακριβές CSS:</strong> Το CSS σας πρέπει να είναι ενημερωμένο (ελεγμένο εντός 6-8
                     εβδομάδων) για ακριβές sTSS.</li>
-                <li><strong>Απλοποιημένος υπολογισμός:</strong> Αυτός ο υπολογιστής χρησιμοποιεί μέσο ρυθμό. Το
+<li><strong>Απλοποιημένος υπολογισμός:</strong> Αυτός ο υπολογιστής χρησιμοποιεί μέσο ρυθμό. Το
                     προηγμένο sTSS χρησιμοποιεί Normalized Graded Pace (NGP) που λαμβάνει υπόψη τη δομή των
                     διαλειμμάτων.</li>
-                <li><strong>Όχι για τεχνική δουλειά:</strong> Το sTSS μετρά μόνο το φυσικό στρες της προπόνησης, όχι την
+<li><strong>Όχι για τεχνική δουλειά:</strong> Το sTSS μετρά μόνο το φυσικό στρες της προπόνησης, όχι την
                     ανάπτυξη δεξιοτήτων.</li>
-                <li><strong>Ατομική διακύμανση:</strong> Το ίδιο sTSS αισθάνεται διαφορετικό για διαφορετικούς
+<li><strong>Ατομική διακύμανση:</strong> Το ίδιο sTSS αισθάνεται διαφορετικό για διαφορετικούς
                     κολυμβητές. Προσαρμόστε τις οδηγίες με βάση την ανάκαμψή σας.</li>
-            </ul>
-        </div>
-
-        <h2 class="mt-3xl">Γιατί Έχει Σημασία το sTSS</h2>
-
-        <p class="mb-md">Το Training Stress Score είναι η βάση για:</p>
-
-        <ul class="mb-xl">
-            <li><strong>CTL (Χρόνιο Φορτίο Προπόνησης):</strong> Το επίπεδο φυσικής σας κατάστασης - εκθετικά
+</ul>
+</div>
+<h2 class="mt-3xl">Γιατί Έχει Σημασία το sTSS</h2>
+<p class="mb-md">Το Training Stress Score είναι η βάση για:</p>
+<ul class="mb-xl">
+<li><strong>CTL (Χρόνιο Φορτίο Προπόνησης):</strong> Το επίπεδο φυσικής σας κατάστασης - εκθετικά
                 σταθμισμένος μέσος όρος 42 ημερών του ημερήσιου sTSS</li>
-            <li><strong>ATL (Οξύ Φορτίο Προπόνησης):</strong> Η κόπωσή σας - εκθετικά σταθμισμένος μέσος όρος 7 ημερών
+<li><strong>ATL (Οξύ Φορτίο Προπόνησης):</strong> Η κόπωσή σας - εκθετικά σταθμισμένος μέσος όρος 7 ημερών
                 του ημερήσιου sTSS</li>
-            <li><strong>TSB (Ισοζύγιο Στρες Προπόνησης):</strong> Η κατάσταση φόρμας σας - TSB = CTL - ATL (θετικό =
+<li><strong>TSB (Ισοζύγιο Στρες Προπόνησης):</strong> Η κατάσταση φόρμας σας - TSB = CTL - ATL (θετικό =
                 φρέσκος, αρνητικό = κουρασμένος)</li>
-            <li><strong>Περιοδισμός:</strong> Σχεδιασμός φάσεων προπόνησης (βάση, ανάπτυξη, κορύφωση, taper)
+<li><strong>Περιοδισμός:</strong> Σχεδιασμός φάσεων προπόνησης (βάση, ανάπτυξη, κορύφωση, taper)
                 χρησιμοποιώντας στοχευμένες προόδους CTL</li>
-            <li><strong>Διαχείριση Ανάκαμψης:</strong> Γνωρίζοντας πότε να πιέσετε και πότε να ξεκουραστείτε με βάση το
+<li><strong>Διαχείριση Ανάκαμψης:</strong> Γνωρίζοντας πότε να πιέσετε και πότε να ξεκουραστείτε με βάση το
                 TSB</li>
-        </ul>
-
-        <div class="callout callout-tip">
-            <h3>Επαγγελματική Συμβουλή: Παρακολουθήστε το CTL σας</h3>
-            <p>Καταγράψτε το ημερήσιο sTSS σε ένα υπολογιστικό φύλλο ή ημερολόγιο προπόνησης. Υπολογίστε τον μέσο όρο 42
+</ul>
+<div class="callout callout-tip">
+<h3>Επαγγελματική Συμβουλή: Παρακολουθήστε το CTL σας</h3>
+<p>Καταγράψτε το ημερήσιο sTSS σε ένα υπολογιστικό φύλλο ή ημερολόγιο προπόνησης. Υπολογίστε τον μέσο όρο 42
                 ημερών (CTL) εβδομαδιαία. Στοχεύστε σε αύξηση 5-10 πόντων CTL ανά εβδομάδα κατά τη διάρκεια της
                 κατασκευής βάσης. Διατηρήστε ή μειώστε ελαφρώς το CTL κατά τη διάρκεια του taper (1-2 εβδομάδες πριν τον
                 αγώνα).</p>
-        </div>
-        <h2 class="mt-3xl">Συχνές Ερωτήσεις</h2>
-
-        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Τι είναι το TSS Κολύμβησης (sTSS);</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Το Swimming Training Stress Score (sTSS) είναι μια μέτρηση που ποσοτικοποιεί το φορτίο
+</div>
+<h2 class="mt-3xl">Συχνές Ερωτήσεις</h2>
+<div class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage">
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Τι είναι το TSS Κολύμβησης (sTSS);</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Το Swimming Training Stress Score (sTSS) είναι μια μέτρηση που ποσοτικοποιεί το φορτίο
                             προπόνησης μιας συνεδρίας κολύμβησης συνδυάζοντας ένταση και διάρκεια. Είναι προσαρμοσμένο
                             από τη μεθοδολογία TSS της ποδηλασίας, χρησιμοποιώντας την Κρίσιμη Ταχύτητα Κολύμβησης (CSS)
                             ως ρυθμό κατωφλίου. Μια προπόνηση 1 ώρας σε ρυθμό CSS ισούται με 100 sTSS.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Πώς υπολογίζω το sTSS μου;</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Χρησιμοποιήστε τον παραπάνω υπολογιστή εισάγοντας τον ρυθμό CSS σας (από ένα τεστ CSS), τη
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Πώς υπολογίζω το sTSS μου;</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Χρησιμοποιήστε τον παραπάνω υπολογιστή εισάγοντας τον ρυθμό CSS σας (από ένα τεστ CSS), τη
                             συνολική διάρκεια προπόνησης και τον μέσο ρυθμό κατά τη διάρκεια της προπόνησης. Ο τύπος
                             είναι: sTSS = Διάρκεια (ώρες) × Συντελεστής Έντασης² × 100, όπου Συντελεστής Έντασης =
                             Ρυθμός CSS / Μέσος Ρυθμός Προπόνησης.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Χρειάζομαι CSS για να υπολογίσω το sTSS;</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Ναι, η Κρίσιμη Ταχύτητα Κολύμβησης (CSS) απαιτείται για τον υπολογισμό του Συντελεστή
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Χρειάζομαι CSS για να υπολογίσω το sTSS;</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Ναι, η Κρίσιμη Ταχύτητα Κολύμβησης (CSS) απαιτείται για τον υπολογισμό του Συντελεστή
                             Έντασης, ο οποίος είναι απαραίτητος για τον υπολογισμό του sTSS. Το CSS αντιπροσωπεύει τον
                             ρυθμό κατωφλίου σας και πρέπει να ελέγχεται κάθε 6-8 εβδομάδες. Μπορείτε να βρείτε το CSS
                             σας χρησιμοποιώντας τον <a href="/el/css/">υπολογιστή CSS</a> μας.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Ποιο είναι ένα καλό σκορ sTSS για μία προπόνηση;</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Εξαρτάται από την ένταση της προπόνησης: Οι εύκολες προπονήσεις συνήθως σκοράρουν κάτω από 50
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Ποιο είναι ένα καλό σκορ sTSS για μία προπόνηση;</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Εξαρτάται από την ένταση της προπόνησης: Οι εύκολες προπονήσεις συνήθως σκοράρουν κάτω από 50
                             sTSS, οι μέτριες 50-100 sTSS, οι σκληρές 100-200 sTSS και οι πολύ σκληρές πάνω από 200 sTSS.
                             Το κατάλληλο σκορ εξαρτάται από τους στόχους προπόνησής σας και το τρέχον επίπεδο φυσικής
                             κατάστασης.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Πόσο sTSS πρέπει να κάνω την εβδομάδα;</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Οι εβδομαδιαίοι στόχοι sTSS ποικίλλουν ανά επίπεδο: Κολυμβητές Αναψυχής: 150-300, Κολυμβητές
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Πόσο sTSS πρέπει να κάνω την εβδομάδα;</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Οι εβδομαδιαίοι στόχοι sTSS ποικίλλουν ανά επίπεδο: Κολυμβητές Αναψυχής: 150-300, Κολυμβητές
                             Fitness/Τριαθλητές: 300-500, Αγωνιστικοί Masters: 500-800, Ελίτ/Πανεπιστημιακοί: 800-1200+.
                             Ξεκινήστε συντηρητικά και αυξήστε σταδιακά για να αποφύγετε την υπερπροπόνηση.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Είναι το TSS κολύμβησης το ίδιο με το TSS ποδηλασίας;</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Η έννοια και ο τύπος είναι οι ίδιοι, αλλά το sTSS είναι προσαρμοσμένο για κολύμβηση. Αντί να
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Είναι το TSS κολύμβησης το ίδιο με το TSS ποδηλασίας;</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Η έννοια και ο τύπος είναι οι ίδιοι, αλλά το sTSS είναι προσαρμοσμένο για κολύμβηση. Αντί να
                             χρησιμοποιεί ισχύ (FTP) όπως το TSS ποδηλασίας, το sTSS χρησιμοποιεί ρυθμό με CSS ως
                             κατώφλι. Και τα δύο μετρούν το φορτίο προπόνησης χρησιμοποιώντας Διάρκεια × Συντελεστής
                             Έντασης² × 100.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Μπορώ να χρησιμοποιήσω το sTSS για όλα τα στυλ κολύμβησης;</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Ναι, αλλά το CSS σας πρέπει να είναι συγκεκριμένο για το στυλ. Οι περισσότεροι κολυμβητές
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Μπορώ να χρησιμοποιήσω το sTSS για όλα τα στυλ κολύμβησης;</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Ναι, αλλά το CSS σας πρέπει να είναι συγκεκριμένο για το στυλ. Οι περισσότεροι κολυμβητές
                             χρησιμοποιούν CSS ελεύθερο στυλ καθώς είναι το πιο συχνά προπονούμενο στυλ. Εάν προπονείστε
                             κυρίως σε άλλο στυλ, εκτελέστε ένα τεστ CSS σε αυτό το στυλ και χρησιμοποιήστε αυτόν τον
                             ρυθμό για τον υπολογισμό sTSS.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Ποια είναι η διαφορά μεταξύ sTSS και CTL/ATL/TSB;</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Το sTSS μετρά το φορτίο προπόνησης μιας μόνο προπόνησης. Το CTL (Chronic Training Load) είναι
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Ποια είναι η διαφορά μεταξύ sTSS και CTL/ATL/TSB;</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Το sTSS μετρά το φορτίο προπόνησης μιας μόνο προπόνησης. Το CTL (Chronic Training Load) είναι
                             η μακροπρόθεσμη φυσική σας κατάσταση, το ATL (Acute Training Load) είναι η πρόσφατη κόπωσή
                             σας, και το TSB (Training Stress Balance) είναι η φρεσκάδα σας. Αυτές οι μετρήσεις
                             χρησιμοποιούν τιμές sTSS με την πάροδο του χρόνου για να παρακολουθούν την κατάσταση
                             προπόνησής σας. Μάθετε περισσότερα στον <a href="/el/training-load/">οδηγό Φορτίου
                                 Προπόνησης</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">Σχετικοί Πόροι</h2>
-
-        <div class="grid grid-3">
-            <div class="card">
-                <h3 class="card-title">Τεστ CSS</h3>
-                <div class="card-content">
-                    <p>Χρειάζεστε τον ρυθμό CSS σας; Χρησιμοποιήστε τον δωρεάν υπολογιστή CSS μας με χρόνους δοκιμής
+</div>
+</div>
+</div>
+</div>
+<h2 class="mt-3xl">Σχετικοί Πόροι</h2>
+<div class="grid grid-3">
+<div class="card">
+<h3 class="card-title">Τεστ CSS</h3>
+<div class="card-content">
+<p>Χρειάζεστε τον ρυθμό CSS σας; Χρησιμοποιήστε τον δωρεάν υπολογιστή CSS μας με χρόνους δοκιμής
                         400μ και 200μ.</p>
-                    <a href="/el/css/" class="btn btn-secondary btn-small mt-md">Υπολογιστής CSS →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Οδηγός Φορτίου Προπόνησης</h3>
-                <div class="card-content">
-                    <p>Μάθετε για τα CTL, ATL, TSB και τις μετρήσεις του Διαγράμματος Διαχείρισης Απόδοσης.</p>
-                    <a href="/el/training-load/" class="btn btn-secondary btn-small mt-md">Φορτίο Προπόνησης →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Εφαρμογή Swim Analytics</h3>
-                <div class="card-content">
-                    <p>Αυτόματος υπολογισμός sTSS για όλες τις προπονήσεις. Παρακολουθήστε τις τάσεις CTL/ATL/TSB με την
+<a class="btn btn-secondary btn-small mt-md" href="/el/css/">Υπολογιστής CSS →</a>
+</div>
+</div>
+<div class="card">
+<h3 class="card-title">Οδηγός Φορτίου Προπόνησης</h3>
+<div class="card-content">
+<p>Μάθετε για τα CTL, ATL, TSB και τις μετρήσεις του Διαγράμματος Διαχείρισης Απόδοσης.</p>
+<a class="btn btn-secondary btn-small mt-md" href="/el/training-load/">Φορτίο Προπόνησης →</a>
+</div>
+</div>
+<div class="card">
+<h3 class="card-title">Εφαρμογή Swim Analytics</h3>
+<div class="card-content">
+<p>Αυτόματος υπολογισμός sTSS για όλες τις προπονήσεις. Παρακολουθήστε τις τάσεις CTL/ATL/TSB με την
                         πάροδο του χρόνου.</p>
-                    <a href="/el/" class="btn btn-secondary btn-small mt-md">Μάθετε Περισσότερα →</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Θέλετε αυτόματη παρακολούθηση sTSS;</strong></p>
-            <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank"
-                rel="noopener">Κατεβάστε το Swim Analytics Δωρεάν</a>
-        </div>
-    </div>
+<a class="btn btn-secondary btn-small mt-md" href="/el/">Μάθετε Περισσότερα →</a>
+</div>
+</div>
+</div>
+<div class="mt-xl text-center">
+<p class="mb-md"><strong>Θέλετε αυτόματη παρακολούθηση sTSS;</strong></p>
+<a class="btn btn-primary btn-large" href="https://apps.apple.com/app/swimanalytics/id6753306284" rel="noopener" target="_blank">Κατεβάστε το Swim Analytics Δωρεάν</a>
+</div>
+</div>
 </section>
-
 <script src="/assets/js/stss-calculator.min.js"></script>
     </main>
 

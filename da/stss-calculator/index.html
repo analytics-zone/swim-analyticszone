@@ -760,383 +760,123 @@ body {
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Gratis Svømme TSS Beregner</h1>
-        <p class="lead">Beregn Training Stress Score for svømmetræning - Den eneste gratis sTSS beregner</p>
+        <h1>Gratis Swimming TSS-beregner</h1>
+        <p class="lead">Indtast CSS og pasdata, få sTSS, IF og paces automatisk</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>Hvad er Svømme TSS (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> kvantificerer træningsbelastningen af en
-                svømmetræning ved at kombinere intensitet og varighed. Det er tilpasset fra cyklings TSS-metodologi, ved
-                at bruge din Critical Swim Speed (CSS) som tærskel-tempo. En 1-times træning ved CSS-tempo = 100 sTSS.
-            </p>
-        </div>
+        <h2>Hvad er Swimming TSS (sTSS)?</h2>
+        <p><strong>Swimming Training Stress Score (sTSS)</strong> kvantificerer belastning ved at kombinere intensitet og varighed. Baseret på cyklings TSS, men bruger <strong>IF³</strong> for at afspejle vandmodstand.</p>
 
-        <h2 class="mt-3xl">Gratis sTSS Beregner</h2>
-        <p class="lead mb-xl">Beregn træningsstress for enhver svømmetræning. Kræver dit CSS tempo.</p>
-
-        <div class="css-calculator">
-            <form id="stssCalculatorForm">
-                <div class="calculator-inputs">
-                    <div class="form-group">
-                        <label for="cssPace" class="form-label">Dit CSS Tempo (mm:ss per 100m)</label>
-                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
-                        <small id="cssPace-help" class="form-help">Dit tærskel-tempo fra CSS test (f.eks. 1:49)</small>
-                        <div class="form-error" id="cssPace-error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Træningsvarighed (minutter)</label>
-                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
-                            aria-required="true" aria-describedby="duration-help" />
-                        <small id="duration-help" class="form-help">Total træningstid inklusive pauser (1-300
-                            minutter)</small>
-                        <div class="form-error" id="duration-error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="avgPace" class="form-label">Gennemsnitligt Trænings Tempo (mm:ss per 100m)</label>
-                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
-                        <small id="pace-help" class="form-help">Dit gennemsnitlige tempo under træningen (f.eks.
-                            2:05)</small>
-                        <div class="form-error" id="pace-error"></div>
-                    </div>
-
-                    <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Beregn sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Ryd</button>
-                    </div>
-                </div>
-            </form>
-
-            <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Din Training Stress Score</h3>
-                <div class="results-summary">
-                    <div class="result-item">
-                        <div class="result-label">sTSS</div>
-                        <div class="css-result-value" id="stssValue">--</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-label">Intensitetsfaktor (IF)</div>
-                        <div class="css-result-value" id="intensityFactor">--</div>
-                    </div>
-                </div>
-
-                <div class="zones-result">
-                    <h4>Træningsbelastnings Fortolkning</h4>
-                    <p class="mb-md text-secondary" id="stssInterpretation">
-                        <!-- Filled by JavaScript -->
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">Sådan Beregnes sTSS</h2>
-
-        <div class="formula-box">
+        <div class="callout callout-info">
             <h3>Formel</h3>
-            <div class="formula">
-                sTSS = (Varighed i timer) × (Intensitetsfaktor)² × 100
-            </div>
-            <div class="formula-explanation">
-                <p>Hvor:</p>
-                <ul>
-                    <li><strong>Intensitetsfaktor (IF)</strong> = CSS Tempo / Gennemsnitligt Trænings Tempo</li>
-                    <li><strong>Varighed</strong> = Total træningstid i timer</li>
-                    <li><strong>CSS Tempo</strong> = Dit tærskel-tempo fra CSS test</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3 class="mt-xl">Udarbejdet Eksempel</h3>
-        <div class="example-box">
-            <h4>Træningsdetaljer:</h4>
-            <ul>
-                <li>CSS Tempo: <strong>1:49/100m</strong> (109 sekunder)</li>
-                <li>Træningsvarighed: <strong>60 minutter</strong> (1 time)</li>
-                <li>Gennemsnitligt Tempo: <strong>2:05/100m</strong> (125 sekunder)</li>
-            </ul>
-
-            <h4>Trin 1: Beregn Intensitetsfaktor</h4>
-            <div class="calculation">
-                IF = CSS Tempo / Trænings Tempo<br>
-                IF = 109 / 125<br>
-                IF = <strong>0.872</strong>
-            </div>
-
-            <h4>Trin 2: Beregn sTSS</h4>
-            <div class="calculation">
-                sTSS = 1.0 timer × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
-                sTSS = <strong>76</strong>
-            </div>
-
-            <p class="mt-md"><strong>Fortolkning:</strong> Denne 60-minutters træning i let tempo (langsommere end CSS)
-                genererede 76 sTSS - en moderat træningsbelastning velegnet til at opbygge aerob base.</p>
-        </div>
-
-        <h2 class="mt-3xl">Fortolkning af sTSS Værdier</h2>
-
-        <div class="zones-table-container">
-            <table class="zones-table">
-                <thead>
-                    <tr>
-                        <th>sTSS Område</th>
-                        <th>Træningsbelastning</th>
-                        <th>Restitutions Tid</th>
-                        <th>Trænings Eksempel</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt; 50</td>
-                        <td>Lav</td>
-                        <td>Samme dag</td>
-                        <td>Let 30 min svømning, teknikøvelser</td>
-                    </tr>
-                    <tr>
-                        <td>50-100</td>
-                        <td>Moderat</td>
-                        <td>1 dag</td>
-                        <td>60 min udholdenhed, konstant tempo</td>
-                    </tr>
-                    <tr>
-                        <td>100-200</td>
-                        <td>Høj</td>
-                        <td>1-2 dage</td>
-                        <td>90 min tærskel sæt, løbstempo intervaller</td>
-                    </tr>
-                    <tr>
-                        <td>200-300</td>
-                        <td>Meget Høj</td>
-                        <td>2-3 dage</td>
-                        <td>2 timers hård træning, multiple tærskel blokke</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; 300</td>
-                        <td>Ekstrem</td>
-                        <td>3+ dage</td>
-                        <td>Lang konkurrence (&gt;2 timer), ultra-udholdenhed</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 class="mt-3xl">Ugentlig sTSS Guide</h2>
-
-        <p class="mb-md">Målrettet ugentlig sTSS afhænger af dit træningsniveau og mål:</p>
-
-        <div class="grid grid-2 mb-xl">
-            <div class="card">
-                <h3 class="card-title">Rekreative Svømmere</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Ugentlig sTSS:</strong> 150-300</p>
-                    <p>2-3 træninger per uge, 50-100 sTSS hver. Fokus på teknik og aerob base opbygning.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Fitness Svømmere / Triatleter</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Ugentlig sTSS:</strong> 300-500</p>
-                    <p>3-4 træninger per uge, 75-125 sTSS hver. Blanding af aerob udholdenhed og tærskel arbejde.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Konkurrence Masters Svømmere</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Ugentlig sTSS:</strong> 500-800</p>
-                    <p>4-6 træninger per uge, 80-150 sTSS hver. Struktureret træning med periodisering.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Elite / Universitets Svømmere</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Ugentlig sTSS:</strong> 800-1200+</p>
-                    <p>8-12 træninger per uge, dobbelt sessioner. Højt volumen med kritisk restitutionsstyring.</p>
-                </div>
-            </div>
+            <p>sTSS = (IF³) × tid (timer) × 100</p>
+            <p>IF = NSS / CSS-hastighed</p>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Vigtige Noter</h3>
-            <ul>
-                <li><strong>Kræver præcis CSS:</strong> Din CSS skal være opdateret (testet inden for 6-8 uger) for
-                    præcis sTSS.</li>
-                <li><strong>Forenklet beregning:</strong> Denne beregner bruger gennemsnitligt tempo. Avanceret sTSS
-                    bruger Normalized Graded Pace (NGP) som tager højde for interval struktur.</li>
-                <li><strong>Ikke til teknikarbejde:</strong> sTSS måler kun fysisk træningsstress, ikke
-                    færdighedsudvikling.</li>
-                <li><strong>Individuel variation:</strong> Samme sTSS føles forskelligt for forskellige svømmere. Juster
-                    retningslinjer baseret på din restitution.</li>
-            </ul>
-        </div>
-
-        <h2 class="mt-3xl">Hvorfor sTSS Betyder Noget</h2>
-
-        <p class="mb-md">Training Stress Score er grundlaget for:</p>
-
-        <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Dit konditionsniveau - 42-dages eksponentielt vægtet
-                gennemsnit af daglig sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Din træthed - 7-dages eksponentielt vægtet gennemsnit af
-                daglig sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Din form - TSB = CTL - ATL (positiv = frisk, negativ =
-                træt)</li>
-            <li><strong>Periodisering:</strong> Planlæg træningsfaser (base, opbygning, peak, taper) ved hjælp af
-                målrettede CTL progressioner</li>
-            <li><strong>Restitutionsstyring:</strong> Vid hvornår du skal presse på og hvornår du skal hvile baseret på
-                TSB</li>
-        </ul>
-
-        <div class="callout callout-tip">
-            <h3>Pro Tip: Spor Din CTL</h3>
-            <p>Registrer daglig sTSS i et regneark eller træningsdagbog. Beregn dit 42-dages gennemsnit (CTL) ugentligt.
-                Mål om 5-10 CTL point stigning per uge under base opbygning. Bevar eller reducer CTL lidt under taper
-                (1-2 uger før konkurrence).</p>
-        </div>
-        <h2 class="mt-3xl">Ofte Stillede Spørgsmål</h2>
-
-        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hvad er Svømme TSS (sTSS)?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Swimming Training Stress Score (sTSS) er en metrik, der kvantificerer træningsbelastningen af
-                            en svømmetræning ved at kombinere både intensitet og varighed. Det er tilpasset fra cyklings
-                            TSS-metodologi, ved at bruge din Critical Swim Speed (CSS) som tærskel-tempo. En træning på
-                            1 time ved CSS tempo svarer til 100 sTSS.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hvordan beregner jeg min sTSS?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Brug beregneren ovenfor ved at indtaste dit CSS tempo (fra en CSS test), total
-                            træningsvarighed og gennemsnitligt tempo under træningen. Formlen er: sTSS = Varighed
-                            (timer) × Intensitetsfaktor² × 100, hvor Intensitetsfaktor = CSS Tempo / Gennemsnitligt
-                            Trænings Tempo.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Har jeg brug for CSS for at beregne sTSS?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Ja, din Critical Swim Speed (CSS) er påkrævet for at beregne Intensitetsfaktoren, som er
-                            essentiel for sTSS beregning. CSS repræsenterer dit tærskel-tempo og bør testes hver 6-8
-                            uge. Du kan finde din CSS ved hjælp af vores <a href="/da/css/">CSS beregner</a>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hvad er en god sTSS score for en træning?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Det afhænger af træningsintensitet: Lette træninger scorer typisk under 50 sTSS, moderate
-                            træninger 50-100 sTSS, hårde træninger 100-200 sTSS, og meget hårde træninger over 200 sTSS.
-                            Den passende score afhænger af dine træningsmål og nuværende fitnessniveau.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hvor meget sTSS skal jeg lave om ugen?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Ugentlige sTSS mål varierer efter niveau: Rekreative svømmere: 150-300, Fitness
-                            svømmere/Triatleter: 300-500, Konkurrence Masters: 500-800, Elite/Universitets: 800-1200+.
-                            Start konservativt og øg gradvist for at undgå overtræning.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Er svømme-TSS det samme som cykel-TSS?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Konceptet og formlen er de samme, men sTSS er tilpasset svømning. I stedet for at bruge
-                            effekt (FTP) som cykel-TSS, bruger sTSS tempo med CSS som tærskel. Begge måler
-                            træningsbelastning ved at bruge Varighed × Intensitetsfaktor² × 100.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Kan jeg bruge sTSS til alle svømmeslag?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Ja, men din CSS bør være slagspecifik. De fleste svømmere bruger crawl CSS, da det er det
-                            mest trænede slag. Hvis du primært træner i et andet slag, udfør en CSS-test i det slag og
-                            brug det tempo til sTSS-beregning.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hvad er forskellen mellem sTSS og CTL/ATL/TSB?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>sTSS måler træningsbelastningen for en enkelt træning. CTL (Chronic Training Load) er din
-                            langsigtede form, ATL (Acute Training Load) er din nylige træthed, og TSB (Training Stress
-                            Balance) er din friskhed. Disse målinger bruger sTSS-værdier over tid til at spore din
-                            træningstilstand. Lær mere i vores <a href="/da/training-load/">Træningsbelastning
-                                guide</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">Relaterede Ressourcer</h2>
-
-        <div class="grid grid-3">
-            <div class="card">
-                <h3 class="card-title">CSS Test</h3>
-                <div class="card-content">
-                    <p>Har du brug for dit CSS tempo? Brug vores gratis CSS beregner med 400m og 200m test tider.</p>
-                    <a href="/da/css/" class="btn btn-secondary btn-small mt-md">CSS Beregner →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Træningsbelastnings Guide</h3>
-                <div class="card-content">
-                    <p>Lær om CTL, ATL, TSB og Performance Management Chart metrikker.</p>
-                    <a href="/da/training-load/" class="btn btn-secondary btn-small mt-md">Træningsbelastning
-                        →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Swim Analytics App</h3>
-                <div class="card-content">
-                    <p>Automatisk sTSS beregning for alle træninger. Spor CTL/ATL/TSB tendenser over tid.</p>
-                    <a href="/da/" class="btn btn-secondary btn-small mt-md">Lær Mere →</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Vil du have automatisk sTSS sporing?</strong></p>
-            <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank"
-                rel="noopener">Download Swim Analytics Gratis</a>
+            <h3>⚠️ CSS er kritisk</h3>
+            <p>Forkert CSS = forkert IF/sTSS/CTL/ATL/TSB. Tag en korrekt <a href="/da/css/">CSS-test</a> først.</p>
         </div>
     </div>
 </section>
 
-<script src="/assets/js/stss-calculator.min.js"></script>
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">Sådan bruger du beregneren</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>1) Indtast CSS</h3>
+                <ul>
+                    <li>Beregn via 400m/200m tider eller</li>
+                    <li>Indtast kendt CSS-pace/hastighed</li>
+                </ul>
+            </div>
+            <div>
+                <h3>2) Pasdata</h3>
+                <ul>
+                    <li>Total distance (m)</li>
+                    <li>Bevægelsestid (min:sek)</li>
+                    <li>Udelad pausetid</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid grid-2 mt-xl">
+            <div>
+                <h3>3) Resultater</h3>
+                <ul>
+                    <li>IF (Intensity Factor)</li>
+                    <li>sTSS</li>
+                    <li>Gns. pace og zoner</li>
+                </ul>
+            </div>
+            <div>
+                <h3>4) Belastningsstyring</h3>
+                <p>Summér sTSS pr. dag/uge for at følge CTL/ATL/TSB.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Eksempel</h2>
+        <div class="example-box">
+            <h4>Input</h4>
+            <ul>
+                <li>CSS: 1:33/100m</li>
+                <li>Distance: 3000m</li>
+                <li>Bevægelsestid: 55:00</li>
+            </ul>
+            <h4>Output</h4>
+            <ul>
+                <li>IF ≈ 0,845</li>
+                <li>sTSS ≈ 55</li>
+                <li>Viser gns. pace og zonepaces</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2 class="text-center mb-xl">sTSS-intensitet</h2>
+        <table class="intensity-table">
+            <thead><tr><th>sTSS</th><th>Fortolkning</th><th>Eksempel</th></tr></thead>
+            <tbody>
+                <tr><td>&lt; 50</td><td>Restitution</td><td>30-45 min let/dril</td></tr>
+                <tr><td>50-100</td><td>Moderat</td><td>60-90 min aerob</td></tr>
+                <tr><td>100-200</td><td>Hård</td><td>Tærskel/VO₂ intervaller</td></tr>
+                <tr><td>200+</td><td>Meget hård</td><td>Lang, høj intensitet – planlagt restitution</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>FAQ</h2>
+        <div class="faq-item"><h3>sTSS vs TSS?</h3><p>Samme koncept, men svøm bruger IF³ for vandmodstand.</p></div>
+        <div class="faq-item"><h3>Pausetid?</h3><p>Medtages ikke – kun bevægelsestid for reel intensitet.</p></div>
+        <div class="faq-item"><h3>Kender ikke CSS?</h3><p>Tag <a href="/da/css/">CSS-test</a> først.</p></div>
+        <div class="faq-item"><h3>Open water?</h3><p>Ja, CSS-baseret sTSS gælder også open water.</p></div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow text-center">
+        <h2>Kvantificér træningsbelastning med sTSS</h2>
+        <p class="lead">Intensitet + tid i ét tal, baseret på din CSS.</p>
+        <div class="mt-xl">
+            <a href="/da/training-load/" class="btn btn-secondary">← Træningsbelastning</a>
+            <a href="/da/training-zones/" class="btn btn-primary">Træningszoner →</a>
+        </div>
+    </div>
+</section>
     </main>
 
     

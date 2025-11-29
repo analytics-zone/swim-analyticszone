@@ -730,107 +730,111 @@ body {
 
 <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-lg">Privatlivspolitik</h1>
+        <h1 class="mb-lg">SwimAnalytics privatlivspolitik</h1>
 
-        <p class="text-secondary mb-xl">Sidst opdateret: <strong>Januar 2024</strong></p>
+        <p class="text-secondary mb-xl"><strong>Sidst opdateret:</strong> 10. januar 2025 | <strong>Ikrafttræden:</strong> 10. januar 2025</p>
 
         <div class="mb-xl">
             <h2 class="mb-md">Introduktion</h2>
-            <p class="mb-md">
-                Denne Privatlivspolitik beskriver, hvordan vi indsamler, bruger og beskytter dine personlige oplysninger, når du besøger vores hjemmeside.
-            </p>
-            <p class="mb-md">
-                Vi er forpligtede til at beskytte dit privatliv og sikre, at dine personlige oplysninger håndteres sikkert og ansvarligt.
-            </p>
+            <p class="mb-md">SwimAnalytics ("vi", "appen") beskytter dit privatliv. Denne politik forklarer, hvordan vores iOS/Android-app tilgår, bruger og beskytter sundhedsdata fra din enhed.</p>
+            <div class="callout callout-info mb-md">
+                <p><strong>Nøgleprincip:</strong> SwimAnalytics kører på en <strong>zero-server, lokal-only</strong> arkitektur. Data fra Apple HealthKit eller Health Connect forbliver på din enhed og sendes ikke til eksterne servere, cloud eller tredjepart.</p>
+            </div>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Oplysninger Vi Indsamler</h2>
-            <h3 class="mb-sm">Oplysninger du giver direkte:</h3>
+            <h2 class="mb-md">1. Adgang til sundhedsdata</h2>
+            <p class="mb-md">Appen integrerer med enhedens sundhedsplatform for at analysere svømmepas.</p>
+
+            <h3 class="mb-sm">1.1 iOS – Apple HealthKit</h3>
+            <p class="mb-md">Vi anmoder om læseadgang til:</p>
             <ul class="mb-md">
-                <li>Kontaktoplysninger (navn, e-mail), når du bruger vores kontaktformular</li>
-                <li>Andre oplysninger, du vælger at give</li>
+                <li><strong>Træningspas:</strong> tid og varighed</li>
+                <li><strong>Distance:</strong> total og per bane</li>
+                <li><strong>Puls:</strong> under pas</li>
+                <li><strong>Aktiv energi:</strong> forbrændte kalorier</li>
+                <li><strong>Stroke count:</strong> til analyse</li>
+            </ul>
+            <p class="mb-md"><strong>HealthKit-overholdelse:</strong> Alle data behandles lokalt og deles ikke.</p>
+
+            <h3 class="mb-sm">1.2 Android – Health Connect</h3>
+            <div class="table-responsive mb-md">
+                <table class="table">
+                    <thead><tr><th>Datatype</th><th>Tilladelse</th><th>Formål</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Exercise Sessions</strong></td><td><code>READ_EXERCISE</code></td><td>Identificere/importere svømmepas</td></tr>
+                        <tr><td><strong>Distance Records</strong></td><td><code>READ_DISTANCE</code></td><td>Vis total/banelængde og pace</td></tr>
+                        <tr><td><strong>Heart Rate Records</strong></td><td><code>READ_HEART_RATE</code></td><td>Pulsdiagrammer, gennemsnit/maks</td></tr>
+                        <tr><td><strong>Speed Records</strong></td><td><code>READ_SPEED</code></td><td>Pace, zone, stroke rate</td></tr>
+                        <tr><td><strong>Calories Burned</strong></td><td><code>READ_TOTAL_CALORIES_BURNED</code></td><td>Energiforbrug</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="mb-md"><strong>Android-tilladelser:</strong> Anmodes ved første start; kan fjernes i Indstillinger → Apps → Health Connect → SwimAnalytics.</p>
+
+            <h3 class="mb-sm">1.3 Brug af sundhedsdata</h3>
+            <p class="mb-sm"><strong>Kun til:</strong></p>
+            <ul class="mb-md">
+                <li><strong>Visning:</strong> distance, tid, pace, puls</li>
+                <li><strong>Analyse:</strong> pace-zoner, strokeanalyse, CSS, sTSS</li>
+                <li><strong>Tracking:</strong> trends, personlige rekorder, resuméer</li>
+                <li><strong>Eksport:</strong> CSV til eget brug</li>
             </ul>
 
-            <h3 class="mb-sm">Oplysninger indsamlet automatisk:</h3>
+            <h3 class="mb-sm">1.4 Opbevaring</h3>
+            <div class="callout callout-success mb-md">
+                <h4 class="mb-sm">🔒 Privatlivsgaranti</h4>
+                <ul class="mb-0">
+                    <li><strong>iOS:</strong> Core Data, UserDefaults (lokalt)</li>
+                    <li><strong>Android:</strong> Room Database (lokal SQLite)</li>
+                    <li><strong>Ingen upload:</strong> sendes ikke til servere</li>
+                    <li><strong>Ingen internetoverførsel</strong></li>
+                    <li><strong>Ingen cloud-synk</strong></li>
+                    <li><strong>Ingen tredjepartsadgang</strong></li>
+                </ul>
+            </div>
+            <p class="mb-md">Data forlader kun enheden, hvis <strong>du selv</strong> eksporterer CSV og deler den.</p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">2. Nødvendige tilladelser</h2>
+            <h3 class="mb-sm">2.1 iOS</h3>
             <ul class="mb-md">
-                <li>Browsertype og -version</li>
-                <li>Operativsystem</li>
-                <li>Besøgte sider og tid brugt på sider</li>
-                <li>IP-adresse (anonymiseret)</li>
+                <li><strong>HealthKit læs:</strong> træning, distance, puls, aktiv energi, stroke count</li>
+                <li><strong>Fotos (valgfrit):</strong> kun hvis du gemmer sammendrag som billede</li>
             </ul>
-        </div>
+            <p class="mb-md">Administrér i iOS Indstillinger → Privatliv & Sikkerhed → Sundhed → SwimAnalytics.</p>
 
-        <div class="mb-xl">
-            <h2 class="mb-md">Hvordan Vi Bruger Dine Oplysninger</h2>
-            <p class="mb-sm">Vi bruger de oplysninger, vi indsamler til at:</p>
+            <h3 class="mb-sm">2.2 Android</h3>
             <ul class="mb-md">
-                <li>Besvare dine forespørgsler og anmodninger</li>
-                <li>Forbedre vores hjemmeside og tjenester</li>
-                <li>Analysere, hvordan vores hjemmeside bruges</li>
-                <li>Sikre sikkerheden og integriteten af vores hjemmeside</li>
+                <li><strong>Health Connect læs:</strong> exercise, distance, heart rate, speed, calories</li>
             </ul>
+            <p class="mb-md">Kan altid fjernes i Android-indstillinger.</p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Cookies</h2>
-            <p class="mb-md">
-                Vi bruger cookies for at forbedre din oplevelse på vores hjemmeside. Cookies er små tekstfiler, der gemmes på din enhed og hjælper os med at forstå, hvordan du bruger vores side.
-            </p>
-            <p class="mb-sm">Vi bruger følgende typer cookies:</p>
-            <ul class="mb-md">
-                <li><strong>Nødvendige cookies:</strong> Nødvendige for hjemmesidens korrekte funktion</li>
-                <li><strong>Analytiske cookies:</strong> Hjælper os med at forstå, hvordan besøgende interagerer med vores hjemmeside (kun med dit samtykke)</li>
-            </ul>
-            <p class="mb-md">
-                Du kan kontrollere cookies gennem dine browserindstillinger. Bemærk venligst, at deaktivering af cookies kan påvirke funktionaliteten af vores hjemmeside.
-            </p>
+            <h2 class="mb-md">3. Ingen deling/salg</h2>
+            <p class="mb-md">Vi deler eller sælger ikke data til tredjepart, annoncer eller databrokers.</p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Tredjepartstjenester</h2>
-            <p class="mb-md">
-                Vi kan bruge tredjepartstjenester som Google Analytics til at hjælpe os med at analysere hjemmesidetrafik. Disse tjenester kan indsamle oplysninger om din brug af vores hjemmeside.
-            </p>
-            <p class="mb-md">
-                Disse tredjeparter har deres egne privatlivspolitikker, og vi anbefaler, at du gennemgår dem.
-            </p>
+            <h2 class="mb-md">4. Sikkerhed</h2>
+            <p class="mb-md">Al behandling er lokal, ingen netværksoverførsel. Hold enheden sikker og opdateret.</p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Datasikkerhed</h2>
-            <p class="mb-md">
-                Vi implementerer passende tekniske og organisatoriske foranstaltninger for at beskytte dine personlige oplysninger mod uautoriseret adgang, ændring, videregivelse eller ødelæggelse.
-            </p>
+            <h2 class="mb-md">5. Børn</h2>
+            <p class="mb-md">Ikke målrettet børn under 13, medmindre loven kræver noget andet.</p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Dine Rettigheder</h2>
-            <p class="mb-sm">Du har ret til at:</p>
-            <ul class="mb-md">
-                <li>Få adgang til dine personlige oplysninger</li>
-                <li>Rette unøjagtige oplysninger</li>
-                <li>Anmode om sletning af dine oplysninger</li>
-                <li>Trække samtykke til databehandling tilbage</li>
-                <li>Gøre indsigelse mod behandling af dine oplysninger</li>
-            </ul>
-            <p class="mb-md">
-                For at udøve disse rettigheder, kontakt os ved hjælp af oplysningerne på vores <a href="/da/contact/">kontaktside</a>.
-            </p>
+            <h2 class="mb-md">6. Ændringer</h2>
+            <p class="mb-md">Vi kan opdatere politikken; væsentlige ændringer varsles i app/web.</p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Ændringer af Denne Politik</h2>
-            <p class="mb-md">
-                Vi kan opdatere denne Privatlivspolitik fra tid til anden. Vi vil underrette dig om eventuelle ændringer ved at offentliggøre den nye politik på denne side med en opdateret "Sidst opdateret" dato.
-            </p>
-        </div>
-
-        <div class="callout callout-info">
-            <h2 class="mb-sm">Spørgsmål?</h2>
-            <p>
-                Hvis du har spørgsmål om denne Privatlivspolitik, bedes du <a href="/da/contact/">kontakte os</a>.
-            </p>
+            <h2 class="mb-md">7. Kontakt</h2>
+            <p>Privatlivsspørgsmål: <a href="mailto:swimanalytics@onmedic.org">swimanalytics@onmedic.org</a></p>
         </div>
     </div>
 </section>

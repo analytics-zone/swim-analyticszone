@@ -760,381 +760,142 @@ body {
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>मुफ़्त स्विमिंग TSS कैलकुलेटर</h1>
-        <p class="lead">स्विमिंग वर्कआउट के लिए ट्रेनिंग स्ट्रेस स्कोर की गणना करें - एकमात्र मुफ़्त sTSS कैलकुलेटर</p>
+        <h1>मुफ़्त Swimming TSS कैलकुलेटर</h1>
+        <p class="lead">CSS और वर्कआउट डेटा से sTSS, IF, सेगमेंट पेस स्वतः गणना</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>स्विमिंग TSS (sTSS) क्या है?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> तीव्रता और अवधि को मिलाकर तैराकी कसरत के प्रशिक्षण
-                भार को निर्धारित करता है। यह साइकिलिंग की TSS पद्धति से अनुकूलित है, जो आपकी क्रिटिकल स्विम स्पीड (CSS)
-                को थ्रेशोल्ड गति के रूप में उपयोग करता है। CSS गति पर 1 घंटे का वर्कआउट = 100 sTSS।</p>
-        </div>
+        <h2>Swimming TSS (sTSS) क्या है?</h2>
+        <p><strong>Swimming Training Stress Score (sTSS)</strong> वर्कआउट की तीव्रता और समय को जोड़कर ट्रेनिंग लोड को संख्याबद्ध करता है। साइक्लिंग TSS से उत्पन्न, पर पानी के प्रतिरोध को दर्शाने के लिए <strong>IF³</strong> का उपयोग।</p>
 
-        <h2 class="mt-3xl">मुफ़्त sTSS कैलकुलेटर</h2>
-        <p class="lead mb-xl">किसी भी तैराकी कसरत के लिए प्रशिक्षण तनाव की गणना करें। आपकी CSS गति की आवश्यकता है।</p>
-
-        <div class="css-calculator">
-            <form id="stssCalculatorForm">
-                <div class="calculator-inputs">
-                    <div class="form-group">
-                        <label for="cssPace" class="form-label">आपकी CSS गति (mm:ss प्रति 100m)</label>
-                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
-                        <small id="cssPace-help" class="form-help">CSS टेस्ट से आपकी थ्रेशोल्ड गति (उदाहरण:
-                            1:49)</small>
-                        <div class="form-error" id="cssPace-error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="workoutDuration" class="form-label">वर्कआउट की अवधि (मिनट)</label>
-                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
-                            aria-required="true" aria-describedby="duration-help" />
-                        <small id="duration-help" class="form-help">आराम सहित कुल वर्कआउट समय (1-300 मिनट)</small>
-                        <div class="form-error" id="duration-error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="avgPace" class="form-label">औसत वर्कआउट गति (mm:ss प्रति 100m)</label>
-                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
-                        <small id="pace-help" class="form-help">वर्कआउट के दौरान आपकी औसत गति (उदाहरण: 2:05)</small>
-                        <div class="form-error" id="pace-error"></div>
-                    </div>
-
-                    <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">sTSS की गणना करें</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">साफ़ करें</button>
-                    </div>
-                </div>
-            </form>
-
-            <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>आपका ट्रेनिंग स्ट्रेस स्कोर</h3>
-                <div class="results-summary">
-                    <div class="result-item">
-                        <div class="result-label">sTSS</div>
-                        <div class="css-result-value" id="stssValue">--</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-label">इंटेंसिटी फैक्टर (IF)</div>
-                        <div class="css-result-value" id="intensityFactor">--</div>
-                    </div>
-                </div>
-
-                <div class="zones-result">
-                    <h4>ट्रेनिंग लोड की व्याख्या</h4>
-                    <p class="mb-md text-secondary" id="stssInterpretation">
-                        <!-- Filled by JavaScript -->
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">sTSS की गणना कैसे की जाती है</h2>
-
-        <div class="formula-box">
+        <div class="callout callout-info">
             <h3>सूत्र</h3>
-            <div class="formula">
-                sTSS = (घंटों में अवधि) × (इंटेंसिटी फैक्टर)² × 100
-            </div>
-            <div class="formula-explanation">
-                <p>जहाँ:</p>
-                <ul>
-                    <li><strong>इंटेंसिटी फैक्टर (IF)</strong> = CSS गति / औसत वर्कआउट गति</li>
-                    <li><strong>अवधि</strong> = घंटों में कुल वर्कआउट समय</li>
-                    <li><strong>CSS गति</strong> = CSS टेस्ट से आपकी थ्रेशोल्ड गति</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3 class="mt-xl">व्यावहारिक उदाहरण</h3>
-        <div class="example-box">
-            <h4>वर्कआउट विवरण:</h4>
-            <ul>
-                <li>CSS गति: <strong>1:49/100m</strong> (109 सेकंड)</li>
-                <li>वर्कआउट की अवधि: <strong>60 मिनट</strong> (1 घंटा)</li>
-                <li>औसत गति: <strong>2:05/100m</strong> (125 सेकंड)</li>
-            </ul>
-
-            <h4>चरण 1: इंटेंसिटी फैक्टर की गणना करें</h4>
-            <div class="calculation">
-                IF = CSS गति / वर्कआउट गति<br>
-                IF = 109 / 125<br>
-                IF = <strong>0.872</strong>
-            </div>
-
-            <h4>चरण 2: sTSS की गणना करें</h4>
-            <div class="calculation">
-                sTSS = 1.0 घंटे × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
-                sTSS = <strong>76</strong>
-            </div>
-
-            <p class="mt-md"><strong>व्याख्या:</strong> धीमी गति (CSS से धीमी) पर यह 60 मिनट का वर्कआउट 76 sTSS उत्पन्न
-                करता है - एरोबिक आधार बनाने के लिए उपयुक्त एक मध्यम प्रशिक्षण भार।</p>
-        </div>
-
-        <h2 class="mt-3xl">sTSS मानों को समझना</h2>
-
-        <div class="zones-table-container">
-            <table class="zones-table">
-                <thead>
-                    <tr>
-                        <th>sTSS रेंज</th>
-                        <th>ट्रेनिंग लोड</th>
-                        <th>रिकवरी समय</th>
-                        <th>वर्कआउट उदाहरण</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt; 50</td>
-                        <td>कम</td>
-                        <td>उसी दिन</td>
-                        <td>आसान 30-मिनट तैराकी, तकनीकी अभ्यास</td>
-                    </tr>
-                    <tr>
-                        <td>50-100</td>
-                        <td>मध्यम</td>
-                        <td>1 दिन</td>
-                        <td>60-मिनट सहनशक्ति, स्थिर गति</td>
-                    </tr>
-                    <tr>
-                        <td>100-200</td>
-                        <td>उच्च</td>
-                        <td>1-2 दिन</td>
-                        <td>90-मिनट थ्रेशोल्ड सेट, रेस गति अंतराल</td>
-                    </tr>
-                    <tr>
-                        <td>200-300</td>
-                        <td>बहुत उच्च</td>
-                        <td>2-3 दिन</td>
-                        <td>2-घंटे कठिन प्रशिक्षण, कई थ्रेशोल्ड ब्लॉक</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; 300</td>
-                        <td>चरम</td>
-                        <td>3+ दिन</td>
-                        <td>लंबी दौड़ (>2 घंटे), अल्ट्रा-सहनशक्ति</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 class="mt-3xl">साप्ताहिक sTSS गाइड</h2>
-
-        <p class="mb-md">लक्ष्य साप्ताहिक sTSS आपके प्रशिक्षण स्तर और लक्ष्यों पर निर्भर करता है:</p>
-
-        <div class="grid grid-2 mb-xl">
-            <div class="card">
-                <h3 class="card-title">मनोरंजन तैराक</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>साप्ताहिक sTSS:</strong> 150-300</p>
-                    <p>प्रति सप्ताह 2-3 वर्कआउट, प्रत्येक 50-100 sTSS। तकनीक और एरोबिक आधार बनाने पर ध्यान दें।</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">फिटनेस तैराक / ट्रायथलीट</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>साप्ताहिक sTSS:</strong> 300-500</p>
-                    <p>प्रति सप्ताह 3-4 वर्कआउट, प्रत्येक 75-125 sTSS। एरोबिक सहनशक्ति और थ्रेशोल्ड कार्य का मिश्रण।</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">प्रतिस्पर्धी मास्टर्स तैराक</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>साप्ताहिक sTSS:</strong> 500-800</p>
-                    <p>प्रति सप्ताह 4-6 वर्कआउट, प्रत्येक 80-150 sTSS। अवधिकरण के साथ संरचित प्रशिक्षण।</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">एलीट / कॉलेजिएट तैराक</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>साप्ताहिक sTSS:</strong> 800-1200+</p>
-                    <p>प्रति सप्ताह 8-12 वर्कआउट, दोहरे सत्र। रिकवरी प्रबंधन के साथ उच्च मात्रा महत्वपूर्ण।</p>
-                </div>
-            </div>
+            <p>sTSS = (IF³) × समय (घंटा) × 100</p>
+            <p>IF = NSS / CSS स्पीड</p>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ महत्वपूर्ण नोट्स</h3>
-            <ul>
-                <li><strong>सटीक CSS आवश्यक:</strong> सटीक sTSS के लिए आपकी CSS अद्यतन होनी चाहिए (पिछले 6–8 हफ्तों के
-                    भीतर परीक्षण की गई)।</li>
-                <li><strong>सरल गणना:</strong> यह कैलकुलेटर औसत गति (average pace) का उपयोग करता है। उन्नत sTSS गणना
-                    Normalized Graded Pace (NGP) का उपयोग करती है जो इंटरवल संरचना को ध्यान में रखती है।</li>
-                <li><strong>तकनीकी कार्य के लिए नहीं:</strong> sTSS केवल प्रशिक्षण के शारीरिक तनाव को मापता है, कौशल
-                    विकास (ड्रिल्स आदि) को नहीं।</li>
-                <li><strong>व्यक्तिगत भिन्नता:</strong> समान sTSS अलग‑अलग तैराकों के लिए अलग महसूस हो सकता है। अपनी
-                    रिकवरी और अनुभव के आधार पर गाइडलाइन्स समायोजित करें।</li>
-            </ul>
-        </div>
-
-        <h2 class="mt-3xl">sTSS क्यों महत्वपूर्ण है</h2>
-
-        <p class="mb-md">Training Stress Score इन प्रमुख मेट्रिक्स की नींव है:</p>
-
-        <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> आपकी दीर्घकालिक फिटनेस—दैनिक sTSS का 42‑दिन का
-                एक्सपोनेंशली वेटेड औसत</li>
-            <li><strong>ATL (Acute Training Load):</strong> आपका हाल का थकान स्तर—दैनिक sTSS का 7‑दिन का एक्सपोनेंशली
-                वेटेड औसत</li>
-            <li><strong>TSB (Training Stress Balance):</strong> आपका “फॉर्म”—TSB = CTL − ATL (सकारात्मक = ताज़ा,
-                नकारात्मक = थका हुआ)</li>
-            <li><strong>पीरियडाइज़ेशन:</strong> ट्रेनिंग की अवस्थाओं (बेस, बिल्ड, पीक, टेपर) की योजना बनाना, लक्ष्य CTL
-                प्रगति के साथ</li>
-            <li><strong>रिकवरी मैनेजमेंट:</strong> TSB के आधार पर यह जानना कि कब ज़ोर लगाना है और कब आराम करना है</li>
-        </ul>
-
-        <div class="callout callout-tip">
-            <h3>प्रो टिप: अपना CTL ट्रैक करें</h3>
-            <p>दैनिक sTSS को किसी स्प्रेडशीट या ट्रेनिंग जर्नल में लॉग करें। हर सप्ताह अपना 42‑दिन का औसत (CTL) निकालें।
-                बेस‑बिल्ड फेज़ में प्रति सप्ताह 5–10 CTL पॉइंट्स की वृद्धि का लक्ष्य रखें। रेस से 1–2 सप्ताह पहले टेपर
-                के दौरान CTL को स्थिर रखें या थोड़ा घटाएं।</p>
-        </div>
-        <h2 class="mt-3xl">अक्सर पूछे जाने वाले प्रश्न</h2>
-
-        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">स्विमिंग TSS (sTSS) क्या है?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Swimming Training Stress Score (sTSS) एक मेट्रिक है जो किसी स्विमिंग वर्कआउट के प्रशिक्षण लोड
-                            को मात्रा में बताता है—यह तीव्रता (Intensity) और अवधि (Duration) दोनों को जोड़ता है। इसे
-                            साइक्लिंग के TSS मॉडल से अनुकूलित किया गया है, जहाँ आपकी Critical Swim Speed (CSS) को
-                            थ्रेशोल्ड गति के रूप में उपयोग किया जाता है। CSS गति पर 1 घंटे का वर्कआउट = 100 sTSS।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">मैं अपना sTSS कैसे गणना करूं?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>ऊपर दिए गए कैलकुलेटर में अपनी CSS गति (CSS टेस्ट से), कुल वर्कआउट अवधि और वर्कआउट के दौरान
-                            औसत गति दर्ज करें। फॉर्मूला है: sTSS = अवधि (घंटों में) × (इंटेंसिटी फैक्टर)² × 100, जहाँ
-                            इंटेंसिटी फैक्टर = CSS गति / औसत वर्कआउट गति।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">क्या sTSS की गणना के लिए CSS आवश्यक है?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>हाँ। आपकी Critical Swim Speed (CSS) इंटेंसिटी फैक्टर की गणना के लिए आवश्यक है, जो sTSS का
-                            मुख्य हिस्सा है। CSS आपकी थ्रेशोल्ड गति को दर्शाती है और इसे हर 6–8 सप्ताह में दोबारा
-                            परीक्षण करना चाहिए। आप हमारी <a href=\"/hi/css/\">CSS कैलकुलेटर</a> से अपनी CSS निकाल सकते
-                            हैं।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">एक वर्कआउट के लिए “अच्छा” sTSS स्कोर क्या होता है?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>यह वर्कआउट की तीव्रता पर निर्भर करता है: आसान सत्र आम तौर पर 50 sTSS से कम होते हैं, मध्यम
-                            सत्र 50–100 sTSS, कठिन सत्र 100–200 sTSS और बहुत कठिन सत्र 200+ sTSS। उचित रेंज आपके
-                            प्रशिक्षण लक्ष्यों और वर्तमान फिटनेस स्तर पर निर्भर करती है।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">मुझे प्रति सप्ताह कितना sTSS करना चाहिए?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>साप्ताहिक sTSS लक्ष्य स्तर पर निर्भर करते हैं: मनोरंजन तैराक: 150–300, फिटनेस
-                            तैराक/ट्रायएथलीट: 300–500, प्रतिस्पर्धी मास्टर्स: 500–800, एलीट/कॉलेजिएट: 800–1200+.
-                            धीरे‑धीरे बढ़ाएं और ओवर‑ट्रेनिंग से बचने के लिए रूढ़िवादी रहें।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">क्या स्विमिंग TSS साइक्लिंग TSS के समान है?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>संकल्पना और फॉर्मूला समान हैं, लेकिन sTSS को स्विमिंग के लिए अनुकूलित किया गया है। साइक्लिंग
-                            TSS में जहाँ पावर (FTP) का उपयोग होता है, वहीं sTSS में CSS‑आधारित गति (pace) का उपयोग होता
-                            है। दोनों ही Training load को मापने के लिए अवधि × (इंटेंसिटी फैक्टर)² × 100 का उपयोग करते
-                            हैं।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">क्या मैं sTSS को सभी स्ट्रोक्स के लिए उपयोग कर सकता/सकती हूँ?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>हाँ, लेकिन आपकी CSS स्ट्रोक‑विशिष्ट होनी चाहिए। अधिकांश तैराक फ्रीस्टाइल CSS का उपयोग करते
-                            हैं, क्योंकि वही सबसे ज़्यादा ट्रेन किया जाता है। यदि आप मुख्य रूप से किसी अन्य स्ट्रोक में
-                            प्रशिक्षण करते हैं, तो उसी स्ट्रोक में CSS टेस्ट करें और sTSS गणना के लिए वही गति उपयोग
-                            करें।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">sTSS और CTL/ATL/TSB में क्या अंतर है?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>sTSS एकल वर्कआउट के ट्रेनिंग लोड को मापता है। CTL (Chronic Training Load) आपकी दीर्घकालिक
-                            फिटनेस दर्शाता है, ATL (Acute Training Load) हाल की थकान और TSB (Training Stress Balance)
-                            वर्तमान ‘फ्रेशनेस’। ये मेट्रिक्स समय के साथ sTSS मानों का उपयोग करके आपके ट्रेनिंग स्टेटस को
-                            ट्रैक करते हैं। अधिक जानकारी के लिए हमारी <a href=\"/hi/training-load/\">Training Load
-                                गाइड</a> देखें।</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">संबंधित संसाधन</h2>
-
-        <div class="grid grid-3">
-            <div class="card">
-                <h3 class="card-title">CSS टेस्ट</h3>
-                <div class="card-content">
-                    <p>क्या आपको अपनी CSS गति जाननी है? 400m और 200m टेस्ट समय के साथ हमारे मुफ़्त CSS कैलकुलेटर का
-                        उपयोग करें।</p>
-                    <a href="/hi/css/" class="btn btn-secondary btn-small mt-md">CSS कैलकुलेटर →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">ट्रेनिंग लोड गाइड</h3>
-                <div class="card-content">
-                    <p>CTL, ATL, TSB और Performance Management Chart मेट्रिक्स के बारे में और जानें।</p>
-                    <a href="/hi/training-load/" class="btn btn-secondary btn-small mt-md">ट्रेनिंग लोड →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Swim Analytics ऐप</h3>
-                <div class="card-content">
-                    <p>सभी वर्कआउट के लिए स्वतः sTSS गणना। समय के साथ CTL/ATL/TSB ट्रेंड्स को ट्रैक करें।</p>
-                    <a href="/hi/" class="btn btn-secondary btn-small mt-md">और जानकारी →</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-xl text-center">
-            <p class="mb-md"><strong>क्या आप sTSS का ऑटोमैटिक ट्रैकिंग चाहते हैं?</strong></p>
-            <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank"
-                rel="noopener">Swim Analytics मुफ़्त डाउनलोड करें</a>
+            <h3>⚠️ CSS पर निर्भर</h3>
+            <p>गलत CSS → गलत IF → गलत sTSS/CTL/ATL/TSB। पहले <a href="/hi/css/">CSS टेस्ट</a> सही करें।</p>
         </div>
     </div>
 </section>
 
-<script src="/assets/js/stss-calculator.min.js"></script>
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">कैलकुलेटर उपयोग</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>1) CSS दर्ज करें</h3>
+                <ul>
+                    <li>400m/200m से CSS निकालें या</li>
+                    <li>CSS पेस/स्पीड सीधे दर्ज करें</li>
+                </ul>
+            </div>
+            <div>
+                <h3>2) वर्कआउट डेटा</h3>
+                <ul>
+                    <li>कुल दूरी (m)</li>
+                    <li>मूविंग समय (मि:से)</li>
+                    <li>आराम समय शामिल न करें</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid grid-2 mt-xl">
+            <div>
+                <h3>3) परिणाम</h3>
+                <ul>
+                    <li>IF (Intensity Factor)</li>
+                    <li>sTSS</li>
+                    <li>औसत पेस और ज़ोन पेस</li>
+                </ul>
+            </div>
+            <div>
+                <h3>4) लोड ट्रैक</h3>
+                <p>sTSS को दिन/सप्ताह में जोड़कर CTL/ATL/TSB ट्रैक करें।</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>उदाहरण</h2>
+        <div class="example-box">
+            <h4>इनपुट</h4>
+            <ul>
+                <li>CSS: 1:33/100m</li>
+                <li>कुल दूरी: 3000m</li>
+                <li>मूविंग समय: 55:00</li>
+            </ul>
+            <h4>आउटपुट</h4>
+            <ul>
+                <li>IF ≈ 0.845</li>
+                <li>sTSS ≈ 55</li>
+                <li>औसत पेस, ज़ोन पेस प्रदर्शित</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2 class="text-center mb-xl">sTSS तीव्रता गाइड</h2>
+        <table class="intensity-table">
+            <thead>
+                <tr>
+                    <th>sTSS</th>
+                    <th>अर्थ</th>
+                    <th>उदाहरण</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>&lt; 50</td><td>रिकवरी</td><td>30-45 मिनट आसान/ड्रिल</td></tr>
+                <tr><td>50-100</td><td>मध्यम</td><td>60-90 मिनट एरोबिक</td></tr>
+                <tr><td>100-200</td><td>कठिन</td><td>थ्रेशोल्ड/VO₂ इंटरवल</td></tr>
+                <tr><td>200+</td><td>बहुत कठिन</td><td>लंबा हाई-इंटेंसिटी—रिकवरी योजना</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+            <h3>sTSS बनाम TSS?</h3>
+            <p>सिद्धांत समान, पर स्विम में IF³ से पानी के प्रतिरोध को दर्शाया जाता है।</p>
+        </div>
+        <div class="faq-item">
+            <h3>आराम समय?</h3>
+            <p>शामिल नहीं—सिर्फ मूविंग समय ताकि वास्तविक तीव्रता दिखे।</p>
+        </div>
+        <div class="faq-item">
+            <h3>CSS नहीं पता?</h3>
+            <p>पहले <a href="/hi/css/">CSS टेस्ट</a> करें।</p>
+        </div>
+        <div class="faq-item">
+            <h3>ओपन वाटर?</h3>
+            <p>हाँ, CSS-आधारित गणना ओपन वाटर पर भी लागू।</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow text-center">
+        <h2>sTSS से ट्रेनिंग लोड मापें</h2>
+        <p class="lead">तीव्रता + अवधि को एक मान में, CSS के आधार पर।</p>
+
+        <div class="mt-xl">
+            <a href="/hi/training-load/" class="btn btn-secondary">← ट्रेनिंग लोड</a>
+            <a href="/hi/training-zones/" class="btn btn-primary">ट्रेनिंग ज़ोन →</a>
+        </div>
+    </div>
+</section>
     </main>
 
     

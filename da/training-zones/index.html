@@ -760,540 +760,185 @@ body {
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Svømmetræningszoner - CSS-Baseret Intensitetsguide</h1>
-        <p class="lead">Mestre de 5 træningszoner for svømning - Personaliseret til din Kritiske Svømmehastighed</p>
+        <h1>Svømmetræningszoner - CSS-baseret intensitet</h1>
+        <p class="lead">7 zoner ud fra din CSS for tempo, restitution og raceforberedelse</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>Hvad er Svømmetræningszoner?</h2>
-            <p><strong>Træningszoner</strong> er videnskabeligt definerede intensitetsområder baseret på din
-                <strong>Kritiske Svømmehastighed (CSS)</strong>—dit aerobe tærskel-tempo. Hver zone udløser specifikke
-                fysiologiske tilpasninger, fra aerob base-opbygning (Zone 2) til VO₂max udvikling (Zone 5).
-                Træningszoner eliminerer gætværk og sikrer, at hver træning har et klart formål.</p>
-        </div>
+        <h2>Hvad er træningszoner?</h2>
+        <p>Træningszoner er fart-/intensitetsområder baseret på din <strong>Critical Swim Speed (CSS)</strong>. Hver zone målretter specifik fysiologisk adaptation (aerob base, tærskel, VO₂max).</p>
 
-        <h2 class="mt-2xl">Hvorfor Zone-Baseret Træning Virker</h2>
-
-        <p class="mb-md">Træning efter "fornemmelse" eller generiske tempo-tabeller fejler fordi:</p>
-
-        <ul class="mb-xl">
-            <li><strong>Individuel fysiologi varierer:</strong> Et 1:40/100m tempo er let for elite svømmere men
-                maksimalt for begyndere</li>
-            <li><strong>RPE er upålidelig:</strong> Opfattet anstrengelse ændrer sig med træthed, hydrering og forhold
-            </li>
-            <li><strong>Generiske tempi misser din tærskel:</strong> Standard træninger ignorerer din unikke
-                laktattærskel</li>
-            <li><strong>Ingen tilpasningsspecificitet:</strong> Tilfældige tempi producerer tilfældige resultater</li>
-        </ul>
-
-        <p class="mb-xl"><strong>CSS-baserede zoner løser dette</strong> ved at personalisere hver intensitet til DIN
-            fysiologi. En Zone 2 træning udløser aerobe tilpasninger uanset om din CSS er 1:20/100m eller 2:00/100m.</p>
-
-        <div class="callout callout-tip">
-            <h3>🎯 Nøgleprincip: Omvendt Forhold</h3>
-            <p>I svømning måles tempo som <strong>tid per distance</strong>. Derfor:</p>
-            <ul>
-                <li><strong>Højere % af CSS = LANGSOMMERE tempo</strong> (lettere, Zone 1-2)</li>
-                <li><strong>Lavere % af CSS = HURTIGERE tempo</strong> (sværere, Zone 4-5)</li>
+        <div class="callout callout-info mt-xl">
+            <h3 class="mb-sm">Fordele ved CSS-baserede zoner</h3>
+            <ul class="mb-0">
+                <li><strong>Personlig intensitet:</strong> Præcise farter ud fra din CSS</li>
+                <li><strong>Kvantificeret belastning:</strong> Kernen til sTSS-beregning</li>
+                <li><strong>Restitutionsstyring:</strong> Undgå overtræning, ram peak-timing</li>
             </ul>
-            <p class="mb-0">Dette er <em>omvendt i forhold til cykling/løb</em> hvor højere % = sværere. Tænk: "108% CSS
-                tempo" = 8% langsommere end tærskel.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="mb-xl text-center">De 5 Svømmetræningszoner</h2>
+        <h2 class="text-center mb-xl">De 7 svømmezoner</h2>
 
-        <div class="zones-table-container">
-            <table class="zones-table">
+        <div class="zone-table">
+            <table class="intensity-table">
                 <thead>
                     <tr>
                         <th>Zone</th>
                         <th>Navn</th>
-                        <th>% af CSS Tempo</th>
-                        <th>Eksempel for CSS 1:40/100m</th>
-                        <th>RPE</th>
-                        <th>Fysiologisk Formål</th>
+                        <th>Intensitet (vs CSS)</th>
+                        <th>Formål</th>
+                        <th>Eksempel</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="zone-1">
-                        <td><strong>1</strong></td>
-                        <td>Restitution</td>
-                        <td>&gt;108%</td>
-                        <td>&gt;1:48/100m</td>
-                        <td>2-3/10</td>
-                        <td>Aktiv restitution, teknikforbedring, opvarmning/nedkøling</td>
-                    </tr>
-                    <tr class="zone-2">
-                        <td><strong>2</strong></td>
-                        <td>Aerob Base</td>
-                        <td>104-108%</td>
-                        <td>1:44-1:48/100m</td>
-                        <td>4-5/10</td>
-                        <td>Opbygge aerob kapacitet, mitokondrie-tæthed, fedtforbrænding</td>
-                    </tr>
-                    <tr class="zone-3">
-                        <td><strong>3</strong></td>
-                        <td>Tempo/Sweet Spot</td>
-                        <td>99-103%</td>
-                        <td>1:39-1:43/100m</td>
-                        <td>6-7/10</td>
-                        <td>Løbstempo-tilpasning, neuromuskulær effektivitet</td>
-                    </tr>
-                    <tr class="zone-4">
-                        <td><strong>4</strong></td>
-                        <td>Tærskel (CSS)</td>
-                        <td>96-100%</td>
-                        <td>1:36-1:40/100m</td>
-                        <td>7-8/10</td>
-                        <td>Laktattærskel forbedring, vedvarende høj intensitet</td>
-                    </tr>
-                    <tr class="zone-5">
-                        <td><strong>5</strong></td>
-                        <td>VO₂max/Anaerob</td>
-                        <td>&lt;96%</td>
-                        <td>&lt;1:36/100m</td>
-                        <td>9-10/10</td>
-                        <td>VO₂max udvikling, kraft, laktattolerance</td>
-                    </tr>
+                    <tr><td>Zone 1</td><td>Restitution</td><td>&lt; 80%</td><td>Restitution, teknik, warmup/cooldown</td><td>400-800m easy + drils</td></tr>
+                    <tr><td>Zone 2</td><td>Aerob base</td><td>80-87%</td><td>Baseudholdenhed, økonomi</td><td>8×200 @ Z2, 20-30s pause</td></tr>
+                    <tr><td>Zone 3</td><td>Tempo</td><td>88-94%</td><td>Stabil fart, økonomi</td><td>6×300 @ Z3, 30s pause</td></tr>
+                    <tr><td>Zone 4</td><td>Tærskel</td><td>95-102%</td><td>Tærskeludvikling</td><td>10×100 @ CSS, 15-20s pause</td></tr>
+                    <tr><td>Zone 5</td><td>VO₂max</td><td>103-110%</td><td>Maks O₂-optag, HIIT</td><td>8×50 @ Z5, 30-45s pause</td></tr>
+                    <tr><td>Zone 6</td><td>Anaerob kapacitet</td><td>111-120%</td><td>Anaerob power, laktattolerance</td><td>6×25 sprint, 45-60s pause</td></tr>
+                    <tr><td>Zone 7</td><td>Sprint</td><td>&gt; 120%</td><td>Neuromuskulær power, start/turn</td><td>12×15m undervandsdelfin + max accel</td></tr>
                 </tbody>
             </table>
+        </div>
+
+        <div class="callout callout-warning mt-xl">
+            <h3>⚠️ Restitutionsregler</h3>
+            <ul class="mb-0">
+                <li>Zone 5: 48-72 timer mellem pas</li>
+                <li>Zone 6-7: Høj neuro/anaerob belastning – hold frekvensen lav</li>
+                <li>Undgå back-to-back højintensitet</li>
+            </ul>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Zone 1: Restitution</h2>
-        <div class="zone-detail">
-            <div class="zone-header">
-                <span class="zone-badge zone-1-badge">Zone 1</span>
-                <span class="zone-pace">&gt;108% af CSS tempo</span>
-                <span class="zone-rpe">RPE 2-3/10</span>
+        <h2 class="mb-xl text-center">CSS-test → personlige zoner</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>1) CSS-test</h3>
+                <p>400m + 200m time trial med 5-10 min pause.</p>
+                <p>Se <a href="/da/getting-started/#css-test-guide">startguiden</a> for protokol.</p>
             </div>
-
-            <h3>Formål</h3>
-            <p>Aktiv restitution, teknikarbejde, opvarmning, nedkøling. Zone 1 fremmer blodgennemstrømning til
-                muskelreparation uden at skabe yderligere træningsstress. Bruges ikke til konditionsforbedringer—rent
-                regenerativ.</p>
-
-            <h3>Fysiologiske Markører</h3>
-            <ul>
-                <li>Puls: 50-60% af maksimum</li>
-                <li>Laktat: &lt;1.5 mmol/L (langt under tærskel)</li>
-                <li>Vejrtrækning: Næseånding mulig, samtale-tempo</li>
-                <li>Fornemmelse: Ubesværet, kunne opretholdes på ubestemt tid</li>
-            </ul>
-
-            <h3>Eksempel Træninger</h3>
-            <div class="workout-example">
-                <h4>Restitutions Session</h4>
-                <ul>
-                    <li>500m kontinuerlig svømning @ Zone 1 (fokus: blød slagteknik)</li>
-                    <li>10×25 teknikøvelser (catch-up, sculling, enkelt arm) @ Zone 1 indsats</li>
-                    <li>300m pull med pullbuoy @ Zone 1</li>
-                </ul>
-            </div>
-
-            <h3>Ugentligt Volumen</h3>
-            <p><strong>10-20% af total volumen</strong> (opvarmninger, nedkølinger, restitutions svømning på fridage)
-            </p>
-        </div>
-
-        <h2 class="mt-3xl">Zone 2: Aerob Base</h2>
-        <div class="zone-detail">
-            <div class="zone-header">
-                <span class="zone-badge zone-2-badge">Zone 2</span>
-                <span class="zone-pace">104-108% af CSS tempo</span>
-                <span class="zone-rpe">RPE 4-5/10</span>
-            </div>
-
-            <h3>Formål</h3>
-            <p><strong>Grundlaget for al udholdenhedstræning.</strong> Zone 2 opbygger mitokondrie-tæthed,
-                kapillærnetværk, fedtforbrændingskapacitet og aerobe enzymer. Her opbygges aerob kondition—den
-                "kedelige" zone der producerer mestre.</p>
-
-            <h3>Fysiologiske Markører</h3>
-            <ul>
-                <li>Puls: 60-75% af maksimum</li>
-                <li>Laktat: 1.5-2.5 mmol/L (under første laktattærskel)</li>
-                <li>Vejrtrækning: Rytmisk, behagelig, kan tale i sætninger</li>
-                <li>Fornemmelse: Behagelig, holdbar i 60+ minutter</li>
-            </ul>
-
-            <h3>Eksempel Træninger</h3>
-            <div class="workout-example">
-                <h4>Aerob Udholdenhedssession</h4>
-                <ul>
-                    <li>3000m kontinuerlig @ Zone 2 tempo</li>
-                    <li>20×100 @ Zone 2 tempo (10s hvile)</li>
-                    <li>5×400 @ Zone 2 tempo (20s hvile)</li>
-                </ul>
-            </div>
-
-            <h3>Ugentligt Volumen</h3>
-            <p><strong>60-70% af total volumen</strong> (mest kritiske zone for konditionsudvikling)</p>
-
-            <div class="callout callout-warning mt-md">
-                <h4>⚠️ Almindelig Fejl: Træne For Hårdt</h4>
-                <p>De fleste svømmere træner Zone 2 for hurtigt, og skubber ind i Zone 3-4. Dette skaber kronisk træthed
-                    uden at opbygge aerob base. Zone 2 skal føles <em>let</em>—du skal slutte med følelsen af at du
-                    kunne gøre mere.</p>
+            <div>
+                <h3>2) CSS-beregning</h3>
+                <p>Indtast tider – appen beregner CSS og genererer 7 zoner automatisk.</p>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Zone 3: Tempo / Sweet Spot</h2>
-        <div class="zone-detail">
-            <div class="zone-header">
-                <span class="zone-badge zone-3-badge">Zone 3</span>
-                <span class="zone-pace">99-103% af CSS tempo</span>
-                <span class="zone-rpe">RPE 6-7/10</span>
-            </div>
-
-            <h3>Formål</h3>
-            <p>Løbstempo-tilpasning for mellemdistance events (400m-1500m). Zone 3 træner neuromuskulær effektivitet ved
-                holdbare løbshastigheder. Også kendt som "Sweet Spot" træning—hårdere end base, lettere end tærskel, med
-                gode aerobe tilpasninger per træthedsenhed.</p>
-
-            <h3>Fysiologiske Markører</h3>
-            <ul>
-                <li>Puls: 75-85% af maksimum</li>
-                <li>Laktat: 2.5-4.0 mmol/L (nærmer sig tærskel)</li>
-                <li>Vejrtrækning: Kontrolleret men forhøjet, kun korte sætninger</li>
-                <li>Fornemmelse: Behageligt hårdt, holdbart i 20-40 minutter</li>
-            </ul>
-
-            <h3>Eksempel Træninger</h3>
-            <div class="workout-example">
-                <h4>Tempo Session</h4>
+        <div class="grid grid-2 mt-xl">
+            <div>
+                <h3>3) Træn efter zoner</h3>
                 <ul>
-                    <li>10×200 @ Zone 3 tempo (15s hvile)</li>
-                    <li>3×800 @ Zone 3 tempo (30s hvile)</li>
-                    <li>2000m broken (500-400-300-400-500) @ Zone 3 tempo (20s hvile mellem sæt)</li>
+                    <li>Zone 2: Aerob base (60-70% af ugen)</li>
+                    <li>Zone 3-4: Tempo/tærskel for stabil fart</li>
+                    <li>Zone 5+: Højintensivt i begrænset mængde</li>
                 </ul>
             </div>
-
-            <h3>Ugentligt Volumen</h3>
-            <p><strong>15-20% af total volumen</strong> (nøgle for specifik løbsforberedelse)</p>
-        </div>
-
-        <h2 class="mt-3xl">Zone 4: Tærskel (CSS Tempo)</h2>
-        <div class="zone-detail">
-            <div class="zone-header">
-                <span class="zone-badge zone-4-badge">Zone 4</span>
-                <span class="zone-pace">96-100% af CSS tempo</span>
-                <span class="zone-rpe">RPE 7-8/10</span>
-            </div>
-
-            <h3>Formål</h3>
-            <p><strong>Laktattærskel træning—"money zonen".</strong> Zone 4 hæver din anaerobe tærskel, forbedrer din
-                evne til at cleare laktat og opretholde høj intensitet. Dette er dit CSS tempo—den hurtigste hastighed
-                du kan holde i ~30 minutter uden at gå kold.</p>
-
-            <h3>Fysiologiske Markører</h3>
-            <ul>
-                <li>Puls: 85-92% af maksimum</li>
-                <li>Laktat: 4.0-6.0 mmol/L (maksimal laktat steady state)</li>
-                <li>Vejrtrækning: Hård, anstrengt, kun enkelte ord</li>
-                <li>Fornemmelse: Meget hårdt, holdbart i 20-30 minutter maks</li>
-            </ul>
-
-            <h3>Eksempel Træninger</h3>
-            <div class="workout-example">
-                <h4>Tærskel Session</h4>
-                <ul>
-                    <li>8×100 @ CSS tempo (15s hvile) — klassisk CSS sæt</li>
-                    <li>5×200 @ 101% CSS (20s hvile)</li>
-                    <li>3×400 @ 103% CSS (30s hvile)</li>
-                    <li>1500m tidskørsel kontinuerlig @ CSS tempo</li>
-                </ul>
-            </div>
-
-            <h3>Ugentligt Volumen</h3>
-            <p><strong>10-15% af total volumen</strong> (højt træningsstress, kræver passende restitution)</p>
-
-            <div class="callout callout-tip mt-md">
-                <h4>💡 Pro Tip: Brug sTSS til at Styre Zone 4 Belastning</h4>
-                <p>Zone 4 træninger genererer 150-250 sTSS per session. Spor ugentlige totaler for at undgå overtræning.
-                    Begræns Zone 4 arbejde til 2-3 sessioner om ugen maks under opbygningsfaser.</p>
+            <div>
+                <h3>4) sTSS-kobling</h3>
+                <p>IF og sTSS for hvert pas baseres på CSS/zoner. CSS-opdatering recalculerer de sidste 90 dages sTSS.</p>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Zone 5: VO₂max / Anaerob</h2>
-        <div class="zone-detail">
-            <div class="zone-header">
-                <span class="zone-badge zone-5-badge">Zone 5</span>
-                <span class="zone-pace">&lt;96% af CSS tempo (hurtigere end CSS)</span>
-                <span class="zone-rpe">RPE 9-10/10</span>
-            </div>
-
-            <h3>Formål</h3>
-            <p>Udvikling af VO₂max, anaerob kapacitet, laktattolerance og neuromuskulær kraft. Zone 5 træner din krop
-                til at producere og tolerere høje niveauer af laktat. Bruges til sprint events (50m-200m) og
-                tophastighedsudvikling.</p>
-
-            <h3>Fysiologiske Markører</h3>
-            <ul>
-                <li>Puls: 92-100% af maksimum</li>
-                <li>Laktat: 6.0-15+ mmol/L (svær akkumulering)</li>
-                <li>Vejrtrækning: Maksimal, gispende, ingen samtale mulig</li>
-                <li>Fornemmelse: Alt hvad du har, holdbart kun i 2-8 minutter</li>
-            </ul>
-
-            <h3>Eksempel Træninger</h3>
-            <div class="workout-example">
-                <h4>VO₂max Session</h4>
-                <ul>
-                    <li>12×50 @ max indsats (30s hvile)</li>
-                    <li>6×100 @ 200m løbstempo (60s hvile)</li>
-                    <li>4×200 @ 94% CSS tempo (90s hvile)</li>
-                    <li>20×25 all-out sprint (15s hvile)</li>
-                </ul>
-            </div>
-
-            <h3>Ugentligt Volumen</h3>
-            <p><strong>5-10% af total volumen</strong> (højeste træthedsomkostning, brug sparsomt)</p>
-
-            <div class="callout callout-warning mt-md">
-                <h4>⚠️ Kritisk Restitution</h4>
-                <p>Zone 5 arbejde er ekstremt krævende. Kræver 48-72 timers restitution mellem sessioner. Læg IKKE Zone
-                    5 træninger på hinanden følgende dage. Spor CTL/ATL/TSB for at sikre passende restitution.</p>
-            </div>
+        <div class="callout callout-tip mt-xl">
+            <h3>💡 Retest CSS</h3>
+            <p>Base/build: hver 6-8 uge; peak: 4-6 uge; efter sygdom/skade/pause eller hvis zoner føles vedvarende for let/svære.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="mb-xl">Ugentlig Træningsfordeling efter Atletniveau</h2>
+        <h2 class="mb-xl text-center">Praktisk fordeling</h2>
 
         <div class="grid grid-2">
             <div class="card">
-                <h3 class="card-title">Motionister / Fitness Svømmere</h3>
+                <h3 class="card-title">Begynder/Fitness</h3>
                 <div class="card-content">
-                    <p class="mb-md"><strong>Total Volumen:</strong> 6,000-12,000m/uge (2-3 sessioner)</p>
                     <ul>
-                        <li><strong>Zone 1:</strong> 15% (opvarmning/nedkøling)</li>
-                        <li><strong>Zone 2:</strong> 70% (opbygge aerob base)</li>
-                        <li><strong>Zone 3:</strong> 10% (lejlighedsvis tempo)</li>
-                        <li><strong>Zone 4:</strong> 5% (begrænset tærskelarbejde)</li>
-                        <li><strong>Zone 5:</strong> 0% (ikke nødvendigt endnu)</li>
+                        <li>Ugevolumen: 6.000-12.000m (2-3 pas)</li>
+                        <li>Zone 1: 15%</li>
+                        <li>Zone 2: 55-65%</li>
+                        <li>Zone 3: 10-15%</li>
+                        <li>Zone 4: 5-10%</li>
+                        <li>Zone 5+: 0-5%</li>
                     </ul>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Konkurrence Masters Svømmere</h3>
+                <h3 class="card-title">Mellem/konkurrence</h3>
                 <div class="card-content">
-                    <p class="mb-md"><strong>Total Volumen:</strong> 15,000-25,000m/uge (4-6 sessioner)</p>
                     <ul>
-                        <li><strong>Zone 1:</strong> 15% (restitutionssvømning)</li>
-                        <li><strong>Zone 2:</strong> 60% (aerob fundament)</li>
-                        <li><strong>Zone 3:</strong> 15% (løbstempo arbejde)</li>
-                        <li><strong>Zone 4:</strong> 8% (tærskel sessioner)</li>
-                        <li><strong>Zone 5:</strong> 2% (hastighedsudvikling)</li>
+                        <li>Ugevolumen: 12.000-20.000m (3-5 pas)</li>
+                        <li>Zone 1: 10-15%</li>
+                        <li>Zone 2: 45-55%</li>
+                        <li>Zone 3: 15-20%</li>
+                        <li>Zone 4: 10-15%</li>
+                        <li>Zone 5+: 5-10%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-2 mt-lg">
+            <div class="card">
+                <h3 class="card-title">Avanceret/elite</h3>
+                <div class="card-content">
+                    <ul>
+                        <li>Ugevolumen: 20.000-35.000m (5-8 pas)</li>
+                        <li>Zone 1: 10-15%</li>
+                        <li>Zone 2: 40-50%</li>
+                        <li>Zone 3: 15-20%</li>
+                        <li>Zone 4: 10-15%</li>
+                        <li>Zone 5+: 10-15%</li>
                     </ul>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Triatleter (Svømmefokus)</h3>
+                <h3 class="card-title">IM/andre stilarter</h3>
                 <div class="card-content">
-                    <p class="mb-md"><strong>Total Volumen:</strong> 10,000-18,000m/uge (3-4 sessioner)</p>
-                    <ul>
-                        <li><strong>Zone 1:</strong> 10% (opvarmning/teknik)</li>
-                        <li><strong>Zone 2:</strong> 75% (maksimere aerob effektivitet)</li>
-                        <li><strong>Zone 3:</strong> 10% (løbssimulering)</li>
-                        <li><strong>Zone 4:</strong> 5% (begrænset—gem energi til cykel/løb)</li>
-                        <li><strong>Zone 5:</strong> 0% (ikke relevant for udholdenhedsløb)</li>
-                    </ul>
+                    <p>CSS er typisk baseret på crawl. For IM/ryg/bryst: brug crawl-CSS som reference og justér efter følelse, eller lav stilartsspecifik CSS-test.</p>
                 </div>
             </div>
+        </div>
 
-            <div class="card">
-                <h3 class="card-title">Elite / College Svømmere</h3>
-                <div class="card-content">
-                    <p class="mb-md"><strong>Total Volumen:</strong> 40,000-70,000m/uge (10-12 sessioner)</p>
-                    <ul>
-                        <li><strong>Zone 1:</strong> 20% (restitution essentiel ved høj volumen)</li>
-                        <li><strong>Zone 2:</strong> 50% (vedligeholdelse af aerob base)</li>
-                        <li><strong>Zone 3:</strong> 15% (løbstempo specificitet)</li>
-                        <li><strong>Zone 4:</strong> 10% (tærskeludvikling)</li>
-                        <li><strong>Zone 5:</strong> 5% (kraft og hastighed)</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="callout callout-warning mt-xl">
+            <h3>⚠️ Restitution</h3>
+            <p>Efter Zone 5: 48-72t. Efter Zone 6-7 kan længere restitution være nødvendig. Undgå back-to-back højintensitet.</p>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Sådan Beregner Du Dine Personlige Træningszoner</h2>
+        <h2 class="mb-xl text-center">CSS-test og zoneberegning</h2>
+        <ol class="mb-md">
+            <li><strong>CSS-test:</strong> Tag tider på 400m + 200m.</li>
+            <li><strong>CSS-pace:</strong> (T400 - T200) / 2 → sek/100m.</li>
+            <li><strong>CSS-hastighed:</strong> 100m / CSS-pace (min) → m/min.</li>
+            <li><strong>Zonegrænser:</strong> CSS-hastighed × zoneprocenter.</li>
+        </ol>
+        <p class="text-secondary">Appen beregner automatisk og viser tabel.</p>
 
-        <p class="mb-md">Dine træningszoner er personaliseret til DIN Kritiske Svømmehastighed. Her er hvordan du
-            beregner dem:</p>
-
-        <h3>Trin 1: Udfør CSS Test</h3>
-        <p class="mb-md">Gennemfør en 400m og 200m tidskørsel med 5-10 minutters restitution mellem indsatser. <a
-                href="/da/css/">Lær den fulde CSS test protokol →</a></p>
-
-        <h3>Trin 2: Beregn CSS Tempo</h3>
-        <div class="example-box">
-            <p><strong>Eksempel:</strong></p>
-            <ul>
-                <li>400m Tid: 6:08 (368 sekunder)</li>
-                <li>200m Tid: 2:30 (150 sekunder)</li>
+        <div class="callout callout-tip mt-xl">
+            <h3>💡 Ressourcer</h3>
+            <ul class="mb-0">
+                <li><a href="/da/css/">CSS-testguide</a></li>
+                <li><a href="/da/stss-calculator/">sTSS-beregner</a></li>
+                <li><a href="/da/training-load/">Træningsbelastning</a></li>
             </ul>
-            <p class="mt-md">CSS Tempo = (T₄₀₀ - T₂₀₀) / 2<br>
-                CSS Tempo = (368 - 150) / 2 = 109 sekunder = <strong>1:49/100m</strong></p>
-        </div>
-
-        <h3 class="mt-lg">Trin 3: Beregn Zone Tempi</h3>
-        <p class="mb-md">Multiplicer CSS tempo med zone procenter:</p>
-
-        <div class="zones-table-container">
-            <table class="zones-table">
-                <thead>
-                    <tr>
-                        <th>Zone</th>
-                        <th>Område %</th>
-                        <th>Beregning (CSS = 1:49/100m)</th>
-                        <th>Zone Tempo Område</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="zone-1">
-                        <td><strong>Zone 1</strong></td>
-                        <td>&gt;108%</td>
-                        <td>109 × 1.08 = 118s</td>
-                        <td>&gt;1:58/100m</td>
-                    </tr>
-                    <tr class="zone-2">
-                        <td><strong>Zone 2</strong></td>
-                        <td>104-108%</td>
-                        <td>109 × 1.04-1.08 = 113-118s</td>
-                        <td>1:53-1:58/100m</td>
-                    </tr>
-                    <tr class="zone-3">
-                        <td><strong>Zone 3</strong></td>
-                        <td>99-103%</td>
-                        <td>109 × 0.99-1.03 = 108-112s</td>
-                        <td>1:48-1:52/100m</td>
-                    </tr>
-                    <tr class="zone-4">
-                        <td><strong>Zone 4</strong></td>
-                        <td>96-100%</td>
-                        <td>109 × 0.96-1.00 = 105-109s</td>
-                        <td>1:45-1:49/100m</td>
-                    </tr>
-                    <tr class="zone-5">
-                        <td><strong>Zone 5</strong></td>
-                        <td>&lt;96%</td>
-                        <td>109 × 0.96 = 105s</td>
-                        <td>&lt;1:45/100m</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-lg">
-            <h3>⚡ Få Automatisk Zone Beregning</h3>
-            <p>Brug vores <a href="/da/css/">gratis CSS beregner</a> for øjeblikkeligt at få dine personlige
-                træningszoner. Indtast dine 400m og 200m tider, og vi beregner CSS + alle 5 zone områder automatisk.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Ofte Stillede Spørgsmål om Træningszoner</h2>
-
-        <div class="faq-item">
-            <h3>Hvor ofte skal jeg genteste min CSS for at opdatere zoner?</h3>
-            <p>Hver <strong>6-8 uge</strong> under base og opbygningsfaser. Din CSS bør forbedres (blive hurtigere)
-                efterhånden som konditionen øges, hvilket kræver zonejusteringer. Gentest efter sygdom, skade eller
-                lange pauser.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Kan jeg blande zoner i en enkelt træning?</h3>
-            <p><strong>Ja—de fleste træninger er multizone.</strong> Eksempel: 400m Zone 1 opvarmning + 8×100 Zone 4
-                tærskel + 300m Zone 1 nedkøling. Nøglen er bevidst zonevalg, ikke tilfældig svømning i "mellemzonen".
-            </p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Hvad hvis jeg ikke kan holde zonetempoet?</h3>
-            <p>Hvis du ikke kan holde det foreskrevne zonetempo, så: (1) din CSS er forældet (for hurtig), (2) du er
-                træt (tjek TSB), eller (3) utilstrækkelig restitution mellem intervaller. Gentest CSS hvis dette sker
-                konsekvent.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Gælder zonerne for alle stilarter?</h3>
-            <p>CSS testes typisk i <strong>crawl (fristil)</strong>. For andre stilarter kan du udføre stilspecifikke
-                CSS tests, men de fleste svømmere bruger fristil CSS zoner og justerer efter fornemmelse for
-                medley/ryg/bryst.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Hvordan relaterer zoner sig til Training Stress Score (sTSS)?</h3>
-            <p>Zonen bestemmer <strong>Intensitetsfaktoren (IF)</strong>, som kvadreres i sTSS formlen. Zone 4 (IF
-                ~0.95-1.0) genererer 90-100 sTSS per time. Zone 2 (IF ~0.80) genererer kun 64 sTSS per time. Højere
-                zoner = eksponentielt højere træningsstress.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Kan jeg træne kun i Zone 2?</h3>
-            <p>Træning kun i Zone 2 virker for <strong>begyndere</strong> der opbygger basekondition. Men avancerede
-                svømmere har brug for Zone 3-5 arbejde for at udvikle specifikke løbstilpasninger. Følg 80/20 reglen:
-                80% let (Zone 1-2), 20% hårdt (Zone 3-5).</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Relaterede Ressourcer</h2>
-
-        <div class="grid grid-3">
-            <div class="card">
-                <h3 class="card-title">CSS Test</h3>
-                <div class="card-content">
-                    <p>Tag CSS testen og få dine personlige træningszoner øjeblikkeligt med vores gratis beregner.</p>
-                    <a href="/da/css/" class="btn btn-secondary btn-small mt-md">CSS Beregner →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Training Stress Score</h3>
-                <div class="card-content">
-                    <p>Lær hvordan zoneintensitet påvirker sTSS beregning og generel træningsbelastning.</p>
-                    <a href="/da/training-load/" class="btn btn-secondary btn-small mt-md">sTSS Guide →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Swim Analytics App</h3>
-                <div class="card-content">
-                    <p>Automatisk zonedetektion for hver træning. Spor tid i zone og zonespecifik træningsbelastning.
-                    </p>
-                    <a href="/da/" class="btn btn-secondary btn-small mt-md">Lær Mere →</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Klar til at træne smartere?</strong></p>
-            <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank"
-                rel="noopener">Download Swim Analytics Gratis</a>
         </div>
     </div>
 </section>

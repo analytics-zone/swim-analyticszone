@@ -760,23 +760,23 @@ body {
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Technical Reference & Formulas</h1>
-        <p class="lead">Complete Mathematical Implementation</p>
+        <h1>技术参考与公式</h1>
+        <p class="lead">完整的数学实现</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Implementation Guide</h2>
-        <p class="lead">This page provides copy-paste formulas and step-by-step calculation methods for all Swim Analytics metrics. Use these for custom implementations, verification, or deeper understanding.</p>
+        <h2>实现指南</h2>
+        <p class="lead">本页面为所有游泳分析指标提供复制粘贴公式和分步计算方法。使用这些内容进行自定义实现、验证或深入理解。</p>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Implementation Notes</h3>
+            <h3>⚠️ 实现注意事项</h3>
             <ul>
-                <li>All times should be converted to seconds for calculations</li>
-                <li>Swimming pace is inverse (higher % = slower pace)</li>
-                <li>Always validate inputs for reasonable ranges</li>
-                <li>Handle edge cases (division by zero, negative values)</li>
+                <li>所有时间应转换为秒进行计算</li>
+                <li>游泳速度是反向的（较高的百分比 = 较慢的速度）</li>
+                <li>始终验证输入是否在合理范围内</li>
+                <li>处理边界情况（除以零、负值）</li>
             </ul>
         </div>
     </div>
@@ -784,12 +784,12 @@ body {
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Core Performance Metrics</h2>
+        <h2>核心性能指标</h2>
 
         <div class="formula-card">
-            <h3>Critical Swim Speed (CSS)</h3>
+            <h3>临界游泳速度 (CSS)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>公式:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
@@ -800,32 +800,32 @@ body {
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 交互式计算器 - 测试公式</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="css-d1">Distance 1 (meters):</label>
+                            <label for="css-d1">距离 1 (米):</label>
                             <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t1">Time 1 (mm:ss):</label>
+                            <label for="css-t1">时间 1 (mm:ss):</label>
                             <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label for="css-d2">Distance 2 (meters):</label>
+                            <label for="css-d2">距离 2 (米):</label>
                             <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t2">Time 2 (mm:ss):</label>
+                            <label for="css-t2">时间 2 (mm:ss):</label>
                             <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">CSS Pace per 100m:</div>
+                        <div class="result-label">CSS 每100米速度:</div>
                         <div class="result-value" id="css-result">1:49</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation steps:</strong><br>
+                            <strong>计算步骤:</strong><br>
                             <span id="css-steps">
                                 CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
                                 Pace/100m = 100 / 0.917 = 109 seconds = 1:49
@@ -834,7 +834,7 @@ body {
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">JavaScript 实现:</h4>
                 <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
   // Convert times to seconds if needed
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
@@ -910,9 +910,9 @@ const result = calculateCSS(200, 150, 400, 368);
         </div>
 
         <div class="formula-card">
-            <h3>Swim Training Stress Score (sTSS)</h3>
+            <h3>游泳训练应力分数 (sTSS)</h3>
             <div class="formula-content">
-                <h4>Complete Formula:</h4>
+                <h4>完整公式:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         sTSS = (IF³) × Duration (hours) × 100
@@ -926,32 +926,32 @@ const result = calculateCSS(200, 150, 400, 368);
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 交互式计算器 - 测试公式</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="stss-distance">Distance (meters):</label>
+                            <label for="stss-distance">距离 (米):</label>
                             <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="stss-duration">Duration (minutes):</label>
+                            <label for="stss-duration">时长 (分钟):</label>
                             <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="stss-css">CSS Pace (mm:ss per 100m):</label>
+                            <label for="stss-css">CSS 速度 (mm:ss 每100米):</label>
                             <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label>FTP (calculated):</label>
+                            <label>FTP (已计算):</label>
                             <input type="text" id="stss-ftp" readonly value="64.5 m/min">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Calculated sTSS:</div>
+                        <div class="result-label">计算的 sTSS:</div>
                         <div class="result-value" id="stss-result">55</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation steps:</strong><br>
+                            <strong>计算步骤:</strong><br>
                             <span id="stss-steps">
                                 NSS = 3000m / 55min = 54.5 m/min<br>
                                 FTP = 100 / (93/60) = 64.5 m/min<br>
@@ -962,7 +962,7 @@ const result = calculateCSS(200, 150, 400, 368);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">JavaScript 实现:</h4>
                 <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
   // Calculate Normalized Swim Speed
   const nss = distance / timeMinutes;
@@ -1070,7 +1070,7 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
         <div class="formula-card">
             <h3>SWOLF</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>公式:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         SWOLF = Lap Time (seconds) + Stroke Count
@@ -1081,18 +1081,18 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 交互式计算器 - 测试公式</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="swolf-time">Lap Time (seconds):</label>
+                            <label for="swolf-time">单程时间 (秒):</label>
                             <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-strokes">Stroke Count:</label>
+                            <label for="swolf-strokes">划水次数:</label>
                             <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-pool">Pool Length (m):</label>
+                            <label for="swolf-pool">池长 (米):</label>
                             <select id="swolf-pool">
                                 <option value="25" selected>25m</option>
                                 <option value="50">50m</option>
@@ -1100,12 +1100,12 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">SWOLF Score:</div>
+                        <div class="result-label">SWOLF 分数:</div>
                         <div class="result-value" id="swolf-result">35</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation:</strong><br>
+                            <strong>计算:</strong><br>
                             <span id="swolf-steps">
                                 SWOLF = 20s + 15 strokes = 35
                             </span>
@@ -1113,7 +1113,7 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">JavaScript 实现:</h4>
                 <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
   return timeSeconds + strokeCount;
 }
@@ -1174,40 +1174,40 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
 
 <section class="section">
     <div class="container">
-        <h2>Stroke Mechanics</h2>
+        <h2>划水机制</h2>
 
         <div class="formula-card">
-            <h3>Stroke Rate (SR)</h3>
+            <h3>划水速率 (SR)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>公式:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SR = 60 / Cycle Time (seconds)
+                        SR = 60 / 周期时间 (秒)
                     </div>
                     <div class="formula">
-                        SR = (Number of Strokes / Time in seconds) × 60
+                        SR = (划水次数 / 时间（秒)) × 60
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 交互式计算器 - 测试公式</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="sr-strokes">Stroke Count:</label>
+                            <label for="sr-strokes">划水次数:</label>
                             <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="sr-time">Time (seconds):</label>
+                            <label for="sr-time">时间 (秒):</label>
                             <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Stroke Rate (SPM):</div>
+                        <div class="result-label">划水速率 (SPM):</div>
                         <div class="result-value" id="sr-result">72</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation:</strong><br>
+                            <strong>计算:</strong><br>
                             <span id="sr-steps">
                                 SR = (30 / 25) × 60 = 72 SPM
                             </span>
@@ -1215,7 +1215,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">JavaScript 实现:</h4>
                 <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
   return (strokeCount / timeSeconds) * 60;
 }
@@ -1252,19 +1252,19 @@ const sr = calculateStrokeRate(30, 25);
         </div>
 
         <div class="formula-card">
-            <h3>Distance Per Stroke (DPS)</h3>
+            <h3>每划距离 (DPS)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>公式:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        DPS = Distance / Stroke Count
+                        DPS = 距离 / 划水次数
                     </div>
                     <div class="formula">
-                        DPS = Distance / (SR / 60)
+                        DPS = 距离 / (SR / 60)
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 实现:</h4>
                 <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance;
   return effectiveDistance / strokeCount;
@@ -1281,16 +1281,16 @@ const dps100m = calculateDPS(100, 48, 4 * 5);
         </div>
 
         <div class="formula-card">
-            <h3>Velocity from SR and DPS</h3>
+            <h3>从 SR 和 DPS 计算速度</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>公式:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        Velocity (m/s) = (SR / 60) × DPS
+                        速度 (m/s) = (SR / 60) × DPS
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 实现:</h4>
                 <pre><code>function calculateVelocity(strokeRate, dps) {
   return (strokeRate / 60) * dps;
 }
@@ -1302,16 +1302,16 @@ const velocity = calculateVelocity(70, 1.6);
         </div>
 
         <div class="formula-card">
-            <h3>Stroke Index (SI)</h3>
+            <h3>划水指数 (SI)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>公式:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SI = Velocity (m/s) × DPS (m/stroke)
+                        SI = 速度 (m/s) × DPS (m/划)
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 实现:</h4>
                 <pre><code>function calculateStrokeIndex(velocity, dps) {
   return velocity * dps;
 }
@@ -1326,12 +1326,12 @@ const si = calculateStrokeIndex(1.5, 1.7);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Performance Management Chart (PMC)</h2>
+        <h2>性能管理图表 (PMC)</h2>
 
         <div class="formula-card">
-            <h3>CTL, ATL, TSB Calculations</h3>
+            <h3>CTL、ATL、TSB 计算</h3>
             <div class="formula-content">
-                <h4>Formulas:</h4>
+                <h4>公式:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         CTL today = CTL yesterday + (TSS today - CTL yesterday) × (1/42)
@@ -1344,7 +1344,7 @@ const si = calculateStrokeIndex(1.5, 1.7);
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 实现:</h4>
                 <pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
@@ -1396,12 +1396,12 @@ const pmc = calculatePMC(workouts);
 
 <section class="section">
     <div class="container">
-        <h2>Advanced Calculations</h2>
+        <h2>高级计算</h2>
 
         <div class="formula-card">
-            <h3>CSS from Multiple Distances (Regression Method)</h3>
+            <h3>多距离的 CSS（回归方法）</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 实现:</h4>
                 <pre><code>function calculateCSSRegression(distances, times) {
   // Linear regression: distance = a + b*time
   const n = distances.length;
@@ -1428,9 +1428,9 @@ const result = calculateCSSRegression(distances, times);
         </div>
 
         <div class="formula-card">
-            <h3>Intensity Factor from Pace</h3>
+            <h3>从速度计算强度因子</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 实现:</h4>
                 <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
   // Convert pace to speed (m/s)
   const actualSpeed = 100 / actualPace100m;
@@ -1445,9 +1445,9 @@ const if_value = calculateIntensityFactor(110, 93);
         </div>
 
         <div class="formula-card">
-            <h3>Pace Consistency Analysis</h3>
+            <h3>速度一致性分析</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 实现:</h4>
                 <pre><code>function analyzePaceConsistency(laps) {
   const paces = laps.map(lap => lap.distance / lap.time);
   const avgPace = paces.reduce((a, b) => a + b) / paces.length;
@@ -1480,9 +1480,9 @@ const analysis = analyzePaceConsistency(laps);
         </div>
 
         <div class="formula-card">
-            <h3>Fatigue Detection from Stroke Count</h3>
+            <h3>从划水次数检测疲劳</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 实现:</h4>
                 <pre><code>function detectFatigue(laps) {
   const firstThird = laps.slice(0, Math.floor(laps.length/3));
   const lastThird = laps.slice(-Math.floor(laps.length/3));
@@ -1519,12 +1519,12 @@ const fatigue = detectFatigue(laps);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Data Validation</h2>
+        <h2>数据验证</h2>
 
         <div class="formula-card">
-            <h3>Workout Data Quality Checks</h3>
+            <h3>训练数据质量检查</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 实现:</h4>
                 <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
@@ -1579,12 +1579,12 @@ const validation = validateWorkoutData(workout);
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Helper Functions</h2>
+        <h2>辅助函数</h2>
 
         <div class="formula-card">
-            <h3>Time Conversion Utilities</h3>
+            <h3>时间转换工具</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 实现:</h4>
                 <pre><code>// Convert mm:ss to seconds
 function timeToSeconds(timeString) {
   const parts = timeString.split(':');
@@ -1617,23 +1617,23 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 
 <section class="section section-alt">
     <div class="container container-narrow text-center">
-        <h2>Implementation Resources</h2>
-        <p class="lead">All formulas on this page are production-ready and validated against scientific literature. Use them for custom analytics tools, verification, or deeper understanding of swimming performance calculations.</p>
+        <h2>实现资源</h2>
+        <p class="lead">本页面上的所有公式均可用于生产环境，并根据科学文献验证。使用它们进行自定义分析工具、验证或深入理解游泳性能计算。</p>
 
         <div class="callout callout-tip">
-            <h3>💡 Best Practices</h3>
+            <h3>💡 最佳实践</h3>
             <ul class="text-left">
-                <li><strong>Validate inputs:</strong> Check for reasonable ranges before calculating</li>
-                <li><strong>Handle edge cases:</strong> Division by zero, negative values, null data</li>
-                <li><strong>Round appropriately:</strong> CTL/ATL/TSB to 1 decimal, sTSS to integer</li>
-                <li><strong>Store precision:</strong> Keep full precision in database, round for display</li>
-                <li><strong>Test thoroughly:</strong> Use known-good data to verify calculations</li>
+                <li><strong>验证输入:</strong> 计算前检查合理范围</li>
+                <li><strong>处理边界情况:</strong> 除以零、负值、空数据</li>
+                <li><strong>适当舍入:</strong> CTL/ATL/TSB 到 1 位小数，sTSS 为整数</li>
+                <li><strong>保存精度:</strong> 在数据库中保持完整精度，显示时舍入</li>
+                <li><strong>彻底测试:</strong> 使用已知良好的数据验证计算</li>
             </ul>
         </div>
 
         <div class="mt-xl">
-            <a href="/zh/" class="btn btn-primary btn-large">Back to Home</a>
-            <a href="/zh/research/" class="btn btn-secondary">Scientific Foundation</a>
+            <a href="/zh/" class="btn btn-primary btn-large">返回首页</a>
+            <a href="/zh/research/" class="btn btn-secondary">科学基础</a>
         </div>
     </div>
 </section>

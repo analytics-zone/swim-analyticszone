@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     
-    <title>Kostenloser Schwimm-TSS-Rechner - Trainingsbelastungswert (sTSS) berechnen</title>
-    <meta name="description" content="Der einzige kostenlose Schwimm-TSS-Rechner. Berechnen Sie den Trainingsbelastungswert für jedes Training mit CSS-Tempo, Dauer und Durchschnittstempo. Enthält wöchentliche TSS-Richtlinien und CTL/ATL/TSB-Erklärungen.">
+    <title>Ingyenes Úszás TSS Kalkulátor - Edzésintenzitási Pontszám (sTSS) Számítás</title>
+    <meta name="description" content="Az egyetlen ingyenes úszás TSS kalkulátor. Számítsa ki az edzésintenzitási pontszámot bármely edzéshez CSS iránt, időtartam és átlagiránt alapján. Tartalmazza a heti TSS irányelveket és CTL/ATL/TSB magyarázatokat.">
     <meta name="author" content="Albert Arno">
     
-    <meta name="keywords" content="Schwimm-TSS-Rechner, sTSS-Rechner, trainingsbelastungswert, Schwimmtrainingsbelastung, kostenloser TSS">
+    <meta name="keywords" content="úszás TSS kalkulátor, sTSS kalkulátor, edzésintenzitási pontszám, úszás edzésintenzitás, ingyenes TSS">
     
     <link rel="canonical" href="https://swim.analyticszone.app/hu/stss-calculator/">
 
@@ -24,8 +24,8 @@
     
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://swim.analyticszone.app/hu/stss-calculator/">
-    <meta property="og:title" content="Kostenloser Schwimm-TSS-Rechner - Trainingsbelastungswert (sTSS) berechnen">
-    <meta property="og:description" content="Der einzige kostenlose Schwimm-TSS-Rechner. Berechnen Sie den Trainingsbelastungswert für jedes Training mit CSS-Tempo, Dauer und Durchschnittstempo. Enthält wöchentliche TSS-Richtlinien und CTL/ATL/TSB-Erklärungen.">
+    <meta property="og:title" content="Ingyenes Úszás TSS Kalkulátor - Edzésintenzitási Pontszám (sTSS) Számítás">
+    <meta property="og:description" content="Az egyetlen ingyenes úszás TSS kalkulátor. Számítsa ki az edzésintenzitási pontszámot bármely edzéshez CSS iránt, időtartam és átlagiránt alapján. Tartalmazza a heti TSS irányelveket és CTL/ATL/TSB magyarázatokat.">
     <meta property="og:image" content="https://swim.analyticszone.app/assets/images/swim-analytics-og.jpg">
     <meta property="og:locale" content="hu_HU">
     <meta property="og:site_name" content="Swim Analytics">
@@ -33,8 +33,8 @@
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://swim.analyticszone.app/hu/stss-calculator/">
-    <meta name="twitter:title" content="Kostenloser Schwimm-TSS-Rechner - Trainingsbelastungswert (sTSS) berechnen">
-    <meta name="twitter:description" content="Der einzige kostenlose Schwimm-TSS-Rechner. Berechnen Sie den Trainingsbelastungswert für jedes Training mit CSS-Tempo, Dauer und Durchschnittstempo. Enthält wöchentliche TSS-Richtlinien und CTL/ATL/TSB-Erklärungen.">
+    <meta name="twitter:title" content="Ingyenes Úszás TSS Kalkulátor - Edzésintenzitási Pontszám (sTSS) Számítás">
+    <meta name="twitter:description" content="Az egyetlen ingyenes úszás TSS kalkulátor. Számítsa ki az edzésintenzitási pontszámot bármely edzéshez CSS iránt, időtartam és átlagiránt alapján. Tartalmazza a heti TSS irányelveket és CTL/ATL/TSB magyarázatokat.">
     <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/swim-analytics-og.jpg">
     
     <meta name="twitter:site" content="@swimanalytics">
@@ -290,8 +290,8 @@ body {
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Kostenloser Schwimm-TSS-Rechner - Trainingsbelastungswert (sTSS) berechnen",
-      "description": "Der einzige kostenlose Schwimm-TSS-Rechner. Berechnen Sie den Trainingsbelastungswert für jedes Training mit CSS-Tempo, Dauer und Durchschnittstempo. Enthält wöchentliche TSS-Richtlinien und CTL/ATL/TSB-Erklärungen.",
+      "headline": "Ingyenes Úszás TSS Kalkulátor - Edzésintenzitási Pontszám (sTSS) Számítás",
+      "description": "Az egyetlen ingyenes úszás TSS kalkulátor. Számítsa ki az edzésintenzitási pontszámot bármely edzéshez CSS iránt, időtartam és átlagiránt alapján. Tartalmazza a heti TSS irányelveket és CTL/ATL/TSB magyarázatokat.",
       "author": {
         "@type": "Person",
         "name": "Albert Arno"
@@ -760,383 +760,122 @@ body {
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Ingyenes Úszás TSS Kalkulátor</h1>
-        <p class="lead">Számítsd ki az edzésterhelési pontszámot (Training Stress Score) úszóedzésekhez - Az egyetlen
-            ingyenes sTSS kalkulátor</p>
+        <h1>Ingyenes Swimming TSS kalkulátor</h1>
+        <p class="lead">CSS és edzésadatok alapján sTSS, IF, tempók automatikusan</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>Mi az Úszás TSS (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> számszerűsíti egy úszóedzés terhelését az
-                intenzitás és az időtartam kombinálásával. A kerékpározás TSS módszertanából lett adaptálva, a Kritikus
-                Úszósebességet (CSS) használva küszöbtempóként. Egy 1 órás edzés CSS tempóban = 100 sTSS.</p>
-        </div>
+        <h2>Mi a Swimming TSS (sTSS)?</h2>
+        <p><strong>Swimming Training Stress Score (sTSS)</strong> számszerűsíti az edzés terhelését az intenzitás és idő kombinálásával. A kerékpáros TSS-ből ered, de <strong>IF³</strong>-at használ a víz ellenállása miatt.</p>
 
-        <h2 class="mt-3xl">Ingyenes sTSS Kalkulátor</h2>
-        <p class="lead mb-xl">Számítsd ki az edzésterhelést bármely úszóedzéshez. Szükséges hozzá a CSS tempód.</p>
-
-        <div class="css-calculator">
-            <form id="stssCalculatorForm">
-                <div class="calculator-inputs">
-                    <div class="form-group">
-                        <label for="cssPace" class="form-label">A te CSS Tempód (pp:mp / 100m)</label>
-                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
-                        <small id="cssPace-help" class="form-help">A küszöbtempód a CSS tesztből (pl. 1:49)</small>
-                        <div class="form-error" id="cssPace-error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Edzés Időtartama (perc)</label>
-                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
-                            aria-required="true" aria-describedby="duration-help" />
-                        <small id="duration-help" class="form-help">Teljes edzésidő pihenőkkel együtt (1-300
-                            perc)</small>
-                        <div class="form-error" id="duration-error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="avgPace" class="form-label">Átlagos Edzéstempó (pp:mp / 100m)</label>
-                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
-                        <small id="pace-help" class="form-help">Az átlagos tempód az edzés alatt (pl. 2:05)</small>
-                        <div class="form-error" id="pace-error"></div>
-                    </div>
-
-                    <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">sTSS Számítása</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Törlés</button>
-                    </div>
-                </div>
-            </form>
-
-            <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Az Edzésterhelési Pontszámod</h3>
-                <div class="results-summary">
-                    <div class="result-item">
-                        <div class="result-label">sTSS</div>
-                        <div class="css-result-value" id="stssValue">--</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-label">Intenzitási Tényező (IF)</div>
-                        <div class="css-result-value" id="intensityFactor">--</div>
-                    </div>
-                </div>
-
-                <div class="zones-result">
-                    <h4>Edzésterhelés Értelmezése</h4>
-                    <p class="mb-md text-secondary" id="stssInterpretation">
-                        <!-- Filled by JavaScript -->
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">Hogyan Számítják az sTSS-t</h2>
-
-        <div class="formula-box">
+        <div class="callout callout-info">
             <h3>Képlet</h3>
-            <div class="formula">
-                sTSS = (Időtartam órában) × (Intenzitási Tényező)² × 100
-            </div>
-            <div class="formula-explanation">
-                <p>Ahol:</p>
-                <ul>
-                    <li><strong>Intenzitási Tényező (IF)</strong> = CSS Tempó / Átlagos Edzéstempó</li>
-                    <li><strong>Időtartam</strong> = Teljes edzésidő órában</li>
-                    <li><strong>CSS Tempó</strong> = A küszöbtempód a CSS tesztből</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3 class="mt-xl">Gyakorlati Példa</h3>
-        <div class="example-box">
-            <h4>Edzés Részletei:</h4>
-            <ul>
-                <li>CSS Tempó: <strong>1:49/100m</strong> (109 másodperc)</li>
-                <li>Edzés Időtartama: <strong>60 perc</strong> (1 óra)</li>
-                <li>Átlagos Tempó: <strong>2:05/100m</strong> (125 másodperc)</li>
-            </ul>
-
-            <h4>1. Lépés: Intenzitási Tényező Számítása</h4>
-            <div class="calculation">
-                IF = CSS Tempó / Edzéstempó<br>
-                IF = 109 / 125<br>
-                IF = <strong>0.872</strong>
-            </div>
-
-            <h4>2. Lépés: sTSS Számítása</h4>
-            <div class="calculation">
-                sTSS = 1.0 óra × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
-                sTSS = <strong>76</strong>
-            </div>
-
-            <p class="mt-md"><strong>Értelmezés:</strong> Ez a 60 perces edzés könnyű tempóban (lassabb, mint a CSS) 76
-                sTSS-t generált - egy mérsékelt edzésterhelés, amely alkalmas az aerob alap építésére.</p>
-        </div>
-
-        <h2 class="mt-3xl">sTSS Értékek Értelmezése</h2>
-
-        <div class="zones-table-container">
-            <table class="zones-table">
-                <thead>
-                    <tr>
-                        <th>sTSS Tartomány</th>
-                        <th>Edzésterhelés</th>
-                        <th>Regenerációs Idő</th>
-                        <th>Példa Edzés</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt; 50</td>
-                        <td>Alacsony</td>
-                        <td>Ugyanaz a nap</td>
-                        <td>Könnyű úszás 30 perc, technikai gyakorlatok</td>
-                    </tr>
-                    <tr>
-                        <td>50-100</td>
-                        <td>Mérsékelt</td>
-                        <td>1 nap</td>
-                        <td>60 perc állóképesség, egyenletes tempó</td>
-                    </tr>
-                    <tr>
-                        <td>100-200</td>
-                        <td>Magas</td>
-                        <td>1-2 nap</td>
-                        <td>90 perc küszöb sorozatok, versenytempó intervallumok</td>
-                    </tr>
-                    <tr>
-                        <td>200-300</td>
-                        <td>Nagyon Magas</td>
-                        <td>2-3 nap</td>
-                        <td>2 órás kemény edzés, több küszöb blokk</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; 300</td>
-                        <td>Extrém</td>
-                        <td>3+ nap</td>
-                        <td>Hosszú verseny (&gt;2 óra), ultra-állóképesség</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 class="mt-3xl">Heti sTSS Irányelvek</h2>
-
-        <p class="mb-md">A cél heti sTSS az edzettségi szintedtől és céljaidtól függ:</p>
-
-        <div class="grid grid-2 mb-xl">
-            <div class="card">
-                <h3 class="card-title">Hobbiúszók</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Heti sTSS:</strong> 150-300</p>
-                    <p>Heti 2-3 edzés, egyenként 50-100 sTSS. Fókusz a technikán és az aerob alap építésén.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Fitness Úszók / Triatlonisták</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Heti sTSS:</strong> 300-500</p>
-                    <p>Heti 3-4 edzés, egyenként 75-125 sTSS. Aerob állóképesség és küszöbmunka keveréke.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Versenyző Masters Úszók</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Heti sTSS:</strong> 500-800</p>
-                    <p>Heti 4-6 edzés, egyenként 80-150 sTSS. Strukturált edzés periodizációval.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Elit / Egyetemi Úszók</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Heti sTSS:</strong> 800-1200+</p>
-                    <p>Heti 8-12 edzés, dupla edzések. Nagy volumen, kritikus a regeneráció menedzselése.</p>
-                </div>
-            </div>
+            <p>sTSS = (IF³) × idő (óra) × 100</p>
+            <p>IF = NSS / CSS sebesség</p>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Fontos Megjegyzések</h3>
-            <ul>
-                <li><strong>Pontos CSS szükséges:</strong> A CSS-ednek aktuálisnak kell lennie (6-8 héten belül
-                    tesztelve) a pontos sTSS-hez.</li>
-                <li><strong>Egyszerűsített számítás:</strong> Ez a kalkulátor átlagos tempót használ. A fejlett sTSS a
-                    Normalized Graded Pace (NGP) értéket használja, amely figyelembe veszi az intervallumok szerkezetét.
-                </li>
-                <li><strong>Nem technikai munkához:</strong> Az sTSS csak a fizikai edzésterhelést méri, nem a
-                    készségfejlesztést.</li>
-                <li><strong>Egyéni variáció:</strong> Ugyanaz az sTSS másképp érződik különböző úszóknál. Igazítsd az
-                    irányelveket a regenerációdhoz.</li>
-            </ul>
-        </div>
-
-        <h2 class="mt-3xl">Miért Fontos az sTSS</h2>
-
-        <p class="mb-md">A Training Stress Score az alapja a következőknek:</p>
-
-        <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> A fittségi szinted - a napi sTSS 42 napos exponenciálisan
-                súlyozott átlaga</li>
-            <li><strong>ATL (Acute Training Load):</strong> A fáradtságod - a napi sTSS 7 napos exponenciálisan
-                súlyozott átlaga</li>
-            <li><strong>TSB (Training Stress Balance):</strong> A formád - TSB = CTL - ATL (pozitív = friss, negatív =
-                fáradt)</li>
-            <li><strong>Periodizáció:</strong> Edzésfázisok tervezése (alapozás, építés, csúcsforma, levezetés) cél CTL
-                progressziók használatával</li>
-            <li><strong>Regeneráció Menedzsment:</strong> Tudni, mikor kell nyomni és mikor kell pihenni a TSB alapján
-            </li>
-        </ul>
-
-        <div class="callout callout-tip">
-            <h3>Profi Tipp: Kövesd a CTL-edet</h3>
-            <p>Rögzítsd a napi sTSS-t egy táblázatban vagy edzésnaplóban. Számítsd ki a 42 napos átlagodat (CTL)
-                hetente. Célozz meg heti 5-10 CTL pont növekedést az alapozás során. Tartsd fenn vagy csökkentsd enyhén
-                a CTL-t a levezetés alatt (1-2 héttel a verseny előtt).</p>
-        </div>
-        <h2 class="mt-3xl">Gyakran Ismételt Kérdések</h2>
-
-        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Mi az Úszás TSS (sTSS)?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>A Swimming Training Stress Score (sTSS) egy mérőszám, amely számszerűsíti egy úszóedzés
-                            terhelését az intenzitás és az időtartam kombinálásával. A kerékpározás TSS módszertanából
-                            lett adaptálva, a Kritikus Úszósebességet (CSS) használva küszöbtempóként. Egy 1 órás edzés
-                            CSS tempóban 100 sTSS-nek felel meg.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hogyan számítsam ki az sTSS-emet?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Használd a fenti kalkulátort a CSS tempód (egy CSS tesztből), a teljes edzésidő és az edzés
-                            alatti átlagos tempó megadásával. A képlet: sTSS = Időtartam (óra) × Intenzitási Tényező² ×
-                            100, ahol Intenzitási Tényező = CSS Tempó / Átlagos Edzéstempó.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Szükségem van CSS-re az sTSS számításához?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Igen, a Kritikus Úszósebességed (CSS) szükséges az Intenzitási Tényező kiszámításához, ami
-                            elengedhetetlen az sTSS számításhoz. A CSS a küszöbtempódat képviseli, és 6-8 hetente
-                            tesztelni kell. Megtalálhatod a CSS-edet a <a href="/hu/css/">CSS kalkulátorunk</a>
-                            segítségével.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Mi a jó sTSS pontszám egy edzésre?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Ez az edzés intenzitásától függ: A könnyű edzések jellemzően 50 sTSS alatt vannak, a
-                            mérsékeltek 50-100 sTSS, a kemények 100-200 sTSS, és a nagyon kemények 200 sTSS felett. A
-                            megfelelő pontszám az edzési céljaidtól és a jelenlegi fittségi szintedtől függ.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Mennyi sTSS-t kellene csinálnom hetente?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>A heti sTSS célok szintenként változnak: Hobbiúszók: 150-300, Fitness úszók/Triatlonisták:
-                            300-500, Versenyző Masters: 500-800, Elit/Egyetemi: 800-1200+. Kezdj konzervatívan, és
-                            fokozatosan növeld a túlterhelés elkerülése érdekében.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Az úszás TSS ugyanaz, mint a kerékpározás TSS?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>A koncepció és a képlet ugyanaz, de az sTSS az úszáshoz van igazítva. Ahelyett, hogy
-                            teljesítményt (FTP) használna, mint a kerékpározás TSS, az sTSS tempót használ CSS-sel
-                            küszöbként. Mindkettő az edzésterhelést méri az Időtartam × Intenzitási Tényező² × 100
-                            használatával.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Használhatom az sTSS-t minden úszásnemhez?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Igen, de a CSS-nek úszásnem-specifikusnak kell lennie. A legtöbb úszó gyorsúszás CSS-t
-                            használ, mivel ez a leggyakrabban edzett úszásnem. Ha elsősorban más úszásnemben edzel,
-                            végezz CSS tesztet abban az úszásnemben, és használd azt a tempót az sTSS számításhoz.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Mi a különbség az sTSS és a CTL/ATL/TSB között?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Az sTSS egyetlen edzés edzésterhelését méri. A CTL (Chronic Training Load) a hosszú távú
-                            fittséged, az ATL (Acute Training Load) a közelmúltbeli fáradtságod, a TSB (Training Stress
-                            Balance) pedig a frissességed. Ezek a mutatók az sTSS értékeket használják az idő múlásával
-                            az edzésállapotod nyomon követésére. Tudj meg többet az <a
-                                href="/hu/training-load/">Edzésterhelés útmutatónkban</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">Kapcsolódó Források</h2>
-
-        <div class="grid grid-3">
-            <div class="card">
-                <h3 class="card-title">CSS Teszt</h3>
-                <div class="card-content">
-                    <p>Szükséged van a CSS tempódra? Használd ingyenes CSS kalkulátorunkat 400m és 200m tesztidőkkel.
-                    </p>
-                    <a href="/hu/css/" class="btn btn-secondary btn-small mt-md">CSS Kalkulátor →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Edzésterhelés Útmutató</h3>
-                <div class="card-content">
-                    <p>Tanulj a CTL, ATL, TSB és a Performance Management Chart mutatókról.</p>
-                    <a href="/hu/training-load/" class="btn btn-secondary btn-small mt-md">Edzésterhelés →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Swim Analytics App</h3>
-                <div class="card-content">
-                    <p>Automatikus sTSS számítás minden edzéshez. Kövesd a CTL/ATL/TSB trendeket az idő múlásával.</p>
-                    <a href="/hu/" class="btn btn-secondary btn-small mt-md">További Információk →</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Szeretnél automatikus sTSS követést?</strong></p>
-            <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank"
-                rel="noopener">Töltsd le a Swim Analytics-et Ingyen</a>
+            <h3>⚠️ CSS a kulcs</h3>
+            <p>Hibás CSS → hibás IF/sTSS/CTL/ATL/TSB. Előbb pontos <a href="/hu/css/">CSS teszt</a>.</p>
         </div>
     </div>
 </section>
 
-<script src="/assets/js/stss-calculator.min.js"></script>
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">Használat</h2>
+        <div class="grid grid-2">
+            <div>
+                <h3>1) CSS megadása</h3>
+                <ul>
+                    <li>400/200-as időkből számolva, vagy</li>
+                    <li>Ismert CSS tempó/sebesség beírása</li>
+                </ul>
+            </div>
+            <div>
+                <h3>2) Edzésadatok</h3>
+                <ul>
+                    <li>Össztáv (m)</li>
+                    <li>Mozgási idő (pp:mp)</li>
+                    <li>Pihenő időt ne add hozzá</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid grid-2 mt-xl">
+            <div>
+                <h3>3) Eredmények</h3>
+                <ul>
+                    <li>IF (Intensity Factor)</li>
+                    <li>sTSS</li>
+                    <li>Átlagtempó és zónatempók</li>
+                </ul>
+            </div>
+            <div>
+                <h3>4) Terhelés követése</h3>
+                <p>sTSS-t add össze nap/ hét szinten a CTL/ATL/TSB-hez.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Példa</h2>
+        <div class="example-box">
+            <h4>Bemenet</h4>
+            <ul>
+                <li>CSS: 1:33/100m</li>
+                <li>Össztáv: 3000m</li>
+                <li>Mozgási idő: 55:00</li>
+            </ul>
+            <h4>Kimenet</h4>
+            <ul>
+                <li>IF ≈ 0,845</li>
+                <li>sTSS ≈ 55</li>
+                <li>Átlagtempó és zónatempók megjelennek</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2 class="text-center mb-xl">sTSS intenzitás</h2>
+        <table class="intensity-table">
+            <thead><tr><th>sTSS</th><th>Jelentés</th><th>Példa</th></tr></thead>
+            <tbody>
+                <tr><td>&lt; 50</td><td>Regeneráció</td><td>30-45 perc könnyű/gyakorlat</td></tr>
+                <tr><td>50-100</td><td>Mérsékelt</td><td>60-90 perc aerob</td></tr>
+                <tr><td>100-200</td><td>Erős</td><td>Küszöb/VO₂ intervallum</td></tr>
+                <tr><td>200+</td><td>Nagyon erős</td><td>Hosszú, nagy intenzitás – regeneráció kell</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>GYIK</h2>
+        <div class="faq-item"><h3>sTSS vs TSS?</h3><p>Azonos elv, de úszásban IF³ a víz ellenállása miatt.</p></div>
+        <div class="faq-item"><h3>Pihenőidő?</h3><p>Nem számítjuk bele – csak mozgási idő.</p></div>
+        <div class="faq-item"><h3>Nincs CSS?</h3><p>Előbb <a href="/hu/css/">CSS teszt</a>.</p></div>
+        <div class="faq-item"><h3>Nyílt víz?</h3><p>Igen, CSS alapú sTSS ott is működik.</p></div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow text-center">
+        <h2>Mérd az edzésterhelést sTSS-sel</h2>
+        <p class="lead">Intenzitás + idő egy számban, CSS-re építve.</p>
+        <div class="mt-xl">
+            <a href="/hu/training-load/" class="btn btn-secondary">← Edzésterhelés</a>
+            <a href="/hu/training-zones/" class="btn btn-primary">Edzészónák →</a>
+        </div>
+    </div>
+</section>
     </main>
 
     
