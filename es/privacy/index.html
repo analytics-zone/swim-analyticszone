@@ -790,106 +790,436 @@ img[width][height] {
 
 <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-lg">Política de Privacidad</h1>
+        <h1 class="mb-lg">Política de Privacidad de Swim Analytics</h1>
 
-        <p class="text-secondary mb-xl">Última actualización: <strong>Enero 2024</strong></p>
+        <p class="text-secondary mb-xl"><strong>Última actualización:</strong> 10 de Enero de 2025 | <strong>Fecha de
+                efecto:</strong> 10 de Enero de 2025</p>
 
         <div class="mb-xl">
             <h2 class="mb-md">Introducción</h2>
             <p class="mb-md">
-                Esta Política de Privacidad describe cómo recopilamos, usamos y protegemos tu información personal cuando visitas nuestro sitio web.
+                Swim Analytics ("nosotros", "nuestro" o "la app") se compromete a proteger su privacidad. Esta Política
+                de Privacidad explica cómo nuestras aplicaciones móviles (iOS y Android) acceden, utilizan y protegen
+                los datos de salud de su dispositivo.
             </p>
+            <div class="callout callout-info mb-md">
+                <p><strong>Principio Clave de Privacidad:</strong> Swim Analytics opera con una <strong>arquitectura
+                        local sin servidores</strong>. Todos los datos de salud accedidos desde Apple HealthKit (iOS) o
+                    Health Connect (Android) permanecen exclusivamente en su dispositivo físico y nunca se transmiten a
+                    servidores externos, servicios en la nube o terceros.</p>
+            </div>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">1. Acceso a Datos de Salud</h2>
             <p class="mb-md">
-                Estamos comprometidos con la protección de tu privacidad y garantizar que tu información personal se maneje de forma segura y responsable.
+                Swim Analytics se integra con la plataforma de salud nativa de su dispositivo para proporcionar análisis
+                de entrenamientos de natación:
             </p>
-        </div>
 
-        <div class="mb-xl">
-            <h2 class="mb-md">Información que Recopilamos</h2>
-            <h3 class="mb-sm">Información que proporcionas directamente:</h3>
-            <ul class="mb-md">
-                <li>Información de contacto (nombre, correo electrónico) cuando usas nuestro formulario de contacto</li>
-                <li>Cualquier otra información que elijas proporcionar</li>
-            </ul>
-
-            <h3 class="mb-sm">Información recopilada automáticamente:</h3>
-            <ul class="mb-md">
-                <li>Tipo y versión del navegador</li>
-                <li>Sistema operativo</li>
-                <li>Páginas visitadas y tiempo pasado en las páginas</li>
-                <li>Dirección IP (anonimizada)</li>
-            </ul>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Cómo Usamos tu Información</h2>
-            <p class="mb-sm">Usamos la información que recopilamos para:</p>
-            <ul class="mb-md">
-                <li>Responder a tus consultas y solicitudes</li>
-                <li>Mejorar nuestro sitio web y servicios</li>
-                <li>Analizar cómo se usa nuestro sitio web</li>
-                <li>Garantizar la seguridad e integridad de nuestro sitio web</li>
-            </ul>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Cookies</h2>
+            <h3 class="mb-sm">1.1 iOS - Integración con Apple HealthKit</h3>
             <p class="mb-md">
-                Usamos cookies para mejorar tu experiencia en nuestro sitio web. Las cookies son pequeños archivos de texto almacenados en tu dispositivo que nos ayudan a comprender cómo usas nuestro sitio.
+                En dispositivos iOS, Swim Analytics se integra con <strong>Apple HealthKit</strong> para acceder a los
+                datos de entrenamiento de natación. Solicitamos acceso de solo lectura a:
             </p>
-            <p class="mb-sm">Usamos los siguientes tipos de cookies:</p>
             <ul class="mb-md">
-                <li><strong>Cookies esenciales:</strong> Necesarias para el funcionamiento correcto del sitio web</li>
-                <li><strong>Cookies analíticas:</strong> Nos ayudan a comprender cómo los visitantes interactúan con nuestro sitio web (solo con tu consentimiento)</li>
+                <li><strong>Sesiones de Entrenamiento:</strong> Sesiones de ejercicio de natación con tiempo y duración
+                </li>
+                <li><strong>Distancia:</strong> Distancias totales y distancias por largo</li>
+                <li><strong>Frecuencia Cardíaca:</strong> Datos de frecuencia cardíaca durante los entrenamientos</li>
+                <li><strong>Energía Activa:</strong> Calorías quemadas durante las sesiones de natación</li>
+                <li><strong>Recuento de Brazadas:</strong> Datos de brazadas para el análisis</li>
             </ul>
             <p class="mb-md">
-                Puedes controlar las cookies mediante la configuración de tu navegador. Ten en cuenta que deshabilitar las cookies puede afectar la funcionalidad de nuestro sitio web.
+                <strong>Cumplimiento con Apple HealthKit:</strong> Swim Analytics se adhiere a todas las directrices de
+                Apple HealthKit. Sus datos de salud se procesan completamente en su dispositivo iOS y nunca salen de él.
+                Nunca compartimos datos de HealthKit con terceros, plataformas publicitarias o corredores de datos.
             </p>
-        </div>
 
-        <div class="mb-xl">
-            <h2 class="mb-md">Servicios de Terceros</h2>
+            <h3 class="mb-sm">1.2 Android - Integración con Health Connect</h3>
+            <div class="table-responsive mb-md">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Dato de Salud</th>
+                            <th>Permiso</th>
+                            <th>Propósito</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Sesiones de Ejercicio</strong></td>
+                            <td><code>READ_EXERCISE</code></td>
+                            <td>Para identificar e importar sesiones de entrenamiento de natación desde Health Connect
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Registros de Distancia</strong></td>
+                            <td><code>READ_DISTANCE</code></td>
+                            <td>Para mostrar métricas clave como la distancia total por nado, distancias por largo y
+                                calcular el ritmo</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Registros de Frecuencia Cardíaca</strong></td>
+                            <td><code>READ_HEART_RATE</code></td>
+                            <td>Para mostrar gráficos de frecuencia cardíaca, calcular el promedio y máximo durante los
+                                entrenamientos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Registros de Velocidad</strong></td>
+                            <td><code>READ_SPEED</code></td>
+                            <td>Para calcular y mostrar su ritmo de natación, zonas de ritmo y análisis de frecuencia de
+                                brazada</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Calorías Quemadas</strong></td>
+                            <td><code>READ_TOTAL_CALORIES_BURNED</code></td>
+                            <td>Para proporcionar una visión general completa del gasto energético durante las sesiones
+                                de natación</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <p class="mb-md">
-                Podemos usar servicios de terceros como Google Analytics para ayudarnos a analizar el tráfico del sitio web. Estos servicios pueden recopilar información sobre tu uso de nuestro sitio web.
+                <strong>Permisos de Android:</strong> Estos permisos se solicitan durante el primer inicio de la app.
+                Puede revocar estos permisos en cualquier momento a través de Configuración de Android → Aplicaciones →
+                Health Connect → Swim Analytics.
             </p>
-            <p class="mb-md">
-                Estos terceros tienen sus propias políticas de privacidad, y te recomendamos revisarlas.
-            </p>
-        </div>
 
-        <div class="mb-xl">
-            <h2 class="mb-md">Seguridad de los Datos</h2>
-            <p class="mb-md">
-                Implementamos medidas técnicas y organizativas apropiadas para proteger tu información personal contra acceso no autorizado, alteración, divulgación o destrucción.
-            </p>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Tus Derechos</h2>
-            <p class="mb-sm">Tienes derecho a:</p>
+            <h3 class="mb-sm">1.3 Cómo Utilizamos los Datos de Salud</h3>
+            <p class="mb-sm">Todos los datos de salud se utilizan <strong>exclusivamente para los siguientes
+                    propósitos</strong>:</p>
             <ul class="mb-md">
-                <li>Acceder a tu información personal</li>
-                <li>Corregir información inexacta</li>
-                <li>Solicitar la eliminación de tu información</li>
-                <li>Retirar el consentimiento para el procesamiento de datos</li>
-                <li>Oponerte al procesamiento de tu información</li>
+                <li><strong>Visualización de Entrenamientos:</strong> Muestra sus sesiones de natación con métricas
+                    detalladas (distancia, tiempo, ritmo, frecuencia cardíaca)</li>
+                <li><strong>Analítica de Rendimiento:</strong> Calcula zonas de ritmo, análisis de brazada, CSS
+                    (Velocidad Crítica de Natación) y sTSS (Puntuación de Estrés de Entrenamiento de natación)</li>
+                <li><strong>Seguimiento del Progreso:</strong> Muestra tendencias de rendimiento, mejores marcas
+                    personales y resúmenes de entrenamiento</li>
+                <li><strong>Exportación de Datos:</strong> Permite exportar sus datos de entrenamiento a formato CSV
+                    para uso personal</li>
+            </ul>
+
+            <h3 class="mb-sm">1.4 Almacenamiento de Datos</h3>
+            <div class="callout callout-success mb-md">
+                <h4 class="mb-sm">🔒 GARANTÍA CRÍTICA DE PRIVACIDAD:</h4>
+                <p class="mb-sm"><strong>Todos los datos de salud permanecen exclusivamente en su dispositivo
+                        físico.</strong></p>
+                <ul class="mb-0">
+                    <li><strong>iOS:</strong> Los datos se almacenan utilizando iOS Core Data y UserDefaults (solo en el
+                        dispositivo)</li>
+                    <li><strong>Android:</strong> Los datos se almacenan utilizando Android Room Database (SQLite en el
+                        dispositivo)</li>
+                    <li><strong>NO se suben datos a servidores externos</strong></li>
+                    <li><strong>NO se transmiten datos por internet</strong></li>
+                    <li><strong>NO hay sincronización en la nube ni copia de seguridad de datos de salud</strong></li>
+                    <li><strong>NO hay acceso de terceros a sus datos de salud</strong></li>
+                </ul>
+            </div>
+            <p class="mb-md">
+                El único momento en que los datos salen de su dispositivo es cuando <strong>USTED elige
+                    explícitamente</strong> exportar sus entrenamientos a formato CSV y compartir el archivo usted
+                mismo.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">2. Permisos Necesarios</h2>
+
+            <h3 class="mb-sm">2.1 Permisos iOS</h3>
+            <ul class="mb-md">
+                <li><strong>Acceso a HealthKit:</strong> Acceso de lectura a Entrenamientos, Distancia, Frecuencia
+                    Cardíaca, Energía Activa y Recuento de Brazadas</li>
+                <li><strong>Fototeca (Opcional):</strong> Solo si elige guardar resúmenes de entrenamiento como imágenes
+                </li>
             </ul>
             <p class="mb-md">
-                Para ejercer estos derechos, contáctanos utilizando la información proporcionada en nuestra <a href="/es/contact/">página de contacto</a>.
+                Puede gestionar los permisos de HealthKit en cualquier momento en Configuración iOS → Privacidad y
+                Seguridad → Salud → Swim Analytics.
+            </p>
+
+            <h3 class="mb-sm">2.2 Permisos Android</h3>
+            <ul class="mb-md">
+                <li><code>android.permission.health.READ_EXERCISE</code></li>
+                <li><code>android.permission.health.READ_DISTANCE</code></li>
+                <li><code>android.permission.health.READ_HEART_RATE</code></li>
+                <li><code>android.permission.health.READ_SPEED</code></li>
+                <li><code>android.permission.health.READ_TOTAL_CALORIES_BURNED</code></li>
+                <li><strong>Acceso a Internet</strong> (<code>INTERNET</code>): Utilizado solo para mostrar contenido
+                    estático dentro de la app y acceder a la gestión de suscripciones (Google Play Billing). No se
+                    transmiten datos de salud.</li>
+                <li><strong>Servicio en Primer Plano</strong> (<code>FOREGROUND_SERVICE</code>): Para potenciales
+                    funciones futuras de sincronización en segundo plano (no implementadas actualmente).</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">3. Datos que NO Recopilamos</h2>
+            <p class="mb-sm">Swim Analytics <strong>NO</strong> recopila, almacena ni transmite:</p>
+            <ul class="mb-md">
+                <li>❌ Información de identificación personal (nombre, correo electrónico, número de teléfono)</li>
+                <li>❌ Identificadores de dispositivo (IDFA en iOS, ID de publicidad en Android)</li>
+                <li>❌ Datos de ubicación o coordenadas GPS</li>
+                <li>❌ Analítica de uso o seguimiento de comportamiento en la app</li>
+                <li>❌ Informes de error o datos de diagnóstico a servidores externos</li>
+                <li>❌ Ningún dato a través de SDKs de terceros o servicios de analítica</li>
+            </ul>
+            <p class="mb-sm">Utilizamos <strong>cero bibliotecas de seguimiento de terceros</strong> incluyendo:</p>
+            <ul class="mb-md">
+                <li>No Google Analytics / Firebase Analytics</li>
+                <li>No Facebook SDK</li>
+                <li>No SDKs de publicidad</li>
+                <li>No servicios de informes de error (Crashlytics, Sentry, etc.)</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">4. Compras dentro de la App y Suscripciones</h2>
+            <p class="mb-md">
+                Swim Analytics ofrece suscripciones opcionales dentro de la app gestionadas mediante el sistema de pago
+                nativo de su dispositivo:
+            </p>
+
+            <h3 class="mb-sm">4.1 iOS - Suscripciones App Store</h3>
+            <p class="mb-sm">Cuando compra una suscripción en iOS:</p>
+            <ul class="mb-md">
+                <li>Apple gestiona todo el procesamiento de pagos a través de la App Store</li>
+                <li>Nosotros recibimos solo el estado de la suscripción (activa/inactiva) a través de StoreKit</li>
+                <li>NO tenemos acceso a su información de pago (tarjeta de crédito, dirección de facturación)</li>
+                <li>Los datos de suscripción se almacenan localmente en su dispositivo</li>
+            </ul>
+            <p class="mb-sm">Gestionar suscripciones:</p>
+            <ul class="mb-md">
+                <li>Configuración iOS → Su nombre → Suscripciones → Swim Analytics</li>
+                <li>O dentro de la app: Configuración → Gestionar Suscripción</li>
+            </ul>
+
+            <h3 class="mb-sm">4.2 Android - Google Play Billing</h3>
+            <p class="mb-sm">Cuando compra una suscripción en Android:</p>
+            <ul class="mb-md">
+                <li>Google Play gestiona todo el procesamiento de pagos</li>
+                <li>Nosotros recibimos solo el estado de la suscripción (activa/inactiva) a través de la API de Google
+                    Play Billing</li>
+                <li>NO tenemos acceso a su información de pago (tarjeta de crédito, dirección de facturación)</li>
+                <li>Los datos de suscripción se almacenan localmente en su dispositivo</li>
+            </ul>
+            <p class="mb-sm">Gestionar suscripciones:</p>
+            <ul class="mb-md">
+                <li>Google Play Store → Cuenta → Suscripciones → Swim Analytics</li>
+                <li>O dentro de la app: Configuración → Gestionar Suscripción</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">5. Retención y Eliminación de Datos</h2>
+
+            <h3 class="mb-sm">5.1 Retención de Datos</h3>
+            <ul class="mb-md">
+                <li>Los datos de salud se almacenan en su dispositivo <strong>indefinidamente</strong> hasta que los
+                    elimine manualmente</li>
+                <li>Los datos de entrenamiento se conservan para proporcionar seguimiento histórico del rendimiento y
+                    analítica</li>
+            </ul>
+
+            <h3 class="mb-sm">5.2 Eliminación de Datos</h3>
+            <p class="mb-sm">Puede eliminar sus datos en cualquier momento:</p>
+
+            <p class="mb-sm"><strong>Método 1: Eliminar Entrenamientos Individuales</strong></p>
+            <ul class="mb-md">
+                <li>Abra la pantalla de detalle del entrenamiento</li>
+                <li>Toque el botón de eliminar (icono de papelera)</li>
+                <li>Confirme la eliminación</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Método 2: Borrar Todos los Datos de la App</strong></p>
+            <ul class="mb-md">
+                <li><strong>iOS:</strong> Elimine y reinstale la app (todos los datos locales se eliminan)</li>
+                <li><strong>Android:</strong> Configuración → Aplicaciones → Swim Analytics → Almacenamiento → Borrar
+                    datos</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Método 3: Desinstalar la App</strong></p>
+            <ul class="mb-md">
+                <li>Desinstalar Swim Analytics elimina automáticamente todos los datos locales</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Método 4: Revocar Permisos de Salud</strong></p>
+            <ul class="mb-md">
+                <li><strong>iOS:</strong> Configuración → Privacidad y Seguridad → Salud → Swim Analytics → Desactivar
+                    Todas las Categorías</li>
+                <li><strong>Android:</strong> Configuración → Aplicaciones → Health Connect → Swim Analytics → Revocar
+                    todos los permisos</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">6. Seguridad de los Datos</h2>
+            <p class="mb-md">
+                Nos tomamos la seguridad de los datos seriamente, aunque todos los datos permanecen en su dispositivo:
+            </p>
+
+            <h3 class="mb-sm">6.1 Medidas de Seguridad</h3>
+            <ul class="mb-md">
+                <li><strong>Seguridad iOS:</strong> Todos los datos almacenados utilizando iOS Core Data están
+                    protegidos por el Keychain de iOS y la encriptación del dispositivo. Los datos están protegidos
+                    cuando el dispositivo está bloqueado.</li>
+                <li><strong>Seguridad Android:</strong> Todos los datos almacenados en Room Database están protegidos
+                    por la seguridad integrada de Android y el sandbox de la aplicación.</li>
+                <li><strong>Sin Transmisión de Red:</strong> Los datos de salud nunca salen de su dispositivo,
+                    eliminando los riesgos de seguridad de transmisión</li>
+                <li><strong>Sandboxing de App:</strong> Los sandboxes de app de iOS y Android evitan que otras apps
+                    accedan a los datos de Swim Analytics</li>
+                <li><strong>Almacenamiento Seguro:</strong> No se puede acceder a los datos de salud sin autenticación
+                    del dispositivo (código, Face ID, Touch ID, huella digital, desbloqueo facial)</li>
+            </ul>
+
+            <h3 class="mb-sm">6.2 Su Responsabilidad</h3>
+            <p class="mb-sm">Para proteger sus datos:</p>
+            <ul class="mb-md">
+                <li>Mantenga su dispositivo bloqueado con un código fuerte/biometría</li>
+                <li>Mantenga su sistema operativo actualizado con los últimos parches de seguridad</li>
+                <li><strong>iOS:</strong> No haga jailbreak a su dispositivo</li>
+                <li><strong>Android:</strong> No haga root a su dispositivo</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">7. Compartir Datos y Terceros</h2>
+            <p class="mb-md">
+                <strong>Swim Analytics NO comparte sus datos de salud con ningún tercero.</strong>
+            </p>
+
+            <h3 class="mb-sm">7.1 Sin Compartir Datos</h3>
+            <ul class="mb-md">
+                <li>No vendemos sus datos</li>
+                <li>No compartimos sus datos con anunciantes</li>
+                <li>No proporcionamos sus datos a empresas de analítica</li>
+                <li>No nos integramos con plataformas de redes sociales</li>
+            </ul>
+
+            <h3 class="mb-sm">7.2 Exportación CSV (Solo Iniciada por el Usuario)</h3>
+            <p class="mb-sm">La única manera que los datos salgan de su dispositivo es cuando <strong>USTED</strong>
+                explícitamente:</p>
+            <ol class="mb-md">
+                <li>Navegue a Configuración → Exportación de Datos Brutos</li>
+                <li>Genere un archivo CSV</li>
+                <li>Elija compartir el archivo CSV a través del menú de compartir de su dispositivo (correo electrónico,
+                    almacenamiento en la nube, apps de mensajería)</li>
+            </ol>
+            <p class="mb-md"><strong>Esto está totalmente bajo su control.</strong></p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">8. Privacidad de los Menores</h2>
+            <p class="mb-md">
+                Swim Analytics no recopila conscientemente datos de menores de 13 años. La app no solicita información
+                de edad, pero los padres deberían supervisar el uso que hacen sus hijos de las aplicaciones de
+                seguimiento de salud.
+            </p>
+            <p class="mb-md">
+                Si cree que un menor de 13 años ha utilizado Swim Analytics, contáctenos y le ayudaremos a asegurar que
+                todos los datos locales se eliminen del dispositivo.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Cambios a Esta Política</h2>
+            <h2 class="mb-md">9. Transferencias Internacionales de Datos</h2>
             <p class="mb-md">
-                Podemos actualizar esta Política de Privacidad de vez en cuando. Te notificaremos de cualquier cambio publicando la nueva política en esta página con una fecha de "Última actualización" actualizada.
+                <strong>No Aplicable.</strong> Dado que todos los datos de salud permanecen exclusivamente en su
+                dispositivo (iOS o Android) y nunca se transmiten a servidores, no hay transferencias internacionales de
+                datos.
             </p>
         </div>
 
-        <div class="callout callout-info">
-            <h2 class="mb-sm">¿Preguntas?</h2>
-            <p>
-                Si tienes alguna pregunta sobre esta Política de Privacidad, por favor <a href="/es/contact/">contáctanos</a>.
+        <div class="mb-xl">
+            <h2 class="mb-md">10. Sus Derechos (Cumplimiento GDPR, CCPA)</h2>
+            <p class="mb-md">
+                Aunque Swim Analytics no recopila datos personales en servidores, respetamos sus derechos de privacidad
+                de datos:
+            </p>
+
+            <h3 class="mb-sm">10.1 Derechos GDPR (Usuarios Europeos)</h3>
+            <ul class="mb-md">
+                <li><strong>Derecho de Acceso:</strong> Todos sus datos son accesibles dentro de la app en cualquier
+                    momento</li>
+                <li><strong>Derecho de Eliminación:</strong> Elimine datos utilizando los métodos descritos en la
+                    Sección 5.2</li>
+                <li><strong>Derecho a la Portabilidad:</strong> Exporte sus datos a formato CSV (Configuración →
+                    Exportación de Datos Brutos)</li>
+                <li><strong>Derecho a Restringir el Tratamiento:</strong> Revoque los permisos de salud para detener el
+                    acceso a nuevos datos</li>
+            </ul>
+
+            <h3 class="mb-sm">10.2 Derechos CCPA (Usuarios de California)</h3>
+            <ul class="mb-md">
+                <li><strong>Derecho a Saber:</strong> Esta política revela todos los datos a los que se accede y cómo se
+                    utilizan</li>
+                <li><strong>Derecho a Eliminar:</strong> Elimine datos utilizando los métodos descritos en la Sección
+                    5.2</li>
+                <li><strong>Derecho a Optar por No Vender:</strong> No aplicable (nunca vendemos datos)</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">11. Cambios en Esta Política de Privacidad</h2>
+            <p class="mb-sm">Podemos actualizar esta Política de Privacidad de vez en cuando. Cuando hagamos cambios:
+            </p>
+            <ul class="mb-md">
+                <li>La fecha de "Última Actualización" en la parte superior de esta política se revisará</li>
+                <li>Los cambios significativos se anunciarán dentro de la app</li>
+                <li>El uso continuado de la app después de los cambios constituye la aceptación de la política
+                    actualizada</li>
+            </ul>
+            <p class="mb-md">
+                Recomendamos revisar esta política periódicamente para estar informados sobre cómo protegemos su
+                privacidad.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">12. Contáctenos</h2>
+            <p class="mb-sm">Si tiene preguntas, inquietudes o solicitudes relacionadas con esta Política de Privacidad
+                o su privacidad de datos:</p>
+            <ul class="mb-md">
+                <li><strong>Correo electrónico:</strong> support@swimanalytics.app</li>
+                <li><strong>Sitio web:</strong> <a href="https://swimanalytics.app">https://swimanalytics.app</a></li>
+            </ul>
+            <p class="mb-md">
+                <strong>Tiempo de Respuesta:</strong> Intentamos responder a todas las consultas de privacidad en un
+                plazo de 7 días laborables.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">13. Cumplimiento Legal</h2>
+            <p class="mb-sm">Swim Analytics cumple con:</p>
+            <ul class="mb-md">
+                <li><strong>iOS:</strong> Directrices de Revisión de la App Store de Apple, Directrices de HealthKit de
+                    Apple</li>
+                <li><strong>Android:</strong> Políticas del Programa de Desarrolladores de Google Play, Directrices de
+                    Health Connect de Android</li>
+                <li>Reglamento General de Protección de Datos (GDPR)</li>
+                <li>Ley de Privacidad del Consumidor de California (CCPA)</li>
+                <li>Ley de Protección de la Privacidad Infantil en Línea (COPPA)</li>
+            </ul>
+        </div>
+
+        <div class="callout callout-success">
+            <h2 class="mb-md">Resumen</h2>
+            <p class="mb-sm"><strong>En Términos Simples:</strong></p>
+            <ul class="mb-sm">
+                <li>✅ <strong>A qué accedemos:</strong> Datos de entrenamiento de natación de Apple HealthKit (iOS) o
+                    Health Connect (Android)</li>
+                <li>✅ <strong>Dónde se almacena:</strong> Solo en SU dispositivo (iOS Core Data o Android Room Database)
+                </li>
+                <li>✅ <strong>Dónde va:</strong> A ninguna parte. Nunca sale de su dispositivo.</li>
+                <li>✅ <strong>Quién lo ve:</strong> Solo usted.</li>
+                <li>✅ <strong>Cómo borrarlo:</strong> Borre los datos de la app o desinstale la app en cualquier
+                    momento.</li>
+            </ul>
+            <p class="mb-0">
+                <strong>Swim Analytics está construido con la privacidad como prioridad. Sus datos de natación son suyos
+                    y se quedan en su dispositivo.</strong>
             </p>
         </div>
     </div>

@@ -789,99 +789,420 @@ img[width][height] {
         
 
 <section class="section">
-<div class="container container-narrow">
-<h1 class="mb-lg">Politika zasebnosti</h1>
-<p class="text-secondary mb-xl">Zadnja posodobitev: <strong>januar 2024</strong></p>
-<div class="mb-xl">
-<h2 class="mb-md">Uvod</h2>
-<p class="mb-md">
-                Ta politika zasebnosti opisuje, kako zbiramo, uporabljamo in varujemo vaše osebne podatke, ko obiščete naše spletno mesto.
+    <div class="container container-narrow">
+        <h1 class="mb-lg">Politika zasebnosti Swim Analytics</h1>
+
+        <p class="text-secondary mb-xl"><strong>Zadnja posodobitev:</strong> 10. januar 2025 | <strong>Datum začetka
+                veljavnosti:</strong> 10. januar 2025</p>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">Uvod</h2>
+            <p class="mb-md">
+                Swim Analytics (»mi«, »nas« ali »aplikacija«) se zavezuje k varovanju vaše zasebnosti. Ta politika
+                zasebnosti pojasnjuje, kako naše mobilne aplikacije (iOS in Android) dostopajo do zdravstvenih podatkov
+                v vaši napravi, jih uporabljajo in ščitijo.
             </p>
-<p class="mb-md">
-                Zavezani smo k zaščiti vaše zasebnosti in k varnemu ter odgovornemu ravnanju z osebnimi podatki.
+            <div class="callout callout-info mb-md">
+                <p><strong>Ključno načelo zasebnosti:</strong> Swim Analytics deluje na <strong>brezstrežniški
+                        (serverless), local-first arhitekturi</strong>. Vsi zdravstveni podatki, pridobljeni iz Apple
+                    HealthKit (iOS) ali Health Connect (Android), ostanejo izključno v vaši fizični napravi in se nikoli
+                    ne prenesejo na zunanje strežnike, v storitve v oblaku ali k tretjim osebam.</p>
+            </div>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">1. Dostop do zdravstvenih podatkov</h2>
+            <p class="mb-md">
+                Swim Analytics se integrira z vgrajeno zdravstveno platformo vaše naprave za zagotavljanje analize
+                plavalnih treningov:
             </p>
-</div>
-<div class="mb-xl">
-<h2 class="mb-md">Katere podatke zbiramo</h2>
-<h3 class="mb-sm">Podatki, ki jih posredujete sami:</h3>
-<ul class="mb-md">
-<li>Kontaktni podatki (ime, e-pošta) ob uporabi našega kontaktnega obrazca</li>
-<li>Katerikoli drugi podatki, ki jih delite po lastni izbiri</li>
-</ul>
-<h3 class="mb-sm">Samodejno zbrani podatki:</h3>
-<ul class="mb-md">
-<li>Vrsta in verzija brskalnika</li>
-<li>Operacijski sistem</li>
-<li>Obiskane strani in čas, preživet na njih</li>
-<li>IP-naslov (anonimiziran)</li>
-</ul>
-</div>
-<div class="mb-xl">
-<h2 class="mb-md">Kako uporabljamo vaše podatke</h2>
-<p class="mb-sm">Zbrane podatke uporabljamo za:</p>
-<ul class="mb-md">
-<li>odgovarjanje na vaša vprašanja in povpraševanja</li>
-<li>izboljševanje našega spletnega mesta in storitev</li>
-<li>analizo uporabe spletnega mesta</li>
-<li>zagotavljanje varnosti in integritete spletnega mesta</li>
-</ul>
-</div>
-<div class="mb-xl">
-<h2 class="mb-md">Piškotki</h2>
-<p class="mb-md">
-                Uporabljamo piškotke za izboljšanje vaše izkušnje na našem spletnem mestu. Piškotki so majhne besedilne datoteke na vaši napravi, ki nam pomagajo razumeti, kako uporabljate naše spletno mesto.
+
+            <h3 class="mb-sm">1.1 iOS - Integracija Apple HealthKit</h3>
+            <p class="mb-md">
+                V napravah iOS se Swim Analytics integrira z <strong>Apple HealthKit</strong> za dostop do podatkov o
+                plavanju. Zahtevamo dostop samo za branje do:
             </p>
-<p class="mb-sm">Uporabljamo naslednje vrste piškotkov:</p>
-<ul class="mb-md">
-<li><strong>Nujni piškotki:</strong> Potrebni za pravilno delovanje spletnega mesta</li>
-<li><strong>Analitični piškotki:</strong> Pomagajo razumeti interakcijo obiskovalcev s stranjo (le z vašim soglasjem)</li>
-</ul>
-<p class="mb-md">
-                Piškotke lahko nadzorujete v nastavitvah brskalnika. Onemogočanje piškotkov lahko vpliva na delovanje spletnega mesta.
+            <ul class="mb-md">
+                <li><strong>Treningi (Workouts):</strong> Plavalni treningi s časom in trajanjem</li>
+                <li><strong>Razdalja:</strong> Skupna razdalja in razdalje krogov</li>
+                <li><strong>Srčni utrip:</strong> Podatki o srčnem utripu med treningom</li>
+                <li><strong>Aktivna energija:</strong> Kalorije, porabljene med plavanjem</li>
+                <li><strong>Zavesljaji (Strokes):</strong> Podatki o zavesljajih za analizo</li>
+            </ul>
+            <p class="mb-md">
+                <strong>Skladnost z Apple HealthKit:</strong> Swim Analytics upošteva vse smernice Apple HealthKit. Vaši
+                zdravstveni podatki se v celoti obdelujejo v vaši napravi iOS in je nikoli ne zapustijo. Podatkov
+                HealthKit nikoli ne delimo s tretjimi osebami, oglaševalskimi platformami ali posredniki podatkov.
             </p>
-</div>
-<div class="mb-xl">
-<h2 class="mb-md">Storitve tretjih oseb</h2>
-<p class="mb-md">
-                Lahko uporabimo storitve tretjih oseb, kot je Google Analytics, za analizo prometa na spletnem mestu. Te storitve lahko zbirajo informacije o vaši uporabi našega spletnega mesta.
+
+            <h3 class="mb-sm">1.2 Android - Integracija Health Connect</h3>
+            <div class="table-responsive mb-md">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Vrsta zdravstvenih podatkov</th>
+                            <th>Dovoljenje</th>
+                            <th>Namen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Vadbene seje</strong></td>
+                            <td><code>READ_EXERCISE</code></td>
+                            <td>Za prepoznavanje in uvoz plavalnih treningov iz Health Connect</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zapisi o razdalji</strong></td>
+                            <td><code>READ_DISTANCE</code></td>
+                            <td>Za prikaz ključnih metrik, kot so skupna preplavana razdalja, razdalje krogov in izračun
+                                tempa</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zapisi o srčnem utripu</strong></td>
+                            <td><code>READ_HEART_RATE</code></td>
+                            <td>Za prikaz grafov srčnega utripa ter izračun povprečja in maksimuma med treningom</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zapisi o hitrosti</strong></td>
+                            <td><code>READ_SPEED</code></td>
+                            <td>Za izračun in prikaz hitrosti plavanja, con tempa in analizo kadence zavesljajev</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Porabljene kalorije</strong></td>
+                            <td><code>READ_TOTAL_CALORIES_BURNED</code></td>
+                            <td>Za zagotavljanje popolnega pregleda o porabi energije med plavanjem</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="mb-md">
+                <strong>Dovoljenja za Android:</strong> Ta dovoljenja so potrebna ob prvem zagonu aplikacije. Ta
+                dovoljenja lahko kadar koli prekličete v nastavitvah Androida → Aplikacije → Health Connect → Swim
+                Analytics.
             </p>
-<p class="mb-md">
-                Tretje osebe imajo svoje politike zasebnosti; priporočamo, da jih pregledate.
+
+            <h3 class="mb-sm">1.3 Kako uporabljamo zdravstvene podatke</h3>
+            <p class="mb-sm">Vsi zdravstveni podatki se uporabljajo <strong>izključno za naslednje namene</strong>:</p>
+            <ul class="mb-md">
+                <li><strong>Prikaz treninga:</strong> Prikaz vaših plavalnih sej s podrobnimi metrikami (razdalja, čas,
+                    tempo, srčni utrip)</li>
+                <li><strong>Analiza zmogljivosti:</strong> Izračun con tempa, analiza zavesljajev, CSS (Kritična hitrost
+                    plavanja) in sTSS (Ocena stresa pri plavalnem treningu)</li>
+                <li><strong>Sledenje napredku:</strong> Prikaz trendov zmogljivosti, osebnih rekordov in povzetkov
+                    treningov</li>
+                <li><strong>Izvoz podatkov:</strong> Omogočanje izvoza podatkov o treningih v formatu CSV za osebno
+                    uporabo</li>
+            </ul>
+
+            <h3 class="mb-sm">1.4 Shranjevanje podatkov</h3>
+            <div class="callout callout-success mb-md">
+                <h4 class="mb-sm">🔒 Ključno jamstvo zasebnosti:</h4>
+                <p class="mb-sm"><strong>Vsi zdravstveni podatki ostanejo izključno v vaši fizični napravi.</strong></p>
+                <ul class="mb-0">
+                    <li><strong>iOS:</strong> Podatki so shranjeni z uporabo iOS Core Data in UserDefaults (samo v
+                        napravi)</li>
+                    <li><strong>Android:</strong> Podatki so shranjeni z uporabo Android Room Database (SQLite v
+                        napravi)</li>
+                    <li><strong>Brez nalaganja na zunanje strežnike</strong></li>
+                    <li><strong>Brez prenosa prek interneta</strong></li>
+                    <li><strong>Brez sinhronizacije v oblaku ali varnostnega kopiranja zdravstvenih podatkov</strong>
+                    </li>
+                    <li><strong>Brez dostopa tretjih oseb do vaših zdravstvenih podatkov</strong></li>
+                </ul>
+            </div>
+            <p class="mb-md">
+                Edini primer, ko podatki zapustijo vašo napravo, je, ko se <strong>vi izrecno odločite</strong> za izvoz
+                svojih treningov v format CSV in datoteko sami delite.
             </p>
-</div>
-<div class="mb-xl">
-<h2 class="mb-md">Varnost podatkov</h2>
-<p class="mb-md">
-                Uvajamo ustrezne tehnične in organizacijske ukrepe za zaščito vaših osebnih podatkov pred nepooblaščenim dostopom, spremembami, razkritjem ali uničenjem.
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">2. Zahtevana dovoljenja</h2>
+
+            <h3 class="mb-sm">2.1 Dovoljenja iOS</h3>
+            <ul class="mb-md">
+                <li><strong>Dostop do HealthKit:</strong> Dostop za branje do treningov, razdalje, srčnega utripa,
+                    aktivne energije in zavesljajev</li>
+                <li><strong>Knjižnica fotografij (neobvezno):</strong> Samo, če se odločite shraniti povzetke treningov
+                    kot slike</li>
+            </ul>
+            <p class="mb-md">
+                Dovoljenja HealthKit lahko kadar koli upravljate v Nastavitvah iOS → Zasebnost in varnost → Zdravje →
+                Swim Analytics.
             </p>
-</div>
-<div class="mb-xl">
-<h2 class="mb-md">Vaše pravice</h2>
-<p class="mb-sm">Imate pravico do:</p>
-<ul class="mb-md">
-<li>dostopa do svojih osebnih podatkov</li>
-<li>popravka netočnih informacij</li>
-<li>zahteve za izbris podatkov</li>
-<li>preklica soglasja za obdelavo</li>
-<li>ugovora zoper obdelavo vaših podatkov</li>
-</ul>
-<p class="mb-md">
-                Za uveljavljanje teh pravic nas kontaktirajte preko naše <a href="/sl/contact/">kontaktne strani</a>.
+
+            <h3 class="mb-sm">2.2 Dovoljenja Android</h3>
+            <ul class="mb-md">
+                <li><code>android.permission.health.READ_EXERCISE</code></li>
+                <li><code>android.permission.health.READ_DISTANCE</code></li>
+                <li><code>android.permission.health.READ_HEART_RATE</code></li>
+                <li><code>android.permission.health.READ_SPEED</code></li>
+                <li><code>android.permission.health.READ_TOTAL_CALORIES_BURNED</code></li>
+                <li><strong>Dostop do interneta</strong> (<code>INTERNET</code>): Uporablja se samo za prikaz statične
+                    vsebine v aplikaciji in dostop do upravljanja naročnin (Google Play Billing). Zdravstveni podatki se
+                    ne prenašajo.</li>
+                <li><strong>Storitev v ospredju</strong> (<code>FOREGROUND_SERVICE</code>): Za morebitne prihodnje
+                    funkcije sinhronizacije v ozadju (trenutno ni implementirano).</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">3. Podatki, ki jih NE zbiramo</h2>
+            <p class="mb-sm">Swim Analytics <strong>NE</strong> zbira, ne shranjuje in ne prenaša:</p>
+            <ul class="mb-md">
+                <li>❌ Osebno določljivih informacij (ime, e-pošta, telefonska številka)</li>
+                <li>❌ Identifikatorjev naprav (IDFA v sistemu iOS, oglaševalski ID v sistemu Android)</li>
+                <li>❌ Podatkov o lokaciji ali koordinat GPS</li>
+                <li>❌ Analitike uporabe ali sledenja vedenju v aplikaciji</li>
+                <li>❌ Poročil o zrušitvah ali diagnostičnih podatkov na zunanje strežnike</li>
+                <li>❌ Kakršnih koli podatkov prek SDK-jev tretjih oseb ali analitičnih storitev</li>
+            </ul>
+            <p class="mb-sm">Uporabljamo <strong>nič knjižnic za sledenje tretjih oseb</strong>, vključno z:</p>
+            <ul class="mb-md">
+                <li>Brez Google Analytics / Firebase Analytics</li>
+                <li>Brez Facebook SDK</li>
+                <li>Brez oglaševalskih SDK-jev</li>
+                <li>Brez storitev za poročanje o zrušitvah (Crashlytics, Sentry itd.)</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">4. Nakupi v aplikaciji in naročnine</h2>
+            <p class="mb-md">
+                Swim Analytics ponuja neobvezne naročnine v aplikaciji, ki se upravljajo prek izvornega plačilnega
+                sistema vaše naprave:
             </p>
-</div>
-<div class="mb-xl">
-<h2 class="mb-md">Spremembe te politike</h2>
-<p class="mb-md">
-                Politiko zasebnosti lahko občasno posodobimo. O spremembah vas obvestimo z novo objavo na tej strani in posodobljenim datumom "Zadnja posodobitev".
+
+            <h3 class="mb-sm">4.1 iOS - Naročnine v App Store</h3>
+            <p class="mb-sm">Ko kupite naročnino v sistemu iOS:</p>
+            <ul class="mb-md">
+                <li>Apple upravlja vso obdelavo plačil prek App Store</li>
+                <li>Prejmemo samo status naročnine (aktivna/neaktivna) prek StoreKit</li>
+                <li>Nimamo dostopa do vaših plačilnih podatkov (kreditna kartica, naslov za izstavitev računa)</li>
+                <li>Podatki o naročnini so shranjeni lokalno v vaši napravi</li>
+            </ul>
+            <p class="mb-sm">Upravljanje naročnin:</p>
+            <ul class="mb-md">
+                <li>Nastavitve iOS → Vaše ime → Naročnine → Swim Analytics</li>
+                <li>Ali v aplikaciji: Nastavitve → Upravljanje naročnine</li>
+            </ul>
+
+            <h3 class="mb-sm">4.2 Android - Google Play Billing</h3>
+            <p class="mb-sm">Ko kupite naročnino v sistemu Android:</p>
+            <ul class="mb-md">
+                <li>Google Play upravlja vso obdelavo plačil</li>
+                <li>Prejmemo samo status naročnine (aktivna/neaktivna) prek API-ja Google Play Billing</li>
+                <li>Nimamo dostopa do vaših plačilnih podatkov (kreditna kartica, naslov za izstavitev računa)</li>
+                <li>Podatki o naročnini so shranjeni lokalno v vaši napravi</li>
+            </ul>
+            <p class="mb-sm">Upravljanje naročnin:</p>
+            <ul class="mb-md">
+                <li>Trgovina Google Play → Račun → Plačila in naročnine → Naročnine → Swim Analytics</li>
+                <li>Ali v aplikaciji: Nastavitve → Upravljanje naročnine</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">5. Hramba in izbris podatkov</h2>
+
+            <h3 class="mb-sm">5.1 Hramba podatkov</h3>
+            <ul class="mb-md">
+                <li>Zdravstveni podatki so shranjeni v vaši napravi <strong>za nedoločen čas</strong>, dokler jih ročno
+                    ne izbrišete</li>
+                <li>Podatki o vadbi se hranijo za zagotavljanje zgodovinskega sledenja zmogljivosti in analize</li>
+            </ul>
+
+            <h3 class="mb-sm">5.2 Izbris podatkov</h3>
+            <p class="mb-sm">Svoje podatke lahko kadar koli izbrišete:</p>
+
+            <p class="mb-sm"><strong>Metoda 1: Izbris posameznih treningov</strong></p>
+            <ul class="mb-md">
+                <li>Odprite zaslon s podrobnostmi treninga</li>
+                <li>Dotaknite se gumba za izbris (ikona koša)</li>
+                <li>Potrdite izbris</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Metoda 2: Počisti vse podatke aplikacije</strong></p>
+            <ul class="mb-md">
+                <li><strong>iOS:</strong> Izbrišite in znova namestite aplikacijo (vsi lokalni podatki se odstranijo)
+                </li>
+                <li><strong>Android:</strong> Nastavitve → Aplikacije → Swim Analytics → Shramba → Počisti podatke</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Metoda 3: Odstranitev aplikacije</strong></p>
+            <ul class="mb-md">
+                <li>Odstranitev aplikacije Swim Analytics samodejno odstrani vse lokalne podatke</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Metoda 4: Preklic zdravstvenih dovoljenj</strong></p>
+            <ul class="mb-md">
+                <li><strong>iOS:</strong> Nastavitve → Zasebnost in varnost → Zdravje → Swim Analytics → Izklopi vse
+                    kategorije</li>
+                <li><strong>Android:</strong> Nastavitve → Aplikacije → Health Connect → Swim Analytics → Prekliči vsa
+                    dovoljenja</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">6. Varnost podatkov</h2>
+            <p class="mb-md">
+                Varnost podatkov jemljemo resno, čeprav vsi podatki ostanejo v vaši napravi:
             </p>
-</div>
-<div class="callout callout-info">
-<h2 class="mb-sm">Imate vprašanja?</h2>
-<p>
-                Če imate vprašanja o tej politiki zasebnosti, nas prosimo <a href="/sl/contact/">kontaktirajte</a>.
+
+            <h3 class="mb-sm">6.1 Varnostni ukrepi</h3>
+            <ul class="mb-md">
+                <li><strong>Varnost iOS:</strong> Vsi podatki, shranjeni s pomočjo iOS Core Data, so zaščiteni z iOS
+                    Keychain in šifriranjem naprave. Podatki so zaščiteni, ko je naprava zaklenjena.</li>
+                <li><strong>Varnost Android:</strong> Vsi podatki, shranjeni v Room Database, so zaščiteni z vgrajeno
+                    varnostjo Androida in peskovnikom (sandbox) aplikacije.</li>
+                <li><strong>Brez omrežnega prenosa:</strong> Zdravstveni podatki nikoli ne zapustijo vaše naprave, kar
+                    odpravlja varnostna tveganja prenosa</li>
+                <li><strong>Peskovnik aplikacij (Sandboxing):</strong> Peskovniki aplikacij iOS in Android preprečujejo
+                    drugim aplikacijam dostop do podatkov Swim Analytics</li>
+                <li><strong>Varno shranjevanje:</strong> Do zdravstvenih podatkov ni mogoče dostopati brez preverjanja
+                    pristnosti naprave (geslo, Face ID, Touch ID, prstni odtis)</li>
+            </ul>
+
+            <h3 class="mb-sm">6.2 Vaša odgovornost</h3>
+            <p class="mb-sm">Za zaščito vaših podatkov:</p>
+            <ul class="mb-md">
+                <li>Napravo imejte zaklenjeno z močnim geslom/biometrijo</li>
+                <li>Operacijski sistem posodabljajte z najnovejšimi varnostnimi popravki</li>
+                <li><strong>iOS:</strong> Ne izvajajte postopka »jailbreak« na napravi</li>
+                <li><strong>Android:</strong> Ne izvajajte postopka »root« na napravi</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">7. Deljenje podatkov in tretje osebe</h2>
+            <p class="mb-md">
+                <strong>Swim Analytics NE deli vaših zdravstvenih podatkov z nobenimi tretjimi osebami.</strong>
             </p>
-</div>
-</div>
+
+            <h3 class="mb-sm">7.1 Brez deljenja podatkov</h3>
+            <ul class="mb-md">
+                <li>Vaših podatkov ne prodajamo</li>
+                <li>Vaših podatkov ne delimo z oglaševalci</li>
+                <li>Vaših podatkov ne posredujemo analitičnim podjetjem</li>
+                <li>Ne povezujemo se s platformami družbenih medijev</li>
+            </ul>
+
+            <h3 class="mb-sm">7.2 Izvoz CSV (samo na pobudo uporabnika)</h3>
+            <p class="mb-sm">Edini način, da podatki zapustijo vašo napravo, je, ko <strong>vi</strong> izrecno:</p>
+            <ol class="mb-md">
+                <li>Greste v Nastavitve → Izvoz neobdelanih podatkov</li>
+                <li>Generirate datoteko CSV</li>
+                <li>Izberete deljenje datoteke CSV prek menija za deljenje v napravi (e-pošta, shramba v oblaku,
+                    aplikacije za sporočanje)</li>
+            </ol>
+            <p class="mb-md"><strong>To je popolnoma pod vašim nadzorom.</strong></p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">8. Zasebnost otrok</h2>
+            <p class="mb-md">
+                Swim Analytics zavestno ne zbira podatkov od otrok, mlajših od 13 let. Aplikacija ne zahteva podatkov o
+                starosti, vendar morajo starši nadzorovati uporabo aplikacij za sledenje zdravju pri svojih otrocih.
+            </p>
+            <p class="mb-md">
+                Če menite, da je otrok, mlajši od 13 let, uporabljal Swim Analytics, nas kontaktirajte in pomagali bomo
+                zagotoviti, da se vsi lokalni podatki odstranijo iz naprave.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">9. Mednarodni prenosi podatkov</h2>
+            <p class="mb-md">
+                <strong>Ni relevantno.</strong> Ker vsi zdravstveni podatki ostanejo izključno v vaši napravi (iOS ali
+                Android) in se nikoli ne prenesejo na strežnike, ne prihaja do mednarodnih prenosov podatkov.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">10. Vaše pravice (Skladnost z GDPR in CCPA)</h2>
+            <p class="mb-md">
+                Čeprav Swim Analytics ne zbira osebnih podatkov na strežnikih, spoštujemo vaše pravice do zasebnosti
+                podatkov:
+            </p>
+
+            <h3 class="mb-sm">10.1 Pravice GDPR (Evropski uporabniki)</h3>
+            <ul class="mb-md">
+                <li><strong>Pravica do dostopa:</strong> Vsi vaši podatki so v aplikaciji kadar koli dostopni</li>
+                <li><strong>Pravica do izbrisa:</strong> Izbrišite podatke z metodami, opisanimi v razdelku 5.2</li>
+                <li><strong>Pravica do prenosljivosti podatkov:</strong> Izvozite svoje podatke v formatu CSV
+                    (Nastavitve → Izvoz neobdelanih podatkov)</li>
+                <li><strong>Pravica do omejitve obdelave:</strong> Prekličite zdravstvena dovoljenja, da ustavite dostop
+                    do novih podatkov</li>
+            </ul>
+
+            <h3 class="mb-sm">10.2 Pravice CCPA (Uporabniki iz Kalifornije)</h3>
+            <ul class="mb-md">
+                <li><strong>Pravica vedeti:</strong> Ta politika razkriva vse podatke, do katerih se dostopa, in kako se
+                    uporabljajo</li>
+                <li><strong>Pravica do izbrisa:</strong> Izbrišite podatke z metodami, opisanimi v razdelku 5.2</li>
+                <li><strong>Pravica do zavrnitve prodaje:</strong> Ni relevantno (podatkov nikoli ne prodajamo)</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">11. Spremembe te politike zasebnosti</h2>
+            <p class="mb-sm">To politiko zasebnosti lahko občasno posodobimo. Ko uvedemo spremembe:</p>
+            <ul class="mb-md">
+                <li>Datum »Zadnja posodobitev« na vrhu te politike bo revidiran</li>
+                <li>Bistvene spremembe bodo objavljene v aplikaciji</li>
+                <li>Nadaljnja uporaba aplikacije po spremembah pomeni sprejetje posodobljene politike</li>
+            </ul>
+            <p class="mb-md">
+                Priporočamo, da redno pregledujete to politiko, da boste obveščeni o tem, kako varujemo vašo zasebnost.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">12. Kontaktirajte nas</h2>
+            <p class="mb-sm">Če imate kakršna koli vprašanja, pomisleke ali zahteve v zvezi s to politiko zasebnosti ali
+                zasebnostjo vaših podatkov:</p>
+            <ul class="mb-md">
+                <li><strong>E-pošta:</strong> support@swimanalytics.app</li>
+                <li><strong>Spletna stran:</strong> <a href="https://swimanalytics.app">https://swimanalytics.app</a>
+                </li>
+            </ul>
+            <p class="mb-md">
+                <strong>Odzivni čas:</strong> Na vsa vprašanja o zasebnosti si prizadevamo odgovoriti v 7 delovnih dneh.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">13. Pravna skladnost</h2>
+            <p class="mb-sm">Swim Analytics je skladen z:</p>
+            <ul class="mb-md">
+                <li><strong>iOS:</strong> Smernice za pregled Apple App Store, Smernice Apple HealthKit</li>
+                <li><strong>Android:</strong> Pravilniki programa za razvijalce Google Play, Smernice Android Health
+                    Connect</li>
+                <li>Splošna uredba o varstvu podatkov (GDPR)</li>
+                <li>Kalifornijski zakon o zasebnosti potrošnikov (CCPA)</li>
+                <li>Zakon o varstvu zasebnosti otrok na spletu (COPPA)</li>
+            </ul>
+        </div>
+
+        <div class="callout callout-success">
+            <h2 class="mb-md">Povzetek</h2>
+            <p class="mb-sm"><strong>Preprosto povedano:</strong></p>
+            <ul class="mb-sm">
+                <li>✅ <strong>Do česa dostopamo:</strong> Podatki o plavalnem treningu iz Apple HealthKit (iOS) ali
+                    Health Connect (Android)</li>
+                <li>✅ <strong>Kje je shranjeno:</strong> Samo v <strong>vaši</strong> napravi (iOS Core Data ali Android
+                    Room Database)</li>
+                <li>✅ <strong>Kam gre:</strong> Nikamor. Nikoli ne zapusti vaše naprave.</li>
+                <li>✅ <strong>Kdo to vidi:</strong> Samo vi.</li>
+                <li>✅ <strong>Kako izbrisati:</strong> Počistite podatke aplikacije ali kadar koli odstranite
+                    aplikacijo.</li>
+            </ul>
+            <p class="mb-0">
+                <strong>Swim Analytics je ustvarjen s poudarkom na zasebnosti (Privacy First). Vaši podatki o plavanju
+                    pripadajo vam in ostanejo v vaši napravi.</strong>
+            </p>
+        </div>
+    </div>
 </section>
     </main>
 

@@ -790,106 +790,368 @@ img[width][height] {
 
 <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-lg">隐私政策</h1>
+        <h1 class="mb-lg">Swim Analytics 隐私政策</h1>
 
-        <p class="text-secondary mb-xl">最后更新：<strong>2024年1月</strong></p>
+        <p class="text-secondary mb-xl"><strong>最后更新：</strong> 2025年1月10日 | <strong>生效日期：</strong> 2025年1月10日</p>
 
         <div class="mb-xl">
             <h2 class="mb-md">简介</h2>
             <p class="mb-md">
-                本隐私政策描述了当您访问我们的网站时，我们如何收集、使用和保护您的个人信息。
+                Swim Analytics（“我们”、“我们的”或“应用”）致力于保护您的隐私。本隐私政策解释了我们的移动应用程序（iOS 和 Android）如何访问、使用和保护您设备上的健康数据。
             </p>
+            <div class="callout callout-info mb-md">
+                <p><strong>关键隐私原则：</strong> Swim Analytics 采用<strong>无服务器、本地优先的架构</strong>运行。所有从 Apple HealthKit (iOS) 或
+                    Health Connect (Android) 访问的健康数据仅保留在您的物理设备上，绝不会传输到外部服务器、云服务或第三方。</p>
+            </div>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">1. 健康数据的访问</h2>
             <p class="mb-md">
-                我们致力于保护您的隐私，并确保您的个人信息得到安全和负责任的处理。
+                Swim Analytics 与您设备的原生健康平台集成，以提供游泳训练分析：
             </p>
-        </div>
 
-        <div class="mb-xl">
-            <h2 class="mb-md">我们收集的信息</h2>
-            <h3 class="mb-sm">您直接提供的信息：</h3>
-            <ul class="mb-md">
-                <li>使用联系表单时的联系信息（姓名、电子邮件）</li>
-                <li>您选择提供的任何其他信息</li>
-            </ul>
-
-            <h3 class="mb-sm">自动收集的信息：</h3>
-            <ul class="mb-md">
-                <li>浏览器类型和版本</li>
-                <li>操作系统</li>
-                <li>访问的页面和在页面上花费的时间</li>
-                <li>IP地址（已匿名化）</li>
-            </ul>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">我们如何使用您的信息</h2>
-            <p class="mb-sm">我们将收集的信息用于：</p>
-            <ul class="mb-md">
-                <li>回复您的咨询和请求</li>
-                <li>改进我们的网站和服务</li>
-                <li>分析我们网站的使用情况</li>
-                <li>确保我们网站的安全性和完整性</li>
-            </ul>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Cookie</h2>
+            <h3 class="mb-sm">1.1 iOS - Apple HealthKit 集成</h3>
             <p class="mb-md">
-                我们使用 Cookie 来改善您在我们网站上的体验。Cookie 是存储在您设备上的小型文本文件，有助于我们了解您如何使用我们的网站。
+                在 iOS 设备上，Swim Analytics 与 <strong>Apple HealthKit</strong> 集成以访问游泳训练数据。我们请求以下内容的只读权限：
             </p>
-            <p class="mb-sm">我们使用以下类型的 Cookie：</p>
             <ul class="mb-md">
-                <li><strong>必要 Cookie：</strong> 网站正常运行所必需的</li>
-                <li><strong>分析 Cookie：</strong> 帮助我们了解访问者如何与我们的网站互动（仅在您同意的情况下）</li>
+                <li><strong>训练课程：</strong> 包含时间和持续时间的游泳运动</li>
+                <li><strong>距离：</strong> 总距离和分段距离</li>
+                <li><strong>心率：</strong> 训练期间的心率数据</li>
+                <li><strong>活动能量：</strong> 游泳期间消耗的卡路里</li>
+                <li><strong>划水次数：</strong> 用于分析的划水数据</li>
             </ul>
             <p class="mb-md">
-                您可以通过浏览器设置控制 Cookie。请注意，禁用 Cookie 可能会影响我们网站的功能。
+                <strong>Apple HealthKit 合规性：</strong> Swim Analytics 遵守所有 Apple HealthKit 准则。您的健康数据完全在您的 iOS
+                设备上处理，并且从未离开。我们绝不会与第三方、广告平台或数据经纪人共享 HealthKit 数据。
             </p>
-        </div>
 
-        <div class="mb-xl">
-            <h2 class="mb-md">第三方服务</h2>
+            <h3 class="mb-sm">1.2 Android - Health Connect 集成</h3>
+            <div class="table-responsive mb-md">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>健康数据类型</th>
+                            <th>权限</th>
+                            <th>目的</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>运动课程</strong></td>
+                            <td><code>READ_EXERCISE</code></td>
+                            <td>用于识别并从 Health Connect 导入游泳训练</td>
+                        </tr>
+                        <tr>
+                            <td><strong>距离记录</strong></td>
+                            <td><code>READ_DISTANCE</code></td>
+                            <td>用于显示关键指标，如总游泳距离、分段距离，并计算配速</td>
+                        </tr>
+                        <tr>
+                            <td><strong>心率记录</strong></td>
+                            <td><code>READ_HEART_RATE</code></td>
+                            <td>用于显示心率图表，计算训练期间的平均和最大心率</td>
+                        </tr>
+                        <tr>
+                            <td><strong>速度记录</strong></td>
+                            <td><code>READ_SPEED</code></td>
+                            <td>用于计算和显示您的游泳配速、配速区间和划水频率分析</td>
+                        </tr>
+                        <tr>
+                            <td><strong>消耗卡路里</strong></td>
+                            <td><code>READ_TOTAL_CALORIES_BURNED</code></td>
+                            <td>提供游泳期间能量消耗的完整概览</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <p class="mb-md">
-                我们可能会使用 Google Analytics 等第三方服务来帮助我们分析网站流量。这些服务可能会收集有关您使用我们网站的信息。
+                <strong>Android 权限：</strong> 这些权限在应用首次启动时请求。您可以随时通过 Android 设置 → 应用 → Health Connect → Swim Analytics
+                撤销这些权限。
             </p>
-            <p class="mb-md">
-                这些第三方拥有自己的隐私政策，我们鼓励您查看这些政策。
-            </p>
-        </div>
 
-        <div class="mb-xl">
-            <h2 class="mb-md">数据安全</h2>
-            <p class="mb-md">
-                我们实施适当的技术和组织措施，以保护您的个人信息免受未经授权的访问、更改、披露或破坏。
-            </p>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">您的权利</h2>
-            <p class="mb-sm">您有权：</p>
+            <h3 class="mb-sm">1.3 我们如何使用健康数据</h3>
+            <p class="mb-sm">所有健康数据<strong>仅用于以下目的</strong>：</p>
             <ul class="mb-md">
-                <li>访问您的个人信息</li>
-                <li>更正不准确的信息</li>
-                <li>请求删除您的信息</li>
-                <li>撤回数据处理的同意</li>
-                <li>反对处理您的信息</li>
+                <li><strong>训练显示：</strong> 显示您的游泳课程及详细指标（距离、时间、配速、心率）</li>
+                <li><strong>表现分析：</strong> 计算配速区间、划水分析、CSS（临界游泳速度）和 sTSS（游泳训练压力评分）</li>
+                <li><strong>进度追踪：</strong> 显示表现趋势、个人最佳成绩和训练摘要</li>
+                <li><strong>数据导出：</strong> 允许将您的训练数据导出为 CSV 格式以供个人使用</li>
+            </ul>
+
+            <h3 class="mb-sm">1.4 数据存储</h3>
+            <div class="callout callout-success mb-md">
+                <h4 class="mb-sm">🔒 关键隐私保证：</h4>
+                <p class="mb-sm"><strong>所有健康数据仅保留在您的物理设备上。</strong></p>
+                <ul class="mb-0">
+                    <li><strong>iOS：</strong> 数据使用 iOS Core Data 和 UserDefaults 存储（仅限设备端）</li>
+                    <li><strong>Android：</strong> 数据使用 Android Room Database 存储（设备端 SQLite）</li>
+                    <li><strong>没有任何数据上传到外部服务器</strong></li>
+                    <li><strong>没有任何数据通过互联网传输</strong></li>
+                    <li><strong>没有云同步或健康数据备份</strong></li>
+                    <li><strong>没有任何第三方访问您的健康数据</strong></li>
+                </ul>
+            </div>
+            <p class="mb-md">
+                数据离开您设备的唯一情况是<strong>您明确选择</strong>将训练导出为 CSV 格式并自行分享该文件。
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">2. 所需权限</h2>
+
+            <h3 class="mb-sm">2.1 iOS 权限</h3>
+            <ul class="mb-md">
+                <li><strong>HealthKit 访问：</strong> 对训练、距离、心率、活动能量和划水次数的读取权限</li>
+                <li><strong>照片库（可选）：</strong> 仅当您选择将训练摘要保存为图像时</li>
             </ul>
             <p class="mb-md">
-                要行使这些权利，请使用我们<a href="/zh/contact/">联系页面</a>上提供的信息与我们联系。
+                您可以随时在 iOS 设置 → 隐私与安全性 → 健康 → Swim Analytics 中管理 HealthKit 权限。
+            </p>
+
+            <h3 class="mb-sm">2.2 Android 权限</h3>
+            <ul class="mb-md">
+                <li><code>android.permission.health.READ_EXERCISE</code></li>
+                <li><code>android.permission.health.READ_DISTANCE</code></li>
+                <li><code>android.permission.health.READ_HEART_RATE</code></li>
+                <li><code>android.permission.health.READ_SPEED</code></li>
+                <li><code>android.permission.health.READ_TOTAL_CALORIES_BURNED</code></li>
+                <li><strong>互联网访问</strong> (<code>INTERNET</code>)：仅用于显示应用内静态内容和访问订阅管理 (Google Play Billing)。不传输任何健康数据。
+                </li>
+                <li><strong>前台服务</strong> (<code>FOREGROUND_SERVICE</code>)：用于潜在的未来后台同步功能（目前未实现）。</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">3. 我们不收集的数据</h2>
+            <p class="mb-sm">Swim Analytics <strong>不</strong>收集、存储或传输：</p>
+            <ul class="mb-md">
+                <li>❌ 个人身份信息（姓名、电子邮件、电话号码）</li>
+                <li>❌ 设备标识符（iOS 上的 IDFA、Android 上的广告 ID）</li>
+                <li>❌ 位置数据或 GPS 坐标</li>
+                <li>❌ 使用分析或应用内行为追踪</li>
+                <li>❌ 发送到外部服务器的崩溃报告或诊断数据</li>
+                <li>❌ 任何通过第三方 SDK 或分析服务的数据</li>
+            </ul>
+            <p class="mb-sm">我们使用<strong>零个第三方追踪库</strong>，包括：</p>
+            <ul class="mb-md">
+                <li>无 Google Analytics / Firebase Analytics</li>
+                <li>无 Facebook SDK</li>
+                <li>无广告 SDK</li>
+                <li>无崩溃报告服务（Crashlytics, Sentry 等）</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">4. 应用内购买和订阅</h2>
+            <p class="mb-md">
+                Swim Analytics 提供通过您设备的原生支付系统管理的可选应用内订阅：
+            </p>
+
+            <h3 class="mb-sm">4.1 iOS - App Store 订阅</h3>
+            <p class="mb-sm">当您在 iOS 上购买订阅时：</p>
+            <ul class="mb-md">
+                <li>Apple 通过 App Store 处理所有支付流程</li>
+                <li>我们仅通过 StoreKit 接收订阅状态（活动/非活动）</li>
+                <li>我们无法访问您的支付信息（信用卡、账单地址）</li>
+                <li>订阅数据存储在您的设备本地</li>
+            </ul>
+            <p class="mb-sm">管理订阅：</p>
+            <ul class="mb-md">
+                <li>iOS 设置 → 您的姓名 → 订阅 → Swim Analytics</li>
+                <li>或在应用内：设置 → 管理订阅</li>
+            </ul>
+
+            <h3 class="mb-sm">4.2 Android - Google Play Billing</h3>
+            <p class="mb-sm">当您在 Android 上购买订阅时：</p>
+            <ul class="mb-md">
+                <li>Google Play 处理所有支付流程</li>
+                <li>我们仅通过 Google Play Billing API 接收订阅状态（活动/非活动）</li>
+                <li>我们无法访问您的支付信息（信用卡、账单地址）</li>
+                <li>订阅数据存储在您的设备本地</li>
+            </ul>
+            <p class="mb-sm">管理订阅：</p>
+            <ul class="mb-md">
+                <li>Google Play 商店 → 账号 → 订阅 → Swim Analytics</li>
+                <li>或在应用内：设置 → 管理订阅</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">5. 数据保留和删除</h2>
+
+            <h3 class="mb-sm">5.1 数据保留</h3>
+            <ul class="mb-md">
+                <li>健康数据将<strong>无限期</strong>存储在您的设备上，直到您手动删除它们</li>
+                <li>保留训练数据是为了提供历史表现追踪和分析</li>
+            </ul>
+
+            <h3 class="mb-sm">5.2 数据删除</h3>
+            <p class="mb-sm">您可以随时删除您的数据：</p>
+
+            <p class="mb-sm"><strong>方法 1：删除单个训练</strong></p>
+            <ul class="mb-md">
+                <li>打开训练详情屏幕</li>
+                <li>点击删除按钮（垃圾桶图标）</li>
+                <li>确认删除</li>
+            </ul>
+
+            <p class="mb-sm"><strong>方法 2：清除所有应用数据</strong></p>
+            <ul class="mb-md">
+                <li><strong>iOS：</strong> 删除并重新安装应用（所有本地数据都会被移除）</li>
+                <li><strong>Android：</strong> 设置 → 应用 → Swim Analytics → 存储 → 清除数据</li>
+            </ul>
+
+            <p class="mb-sm"><strong>方法 3：卸载应用</strong></p>
+            <ul class="mb-md">
+                <li>卸载 Swim Analytics 会自动移除所有本地数据</li>
+            </ul>
+
+            <p class="mb-sm"><strong>方法 4：撤销健康权限</strong></p>
+            <ul class="mb-md">
+                <li><strong>iOS：</strong> 设置 → 隐私与安全性 → 健康 → Swim Analytics → 关闭所有类别</li>
+                <li><strong>Android：</strong> 设置 → 应用 → Health Connect → Swim Analytics → 撤销所有权限</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">6. 数据安全</h2>
+            <p class="mb-md">
+                尽管所有数据都保留在您的设备上，但我们非常重视数据安全：
+            </p>
+
+            <h3 class="mb-sm">6.1 安全措施</h3>
+            <ul class="mb-md">
+                <li><strong>iOS 安全：</strong> 所有使用 iOS Core Data 存储的数据均受 iOS 钥匙串和设备加密保护。设备锁定时，数据是受保护的。</li>
+                <li><strong>Android 安全：</strong> 所有存储在 Room Database 中的数据均受 Android 内置安全和应用沙盒保护。</li>
+                <li><strong>无网络传输：</strong> 健康数据从未离开您的设备，消除了传输安全风险</li>
+                <li><strong>应用沙盒：</strong> iOS 和 Android 应用沙盒防止其他应用访问 Swim Analytics 数据</li>
+                <li><strong>安全存储：</strong> 没有设备认证（密码、Face ID、Touch ID、指纹、面部解锁），健康数据无法被访问</li>
+            </ul>
+
+            <h3 class="mb-sm">6.2 您的责任</h3>
+            <p class="mb-sm">为了保护您的数据：</p>
+            <ul class="mb-md">
+                <li>使用强密码/生物识别技术锁定您的设备</li>
+                <li>保持操作系统更新最新的安全补丁</li>
+                <li><strong>iOS：</strong> 请勿越狱您的设备</li>
+                <li><strong>Android：</strong> 请勿 Root 您的设备</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">7. 数据共享和第三方</h2>
+            <p class="mb-md">
+                <strong>Swim Analytics 不会与任何第三方共享您的健康数据。</strong>
+            </p>
+
+            <h3 class="mb-sm">7.1 无数据共享</h3>
+            <ul class="mb-md">
+                <li>我们不出售您的数据</li>
+                <li>我们不与广告商共享您的数据</li>
+                <li>我们不向分析公司提供您的数据</li>
+                <li>我们不集成社交媒体平台</li>
+            </ul>
+
+            <h3 class="mb-sm">7.2 CSV 导出（仅由用户发起）</h3>
+            <p class="mb-sm">数据离开您设备的唯一方式是<strong>您</strong>明确：</p>
+            <ol class="mb-md">
+                <li>导航到设置 → 原始数据导出</li>
+                <li>生成 CSV 文件</li>
+                <li>选择通过您设备的共享菜单（电子邮件、云存储、消息应用）共享 CSV 文件</li>
+            </ol>
+            <p class="mb-md"><strong>这完全由您控制。</strong></p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">8. 儿童隐私</h2>
+            <p class="mb-md">
+                Swim Analytics 不会故意收集 13 岁以下儿童的数据。该应用不请求年龄信息，但家长应监督其子女使用健康追踪应用。
+            </p>
+            <p class="mb-md">
+                如果您认为 13 岁以下的儿童使用了 Swim Analytics，请联系我们，我们将帮助您确保从设备中删除所有本地数据。
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">政策变更</h2>
+            <h2 class="mb-md">9. 国际数据传输</h2>
             <p class="mb-md">
-                我们可能会不时更新本隐私政策。我们将通过在此页面上发布新政策并更新“最后更新”日期来通知您任何更改。
+                <strong>不适用。</strong> 由于所有健康数据仅保留在您的设备（iOS 或 Android）上，并且从未传输到服务器，因此不存在国际数据传输。
             </p>
         </div>
 
-        <div class="callout callout-info">
-            <h2 class="mb-sm">有问题吗？</h2>
-            <p>
-                如果您对本隐私政策有任何疑问，请<a href="/zh/contact/">联系我们</a>。
+        <div class="mb-xl">
+            <h2 class="mb-md">10. 您的权利（GDPR, CCPA 合规）</h2>
+            <p class="mb-md">
+                虽然 Swim Analytics 不会在服务器上收集个人数据，但我们尊重您的数据隐私权：
+            </p>
+
+            <h3 class="mb-sm">10.1 GDPR 权利（欧洲用户）</h3>
+            <ul class="mb-md">
+                <li><strong>访问权：</strong> 您的所有数据随时可在应用内访问</li>
+                <li><strong>删除权：</strong> 使用第 5.2 节中描述的方法删除数据</li>
+                <li><strong>可移植权：</strong> 将您的数据导出为 CSV 格式（设置 → 原始数据导出）</li>
+                <li><strong>限制处理权：</strong> 撤销健康权限以停止访问新数据</li>
+            </ul>
+
+            <h3 class="mb-sm">10.2 CCPA 权利（加利福尼亚用户）</h3>
+            <ul class="mb-md">
+                <li><strong>知情权：</strong> 本政策披露了所有访问的数据及其使用方式</li>
+                <li><strong>删除权：</strong> 使用第 5.2 节中描述的方法删除数据</li>
+                <li><strong>拒绝出售权：</strong> 不适用（我们从不出售数据）</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">11. 本隐私政策的变更</h2>
+            <p class="mb-sm">我们可能会不时更新本隐私政策。当我们进行更改时：</p>
+            <ul class="mb-md">
+                <li>本政策顶部的“最后更新”日期将被修改</li>
+                <li>重大变更将在应用内公布</li>
+                <li>更改后继续使用应用即表示接受更新后的政策</li>
+            </ul>
+            <p class="mb-md">
+                我们建议定期查看本政策，以了解我们如何保护您的隐私。
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">12. 联系我们</h2>
+            <p class="mb-sm">如果您对本隐私政策或您的数据隐私有任何疑问、疑虑或请求：</p>
+            <ul class="mb-md">
+                <li><strong>电子邮件：</strong> support@swimanalytics.app</li>
+                <li><strong>网站：</strong> <a href="https://swimanalytics.app">https://swimanalytics.app</a></li>
+            </ul>
+            <p class="mb-md">
+                <strong>响应时间：</strong> 我们的目标是在 7 个工作日内回复所有隐私咨询。
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">13. 法律合规</h2>
+            <p class="mb-sm">Swim Analytics 遵守：</p>
+            <ul class="mb-md">
+                <li><strong>iOS：</strong> Apple App Store 审核准则，Apple HealthKit 准则</li>
+                <li><strong>Android：</strong> Google Play 开发者计划政策，Android Health Connect 准则</li>
+                <li>通用数据保护条例 (GDPR)</li>
+                <li>加州消费者隐私法 (CCPA)</li>
+                <li>儿童在线隐私保护法 (COPPA)</li>
+            </ul>
+        </div>
+
+        <div class="callout callout-success">
+            <h2 class="mb-md">总结</h2>
+            <p class="mb-sm"><strong>简单来说：</strong></p>
+            <ul class="mb-sm">
+                <li>✅ <strong>我们访问的内容：</strong> 来自 Apple HealthKit (iOS) 或 Health Connect (Android) 的游泳训练数据</li>
+                <li>✅ <strong>存储位置：</strong> 仅在您的设备上（iOS Core Data 或 Android Room Database）</li>
+                <li>✅ <strong>去向：</strong> 无处可去。它从未离开您的设备。</li>
+                <li>✅ <strong>谁能看到：</strong> 只有您。</li>
+                <li>✅ <strong>如何删除：</strong> 随时清除应用数据或卸载应用。</li>
+            </ul>
+            <p class="mb-0">
+                <strong>Swim Analytics 以隐私为首位构建。您的游泳数据属于您，并保留在您的设备上。</strong>
             </p>
         </div>
     </div>

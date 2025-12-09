@@ -790,111 +790,412 @@ img[width][height] {
 
 <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-lg">SwimAnalytics privatlivspolitik</h1>
+        <h1 class="mb-lg">Privatlivspolitik for Swim Analytics</h1>
 
-        <p class="text-secondary mb-xl"><strong>Sidst opdateret:</strong> 10. januar 2025 | <strong>Ikrafttræden:</strong> 10. januar 2025</p>
+        <p class="text-secondary mb-xl"><strong>Senest opdateret:</strong> 10. januar 2025 |
+            <strong>Ikrafttrædelsesdato:</strong> 10. januar 2025</p>
 
         <div class="mb-xl">
             <h2 class="mb-md">Introduktion</h2>
-            <p class="mb-md">SwimAnalytics ("vi", "appen") beskytter dit privatliv. Denne politik forklarer, hvordan vores iOS/Android-app tilgår, bruger og beskytter sundhedsdata fra din enhed.</p>
+            <p class="mb-md">
+                Swim Analytics ("vi", "os" eller "appen") er forpligtet til at beskytte dit privatliv. Denne
+                privatlivspolitik forklarer, hvordan vores mobilapps (iOS og Android) får adgang til, bruger og
+                beskytter sundhedsdata på din enhed.
+            </p>
             <div class="callout callout-info mb-md">
-                <p><strong>Nøgleprincip:</strong> SwimAnalytics kører på en <strong>zero-server, lokal-only</strong> arkitektur. Data fra Apple HealthKit eller Health Connect forbliver på din enhed og sendes ikke til eksterne servere, cloud eller tredjepart.</p>
+                <p><strong>Vigtigt privatlivsprincip:</strong> Swim Analytics fungerer med en <strong>serverfri,
+                        lokal-først arkitektur</strong>. Alle sundhedsdata, der tilgås fra Apple HealthKit (iOS) eller
+                    Health Connect (Android), forbliver udelukkende på din fysiske enhed og overføres aldrig til
+                    eksterne servere, cloud-tjenester eller tredjeparter.</p>
             </div>
         </div>
 
         <div class="mb-xl">
             <h2 class="mb-md">1. Adgang til sundhedsdata</h2>
-            <p class="mb-md">Appen integrerer med enhedens sundhedsplatform for at analysere svømmepas.</p>
+            <p class="mb-md">
+                Swim Analytics integrerer med din enheds indbyggede sundhedsplatform for at levere analyser af
+                svømmetræning:
+            </p>
 
-            <h3 class="mb-sm">1.1 iOS – Apple HealthKit</h3>
-            <p class="mb-md">Vi anmoder om læseadgang til:</p>
+            <h3 class="mb-sm">1.1 iOS - Apple HealthKit Integration</h3>
+            <p class="mb-md">
+                På iOS-enheder integrerer Swim Analytics med <strong>Apple HealthKit</strong> for at få adgang til
+                svømmetræningsdata. Vi anmoder om skrivebeskyttet adgang til:
+            </p>
             <ul class="mb-md">
-                <li><strong>Træningspas:</strong> tid og varighed</li>
-                <li><strong>Distance:</strong> total og per bane</li>
-                <li><strong>Puls:</strong> under pas</li>
-                <li><strong>Aktiv energi:</strong> forbrændte kalorier</li>
-                <li><strong>Stroke count:</strong> til analyse</li>
+                <li><strong>Træning (Workouts):</strong> Svømmetræning med tid og varighed</li>
+                <li><strong>Distance:</strong> Total distance og banedistancer</li>
+                <li><strong>Puls:</strong> Pulsdata under træning</li>
+                <li><strong>Aktiv energi:</strong> Kalorier forbrændt under svømmesessioner</li>
+                <li><strong>Svømmetag (Strokes):</strong> Svømmetagsdata til analyse</li>
             </ul>
-            <p class="mb-md"><strong>HealthKit-overholdelse:</strong> Alle data behandles lokalt og deles ikke.</p>
+            <p class="mb-md">
+                <strong>Overholdelse af Apple HealthKit:</strong> Swim Analytics overholder alle Apple
+                HealthKit-retningslinjer. Dine sundhedsdata behandles fuldstændigt på din iOS-enhed og forlader den
+                aldrig. Vi deler aldrig HealthKit-data med tredjeparter, reklameplatforme eller datamæglere.
+            </p>
 
-            <h3 class="mb-sm">1.2 Android – Health Connect</h3>
+            <h3 class="mb-sm">1.2 Android - Health Connect Integration</h3>
             <div class="table-responsive mb-md">
                 <table class="table">
-                    <thead><tr><th>Datatype</th><th>Tilladelse</th><th>Formål</th></tr></thead>
+                    <thead>
+                        <tr>
+                            <th>Sundhedsdatatype</th>
+                            <th>Tilladelse</th>
+                            <th>Formål</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr><td><strong>Exercise Sessions</strong></td><td><code>READ_EXERCISE</code></td><td>Identificere/importere svømmepas</td></tr>
-                        <tr><td><strong>Distance Records</strong></td><td><code>READ_DISTANCE</code></td><td>Vis total/banelængde og pace</td></tr>
-                        <tr><td><strong>Heart Rate Records</strong></td><td><code>READ_HEART_RATE</code></td><td>Pulsdiagrammer, gennemsnit/maks</td></tr>
-                        <tr><td><strong>Speed Records</strong></td><td><code>READ_SPEED</code></td><td>Pace, zone, stroke rate</td></tr>
-                        <tr><td><strong>Calories Burned</strong></td><td><code>READ_TOTAL_CALORIES_BURNED</code></td><td>Energiforbrug</td></tr>
+                        <tr>
+                            <td><strong>Træningssessioner</strong></td>
+                            <td><code>READ_EXERCISE</code></td>
+                            <td>For at identificere og importere svømmetræning fra Health Connect</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Distanceregistreringer</strong></td>
+                            <td><code>READ_DISTANCE</code></td>
+                            <td>For at vise nøgletal som total svømmedistance, banedistancer og beregne tempo</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pulsregistreringer</strong></td>
+                            <td><code>READ_HEART_RATE</code></td>
+                            <td>For at vise pulsgrafer og beregne gennemsnit og maksimum under træning</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hastighedsregistreringer</strong></td>
+                            <td><code>READ_SPEED</code></td>
+                            <td>For at beregne og vise svømmehastighed, tempozoner og analyse af svømmetag</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Forbrændte kalorier</strong></td>
+                            <td><code>READ_TOTAL_CALORIES_BURNED</code></td>
+                            <td>For at give et komplet overblik over energiforbruget under svømmesessioner</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="mb-md"><strong>Android-tilladelser:</strong> Anmodes ved første start; kan fjernes i Indstillinger → Apps → Health Connect → SwimAnalytics.</p>
+            <p class="mb-md">
+                <strong>Android-tilladelser:</strong> Disse tilladelser anmodes om, første gang appen startes. Du kan
+                til enhver tid tilbagekalde disse tilladelser via Android Indstillinger → Apps → Health Connect → Swim
+                Analytics.
+            </p>
 
-            <h3 class="mb-sm">1.3 Brug af sundhedsdata</h3>
-            <p class="mb-sm"><strong>Kun til:</strong></p>
+            <h3 class="mb-sm">1.3 Hvordan vi bruger sundhedsdata</h3>
+            <p class="mb-sm">Alle sundhedsdata bruges <strong>udelukkende til følgende formål</strong>:</p>
             <ul class="mb-md">
-                <li><strong>Visning:</strong> distance, tid, pace, puls</li>
-                <li><strong>Analyse:</strong> pace-zoner, strokeanalyse, CSS, sTSS</li>
-                <li><strong>Tracking:</strong> trends, personlige rekorder, resuméer</li>
-                <li><strong>Eksport:</strong> CSV til eget brug</li>
+                <li><strong>Træningsvisning:</strong> Viser dine svømmesessioner med detaljerede målinger (distance,
+                    tid, tempo, puls)</li>
+                <li><strong>Præstationsanalyse:</strong> Beregning af tempozoner, analyse af svømmetag, CSS (Critical
+                    Swim Speed) og sTSS (Swim Training Stress Score)</li>
+                <li><strong>Fremskridtssporing:</strong> Visning af præstationstendenser, personlige rekorder og
+                    træningsoversigter</li>
+                <li><strong>Dataeksport:</strong> Giver mulighed for at eksportere dine træningsdata i CSV-format til
+                    personlig brug</li>
             </ul>
 
-            <h3 class="mb-sm">1.4 Opbevaring</h3>
+            <h3 class="mb-sm">1.4 Dataopbevaring</h3>
             <div class="callout callout-success mb-md">
-                <h4 class="mb-sm">🔒 Privatlivsgaranti</h4>
+                <h4 class="mb-sm">🔒 Kritisk privatlivsgaranti:</h4>
+                <p class="mb-sm"><strong>Alle sundhedsdata forbliver udelukkende på din fysiske enhed.</strong></p>
                 <ul class="mb-0">
-                    <li><strong>iOS:</strong> Core Data, UserDefaults (lokalt)</li>
-                    <li><strong>Android:</strong> Room Database (lokal SQLite)</li>
-                    <li><strong>Ingen upload:</strong> sendes ikke til servere</li>
-                    <li><strong>Ingen internetoverførsel</strong></li>
-                    <li><strong>Ingen cloud-synk</strong></li>
-                    <li><strong>Ingen tredjepartsadgang</strong></li>
+                    <li><strong>iOS:</strong> Data gemmes ved hjælp af iOS Core Data og UserDefaults (kun på enheden)
+                    </li>
+                    <li><strong>Android:</strong> Data gemmes ved hjælp af Android Room Database (SQLite på enheden)
+                    </li>
+                    <li><strong>Ingen upload til eksterne servere</strong></li>
+                    <li><strong>Ingen transmission over internettet</strong></li>
+                    <li><strong>Ingen cloud-synkronisering eller backup af sundhedsdata</strong></li>
+                    <li><strong>Ingen tredjepartsadgang til dine sundhedsdata</strong></li>
                 </ul>
             </div>
-            <p class="mb-md">Data forlader kun enheden, hvis <strong>du selv</strong> eksporterer CSV og deler den.</p>
+            <p class="mb-md">
+                Det eneste tilfælde, hvor data forlader din enhed, er når <strong>du udtrykkeligt vælger</strong> at
+                eksportere dine træninger til CSV-format og selv deler filen.
+            </p>
         </div>
 
         <div class="mb-xl">
             <h2 class="mb-md">2. Nødvendige tilladelser</h2>
-            <h3 class="mb-sm">2.1 iOS</h3>
+
+            <h3 class="mb-sm">2.1 iOS-tilladelser</h3>
             <ul class="mb-md">
-                <li><strong>HealthKit læs:</strong> træning, distance, puls, aktiv energi, stroke count</li>
-                <li><strong>Fotos (valgfrit):</strong> kun hvis du gemmer sammendrag som billede</li>
+                <li><strong>Adgang til HealthKit:</strong> Læseadgang til træning, distance, puls, aktiv energi og
+                    svømmetag</li>
+                <li><strong>Fotobibliotek (valgfrit):</strong> Kun hvis du vælger at gemme træningsoversigter som
+                    billeder</li>
             </ul>
-            <p class="mb-md">Administrér i iOS Indstillinger → Privatliv & Sikkerhed → Sundhed → SwimAnalytics.</p>
+            <p class="mb-md">
+                Du kan til enhver tid administrere HealthKit-tilladelser i iOS Indstillinger → Anonymitet og sikkerhed →
+                Sundhed → Swim Analytics.
+            </p>
 
-            <h3 class="mb-sm">2.2 Android</h3>
+            <h3 class="mb-sm">2.2 Android-tilladelser</h3>
             <ul class="mb-md">
-                <li><strong>Health Connect læs:</strong> exercise, distance, heart rate, speed, calories</li>
+                <li><code>android.permission.health.READ_EXERCISE</code></li>
+                <li><code>android.permission.health.READ_DISTANCE</code></li>
+                <li><code>android.permission.health.READ_HEART_RATE</code></li>
+                <li><code>android.permission.health.READ_SPEED</code></li>
+                <li><code>android.permission.health.READ_TOTAL_CALORIES_BURNED</code></li>
+                <li><strong>Internetadgang</strong> (<code>INTERNET</code>): Bruges kun til at vise statisk indhold i
+                    appen og få adgang til abonnementsstyring (Google Play Billing). Ingen sundhedsdata transmitteres.
+                </li>
+                <li><strong>Forgrundstjeneste</strong> (<code>FOREGROUND_SERVICE</code>): Til potentielle fremtidige
+                    baggrundssynkroniseringsfunktioner (ikke implementeret i øjeblikket).</li>
             </ul>
-            <p class="mb-md">Kan altid fjernes i Android-indstillinger.</p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">3. Ingen deling/salg</h2>
-            <p class="mb-md">Vi deler eller sælger ikke data til tredjepart, annoncer eller databrokers.</p>
+            <h2 class="mb-md">3. Data vi IKKE indsamler</h2>
+            <p class="mb-sm">Swim Analytics indsamler, gemmer eller transmitterer <strong>IKKE</strong>:</p>
+            <ul class="mb-md">
+                <li>❌ Personligt identificerbare oplysninger (navn, e-mail, telefonnummer)</li>
+                <li>❌ Enhedsidentifikatorer (IDFA på iOS, Annonce-ID på Android)</li>
+                <li>❌ Placeringsdata eller GPS-koordinater</li>
+                <li>❌ Brugsanalyse eller adfærdssporing i appen</li>
+                <li>❌ Nedbrudsrapporter eller diagnosedata til eksterne servere</li>
+                <li>❌ Noget data via tredjeparts-SDK'er eller analysetjenester</li>
+            </ul>
+            <p class="mb-sm">Vi bruger <strong>nul tredjeparts sporingsbiblioteker</strong> herunder:</p>
+            <ul class="mb-md">
+                <li>Ingen Google Analytics / Firebase Analytics</li>
+                <li>Ingen Facebook SDK</li>
+                <li>Ingen annonce-SDK'er</li>
+                <li>Ingen nedbrudsrapporteringstjenester (Crashlytics, Sentry, osv.)</li>
+            </ul>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">4. Sikkerhed</h2>
-            <p class="mb-md">Al behandling er lokal, ingen netværksoverførsel. Hold enheden sikker og opdateret.</p>
+            <h2 class="mb-md">4. Køb i appen og abonnementer</h2>
+            <p class="mb-md">
+                Swim Analytics tilbyder valgfri abonnementer i appen, der administreres via din enheds indbyggede
+                betalingssystem:
+            </p>
+
+            <h3 class="mb-sm">4.1 iOS - App Store-abonnementer</h3>
+            <p class="mb-sm">Når du køber et abonnement på iOS:</p>
+            <ul class="mb-md">
+                <li>Apple håndterer al betalingsbehandling via App Store</li>
+                <li>Vi modtager kun abonnementsstatus (aktiv/inaktiv) via StoreKit</li>
+                <li>Vi har ikke adgang til dine betalingsoplysninger (kreditkort, faktureringsadresse)</li>
+                <li>Abonnementsdata gemmes lokalt på din enhed</li>
+            </ul>
+            <p class="mb-sm">Administration af abonnementer:</p>
+            <ul class="mb-md">
+                <li>iOS Indstillinger → Dit navn → Abonnementer → Swim Analytics</li>
+                <li>Eller i appen: Indstillinger → Administrer abonnement</li>
+            </ul>
+
+            <h3 class="mb-sm">4.2 Android - Google Play Billing</h3>
+            <p class="mb-sm">Når du køber et abonnement på Android:</p>
+            <ul class="mb-md">
+                <li>Google Play håndterer al betalingsbehandling</li>
+                <li>Vi modtager kun abonnementsstatus (aktiv/inaktiv) via Google Play Billing API</li>
+                <li>Vi har ikke adgang til dine betalingsoplysninger (kreditkort, faktureringsadresse)</li>
+                <li>Abonnementsdata gemmes lokalt på din enhed</li>
+            </ul>
+            <p class="mb-sm">Administration af abonnementer:</p>
+            <ul class="mb-md">
+                <li>Google Play Butik → Konto → Abonnementer → Swim Analytics</li>
+                <li>Eller i appen: Indstillinger → Administrer abonnement</li>
+            </ul>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">5. Børn</h2>
-            <p class="mb-md">Ikke målrettet børn under 13, medmindre loven kræver noget andet.</p>
+            <h2 class="mb-md">5. Dataopbevaring og sletning</h2>
+
+            <h3 class="mb-sm">5.1 Dataopbevaring</h3>
+            <ul class="mb-md">
+                <li>Sundhedsdata gemmes på din enhed <strong>på ubestemt tid</strong>, indtil du sletter dem manuelt
+                </li>
+                <li>Træningsdata bevares for at give historisk præstationssporing og analyse</li>
+            </ul>
+
+            <h3 class="mb-sm">5.2 Datasletning</h3>
+            <p class="mb-sm">Du kan slette dine data til enhver tid:</p>
+
+            <p class="mb-sm"><strong>Metode 1: Slet individuelle træninger</strong></p>
+            <ul class="mb-md">
+                <li>Åbn skærmen for træningsdetaljer</li>
+                <li>Tryk på slet-knappen (papirkurvsikon)</li>
+                <li>Bekræft sletning</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Metode 2: Ryd alle appdata</strong></p>
+            <ul class="mb-md">
+                <li><strong>iOS:</strong> Slet og geninstaller appen (alle lokale data fjernes)</li>
+                <li><strong>Android:</strong> Indstillinger → Apps → Swim Analytics → Lagerplads → Ryd data</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Metode 3: Afinstaller appen</strong></p>
+            <ul class="mb-md">
+                <li>Afinstallation af Swim Analytics fjerner automatisk alle lokale data</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Metode 4: Tilbagekald sundhedstilladelser</strong></p>
+            <ul class="mb-md">
+                <li><strong>iOS:</strong> Indstillinger → Anonymitet og sikkerhed → Sundhed → Swim Analytics → Slå alle
+                    kategorier fra</li>
+                <li><strong>Android:</strong> Indstillinger → Apps → Health Connect → Swim Analytics → Tilbagekald alle
+                    tilladelser</li>
+            </ul>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">6. Ændringer</h2>
-            <p class="mb-md">Vi kan opdatere politikken; væsentlige ændringer varsles i app/web.</p>
+            <h2 class="mb-md">6. Datasikkerhed</h2>
+            <p class="mb-md">
+                Vi tager datasikkerhed alvorligt, selvom alle data forbliver på din enhed:
+            </p>
+
+            <h3 class="mb-sm">6.1 Sikkerhedsforanstaltninger</h3>
+            <ul class="mb-md">
+                <li><strong>iOS-sikkerhed:</strong> Alle data, der gemmes med iOS Core Data, er beskyttet af iOS
+                    Keychain og enhedskryptering. Data er beskyttet, når enheden er låst.</li>
+                <li><strong>Android-sikkerhed:</strong> Alle data, der gemmes i Room Database, er beskyttet af Androids
+                    indbyggede sikkerhed og app-sandbox.</li>
+                <li><strong>Ingen netværkstransmission:</strong> Sundhedsdata forlader aldrig din enhed, hvilket
+                    eliminerer sikkerhedsrisici ved transmission</li>
+                <li><strong>App-sandboxing:</strong> iOS og Android app-sandboxe forhindrer andre apps i at få adgang
+                    til Swim Analytics-data</li>
+                <li><strong>Sikker lagring:</strong> Sundhedsdata kan ikke tilgås uden enhedsgodkendelse (adgangskode,
+                    Face ID, Touch ID, fingeraftryk)</li>
+            </ul>
+
+            <h3 class="mb-sm">6.2 Dit ansvar</h3>
+            <p class="mb-sm">For at beskytte dine data:</p>
+            <ul class="mb-md">
+                <li>Hold din enhed låst med en stærk adgangskode/biometri</li>
+                <li>Hold dit operativsystem opdateret med de seneste sikkerhedsrettelser</li>
+                <li><strong>iOS:</strong> Jailbreak ikke din enhed</li>
+                <li><strong>Android:</strong> Root ikke din enhed</li>
+            </ul>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">7. Kontakt</h2>
-            <p>Privatlivsspørgsmål: <a href="mailto:swimanalytics@onmedic.org">swimanalytics@onmedic.org</a></p>
+            <h2 class="mb-md">7. Datadeling og tredjeparter</h2>
+            <p class="mb-md">
+                <strong>Swim Analytics deler IKKE dine sundhedsdata med nogen tredjepart.</strong>
+            </p>
+
+            <h3 class="mb-sm">7.1 Ingen datadeling</h3>
+            <ul class="mb-md">
+                <li>Vi sælger ikke dine data</li>
+                <li>Vi deler ikke dine data med annoncører</li>
+                <li>Vi leverer ikke dine data til analysefirmaer</li>
+                <li>Vi integrerer ikke med sociale medieplatforme</li>
+            </ul>
+
+            <h3 class="mb-sm">7.2 CSV-eksport (kun brugerinitieret)</h3>
+            <p class="mb-sm">Den eneste måde, data forlader din enhed på, er når <strong>du</strong> udtrykkeligt:</p>
+            <ol class="mb-md">
+                <li>Går til Indstillinger → Eksport af rådata</li>
+                <li>Genererer en CSV-fil</li>
+                <li>Vælger at dele CSV-filen via din enheds delemenu (e-mail, cloud-lager, beskedapps)</li>
+            </ol>
+            <p class="mb-md"><strong>Dette er helt under din kontrol.</strong></p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">8. Børns privatliv</h2>
+            <p class="mb-md">
+                Swim Analytics indsamler ikke bevidst data fra børn under 13 år. Appen anmoder ikke om
+                aldersoplysninger, men forældre bør overvåge deres børns brug af sundhedssporingapps.
+            </p>
+            <p class="mb-md">
+                Hvis du mener, at et barn under 13 år har brugt Swim Analytics, bedes du kontakte os, så hjælper vi med
+                at sikre, at alle lokale data fjernes fra enheden.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">9. Internationale dataoverførsler</h2>
+            <p class="mb-md">
+                <strong>Ikke relevant.</strong> Da alle sundhedsdata forbliver udelukkende på din enhed (iOS eller
+                Android) og aldrig overføres til servere, finder der ingen internationale dataoverførsler sted.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">10. Dine rettigheder (GDPR, CCPA-overholdelse)</h2>
+            <p class="mb-md">
+                Selvom Swim Analytics ikke indsamler personoplysninger på servere, respekterer vi dine
+                dataprivatlivsrettigheder:
+            </p>
+
+            <h3 class="mb-sm">10.1 GDPR-rettigheder (Europæiske brugere)</h3>
+            <ul class="mb-md">
+                <li><strong>Ret til indsigt:</strong> Alle dine data er tilgængelige i appen til enhver tid</li>
+                <li><strong>Ret til sletning:</strong> Slet data ved hjælp af metoderne beskrevet i afsnit 5.2</li>
+                <li><strong>Ret til dataportabilitet:</strong> Eksporter dine data i CSV-format (Indstillinger → Eksport
+                    af rådata)</li>
+                <li><strong>Ret til begrænsning af behandling:</strong> Tilbagekald sundhedstilladelser for at stoppe
+                    adgang til nye data</li>
+            </ul>
+
+            <h3 class="mb-sm">10.2 CCPA-rettigheder (Californiske brugere)</h3>
+            <ul class="mb-md">
+                <li><strong>Ret til at vide:</strong> Denne politik oplyser alle data, der tilgås, og hvordan de bruges
+                </li>
+                <li><strong>Ret til sletning:</strong> Slet data ved hjælp af metoderne beskrevet i afsnit 5.2</li>
+                <li><strong>Ret til at fravælge salg:</strong> Ikke relevant (vi sælger aldrig data)</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">11. Ændringer i denne privatlivspolitik</h2>
+            <p class="mb-sm">Vi kan opdatere denne privatlivspolitik fra tid til anden. Når vi foretager ændringer:</p>
+            <ul class="mb-md">
+                <li>Datoen for "senest opdateret" øverst i denne politik vil blive revideret</li>
+                <li>Væsentlige ændringer vil blive annonceret i appen</li>
+                <li>Fortsat brug af appen efter ændringer udgør accept af den opdaterede politik</li>
+            </ul>
+            <p class="mb-md">
+                Vi anbefaler, at du løbende gennemgår denne politik for at holde dig informeret om, hvordan vi beskytter
+                dit privatliv.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">12. Kontakt os</h2>
+            <p class="mb-sm">Hvis du har spørgsmål, bekymringer eller anmodninger om denne privatlivspolitik eller dit
+                dataprivatliv:</p>
+            <ul class="mb-md">
+                <li><strong>E-mail:</strong> support@swimanalytics.app</li>
+                <li><strong>Hjemmeside:</strong> <a href="https://swimanalytics.app">https://swimanalytics.app</a></li>
+            </ul>
+            <p class="mb-md">
+                <strong>Svartid:</strong> Vi tilstræber at besvare alle privatlivsforespørgsler inden for 7 hverdage.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">13. Juridisk overholdelse</h2>
+            <p class="mb-sm">Swim Analytics overholder:</p>
+            <ul class="mb-md">
+                <li><strong>iOS:</strong> Apple App Store gennemgangsretningslinjer, Apple HealthKit-retningslinjer</li>
+                <li><strong>Android:</strong> Google Play udviklerprogrampolitikker, Android Health
+                    Connect-retningslinjer</li>
+                <li>Generel forordning om databeskyttelse (GDPR)</li>
+                <li>California Consumer Privacy Act (CCPA)</li>
+                <li>Children's Online Privacy Protection Act (COPPA)</li>
+            </ul>
+        </div>
+
+        <div class="callout callout-success">
+            <h2 class="mb-md">Resumé</h2>
+            <p class="mb-sm"><strong>Kort sagt:</strong></p>
+            <ul class="mb-sm">
+                <li>✅ <strong>Hvad vi tilgår:</strong> Svømmetræningsdata fra Apple HealthKit (iOS) eller Health Connect
+                    (Android)</li>
+                <li>✅ <strong>Hvor det gemmes:</strong> Kun på <strong>din</strong> enhed (iOS Core Data eller Android
+                    Room Database)</li>
+                <li>✅ <strong>Hvor det ryger hen:</strong> Ingen steder. Det forlader aldrig din enhed.</li>
+                <li>✅ <strong>Hvem der ser det:</strong> Kun dig.</li>
+                <li>✅ <strong>Sådan sletter du:</strong> Ryd appdata eller afinstaller appen til enhver tid.</li>
+            </ul>
+            <p class="mb-0">
+                <strong>Swim Analytics er bygget med privatliv i første række. Dine svømmedata tilhører dig og forbliver
+                    på din enhed.</strong>
+            </p>
         </div>
     </div>
 </section>
