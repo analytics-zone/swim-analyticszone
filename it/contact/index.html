@@ -112,25 +112,38 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#0066CC">
+    <meta name="robots" content="index, follow">
 
     
     <style>
-/* Critical CSS - Above the fold */
+/* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
   --color-text: #1a1a1a;
+  --color-text-muted: #666;
   --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
   --space-xl: 2rem;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -138,27 +151,42 @@ body {
   line-height: 1.6;
   color: var(--color-text);
   background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
 }
 
+/* Header - Critical for LCP */
 .site-header {
   background: var(--color-bg);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 .header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
 }
 
 .site-logo {
@@ -168,41 +196,119 @@ body {
   text-decoration: none;
   color: var(--color-text);
   font-weight: 600;
+  font-size: 1.125rem;
 }
 
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #ffffff;
-  padding: 4rem 2rem;
+  padding: 3rem 1rem;
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
   line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
 }
 
-.lead {
-  font-size: 1.25rem;
-  opacity: 0.95;
-  max-width: 800px;
-  margin: 0 auto 2rem;
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
 }
 
+/* Buttons - Critical for CTA */
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: var(--color-primary);
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 0.375rem;
+  font-size: 1rem;
   font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
   transition: all 0.2s;
 }
 
 .btn-primary {
-  background: #0066CC;
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .btn-large {
@@ -210,12 +316,64 @@ body {
   font-size: 1.125rem;
 }
 
-.hidden {
-  display: none;
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
 }
 
-/* App Banner - Dual Platform (iOS + Android) */
-.app-banner{background:linear-gradient(135deg,#0066CC 0%,#004C99 100%);color:#fff;padding:1rem 1.5rem;position:relative;box-shadow:0 2px 12px rgba(0,102,204,.15);animation:slideDown .4s cubic-bezier(.4,0,.2,1);z-index:1000}.app-banner.hidden,.app-banner[data-dismissed=true]{display:none}@keyframes slideDown{from{transform:translateY(-100%);opacity:0}to{transform:translateY(0);opacity:1}}.app-banner__container{max-width:1200px;margin:0 auto;position:relative}.app-banner__close{position:absolute;top:-.5rem;right:0;background:rgba(255,255,255,.15);border:none;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s ease;color:#fff;z-index:10}.app-banner__close:focus,.app-banner__close:hover{background:rgba(255,255,255,.25);transform:scale(1.1)}.app-banner__close:focus{outline:2px solid rgba(255,255,255,.8);outline-offset:2px}.app-banner__content{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}.app-banner__icon{flex-shrink:0}.app-banner__icon svg{display:block;filter:drop-shadow(0 4px 8px rgba(0,0,0,.15))}.app-banner__text{flex:1 1 200px;min-width:200px}.app-banner__title{font-size:1.125rem;font-weight:700;margin:0 0 .25rem 0;line-height:1.3;color:#fff}.app-banner__description{font-size:.875rem;margin:0;opacity:.95;line-height:1.4;color:rgba(255,255,255,.95)}.app-banner__badges{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center}.app-badge{display:inline-flex;align-items:center;text-decoration:none;transition:all .3s cubic-bezier(.4,0,.2,1);opacity:.9;transform:scale(.98)}.app-badge:focus,.app-badge:hover{opacity:1;transform:scale(1.05)}.app-badge:focus{outline:2px solid rgba(255,255,255,.8);outline-offset:3px;border-radius:8px}.app-badge--highlighted{opacity:1;transform:scale(1);animation:subtle-pulse 3s ease-in-out infinite}@keyframes subtle-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}.app-badge__img{display:block;height:auto;border-radius:6px}.visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media (max-width:640px){.app-banner{padding:1rem}.app-banner__content{flex-direction:column;text-align:center;gap:1rem}.app-banner__icon{margin:0 auto}.app-banner__icon svg{width:48px;height:48px}.app-banner__badges{justify-content:center;width:100%;flex-direction:column}.app-badge{width:100%;max-width:280px;justify-content:center}.app-banner__title{font-size:1rem}.app-banner__description{font-size:.8125rem}.app-banner__close{top:.5rem;right:.5rem}}@media (min-width:641px) and (max-width:1024px){.app-banner__icon{display:none}.app-banner__content{justify-content:space-between}.app-banner__badges{flex-direction:row}}@media (min-width:1025px){.app-banner__content{justify-content:space-between}.app-banner__badges{flex-shrink:0}}@media (prefers-reduced-motion:reduce){.app-banner{animation:none}.app-badge--highlighted{animation:none}.app-badge,.app-banner__close{transition:none}}@media print{.app-banner{display:none!important}}[dir=rtl] .app-banner__content{direction:rtl}[dir=rtl] .app-banner__close{left:0;right:auto}[dir=rtl] .app-badge{flex-direction:row-reverse}
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 </style>
 
     
@@ -310,79 +468,7 @@ body {
 </head>
 <body>
     
-    <a href="#main-content" class="skip-to-content">Vai al contenuto</a>
-
-    
-    <aside
-        role="banner"
-        aria-label="Scarica l&#39;App Swim Analytics"
-        class="app-banner hidden"
-        data-dismissed="false"
-        id="appDownloadBanner">
-        <div class="app-banner__container">
-            
-            <button
-                type="button"
-                class="app-banner__close"
-                aria-label="Chiudi banner"
-                data-action="dismiss-banner">
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20">
-                    <path d="M6 6L14 14M14 6L6 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                </svg>
-                <span class="visually-hidden">Chiudi banner</span>
-            </button>
-
-            
-            <div class="app-banner__content">
-                
-                <div class="app-banner__icon" aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                        <rect width="56" height="56" rx="12" fill="url(#swimGradient)"/>
-                        <path d="M28 12C34.6274 12 40 17.3726 40 24C40 30.6274 34.6274 36 28 36C21.3726 36 16 30.6274 16 24C16 17.3726 21.3726 12 28 12Z" fill="white" opacity="0.3"/>
-                        <path d="M28 16C32.4183 16 36 19.5817 36 24C36 28.4183 32.4183 32 28 32C23.5817 32 20 28.4183 20 24C20 19.5817 23.5817 16 28 16Z" fill="white"/>
-                        <path d="M25 22L31 24L25 26V22Z" fill="url(#swimGradient)"/>
-                        <defs>
-                            <linearGradient id="swimGradient" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#0066CC"/>
-                                <stop offset="1" stop-color="#004C99"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-
-                
-                <div class="app-banner__text">
-                    <h2 class="app-banner__title">Scarica l&#39;App Swim Analytics</h2>
-                    <p class="app-banner__description">Monitora le tue prestazioni di nuoto ovunque</p>
-                </div>
-
-                
-                <div class="app-banner__badges" role="group" aria-label="Opzioni di download">
-                    
-                    <a
-                        href="https://apps.apple.com/app/swimanalytics/id6753306284"
-                        class="app-badge app-badge--ios"
-                        data-platform="ios"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        aria-label="Scarica su App Store">
-                        <img src="/assets/images/badge-app-store.svg" alt="Scarica su App Store" class="app-badge__img" width="140" height="47">
-                    </a>
-
-                    
-                    <a
-                        href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics"
-                        class="app-badge app-badge--android"
-                        data-platform="android"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        aria-label="Disponibile su Google Play">
-                        <img src="/assets/images/badge-google-play.svg" alt="Disponibile su Google Play" class="app-badge__img" width="140" height="47">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </aside>
+    <a href="#main-content" class="skip-link">Vai al contenuto</a>
 
     
     <header class="site-header">
@@ -391,14 +477,8 @@ body {
             
             <a href="/it/" class="site-logo">
                 <picture>
-                    
-                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
-                    
                     <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
-                    
-                    <source srcset="/assets/images/logo.webp" type="image/webp">
-                    
-                    <img src="/assets/images/logo.png" alt="Swim Analytics" width="40" height="40">
+                    <img src="/assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
                 </picture>
                 <span class="logo-text">Swim Analytics</span>
             </a>
@@ -409,129 +489,111 @@ body {
                     
                     <li>
                         
-                            
-                            <a href="/it/"
-                               
-                               aria-current="">
-                                Home
-                            </a>
+                        <a href="/it/" 
+                            aria-current="">
+                            Home
+                        </a>
                         
                     </li>
                     
                     <li class="has-submenu">
                         
+                        
+                        <span class="nav-label">Impara</span>
+                        
+                        <ul class="submenu">
                             
+                            <li>
+                                <a href="/it/getting-started/" 
+                                    aria-current="">
+                                    Inizia
+                                </a>
+                            </li>
                             
-                                
-                                <span class="nav-label">Impara</span>
+                            <li>
+                                <a href="/it/css/" 
+                                    aria-current="">
+                                    CSS
+                                </a>
+                            </li>
                             
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/it/getting-started/"
-                                       
-                                       aria-current="">
-                                        Inizia
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/it/css/"
-                                       
-                                       aria-current="">
-                                        CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/it/training-zones/"
-                                       
-                                       aria-current="">
-                                        Zone
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/it/training-load/"
-                                       
-                                       aria-current="">
-                                        Carico
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/it/stss-calculator/"
-                                       
-                                       aria-current="">
-                                        Calcolatore sTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
+                            <li>
+                                <a href="/it/training-zones/" 
+                                    aria-current="">
+                                    Zone
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/it/training-load/" 
+                                    aria-current="">
+                                    Carico
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/it/stss-calculator/" 
+                                    aria-current="">
+                                    Calcolatore sTSS
+                                </a>
+                            </li>
+                            
+                        </ul>
                         
                     </li>
                     
                     <li class="has-submenu">
                         
+                        
+                        <span class="nav-label">Scienza</span>
+                        
+                        <ul class="submenu">
                             
+                            <li>
+                                <a href="/it/research/" 
+                                    aria-current="">
+                                    Ricerca
+                                </a>
+                            </li>
                             
-                                
-                                <span class="nav-label">Scienza</span>
+                            <li>
+                                <a href="/it/formulas/" 
+                                    aria-current="">
+                                    Formule
+                                </a>
+                            </li>
                             
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/it/research/"
-                                       
-                                       aria-current="">
-                                        Ricerca
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/it/formulas/"
-                                       
-                                       aria-current="">
-                                        Formule
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/it/efficiency/"
-                                       
-                                       aria-current="">
-                                        Efficienza
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/it/stroke-mechanics/"
-                                       
-                                       aria-current="">
-                                        Meccanica
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/it/bibliography/"
-                                       
-                                       aria-current="">
-                                        Bibliografia
-                                    </a>
-                                </li>
-                                
-                            </ul>
+                            <li>
+                                <a href="/it/efficiency/" 
+                                    aria-current="">
+                                    Efficienza
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/it/stroke-mechanics/" 
+                                    aria-current="">
+                                    Meccanica
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/it/bibliography/" 
+                                    aria-current="">
+                                    Bibliografia
+                                </a>
+                            </li>
+                            
+                        </ul>
                         
                     </li>
                     
                     <li>
                         
-                            
-                            <a href="/it/contact/"
-                               class="active"
-                               aria-current="page">
-                                Contatto
-                            </a>
+                        <a href="/it/contact/" class="active"
+                            aria-current="page">
+                            Contatto
+                        </a>
                         
                     </li>
                     
@@ -539,20 +601,14 @@ body {
 
                 
                 <div class="search-container">
-                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
                         <circle cx="11" cy="11" r="8"></circle>
                         <path d="m21 21-4.35-4.35"></path>
                     </svg>
-                    <input
-                        type="search"
-                        id="site-search"
-                        class="search-input"
-                        aria-expanded="false"
-                        aria-haspopup="listbox"
-                        aria-autocomplete="list"
-                        autocomplete="off"
-                        spellcheck="false"
-                    />
+                    <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                        aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
                     <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
                 </div>
 
@@ -687,7 +743,8 @@ body {
 
                 
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
                         <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -698,24 +755,27 @@ body {
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
 
                 
-                <div class="header-download-badges">
-                    <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="header-badge" target="_blank" rel="noopener" aria-label="Download on App Store">
-                        <img src="/assets/images/badge-app-store.svg" alt="App Store" width="90" height="30">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-badge" target="_blank" rel="noopener" aria-label="Get it on Google Play">
-                        <img src="/assets/images/badge-google-play.svg" alt="Google Play" width="90" height="30">
-                    </a>
-                </div>
+                
+                <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="header-download-btn" target="_blank" rel="noopener"
+                    aria-label="Download on App Store">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                    </svg>
+                    <span class="download-text">Download</span>
+                </a>
+                
             </nav>
 
             
-            <button class="menu-toggle" id="menu-toggle" aria-label="Attiva/disattiva menu" aria-expanded="false" aria-controls="nav-primary">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Attiva/disattiva menu"
+                aria-expanded="false" aria-controls="nav-primary">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -795,270 +855,198 @@ body {
     
     <footer class="site-footer">
     <div class="container">
-        <div class="footer-content">
+        <div class="footer-grid">
             
-            <div class="footer-section">
-                <h3>Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            <div>
+                <h3 class="mb-md">Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
             </div>
 
             
-            <div class="footer-section">
-                <h3></h3>
-                <ul>
+            <div>
+                <h3 class="mb-md">Home</h3>
+                <ul class="footer-links">
                     
                     <li>
-                        <a href="/it/">
-                            Home
-                        </a>
+                        <a href="/ca/">Català</a>
                     </li>
                     
                     <li>
-                        <a href="/it/">
-                            Impara
-                        </a>
+                        <a href="/en/">English</a>
                     </li>
                     
                     <li>
-                        <a href="/it/">
-                            Scienza
-                        </a>
+                        <a href="/es/">Español</a>
                     </li>
                     
                     <li>
-                        <a href="/it/contact/">
-                            Contatto
-                        </a>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/">Polski</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">Svenska</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/">Русский</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/">Norsk</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/da/">Dansk</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/">العربية</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/">हिन्दी</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/">Ελληνικά</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hu/">Magyar</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ro/">Română</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/cs/">Čeština</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bg/">Български</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sl/">Slovenščina</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/af/">Afrikaans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/is/">Íslenska</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bn/">বাংলা</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sw/">Kiswahili</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ur/">اردو</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ha/">Hausa</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/yo/">Yorùbá</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/">Korean</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">Chinese</a>
                     </li>
                     
                 </ul>
             </div>
 
             
-            <div class="footer-section">
-                <h3>Download</h3>
+            <div>
+                <h3 class="mb-md">Download</h3>
                 <div class="footer-badges">
-                    <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="app-store-badge" target="_blank" rel="noopener" aria-label="Download on the App Store">
+                    <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="app-store-badge" target="_blank" rel="noopener">
                         <img src="/assets/images/badge-app-store.svg" alt="Download on the App Store" width="120" height="40">
                     </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="app-store-badge" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="app-store-badge" target="_blank" rel="noopener">
                         <img src="/assets/images/badge-google-play.svg" alt="Get it on Google Play" width="120" height="40">
                     </a>
                 </div>
-            </div>
-
-            
-            <div class="footer-section">
-                <h3>Tutti i diritti riservati</h3>
-                <ul>
-                    <li><a href="/it/privacy/">Privacy</a></li>
-                    <li><a href="/it/terms/">Termini</a></li>
-                </ul>
-            </div>
-
-            
-            <div class="footer-section">
-                <h3>Seleziona lingua</h3>
-                <select class="language-selector footer-language-select" aria-label="Seleziona lingua" onchange="if(this.value) window.location.href=this.value;">
-                    
-                    <option value="/af/contact/"
-                            >
-                        Afrikaans
-                    </option>
-                    
-                    <option value="/ar/contact/"
-                            >
-                        العربية
-                    </option>
-                    
-                    <option value="/bg/contact/"
-                            >
-                        Български
-                    </option>
-                    
-                    <option value="/bn/contact/"
-                            >
-                        বাংলা
-                    </option>
-                    
-                    <option value="/ca/contact/"
-                            >
-                        Català
-                    </option>
-                    
-                    <option value="/cs/contact/"
-                            >
-                        Čeština
-                    </option>
-                    
-                    <option value="/da/contact/"
-                            >
-                        Dansk
-                    </option>
-                    
-                    <option value="/de/contact/"
-                            >
-                        Deutsch
-                    </option>
-                    
-                    <option value="/el/contact/"
-                            >
-                        Ελληνικά
-                    </option>
-                    
-                    <option value="/en/contact/"
-                            >
-                        English
-                    </option>
-                    
-                    <option value="/es/contact/"
-                            >
-                        Español
-                    </option>
-                    
-                    <option value="/fr/contact/"
-                            >
-                        Français
-                    </option>
-                    
-                    <option value="/ha/contact/"
-                            >
-                        Hausa
-                    </option>
-                    
-                    <option value="/hi/contact/"
-                            >
-                        हिन्दी
-                    </option>
-                    
-                    <option value="/hu/contact/"
-                            >
-                        Magyar
-                    </option>
-                    
-                    <option value="/is/contact/"
-                            >
-                        Íslenska
-                    </option>
-                    
-                    <option value="/it/contact/"
-                            selected>
-                        Italiano
-                    </option>
-                    
-                    <option value="/ja/contact/"
-                            >
-                        日本語
-                    </option>
-                    
-                    <option value="/ko/contact/"
-                            >
-                        Korean
-                    </option>
-                    
-                    <option value="/nl/contact/"
-                            >
-                        Nederlands
-                    </option>
-                    
-                    <option value="/no/contact/"
-                            >
-                        Norsk
-                    </option>
-                    
-                    <option value="/pl/contact/"
-                            >
-                        Polski
-                    </option>
-                    
-                    <option value="/pt/contact/"
-                            >
-                        Português
-                    </option>
-                    
-                    <option value="/ro/contact/"
-                            >
-                        Română
-                    </option>
-                    
-                    <option value="/ru/contact/"
-                            >
-                        Русский
-                    </option>
-                    
-                    <option value="/sl/contact/"
-                            >
-                        Slovenščina
-                    </option>
-                    
-                    <option value="/sv/contact/"
-                            >
-                        Svenska
-                    </option>
-                    
-                    <option value="/sw/contact/"
-                            >
-                        Kiswahili
-                    </option>
-                    
-                    <option value="/ur/contact/"
-                            >
-                        اردو
-                    </option>
-                    
-                    <option value="/yo/contact/"
-                            >
-                        Yorùbá
-                    </option>
-                    
-                    <option value="/zh/contact/"
-                            >
-                        Chinese
-                    </option>
-                    
-                </select>
             </div>
         </div>
 
         
         <div class="footer-bottom">
-            <p>&copy; 2025 Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Tutti i diritti riservati.</p>
+            <p class="text-sm text-secondary">
+                &copy; 2025 Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Tutti i diritti riservati
+            </p>
+            <ul class="footer-links">
+                <li><a href="/it/privacy/">Privacy</a></li>
+                <li><a href="/it/terms/">Termini</a></li>
+            </ul>
         </div>
     </div>
 </footer>
 
     
-    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Questo sito utilizza cookie per migliorare la tua esperienza." aria-live="polite">
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
     <div class="cookie-banner-content">
-        <div class="cookie-banner-text">
-            <p>Questo sito utilizza cookie per migliorare la tua esperienza. <a href="/it/privacy/">Scopri di più</a></p>
+        <div>
+            <p>Questo sito utilizza cookie per migliorare la tua esperienza.</p>
+            <a href="/it/privacy/" class="text-sm">Scopri di più</a>
         </div>
         <div class="cookie-banner-actions">
-            <button class="btn btn-secondary" id="cookie-decline">Rifiuta</button>
-            <button class="btn btn-primary" id="cookie-accept">Accetta</button>
+            <button id="cookie-decline" class="btn btn-secondary btn-small">Rifiuta</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">Accetta</button>
         </div>
     </div>
 </div>
 
     
-    <script src="/assets/js/main.min.js" defer></script>
-    <script src="/assets/js/cookie-consent.min.js" defer></script>
-    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/core.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
     <script src="/assets/js/carousel.min.js" defer></script>
     <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js" defer></script>
-    <script src="/assets/js/search.min.js" defer></script>
-
     
-    
-    <script src="/assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360"></script>
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
     
 
     
-    <script>
-!function(){"use strict";const e={BANNER_ID:"appDownloadBanner",STORAGE_KEY:"swimanalytics_banner_dismissed",DISMISS_DURATION:30,HIGHLIGHT_CLASS:"app-badge--highlighted",PLATFORM_ATTR:"data-platform",BANNER_HIDDEN_CLASS:"hidden"};function t(){const e=navigator.userAgent||navigator.vendor||window.opera;if(/iPad|iPhone|iPod/.test(e)&&!window.MSStream)return"ios";if(/android/i.test(e))return"android";if(navigator.platform){if(/Mac|iPhone|iPad|iPod/.test(navigator.platform))return"ios";if(/Android/.test(navigator.platform))return"android"}return"other"}function n(){try{const t=localStorage.getItem(e.STORAGE_KEY);if(!t)return!1;const n=new Date(t),a=new Date;return a.setDate(a.getDate()-e.DISMISS_DURATION),n>a}catch(e){return!1}}function a(t){t.style.transition="opacity 0.3s ease, transform 0.3s ease",t.style.opacity="0",t.style.transform="translateY(-20px)",setTimeout(()=>{t.setAttribute("data-dismissed","true"),t.classList.add(e.BANNER_HIDDEN_CLASS),function(){try{localStorage.setItem(e.STORAGE_KEY,(new Date).toISOString())}catch(e){console.warn("Could not save banner dismissal state")}}(),window.dispatchEvent(new CustomEvent("appBannerDismissed",{detail:{timestamp:Date.now()}}))},300)}function i(t,n){"other"!==n&&t.querySelectorAll(".app-badge").forEach(t=>{t.getAttribute(e.PLATFORM_ATTR)===n&&setTimeout(()=>{t.classList.add(e.HIGHLIGHT_CLASS)},500)})}function s(e){const t=e.currentTarget,n=t.getAttribute("data-platform");window.dispatchEvent(new CustomEvent("appBadgeClicked",{detail:{platform:n,href:t.href,timestamp:Date.now()}})),"undefined"!=typeof gtag&&gtag("event","app_download_click",{event_category:"engagement",event_label:n,value:1})}function r(){const r=document.getElementById(e.BANNER_ID);if(!r)return;if(n())return void r.setAttribute("data-dismissed","true");r.classList.remove(e.BANNER_HIDDEN_CLASS);const d=t();i(r,d);const o=r.querySelector('[data-action="dismiss-banner"]');o&&o.addEventListener("click",()=>a(r)),r.querySelectorAll(".app-badge").forEach(e=>{e.addEventListener("click",s)}),document.addEventListener("keydown",e=>{"Escape"===e.key&&"true"!==r.getAttribute("data-dismissed")&&(o&&o.focus(),a(r))}),console.log("[App Banner] Platform detected:",d)}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",r):r()}();
-    </script>
+    <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js')}</script>
 </body>
 </html>
