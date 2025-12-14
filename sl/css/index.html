@@ -819,247 +819,531 @@ img[width][height] {
     
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
-<div class="container">
-<h1>Kritična hitrost plavanja (CSS)</h1>
-<p class="lead">Osnova podatkovno podprtega plavalnega treninga</p>
-</div>
+    <div class="container">
+        <h1>Kritična hitrost plavanja (CSS)</h1>
+        <p class="lead">Temelj plavalnega treninga na podlagi podatkov</p>
+    </div>
 </section>
+
 <section class="section">
-<div class="container container-narrow">
-<div class="callout callout-info mb-xl">
-<h2>Kaj je Critical Swim Speed (CSS)?</h2>
-<p><strong>Kritična hitrost plavanja (CSS)</strong>je največja teoretična plavalna hitrost, ki jo lahko vzdržuješ brez izčrpanosti. Predstavlja tvoj aerobni prag, običajno okoli 4 mmol/l laktata v krvi, in jo je mogoče držati približno 30 minut. CSS se izračuna z merjenjem časov na 400 m in 200 m ter določa tvoje prilagojene trening cone.</p>
-</div>
-<p class="lead">CSS je tvoja teoretična maksimalna hitrost, ki jo lahko držiš neprekinjeno brez izčrpanosti. V vodi je to tvoj aerobni prag—intenzivnost, pri kateri se proizvodnja in odstranjevanje laktata izenačita.</p>
-<div class="callout callout-info">
-<h3>🎯 Fiziološki pomen</h3>
-<p>CSS tesno ustreza:</p>
-<ul>
-<li><strong>Prag laktata 2 (LT2)</strong>– drugi prezračevalni prag</li>
-<li><strong>Maksimalno stabilno stanje laktata (MLSS)</strong>– najvišja vzdržna koncentracija laktata</li>
-<li><strong>Funkcionalni prag (FTP)</strong>– plavalni ekvivalent kolesarskega FTP</li>
-<li><strong>~4 mmol/l laktata v krvi</strong>– klasični kazalnik OBLA</li>
-</ul>
-</div>
-<h3>Zakaj je CSS pomemben</h3>
-<p>CSS<strong>temeljna metrika</strong>, ki omogoča celotno napredno analizo obremenitve:</p>
-<ul>
-<li><strong>Trening stožec:</strong>prilagodi intenzitete tvoji fiziologiji</li>
-<li><strong>Izračun sTSS:</strong>omogoči natančno kvantifikacijo trening stres točk</li>
-<li><strong>CTL/ATL/TSB:</strong>potrebno za grafikon upravljanja uspešnosti</li>
-<li><strong>Sledenje napredku:</strong>objektivno meri izboljšanje aerobne pripravljenosti</li>
-</ul>
-<div class="warning-box">
-<strong>⚠️ Kritična odvisnost:</strong>Brez veljavnega CSS testa napredne metrike obremenitve (sTSS, CTL, ATL, TSB) ne delujejo. Napačen CSS izkrivi celotno analizo treninga.</div>
-</div>
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>Kaj je Kritična hitrost plavanja (CSS)?</h2>
+            <p><strong>Kritična hitrost plavanja (CSS)</strong> je teoretična največja hitrost plavanja, ki jo lahko
+                vzdržujete brez izčrpanosti. Predstavlja vaš tempo aerobnega praga, ki običajno ustreza 4 mmol/L laktata
+                v krvi in je vzdržen približno 30 minut. CSS se izračuna z uporabo časovnih preizkusov na 400 m in 200 m
+                za določanje prilagojenih območij treninga.</p>
+        </div>
+
+        <p class="lead">Kritična hitrost plavanja (CSS) predstavlja teoretično največjo hitrost plavanja, ki jo lahko
+            neprekinjeno vzdržujete brez izčrpanosti. To je vaš aerobni prag v vodi – intenzivnost, pri kateri je
+            proizvodnja laktata enaka odstranjevanju laktata.</p>
+
+        <div class="callout callout-info">
+            <h3>🎯 Fiziološki pomen</h3>
+            <p>CSS se tesno ujema z:</p>
+            <ul>
+                <li><strong>Pragom laktata 2 (LT2)</strong> - Drugi ventilatorni prag</li>
+                <li><strong>Maksimalnim stanjem dinamičnega ravnovesja laktata (MLSS)</strong> - Najvišja vzdržna raven
+                    laktata</li>
+                <li><strong>Funkcionalnim pragom (FTP)</strong> - Plavalni ekvivalent kolesarskega FTP</li>
+                <li><strong>~4 mmol/L laktata v krvi</strong> - Tradicionalni označevalec OBLA</li>
+            </ul>
+        </div>
+
+        <h3>Zakaj je CSS pomemben</h3>
+        <p>CSS je <strong>temeljna metrika</strong>, ki odklene vso napredno analizo obremenitve treninga:</p>
+        <ul>
+            <li><strong>Območja treninga:</strong> Prilagodi intenzivnost vašim fiziološkim sposobnostim</li>
+            <li><strong>Izračun sTSS:</strong> Omogoča natančno kvantifikacijo točk stresa treninga (Training Stress
+                Score)</li>
+            <li><strong>CTL/ATL/TSB:</strong> Potrebno za metrike grafikona upravljanja zmogljivosti (Performance
+                Management Chart)</li>
+            <li><strong>Spremljanje napredka:</strong> Objektivno merilo izboljšanja aerobne kondicije</li>
+        </ul>
+
+        <div class="warning-box">
+            <strong>⚠️ Kritična odvisnost:</strong> Brez veljavnega testa CSS ni mogoče izračunati naprednih metrik
+            obremenitve treninga (sTSS, CTL, ATL, TSB). Netočen CSS bo popačil vso nadaljnjo analizo treninga.
+        </div>
+    </div>
 </section>
+
 <section class="section section-alt">
-<div class="container">
-<h2 class="text-center mb-xl">CSS testa protokol</h2>
-<div class="grid grid-2">
-<div class="protocol-card">
-<h3>📋 Standardni protokol</h3>
-<ol class="protocol-steps">
-<li>
-<strong>Ogrevanje</strong>
-<p>300–800 m lahkega plavanja, tehničnih vaj in pospeševanj za pripravo na maksimalen napor.</p>
-</li>
-<li>
-<strong>400 m meritev</strong>
-<p>Maksimalno vzdržen napor z odrivom od stene (brez skoka). Zabeleži čas v sekundah. Cilj: najhitrejši vzdržni 400 m.</p>
-</li>
-<li>
-<strong>Popolna regeneracija</strong>
-<p><span class="highlight-text">5-10 minut</span>lahkotnega plavanja ali počitka. To je KLJUČNO za natančen rezultat.</p>
-</li>
-<li>
-<strong>200 m meritev</strong>
-<p>Maksimalni vzdržen napor, prav tako z odrivom od stene. Čas mora biti hitrejši od 400 m meritev.</p>
-</li>
-<li>
-<strong>Izračun CSS</strong>
-<p>CSS = (400 m – 200 m) / (čas 400 – čas 200)<br/>Rezultat v metrih/sekundo in tempa/100 m.</p>
-</li>
-</ol>
-</div>
-<div class="protocol-card">
-<h3>✅ Ključni napotki za veljavnost</h3>
-<ul class="checklist">
-<li><strong>Uporabi odriv od stene</strong>– skoki dodajo 0,5–1,5 s</li>
-<li><strong>Polna regeneracija</strong>– 5–10 min z Meritvamo</li>
-<li><strong>Enakomerni deli</strong>– brez prehitrega starta; ciljaj negativni split</li>
-<li><strong>Ponovi, če je treba</strong>– če je 200 m prepočasen ali 400 m prehiter</li>
-</ul>
-</div>
-</div>
-</div>
+    <div class="container">
+        <h2 class="text-center mb-xl">Protokol testa CSS</h2>
+        <div class="grid grid-2">
+            <div class="protocol-card">
+                <h3>📋 Standardni protokol</h3>
+                <ol class="protocol-steps">
+                    <li>
+                        <strong>Ogrevanje</strong>
+                        <p>300-800 m lahkega plavanja, tehničnih vaj in progresivnega pospeševanja za pripravo na
+                            maksimalni napor.</p>
+                    </li>
+                    <li>
+                        <strong>400 m časovni preizkus</strong>
+                        <p>Maksimalni vzdržni napor s startom iz vode (odriv od stene, brez skoka). Zabeležite čas do
+                            sekunde natančno. Cilj: najhitrejši vzdržni čas na 400 m.</p>
+                    </li>
+                    <li>
+                        <strong>Popolna regeneracija</strong>
+                        <p><span class="highlight-text">5-10 minut</span> lahkega plavanja ali popolnega počitka. To je
+                            KLJUČNO za točne rezultate.</p>
+                    </li>
+                    <li>
+                        <strong>200 m časovni preizkus</strong>
+                        <p>Maksimalni napor s startom iz vode (odriv od stene). Čas zabeležite natančno. Ta tempo bi
+                            moral biti hitrejši na 100 m kot pri 400 m.</p>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="protocol-card">
+                <h3>⚠️ Pogoste napake</h3>
+                <div class="mistake-list">
+                    <div class="mistake-item">
+                        <h4>Nezadostna regeneracija</h4>
+                        <p><strong>Težava:</strong> Utrujenost umetno upočasni čas na 200 m</p>
+                        <p><strong>Rezultat:</strong> Izračunan CSS postane <em>hitrejši od realnega</em>, kar vodi v
+                            območja pretreniranosti</p>
+                        <p><strong>Rešitev:</strong> Počivajte, dokler srčni utrip ne pade pod 120 bpm ali dokler se
+                            dihanje popolnoma ne umiri</p>
+                    </div>
+
+                    <div class="mistake-item">
+                        <h4>Slab tempo na 400 m</h4>
+                        <p><strong>Težava:</strong> Prehiter začetek povzroči drastično upočasnitev</p>
+                        <p><strong>Rezultat:</strong> Čas na 400 m ne odraža pravega vzdržnega tempa</p>
+                        <p><strong>Rešitev:</strong> Ciljajte na enakomerne vmesne čase ali negativni split (drugih 200
+                            m ≤ prvih 200 m)</p>
+                    </div>
+
+                    <div class="mistake-item">
+                        <h4>Uporaba skoka na startu</h4>
+                        <p><strong>Težava:</strong> Doda ~0,5-1,5 sekunde prednosti, kar popači izračune</p>
+                        <p><strong>Rešitev:</strong> Vedno uporabite start z odrivom od stene (push start)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>🔄 Pogostost ponovnega testiranja</h3>
+            <p>CSS ponovno testirajte vsakih <strong>6-8 tednov</strong>, da posodobite območja treninga, ko se
+                kondicija izboljšuje. Vaša območja bi morala postajati postopoma hitrejša, ko se prilagajate treningu.
+            </p>
+        </div>
+    </div>
 </section>
+
 <section class="section">
-<div class="container">
-<h2 class="text-center mb-xl">Izračun CSS</h2>
-<div class="grid grid-2">
-<div>
-<h3>Koračni izračun</h3>
-<div class="formula-box">
-<div class="formula">CSS = (D2 - D1) / (T2 - T1)</div>
-<div class="formula-explanation">
-<p>Kjer je:</p>
-<div class="math-variable">D1 = 200 m razdalja</div>
-<div class="math-variable">T1 = čas za 200 m (sekunda)</div>
-<div class="math-variable">D2 = 400 m razdalja</div>
-<div class="math-variable">T2 = čas v 400 m (sekundah)</div>
-</div>
-</div>
-<div class="callout callout-info mt-md">
-<h4>Pretvorbe</h4>
-<ul>
-<li><strong>CSS (m/s) → tempo/100 m:</strong>Tempo = 100 / CSS</li>
-<li><strong>Tempo/100 m → CSS:</strong>CSS = 100 / tempo</li>
-<li><strong>CSS (m/s) → m/min:</strong>CSS × 60</li>
-</ul>
-</div>
-<div class="tip-box mt-md">
-<strong>Za odprto vodo:</strong>Prilagodi tempo za valove, tok in navigacijo. Test CSS opravi v bazenu za doslednost.</div>
-</div>
-<div>
-<h3>Primer izračuna</h3>
-<div class="example-box">
-<h4>Vzorčni časi:</h4>
-<ul>
-<li>400 m: 6:08 (368 s)</li>
-<li>200 m: 2:30 (150 s)</li>
-</ul>
-<h4 class="mt-md">Izračun:</h4>
-<div class="math-steps">
-<div>CSS = (400 - 200) / (368 - 150) = 200 / 218</div>
-<div>CSS =<strong>0,917 m/s</strong></div>
-<div>Tempo = 100 / 0,917 =<strong>1:49/100 m</strong></div>
-</div>
-</div>
-<div class="warning-box mt-md">
-<strong>Najpogostejše napake CSS:</strong>
-<ul>
-<li>Neenakomerni deli 400 m (prehitro začeti → upočasnitev)</li>
-<li>Premalo regeneracije pred 200 m merjenjem</li>
-<li>Časi niso zapisani takoj po testu</li>
-<li>Uporaba skoka namesto odriva od stene</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
+    <div class="container container-narrow">
+        <h2>Formula za izračun CSS</h2>
+
+        <div class="formula-box">
+            <h3>Formula</h3>
+            <div class="formula">
+                CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
+            </div>
+            <div class="formula-explanation">
+                <p>Kjer:</p>
+                <ul>
+                    <li>D₁ = 200 metrov</li>
+                    <li>D₂ = 400 metrov</li>
+                    <li>T₁ = Čas za 200 m (v sekundah)</li>
+                    <li>T₂ = Čas za 400 m (v sekundah)</li>
+                </ul>
+            </div>
+
+            <h3 class="mt-lg">Poenostavljeno za tempo na 100 m</h3>
+            <div class="formula">
+                CSS tempo/100m (sekunde) = (T₄₀₀ - T₂₀₀) / 2
+            </div>
+        </div>
+
+        <h3>Praktični primer</h3>
+        <div class="example-box">
+            <h4>Rezultati testa:</h4>
+            <ul>
+                <li>Čas 400 m: <strong>6:08</strong> (368 sekund)</li>
+                <li>Čas 200 m: <strong>2:30</strong> (150 sekund)</li>
+            </ul>
+
+            <h4>1. korak: Izračun CSS v m/s</h4>
+            <div class="calculation">
+                CSS = (400 - 200) / (368 - 150)<br>
+                CSS = 200 / 218<br>
+                CSS = <strong>0,917 m/s</strong>
+            </div>
+
+            <h4>2. korak: Pretvorba v tempo na 100 m</h4>
+            <div class="calculation">
+                Tempo = 100 / 0,917<br>
+                Tempo = 109 sekund<br>
+                Tempo = <strong>1:49 na 100 m</strong>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">Brezplačen CSS kalkulator</h2>
+        <p class="lead">Takoj izračunajte svojo kritično hitrost plavanja in prilagojena območja treninga</p>
+
+        <div class="css-calculator">
+            <form id="cssCalculatorForm">
+                <div class="calculator-inputs">
+                    <div class="form-group">
+                        <label for="time400" class="form-label">Čas 400 m (mm:ss)</label>
+                        <input type="text" id="time400" class="form-input" placeholder="6:08"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="time400-help" />
+                        <small id="time400-help" class="form-help">Format: minute:sekunde (npr. 6:08)</small>
+                        <div class="form-error" id="time400-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="time200" class="form-label">Čas 200 m (mm:ss)</label>
+                        <input type="text" id="time200" class="form-input" placeholder="2:30"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="time200-help" />
+                        <small id="time200-help" class="form-help">Format: minute:sekunde (npr. 2:30)</small>
+                        <div class="form-error" id="time200-error"></div>
+                    </div>
+                    <div class="calculator-buttons">
+                        <button type="submit" class="btn btn-primary" id="calculateBtn">Izračunaj CSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetBtn">Počisti</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="calculator-results hidden" id="cssResults" aria-live="polite">
+                <h3>Vaši rezultati</h3>
+                <div class="results-summary">
+                    <div class="result-item">
+                        <div class="result-label">Kritična hitrost plavanja</div>
+                        <div class="css-result-value" id="cssValue">--</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">CSS tempo na 100 m</div>
+                        <div class="css-result-value" id="cssPace">--</div>
+                    </div>
+                </div>
+
+                <div class="zones-result">
+                    <h4>Vaša prilagojena območja treninga</h4>
+                    <p class="mb-md text-secondary">
+                        Na podlagi vašega CSS so tukaj vaša območja treninga v tempu na 100 m:
+                    </p>
+                    <div id="zonesTable"></div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-xl">Alternativna metoda (poenostavljena):</h3>
+        <div class="example-box">
+            <div class="calculation">
+                Tempo = (368 - 150) / 2<br>
+                Tempo = 218 / 2<br>
+                Tempo = 109 sekund = <strong>1:49 na 100 m</strong>
+            </div>
+        </div>
+    </div>
 </section>
+
 <section class="section section-alt">
-<div class="container">
-<h2 class="text-center mb-xl">Želene vrednosti</h2>
-<p class="text-center">Kje se skladaš glede na tipično tekmovalno populacijo</p>
-<div class="responsive-table">
-<table>
-<thead>
-<tr>
-<th>Raven</th>
-<th>CSS (m/s)</th>
-<th>Tempo/100 m</th>
-<th>Profil plavalca</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Začetnik</td>
-<td>&lt; 0,70</td>
-<td>2:22+</td>
-<td>Novi v strukturiranem plavanju ali rekreativni plavalci</td>
-</tr>
-<tr>
-<td>Vmesni</td>
-<td>0,70–0,85</td>
-<td>1:57–2:22</td>
-<td>Občasni trening, osnovna tehnika, 2–3x/teden</td>
-</tr>
-<tr>
-<td>Napredno</td>
-<td>0,85–1,00</td>
-<td>1:40–1:57</td>
-<td>Konkurenčni masters ali triatlonci, 3–5x/teden</td>
-</tr>
-<tr>
-<td>Elita</td>
-<td>1,00–1,15</td>
-<td>1:27–1:40</td>
-<td>Visok nivo, 5–7x/teden, dvakratni treningi</td>
-</tr>
-<tr>
-<td>Svetovni razred</td>
-<td>&gt; 1,15</td>
-<td>&lt; 1:27</td>
-<td>Profesionalci/OI finalisti, trening 10–14 sej/teden</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+    <div class="container">
+        <h2 class="mb-xl">Območja treninga na podlagi CSS</h2>
+
+        <div class="callout callout-info">
+            <p><strong>Opomba:</strong> Pri plavanju se hitrost meri kot <em>čas na razdaljo</em>. Zato <strong>višji
+                    odstotek = počasnejši tempo</strong> in <strong>nižji odstotek = hitrejši tempo</strong>. To je
+                obratno kot pri kolesarjenju/teku, kjer je višji % = težji napor.</p>
+        </div>
+
+        <div class="zones-table-container">
+            <table class="zones-table">
+                <thead>
+                    <tr>
+                        <th>Območje</th>
+                        <th>Ime</th>
+                        <th>% CSS tempa</th>
+                        <th>Primer za CSS 1:40/100m</th>
+                        <th>RPE</th>
+                        <th>Fiziološki namen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="zone-1">
+                        <td><strong>1</strong></td>
+                        <td>Regeneracija</td>
+                        <td>&gt;108%</td>
+                        <td>&gt;1:48/100m</td>
+                        <td>2-3/10</td>
+                        <td>Aktivna regeneracija, izboljšanje tehnike, ogrevanje/razplavanje</td>
+                    </tr>
+                    <tr class="zone-2">
+                        <td><strong>2</strong></td>
+                        <td>Aerobna baza</td>
+                        <td>104-108%</td>
+                        <td>1:44-1:48/100m</td>
+                        <td>4-5/10</td>
+                        <td>Gradnja aerobne kapacitete, mitohondrijska gostota, oksidacija maščob</td>
+                    </tr>
+                    <tr class="zone-3">
+                        <td><strong>3</strong></td>
+                        <td>Tempo/Sweet Spot</td>
+                        <td>99-103%</td>
+                        <td>1:39-1:43/100m</td>
+                        <td>6-7/10</td>
+                        <td>Adaptacija na tempo tekme, živčno-mišična učinkovitost</td>
+                    </tr>
+                    <tr class="zone-4">
+                        <td><strong>4</strong></td>
+                        <td>Prag (CSS)</td>
+                        <td>96-100%</td>
+                        <td>1:36-1:40/100m</td>
+                        <td>7-8/10</td>
+                        <td>Izboljšanje laktatnega praga, vzdržna visoka intenzivnost</td>
+                    </tr>
+                    <tr class="zone-5">
+                        <td><strong>5</strong></td>
+                        <td>VO₂max/Anaerobno</td>
+                        <td>&lt;96%</td>
+                        <td>&lt;1:36/100m</td>
+                        <td>9-10/10</td>
+                        <td>Razvoj VO₂max, moč, toleranca na laktat</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-lg">
+            <h3>🎯 Prednosti conskega treninga</h3>
+            <p>Uporaba območij na podlagi CSS spremeni subjektivni trening "po občutku" v objektivne, ponovljive
+                treninge. Vsako območje cilja na specifične fiziološke adaptacije:</p>
+            <ul>
+                <li><strong>Območje 2:</strong> Gradnja aerobnega motorja (60-70% tedenskega volumna)</li>
+                <li><strong>Območje 3:</strong> Izboljšanje učinkovitosti pri tempu tekme (15-20% volumna)</li>
+                <li><strong>Območje 4:</strong> Dvig laktatnega praga (10-15% volumna)</li>
+                <li><strong>Območje 5:</strong> Razvoj maksimalne hitrosti in moči (5-10% volumna)</li>
+            </ul>
+        </div>
+    </div>
 </section>
+
 <section class="section">
-<div class="container container-narrow">
-<h2 class="text-center mb-xl">Napredek in ponovni testi CSS</h2>
-<div class="grid grid-2">
-<div class="card">
-<h3 class="card-title">Priporočena frekvenca</h3>
-<div class="card-content">
-<ul>
-<li><strong>Osnova/konstrukcija:</strong>vsakih 6–8 tednov</li>
-<li><strong>Po bolezni/počitku:</strong>po vrnitvi v poln trening</li>
-<li><strong>Ko se zone zdijo prelahke/težke:</strong>znak, da je CSS zastarel</li>
-</ul>
-</div>
-</div>
-<div class="card">
-<h3 class="card-title">Pričakovani napredek</h3>
-<div class="card-content">
-<ul>
-<li><strong>Začetnik:</strong>2–5% izboljšanje na 8 tednov</li>
-<li><strong>Vmesni:</strong>1–3% na 8 tednov</li>
-<li><strong>Napredno:</strong>0,5–2% na 8 tednov</li>
-<li><strong>Elite:</strong>0–1% (bolj odvisno od taperja)</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
+    <div class="container container-narrow">
+        <h2>Tipične vrednosti CSS po ravneh</h2>
+
+        <div class="levels-comparison">
+            <div class="level-card">
+                <h3>🥇 Elitni plavalci na razdalje</h3>
+                <div class="pace-value">1,5-1,8 m/s</div>
+                <div class="pace-equivalent">0:56-1:07 na 100 m</div>
+                <p>Predstavlja 80-85% maksimalne hitrosti na 100 m. Športniki na nacionalni/mednarodni ravni z leti
+                    strukturiranega treninga.</p>
+            </div>
+
+            <div class="level-card">
+                <h3>🏊 Tekmovalne starostne skupine</h3>
+                <div class="pace-value">1,2-1,5 m/s</div>
+                <div class="pace-equivalent">1:07-1:23 na 100 m</div>
+                <p>Srednješolski, univerzitetni plavalci, tekmovalni veterani. Reden strukturiran trening 5-6 dni/teden.
+                </p>
+            </div>
+
+            <div class="level-card">
+                <h3>🏃 Triatlonci in fitnes plavalci</h3>
+                <div class="pace-value">0,9-1,2 m/s</div>
+                <div class="pace-equivalent">1:23-1:51 na 100 m</div>
+                <p>Reden trening 3-4 dni/teden. Solidna tehnika. 2000-4000 m na trening.</p>
+            </div>
+
+            <div class="level-card">
+                <h3>🌊 Razvojni plavalci</h3>
+                <div class="pace-value">&lt;0,9 m/s</div>
+                <div class="pace-equivalent">&gt;1:51 na 100 m</div>
+                <p>Gradnja aerobne baze in tehnike. Manj kot 1-2 leti doslednega treninga.</p>
+            </div>
+        </div>
+    </div>
 </section>
+
 <section class="section section-alt">
-<div class="container">
-<h2 class="text-center mb-xl">Pogosta vprašanja o CSS</h2>
-<div class="faq-list">
-<div class="faq-item">
-<h3>Zakaj moram dokončati CSS test?</h3>
-<p>CSS je temelj vseh naprednih metrik v Swim Analytics. Brez njega ni natančnega sTSS, CTL/ATL/TSB ali zona časa. Ustrezen test omogoča natančno določanje intenzitet.</p>
-</div>
-<div class="faq-item">
-<h3>Moji 200 m in 400 m časi so preblizu – kaj to pomeni?</h3>
-<p>Ponavadi pomeni slab tempo 400 m (prepočasen start) ali premalo počitka pred 200 m. Ponovi test s polnim 5–10-minutnim počitkom in enakomernimi deli.</p>
-</div>
-<div class="faq-item">
-<h3>Lahko uporabim prejšnje tekmovalne čase namesto testa?</h3>
-<p>Tekmovalni časi so pogosto hitrejši zaradi startov/skokov in tekmovalnega adrenalina. Za natančen trening raje uporabi meritve iz bazena z odrivom od stene.</p>
-</div>
-<div class="faq-item">
-<h3>Ali potrebujem ločene CSS vrednosti za različne tehnike?</h3>
-<p>CSS se običajno testira v kravlu. Za natančno obremenitev pri drugih slogih lahko izvedeš ločene teste, sicer uporabi freestyle CSS kot osnovo.</p>
-</div>
-</div>
-</div>
+    <div class="container container-narrow">
+        <h2>Znanstvena validacija</h2>
+
+        <div class="research-highlight">
+            <h3>Wakayoshi et al. (1992-1993) - Temeljne raziskave</h3>
+            <p>Prelomne študije Kohjija Wakayoshija na Univerzi v Osaki so uveljavile CSS kot veljavno in praktično
+                alternativo laboratorijskemu testiranju laktata:</p>
+
+            <ul class="research-findings">
+                <li><strong>Močna korelacija z VO₂ na anaerobnem pragu</strong> (r = 0,818)</li>
+                <li><strong>Odlična korelacija s hitrostjo pri OBLA</strong> (r = 0,949)</li>
+                <li><strong>Napoveduje zmogljivost na 400 m</strong> (r = 0,864)</li>
+                <li><strong>Ustreza 4 mmol/L laktata v krvi</strong> - maksimalno stanje dinamičnega ravnovesja laktata
+                </li>
+                <li><strong>Linearna povezava med razdaljo in časom</strong> (r² &gt; 0,998)</li>
+            </ul>
+
+            <div class="citation">
+                <p><strong>Ključni članki:</strong></p>
+                <ol>
+                    <li>Wakayoshi K, et al. (1992). "Determination and validity of critical velocity as an index of
+                        swimming performance in the competitive swimmer." <em>European Journal of Applied
+                            Physiology</em>, 64(2), 153-157.</li>
+                    <li>Wakayoshi K, et al. (1992). "A simple method for determining critical speed as swimming fatigue
+                        threshold in competitive swimming." <em>International Journal of Sports Medicine</em>, 13(5),
+                        367-371.</li>
+                    <li>Wakayoshi K, et al. (1993). "Does critical swimming velocity represent exercise intensity at
+                        maximal lactate steady state?" <em>European Journal of Applied Physiology</em>, 66(1), 90-95.
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="callout callout-science">
+            <h3>🔬 Zakaj CSS deluje</h3>
+            <p>CSS predstavlja mejo med <strong>težkim in zelo težkim območjem vadbe</strong>. Pod CSS ostaneta
+                proizvodnja in odstranjevanje laktata uravnotežena – plavate lahko dlje časa. Nad CSS se laktat
+                postopoma kopiči do izčrpanosti v 20-40 minutah.</p>
+            <p>Zaradi tega je CSS idealna intenzivnost za:</p>
+            <ul>
+                <li>Določanje vzdržnih tempov za 800 m - 1500 m</li>
+                <li>Predpisovanje intervalnega treninga na pragu</li>
+                <li>Spremljanje izboljšav aerobne kondicije</li>
+                <li>Izračun obremenitve treninga in potreb po regeneraciji</li>
+            </ul>
+        </div>
+    </div>
 </section>
+
 <section class="section">
-<div class="container container-narrow text-center">
-<h2>Pripravljeno za izračun CSS?</h2>
-<p class="lead mb-md">Uporabi naš brezplačni kalkulator CSS za izračun praga in con.</p>
-<div class="flex gap-md justify-center" style="flex-wrap: wrap;">
-<a class="btn btn-primary btn-large" href="/sl/stss-calculator/">Odpri sTSS kalkulator</a>
-<a class="btn btn-secondary btn-large" href="https://apps.apple.com/app/swimanalytics/id6753306284" rel="noopener" target="_blank">Prenesi Swim Analytics</a>
-</div>
-</div>
+    <div class="container container-narrow">
+        <h2>Praktična uporaba</h2>
+
+        <div class="application-grid">
+            <div class="application-item">
+                <h3>1️⃣ Odklenite metrike obremenitve treninga</h3>
+                <p>CSS je imenovalec pri izračunu faktorja intenzivnosti (Intensity Factor) za sTSS. Brez njega ne
+                    morete kvantificirati stresa treninga ali spremljati trendov forme/utrujenosti.</p>
+            </div>
+
+            <div class="application-item">
+                <h3>2️⃣ Prilagodite območja treninga</h3>
+                <p>Splošne tabele tempa ne upoštevajo individualne fiziologije. Območja na podlagi CSS zagotavljajo, da
+                    vsak plavalec trenira pri svoji optimalni intenzivnosti.</p>
+            </div>
+
+            <div class="application-item">
+                <h3>3️⃣ Spremljajte napredek kondicije</h3>
+                <p>Ponovno testirajte vsakih 6-8 tednov. Izboljšan CSS (hitrejši tempo) kaže na uspešno aerobno
+                    adaptacijo. Stagnirajoč CSS nakazuje, da je treba trening prilagoditi.</p>
+            </div>
+
+            <div class="application-item">
+                <h3>4️⃣ Napovejte tekmovalni rezultat</h3>
+                <p>Tempo CSS se približuje vašemu vzdržnemu tempu na 30 minut. Uporabite ga za postavljanje realnih
+                    ciljev za dogodke na 800 m, 1500 m in daljinsko plavanje.</p>
+            </div>
+
+            <div class="application-item">
+                <h3>5️⃣ Oblikujte treninge na pragu</h3>
+                <p>Klasični CSS seti: 8×100 @ CSS tempo (15s pavza), 5×200 @ 101% CSS (20s pavza), 3×400 @ 103% CSS (30s
+                    pavza). Gradnja sposobnosti odstranjevanja laktata.</p>
+            </div>
+
+            <div class="application-item">
+                <h3>6️⃣ Optimizirajte strategijo taperja</h3>
+                <p>Spremljajte CSS pred in po taperju. Uspešen taper ohrani ali rahlo izboljša CSS, medtem ko zmanjša
+                    utrujenost (povečan TSB).</p>
+            </div>
+        </div>
+
+        <div class="callout mt-2xl">
+            <h3>Uporabite svoje znanje o CSS</h3>
+            <p>Zdaj, ko razumete kritično hitrost plavanja, naredite naslednje korake za optimizacijo treninga:</p>
+            <ul>
+                <li><a href="/sl/training-load/">Izračunajte točke stresa treninga (TSS)</a> na podlagi vašega CSS za
+                    merjenje intenzivnosti</li>
+                <li><a href="/sl/training-zones/">Raziščite 7 območij treninga</a> in se naučite strukturirati treninge
+                    za specifične adaptacije</li>
+                <li><a href="/sl/formulas/">Oglejte si vse formule</a>, ki se uporabljajo v Swim Analytics za popolno
+                    transparentnost</li>
+                <li><a href="/sl/">Prenesite Swim Analytics</a> za samodejno spremljanje CSS, TSS in trendov
+                    zmogljivosti</li>
+            </ul>
+        </div>
+
+        <div class="mt-xl text-center">
+            <a href="/sl/training-load/" class="btn btn-primary">Spoznajte izračun sTSS →</a>
+            <a href="/sl/formulas/" class="btn btn-secondary">Oglejte si vse formule →</a>
+        </div>
+    </div>
+    <h2 class="mt-3xl">Kako testirati svoj CSS</h2>
+
+    <div class="howto-section" itemscope itemtype="https://schema.org/HowTo">
+        <meta itemprop="name" content="Kako testirati svoj CSS">
+        <meta itemprop="description"
+            content="Sledite temu protokolu po korakih za natančno merjenje vaše kritične hitrosti plavanja (CSS)">
+
+        <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+            <meta itemprop="position" content="1">
+            <h3 itemprop="name">1. korak: Pravilno ogrevanje</h3>
+            <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
+                <div itemprop="text">
+                    <p>Odplavajte 300-800 metrov, vključno s tehničnimi vajami in progresivnim pospeševanjem. To
+                        pripravi telo na maksimalen napor in prepreči poškodbe.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+            <meta itemprop="position" content="2">
+            <h3 itemprop="name">2. korak: Izvedite 400 m časovni preizkus</h3>
+            <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
+                <div itemprop="text">
+                    <p>Odplavajte 400 metrov z maksimalnim vzdržnim naporom s startom iz vode (brez skoka). Zabeležite
+                        čas do sekunde natančno. Ciljajte na enakomeren tempo ali negativni split.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+            <meta itemprop="position" content="3">
+            <h3 itemprop="name">3. korak: Popolna regeneracija</h3>
+            <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
+                <div itemprop="text">
+                    <p>Počivajte 5-10 minut z lahkim plavanjem ali popolnim mirovanjem. To je KLJUČNO. Pred
+                        nadaljevanjem počakajte, da srčni utrip pade pod 120 bpm in se dihanje popolnoma umiri.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+            <meta itemprop="position" content="4">
+            <h3 itemprop="name">4. korak: Izvedite 200 m časovni preizkus</h3>
+            <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
+                <div itemprop="text">
+                    <p>Odplavajte 200 metrov z maksimalnim naporom s startom iz vode. Čas zabeležite natančno. Ta tempo
+                        mora biti hitrejši na 100 m kot vaš tempo na 400 m.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+            <meta itemprop="position" content="5">
+            <h3 itemprop="name">5. korak: Izračunajte svoj CSS</h3>
+            <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
+                <div itemprop="text">
+                    <p>Uporabite formulo: CSS tempo/100m = (T400 - T200) / 2. Primer: (368s - 150s) / 2 = 109s =
+                        1:49/100m. Ali uporabite kalkulator na tej strani za takojšnje rezultate s prilagojenimi območji
+                        treninga.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
+
+<script src="/assets/js/css-calculator.min.js"></script>
     </main>
 
     

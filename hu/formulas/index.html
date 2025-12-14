@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hu" dir="ltr">
 <head>
@@ -488,7 +487,7 @@ img[width][height] {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Formeln",
+          "name": "Képletek",
           "item": "https://swim.analyticszone.app/hu/formulas/"
         }
       ]
@@ -501,7 +500,7 @@ img[width][height] {
 </head>
 <body>
     
-    <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+    <a href="#main-content" class="skip-link">Ugrás a tartalomra</a>
 
     
     <header class="site-header">
@@ -524,7 +523,7 @@ img[width][height] {
                         
                         <a href="/hu/" 
                             aria-current="">
-                            Startseite
+                            Kezdőlap
                         </a>
                         
                     </li>
@@ -532,14 +531,14 @@ img[width][height] {
                     <li class="has-submenu">
                         
                         
-                        <span class="nav-label">Lernen</span>
+                        <span class="nav-label">Tanulás</span>
                         
                         <ul class="submenu">
                             
                             <li>
                                 <a href="/hu/getting-started/" 
                                     aria-current="">
-                                    Erste Schritte
+                                    Kezdő lépések
                                 </a>
                             </li>
                             
@@ -553,21 +552,21 @@ img[width][height] {
                             <li>
                                 <a href="/hu/training-zones/" 
                                     aria-current="">
-                                    Trainingszonen
+                                    Edzési zónák
                                 </a>
                             </li>
                             
                             <li>
                                 <a href="/hu/training-load/" 
                                     aria-current="">
-                                    Trainingsbelastung
+                                    Edzési terhelés
                                 </a>
                             </li>
                             
                             <li>
                                 <a href="/hu/stss-calculator/" 
                                     aria-current="">
-                                    sTSS Rechner
+                                    sTSS kalkulátor
                                 </a>
                             </li>
                             
@@ -578,42 +577,42 @@ img[width][height] {
                     <li class="has-submenu">
                         
                         
-                        <span class="nav-label">Wissenschaft</span>
+                        <span class="nav-label">Tudomány</span>
                         
                         <ul class="submenu">
                             
                             <li>
                                 <a href="/hu/research/" 
                                     aria-current="">
-                                    Forschung
+                                    Kutatás
                                 </a>
                             </li>
                             
                             <li>
                                 <a href="/hu/formulas/" class="active"
                                     aria-current="page">
-                                    Formeln
+                                    Képletek
                                 </a>
                             </li>
                             
                             <li>
                                 <a href="/hu/efficiency/" 
                                     aria-current="">
-                                    Effizienz
+                                    Hatékonyság
                                 </a>
                             </li>
                             
                             <li>
                                 <a href="/hu/stroke-mechanics/" 
                                     aria-current="">
-                                    Technik
+                                    Technika
                                 </a>
                             </li>
                             
                             <li>
                                 <a href="/hu/bibliography/" 
                                     aria-current="">
-                                    Bibliographie
+                                    Bibliográfia
                                 </a>
                             </li>
                             
@@ -625,7 +624,7 @@ img[width][height] {
                         
                         <a href="/hu/contact/" 
                             aria-current="">
-                            Kontakt
+                            Kapcsolat
                         </a>
                         
                     </li>
@@ -646,7 +645,7 @@ img[width][height] {
                 </div>
 
                 
-                <select class="language-selector" id="language-select" aria-label="Sprache auswählen">
+                <select class="language-selector" id="language-select" aria-label="Nyelv kiválasztása">
                     
                     <option value="af" >
                         Afrikaans
@@ -807,7 +806,7 @@ img[width][height] {
             </nav>
 
             
-            <button class="menu-toggle" id="menu-toggle" aria-label="Menü umschalten"
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menü váltása"
                 aria-expanded="false" aria-controls="nav-primary">
                 <span></span>
                 <span></span>
@@ -819,7 +818,816 @@ img[width][height] {
 
     
     <main id="main-content" class="main-content">
-        
+        <section class="hero hero-small">
+  <div class="container">
+    <h1>Műszaki Referencia & Képletek</h1>
+    <p class="lead">Teljes Matematikai Megvalósítás</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container-narrow">
+    <h2>Megvalósítási Útmutató</h2>
+    <p class="lead">Ez az oldal másolható képleteket és lépésről lépésre történő számítási módszereket tartalmaz az
+      összes Swim Analytics mérőszámhoz. Használja ezeket egyedi megvalósításokhoz, ellenőrzéshez vagy mélyebb
+      megértéshez.</p>
+
+    <div class="callout callout-warning">
+      <h3>⚠️ Megvalósítási Megjegyzések</h3>
+      <ul>
+        <li>Minden időt másodpercre kell konvertálni a számításokhoz</li>
+        <li>Az úszási tempó fordított (magasabb % = lassabb tempó)</li>
+        <li>Mindig érvényesítse a bemeneteket ésszerű tartományokra</li>
+        <li>Kezelje a szélső eseteket (nullával való osztás, negatív értékek)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>Alapvető Teljesítmény Mérőszámok</h2>
+
+    <div class="formula-card">
+      <h3>Kritikus Úszósebesség (CSS)</h3>
+      <div class="formula-content">
+        <h4>Képlet:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
+          </div>
+          <div class="formula">
+            CSS Tempó/100m (másodperc) = (T₄₀₀ - T₂₀₀) / 2
+          </div>
+        </div>
+
+        <div class="callout callout-info mt-lg">
+          <h4>🧪 Interaktív Számológép - Tesztelje a Képletet</h4>
+          <div class="calculator-grid">
+            <div class="input-group">
+              <label for="css-d1">Távolság 1 (méter):</label>
+              <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
+            </div>
+            <div class="input-group">
+              <label for="css-t1">Idő 1 (pp:mp):</label>
+              <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
+            </div>
+            <div class="input-group">
+              <label for="css-d2">Távolság 2 (méter):</label>
+              <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
+            </div>
+            <div class="input-group">
+              <label for="css-t2">Idő 2 (pp:mp):</label>
+              <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
+            </div>
+          </div>
+          <div class="calculator-result mt-md">
+            <div class="result-label">CSS Tempó / 100m:</div>
+            <div class="result-value" id="css-result">1:49</div>
+          </div>
+          <div class="calculation-breakdown mt-md">
+            <small>
+              <strong>Számítási lépések:</strong><br>
+              <span id="css-steps">
+                CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
+                Tempó/100m = 100 / 0.917 = 109 másodperc = 1:49
+              </span>
+            </small>
+          </div>
+        </div>
+
+        <h4 class="mt-xl">JavaScript Megvalósítás:</h4>
+        <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
+  // Idők másodpercre konvertálása, ha szükséges
+  const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
+  const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
+
+  // CSS kiszámítása m/s-ban
+  const css_ms = (distance2 - distance1) / (t2 - t1);
+
+  // Tempó kiszámítása 100 méterre, másodpercben
+  const pace_per_100m = 100 / css_ms;
+
+  // Konvertálás pp:mp formátumra
+  const minutes = Math.floor(pace_per_100m / 60);
+  const seconds = Math.round(pace_per_100m % 60);
+
+  return {
+    css_ms: css_ms,
+    pace_seconds: pace_per_100m,
+    pace_formatted: `${minutes}:${seconds.toString().padStart(2, '0')}`
+  };
+}
+
+// Példa használat:
+const result = calculateCSS(200, 150, 400, 368);
+// Visszatérési érték: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
+
+        <script>
+          function timeToSecondsCSS(timeString) {
+            const parts = timeString.split(':');
+            return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+          }
+
+          function secondsToTimeCSS(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.round(seconds % 60);
+            return `${minutes}:${secs.toString().padStart(2, '0')}`;
+          }
+
+          function updateCSSCalculator() {
+            try {
+              const d1 = parseFloat(document.getElementById('css-d1').value);
+              const t1Input = document.getElementById('css-t1').value;
+              const d2 = parseFloat(document.getElementById('css-d2').value);
+              const t2Input = document.getElementById('css-t2').value;
+
+              if (!d1 || !t1Input || !d2 || !t2Input) return;
+
+              const t1 = timeToSecondsCSS(t1Input);
+              const t2 = timeToSecondsCSS(t2Input);
+
+              const css_ms = (d2 - d1) / (t2 - t1);
+              const pace_per_100m = 100 / css_ms;
+              const pace_formatted = secondsToTimeCSS(pace_per_100m);
+
+              document.getElementById('css-result').textContent = pace_formatted;
+              document.getElementById('css-steps').innerHTML =
+                `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
+                `Tempó/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} másodperc = ${pace_formatted}`;
+            } catch (e) {
+              console.error('CSS calculation error:', e);
+            }
+          }
+
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('css-d1').addEventListener('input', updateCSSCalculator);
+            document.getElementById('css-t1').addEventListener('input', updateCSSCalculator);
+            document.getElementById('css-d2').addEventListener('input', updateCSSCalculator);
+            document.getElementById('css-t2').addEventListener('input', updateCSSCalculator);
+            updateCSSCalculator();
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Úszás Edzési Stressz Pontszám (sTSS)</h3>
+      <div class="formula-content">
+        <h4>Teljes Képlet:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            sTSS = (IF³) × Időtartam (óra) × 100
+          </div>
+          <div class="formula">
+            IF = NSS / FTP
+          </div>
+          <div class="formula">
+            NSS = Teljes Táv / Teljes Idő (m/perc)
+          </div>
+        </div>
+
+        <div class="callout callout-info mt-lg">
+          <h4>🧪 Interaktív Számológép - Tesztelje a Képletet</h4>
+          <div class="calculator-grid">
+            <div class="input-group">
+              <label for="stss-distance">Távolság (méter):</label>
+              <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
+            </div>
+            <div class="input-group">
+              <label for="stss-duration">Időtartam (perc):</label>
+              <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
+            </div>
+            <div class="input-group">
+              <label for="stss-css">CSS Tempó (pp:mp / 100m):</label>
+              <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
+            </div>
+            <div class="input-group">
+              <label>FTP (számított):</label>
+              <input type="text" id="stss-ftp" readonly value="64.5 m/min">
+            </div>
+          </div>
+          <div class="calculator-result mt-md">
+            <div class="result-label">Számított sTSS:</div>
+            <div class="result-value" id="stss-result">55</div>
+          </div>
+          <div class="calculation-breakdown mt-md">
+            <small>
+              <strong>Számítási lépések:</strong><br>
+              <span id="stss-steps">
+                NSS = 3000m / 55perc = 54.5 m/perc<br>
+                FTP = 100 / (93/60) = 64.5 m/perc<br>
+                IF = 54.5 / 64.5 = 0.845<br>
+                sTSS = 0.845³ × (55/60) × 100 = 55
+              </span>
+            </small>
+          </div>
+        </div>
+
+        <h4 class="mt-xl">JavaScript Megvalósítás:</h4>
+        <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+  // Normalizált Úszósebesség (NSS) kiszámítása
+  const nss = distance / timeMinutes;
+
+  // Intenzitási Faktor (IF) kiszámítása
+  const intensityFactor = nss / ftpMetersPerMin;
+
+  // Órák kiszámítása
+  const hours = timeMinutes / 60;
+
+  // sTSS kiszámítása köbös intenzitási faktorral
+  const stss = Math.pow(intensityFactor, 3) * hours * 100;
+
+  return Math.round(stss);
+}
+
+// Példa használat:
+const stss = calculateSTSS(3000, 55, 64.5);
+// Visszatérési érték: 55
+
+// Segéd: CSS konvertálása FTP-re
+function cssToFTP(cssPacePer100mSeconds) {
+  // FTP m/perc-ben = 100m / (tempó percekben)
+  return 100 / (cssPacePer100mSeconds / 60);
+}
+
+// Példa: 1:33 (93 másodperc) CSS
+const ftp = cssToFTP(93); // Visszatérési érték: 64.5 m/perc</code></pre>
+
+        <script>
+          // Idő konverzió segéd
+          function timeToSeconds(timeString) {
+            const parts = timeString.split(':');
+            return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+          }
+
+          // CSS FTP konverzió
+          function cssToFTP(cssPacePer100mSeconds) {
+            return 100 / (cssPacePer100mSeconds / 60);
+          }
+
+          // sTSS számítás
+          function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+            const nss = distance / timeMinutes;
+            const intensityFactor = nss / ftpMetersPerMin;
+            const hours = timeMinutes / 60;
+            const stss = Math.pow(intensityFactor, 3) * hours * 100;
+            return Math.round(stss);
+          }
+
+          // Számológép frissítése
+          function updateSTSSCalculator() {
+            try {
+              const distance = parseFloat(document.getElementById('stss-distance').value);
+              const duration = parseFloat(document.getElementById('stss-duration').value);
+              const cssInput = document.getElementById('stss-css').value;
+
+              // Bemenetek érvényesítése
+              if (!distance || !duration || !cssInput) return;
+
+              // CSS konvertálása másodpercre
+              const cssPaceSeconds = timeToSeconds(cssInput);
+
+              // FTP kiszámítása
+              const ftp = cssToFTP(cssPaceSeconds);
+
+              // NSS kiszámítása
+              const nss = distance / duration;
+
+              // Intenzitási Faktor kiszámítása
+              const intensityFactor = nss / ftp;
+
+              // sTSS kiszámítása
+              const stss = calculateSTSS(distance, duration, ftp);
+
+              // Megjelenítés frissítése
+              document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/perc';
+              document.getElementById('stss-result').textContent = stss;
+
+              // Számítási lépések frissítése
+              const hours = duration / 60;
+              document.getElementById('stss-steps').innerHTML =
+                `NSS = ${distance}m / ${duration}perc = ${nss.toFixed(1)} m/perc<br>` +
+                `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/perc<br>` +
+                `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
+                `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
+            } catch (e) {
+              console.error('Calculation error:', e);
+            }
+          }
+
+          // Eseményfigyelők hozzáadása az oldal betöltésekor
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('stss-distance').addEventListener('input', updateSTSSCalculator);
+            document.getElementById('stss-duration').addEventListener('input', updateSTSSCalculator);
+            document.getElementById('stss-css').addEventListener('input', updateSTSSCalculator);
+
+            // Kezdeti számítás
+            updateSTSSCalculator();
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>SWOLF</h3>
+      <div class="formula-content">
+        <h4>Képlet:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            SWOLF = Omgangstid (másodperc) + Csapásszám
+          </div>
+          <div class="formula">
+            SWOLF₂₅ = (Idő × 25/Medencehossz) + (Csapás × 25/Medencehossz)
+          </div>
+        </div>
+
+        <div class="callout callout-info mt-lg">
+          <h4>🧪 Interaktív Számológép - Tesztelje a Képletet</h4>
+          <div class="calculator-grid">
+            <div class="input-group">
+              <label for="swolf-time">Köridő (másodperc):</label>
+              <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
+            </div>
+            <div class="input-group">
+              <label for="swolf-strokes">Csapásszám:</label>
+              <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
+            </div>
+            <div class="input-group">
+              <label for="swolf-pool">Medencehossz (m):</label>
+              <select id="swolf-pool">
+                <option value="25" selected>25m</option>
+                <option value="50">50m</option>
+              </select>
+            </div>
+          </div>
+          <div class="calculator-result mt-md">
+            <div class="result-label">SWOLF Pontszám:</div>
+            <div class="result-value" id="swolf-result">35</div>
+          </div>
+          <div class="calculation-breakdown mt-md">
+            <small>
+              <strong>Számítás:</strong><br>
+              <span id="swolf-steps">
+                SWOLF = 20s + 15 csapás = 35
+              </span>
+            </small>
+          </div>
+        </div>
+
+        <h4 class="mt-xl">JavaScript Megvalósítás:</h4>
+        <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
+  return timeSeconds + strokeCount;
+}
+
+function calculateNormalizedSWOLF(timeSeconds, strokeCount, poolLength) {
+  const normalizedTime = timeSeconds * (25 / poolLength);
+  const normalizedStrokes = strokeCount * (25 / poolLength);
+  return normalizedTime + normalizedStrokes;
+}
+
+// Példa:
+const swolf = calculateSWOLF(20, 15);
+// Visszatérési érték: 35
+
+const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
+// Visszatérési érték: 35 (25m-re normalizálva)</code></pre>
+
+        <script>
+          function updateSWOLFCalculator() {
+            try {
+              const time = parseFloat(document.getElementById('swolf-time').value);
+              const strokes = parseFloat(document.getElementById('swolf-strokes').value);
+              const poolLength = parseFloat(document.getElementById('swolf-pool').value);
+
+              if (!time || !strokes) return;
+
+              let swolf, steps;
+              if (poolLength === 25) {
+                swolf = time + strokes;
+                steps = `SWOLF = ${time}s + ${strokes} csapás = ${swolf}`;
+              } else {
+                const normalizedTime = time * (25 / poolLength);
+                const normalizedStrokes = strokes * (25 / poolLength);
+                swolf = normalizedTime + normalizedStrokes;
+                steps = `Normalizált Idő = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
+                  `Normalizált Csapás = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
+                  `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
+              }
+
+              document.getElementById('swolf-result').textContent = swolf.toFixed(1);
+              document.getElementById('swolf-steps').innerHTML = steps;
+            } catch (e) {
+              console.error('SWOLF calculation error:', e);
+            }
+          }
+
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('swolf-time').addEventListener('input', updateSWOLFCalculator);
+            document.getElementById('swolf-strokes').addEventListener('input', updateSWOLFCalculator);
+            document.getElementById('swolf-pool').addEventListener('change', updateSWOLFCalculator);
+            updateSWOLFCalculator();
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Úszómechanika</h2>
+
+    <div class="formula-card">
+      <h3>Csapásfrekvencia (SR)</h3>
+      <div class="formula-content">
+        <h4>Képlet:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            SR = 60 / Ciklusidő (másodperc)
+          </div>
+          <div class="formula">
+            SR = (Csapásszám / Idő másodpercben) × 60
+          </div>
+        </div>
+
+        <div class="callout callout-info mt-lg">
+          <h4>🧪 Interaktív Számológép - Tesztelje a Képletet</h4>
+          <div class="calculator-grid">
+            <div class="input-group">
+              <label for="sr-strokes">Csapásszám:</label>
+              <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
+            </div>
+            <div class="input-group">
+              <label for="sr-time">Idő (másodperc):</label>
+              <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
+            </div>
+          </div>
+          <div class="calculator-result mt-md">
+            <div class="result-label">Csapásfrekvencia (SPM):</div>
+            <div class="result-value" id="sr-result">72</div>
+          </div>
+          <div class="calculation-breakdown mt-md">
+            <small>
+              <strong>Számítás:</strong><br>
+              <span id="sr-steps">
+                SR = (30 / 25) × 60 = 72 SPM
+              </span>
+            </small>
+          </div>
+        </div>
+
+        <h4 class="mt-xl">JavaScript Megvalósítás:</h4>
+        <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
+  return (strokeCount / timeSeconds) * 60;
+}
+
+// Példa:
+const sr = calculateStrokeRate(30, 25);
+// Visszatérési érték: 72 SPM</code></pre>
+
+        <script>
+          function updateSRCalculator() {
+            try {
+              const strokes = parseFloat(document.getElementById('sr-strokes').value);
+              const time = parseFloat(document.getElementById('sr-time').value);
+
+              if (!strokes || !time) return;
+
+              const sr = (strokes / time) * 60;
+
+              document.getElementById('sr-result').textContent = sr.toFixed(1);
+              document.getElementById('sr-steps').innerHTML =
+                `SR = (${strokes} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
+            } catch (e) {
+              console.error('SR calculation error:', e);
+            }
+          }
+
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('sr-strokes').addEventListener('input', updateSRCalculator);
+            document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
+            updateSRCalculator();
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Távolság Csapásonként (DPS)</h3>
+      <div class="formula-content">
+        <h4>Képlet:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            DPS = Távolság / Csapásszám
+          </div>
+          <div class="formula">
+            DPS = Távolság / (SR / 60)
+          </div>
+        </div>
+
+        <h4>JavaScript Megvalósítás:</h4>
+        <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
+  const effectiveDistance = distance - pushoffDistance;
+  return effectiveDistance / strokeCount;
+}
+
+// Példa (25m medence, 5m elrugaszkodás):
+const dps = calculateDPS(25, 12, 5);
+// Visszatérési érték: 1.67 m/csapás
+
+// Több kör esetén:
+const dps100m = calculateDPS(100, 48, 4 * 5);
+// Visszatérési érték: 1.67 m/csapás (4 kör × 5m elrugaszkodás)</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Sebesség SR és DPS alapján</h3>
+      <div class="formula-content">
+        <h4>Képlet:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            Sebesség (m/s) = (SR / 60) × DPS
+          </div>
+        </div>
+
+        <h4>JavaScript Megvalósítás:</h4>
+        <pre><code>function calculateVelocity(strokeRate, dps) {
+  return (strokeRate / 60) * dps;
+}
+
+// Példa:
+const velocity = calculateVelocity(70, 1.6);
+// Visszatérési érték: 1.87 m/s</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Csapás Index (SI)</h3>
+      <div class="formula-content">
+        <h4>Képlet:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            SI = Sebesség (m/s) × DPS (m/csapás)
+          </div>
+        </div>
+
+        <h4>JavaScript Megvalósítás:</h4>
+        <pre><code>function calculateStrokeIndex(velocity, dps) {
+  return velocity * dps;
+}
+
+// Példa:
+const si = calculateStrokeIndex(1.5, 1.7);
+// Visszatérési érték: 2.55</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>Performance Management Chart (PMC)</h2>
+
+    <div class="formula-card">
+      <h3>CTL, ATL, TSB Számítások</h3>
+      <div class="formula-content">
+        <h4>Képletek:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            CTL ma = CTL tegnap + (TSS ma - CTL tegnap) × (1/42)
+          </div>
+          <div class="formula">
+            ATL ma = ATL tegnap + (TSS ma - ATL tegnap) × (1/7)
+          </div>
+          <div class="formula">
+            TSB = CTL tegnap - ATL tegnap
+          </div>
+        </div>
+
+        <h4>JavaScript Megvalósítás:</h4>
+        <pre><code>function updateCTL(previousCTL, todayTSS) {
+  return previousCTL + (todayTSS - previousCTL) * (1/42);
+}
+
+function updateATL(previousATL, todayTSS) {
+  return previousATL + (todayTSS - previousATL) * (1/7);
+}
+
+function calculateTSB(yesterdayCTL, yesterdayATL) {
+  return yesterdayCTL - yesterdayATL;
+}
+
+// PMC kiszámítása edzéssorozathoz
+function calculatePMC(workouts) {
+  let ctl = 0, atl = 0;
+  const results = [];
+
+  workouts.forEach(workout => {
+    ctl = updateCTL(ctl, workout.tss);
+    atl = updateATL(atl, workout.tss);
+    const tsb = calculateTSB(ctl, atl);
+
+    results.push({
+      date: workout.date,
+      tss: workout.tss,
+      ctl: Math.round(ctl * 10) / 10,
+      atl: Math.round(atl * 10) / 10,
+      tsb: Math.round(tsb * 10) / 10
+    });
+  });
+
+  return results;
+}
+
+// Példa használat:
+const workouts = [
+  { date: '2025-01-01', tss: 50 },
+  { date: '2025-01-02', tss: 60 },
+  { date: '2025-01-03', tss: 45 },
+  // ... további edzések
+];
+
+const pmc = calculatePMC(workouts);
+// Visszatérési érték: tömb CTL, ATL, TSB értékekkel minden napra</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Haladó Számítások</h2>
+
+    <div class="formula-card">
+      <h3>CSS Több Távból (Regressziós Módszer)</h3>
+      <div class="formula-content">
+        <h4>JavaScript Megvalósítás:</h4>
+        <pre><code>function calculateCSSRegression(distances, times) {
+  // Lineáris regresszió: távolság = a + b*idő
+  const n = distances.length;
+  const sumX = times.reduce((a, b) => a + b, 0);
+  const sumY = distances.reduce((a, b) => a + b, 0);
+  const sumXY = times.reduce((sum, x, i) => sum + x * distances[i], 0);
+  const sumXX = times.reduce((sum, x) => sum + x * x, 0);
+
+  const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+  const intercept = (sumY - slope * sumX) / n;
+
+  return {
+    css: slope, // Kritikus úszósebesség (m/s)
+    anaerobic_capacity: intercept // Anaerob kapacitás (m)
+  };
+}
+
+// Példa több teszttávval:
+const distances = [100, 200, 400, 800];
+const times = [65, 150, 340, 720]; // másodpercben
+const result = calculateCSSRegression(distances, times);
+// Visszatérési érték: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Intenzitási Faktor Tempóból</h3>
+      <div class="formula-content">
+        <h4>JavaScript Megvalósítás:</h4>
+        <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
+  // Tempó konvertálása sebességre (m/s)
+  const actualSpeed = 100 / actualPace100m;
+  const thresholdSpeed = 100 / thresholdPace100m;
+  return actualSpeed / thresholdSpeed;
+}
+
+// Példa:
+const if_value = calculateIntensityFactor(110, 93);
+// Visszatérési érték: 0.845 (küszöbérték 84.5%-án úszva)</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Tempó Következetesség Elemzés</h3>
+      <div class="formula-content">
+        <h4>JavaScript Megvalósítás:</h4>
+        <pre><code>function analyzePaceConsistency(laps) {
+  const paces = laps.map(lap => lap.distance / lap.time);
+  const avgPace = paces.reduce((a, b) => a + b) / paces.length;
+
+  const variance = paces.reduce((sum, pace) =>
+    sum + Math.pow(pace - avgPace, 2), 0) / paces.length;
+  const stdDev = Math.sqrt(variance);
+  const coefficientOfVariation = (stdDev / avgPace) * 100;
+
+  return {
+    avgPace,
+    stdDev,
+    coefficientOfVariation,
+    consistency: coefficientOfVariation < 5 ? "Kiváló" :
+                 coefficientOfVariation < 10 ? "Jó" :
+                 coefficientOfVariation < 15 ? "Közepes" : "Változó"
+  };
+}
+
+// Példa:
+const laps = [
+  { distance: 100, time: 70 },
+  { distance: 100, time: 72 },
+  { distance: 100, time: 71 },
+  // ...
+];
+const analysis = analyzePaceConsistency(laps);
+// Visszatérési érték: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Kiváló" }</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Fáradtság Észlelés Csapásszámból</h3>
+      <div class="formula-content">
+        <h4>JavaScript Megvalósítás:</h4>
+        <pre><code>function detectFatigue(laps) {
+  const firstThird = laps.slice(0, Math.floor(laps.length/3));
+  const lastThird = laps.slice(-Math.floor(laps.length/3));
+
+  const firstThirdAvg = firstThird.reduce((sum, lap) =>
+    sum + lap.strokeCount, 0) / firstThird.length;
+  const lastThirdAvg = lastThird.reduce((sum, lap) =>
+    sum + lap.strokeCount, 0) / lastThird.length;
+
+  const strokeCountIncrease = ((lastThirdAvg - firstThirdAvg) / firstThirdAvg) * 100;
+
+  return {
+    firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
+    lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
+    percentIncrease: Math.round(strokeCountIncrease * 10) / 10,
+    fatigueLevel: strokeCountIncrease < 5 ? "Minimális" :
+                  strokeCountIncrease < 10 ? "Mérsékelt" :
+                  strokeCountIncrease < 20 ? "Jelentős" : "Súlyos"
+  };
+}
+
+// Példa:
+const laps = [
+  { strokeCount: 14 }, { strokeCount: 14 }, { strokeCount: 15 },
+  { strokeCount: 15 }, { strokeCount: 16 }, { strokeCount: 16 },
+  { strokeCount: 17 }, { strokeCount: 18 }, { strokeCount: 18 }
+];
+const fatigue = detectFatigue(laps);
+// Visszatérési érték: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Súlyos" }</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>Adat Validálás</h2>
+
+    <div class="formula-card">
+      <h3>Edzésadat Minőségellenőrzés</h3>
+      <div class="formula-content">
+        <h4>JavaScript Megvalósítás:</h4>
+        <pre><code>function validateWorkoutData(workout) {
+  const issues = [];
+
+  // Ésszerű tempótartományok ellenőrzése (1:00-5:00 / 100m)
+  const avgPace = (workout.totalTime / workout.totalDistance) * 100;
+  if (avgPace < 60 || avgPace > 300) {
+    issues.push(`Szokatlan átlagtempó: ${Math.round(avgPace)}s / 100m`);
+  }
+
+  // Ésszerű csapásszám ellenőrzése (10-50 / 25m)
+  const avgStrokesPer25m = (workout.totalStrokes / workout.totalDistance) * 25;
+  if (avgStrokesPer25m < 10 || avgStrokesPer25m > 50) {
+    issues.push(`Szokatlan csapásszám: ${Math.round(avgStrokesPer25m)} / 25m`);
+  }
+
+  // Ésszerű csapásfrekvencia ellenőrzése (30-150 SPM)
+  const avgSR = calculateStrokeRate(workout.totalStrokes, workout.totalTime);
+  if (avgSR < 30 || avgSR > 150) {
+    issues.push(`Szokatlan csapásfrekvencia: ${Math.round(avgSR)} SPM`);
+  }
+
+  // Hiányzó körök ellenőrzése (időhézagok)
+  if (workout.laps && workout.laps.length > 1) {
+    for (let i = 1; i < workout.laps.length; i++) {
+      const gap = workout.laps[i].startTime -
+                  (workout.laps[i-1].startTime + workout.laps[i-1].duration);
+      if (gap > 300) { // 5 perc hézag
+        issues.push(`Nagy hézag észlelve a(z) ${i}. és ${i+1}. kör között`);
+      }
+    }
+  }
+
+  return {
+    isValid: issues.length === 0,
+    issues: issues
+  };
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
 
     
@@ -834,7 +1642,7 @@ img[width][height] {
 
             
             <div>
-                <h3 class="mb-md">Startseite</h3>
+                <h3 class="mb-md">Kezdőlap</h3>
                 <ul class="footer-links">
                     
                     <li>
@@ -983,11 +1791,11 @@ img[width][height] {
         
         <div class="footer-bottom">
             <p class="text-sm text-secondary">
-                &copy; 2025 Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Alle Rechte vorbehalten
+                &copy; 2025 Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Minden jog fenntartva
             </p>
             <ul class="footer-links">
-                <li><a href="/hu/privacy/">Datenschutz</a></li>
-                <li><a href="/hu/terms/">Nutzungsbedingungen</a></li>
+                <li><a href="/hu/privacy/">Adatvédelem</a></li>
+                <li><a href="/hu/terms/">Feltételek</a></li>
             </ul>
         </div>
     </div>
@@ -997,12 +1805,12 @@ img[width][height] {
     <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
     <div class="cookie-banner-content">
         <div>
-            <p>Diese Website verwendet Cookies, um Ihre Erfahrung zu verbessern.</p>
-            <a href="/hu/privacy/" class="text-sm">Mehr erfahren</a>
+            <p>Ez a weboldal sütiket használ a felhasználói élmény javítása érdekében.</p>
+            <a href="/hu/privacy/" class="text-sm">Tudj meg többet</a>
         </div>
         <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Ablehnen</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Akzeptieren</button>
+            <button id="cookie-decline" class="btn btn-secondary btn-small">Elutasítás</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">Elfogadás</button>
         </div>
     </div>
 </div>

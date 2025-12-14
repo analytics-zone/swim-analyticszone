@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
 <head>
@@ -819,7 +818,815 @@ img[width][height] {
 
     
     <main id="main-content" class="main-content">
-        
+        <section class="hero hero-small">
+  <div class="container">
+    <h1>기술 참조 및 공식</h1>
+    <p class="lead">완전한 수학적 구현</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container-narrow">
+    <h2>구현 가이드</h2>
+    <p class="lead">이 페이지는 모든 Swim Analytics 지표에 대한 복사-붙여넣기 가능한 공식과 단계별 계산 방법을 제공합니다. 맞춤형 구현, 검증 또는 더 깊은 이해를 위해 사용하세요.
+    </p>
+
+    <div class="callout callout-warning">
+      <h3>⚠️ 구현 참고 사항</h3>
+      <ul>
+        <li>계산을 위해 모든 시간은 초 단위로 변환해야 합니다</li>
+        <li>수영 페이스는 역수입니다 (높은 % = 느린 페이스)</li>
+        <li>항상 합리적인 범위 내에서 입력을 검증하세요</li>
+        <li>예외 상황을 처리하세요 (0으로 나누기, 음수 값)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>핵심 성과 지표 (Core Performance Metrics)</h2>
+
+    <div class="formula-card">
+      <h3>임계 수영 속도 (CSS, Critical Swim Speed)</h3>
+      <div class="formula-content">
+        <h4>공식:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
+          </div>
+          <div class="formula">
+            CSS 페이스/100m (초) = (T₄₀₀ - T₂₀₀) / 2
+          </div>
+        </div>
+
+        <div class="callout callout-info mt-lg">
+          <h4>🧪 대화형 계산기 - 공식 테스트</h4>
+          <div class="calculator-grid">
+            <div class="input-group">
+              <label for="css-d1">거리 1 (미터):</label>
+              <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
+            </div>
+            <div class="input-group">
+              <label for="css-t1">시간 1 (mm:ss):</label>
+              <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
+            </div>
+            <div class="input-group">
+              <label for="css-d2">거리 2 (미터):</label>
+              <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
+            </div>
+            <div class="input-group">
+              <label for="css-t2">시간 2 (mm:ss):</label>
+              <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
+            </div>
+          </div>
+          <div class="calculator-result mt-md">
+            <div class="result-label">CSS 페이스 (100m 당):</div>
+            <div class="result-value" id="css-result">1:49</div>
+          </div>
+          <div class="calculation-breakdown mt-md">
+            <small>
+              <strong>계산 단계:</strong><br>
+              <span id="css-steps">
+                CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
+                페이스/100m = 100 / 0.917 = 109 초 = 1:49
+              </span>
+            </small>
+          </div>
+        </div>
+
+        <h4 class="mt-xl">JavaScript 구현:</h4>
+        <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
+  // 필요한 경우 시간을 초 단위로 변환
+  const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
+  const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
+
+  // CSS를 m/s 단위로 계산
+  const css_ms = (distance2 - distance1) / (t2 - t1);
+
+  // 100m 당 페이스를 초 단위로 계산
+  const pace_per_100m = 100 / css_ms;
+
+  // mm:ss 형식으로 변환
+  const minutes = Math.floor(pace_per_100m / 60);
+  const seconds = Math.round(pace_per_100m % 60);
+
+  return {
+    css_ms: css_ms,
+    pace_seconds: pace_per_100m,
+    pace_formatted: `${minutes}:${seconds.toString().padStart(2, '0')}`
+  };
+}
+
+// 사용 예시:
+const result = calculateCSS(200, 150, 400, 368);
+// 반환값: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
+
+        <script>
+          function timeToSecondsCSS(timeString) {
+            const parts = timeString.split(':');
+            return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+          }
+
+          function secondsToTimeCSS(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.round(seconds % 60);
+            return `${minutes}:${secs.toString().padStart(2, '0')}`;
+          }
+
+          function updateCSSCalculator() {
+            try {
+              const d1 = parseFloat(document.getElementById('css-d1').value);
+              const t1Input = document.getElementById('css-t1').value;
+              const d2 = parseFloat(document.getElementById('css-d2').value);
+              const t2Input = document.getElementById('css-t2').value;
+
+              if (!d1 || !t1Input || !d2 || !t2Input) return;
+
+              const t1 = timeToSecondsCSS(t1Input);
+              const t2 = timeToSecondsCSS(t2Input);
+
+              const css_ms = (d2 - d1) / (t2 - t1);
+              const pace_per_100m = 100 / css_ms;
+              const pace_formatted = secondsToTimeCSS(pace_per_100m);
+
+              document.getElementById('css-result').textContent = pace_formatted;
+              document.getElementById('css-steps').innerHTML =
+                `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
+                `페이스/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} 초 = ${pace_formatted}`;
+            } catch (e) {
+              console.error('CSS calculation error:', e);
+            }
+          }
+
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('css-d1').addEventListener('input', updateCSSCalculator);
+            document.getElementById('css-t1').addEventListener('input', updateCSSCalculator);
+            document.getElementById('css-d2').addEventListener('input', updateCSSCalculator);
+            document.getElementById('css-t2').addEventListener('input', updateCSSCalculator);
+            updateCSSCalculator();
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>수영 훈련 스트레스 점수 (sTSS)</h3>
+      <div class="formula-content">
+        <h4>전체 공식:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            sTSS = (IF³) × 지속 시간 (시간) × 100
+          </div>
+          <div class="formula">
+            IF = NSS / FTP
+          </div>
+          <div class="formula">
+            NSS = 총 거리 / 총 시간 (m/min)
+          </div>
+        </div>
+
+        <div class="callout callout-info mt-lg">
+          <h4>🧪 대화형 계산기 - 공식 테스트</h4>
+          <div class="calculator-grid">
+            <div class="input-group">
+              <label for="stss-distance">거리 (미터):</label>
+              <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
+            </div>
+            <div class="input-group">
+              <label for="stss-duration">지속 시간 (분):</label>
+              <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
+            </div>
+            <div class="input-group">
+              <label for="stss-css">CSS 페이스 (100m 당 mm:ss):</label>
+              <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
+            </div>
+            <div class="input-group">
+              <label>FTP (계산됨):</label>
+              <input type="text" id="stss-ftp" readonly value="64.5 m/min">
+            </div>
+          </div>
+          <div class="calculator-result mt-md">
+            <div class="result-label">계산된 sTSS:</div>
+            <div class="result-value" id="stss-result">55</div>
+          </div>
+          <div class="calculation-breakdown mt-md">
+            <small>
+              <strong>계산 단계:</strong><br>
+              <span id="stss-steps">
+                NSS = 3000m / 55분 = 54.5 m/min<br>
+                FTP = 100 / (93/60) = 64.5 m/min<br>
+                IF = 54.5 / 64.5 = 0.845<br>
+                sTSS = 0.845³ × (55/60) × 100 = 55
+              </span>
+            </small>
+          </div>
+        </div>
+
+        <h4 class="mt-xl">JavaScript 구현:</h4>
+        <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+  // 정규화된 수영 속도 (NSS) 계산
+  const nss = distance / timeMinutes;
+
+  // 강도 계수 (Intensity Factor) 계산
+  const intensityFactor = nss / ftpMetersPerMin;
+
+  // 시간 계산
+  const hours = timeMinutes / 60;
+
+  // 세제곱 강도 계수를 사용하여 sTSS 계산
+  const stss = Math.pow(intensityFactor, 3) * hours * 100;
+
+  return Math.round(stss);
+}
+
+// 사용 예시:
+const stss = calculateSTSS(3000, 55, 64.5);
+// 반환값: 55
+
+// 도우미: CSS를 FTP로 변환
+function cssToFTP(cssPacePer100mSeconds) {
+  // FTP (m/min) = 100m / (분 단위 페이스)
+  return 100 / (cssPacePer100mSeconds / 60);
+}
+
+// 예시: CSS 1:33 (93초)
+const ftp = cssToFTP(93); // 반환값: 64.5 m/min</code></pre>
+
+        <script>
+          // 시간 변환 도우미
+          function timeToSeconds(timeString) {
+            const parts = timeString.split(':');
+            return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+          }
+
+          // CSS를 FTP로 변환
+          function cssToFTP(cssPacePer100mSeconds) {
+            return 100 / (cssPacePer100mSeconds / 60);
+          }
+
+          // sTSS 계산
+          function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+            const nss = distance / timeMinutes;
+            const intensityFactor = nss / ftpMetersPerMin;
+            const hours = timeMinutes / 60;
+            const stss = Math.pow(intensityFactor, 3) * hours * 100;
+            return Math.round(stss);
+          }
+
+          // 계산기 업데이트
+          function updateSTSSCalculator() {
+            try {
+              const distance = parseFloat(document.getElementById('stss-distance').value);
+              const duration = parseFloat(document.getElementById('stss-duration').value);
+              const cssInput = document.getElementById('stss-css').value;
+
+              // 입력 유효성 검사
+              if (!distance || !duration || !cssInput) return;
+
+              // CSS를 초 단위로 변환
+              const cssPaceSeconds = timeToSeconds(cssInput);
+
+              // FTP 계산
+              const ftp = cssToFTP(cssPaceSeconds);
+
+              // NSS 계산
+              const nss = distance / duration;
+
+              // 강도 계수 계산
+              const intensityFactor = nss / ftp;
+
+              // sTSS 계산
+              const stss = calculateSTSS(distance, duration, ftp);
+
+              // 디스플레이 업데이트
+              document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/min';
+              document.getElementById('stss-result').textContent = stss;
+
+              // 계산 단계 업데이트
+              const hours = duration / 60;
+              document.getElementById('stss-steps').innerHTML =
+                `NSS = ${distance}m / ${duration}분 = ${nss.toFixed(1)} m/min<br>` +
+                `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
+                `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
+                `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
+            } catch (e) {
+              console.error('Calculation error:', e);
+            }
+          }
+
+          // 페이지 로드 시 이벤트 리스너 추가
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('stss-distance').addEventListener('input', updateSTSSCalculator);
+            document.getElementById('stss-duration').addEventListener('input', updateSTSSCalculator);
+            document.getElementById('stss-css').addEventListener('input', updateSTSSCalculator);
+
+            // 초기 계산
+            updateSTSSCalculator();
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>SWOLF</h3>
+      <div class="formula-content">
+        <h4>공식:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            SWOLF = 랩 타임 (초) + 스트로크 수
+          </div>
+          <div class="formula">
+            SWOLF₂₅ = (시간 × 25/수영장 길이) + (스트로크 × 25/수영장 길이)
+          </div>
+        </div>
+
+        <div class="callout callout-info mt-lg">
+          <h4>🧪 대화형 계산기 - 공식 테스트</h4>
+          <div class="calculator-grid">
+            <div class="input-group">
+              <label for="swolf-time">랩 타임 (초):</label>
+              <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
+            </div>
+            <div class="input-group">
+              <label for="swolf-strokes">스트로크 수:</label>
+              <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
+            </div>
+            <div class="input-group">
+              <label for="swolf-pool">수영장 길이 (m):</label>
+              <select id="swolf-pool">
+                <option value="25" selected>25m</option>
+                <option value="50">50m</option>
+              </select>
+            </div>
+          </div>
+          <div class="calculator-result mt-md">
+            <div class="result-label">SWOLF 점수:</div>
+            <div class="result-value" id="swolf-result">35</div>
+          </div>
+          <div class="calculation-breakdown mt-md">
+            <small>
+              <strong>계산:</strong><br>
+              <span id="swolf-steps">
+                SWOLF = 20s + 15 스트로크 = 35
+              </span>
+            </small>
+          </div>
+        </div>
+
+        <h4 class="mt-xl">JavaScript 구현:</h4>
+        <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
+  return timeSeconds + strokeCount;
+}
+
+function calculateNormalizedSWOLF(timeSeconds, strokeCount, poolLength) {
+  const normalizedTime = timeSeconds * (25 / poolLength);
+  const normalizedStrokes = strokeCount * (25 / poolLength);
+  return normalizedTime + normalizedStrokes;
+}
+
+// 예시:
+const swolf = calculateSWOLF(20, 15);
+// 반환값: 35
+
+const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
+// 반환값: 35 (25m로 정규화됨)</code></pre>
+
+        <script>
+          function updateSWOLFCalculator() {
+            try {
+              const time = parseFloat(document.getElementById('swolf-time').value);
+              const strokes = parseFloat(document.getElementById('swolf-strokes').value);
+              const poolLength = parseFloat(document.getElementById('swolf-pool').value);
+
+              if (!time || !strokes) return;
+
+              let swolf, steps;
+              if (poolLength === 25) {
+                swolf = time + strokes;
+                steps = `SWOLF = ${time}s + ${strokes} 스트로크 = ${swolf}`;
+              } else {
+                const normalizedTime = time * (25 / poolLength);
+                const normalizedStrokes = strokes * (25 / poolLength);
+                swolf = normalizedTime + normalizedStrokes;
+                steps = `정규화된 시간 = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
+                  `정규화된 스트로크 = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
+                  `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
+              }
+
+              document.getElementById('swolf-result').textContent = swolf.toFixed(1);
+              document.getElementById('swolf-steps').innerHTML = steps;
+            } catch (e) {
+              console.error('SWOLF calculation error:', e);
+            }
+          }
+
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('swolf-time').addEventListener('input', updateSWOLFCalculator);
+            document.getElementById('swolf-strokes').addEventListener('input', updateSWOLFCalculator);
+            document.getElementById('swolf-pool').addEventListener('change', updateSWOLFCalculator);
+            updateSWOLFCalculator();
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>수영 역학 (Stroke Mechanics)</h2>
+
+    <div class="formula-card">
+      <h3>스트로크 속도 (SR, Stroke Rate)</h3>
+      <div class="formula-content">
+        <h4>공식:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            SR = 60 / 사이클 시간 (초)
+          </div>
+          <div class="formula">
+            SR = (스트로크 수 / 시간 (초)) × 60
+          </div>
+        </div>
+
+        <div class="callout callout-info mt-lg">
+          <h4>🧪 대화형 계산기 - 공식 테스트</h4>
+          <div class="calculator-grid">
+            <div class="input-group">
+              <label for="sr-strokes">스트로크 수:</label>
+              <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
+            </div>
+            <div class="input-group">
+              <label for="sr-time">시간 (초):</label>
+              <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
+            </div>
+          </div>
+          <div class="calculator-result mt-md">
+            <div class="result-label">스트로크 속도 (SPM):</div>
+            <div class="result-value" id="sr-result">72</div>
+          </div>
+          <div class="calculation-breakdown mt-md">
+            <small>
+              <strong>계산:</strong><br>
+              <span id="sr-steps">
+                SR = (30 / 25) × 60 = 72 SPM
+              </span>
+            </small>
+          </div>
+        </div>
+
+        <h4 class="mt-xl">JavaScript 구현:</h4>
+        <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
+  return (strokeCount / timeSeconds) * 60;
+}
+
+// 예시:
+const sr = calculateStrokeRate(30, 25);
+// 반환값: 72 SPM</code></pre>
+
+        <script>
+          function updateSRCalculator() {
+            try {
+              const strokes = parseFloat(document.getElementById('sr-strokes').value);
+              const time = parseFloat(document.getElementById('sr-time').value);
+
+              if (!strokes || !time) return;
+
+              const sr = (strokes / time) * 60;
+
+              document.getElementById('sr-result').textContent = sr.toFixed(1);
+              document.getElementById('sr-steps').innerHTML =
+                `SR = (${strokes} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
+            } catch (e) {
+              console.error('SR calculation error:', e);
+            }
+          }
+
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('sr-strokes').addEventListener('input', updateSRCalculator);
+            document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
+            updateSRCalculator();
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>스트로크 당 거리 (DPS, Distance Per Stroke)</h3>
+      <div class="formula-content">
+        <h4>공식:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            DPS = 거리 / 스트로크 수
+          </div>
+          <div class="formula">
+            DPS = 거리 / (SR / 60)
+          </div>
+        </div>
+
+        <h4>JavaScript 구현:</h4>
+        <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
+  const effectiveDistance = distance - pushoffDistance;
+  return effectiveDistance / strokeCount;
+}
+
+// 예시 (25m 수영장, 5m 푸시 오프):
+const dps = calculateDPS(25, 12, 5);
+// 반환값: 1.67 m/스트로크
+
+// 여러 랩의 경우:
+const dps100m = calculateDPS(100, 48, 4 * 5);
+// 반환값: 1.67 m/스트로크 (4 랩 × 5m 푸시 오프)</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>SR과 DPS를 이용한 속도</h3>
+      <div class="formula-content">
+        <h4>공식:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            속도 (m/s) = (SR / 60) × DPS
+          </div>
+        </div>
+
+        <h4>JavaScript 구현:</h4>
+        <pre><code>function calculateVelocity(strokeRate, dps) {
+  return (strokeRate / 60) * dps;
+}
+
+// 예시:
+const velocity = calculateVelocity(70, 1.6);
+// 반환값: 1.87 m/s</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>스트로크 지수 (SI, Stroke Index)</h3>
+      <div class="formula-content">
+        <h4>공식:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            SI = 속도 (m/s) × DPS (m/스트로크)
+          </div>
+        </div>
+
+        <h4>JavaScript 구현:</h4>
+        <pre><code>function calculateStrokeIndex(velocity, dps) {
+  return velocity * dps;
+}
+
+// 예시:
+const si = calculateStrokeIndex(1.5, 1.7);
+// 반환값: 2.55</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>성과 관리 차트 (PMC)</h2>
+
+    <div class="formula-card">
+      <h3>CTL, ATL, TSB 계산</h3>
+      <div class="formula-content">
+        <h4>공식:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            CTL 오늘 = CTL 어제 + (TSS 오늘 - CTL 어제) × (1/42)
+          </div>
+          <div class="formula">
+            ATL 오늘 = ATL 어제 + (TSS 오늘 - ATL 어제) × (1/7)
+          </div>
+          <div class="formula">
+            TSB = CTL 어제 - ATL 어제
+          </div>
+        </div>
+
+        <h4>JavaScript 구현:</h4>
+        <pre><code>function updateCTL(previousCTL, todayTSS) {
+  return previousCTL + (todayTSS - previousCTL) * (1/42);
+}
+
+function updateATL(previousATL, todayTSS) {
+  return previousATL + (todayTSS - previousATL) * (1/7);
+}
+
+function calculateTSB(yesterdayCTL, yesterdayATL) {
+  return yesterdayCTL - yesterdayATL;
+}
+
+// 일련의 운동에 대한 PMC 계산
+function calculatePMC(workouts) {
+  let ctl = 0, atl = 0;
+  const results = [];
+
+  workouts.forEach(workout => {
+    ctl = updateCTL(ctl, workout.tss);
+    atl = updateATL(atl, workout.tss);
+    const tsb = calculateTSB(ctl, atl);
+
+    results.push({
+      date: workout.date,
+      tss: workout.tss,
+      ctl: Math.round(ctl * 10) / 10,
+      atl: Math.round(atl * 10) / 10,
+      tsb: Math.round(tsb * 10) / 10
+    });
+  });
+
+  return results;
+}
+
+// 사용 예시:
+const workouts = [
+  { date: '2025-01-01', tss: 50 },
+  { date: '2025-01-02', tss: 60 },
+  { date: '2025-01-03', tss: 45 },
+  // ... 추가 운동
+];
+
+const pmc = calculatePMC(workouts);
+// 반환값: 각 날짜의 CTL, ATL, TSB가 포함된 배열</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>고급 계산</h2>
+
+    <div class="formula-card">
+      <h3>다중 거리에서의 CSS (회귀 분석 방법)</h3>
+      <div class="formula-content">
+        <h4>JavaScript 구현:</h4>
+        <pre><code>function calculateCSSRegression(distances, times) {
+  // 선형 회귀: 거리 = a + b*시간
+  const n = distances.length;
+  const sumX = times.reduce((a, b) => a + b, 0);
+  const sumY = distances.reduce((a, b) => a + b, 0);
+  const sumXY = times.reduce((sum, x, i) => sum + x * distances[i], 0);
+  const sumXX = times.reduce((sum, x) => sum + x * x, 0);
+
+  const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+  const intercept = (sumY - slope * sumX) / n;
+
+  return {
+    css: slope, // 임계 수영 속도 (m/s)
+    anaerobic_capacity: intercept // 무산소 운동 용량 (m)
+  };
+}
+
+// 다중 테스트 거리 예시:
+const distances = [100, 200, 400, 800];
+const times = [65, 150, 340, 720]; // 초 단위
+const result = calculateCSSRegression(distances, times);
+// 반환값: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>페이스로부터의 강도 계수</h3>
+      <div class="formula-content">
+        <h4>JavaScript 구현:</h4>
+        <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
+  // 페이스를 속도(m/s)로 변환
+  const actualSpeed = 100 / actualPace100m;
+  const thresholdSpeed = 100 / thresholdPace100m;
+  return actualSpeed / thresholdSpeed;
+}
+
+// 예시:
+const if_value = calculateIntensityFactor(110, 93);
+// 반환값: 0.845 (임계값의 84.5%로 수영)</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>페이스 일관성 분석</h3>
+      <div class="formula-content">
+        <h4>JavaScript 구현:</h4>
+        <pre><code>function analyzePaceConsistency(laps) {
+  const paces = laps.map(lap => lap.distance / lap.time);
+  const avgPace = paces.reduce((a, b) => a + b) / paces.length;
+
+  const variance = paces.reduce((sum, pace) =>
+    sum + Math.pow(pace - avgPace, 2), 0) / paces.length;
+  const stdDev = Math.sqrt(variance);
+  const coefficientOfVariation = (stdDev / avgPace) * 100;
+
+  return {
+    avgPace,
+    stdDev,
+    coefficientOfVariation,
+    consistency: coefficientOfVariation < 5 ? "우수함" :
+                 coefficientOfVariation < 10 ? "좋음" :
+                 coefficientOfVariation < 15 ? "보통" : "가변적"
+  };
+}
+
+// 예시:
+const laps = [
+  { distance: 100, time: 70 },
+  { distance: 100, time: 72 },
+  { distance: 100, time: 71 },
+  // ...
+];
+const analysis = analyzePaceConsistency(laps);
+// 반환값: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "우수함" }</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>스트로크 수로 피로 감지</h3>
+      <div class="formula-content">
+        <h4>JavaScript 구현:</h4>
+        <pre><code>function detectFatigue(laps) {
+  const firstThird = laps.slice(0, Math.floor(laps.length/3));
+  const lastThird = laps.slice(-Math.floor(laps.length/3));
+
+  const firstThirdAvg = firstThird.reduce((sum, lap) =>
+    sum + lap.strokeCount, 0) / firstThird.length;
+  const lastThirdAvg = lastThird.reduce((sum, lap) =>
+    sum + lap.strokeCount, 0) / lastThird.length;
+
+  const strokeCountIncrease = ((lastThirdAvg - firstThirdAvg) / firstThirdAvg) * 100;
+
+  return {
+    firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
+    lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
+    percentIncrease: Math.round(strokeCountIncrease * 10) / 10,
+    fatigueLevel: strokeCountIncrease < 5 ? "최소" :
+                  strokeCountIncrease < 10 ? "보통" :
+                  strokeCountIncrease < 20 ? "상당함" : "심각함"
+  };
+}
+
+// 예시:
+const laps = [
+  { strokeCount: 14 }, { strokeCount: 14 }, { strokeCount: 15 },
+  { strokeCount: 15 }, { strokeCount: 16 }, { strokeCount: 16 },
+  { strokeCount: 17 }, { strokeCount: 18 }, { strokeCount: 18 }
+];
+const fatigue = detectFatigue(laps);
+// 반환값: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "심각함" }</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>데이터 검증</h2>
+
+    <div class="formula-card">
+      <h3>운동 데이터 품질 확인</h3>
+      <div class="formula-content">
+        <h4>JavaScript 구현:</h4>
+        <pre><code>function validateWorkoutData(workout) {
+  const issues = [];
+
+  // 합리적인 페이스 범위 확인 (1:00-5:00 / 100m)
+  const avgPace = (workout.totalTime / workout.totalDistance) * 100;
+  if (avgPace < 60 || avgPace > 300) {
+    issues.push(`비정상적인 평균 페이스: ${Math.round(avgPace)}s / 100m`);
+  }
+
+  // 합리적인 스트로크 수 확인 (10-50 / 25m)
+  const avgStrokesPer25m = (workout.totalStrokes / workout.totalDistance) * 25;
+  if (avgStrokesPer25m < 10 || avgStrokesPer25m > 50) {
+    issues.push(`비정상적인 스트로크 수: ${Math.round(avgStrokesPer25m)} / 25m`);
+  }
+
+  // 합리적인 스트로크 속도 확인 (30-150 SPM)
+  const avgSR = calculateStrokeRate(workout.totalStrokes, workout.totalTime);
+  if (avgSR < 30 || avgSR > 150) {
+    issues.push(`비정상적인 스트로크 속도: ${Math.round(avgSR)} SPM`);
+  }
+
+  // 누락된 랩 확인 (시간 공백)
+  if (workout.laps && workout.laps.length > 1) {
+    for (let i = 1; i < workout.laps.length; i++) {
+      const gap = workout.laps[i].startTime -
+                  (workout.laps[i-1].startTime + workout.laps[i-1].duration);
+      if (gap > 300) { // 5분 공백
+        issues.push(`랩 ${i}와 ${i+1} 사이에서 큰 공백이 감지됨`);
+      }
+    }
+  }
+
+  return {
+    isValid: issues.length === 0,
+    issues: issues
+  };
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
 
     

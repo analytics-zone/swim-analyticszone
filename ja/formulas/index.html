@@ -847,7 +847,7 @@ img[width][height] {
         <h2>主要なパフォーマンス指標</h2>
 
         <div class="formula-card">
-            <h3>Critical Swim Speed (CSS)</h3>
+            <h3>クリティカルスイムスピード (CSS)</h3>
             <div class="formula-content">
                 <h4>計算式：</h4>
                 <div class="formula-box-large">
@@ -970,7 +970,7 @@ const result = calculateCSS(200, 150, 400, 368);
         </div>
 
         <div class="formula-card">
-            <h3>Swim Training Stress Score (sTSS)</h3>
+            <h3>水泳トレーニングストレススコア (sTSS)</h3>
             <div class="formula-content">
                 <h4>完全な計算式：</h4>
                 <div class="formula-box-large">
@@ -1128,7 +1128,7 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
         </div>
 
         <div class="formula-card">
-            <h3>SWOLF</h3>
+            <h3>スウルフ</h3>
             <div class="formula-content">
                 <h4>計算式：</h4>
                 <div class="formula-box-large">
@@ -1154,8 +1154,8 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         <div class="input-group">
                             <label for="swolf-pool">プール長（m）：</label>
                             <select id="swolf-pool">
-                                <option value="25" selected>25m</option>
-                                <option value="50">50m</option>
+                                <option value="25" selected>25メートル</option>
+                                <option value="50">50メートル</option>
                             </select>
                         </div>
                     </div>
@@ -1203,13 +1203,13 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                         let swolf, steps;
                         if (poolLength === 25) {
                             swolf = time + strokes;
-                            steps = `SWOLF = ${time}s + ${strokes} brazadas = ${swolf}`;
+                            steps = `SWOLF = ${time}s + ${strokes} ストローク = ${swolf}`;
                         } else {
                             const normalizedTime = time * (25 / poolLength);
                             const normalizedStrokes = strokes * (25 / poolLength);
                             swolf = normalizedTime + normalizedStrokes;
-                            steps = `Tiempo Normalizado = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
-                                   `Brazadas Normalizadas = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
+                            steps = `正規化タイム = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
+                                   `正規化ストローク = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
                                    `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
                         }
 
@@ -1237,7 +1237,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
         <h2>ストロークメカニクス</h2>
 
         <div class="formula-card">
-            <h3>Stroke Rate (SR)</h3>
+            <h3>ストロークレート(SR)</h3>
             <div class="formula-content">
                 <h4>計算式：</h4>
                 <div class="formula-box-large">
@@ -1262,7 +1262,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Stroke Rate（SPM）：</div>
+                        <div class="result-label">ストロークレート（SPM）：</div>
                         <div class="result-value" id="sr-result">72</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
@@ -1312,7 +1312,7 @@ const sr = calculateStrokeRate(30, 25);
         </div>
 
         <div class="formula-card">
-            <h3>Distance Per Stroke (DPS)</h3>
+            <h3>ストロークあたりの距離 (DPS)</h3>
             <div class="formula-content">
                 <h4>計算式：</h4>
                 <div class="formula-box-large">
@@ -1362,7 +1362,7 @@ const velocity = calculateVelocity(70, 1.6);
         </div>
 
         <div class="formula-card">
-            <h3>Stroke Index (SI)</h3>
+            <h3>脳卒中指数 (SI)</h3>
             <div class="formula-content">
                 <h4>計算式：</h4>
                 <div class="formula-box-large">
@@ -1597,13 +1597,13 @@ const fatigue = detectFatigue(laps);
   // Check for reasonable stroke counts (10-50 per 25m)
   const avgStrokesPer25m = (workout.totalStrokes / workout.totalDistance) * 25;
   if (avgStrokesPer25m < 10 || avgStrokesPer25m > 50) {
-    issues.push(`Cuenta de brazadas inusual: ${Math.round(avgStrokesPer25m)} por 25m`);
+    issues.push(`異常なストローク数: ${Math.round(avgStrokesPer25m)} 回/25m`);
   }
 
   // Check for reasonable stroke rate (30-150 SPM)
   const avgSR = calculateStrokeRate(workout.totalStrokes, workout.totalTime);
   if (avgSR < 30 || avgSR > 150) {
-    issues.push(`Frecuencia de brazada inusual: ${Math.round(avgSR)} SPM`);
+    issues.push(`異常なストローク頻度: ${Math.round(avgSR)} SPM`);
   }
 
   // Check for missing laps (gaps in time)

@@ -819,81 +819,94 @@ img[width][height] {
     
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
-<div class="container">
-<h1>Tehnične reference in formule</h1>
-<p class="lead">Popolna matematična implementacija</p>
-</div>
+    <div class="container">
+        <h1>Tehnične reference in formule</h1>
+        <p class="lead">Popolna matematična implementacija</p>
+    </div>
 </section>
+
 <section class="section">
-<div class="container container-narrow">
-<h2>Vodnik za implementacijo</h2>
-<p class="lead">Ta stran ponuja formule, pripravljene za kopiranje in lepljenje, ter metode izračuna po korakih za vse meritve Swim Analytics. Uporabite jih za implementacije po meri, testiranje ali poglobljeno razumevanje.</p>
-<div class="callout callout-warning">
-<h3>⚠️ Opombe o izvajanju</h3>
-<ul>
-<li>Za izračune je treba vse čase pretvoriti v sekunde</li>
-<li>Tempo plavanja je obrnjen (višji odstotek = počasnejši tempo)</li>
-<li>Vedno preverjajte vnose v razumnih intervalih</li>
-<li>Obravnava robne primere (deljenje z ničlo, negativne vrednosti)</li>
-</ul>
-</div>
-</div>
+    <div class="container container-narrow">
+        <h2>Vodnik za implementacijo</h2>
+        <p class="lead">Ta stran ponuja formule, pripravljene za kopiranje in lepljenje, ter metode izračuna po korakih za vse meritve Swim Analytics. Uporabite jih za implementacije po meri, preverjanje ali globlje razumevanje.</p>
+
+        <div class="callout callout-warning">
+            <h3>⚠️ Opombe o izvajanju</h3>
+            <ul>
+                <li>Za izračune je treba vse čase pretvoriti v sekunde</li>
+                <li>Tempo plavanja je obraten (višji % = počasnejši tempo)</li>
+                <li>Vedno preverite vnose za razumne razpone</li>
+                <li>Obravnava mejne primere (deljenje z ničlo, negativne vrednosti)</li>
+            </ul>
+        </div>
+    </div>
 </section>
+
 <section class="section section-alt">
-<div class="container">
-<h2>Ključne meritve uspešnosti</h2>
-<div class="formula-card">
-<h3>Kritična hitrost plavanja (CSS)</h3>
-<div class="formula-content">
-<h4>Formula:</h4>
-<div class="formula-box-large">
-<div class="formula">CSS (m/s) = (D₂ – D₁) / (T₂ – T₁)</div>
-<div class="formula">CSS Ritmo/100m (sekundi) = (T₄₀₀ - T₂₀₀) / 2</div>
-</div>
-<div class="callout callout-info mt-lg">
-<h4>🧪 Interaktivni kalkulator - preizkusite formulo</h4>
-<div class="calculator-grid">
-<div class="input-group">
-<label for="css-d1">Razdalja 1 (metri):</label>
-<input id="css-d1" max="1000" min="50" step="50" type="number" value="200"/>
-</div>
-<div class="input-group">
-<label for="css-t1">Tempo 1 (mm:ss):</label>
-<input id="css-t1" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="2:30" type="text" value="2:30"/>
-</div>
-<div class="input-group">
-<label for="css-d2">Razdalja 2 (metri):</label>
-<input id="css-d2" max="2000" min="100" step="50" type="number" value="400"/>
-</div>
-<div class="input-group">
-<label for="css-t2">Tempo 2 (mm:ss):</label>
-<input id="css-t2" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="6:08" type="text" value="6:08"/>
-</div>
-</div>
-<div class="calculator-result mt-md">
-<div class="result-label">Ritmo CSS na 100m:</div>
-<div class="result-value" id="css-result">1:49</div>
-</div>
-<div class="calculation-breakdown mt-md">
-<small>
-<strong>Koraki izračuna:</strong><br/>
-<span id="css-steps">CSS (m/s) = (400 - 200) / (368 - 150) = 0,917 m/s<br/>Tempo/100 m = 100 / 0,917 = 109 sekund = 1:49</span>
-</small>
-</div>
-</div>
-<h4 class="mt-xl">Izvedba JavaScripta:</h4>
-<pre><code>function calculateCSS(distance1, time1, distance2, time2) {
-  // Convert times to seconds if needed
+    <div class="container">
+        <h2>Ključne meritve uspešnosti</h2>
+
+        <div class="formula-card">
+            <h3>Kritična hitrost plavanja (CSS)</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
+                    </div>
+                    <div class="formula">
+                        CSS Ritmo/100m (segundos) = (T₄₀₀ - T₂₀₀) / 2
+                    </div>
+                </div>
+
+                <div class="callout callout-info mt-lg">
+                    <h4>🧪 Interaktivni kalkulator - preizkusite formulo</h4>
+                    <div class="calculator-grid">
+                        <div class="input-group">
+                            <label for="css-d1">Razdalja 1 (metri):</label>
+                            <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
+                        </div>
+                        <div class="input-group">
+                            <label for="css-t1">Čas 1 (mm:ss):</label>
+                            <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
+                        </div>
+                        <div class="input-group">
+                            <label for="css-d2">Razdalja 2 (metri):</label>
+                            <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
+                        </div>
+                        <div class="input-group">
+                            <label for="css-t2">Čas 2 (mm:ss):</label>
+                            <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
+                        </div>
+                    </div>
+                    <div class="calculator-result mt-md">
+                        <div class="result-label">CSS tempo na 100m:</div>
+                        <div class="result-value" id="css-result">1:49</div>
+                    </div>
+                    <div class="calculation-breakdown mt-md">
+                        <small>
+                            <strong>Koraki izračuna:</strong><br>
+                            <span id="css-steps">
+                                CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
+                                Ritmo/100m = 100 / 0.917 = 109 segundos = 1:49
+                            </span>
+                        </small>
+                    </div>
+                </div>
+
+                <h4 class="mt-xl">Izvedba v JavaScriptu:</h4>
+                <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
+  // Convertir tiempos a segundos si es necesario
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
   const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
 
-  // Calculate CSS in m/s
+  // Calcular CSS en m/s
   const css_ms = (distance2 - distance1) / (t2 - t1);
 
-  // Calculate pace per 100m in seconds
+  // Calcular ritmo por 100m en segundos
   const pace_per_100m = 100 / css_ms;
 
-  // Convert to mm:ss format
+  // Convertir a formato mm:ss
   const minutes = Math.floor(pace_per_100m / 60);
   const seconds = Math.round(pace_per_100m % 60);
 
@@ -904,10 +917,11 @@ img[width][height] {
   };
 }
 
-// Example usage:
+// Ejemplo de uso:
 const result = calculateCSS(200, 150, 400, 368);
-// Returns: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
-<script>
+// Devuelve: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
+
+                <script>
                 function timeToSecondsCSS(timeString) {
                     const parts = timeString.split(':');
                     return parseInt(parts[0]) * 60 + parseInt(parts[1]);
@@ -937,8 +951,8 @@ const result = calculateCSS(200, 150, 400, 368);
 
                         document.getElementById('css-result').textContent = pace_formatted;
                         document.getElementById('css-steps').innerHTML =
-                            `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3).replace('.', ',')} m/s<br>` +
-                            `Ritmo/100m = 100 / ${css_ms.toFixed(3).replace('.', ',')} = ${Math.round(pace_per_100m)} secondi = ${pace_formatted}`;
+                            `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
+                            `Ritmo/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} segundos = ${pace_formatted}`;
                     } catch (e) {
                         console.error('CSS calculation error:', e);
                     }
@@ -952,80 +966,93 @@ const result = calculateCSS(200, 150, 400, 368);
                     updateCSSCalculator();
                 });
                 </script>
-</div>
-</div>
-<div class="formula-card">
-<h3>Ocena stresa pri vadbi plavanja (sTSS)</h3>
-<div class="formula-content">
-<h4>Popolna formula:</h4>
-<div class="formula-box-large">
-<div class="formula">
-                        sTSS = (IF³) × Durata (ore) × 100
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Plavanje TSS (sTSS)</h3>
+            <div class="formula-content">
+                <h4>Popolna formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        sTSS = (IF³) × Duración (horas) × 100
                     </div>
-<div class="formula">IF = NSS / FTP</div>
-<div class="formula">NSS = skupna razdalja / skupni čas (m/min)</div>
-</div>
-<div class="callout callout-info mt-lg">
-<h4>🧪 Interaktivni kalkulator - preizkusite formulo</h4>
-<div class="calculator-grid">
-<div class="input-group">
-<label for="stss-distance">Razdalja (metri):</label>
-<input id="stss-distance" max="10000" min="100" step="50" type="number" value="3000"/>
-</div>
-<div class="input-group">
-<label for="stss-duration">Trajanje (minute):</label>
-<input id="stss-duration" max="300" min="1" step="1" type="number" value="55"/>
-</div>
-<div class="input-group">
-<label for="stss-css">Ritmo CSS (mm:ss na 100m):</label>
-<input id="stss-css" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="1:33" type="text" value="1:33"/>
-</div>
-<div class="input-group">
-<label>FTP (izračunano):</label>
-<input id="stss-ftp" readonly="" type="text" value="64,5 m/min"/>
-</div>
-</div>
-<div class="calculator-result mt-md">
-<div class="result-label">sTSS izračunano:</div>
-<div class="result-value" id="stss-result">55</div>
-</div>
-<div class="calculation-breakdown mt-md">
-<small>
-<strong>Koraki izračuna:</strong><br/>
-<span id="stss-steps">NSS = 3000m / 55min = 54,5 m/min<br/>FTP = 100 / (93/60) = 64,5 m/min<br/>ČE = 54,5 / 64,5 = 0,845<br/>sTSS = 0,845³ × (55/60) × 100 = 55</span>
-</small>
-</div>
-</div>
-<h4 class="mt-xl">Izvedba JavaScripta:</h4>
-<pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
-  // Calculate Normalized Swim Speed
+                    <div class="formula">
+                        IF = NSS / FTP
+                    </div>
+                    <div class="formula">
+                        NSS = Distancia Total / Tiempo Total (m/min)
+                    </div>
+                </div>
+
+                <div class="callout callout-info mt-lg">
+                    <h4>🧪 Interaktivni kalkulator - preizkusite formulo</h4>
+                    <div class="calculator-grid">
+                        <div class="input-group">
+                            <label for="stss-distance">Razdalja (metri):</label>
+                            <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
+                        </div>
+                        <div class="input-group">
+                            <label for="stss-duration">Trajanje (minute):</label>
+                            <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="stss-css">CSS ritem (mm:ss na 100m):</label>
+                            <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
+                        </div>
+                        <div class="input-group">
+                            <label>FTP (izračunano):</label>
+                            <input type="text" id="stss-ftp" readonly value="64.5 m/min">
+                        </div>
+                    </div>
+                    <div class="calculator-result mt-md">
+                        <div class="result-label">Izračunani sTSS:</div>
+                        <div class="result-value" id="stss-result">55</div>
+                    </div>
+                    <div class="calculation-breakdown mt-md">
+                        <small>
+                            <strong>Koraki izračuna:</strong><br>
+                            <span id="stss-steps">
+                                NSS = 3000m / 55min = 54.5 m/min<br>
+                                FTP = 100 / (93/60) = 64.5 m/min<br>
+                                IF = 54.5 / 64.5 = 0.845<br>
+                                sTSS = 0.845³ × (55/60) × 100 = 55
+                            </span>
+                        </small>
+                    </div>
+                </div>
+
+                <h4 class="mt-xl">Izvedba v JavaScriptu:</h4>
+                <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+  // Izračun normalizirane hitrosti plavanja
   const nss = distance / timeMinutes;
 
-  // Calculate Intensity Factor
+  // Calcular Factor de Intensidad
   const intensityFactor = nss / ftpMetersPerMin;
 
-  // Calculate hours
+  // Calcular horas
   const hours = timeMinutes / 60;
 
-  // Calculate sTSS using cubed intensity factor
+  // Calcular sTSS usando factor de intensidad al cubo
   const stss = Math.pow(intensityFactor, 3) * hours * 100;
 
   return Math.round(stss);
 }
 
-// Example usage:
+// Ejemplo de uso:
 const stss = calculateSTSS(3000, 55, 64.5);
-// Returns: 55
+// Devuelve: 55
 
-// Helper: Convert CSS to FTP
+// Auxiliar: Convertir CSS a FTP
 function cssToFTP(cssPacePer100mSeconds) {
-  // FTP in m/min = 100m / (pace in minutes)
+  // FTP en m/min = 100m / (ritmo en minutos)
   return 100 / (cssPacePer100mSeconds / 60);
 }
 
-// Example: CSS of 1:33 (93 seconds)
-const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
-<script>
+// Ejemplo: CSS de 1:33 (93 segundos)
+const ftp = cssToFTP(93); // Devuelve: 64.5 m/min</code></pre>
+
+                <script>
                 // Time conversion helper
                 function timeToSeconds(timeString) {
                     const parts = timeString.split(':');
@@ -1072,16 +1099,16 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         const stss = calculateSTSS(distance, duration, ftp);
 
                         // Update display
-                        document.getElementById('stss-ftp').value = ftp.toFixed(1).replace('.', ',') + ' m/min';
+                        document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/min';
                         document.getElementById('stss-result').textContent = stss;
 
                         // Update calculation steps
                         const hours = duration / 60;
                         document.getElementById('stss-steps').innerHTML =
-                            `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1).replace('.', ',')} m/min<br>` +
-                            `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1).replace('.', ',')} m/min<br>` +
-                            `IF = ${nss.toFixed(1).replace('.', ',')} / ${ftp.toFixed(1).replace('.', ',')} = ${intensityFactor.toFixed(3).replace('.', ',')}<br>` +
-                            `sTSS = ${intensityFactor.toFixed(3).replace('.', ',')}³ × (${duration}/60) × 100 = ${stss}`;
+                            `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1)} m/min<br>` +
+                            `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
+                            `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
+                            `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
                     } catch (e) {
                         console.error('Calculation error:', e);
                     }
@@ -1097,48 +1124,57 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                     updateSTSSCalculator();
                 });
                 </script>
-</div>
-</div>
-<div class="formula-card">
-<h3>SWOLF</h3>
-<div class="formula-content">
-<h4>Formula:</h4>
-<div class="formula-box-large">
-<div class="formula">SWOLF = čas bazena (sekunde) + število udarcev</div>
-<div class="formula">SWOLF₂₅ = (Čas × 25/Dolžina bazena) + (Udarci × 25/Dolžina bazena)</div>
-</div>
-<div class="callout callout-info mt-lg">
-<h4>🧪 Interaktivni kalkulator - preizkusite formulo</h4>
-<div class="calculator-grid">
-<div class="input-group">
-<label for="swolf-time">Čas bazena (sekunde):</label>
-<input id="swolf-time" max="120" min="10" step="1" type="number" value="20"/>
-</div>
-<div class="input-group">
-<label for="swolf-strokes">Število kapi:</label>
-<input id="swolf-strokes" max="50" min="5" step="1" type="number" value="15"/>
-</div>
-<div class="input-group">
-<label for="swolf-pool">Dolžina kadi (m):</label>
-<select id="swolf-pool">
-<option selected="" value="25">25m</option>
-<option value="50">50m</option>
-</select>
-</div>
-</div>
-<div class="calculator-result mt-md">
-<div class="result-label">SWOLF rezultat:</div>
-<div class="result-value" id="swolf-result">35</div>
-</div>
-<div class="calculation-breakdown mt-md">
-<small>
-<strong>Izračun:</strong><br/>
-<span id="swolf-steps">SWOLF = 20 s + 15 udarcev = 35</span>
-</small>
-</div>
-</div>
-<h4 class="mt-xl">Izvedba JavaScripta:</h4>
-<pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>SWOLF</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        SWOLF = Čas dolžine (sekunde) + Število zaveslajev
+                    </div>
+                    <div class="formula">
+                        SWOLF₂₅ = (Čas × 25/Dolžina bazena) + (Zaveslaji × 25/Dolžina bazena)
+                    </div>
+                </div>
+
+                <div class="callout callout-info mt-lg">
+                    <h4>🧪 Interaktivni kalkulator - preizkusite formulo</h4>
+                    <div class="calculator-grid">
+                        <div class="input-group">
+                            <label for="swolf-time">Čas kroga (sekunde):</label>
+                            <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="swolf-strokes">Število kapi:</label>
+                            <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="swolf-pool">Dolžina bazena (m):</label>
+                            <select id="swolf-pool">
+                                <option value="25" selected>25m</option>
+                                <option value="50">50m</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="calculator-result mt-md">
+                        <div class="result-label">Rezultat SWOLF:</div>
+                        <div class="result-value" id="swolf-result">35</div>
+                    </div>
+                    <div class="calculation-breakdown mt-md">
+                        <small>
+                            <strong>Izračun:</strong><br>
+                            <span id="swolf-steps">
+                                SWOLF = 20s + 15 zaveslajev = 35
+                            </span>
+                        </small>
+                    </div>
+                </div>
+
+                <h4 class="mt-xl">Izvedba v JavaScriptu:</h4>
+                <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
   return timeSeconds + strokeCount;
 }
 
@@ -1148,13 +1184,14 @@ function calculateNormalizedSWOLF(timeSeconds, strokeCount, poolLength) {
   return normalizedTime + normalizedStrokes;
 }
 
-// Example:
+// Ejemplo:
 const swolf = calculateSWOLF(20, 15);
-// Returns: 35
+// Devuelve: 35
 
 const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
-// Returns: 35 (normalized to 25m)</code></pre>
-<script>
+// Devuelve: 35 (normalizado a 25m)</code></pre>
+
+                <script>
                 function updateSWOLFCalculator() {
                     try {
                         const time = parseFloat(document.getElementById('swolf-time').value);
@@ -1166,17 +1203,17 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                         let swolf, steps;
                         if (poolLength === 25) {
                             swolf = time + strokes;
-                            steps = `SWOLF = ${time}s + ${strokes} bracciate = ${swolf}`;
+                            steps = `SWOLF = ${time}s + ${strokes} zaveslajev = ${swolf}`;
                         } else {
                             const normalizedTime = time * (25 / poolLength);
                             const normalizedStrokes = strokes * (25 / poolLength);
                             swolf = normalizedTime + normalizedStrokes;
-                            steps = `Tempo Normalizzato = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1).replace('.', ',')}s<br>` +
-                                   `Bracciate Normalizzate = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1).replace('.', ',')}<br>` +
-                                   `SWOLF₂₅ = ${normalizedTime.toFixed(1).replace('.', ',')} + ${normalizedStrokes.toFixed(1).replace('.', ',')} = ${swolf.toFixed(1).replace('.', ',')}`;
+                            steps = `Normaliziran čas = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
+                                   `Normalizirani zaveslaji = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
+                                   `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
                         }
 
-                        document.getElementById('swolf-result').textContent = swolf.toFixed(1).replace('.', ',');
+                        document.getElementById('swolf-result').textContent = swolf.toFixed(1);
                         document.getElementById('swolf-steps').innerHTML = steps;
                     } catch (e) {
                         console.error('SWOLF calculation error:', e);
@@ -1190,53 +1227,64 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     updateSWOLFCalculator();
                 });
                 </script>
-</div>
-</div>
-</div>
+            </div>
+        </div>
+    </div>
 </section>
+
 <section class="section">
-<div class="container">
-<h2>Mehanika kapi</h2>
-<div class="formula-card">
-<h3>Stopnja kapi (SR)</h3>
-<div class="formula-content">
-<h4>Formula:</h4>
-<div class="formula-box-large">
-<div class="formula">SR = 60 / čas cikla (sekunde)</div>
-<div class="formula">SR = (število udarcev / čas v sekundah) × 60</div>
-</div>
-<div class="callout callout-info mt-lg">
-<h4>🧪 Interaktivni kalkulator - preizkusite formulo</h4>
-<div class="calculator-grid">
-<div class="input-group">
-<label for="sr-strokes">Število kapi:</label>
-<input id="sr-strokes" max="100" min="1" step="1" type="number" value="30"/>
-</div>
-<div class="input-group">
-<label for="sr-time">Čas (sekunde):</label>
-<input id="sr-time" max="180" min="1" step="1" type="number" value="25"/>
-</div>
-</div>
-<div class="calculator-result mt-md">
-<div class="result-label">Stopnja udarca (SPM):</div>
-<div class="result-value" id="sr-result">72</div>
-</div>
-<div class="calculation-breakdown mt-md">
-<small>
-<strong>Izračun:</strong><br/>
-<span id="sr-steps">SR = (30/25) × 60 = 72 SPM</span>
-</small>
-</div>
-</div>
-<h4 class="mt-xl">Izvedba JavaScripta:</h4>
-<pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
+    <div class="container">
+        <h2>Mehanika kapi</h2>
+
+        <div class="formula-card">
+            <h3>Stopnja kapi (SR)</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        SR = 60 / Tiempo de Ciclo (segundos)
+                    </div>
+                    <div class="formula">
+                        SR = (Número de Brazadas / Tiempo en segundos) × 60
+                    </div>
+                </div>
+
+                <div class="callout callout-info mt-lg">
+                    <h4>🧪 Interaktivni kalkulator - preizkusite formulo</h4>
+                    <div class="calculator-grid">
+                        <div class="input-group">
+                            <label for="sr-strokes">Število kapi:</label>
+                            <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="sr-time">Čas (sekunde):</label>
+                            <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
+                        </div>
+                    </div>
+                    <div class="calculator-result mt-md">
+                        <div class="result-label">Stopnja udarca (SPM):</div>
+                        <div class="result-value" id="sr-result">72</div>
+                    </div>
+                    <div class="calculation-breakdown mt-md">
+                        <small>
+                            <strong>Izračun:</strong><br>
+                            <span id="sr-steps">
+                                SR = (30 / 25) × 60 = 72 SPM
+                            </span>
+                        </small>
+                    </div>
+                </div>
+
+                <h4 class="mt-xl">Izvedba v JavaScriptu:</h4>
+                <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
   return (strokeCount / timeSeconds) * 60;
 }
 
-// Example:
+// Primer:
 const sr = calculateStrokeRate(30, 25);
-// Returns: 72 SPM</code></pre>
-<script>
+// Vrne: 72 SPM</code></pre>
+
+                <script>
                 function updateSRCalculator() {
                     try {
                         const strokes = parseFloat(document.getElementById('sr-strokes').value);
@@ -1246,9 +1294,9 @@ const sr = calculateStrokeRate(30, 25);
 
                         const sr = (strokes / time) * 60;
 
-                        document.getElementById('sr-result').textContent = sr.toFixed(1).replace('.', ',');
+                        document.getElementById('sr-result').textContent = sr.toFixed(1);
                         document.getElementById('sr-steps').innerHTML =
-                            `SR = (${strokes} / ${time}) × 60 = ${sr.toFixed(1).replace('.', ',')} SPM`;
+                            `SR = (${strokes} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
                     } catch (e) {
                         console.error('SR calculation error:', e);
                     }
@@ -1260,81 +1308,104 @@ const sr = calculateStrokeRate(30, 25);
                     updateSRCalculator();
                 });
                 </script>
-</div>
-</div>
-<div class="formula-card">
-<h3>Razdalja na udarec (DPS)</h3>
-<div class="formula-content">
-<h4>Formula:</h4>
-<div class="formula-box-large">
-<div class="formula">DPS = razdalja / število udarcev</div>
-<div class="formula">DPS = Razdalja / (SR / 60)</div>
-</div>
-<h4>Izvedba JavaScripta:</h4>
-<pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Razdalja na udarec (DPS)</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        DPS = Razdalja / Število zaveslajev
+                    </div>
+                    <div class="formula">
+                        DPS = Razdalja / (SR / 60)
+                    </div>
+                </div>
+
+                <h4>Izvedba v JavaScriptu:</h4>
+                <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance;
   return effectiveDistance / strokeCount;
 }
 
-// Example (25m pool, 5m push-off):
+// Primer (bazen 25m, odriv 5m):
 const dps = calculateDPS(25, 12, 5);
-// Returns: 1.67 m/stroke
+// Vrne: 1,67 m/zaveslaj
 
-// For multiple laps:
+// Za več dolžin:
 const dps100m = calculateDPS(100, 48, 4 * 5);
-// Returns: 1.67 m/stroke (4 laps × 5m push-off)</code></pre>
-</div>
-</div>
-<div class="formula-card">
-<h3>Hitrost od SR in DPS</h3>
-<div class="formula-content">
-<h4>Formula:</h4>
-<div class="formula-box-large">
-<div class="formula">Hitrost (m/s) = (SR / 60) × DPS</div>
-</div>
-<h4>Izvedba JavaScripta:</h4>
-<pre><code>function calculateVelocity(strokeRate, dps) {
+// Vrne: 1,67 m/zaveslaj (4 dolžine × 5m odriv)</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Hitrost od SR in DPS</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        Hitrost (m/s) = (SR / 60) × DPS
+                    </div>
+                </div>
+
+                <h4>Izvedba v JavaScriptu:</h4>
+                <pre><code>function calculateVelocity(strokeRate, dps) {
   return (strokeRate / 60) * dps;
 }
 
-// Example:
+// Primer:
 const velocity = calculateVelocity(70, 1.6);
-// Returns: 1.87 m/s</code></pre>
-</div>
-</div>
-<div class="formula-card">
-<h3>Indeks kapi (SI)</h3>
-<div class="formula-content">
-<h4>Formula:</h4>
-<div class="formula-box-large">
-<div class="formula">SI = Hitrost (m/s) × DPS (m/hod)</div>
-</div>
-<h4>Izvedba JavaScripta:</h4>
-<pre><code>function calculateStrokeIndex(velocity, dps) {
+// Vrne: 1,87 m/s</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Indeks kapi (SI)</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        SI = Hitrost (m/s) × DPS (m/zaveslaj)
+                    </div>
+                </div>
+
+                <h4>Izvedba v JavaScriptu:</h4>
+                <pre><code>function calculateStrokeIndex(velocity, dps) {
   return velocity * dps;
 }
 
-// Example:
+// Primer:
 const si = calculateStrokeIndex(1.5, 1.7);
-// Returns: 2.55</code></pre>
-</div>
-</div>
-</div>
+// Vrne: 2.55</code></pre>
+            </div>
+        </div>
+    </div>
 </section>
+
 <section class="section section-alt">
-<div class="container">
-<h2>Tabela upravljanja uspešnosti (PMC)</h2>
-<div class="formula-card">
-<h3>Izračuni CTL, ATL, TSB</h3>
-<div class="formula-content">
-<h4>Formula:</h4>
-<div class="formula-box-large">
-<div class="formula">CTL danes = CTL včeraj + (TSS danes - CTL včeraj) × (1/42)</div>
-<div class="formula">ATL danes = ATL včeraj + (TSS danes - ATL včeraj) × (1/7)</div>
-<div class="formula">TSB = CTL včeraj - ATL včeraj</div>
-</div>
-<h4>Izvedba JavaScripta:</h4>
-<pre><code>function updateCTL(previousCTL, todayTSS) {
+    <div class="container">
+        <h2>Tabela upravljanja uspešnosti (PMC)</h2>
+
+        <div class="formula-card">
+            <h3>Izračuni CTL, ATL, TSB</h3>
+            <div class="formula-content">
+                <h4>Formule:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        CTL hoy = CTL ayer + (TSS hoy - CTL ayer) × (1/42)
+                    </div>
+                    <div class="formula">
+                        ATL hoy = ATL ayer + (TSS hoy - ATL ayer) × (1/7)
+                    </div>
+                    <div class="formula">
+                        TSB = CTL ayer - ATL ayer
+                    </div>
+                </div>
+
+                <h4>Izvedba v JavaScriptu:</h4>
+                <pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
 
@@ -1351,7 +1422,7 @@ function calculatePMC(workouts) {
   let ctl = 0, atl = 0;
   const results = [];
 
-  workouts.forEach(workout =&gt; {
+  workouts.forEach(workout => {
     ctl = updateCTL(ctl, workout.tss);
     atl = updateATL(atl, workout.tss);
     const tsb = calculateTSB(ctl, atl);
@@ -1378,24 +1449,26 @@ const workouts = [
 
 const pmc = calculatePMC(workouts);
 // Returns array with CTL, ATL, TSB for each day</code></pre>
-</div>
-</div>
-</div>
+            </div>
+        </div>
+    </div>
 </section>
+
 <section class="section">
-<div class="container">
-<h2>Napredni izračuni</h2>
-<div class="formula-card">
-<h3>CSS iz več razdalj (metoda regresije)</h3>
-<div class="formula-content">
-<h4>Izvedba JavaScripta:</h4>
-<pre><code>function calculateCSSRegression(distances, times) {
+    <div class="container">
+        <h2>Napredni izračuni</h2>
+
+        <div class="formula-card">
+            <h3>CSS iz več razdalj (metoda regresije)</h3>
+            <div class="formula-content">
+                <h4>Izvedba v JavaScriptu:</h4>
+                <pre><code>function calculateCSSRegression(distances, times) {
   // Linear regression: distance = a + b*time
   const n = distances.length;
-  const sumX = times.reduce((a, b) =&gt; a + b, 0);
-  const sumY = distances.reduce((a, b) =&gt; a + b, 0);
-  const sumXY = times.reduce((sum, x, i) =&gt; sum + x * distances[i], 0);
-  const sumXX = times.reduce((sum, x) =&gt; sum + x * x, 0);
+  const sumX = times.reduce((a, b) => a + b, 0);
+  const sumY = distances.reduce((a, b) => a + b, 0);
+  const sumXY = times.reduce((sum, x, i) => sum + x * distances[i], 0);
+  const sumXX = times.reduce((sum, x) => sum + x * x, 0);
 
   const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
   const intercept = (sumY - slope * sumX) / n;
@@ -1406,38 +1479,40 @@ const pmc = calculatePMC(workouts);
   };
 }
 
-// Example with multiple test distances:
+// Ejemplo con múltiples distancias de prueba:
 const distances = [100, 200, 400, 800];
-const times = [65, 150, 340, 720]; // in seconds
+const times = [65, 150, 340, 720]; // en segundos
 const result = calculateCSSRegression(distances, times);
-// Returns: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
-</div>
-</div>
-<div class="formula-card">
-<h3>Faktor intenzivnosti ritma</h3>
-<div class="formula-content">
-<h4>Izvedba JavaScripta:</h4>
-<pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
+// Devuelve: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Faktor intenzivnosti iz ritma</h3>
+            <div class="formula-content">
+                <h4>Izvedba v JavaScriptu:</h4>
+                <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
   // Convert pace to speed (m/s)
   const actualSpeed = 100 / actualPace100m;
   const thresholdSpeed = 100 / thresholdPace100m;
   return actualSpeed / thresholdSpeed;
 }
 
-// Example:
+// Ejemplo:
 const if_value = calculateIntensityFactor(110, 93);
-// Returns: 0.845 (swimming at 84.5% of threshold)</code></pre>
-</div>
-</div>
-<div class="formula-card">
-<h3>Analiza doslednosti ritma</h3>
-<div class="formula-content">
-<h4>Izvedba JavaScripta:</h4>
-<pre><code>function analyzePaceConsistency(laps) {
-  const paces = laps.map(lap =&gt; lap.distance / lap.time);
-  const avgPace = paces.reduce((a, b) =&gt; a + b) / paces.length;
+// Devuelve: 0.845 (nadando al 84.5% del umbral)</code></pre>
+            </div>
+        </div>
 
-  const variance = paces.reduce((sum, pace) =&gt;
+        <div class="formula-card">
+            <h3>Analiza doslednosti ritma</h3>
+            <div class="formula-content">
+                <h4>Izvedba v JavaScriptu:</h4>
+                <pre><code>function analyzePaceConsistency(laps) {
+  const paces = laps.map(lap => lap.distance / lap.time);
+  const avgPace = paces.reduce((a, b) => a + b) / paces.length;
+
+  const variance = paces.reduce((sum, pace) =>
     sum + Math.pow(pace - avgPace, 2), 0) / paces.length;
   const stdDev = Math.sqrt(variance);
   const coefficientOfVariation = (stdDev / avgPace) * 100;
@@ -1446,13 +1521,13 @@ const if_value = calculateIntensityFactor(110, 93);
     avgPace,
     stdDev,
     coefficientOfVariation,
-    consistency: coefficientOfVariation &lt; 5 ? "Eccellente" :
-                 coefficientOfVariation &lt; 10 ? "Buona" :
-                 coefficientOfVariation &lt; 15 ? "Moderata" : "Variabile"
+    consistency: coefficientOfVariation < 5 ? "Excelente" :
+                 coefficientOfVariation < 10 ? "Buena" :
+                 coefficientOfVariation < 15 ? "Moderada" : "Variable"
   };
 }
 
-// Example:
+// Ejemplo:
 const laps = [
   { distance: 100, time: 70 },
   { distance: 100, time: 72 },
@@ -1460,20 +1535,21 @@ const laps = [
   // ...
 ];
 const analysis = analyzePaceConsistency(laps);
-// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Eccellente" }</code></pre>
-</div>
-</div>
-<div class="formula-card">
-<h3>Zaznavanje utrujenosti s štetjem udarcev</h3>
-<div class="formula-content">
-<h4>Izvedba JavaScripta:</h4>
-<pre><code>function detectFatigue(laps) {
+// Devuelve: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Excelente" }</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Zaznavanje utrujenosti s štetjem udarcev</h3>
+            <div class="formula-content">
+                <h4>Izvedba v JavaScriptu:</h4>
+                <pre><code>function detectFatigue(laps) {
   const firstThird = laps.slice(0, Math.floor(laps.length/3));
   const lastThird = laps.slice(-Math.floor(laps.length/3));
 
-  const firstThirdAvg = firstThird.reduce((sum, lap) =&gt;
+  const firstThirdAvg = firstThird.reduce((sum, lap) =>
     sum + lap.strokeCount, 0) / firstThird.length;
-  const lastThirdAvg = lastThird.reduce((sum, lap) =&gt;
+  const lastThirdAvg = lastThird.reduce((sum, lap) =>
     sum + lap.strokeCount, 0) / lastThird.length;
 
   const strokeCountIncrease = ((lastThirdAvg - firstThirdAvg) / firstThirdAvg) * 100;
@@ -1482,59 +1558,61 @@ const analysis = analyzePaceConsistency(laps);
     firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
     lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
     percentIncrease: Math.round(strokeCountIncrease * 10) / 10,
-    fatigueLevel: strokeCountIncrease &lt; 5 ? "Minima" :
-                  strokeCountIncrease &lt; 10 ? "Moderata" :
-                  strokeCountIncrease &lt; 20 ? "Significativa" : "Severa"
+    fatigueLevel: strokeCountIncrease < 5 ? "Mínima" :
+                  strokeCountIncrease < 10 ? "Moderada" :
+                  strokeCountIncrease < 20 ? "Significativa" : "Severa"
   };
 }
 
-// Example:
+// Ejemplo:
 const laps = [
   { strokeCount: 14 }, { strokeCount: 14 }, { strokeCount: 15 },
   { strokeCount: 15 }, { strokeCount: 16 }, { strokeCount: 16 },
   { strokeCount: 17 }, { strokeCount: 18 }, { strokeCount: 18 }
 ];
 const fatigue = detectFatigue(laps);
-// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Severa" }</code></pre>
-</div>
-</div>
-</div>
+// Devuelve: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Severa" }</code></pre>
+            </div>
+        </div>
+    </div>
 </section>
+
 <section class="section section-alt">
-<div class="container">
-<h2>Validacija podatkov</h2>
-<div class="formula-card">
-<h3>Preverjanje kakovosti podatkov o usposabljanju</h3>
-<div class="formula-content">
-<h4>Izvedba JavaScripta:</h4>
-<pre><code>function validateWorkoutData(workout) {
+    <div class="container">
+        <h2>Validacija podatkov</h2>
+
+        <div class="formula-card">
+            <h3>Preverjanje kakovosti podatkov o usposabljanju</h3>
+            <div class="formula-content">
+                <h4>Izvedba v JavaScriptu:</h4>
+                <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
   // Check for reasonable pace ranges (1:00-5:00 per 100m)
   const avgPace = (workout.totalTime / workout.totalDistance) * 100;
-  if (avgPace &lt; 60 || avgPace &gt; 300) {
-    issues.push(`Ritmo medio insolito: ${Math.round(avgPace)}s per 100m`);
+  if (avgPace < 60 || avgPace > 300) {
+    issues.push(`Ritmo promedio inusual: ${Math.round(avgPace)}s por 100m`);
   }
 
   // Check for reasonable stroke counts (10-50 per 25m)
   const avgStrokesPer25m = (workout.totalStrokes / workout.totalDistance) * 25;
-  if (avgStrokesPer25m &lt; 10 || avgStrokesPer25m &gt; 50) {
-    issues.push(`Conteggio bracciate insolito: ${Math.round(avgStrokesPer25m)} per 25m`);
+  if (avgStrokesPer25m < 10 || avgStrokesPer25m > 50) {
+    issues.push(`Neobičajno število zaveslajev: ${Math.round(avgStrokesPer25m)} na 25 m`);
   }
 
   // Check for reasonable stroke rate (30-150 SPM)
   const avgSR = calculateStrokeRate(workout.totalStrokes, workout.totalTime);
-  if (avgSR &lt; 30 || avgSR &gt; 150) {
-    issues.push(`Frequenza di bracciata insolita: ${Math.round(avgSR)} SPM`);
+  if (avgSR < 30 || avgSR > 150) {
+    issues.push(`Neobičajna frekvenca zaveslajev: ${Math.round(avgSR)} SPM`);
   }
 
   // Check for missing laps (gaps in time)
-  if (workout.laps &amp;&amp; workout.laps.length &gt; 1) {
-    for (let i = 1; i &lt; workout.laps.length; i++) {
+  if (workout.laps && workout.laps.length > 1) {
+    for (let i = 1; i < workout.laps.length; i++) {
       const gap = workout.laps[i].startTime -
                   (workout.laps[i-1].startTime + workout.laps[i-1].duration);
-      if (gap &gt; 300) { // 5 minute gap
-        issues.push(`Lacuna ampia rilevata tra vasche ${i} e ${i+1}`);
+      if (gap > 300) { // 5 minute gap
+        issues.push(`Hueco grande detectado entre largos ${i} y ${i+1}`);
       }
     }
   }
@@ -1545,27 +1623,29 @@ const fatigue = detectFatigue(laps);
   };
 }
 
-// Example:
+// Ejemplo:
 const workout = {
   totalDistance: 2000,
-  totalTime: 1800, // 30 minutes
+  totalTime: 1800, // 30 minutos
   totalStrokes: 800,
-  laps: [/* lap data */]
+  laps: [/* datos de largos */]
 };
 const validation = validateWorkoutData(workout);
-// Returns: { isValid: true, issues: [] }</code></pre>
-</div>
-</div>
-</div>
+// Devuelve: { isValid: true, issues: [] }</code></pre>
+            </div>
+        </div>
+    </div>
 </section>
+
 <section class="section">
-<div class="container container-narrow">
-<h2>Pomožne funkcije</h2>
-<div class="formula-card">
-<h3>Pripomoček za pretvorbo časa</h3>
-<div class="formula-content">
-<h4>Izvedba JavaScripta:</h4>
-<pre><code>// Convert mm:ss to seconds
+    <div class="container container-narrow">
+        <h2>Pomožne funkcije</h2>
+
+        <div class="formula-card">
+            <h3>Pripomočki za pretvorbo časa</h3>
+            <div class="formula-content">
+                <h4>Izvedba v JavaScriptu:</h4>
+                <pre><code>// Convert mm:ss to seconds
 function timeToSeconds(timeString) {
   const parts = timeString.split(':');
   return parseInt(parts[0]) * 60 + parseInt(parts[1]);
@@ -1586,33 +1666,36 @@ function secondsToTimeDetailed(seconds) {
   return `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 }
 
-// Examples:
-timeToSeconds("1:33"); // Returns: 93
-secondsToTime(93); // Returns: "1:33"
-secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
-</div>
-</div>
-</div>
+// Ejemplos:
+timeToSeconds("1:33"); // Devuelve: 93
+secondsToTime(93); // Devuelve: "1:33"
+secondsToTimeDetailed(3665); // Devuelve: "1:01:05"</code></pre>
+            </div>
+        </div>
+    </div>
 </section>
+
 <section class="section section-alt">
-<div class="container container-narrow text-center">
-<h2>Izvedbeni viri</h2>
-<p class="lead">Vse formule na tej strani so pripravljene za proizvodnjo in potrjene glede na znanstveno literaturo. Uporabite jih za orodja za analizo po meri, preverjanje ali poglobljeno razumevanje izračunov plavalnih zmogljivosti.</p>
-<div class="callout callout-tip">
-<h3>💡 Najboljše prakse</h3>
-<ul class="text-left">
-<li><strong>Potrdi vnose:</strong>Pred izračunom preverite razumne razpone</li>
-<li><strong>Upravljanje robnih primerov:</strong>Deljenje z ničlo, negativne vrednosti, ničelni podatki</li>
-<li><strong>Ustrezno zaokroži:</strong>CTL/ATL/TSB je 1 decimalka, sTSS je intero</li>
-<li><strong>Ohranite natančnost:</strong>Ohranite popolno natančnost v bazi podatkov, okroglo za prikaz</li>
-<li><strong>Izčrpno preizkusite:</strong>Za preverjanje izračunov uporabite znane in pravilne podatke</li>
-</ul>
-</div>
-<div class="mt-xl">
-<a class="btn btn-primary btn-large" href="/sl/">Vrnitev domov</a>
-<a class="btn btn-secondary" href="/sl/research/">Znanstvena fundacija</a>
-</div>
-</div>
+    <div class="container container-narrow text-center">
+        <h2>Izvedbeni viri</h2>
+        <p class="lead">Vse formule na tej strani so pripravljene za proizvodnjo in potrjene glede na znanstveno literaturo. Uporabite jih za orodja za analizo po meri, preverjanje ali globlje razumevanje izračunov plavalnih zmogljivosti.</p>
+
+        <div class="callout callout-tip">
+            <h3>💡 Najboljše prakse</h3>
+            <ul class="text-left">
+                <li><strong>Potrdi vnose:</strong>Pred izračunom preverite razumne razpone</li>
+                <li><strong>Obravnava mejne primere:</strong>Deljenje z ničlo, negativne vrednosti, ničelni podatki</li>
+                <li><strong>Ustrezno zaokroži:</strong>CTL/ATL/TSB na 1 decimalko, sTSS na celo število</li>
+                <li><strong>Shranjuje natančnost:</strong>Ohranite popolno natančnost v bazi podatkov, zaokrožite za prikaz</li>
+                <li><strong>Temeljito preizkusite:</strong>Za preverjanje izračunov uporabite znane in pravilne podatke</li>
+            </ul>
+        </div>
+
+        <div class="mt-xl">
+            <a href="/es/" class="btn btn-primary btn-large">Vrnitev domov</a>
+            <a href="/es/research/" class="btn btn-secondary">Znanstvena fundacija</a>
+        </div>
+    </div>
 </section>
     </main>
 

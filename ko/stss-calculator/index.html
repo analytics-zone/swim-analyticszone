@@ -820,163 +820,357 @@ img[width][height] {
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>무료 Swimming TSS 계산기</h1>
-        <p class="lead">CSS와 워크아웃 데이터를 입력해 sTSS, IF, 구간 페이스를 자동 계산</p>
+        <h1>무료 수영 TSS 계산기</h1>
+        <p class="lead">수영 운동의 훈련 스트레스 점수(TSS) 계산 - 유일한 무료 sTSS 계산기</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Swimming TSS (sTSS)란?</h2>
-        <p><strong>Swimming Training Stress Score (sTSS)</strong>는 워크아웃의 강도와 시간을 결합해 훈련 부하를 정량화하는 지표입니다. 사이클링 TSS에서 발전했지만, 수영의 물리적 특성(저항 증가)을 반영해 <strong>IF³</strong>를 사용합니다.</p>
+        <div class="callout callout-info mb-xl">
+            <h2>수영 TSS(sTSS)란 무엇인가요?</h2>
+            <p><strong>수영 훈련 스트레스 점수(Swimming Training Stress Score, sTSS)</strong>는 강도와 지속 시간을 결합하여 수영 운동의 훈련 부하를
+                정량화합니다. 이것은 사이클링의 TSS 방법론에서 수정되었으며, 임계 수영 속도(CSS)를 역치 페이스로 사용합니다. CSS 페이스로 1시간 운동 시 = 100 sTSS입니다.</p>
+        </div>
 
-        <div class="callout callout-info">
+        <h2 class="mt-3xl">무료 sTSS 계산기</h2>
+        <p class="lead mb-xl">모든 수영 운동의 훈련 스트레스를 계산하세요. CSS 페이스가 필요합니다.</p>
+
+        <div class="css-calculator">
+            <form id="stssCalculatorForm">
+                <div class="calculator-inputs">
+                    <div class="form-group">
+                        <label for="cssPace" class="form-label">당신의 CSS 페이스 (100m 당 mm:ss)</label>
+                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
+                        <small id="cssPace-help" class="form-help">CSS 테스트에서 얻은 역치 페이스 (예: 1:49)</small>
+                        <div class="form-error" id="cssPace-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workoutDuration" class="form-label">운동 지속 시간 (분)</label>
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
+                        <small id="duration-help" class="form-help">휴식을 포함한 총 운동 시간 (1-300분)</small>
+                        <div class="form-error" id="duration-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avgPace" class="form-label">평균 운동 페이스 (100m 당 mm:ss)</label>
+                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">운동 중 평균 페이스 (예: 2:05)</small>
+                        <div class="form-error" id="pace-error"></div>
+                    </div>
+
+                    <div class="calculator-buttons">
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">sTSS 계산하기</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">초기화</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="calculator-results hidden" id="stssResults" aria-live="polite">
+                <h3>당신의 훈련 스트레스 점수</h3>
+                <div class="results-summary">
+                    <div class="result-item">
+                        <div class="result-label">sTSS</div>
+                        <div class="css-result-value" id="stssValue">--</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">강도 계수 (IF)</div>
+                        <div class="css-result-value" id="intensityFactor">--</div>
+                    </div>
+                </div>
+
+                <div class="zones-result">
+                    <h4>훈련 부하 해석</h4>
+                    <p class="mb-md text-secondary" id="stssInterpretation">
+                        <!-- 자바스크립트로 채워짐 -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">sTSS 계산 방법</h2>
+
+        <div class="formula-box">
             <h3>공식</h3>
-            <p>sTSS = (IF³) × 시간(시간 단위) × 100</p>
-            <p>Intensity Factor(IF) = 워크아웃 속도 / CSS 속도</p>
+            <div class="formula">
+                sTSS = (시간 단위 지속 시간) × (강도 계수)² × 100
+            </div>
+            <div class="formula-explanation">
+                <p>여기서:</p>
+                <ul>
+                    <li><strong>강도 계수 (IF)</strong> = CSS 페이스 / 평균 운동 페이스</li>
+                    <li><strong>지속 시간</strong> = 시간 단위의 총 운동 시간</li>
+                    <li><strong>CSS 페이스</strong> = CSS 테스트에서 얻은 역치 페이스</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="mt-xl">계산 예시</h3>
+        <div class="example-box">
+            <h4>운동 세부 정보:</h4>
+            <ul>
+                <li>CSS 페이스: <strong>1:49/100m</strong> (109초)</li>
+                <li>운동 지속 시간: <strong>60분</strong> (1시간)</li>
+                <li>평균 페이스: <strong>2:05/100m</strong> (125초)</li>
+            </ul>
+
+            <h4>1단계: 강도 계수 계산</h4>
+            <div class="calculation">
+                IF = CSS 페이스 / 운동 페이스<br>
+                IF = 109 / 125<br>
+                IF = <strong>0.872</strong>
+            </div>
+
+            <h4>2단계: sTSS 계산</h4>
+            <div class="calculation">
+                sTSS = 1.0 시간 × (0.872)² × 100<br>
+                sTSS = 1.0 × 0.760 × 100<br>
+                sTSS = <strong>76</strong>
+            </div>
+
+            <p class="mt-md"><strong>해석:</strong> 쉬운 페이스(CSS보다 느림)로 진행된 이 60분 운동은 76 sTSS를 생성했습니다 - 유산소 기초를 다지기에 적합한 적당한
+                훈련 부하입니다.</p>
+        </div>
+
+        <h2 class="mt-3xl">sTSS 값 이해하기</h2>
+
+        <div class="zones-table-container">
+            <table class="zones-table">
+                <thead>
+                    <tr>
+                        <th>sTSS 범위</th>
+                        <th>훈련 부하</th>
+                        <th>회복 시간</th>
+                        <th>예시 운동</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>낮음</td>
+                        <td>당일</td>
+                        <td>쉬운 30분 수영, 기술 드릴</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>보통</td>
+                        <td>1일</td>
+                        <td>60분 지구력, 꾸준한 페이스</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>높음</td>
+                        <td>1-2일</td>
+                        <td>90분 역치 세트, 레이스 페이스 인터벌</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>매우 높음</td>
+                        <td>2-3일</td>
+                        <td>2시간 하드 트레이닝, 다중 역치 블록</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>극심함</td>
+                        <td>3일 이상</td>
+                        <td>장거리 레이스 (&gt;2시간), 울트라 지구력</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="mt-3xl">주간 sTSS 가이드라인</h2>
+
+        <p class="mb-md">목표 주간 sTSS는 훈련 수준과 목표에 따라 다릅니다:</p>
+
+        <div class="grid grid-2 mb-xl">
+            <div class="card">
+                <h3 class="card-title">레크리에이션 수영 선수</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>주간 sTSS:</strong> 150-300</p>
+                    <p>주 2-3회 운동, 각 50-100 sTSS. 기술과 유산소 기초 다지기에 집중.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">피트니스 수영 선수 / 철인 3종 경기 선수</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>주간 sTSS:</strong> 300-500</p>
+                    <p>주 3-4회 운동, 각 75-125 sTSS. 유산소 지구력과 역치 훈련의 혼합.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">경쟁 마스터즈 수영 선수</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>주간 sTSS:</strong> 500-800</p>
+                    <p>주 4-6회 운동, 각 80-150 sTSS. 주기화가 포함된 체계적인 훈련.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">엘리트 / 대학 수영 선수</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>주간 sTSS:</strong> 800-1200+</p>
+                    <p>주 8-12회 운동, 하루 2회 훈련. 회복 관리가 중요한 높은 볼륨.</p>
+                </div>
+            </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ CSS가 핵심</h3>
-            <p>CSS가 부정확하면 IF, sTSS, CTL/ATL/TSB 모두 잘못됩니다. <a href="/ko/css/">CSS 테스트</a>를 정확히 수행하세요.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">계산기 사용 방법</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>1) CSS 입력</h3>
-                <ul>
-                    <li>400m, 200m 기록을 입력해 CSS를 계산하거나</li>
-                    <li>이미 알고 있다면 CSS 페이스/속도를 직접 입력</li>
-                </ul>
-            </div>
-            <div>
-                <h3>2) 워크아웃 데이터 입력</h3>
-                <ul>
-                    <li>총 거리 (m)</li>
-                    <li>이동 시간 (분:초)</li>
-                    <li>휴식 시간은 제외</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="grid grid-2 mt-xl">
-            <div>
-                <h3>3) 결과 확인</h3>
-                <ul>
-                    <li>IF (Intensity Factor)</li>
-                    <li>sTSS (훈련 부하 점수)</li>
-                    <li>평균 페이스 및 존 페이스</li>
-                </ul>
-            </div>
-            <div>
-                <h3>4) 부하 관리</h3>
-                <p>sTSS를 일/주 단위로 합산해 CTL/ATL/TSB를 추적합니다.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>예시</h2>
-        <div class="example-box">
-            <h4>입력</h4>
+            <h3>⚠️ 중요 참고 사항</h3>
             <ul>
-                <li>CSS: 1:33/100m</li>
-                <li>총 거리: 3000m</li>
-                <li>이동 시간: 55:00</li>
-            </ul>
-
-            <h4>출력</h4>
-            <ul>
-                <li>IF ≈ 0.845</li>
-                <li>sTSS ≈ 55</li>
-                <li>평균 페이스, 존별 페이스 표시</li>
+                <li><strong>정확한 CSS 필요:</strong> 정확한 sTSS를 위해서는 CSS가 최신 상태여야 합니다 (6-8주 이내 테스트).</li>
+                <li><strong>단순화된 계산:</strong> 이 계산기는 평균 페이스를 사용합니다. 고급 sTSS는 인터벌 구조를 고려하는 정규화 등급 페이스(NGP)를 사용합니다.</li>
+                <li><strong>기술 훈련용 아님:</strong> sTSS는 신체적 훈련 스트레스만 측정하며, 기술 개발은 측정하지 않습니다.</li>
+                <li><strong>개인차:</strong> 동일한 sTSS라도 수영 선수마다 다르게 느껴질 수 있습니다. 회복 상태에 따라 가이드라인을 조정하세요.</li>
             </ul>
         </div>
+
+        <h2 class="mt-3xl">sTSS가 중요한 이유</h2>
+
+        <p class="mb-md">훈련 스트레스 점수는 다음의 기초입니다:</p>
+
+        <ul class="mb-xl">
+            <li><strong>CTL (만성 훈련 부하):</strong> 체력 수준 - 일일 sTSS의 42일 지수 가중 이동 평균</li>
+            <li><strong>ATL (급성 훈련 부하):</strong> 피로도 - 일일 sTSS의 7일 지수 가중 이동 평균</li>
+            <li><strong>TSB (훈련 스트레스 균형):</strong> 컨디션 - TSB = CTL - ATL (양수 = 신선함, 음수 = 피로함)</li>
+            <li><strong>주기화:</strong> CTL 목표 진행 상황을 사용하여 훈련 단계(기초, 빌드, 피크, 테이퍼) 계획</li>
+            <li><strong>회복 관리:</strong> TSB를 기반으로 언제 밀어붙이고 언제 쉴지 파악</li>
+        </ul>
+
+        <div class="callout callout-tip">
+            <h3>프로 팁: CTL 추적하기</h3>
+            <p>스프레드시트나 훈련 로그에 일일 sTSS를 기록하세요. 매주 42일 평균(CTL)을 계산하세요. 기초 단계 동안 주당 5-10 CTL 포인트 증가를 목표로 하세요. 테이퍼링 기간(대회
+                1-2주 전)에는 CTL을 유지하거나 약간 줄이세요.</p>
+        </div>
+
+        <h2 class="mt-3xl">자주 묻는 질문</h2>
+
+        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">수영 TSS(sTSS)란 무엇인가요?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>수영 훈련 스트레스 점수(sTSS)는 강도와 지속 시간을 모두 결합하여 수영 운동의 훈련 부하를 정량화하는 지표입니다. 사이클링의 TSS 방법론에서 수정되었으며, 임계
+                            수영 속도(CSS)를 역치 페이스로 사용합니다. CSS 페이스로 1시간 동안 운동하면 100 sTSS와 같습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">내 sTSS를 어떻게 계산하나요?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>위의 계산기를 사용하여 CSS 페이스(CSS 테스트에서), 총 운동 시간, 운동 중 평균 페이스를 입력하세요. 공식은 다음과 같습니다: sTSS = 지속 시간(시간)
+                            × 강도 계수² × 100, 여기서 강도 계수 = CSS 페이스 / 평균 운동 페이스입니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">sTSS를 계산하려면 CSS가 필요한가요?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>네, sTSS 계산에 필수적인 강도 계수를 계산하려면 임계 수영 속도(CSS)가 필요합니다. CSS는 역치 페이스를 나타내며 6-8주마다 테스트해야 합니다. <a
+                                href="/ko/css/">CSS 계산기</a>를 사용하여 CSS를 찾을 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">한 번의 운동에 적절한 sTSS 점수는 얼마인가요?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>운동 강도에 따라 다릅니다: 쉬운 운동은 보통 50 sTSS 미만, 보통 운동은 50-100 sTSS, 힘든 운동은 100-200 sTSS, 매우 힘든 운동은 200
+                            sTSS 이상입니다. 적절한 점수는 훈련 목표와 현재 체력 수준에 따라 다릅니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">일주일에 얼마나 많은 sTSS를 해야 하나요?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>주간 sTSS 목표는 수준에 따라 다릅니다: 레크리에이션 수영 선수: 150-300, 피트니스 수영 선수/철인 3종 경기 선수: 300-500, 경쟁 마스터즈:
+                            500-800, 엘리트/대학: 800-1200+. 과도한 훈련을 피하기 위해 보수적으로 시작하고 점진적으로 늘리세요.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">수영 TSS는 사이클링 TSS와 같은가요?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>개념과 공식은 같지만 sTSS는 수영에 맞춰 수정되었습니다. 사이클링 TSS처럼 파워(FTP)를 사용하는 대신 sTSS는 CSS를 역치로 하는 페이스를 사용합니다. 둘
+                            다 지속 시간 × 강도 계수² × 100을 사용하여 훈련 부하를 측정합니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">모든 영법에 sTSS를 사용할 수 있나요?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>네, 하지만 CSS는 영법별로 구체적이어야 합니다. 대부분의 수영 선수는 가장 많이 훈련하는 영법인 자유형 CSS를 사용합니다. 만약 주로 다른 영법으로 훈련한다면
+                            해당 영법으로 CSS 테스트를 수행하고 그 페이스를 sTSS 계산에 사용하세요.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">sTSS와 CTL/ATL/TSB의 차이점은 무엇인가요?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>sTSS는 단일 운동의 훈련 부하를 측정합니다. CTL(만성 훈련 부하)은 장기적인 체력, ATL(급성 훈련 부하)은 최근의 피로도, TSB(훈련 스트레스 균형)는
+                            신선도입니다. 이 지표들은 훈련 상태를 추적하기 위해 시간 경과에 따른 sTSS 값을 사용합니다. <a
+                                href="/ko/training-load/">훈련 부하 가이드</a>에서 더 자세히 알아보세요.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">관련 자료</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">CSS 테스트</h3>
+                <div class="card-content">
+                    <p>CSS 페이스가 필요하신가요? 400m 및 200m 테스트 기록으로 무료 CSS 계산기를 사용하세요.</p>
+                    <a href="/ko/css/" class="btn btn-secondary btn-small mt-md">CSS 계산기 →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">훈련 부하 가이드</h3>
+                <div class="card-content">
+                    <p>CTL, ATL, TSB 및 성과 관리 차트 지표에 대해 알아보세요.</p>
+                    <a href="/ko/training-load/" class="btn btn-secondary btn-small mt-md">훈련 부하 →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Swim Analytics 앱</h3>
+                <div class="card-content">
+                    <p>모든 운동에 대한 자동 sTSS 계산. 시간 경과에 따른 CTL/ATL/TSB 추세를 추적하세요.</p>
+                    <a href="/ko/" class="btn btn-secondary btn-small mt-md">더 알아보기 →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>자동 sTSS 추적을 원하시나요?</strong></p>
+            <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Swim
+                Analytics 무료 다운로드</a>
+        </div>
     </div>
 </section>
 
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2 class="text-center mb-xl">sTSS 강도 가이드</h2>
-        <table class="intensity-table">
-            <thead>
-                <tr>
-                    <th>sTSS</th>
-                    <th>해석</th>
-                    <th>예시</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>&lt; 50</td>
-                    <td>회복</td>
-                    <td>30-45분 회복/드릴</td>
-                </tr>
-                <tr>
-                    <td>50-100</td>
-                    <td>보통</td>
-                    <td>60-90분 유산소</td>
-                </tr>
-                <tr>
-                    <td>100-200</td>
-                    <td>강함</td>
-                    <td>임계/VO₂ 세션 포함</td>
-                </tr>
-                <tr>
-                    <td>200+</td>
-                    <td>매우 강함</td>
-                    <td>장시간, 고강도 — 회복 계획 필수</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>자주 묻는 질문</h2>
-
-        <div class="faq-item">
-            <h3>sTSS와 TSS 차이는?</h3>
-            <p>개념은 동일하지만, 수영에서는 물 저항을 반영해 IF³를 사용합니다.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>휴식 시간을 포함해야 하나요?</h3>
-            <p>포함하지 않습니다. 이동 시간만 사용해 실제 수영 강도를 반영합니다.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>CSS를 모르면?</h3>
-            <p><a href="/ko/css/">CSS 테스트</a>를 먼저 수행해 정확한 기준을 설정하세요.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>오픈워터에도 적용되나요?</h3>
-            <p>네, CSS 기반이므로 오픈워터 수영에도 동일한 방식으로 sTSS를 계산할 수 있습니다.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow text-center">
-        <h2>sTSS로 훈련 부하를 정량화하세요</h2>
-        <p class="lead">CSS와 워크아웃 데이터를 기반으로 강도와 시간을 하나의 값으로.</p>
-
-        <div class="mt-xl">
-            <a href="/ko/training-load/" class="btn btn-secondary">← 훈련 부하</a>
-            <a href="/ko/training-zones/" class="btn btn-primary">훈련 존 →</a>
-        </div>
-    </div>
-</section>
+<script src="/assets/js/stss-calculator.min.js"></script>
     </main>
 
     

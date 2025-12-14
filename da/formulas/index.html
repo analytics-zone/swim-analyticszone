@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="da" dir="ltr">
 <head>
@@ -819,7 +818,815 @@ img[width][height] {
 
     
     <main id="main-content" class="main-content">
-        
+        <section class="hero hero-small">
+  <div class="container">
+    <h1>Teknisk Reference & Formler</h1>
+    <p class="lead">Komplet Matematisk Implementering</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container-narrow">
+    <h2>Implementeringsguide</h2>
+    <p class="lead">Denne side indeholder kopierbare formler og trin-for-trin beregningsmetoder for alle Swim Analytics
+      metrikker. Brug disse til tilpassede implementeringer, verifikation eller dybere forståelse.</p>
+
+    <div class="callout callout-warning">
+      <h3>⚠️ Implementeringsnoter</h3>
+      <ul>
+        <li>Alle tider skal konverteres til sekunder for beregninger</li>
+        <li>Svømmetempo er omvendt (højere % = langsommere tempo)</li>
+        <li>Valider altid inputs for rimelige intervaller</li>
+        <li>Håndter kanttilfælde (division med nul, negative værdier)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>Kerne Performance Metrikker</h2>
+
+    <div class="formula-card">
+      <h3>Kritisk Svømmehastighed (CSS)</h3>
+      <div class="formula-content">
+        <h4>Formel:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
+          </div>
+          <div class="formula">
+            CSS Tempo/100m (sekunder) = (T₄₀₀ - T₂₀₀) / 2
+          </div>
+        </div>
+
+        <div class="callout callout-info mt-lg">
+          <h4>🧪 Interaktiv Lommeregner - Test Formlen</h4>
+          <div class="calculator-grid">
+            <div class="input-group">
+              <label for="css-d1">Distance 1 (meter):</label>
+              <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
+            </div>
+            <div class="input-group">
+              <label for="css-t1">Tid 1 (mm:ss):</label>
+              <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
+            </div>
+            <div class="input-group">
+              <label for="css-d2">Distance 2 (meter):</label>
+              <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
+            </div>
+            <div class="input-group">
+              <label for="css-t2">Tid 2 (mm:ss):</label>
+              <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
+            </div>
+          </div>
+          <div class="calculator-result mt-md">
+            <div class="result-label">CSS Tempo pr. 100m:</div>
+            <div class="result-value" id="css-result">1:49</div>
+          </div>
+          <div class="calculation-breakdown mt-md">
+            <small>
+              <strong>Beregningstrin:</strong><br>
+              <span id="css-steps">
+                CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
+                Tempo/100m = 100 / 0.917 = 109 sekunder = 1:49
+              </span>
+            </small>
+          </div>
+        </div>
+
+        <h4 class="mt-xl">JavaScript Implementering:</h4>
+        <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
+  // Konverter tider til sekunder om nødvendigt
+  const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
+  const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
+
+  // Beregn CSS i m/s
+  const css_ms = (distance2 - distance1) / (t2 - t1);
+
+  // Beregn tempo pr. 100m i sekunder
+  const pace_per_100m = 100 / css_ms;
+
+  // Konverter til mm:ss format
+  const minutes = Math.floor(pace_per_100m / 60);
+  const seconds = Math.round(pace_per_100m % 60);
+
+  return {
+    css_ms: css_ms,
+    pace_seconds: pace_per_100m,
+    pace_formatted: `${minutes}:${seconds.toString().padStart(2, '0')}`
+  };
+}
+
+// Eksempel på brug:
+const result = calculateCSS(200, 150, 400, 368);
+// Returnerer: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
+
+        <script>
+          function timeToSecondsCSS(timeString) {
+            const parts = timeString.split(':');
+            return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+          }
+
+          function secondsToTimeCSS(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.round(seconds % 60);
+            return `${minutes}:${secs.toString().padStart(2, '0')}`;
+          }
+
+          function updateCSSCalculator() {
+            try {
+              const d1 = parseFloat(document.getElementById('css-d1').value);
+              const t1Input = document.getElementById('css-t1').value;
+              const d2 = parseFloat(document.getElementById('css-d2').value);
+              const t2Input = document.getElementById('css-t2').value;
+
+              if (!d1 || !t1Input || !d2 || !t2Input) return;
+
+              const t1 = timeToSecondsCSS(t1Input);
+              const t2 = timeToSecondsCSS(t2Input);
+
+              const css_ms = (d2 - d1) / (t2 - t1);
+              const pace_per_100m = 100 / css_ms;
+              const pace_formatted = secondsToTimeCSS(pace_per_100m);
+
+              document.getElementById('css-result').textContent = pace_formatted;
+              document.getElementById('css-steps').innerHTML =
+                `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
+                `Tempo/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} sekunder = ${pace_formatted}`;
+            } catch (e) {
+              console.error('CSS calculation error:', e);
+            }
+          }
+
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('css-d1').addEventListener('input', updateCSSCalculator);
+            document.getElementById('css-t1').addEventListener('input', updateCSSCalculator);
+            document.getElementById('css-d2').addEventListener('input', updateCSSCalculator);
+            document.getElementById('css-t2').addEventListener('input', updateCSSCalculator);
+            updateCSSCalculator();
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Swim Training Stress Score (sTSS)</h3>
+      <div class="formula-content">
+        <h4>Komplet Formel:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            sTSS = (IF³) × Varighed (timer) × 100
+          </div>
+          <div class="formula">
+            IF = NSS / FTP
+          </div>
+          <div class="formula">
+            NSS = Total Distance / Total Tid (m/min)
+          </div>
+        </div>
+
+        <div class="callout callout-info mt-lg">
+          <h4>🧪 Interaktiv Lommeregner - Test Formlen</h4>
+          <div class="calculator-grid">
+            <div class="input-group">
+              <label for="stss-distance">Distance (meter):</label>
+              <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
+            </div>
+            <div class="input-group">
+              <label for="stss-duration">Varighed (minutter):</label>
+              <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
+            </div>
+            <div class="input-group">
+              <label for="stss-css">CSS Tempo (mm:ss pr. 100m):</label>
+              <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
+            </div>
+            <div class="input-group">
+              <label>FTP (beregnet):</label>
+              <input type="text" id="stss-ftp" readonly value="64.5 m/min">
+            </div>
+          </div>
+          <div class="calculator-result mt-md">
+            <div class="result-label">Beregnet sTSS:</div>
+            <div class="result-value" id="stss-result">55</div>
+          </div>
+          <div class="calculation-breakdown mt-md">
+            <small>
+              <strong>Beregningstrin:</strong><br>
+              <span id="stss-steps">
+                NSS = 3000m / 55min = 54.5 m/min<br>
+                FTP = 100 / (93/60) = 64.5 m/min<br>
+                IF = 54.5 / 64.5 = 0.845<br>
+                sTSS = 0.845³ × (55/60) × 100 = 55
+              </span>
+            </small>
+          </div>
+        </div>
+
+        <h4 class="mt-xl">JavaScript Implementering:</h4>
+        <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+  // Beregn Normalized Swim Speed (NSS)
+  const nss = distance / timeMinutes;
+
+  // Beregn Intensity Factor (IF)
+  const intensityFactor = nss / ftpMetersPerMin;
+
+  // Beregn timer
+  const hours = timeMinutes / 60;
+
+  // Beregn sTSS ved brug af kubisk intensitetsfaktor
+  const stss = Math.pow(intensityFactor, 3) * hours * 100;
+
+  return Math.round(stss);
+}
+
+// Eksempel på brug:
+const stss = calculateSTSS(3000, 55, 64.5);
+// Returnerer: 55
+
+// Hjælper: Konverter CSS til FTP
+function cssToFTP(cssPacePer100mSeconds) {
+  // FTP i m/min = 100m / (tempo i minutter)
+  return 100 / (cssPacePer100mSeconds / 60);
+}
+
+// Eksempel: CSS på 1:33 (93 sekunder)
+const ftp = cssToFTP(93); // Returnerer: 64.5 m/min</code></pre>
+
+        <script>
+          // Tidsomregner hjælper
+          function timeToSeconds(timeString) {
+            const parts = timeString.split(':');
+            return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+          }
+
+          // CSS til FTP konvertering
+          function cssToFTP(cssPacePer100mSeconds) {
+            return 100 / (cssPacePer100mSeconds / 60);
+          }
+
+          // sTSS beregning
+          function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+            const nss = distance / timeMinutes;
+            const intensityFactor = nss / ftpMetersPerMin;
+            const hours = timeMinutes / 60;
+            const stss = Math.pow(intensityFactor, 3) * hours * 100;
+            return Math.round(stss);
+          }
+
+          // Opdater lommeregner
+          function updateSTSSCalculator() {
+            try {
+              const distance = parseFloat(document.getElementById('stss-distance').value);
+              const duration = parseFloat(document.getElementById('stss-duration').value);
+              const cssInput = document.getElementById('stss-css').value;
+
+              // Valider inputs
+              if (!distance || !duration || !cssInput) return;
+
+              // Konverter CSS til sekunder
+              const cssPaceSeconds = timeToSeconds(cssInput);
+
+              // Beregn FTP
+              const ftp = cssToFTP(cssPaceSeconds);
+
+              // Beregn NSS
+              const nss = distance / duration;
+
+              // Beregn Intensity Factor
+              const intensityFactor = nss / ftp;
+
+              // Beregn sTSS
+              const stss = calculateSTSS(distance, duration, ftp);
+
+              // Opdater visning
+              document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/min';
+              document.getElementById('stss-result').textContent = stss;
+
+              // Opdater beregningstrin
+              const hours = duration / 60;
+              document.getElementById('stss-steps').innerHTML =
+                `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1)} m/min<br>` +
+                `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
+                `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
+                `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
+            } catch (e) {
+              console.error('Calculation error:', e);
+            }
+          }
+
+          // Tilføj event listeners når siden indlæses
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('stss-distance').addEventListener('input', updateSTSSCalculator);
+            document.getElementById('stss-duration').addEventListener('input', updateSTSSCalculator);
+            document.getElementById('stss-css').addEventListener('input', updateSTSSCalculator);
+
+            // Initial beregning
+            updateSTSSCalculator();
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>SWOLF</h3>
+      <div class="formula-content">
+        <h4>Formel:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            SWOLF = Omgangstid (sekunder) + Antal Slag
+          </div>
+          <div class="formula">
+            SWOLF₂₅ = (Tid × 25/Pool Længde) + (Slag × 25/Pool Længde)
+          </div>
+        </div>
+
+        <div class="callout callout-info mt-lg">
+          <h4>🧪 Interaktiv Lommeregner - Test Formlen</h4>
+          <div class="calculator-grid">
+            <div class="input-group">
+              <label for="swolf-time">Omgangstid (sekunder):</label>
+              <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
+            </div>
+            <div class="input-group">
+              <label for="swolf-strokes">Antal Slag:</label>
+              <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
+            </div>
+            <div class="input-group">
+              <label for="swolf-pool">Pool Længde (m):</label>
+              <select id="swolf-pool">
+                <option value="25" selected>25m</option>
+                <option value="50">50m</option>
+              </select>
+            </div>
+          </div>
+          <div class="calculator-result mt-md">
+            <div class="result-label">SWOLF Score:</div>
+            <div class="result-value" id="swolf-result">35</div>
+          </div>
+          <div class="calculation-breakdown mt-md">
+            <small>
+              <strong>Beregning:</strong><br>
+              <span id="swolf-steps">
+                SWOLF = 20s + 15 slag = 35
+              </span>
+            </small>
+          </div>
+        </div>
+
+        <h4 class="mt-xl">JavaScript Implementering:</h4>
+        <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
+  return timeSeconds + strokeCount;
+}
+
+function calculateNormalizedSWOLF(timeSeconds, strokeCount, poolLength) {
+  const normalizedTime = timeSeconds * (25 / poolLength);
+  const normalizedStrokes = strokeCount * (25 / poolLength);
+  return normalizedTime + normalizedStrokes;
+}
+
+// Eksempel:
+const swolf = calculateSWOLF(20, 15);
+// Returnerer: 35
+
+const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
+// Returnerer: 35 (normaliseret til 25m)</code></pre>
+
+        <script>
+          function updateSWOLFCalculator() {
+            try {
+              const time = parseFloat(document.getElementById('swolf-time').value);
+              const strokes = parseFloat(document.getElementById('swolf-strokes').value);
+              const poolLength = parseFloat(document.getElementById('swolf-pool').value);
+
+              if (!time || !strokes) return;
+
+              let swolf, steps;
+              if (poolLength === 25) {
+                swolf = time + strokes;
+                steps = `SWOLF = ${time}s + ${strokes} slag = ${swolf}`;
+              } else {
+                const normalizedTime = time * (25 / poolLength);
+                const normalizedStrokes = strokes * (25 / poolLength);
+                swolf = normalizedTime + normalizedStrokes;
+                steps = `Normaliseret Tid = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
+                  `Normaliserede Slag = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
+                  `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
+              }
+
+              document.getElementById('swolf-result').textContent = swolf.toFixed(1);
+              document.getElementById('swolf-steps').innerHTML = steps;
+            } catch (e) {
+              console.error('SWOLF calculation error:', e);
+            }
+          }
+
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('swolf-time').addEventListener('input', updateSWOLFCalculator);
+            document.getElementById('swolf-strokes').addEventListener('input', updateSWOLFCalculator);
+            document.getElementById('swolf-pool').addEventListener('change', updateSWOLFCalculator);
+            updateSWOLFCalculator();
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Svømmemekanik</h2>
+
+    <div class="formula-card">
+      <h3>Slagfrekvens (SR)</h3>
+      <div class="formula-content">
+        <h4>Formel:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            SR = 60 / Cyklus Tid (sekunder)
+          </div>
+          <div class="formula">
+            SR = (Antal Slag / Tid i sekunder) × 60
+          </div>
+        </div>
+
+        <div class="callout callout-info mt-lg">
+          <h4>🧪 Interaktiv Lommeregner - Test Formlen</h4>
+          <div class="calculator-grid">
+            <div class="input-group">
+              <label for="sr-strokes">Antal Slag:</label>
+              <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
+            </div>
+            <div class="input-group">
+              <label for="sr-time">Tid (sekunder):</label>
+              <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
+            </div>
+          </div>
+          <div class="calculator-result mt-md">
+            <div class="result-label">Slagfrekvens (SPM):</div>
+            <div class="result-value" id="sr-result">72</div>
+          </div>
+          <div class="calculation-breakdown mt-md">
+            <small>
+              <strong>Beregning:</strong><br>
+              <span id="sr-steps">
+                SR = (30 / 25) × 60 = 72 SPM
+              </span>
+            </small>
+          </div>
+        </div>
+
+        <h4 class="mt-xl">JavaScript Implementering:</h4>
+        <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
+  return (strokeCount / timeSeconds) * 60;
+}
+
+// Eksempel:
+const sr = calculateStrokeRate(30, 25);
+// Returnerer: 72 SPM</code></pre>
+
+        <script>
+          function updateSRCalculator() {
+            try {
+              const strokes = parseFloat(document.getElementById('sr-strokes').value);
+              const time = parseFloat(document.getElementById('sr-time').value);
+
+              if (!strokes || !time) return;
+
+              const sr = (strokes / time) * 60;
+
+              document.getElementById('sr-result').textContent = sr.toFixed(1);
+              document.getElementById('sr-steps').innerHTML =
+                `SR = (${strokes} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
+            } catch (e) {
+              console.error('SR calculation error:', e);
+            }
+          }
+
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('sr-strokes').addEventListener('input', updateSRCalculator);
+            document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
+            updateSRCalculator();
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Distance Pr. Slag (DPS)</h3>
+      <div class="formula-content">
+        <h4>Formel:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            DPS = Distance / Antal Slag
+          </div>
+          <div class="formula">
+            DPS = Distance / (SR / 60)
+          </div>
+        </div>
+
+        <h4>JavaScript Implementering:</h4>
+        <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
+  const effectiveDistance = distance - pushoffDistance;
+  return effectiveDistance / strokeCount;
+}
+
+// Eksempel (25m pool, 5m push-off):
+const dps = calculateDPS(25, 12, 5);
+// Returnerer: 1.67 m/slag
+
+// For flere omgange:
+const dps100m = calculateDPS(100, 48, 4 * 5);
+// Returnerer: 1.67 m/slag (4 omgange × 5m push-off)</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Hastighed fra SR og DPS</h3>
+      <div class="formula-content">
+        <h4>Formel:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            Hastighed (m/s) = (SR / 60) × DPS
+          </div>
+        </div>
+
+        <h4>JavaScript Implementering:</h4>
+        <pre><code>function calculateVelocity(strokeRate, dps) {
+  return (strokeRate / 60) * dps;
+}
+
+// Eksempel:
+const velocity = calculateVelocity(70, 1.6);
+// Returnerer: 1.87 m/s</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Slagindeks (SI)</h3>
+      <div class="formula-content">
+        <h4>Formel:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            SI = Hastighed (m/s) × DPS (m/slag)
+          </div>
+        </div>
+
+        <h4>JavaScript Implementering:</h4>
+        <pre><code>function calculateStrokeIndex(velocity, dps) {
+  return velocity * dps;
+}
+
+// Eksempel:
+const si = calculateStrokeIndex(1.5, 1.7);
+// Returnerer: 2.55</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>Performance Management Chart (PMC)</h2>
+
+    <div class="formula-card">
+      <h3>CTL, ATL, TSB Beregninger</h3>
+      <div class="formula-content">
+        <h4>Formler:</h4>
+        <div class="formula-box-large">
+          <div class="formula">
+            CTL i dag = CTL i går + (TSS i dag - CTL i går) × (1/42)
+          </div>
+          <div class="formula">
+            ATL i dag = ATL i går + (TSS i dag - ATL i går) × (1/7)
+          </div>
+          <div class="formula">
+            TSB = CTL i går - ATL i går
+          </div>
+        </div>
+
+        <h4>JavaScript Implementering:</h4>
+        <pre><code>function updateCTL(previousCTL, todayTSS) {
+  return previousCTL + (todayTSS - previousCTL) * (1/42);
+}
+
+function updateATL(previousATL, todayTSS) {
+  return previousATL + (todayTSS - previousATL) * (1/7);
+}
+
+function calculateTSB(yesterdayCTL, yesterdayATL) {
+  return yesterdayCTL - yesterdayATL;
+}
+
+// Beregn PMC for en række træningspas
+function calculatePMC(workouts) {
+  let ctl = 0, atl = 0;
+  const results = [];
+
+  workouts.forEach(workout => {
+    ctl = updateCTL(ctl, workout.tss);
+    atl = updateATL(atl, workout.tss);
+    const tsb = calculateTSB(ctl, atl);
+
+    results.push({
+      date: workout.date,
+      tss: workout.tss,
+      ctl: Math.round(ctl * 10) / 10,
+      atl: Math.round(atl * 10) / 10,
+      tsb: Math.round(tsb * 10) / 10
+    });
+  });
+
+  return results;
+}
+
+// Eksempel på brug:
+const workouts = [
+  { date: '2025-01-01', tss: 50 },
+  { date: '2025-01-02', tss: 60 },
+  { date: '2025-01-03', tss: 45 },
+  // ... flere træningspas
+];
+
+const pmc = calculatePMC(workouts);
+// Returnerer array med CTL, ATL, TSB for hver dag</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Avancerede Beregninger</h2>
+
+    <div class="formula-card">
+      <h3>CSS fra Flere Distancer (Regressionsmetode)</h3>
+      <div class="formula-content">
+        <h4>JavaScript Implementering:</h4>
+        <pre><code>function calculateCSSRegression(distances, times) {
+  // Lineær regression: distance = a + b*time
+  const n = distances.length;
+  const sumX = times.reduce((a, b) => a + b, 0);
+  const sumY = distances.reduce((a, b) => a + b, 0);
+  const sumXY = times.reduce((sum, x, i) => sum + x * distances[i], 0);
+  const sumXX = times.reduce((sum, x) => sum + x * x, 0);
+
+  const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+  const intercept = (sumY - slope * sumX) / n;
+
+  return {
+    css: slope, // Kritisk svømmehastighed (m/s)
+    anaerobic_capacity: intercept // Anaerob kapacitet (m)
+  };
+}
+
+// Eksempel med flere testdistancer:
+const distances = [100, 200, 400, 800];
+const times = [65, 150, 340, 720]; // i sekunder
+const result = calculateCSSRegression(distances, times);
+// Returnerer: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Intensitetsfaktor fra Tempo</h3>
+      <div class="formula-content">
+        <h4>JavaScript Implementering:</h4>
+        <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
+  // Konverter tempo til hastighed (m/s)
+  const actualSpeed = 100 / actualPace100m;
+  const thresholdSpeed = 100 / thresholdPace100m;
+  return actualSpeed / thresholdSpeed;
+}
+
+// Eksempel:
+const if_value = calculateIntensityFactor(110, 93);
+// Returnerer: 0.845 (svømmer ved 84.5% af tærskel)</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Tempo Konsistens Analyse</h3>
+      <div class="formula-content">
+        <h4>JavaScript Implementering:</h4>
+        <pre><code>function analyzePaceConsistency(laps) {
+  const paces = laps.map(lap => lap.distance / lap.time);
+  const avgPace = paces.reduce((a, b) => a + b) / paces.length;
+
+  const variance = paces.reduce((sum, pace) =>
+    sum + Math.pow(pace - avgPace, 2), 0) / paces.length;
+  const stdDev = Math.sqrt(variance);
+  const coefficientOfVariation = (stdDev / avgPace) * 100;
+
+  return {
+    avgPace,
+    stdDev,
+    coefficientOfVariation,
+    consistency: coefficientOfVariation < 5 ? "Fremragende" :
+                 coefficientOfVariation < 10 ? "God" :
+                 coefficientOfVariation < 15 ? "Moderat" : "Variabel"
+  };
+}
+
+// Eksempel:
+const laps = [
+  { distance: 100, time: 70 },
+  { distance: 100, time: 72 },
+  { distance: 100, time: 71 },
+  // ...
+];
+const analysis = analyzePaceConsistency(laps);
+// Returnerer: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Fremragende" }</code></pre>
+      </div>
+    </div>
+
+    <div class="formula-card">
+      <h3>Træthedsdetektion fra Slagtælling</h3>
+      <div class="formula-content">
+        <h4>JavaScript Implementering:</h4>
+        <pre><code>function detectFatigue(laps) {
+  const firstThird = laps.slice(0, Math.floor(laps.length/3));
+  const lastThird = laps.slice(-Math.floor(laps.length/3));
+
+  const firstThirdAvg = firstThird.reduce((sum, lap) =>
+    sum + lap.strokeCount, 0) / firstThird.length;
+  const lastThirdAvg = lastThird.reduce((sum, lap) =>
+    sum + lap.strokeCount, 0) / lastThird.length;
+
+  const strokeCountIncrease = ((lastThirdAvg - firstThirdAvg) / firstThirdAvg) * 100;
+
+  return {
+    firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
+    lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
+    percentIncrease: Math.round(strokeCountIncrease * 10) / 10,
+    fatigueLevel: strokeCountIncrease < 5 ? "Minimal" :
+                  strokeCountIncrease < 10 ? "Moderat" :
+                  strokeCountIncrease < 20 ? "Signifikant" : "Alvorlig"
+  };
+}
+
+// Eksempel:
+const laps = [
+  { strokeCount: 14 }, { strokeCount: 14 }, { strokeCount: 15 },
+  { strokeCount: 15 }, { strokeCount: 16 }, { strokeCount: 16 },
+  { strokeCount: 17 }, { strokeCount: 18 }, { strokeCount: 18 }
+];
+const fatigue = detectFatigue(laps);
+// Returnerer: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Alvorlig" }</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>Data Validering</h2>
+
+    <div class="formula-card">
+      <h3>Træningsdata Kvalitetstjek</h3>
+      <div class="formula-content">
+        <h4>JavaScript Implementering:</h4>
+        <pre><code>function validateWorkoutData(workout) {
+  const issues = [];
+
+  // Tjek for rimelige tempointervaller (1:00-5:00 pr. 100m)
+  const avgPace = (workout.totalTime / workout.totalDistance) * 100;
+  if (avgPace < 60 || avgPace > 300) {
+    issues.push(`Usædvanligt gennemsnitstempo: ${Math.round(avgPace)}s pr. 100m`);
+  }
+
+  // Tjek for rimelige slagtal (10-50 pr. 25m)
+  const avgStrokesPer25m = (workout.totalStrokes / workout.totalDistance) * 25;
+  if (avgStrokesPer25m < 10 || avgStrokesPer25m > 50) {
+    issues.push(`Usædvanligt slagtal: ${Math.round(avgStrokesPer25m)} pr. 25m`);
+  }
+
+  // Tjek for rimelig slagfrekvens (30-150 SPM)
+  const avgSR = calculateStrokeRate(workout.totalStrokes, workout.totalTime);
+  if (avgSR < 30 || avgSR > 150) {
+    issues.push(`Usædvanlig slagfrekvens: ${Math.round(avgSR)} SPM`);
+  }
+
+  // Tjek for manglende omgange (huller i tid)
+  if (workout.laps && workout.laps.length > 1) {
+    for (let i = 1; i < workout.laps.length; i++) {
+      const gap = workout.laps[i].startTime -
+                  (workout.laps[i-1].startTime + workout.laps[i-1].duration);
+      if (gap > 300) { // 5 minutters hul
+        issues.push(`Stort hul opdaget mellem omgang ${i} og ${i+1}`);
+      }
+    }
+  }
+
+  return {
+    isValid: issues.length === 0,
+    issues: issues
+  };
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
 
     
