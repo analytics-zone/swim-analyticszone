@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Swim Analytics: iOS için Yüzme Performans Takibi ve Analitik</title>
+    <meta name="description" content="Yüzme metriklerini takip edin, CSS ve sTSS hesaplayın, profesyonel analitiklerle antrenman yükünü analiz edin. Yarışmacı yüzücüler ve triatletler için ücretsiz">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="yüzme takip uygulaması, yüzme analitiği, CSS hesaplayıcı, yüzme performansı, sTSS">
+    
+    <link rel="canonical" href="https://swim.analyticszone.app/tr/">
+
+    
+    
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swim.analyticszone.app/tr/">
+    <meta property="og:title" content="Swim Analytics: iOS için Yüzme Performans Takibi ve Analitik">
+    <meta property="og:description" content="Yüzme metriklerini takip edin, CSS ve sTSS hesaplayın, profesyonel analitiklerle antrenman yükünü analiz edin. Yarışmacı yüzücüler ve triatletler için ücretsiz">
+    <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Swim Analytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swim.analyticszone.app/tr/">
+    <meta name="twitter:title" content="Swim Analytics: iOS için Yüzme Performans Takibi ve Analitik">
+    <meta name="twitter:description" content="Yüzme metriklerini takip edin, CSS ve sTSS hesaplayın, profesyonel analitiklerle antrenman yükünü analiz edin. Yarışmacı yüzücüler ve triatletler için ücretsiz">
+    <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swim.analyticszone.app/ca/">
+    
+    <link rel="alternate" hreflang="en" href="https://swim.analyticszone.app/en/">
+    
+    <link rel="alternate" hreflang="es" href="https://swim.analyticszone.app/es/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swim.analyticszone.app/fr/">
+    
+    <link rel="alternate" hreflang="de" href="https://swim.analyticszone.app/de/">
+    
+    <link rel="alternate" hreflang="it" href="https://swim.analyticszone.app/it/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swim.analyticszone.app/nl/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swim.analyticszone.app/ja/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swim.analyticszone.app/pl/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swim.analyticszone.app/sv/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swim.analyticszone.app/pt/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swim.analyticszone.app/ru/">
+    
+    <link rel="alternate" hreflang="da" href="https://swim.analyticszone.app/da/">
+    
+    <link rel="alternate" hreflang="ar" href="https://swim.analyticszone.app/ar/">
+    
+    <link rel="alternate" hreflang="hi" href="https://swim.analyticszone.app/hi/">
+    
+    <link rel="alternate" hreflang="el" href="https://swim.analyticszone.app/el/">
+    
+    <link rel="alternate" hreflang="hu" href="https://swim.analyticszone.app/hu/">
+    
+    <link rel="alternate" hreflang="ro" href="https://swim.analyticszone.app/ro/">
+    
+    <link rel="alternate" hreflang="cs" href="https://swim.analyticszone.app/cs/">
+    
+    <link rel="alternate" hreflang="bg" href="https://swim.analyticszone.app/bg/">
+    
+    <link rel="alternate" hreflang="sl" href="https://swim.analyticszone.app/sl/">
+    
+    <link rel="alternate" hreflang="af" href="https://swim.analyticszone.app/af/">
+    
+    <link rel="alternate" hreflang="is" href="https://swim.analyticszone.app/is/">
+    
+    <link rel="alternate" hreflang="bn" href="https://swim.analyticszone.app/bn/">
+    
+    <link rel="alternate" hreflang="sw" href="https://swim.analyticszone.app/sw/">
+    
+    <link rel="alternate" hreflang="ur" href="https://swim.analyticszone.app/ur/">
+    
+    <link rel="alternate" hreflang="ha" href="https://swim.analyticszone.app/ha/">
+    
+    <link rel="alternate" hreflang="yo" href="https://swim.analyticszone.app/yo/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swim.analyticszone.app/ko/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swim.analyticszone.app/zh/">
+    
+    <link rel="alternate" hreflang="et" href="https://swim.analyticszone.app/et/">
+    
+    <link rel="alternate" hreflang="fa" href="https://swim.analyticszone.app/fa/">
+    
+    <link rel="alternate" hreflang="fi" href="https://swim.analyticszone.app/fi/">
+    
+    <link rel="alternate" hreflang="he" href="https://swim.analyticszone.app/he/">
+    
+    <link rel="alternate" hreflang="hr" href="https://swim.analyticszone.app/hr/">
+    
+    <link rel="alternate" hreflang="id" href="https://swim.analyticszone.app/id/">
+    
+    <link rel="alternate" hreflang="lt" href="https://swim.analyticszone.app/lt/">
+    
+    <link rel="alternate" hreflang="lv" href="https://swim.analyticszone.app/lv/">
+    
+    <link rel="alternate" hreflang="ms" href="https://swim.analyticszone.app/ms/">
+    
+    <link rel="alternate" hreflang="my" href="https://swim.analyticszone.app/my/">
+    
+    <link rel="alternate" hreflang="nb" href="https://swim.analyticszone.app/nb/">
+    
+    <link rel="alternate" hreflang="sk" href="https://swim.analyticszone.app/sk/">
+    
+    <link rel="alternate" hreflang="sr" href="https://swim.analyticszone.app/sr/">
+    
+    <link rel="alternate" hreflang="th" href="https://swim.analyticszone.app/th/">
+    
+    <link rel="alternate" hreflang="tl" href="https://swim.analyticszone.app/tl/">
+    
+    <link rel="alternate" hreflang="tr" href="https://swim.analyticszone.app/tr/">
+    
+    <link rel="alternate" hreflang="uk" href="https://swim.analyticszone.app/uk/">
+    
+    <link rel="alternate" hreflang="vi" href="https://swim.analyticszone.app/vi/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swim.analyticszone.app/en/">
+
+    
+    <meta name="apple-itunes-app" content="app-id=6753306284">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+    <meta name="robots" content="index, follow">
+
+    
+    <style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swim.analyticszone.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "tr"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Swim Analytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Swim Analytics",
+      "url": "https://swim.analyticszone.app",
+      "logo": "https://swim.analyticszone.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swim.analyticszone.app/tr/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">İçeriğe atla</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/tr/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
+                </picture>
+                <span class="logo-text">Swim Analytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        <a href="/tr/" 
+                            aria-current="">
+                            Ana Sayfa
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <span class="nav-label">Öğren</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/tr/getting-started/" 
+                                    aria-current="">
+                                    Başlangıç
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/css/" 
+                                    aria-current="">
+                                    CSS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/training-zones/" 
+                                    aria-current="">
+                                    Antrenman Bölgeleri
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/training-load/" 
+                                    aria-current="">
+                                    Antrenman Yükü
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/stss-calculator/" 
+                                    aria-current="">
+                                    sTSS Hesaplayıcı
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <span class="nav-label">Bilim</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/tr/research/" 
+                                    aria-current="">
+                                    Araştırma
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/formulas/" 
+                                    aria-current="">
+                                    Formüller
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/efficiency/" 
+                                    aria-current="">
+                                    Verimlilik
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/stroke-mechanics/" 
+                                    aria-current="">
+                                    Kürek Mekaniği
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/bibliography/" 
+                                    aria-current="">
+                                    Kaynakça
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/tr/contact/" 
+                            aria-current="">
+                            İletişim
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                        aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Dil seçin">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="bg" >
+                        Български
+                    </option>
+                    
+                    <option value="bn" >
+                        বাংলা
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="cs" >
+                        Čeština
+                    </option>
+                    
+                    <option value="da" >
+                        Dansk
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="et" >
+                        Eesti
+                    </option>
+                    
+                    <option value="fa" >
+                        فارسی
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="ha" >
+                        Hausa
+                    </option>
+                    
+                    <option value="he" >
+                        עברית
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="hr" >
+                        Hrvatski
+                    </option>
+                    
+                    <option value="hu" >
+                        Magyar
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="is" >
+                        Íslenska
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="ko" >
+                        Korean
+                    </option>
+                    
+                    <option value="lt" >
+                        Lietuvių
+                    </option>
+                    
+                    <option value="lv" >
+                        Latviešu
+                    </option>
+                    
+                    <option value="ms" >
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="my" >
+                        မြန်မာဘာသာ
+                    </option>
+                    
+                    <option value="nb" >
+                        Norsk Bokmål
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ro" >
+                        Română
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="sk" >
+                        Slovenčina
+                    </option>
+                    
+                    <option value="sl" >
+                        Slovenščina
+                    </option>
+                    
+                    <option value="sr" >
+                        Српски
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="sw" >
+                        Kiswahili
+                    </option>
+                    
+                    <option value="th" >
+                        ไทย
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="tr" selected>
+                        Türkçe
+                    </option>
+                    
+                    <option value="uk" >
+                        Українська
+                    </option>
+                    
+                    <option value="ur" >
+                        اردو
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="yo" >
+                        Yorùbá
+                    </option>
+                    
+                    <option value="zh" >
+                        Chinese
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                
+                
+                <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="header-download-btn" target="_blank" rel="noopener"
+                    aria-label="Download on App Store">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                    </svg>
+                    <span class="download-text">Download</span>
+                </a>
+                
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menüyü değiştir"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <!-- Swim Analytics App Landing Page - Anasayfa -->
+
+<!-- Hero Bölümü -->
+<section class="app-hero">
+  <div class="container">
+    <div class="app-hero-content">
+      <div class="app-hero-text">
+        <div class="app-hero-badge">
+          <span>🏊</span>
+          <span>Profesyonel Yüzme Analitiği</span>
+        </div>
+        <h1>Yüzme Verilerinizi Performansa Dönüştürün</h1>
+        <p class="app-hero-subtitle">
+          Bilimsel metrikler, kişiselleştirilmiş antrenman bölgeleri ve kapsamlı performans takibi.
+          Tümü iPhone'unuzda yerel olarak, tam gizlilikle işlenir.
+        </p>
+        <div class="app-hero-cta store-badges">
+          <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="store-badge" target="_blank" rel="noopener" aria-label="App Store'dan indirin">
+            <img src="/assets/images/badge-app-store.svg" alt="App Store'dan indirin" width="140" height="47">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="store-badge" target="_blank" rel="noopener" aria-label="Google Play'den edinin">
+            <img src="/assets/images/badge-google-play.svg" alt="Google Play'den edinin" width="140" height="47">
+          </a>
+        </div>
+        <div class="app-hero-secondary">
+          <a href="#features" class="btn btn-large btn-secondary">
+            Özellikleri keşfet
+          </a>
+        </div>
+        <p class="mt-6 text-sm-muted">
+          ✓ 7 gün ücretsiz deneme &nbsp;&nbsp; ✓ Hesap gerekmez &nbsp;&nbsp; ✓ %100 yerel veri
+        </p>
+      </div>
+      <div class="app-hero-mockup">
+        <div class="mockup-phone">
+          <picture>
+                    <img src="/assets/images/app-mockup-main.png" alt="Swim Analytics iOS uygulaması iPhone'da Critical Swim Speed (CSS) ve Training Stress Score (TSS) panosunu gösteriyor" width="400" height="auto" loading="eager" />
+                </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ana Özellikler -->
+<section id="features" class="app-features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Özellikler</div>
+      <h2 class="section-title">Gelişim için ihtiyacınız olan her şey</h2>
+      <p class="section-subtitle">Her seviyedeki yüzücüler için tasarlanmış profesyonel analitik</p>
+    </div>
+    <div class="app-features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-chart"></use>
+          </svg>
+        </div>
+        <h3>Bilimsel Metrikler</h3>
+        <p><a href="/tr/css/">Critical Swim Speed (CSS)</a> aerobik eşik değerini belirler; bu da kanıtlanmış spor bilimi araştırmalarına göre <a href="/tr/training-load/">Training Stress Score (TSS)</a> hesaplamasını ve <a href="/tr/training-load/#pmc">CTL/ATL/TSB performans takibini</a> mümkün kılar.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-zones"></use>
+          </svg>
+        </div>
+        <h3>Antrenman Bölgeleri</h3>
+        <p>CSS'inize göre kalibre edilmiş 7 kişiselleştirilmiş antrenman bölgesi. Her antrenmanı toparlanma, aerobik, eşik veya VO₂max gelişimi için optimize edin.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-calendar"></use>
+          </svg>
+        </div>
+        <h3>Akıllı Karşılaştırmalar</h3>
+        <p>Tüm metrikler için otomatik trend tespiti ve yüzde değişimleriyle haftalık, aylık ve yıllık dönem karşılaştırmaları.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-shield"></use>
+          </svg>
+        </div>
+        <h3>Tam Gizlilik</h3>
+        <p>Tüm veriler cihazınızda yerel olarak işlenir. Sunucu yok, bulut yok, takip yok. Yüzme verilerinizin sahibi ve yöneticisi sizsiniz.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-export"></use>
+          </svg>
+        </div>
+        <h3>Her Yere Aktar</h3>
+        <p>Antrenmanları ve analitikleri JSON, CSV, HTML veya PDF formatında dışa aktarın. Antrenörler, hesap tabloları ve antrenman platformlarıyla uyumlu.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-lightning"></use>
+          </svg>
+        </div>
+        <h3>Anında Performans</h3>
+        <p>Yerel-öncelikli mimariyle 0,35 sn altı açılış. Senkronizasyon veya indirme beklemeden antrenmanlarınızı anında görüntüleyin.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ekran Görüntüleri -->
+<section class="app-screenshots">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Ekran görüntüleri</div>
+      <h2 class="section-title">Swim Analytics'i aksiyonda görün</h2>
+      <p class="section-subtitle">Yüzücüler için tasarlanmış sezgisel, şık arayüz</p>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn-prev" aria-label="Önceki ekran görüntüsü">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <div class="screenshots-carousel" id="screenshotsCarousel">
+        <div class="screenshot-item">
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/workouts-list-400w.webp 400w,
+                                /assets/images/screenshots/workouts-list-800w.webp 800w,
+                                /assets/images/screenshots/workouts-list.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/workouts-list-400w.png 400w,
+                                /assets/images/screenshots/workouts-list-800w.png 800w,
+                                /assets/images/screenshots/workouts-list.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/workouts-list.png" alt="Swim Analytics antrenman listesi, TSS skorları ve antrenman bölgeleriyle yüzme seanslarını gösteriyor" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Antrenman Özeti</p>
+        </div>
+        <div class="screenshot-item">
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/workout-detail-400w.webp 400w,
+                                /assets/images/screenshots/workout-detail-800w.webp 800w,
+                                /assets/images/screenshots/workout-detail.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/workout-detail-400w.png 400w,
+                                /assets/images/screenshots/workout-detail-800w.png 800w,
+                                /assets/images/screenshots/workout-detail.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/workout-detail.png" alt="Tur tur tempo, SWOLF verimliliği ve kalp atış verileriyle detaylı yüzme antrenmanı analizi" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Tur Bazlı Analiz</p>
+        </div>
+        <div class="screenshot-item">
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/analytics-400w.webp 400w,
+                                /assets/images/screenshots/analytics-800w.webp 800w,
+                                /assets/images/screenshots/analytics.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/analytics-400w.png 400w,
+                                /assets/images/screenshots/analytics-800w.png 800w,
+                                /assets/images/screenshots/analytics.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/analytics.png" alt="Swim Analytics panosu CTL, ATL ve TSB Performance Management Chart metriklerini gösteriyor" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">İleri Metrikler</p>
+        </div>
+        <div class="screenshot-item">
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/performance-400w.webp 400w,
+                                /assets/images/screenshots/performance-800w.webp 800w,
+                                /assets/images/screenshots/performance.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/performance-400w.png 400w,
+                                /assets/images/screenshots/performance-800w.png 800w,
+                                /assets/images/screenshots/performance.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/performance.png" alt="CSS gelişimi ve antrenman yükü trendlerini gösteren yüzme performans grafiği" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Performans Trendleri</p>
+        </div>
+        <div class="screenshot-item">
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/training-zones-400w.webp 400w,
+                                /assets/images/screenshots/training-zones-800w.webp 800w,
+                                /assets/images/screenshots/training-zones.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/training-zones-400w.png 400w,
+                                /assets/images/screenshots/training-zones-800w.png 800w,
+                                /assets/images/screenshots/training-zones.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/training-zones.png" alt="Critical Swim Speed eşiğine dayalı 7 kişisel yüzme antrenman bölgesi" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Antrenman Bölgeleri</p>
+        </div>
+        <div class="screenshot-item">
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/export-options-400w.webp 400w,
+                                /assets/images/screenshots/export-options-800w.webp 800w,
+                                /assets/images/screenshots/export-options.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/export-options-400w.png 400w,
+                                /assets/images/screenshots/export-options-800w.png 800w,
+                                /assets/images/screenshots/export-options.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/export-options.png" alt="JSON, CSV, HTML ve PDF içeren antrenman dışa aktarma seçenekleri" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Esnek Dışa Aktarma</p>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn-next" aria-label="Sonraki ekran görüntüsü">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Değer Önerisi -->
+<section class="app-value">
+  <div class="container">
+    <div class="value-grid">
+      <div class="value-card">
+        <h3>Kişiselleştirilmiş bölgeler</h3>
+        <p>CSS testinizden elde edilen 7 bölge: toparlanma, temel aerobik, tempo, eşik, VO₂max, yarış hızı ve sprint.</p>
+      </div>
+      <div class="value-card">
+        <h3>Anında analiz</h3>
+        <p>Uygulamayı açar açmaz pace, SWOLF, kalp atış hızı ve tur verilerini görün. Bekleme yok.</p>
+      </div>
+      <div class="value-card">
+        <h3>Veri ihracatı</h3>
+        <p>JSON, CSV, HTML veya PDF formatlarında paylaşın. Antrenörler ve çalışma dosyalarıyla uyumlu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Öne Çıkan Analitik -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Analitik</div>
+      <h2 class="section-title">Yüzücüler için kanıta dayalı metrikler</h2>
+      <p class="section-subtitle">Laktat eşiğine dayalı CSS ve TSS ile doğru yük ve performans takibi</p>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <h3>Critical Swim Speed (CSS)</h3>
+        <p>400m ve 200m maksimum denemelerle aerobik eşik hızınızı belirleyin. Tüm bölgeler ve tempo hesaplamaları otomatik güncellenir.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Training Stress Score (sTSS)</h3>
+        <p>Yoğunluk (CSS'e göre) ve süreyi birleştirerek her yüzme için bilimsel antrenman yükü skoru. Haftalık hedefler ve toparlanma rehberi içerir.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Performance Management Chart</h3>
+        <p>CTL, ATL ve TSB ile form, yorgunluk ve hazır olma durumunu takip edin. Taper ve yarış hazırlığı için dengeyi izleyin.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>SWOLF ve Kulaç Analizi</h3>
+        <p>Verimliliği SWOLF, Distance Per Stroke (DPS) ve Stroke Rate (SR) ile ölçün. Zaman içindeki teknik ilerlemeyi görün.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Zaman Karşılaştırmaları</h3>
+        <p>Haftalık, aylık ve yıllık karşılaştırmalarla trendleri yakalayın. Her metrik için otomatik yüzdelik değişimler.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Yerel ve Gizli</h3>
+        <p>Tüm veriler cihazınızda kalır. Sunucu yok, bulut hesabı yok, takip yok. Verilerinizi istediğiniz gibi dışa aktarın.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA: Uygulama -->
+<section class="app-cta">
+  <div class="container">
+    <div class="app-cta-grid">
+      <div>
+        <h2>Yüzücüler için tasarlandı, gizlilik için inşa edildi</h2>
+        <p>Swim Analytics, HealthKit/Health Connect verilerinizi yalnızca cihazınızda işler. Hesap veya bulut olmadan gelişmiş metrikler.</p>
+        <ul class="list-check">
+          <li>CSS ve sTSS ile doğru antrenman yükü</li>
+          <li>7 kişisel bölge ve tempo hedefleri</li>
+          <li>CSV, HTML, PDF dışa aktarma</li>
+          <li>Yıllık, aylık, haftalık trendler</li>
+        </ul>
+        <div class="store-badges">
+          <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="store-badge" target="_blank" rel="noopener" aria-label="App Store'dan indirin">
+            <img src="/assets/images/badge-app-store.svg" alt="App Store'dan indirin" width="140" height="47">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="store-badge" target="_blank" rel="noopener" aria-label="Google Play'den edinin">
+            <img src="/assets/images/badge-google-play.svg" alt="Google Play'den edinin" width="140" height="47">
+          </a>
+        </div>
+        <p class="mt-sm text-sm-muted">7 gün ücretsiz deneme • İstediğiniz zaman iptal edin • Verileriniz sizde kalır</p>
+      </div>
+      <div class="app-cta-card">
+        <h3>Öne çıkan metrikler</h3>
+        <ul class="list-dot">
+          <li>CSS (Critical Swim Speed)</li>
+          <li>sTSS (swim Training Stress Score)</li>
+          <li>CTL / ATL / TSB</li>
+          <li>SWOLF, DPS, Stroke Rate</li>
+          <li>Tempo ve bölge dağılımı</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Faydalar -->
+<section class="app-benefits">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Neden Swim Analytics?</div>
+      <h2 class="section-title">Veri odaklı yüzücüler için</h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">📊</div>
+        <div class="benefit-content">
+          <h3>Bilime Dayalı</h3>
+          <p>Wakayoshi CSS protokolü ve Coggan'ın TSS metodolojisine dayanır. Açık formüller, gizli algoritma yok.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🛡️</div>
+        <div class="benefit-content">
+          <h3>Gizlilik Öncelikli</h3>
+          <p>Veriler cihazınızdan çıkmaz. Sunucu yok, bulut yok, takip yok. Dışa aktarmayı siz kontrol edersiniz.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">⚡</div>
+        <div class="benefit-content">
+          <h3>Hızlı ve Hafif</h3>
+          <p>Yerel mimari sayesinde 0,35 sn altında açılış. Senkron beklemeden verilerinizi görün.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">👥</div>
+        <div class="benefit-content">
+          <h3>Antrenör Dostu</h3>
+          <p>Antrenörler için detaylı raporlar dışa aktarın. E-posta ile HTML özetler, CSV ile analiz, PDF ile kayıt tutun.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🌍</div>
+        <div class="benefit-content">
+          <h3>Her Yerde Çalışır</h3>
+          <p>Havuz veya açık su, sprint veya mesafe. Swim Analytics tüm yüzme türlerine uyum sağlar ve seans özelliklerini algılar.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🚀</div>
+        <div class="benefit-content">
+          <h3>Sürekli Gelişim</h3>
+          <p>Kullanıcı geri bildirimleriyle düzenli güncellemeler. Yıllık karşılaştırmalar, PB takibi ve geliştirilmiş dışa aktarma yeni eklenenlerden.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container container-narrow">
+    <div class="section-header">
+      <div class="section-badge">SSS</div>
+      <h2 class="section-title">Sık Sorulan Sorular</h2>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <h3>Swim Analytics yüzme verilerimi nasıl alıyor?</h3>
+        <p>Swim Analytics, uyumlu her cihaz veya uygulamayla kaydedilen yüzme antrenmanlarını içe aktarmak için Apple Health ile senkronize olur. Buna akıllı saatler, fitness takipçileri ve manuel girişler dahildir. Uygulama bu verileri yerel olarak işleyerek ileri metrikleri hesaplar.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>CSS testi nedir ve nasıl yapılır?</h3>
+        <p>CSS (Critical Swim Speed), iki maksimum deneme gerektiren bilimsel bir protokoldür: 400m ve 200m, aralarında 10-20 dakika dinlenmeyle. Uygulama bu sürelerden aerobik eşiğinizi hesaplar ve tüm bölgeleri otomatik ayarlar. İlerlemenizi görmek için 6-8 haftada bir tekrarlayın.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Verilerim buluta yükleniyor mu?</h3>
+        <p>Hayır. Swim Analytics tüm verileri iPhone'unuzda yerel olarak işler. Harici sunucu, bulut hesabı veya veri transferi yoktur. Dışa aktarmayı siz belirlersiniz: JSON, CSV, HTML veya PDF dosyaları üretip dilediğiniz gibi paylaşın.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Swim Analytics'i açık su yüzmede kullanabilir miyim?</h3>
+        <p>Evet. Swim Analytics, Apple Health'teki açık su antrenmanları dahil tüm yüzme kayıtlarıyla çalışır. Havuzda veya açık suda mevcut metriklere uyum sağlayarak her ortam için uygun analiz sunar.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Aylık ve yıllık plan farkı nedir?</h3>
+        <p>Her iki plan da aynı özellikleri sunar: tüm metrikler, sınırsız bölge, dönem karşılaştırmaları, çoklu dışa aktarma ve ücretsiz güncellemeler. Tek fark fiyatta: yıllık plan %18 tasarruf sağlar.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Aboneliğimi istediğim zaman iptal edebilir miyim?</h3>
+        <p>Evet. Abonelikler App Store üzerinden yönetilir; Ayarlar → [Adınız] → Abonelikler menüsünden istediğiniz zaman iptal edebilirsiniz. İptal etseniz bile fatura döneminiz bitene kadar erişiminiz devam eder.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Son CTA -->
+<section class="app-cta-final">
+  <div class="container">
+    <h2>Yüzmenizi dönüştürmeye hazır mısınız?</h2>
+    <p>Performansını bilimsel metriklerle geliştiren binlerce yüzücüye katılın. 7 günlük ücretsiz denemeyi bugün başlatın.</p>
+    <div class="store-badges">
+      <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="store-badge" target="_blank" rel="noopener" aria-label="App Store'dan indirin">
+        <img src="/assets/images/badge-app-store.svg" alt="App Store'dan indirin" width="140" height="47">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="store-badge" target="_blank" rel="noopener" aria-label="Google Play'den edinin">
+        <img src="/assets/images/badge-google-play.svg" alt="Google Play'den edinin" width="140" height="47">
+      </a>
+    </div>
+    <p class="section-footer">
+      Hesap gerekmez • İstediğiniz zaman iptal edin • Verileriniz cihazınızda kalır
+    </p>
+  </div>
+</section>
+
+<!-- Ek Bilgi Linkleri -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Yüzme analitiği hakkında daha fazlası</h2>
+      <p class="section-subtitle">Swim Analytics'in arkasındaki bilime daha derinden dalın</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 class="card-title">Critical Swim Speed</h3>
+        <div class="card-content">
+          <p>CSS'in aerobik eşiğinizi nasıl belirlediğini ve yapılandırılmış antrenman için neden kritik olduğunu öğrenin.</p>
+          <a href="/tr/css/" class="btn btn-secondary btn-small mt-md">CSS hakkında bilgi alın →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Antrenman Yükü Yönetimi</h3>
+        <div class="card-content">
+          <p>TSS, CTL, ATL ve TSB'nin antrenman stresini ve toparlanmayı dengelemenize nasıl yardımcı olduğunu keşfedin.</p>
+          <a href="/tr/training-load/" class="btn btn-secondary btn-small mt-md">Antrenman yükünü keşfet →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Antrenman Bölgeleri</h3>
+        <div class="card-content">
+          <p>7 antrenman bölgesini ve hedefli antrenman planlamasında nasıl kullanılacağını öğrenin.</p>
+          <a href="/tr/training-zones/" class="btn btn-secondary btn-small mt-md">Bölgeleri görüntüle →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h2 class="mb-md">Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h2>
+                <p class="text-secondary">Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h2 class="mb-md">Ana Sayfa</h2>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/">Polski</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">Svenska</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/">Русский</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/da/">Dansk</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/">العربية</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/">हिन्दी</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/">Ελληνικά</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hu/">Magyar</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ro/">Română</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/cs/">Čeština</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bg/">Български</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sl/">Slovenščina</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/af/">Afrikaans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/is/">Íslenska</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bn/">বাংলা</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sw/">Kiswahili</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ur/">اردو</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ha/">Hausa</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/yo/">Yorùbá</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/">Korean</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">Chinese</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/et/">Eesti</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fa/">فارسی</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/">Suomi</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/he/">עברית</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hr/">Hrvatski</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/">Bahasa Indonesia</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/lt/">Lietuvių</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/lv/">Latviešu</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/">Bahasa Melayu</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/my/">မြန်မာဘာသာ</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nb/">Norsk Bokmål</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sk/">Slovenčina</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sr/">Српски</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/th/">ไทย</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tl/">Tagalog</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/">Türkçe</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/uk/">Українська</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/">Tiếng Việt</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div>
+                <h2 class="mb-md">Download</h2>
+                <div class="footer-badges">
+                    <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="app-store-badge" target="_blank" rel="noopener">
+                        <img src="/assets/images/badge-app-store.svg" alt="Download on the App Store" width="120" height="40">
+                    </a>
+                    
+                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="app-store-badge" target="_blank" rel="noopener">
+                        <img src="/assets/images/badge-google-play.svg" alt="Get it on Google Play" width="120" height="40">
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Tüm hakları saklıdır
+            </p>
+            <ul class="footer-links">
+                <li><a href="/tr/privacy/">Gizlilik</a></li>
+                <li><a href="/tr/terms/">Şartlar</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>Bu web sitesi deneyiminizi geliştirmek için çerezler kullanır.</p>
+            <a href="/tr/privacy/" class="text-sm">Daha fazla bilgi</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">Reddet</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">Kabul Et</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/core.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
+    
+
+    
+    <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js')}</script>
+</body>
+</html>
