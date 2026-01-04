@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="kn" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Swim Analytics: iOS ಗಾಗಿ ಈಜು ಕಾರ್ಯಕ್ಷಮತೆ ಟ್ರ್ಯಾಕಿಂಗ್ &amp; ಅನಾಲಿಟಿಕ್ಸ್ ಅಪ್ಲಿಕೇಶನ್</title>
+    <meta name="description" content="ಈಜು ಮೆಟ್ರಿಕ್ಸ್ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ, CSS &amp; sTSS ಲೆಕ್ಕಾಚಾರ ಮಾಡಿ, ವೃತ್ತಿಪರ ಅನಾಲಿಟಿಕ್ಸ್‌ನೊಂದಿಗೆ ತರಬೇತಿ ಹೊರೆ ವಿಶ್ಲೇಷಿಸಿ. ಸ್ಪರ್ಧಾತ್ಮಕ ಈಜುಗಾರರು &amp; ಟ್ರಯಾಥ್ಲೀಟ್‌ಗಳಿಗೆ ಉಚಿತ ಕ್ಯಾಲ್ಕುಲೇಟರ್‌ಗಳು.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="ಈಜು ಟ್ರ್ಯಾಕಿಂಗ್ ಅಪ್ಲಿಕೇಶನ್, ಈಜು ಅನಾಲಿಟಿಕ್ಸ್, CSS ಕ್ಯಾಲ್ಕುಲೇಟರ್, ಈಜು ಕಾರ್ಯಕ್ಷಮತೆ, sTSS">
+    
+    <link rel="canonical" href="https://swim.analyticszone.app/kn/">
+
+    
+    
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swim.analyticszone.app/kn/">
+    <meta property="og:title" content="Swim Analytics: iOS ಗಾಗಿ ಈಜು ಕಾರ್ಯಕ್ಷಮತೆ ಟ್ರ್ಯಾಕಿಂಗ್ &amp; ಅನಾಲಿಟಿಕ್ಸ್ ಅಪ್ಲಿಕೇಶನ್">
+    <meta property="og:description" content="ಈಜು ಮೆಟ್ರಿಕ್ಸ್ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ, CSS &amp; sTSS ಲೆಕ್ಕಾಚಾರ ಮಾಡಿ, ವೃತ್ತಿಪರ ಅನಾಲಿಟಿಕ್ಸ್‌ನೊಂದಿಗೆ ತರಬೇತಿ ಹೊರೆ ವಿಶ್ಲೇಷಿಸಿ. ಸ್ಪರ್ಧಾತ್ಮಕ ಈಜುಗಾರರು &amp; ಟ್ರಯಾಥ್ಲೀಟ್‌ಗಳಿಗೆ ಉಚಿತ ಕ್ಯಾಲ್ಕುಲೇಟರ್‌ಗಳು.">
+    <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
+    <meta property="og:locale" content="kn_IN">
+    <meta property="og:site_name" content="Swim Analytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swim.analyticszone.app/kn/">
+    <meta name="twitter:title" content="Swim Analytics: iOS ಗಾಗಿ ಈಜು ಕಾರ್ಯಕ್ಷಮತೆ ಟ್ರ್ಯಾಕಿಂಗ್ &amp; ಅನಾಲಿಟಿಕ್ಸ್ ಅಪ್ಲಿಕೇಶನ್">
+    <meta name="twitter:description" content="ಈಜು ಮೆಟ್ರಿಕ್ಸ್ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ, CSS &amp; sTSS ಲೆಕ್ಕಾಚಾರ ಮಾಡಿ, ವೃತ್ತಿಪರ ಅನಾಲಿಟಿಕ್ಸ್‌ನೊಂದಿಗೆ ತರಬೇತಿ ಹೊರೆ ವಿಶ್ಲೇಷಿಸಿ. ಸ್ಪರ್ಧಾತ್ಮಕ ಈಜುಗಾರರು &amp; ಟ್ರಯಾಥ್ಲೀಟ್‌ಗಳಿಗೆ ಉಚಿತ ಕ್ಯಾಲ್ಕುಲೇಟರ್‌ಗಳು.">
+    <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swim.analyticszone.app/ca/">
+    
+    <link rel="alternate" hreflang="en" href="https://swim.analyticszone.app/en/">
+    
+    <link rel="alternate" hreflang="es" href="https://swim.analyticszone.app/es/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swim.analyticszone.app/fr/">
+    
+    <link rel="alternate" hreflang="de" href="https://swim.analyticszone.app/de/">
+    
+    <link rel="alternate" hreflang="it" href="https://swim.analyticszone.app/it/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swim.analyticszone.app/nl/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swim.analyticszone.app/ja/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swim.analyticszone.app/pl/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swim.analyticszone.app/sv/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swim.analyticszone.app/pt/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swim.analyticszone.app/ru/">
+    
+    <link rel="alternate" hreflang="da" href="https://swim.analyticszone.app/da/">
+    
+    <link rel="alternate" hreflang="ar" href="https://swim.analyticszone.app/ar/">
+    
+    <link rel="alternate" hreflang="el" href="https://swim.analyticszone.app/el/">
+    
+    <link rel="alternate" hreflang="gu" href="https://swim.analyticszone.app/gu/">
+    
+    <link rel="alternate" hreflang="hi" href="https://swim.analyticszone.app/hi/">
+    
+    <link rel="alternate" hreflang="hu" href="https://swim.analyticszone.app/hu/">
+    
+    <link rel="alternate" hreflang="ro" href="https://swim.analyticszone.app/ro/">
+    
+    <link rel="alternate" hreflang="cs" href="https://swim.analyticszone.app/cs/">
+    
+    <link rel="alternate" hreflang="bg" href="https://swim.analyticszone.app/bg/">
+    
+    <link rel="alternate" hreflang="sl" href="https://swim.analyticszone.app/sl/">
+    
+    <link rel="alternate" hreflang="af" href="https://swim.analyticszone.app/af/">
+    
+    <link rel="alternate" hreflang="is" href="https://swim.analyticszone.app/is/">
+    
+    <link rel="alternate" hreflang="bn" href="https://swim.analyticszone.app/bn/">
+    
+    <link rel="alternate" hreflang="sw" href="https://swim.analyticszone.app/sw/">
+    
+    <link rel="alternate" hreflang="ur" href="https://swim.analyticszone.app/ur/">
+    
+    <link rel="alternate" hreflang="ha" href="https://swim.analyticszone.app/ha/">
+    
+    <link rel="alternate" hreflang="yo" href="https://swim.analyticszone.app/yo/">
+    
+    <link rel="alternate" hreflang="kn" href="https://swim.analyticszone.app/kn/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swim.analyticszone.app/ko/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swim.analyticszone.app/zh/">
+    
+    <link rel="alternate" hreflang="et" href="https://swim.analyticszone.app/et/">
+    
+    <link rel="alternate" hreflang="fa" href="https://swim.analyticszone.app/fa/">
+    
+    <link rel="alternate" hreflang="fi" href="https://swim.analyticszone.app/fi/">
+    
+    <link rel="alternate" hreflang="he" href="https://swim.analyticszone.app/he/">
+    
+    <link rel="alternate" hreflang="hr" href="https://swim.analyticszone.app/hr/">
+    
+    <link rel="alternate" hreflang="id" href="https://swim.analyticszone.app/id/">
+    
+    <link rel="alternate" hreflang="lt" href="https://swim.analyticszone.app/lt/">
+    
+    <link rel="alternate" hreflang="lv" href="https://swim.analyticszone.app/lv/">
+    
+    <link rel="alternate" hreflang="ms" href="https://swim.analyticszone.app/ms/">
+    
+    <link rel="alternate" hreflang="my" href="https://swim.analyticszone.app/my/">
+    
+    <link rel="alternate" hreflang="nb" href="https://swim.analyticszone.app/nb/">
+    
+    <link rel="alternate" hreflang="sk" href="https://swim.analyticszone.app/sk/">
+    
+    <link rel="alternate" hreflang="sr" href="https://swim.analyticszone.app/sr/">
+    
+    <link rel="alternate" hreflang="th" href="https://swim.analyticszone.app/th/">
+    
+    <link rel="alternate" hreflang="tl" href="https://swim.analyticszone.app/tl/">
+    
+    <link rel="alternate" hreflang="tr" href="https://swim.analyticszone.app/tr/">
+    
+    <link rel="alternate" hreflang="uk" href="https://swim.analyticszone.app/uk/">
+    
+    <link rel="alternate" hreflang="vi" href="https://swim.analyticszone.app/vi/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swim.analyticszone.app/en/">
+
+    
+    <meta name="apple-itunes-app" content="app-id=6753306284">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+    <meta name="robots" content="index, follow">
+
+    
+    <style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swim.analyticszone.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "kn"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Swim Analytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Swim Analytics",
+      "url": "https://swim.analyticszone.app",
+      "logo": "https://swim.analyticszone.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swim.analyticszone.app/kn/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">ವಿಷಯಕ್ಕೆ ಹೋಗಿ</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/kn/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
+                </picture>
+                <span class="logo-text">Swim Analytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        <a href="/kn/" 
+                            aria-current="">
+                            ಮುಖಪುಟ
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <a href="/kn/learn/" 
+                            aria-current="">
+                            ಕಲಿಯಿರಿ
+                        </a>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/kn/getting-started/" 
+                                    aria-current="">
+                                    ಪ್ರಾರಂಭಿಸಿ
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/css/" 
+                                    aria-current="">
+                                    CSS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/training-zones/" 
+                                    aria-current="">
+                                    ತರಬೇತಿ ವಲಯಗಳು
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/training-load/" 
+                                    aria-current="">
+                                    ತರಬೇತಿ ಹೊರೆ
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/stss-calculator/" 
+                                    aria-current="">
+                                    sTSS ಕ್ಯಾಲ್ಕುಲೇಟರ್
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <a href="/kn/science/" 
+                            aria-current="">
+                            ವಿಜ್ಞಾನ
+                        </a>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/kn/research/" 
+                                    aria-current="">
+                                    ಸಂಶೋಧನೆ
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/formulas/" 
+                                    aria-current="">
+                                    ಸೂತ್ರಗಳು
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/efficiency/" 
+                                    aria-current="">
+                                    ದಕ್ಷತೆ
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/stroke-mechanics/" 
+                                    aria-current="">
+                                    ಸ್ಟ್ರೋಕ್ ಯಂತ್ರಶಾಸ್ತ್ರ
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/bibliography/" 
+                                    aria-current="">
+                                    ಗ್ರಂಥಸೂಚಿ
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/kn/contact/" 
+                            aria-current="">
+                            ಸಂಪರ್ಕ
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                        aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="ಭಾಷೆ ಆಯ್ಕೆಮಾಡಿ">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="bg" >
+                        Български
+                    </option>
+                    
+                    <option value="bn" >
+                        বাংলা
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="cs" >
+                        Čeština
+                    </option>
+                    
+                    <option value="da" >
+                        Dansk
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="et" >
+                        Eesti
+                    </option>
+                    
+                    <option value="fa" >
+                        فارسی
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="gu" >
+                        ગુજરાતી
+                    </option>
+                    
+                    <option value="ha" >
+                        Hausa
+                    </option>
+                    
+                    <option value="he" >
+                        עברית
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="hr" >
+                        Hrvatski
+                    </option>
+                    
+                    <option value="hu" >
+                        Magyar
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="is" >
+                        Íslenska
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="kn" selected>
+                        ಕನ್ನಡ
+                    </option>
+                    
+                    <option value="ko" >
+                        Korean
+                    </option>
+                    
+                    <option value="lt" >
+                        Lietuvių
+                    </option>
+                    
+                    <option value="lv" >
+                        Latviešu
+                    </option>
+                    
+                    <option value="ms" >
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="my" >
+                        မြန်မာဘာသာ
+                    </option>
+                    
+                    <option value="nb" >
+                        Norsk Bokmål
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ro" >
+                        Română
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="sk" >
+                        Slovenčina
+                    </option>
+                    
+                    <option value="sl" >
+                        Slovenščina
+                    </option>
+                    
+                    <option value="sr" >
+                        Српски
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="sw" >
+                        Kiswahili
+                    </option>
+                    
+                    <option value="th" >
+                        ไทย
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="uk" >
+                        Українська
+                    </option>
+                    
+                    <option value="ur" >
+                        اردو
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="yo" >
+                        Yorùbá
+                    </option>
+                    
+                    <option value="zh" >
+                        Chinese
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                
+                
+                <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="header-download-btn" target="_blank" rel="noopener"
+                    aria-label="Download on App Store">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                    </svg>
+                    <span class="download-text">Download</span>
+                </a>
+                
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="ಮೆನು ಟಾಗಲ್"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    
+
+
+    
+    <main id="main-content" class="main-content">
+        <!-- Swim Analytics App Landing Page - Homepage -->
+
+<!-- Hero Section with App Introduction -->
+<section class="app-hero">
+  <div class="container">
+    <div class="app-hero-content">
+      <div class="app-hero-text">
+        <div class="app-hero-badge">
+          <span>🏊</span>
+          <span>ವೃತ್ತಿಪರ ಈಜು ಅನಾಲಿಟಿಕ್ಸ್</span>
+        </div>
+        <h1>ನಿಮ್ಮ ಈಜು ಡೇಟಾವನ್ನು ಕಾರ್ಯಕ್ಷಮತೆಯಾಗಿ ಪರಿವರ್ತಿಸಿ</h1>
+        <p class="app-hero-subtitle">
+          ವೈಜ್ಞಾನಿಕ ಮೆಟ್ರಿಕ್ಸ್, ವೈಯಕ್ತಿಕ ತರಬೇತಿ ವಲಯಗಳು, ಮತ್ತು ಸಮಗ್ರ ಕಾರ್ಯಕ್ಷಮತೆ ಟ್ರ್ಯಾಕಿಂಗ್.
+          ಎಲ್ಲವೂ ಸಂಪೂರ್ಣ ಗೌಪ್ಯತೆಯೊಂದಿಗೆ ನಿಮ್ಮ iPhone ನಲ್ಲಿ ಸ್ಥಳೀಯವಾಗಿ ಪ್ರಕ್ರಿಯೆಗೊಳ್ಳುತ್ತದೆ.
+        </p>
+        <div class="app-hero-cta store-badges">
+          <a href="https://apps.apple.com/app/swimanalytics/id6753306284" class="store-badge" target="_blank" rel="noopener" aria-label="App Store ನಲ್ಲಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ">
+            <img src="/assets/images/badge-app-store.svg" alt="App Store ನಲ್ಲಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ" width="140" height="47">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="store-badge" target="_blank" rel="noopener" aria-label="Google Play ನಲ್ಲಿ ಪಡೆಯಿರಿ">
+            <img src="/assets/images/badge-google-play.svg" alt="Google Play ನಲ್ಲಿ ಪಡೆಯಿರಿ" width="140" height="47">
+          </a>
+        </div>
+        <div class="app-hero-secondary">
+          <a href="#features" class="btn btn-large btn-secondary">
+            ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಅನ್ವೇಷಿಸಿ
+          </a>
+        </div>
+        <p class="mt-6 text-sm-muted">
+          ✓ 7-ದಿನ ಉಚಿತ ಪ್ರಯೋಗ &nbsp;&nbsp; ✓ ಖಾತೆ ಅಗತ್ಯವಿಲ್ಲ &nbsp;&nbsp; ✓ 100% ಸ್ಥಳೀಯ ಡೇಟಾ
+        </p>
+      </div>
+      <div class="app-hero-mockup">
+        <div class="mockup-phone">
+          <picture>
+            <img src="/assets/images/app-mockup-main.png" alt="iPhone ನಲ್ಲಿ Critical Swim Speed (CSS) ಮತ್ತು Training Stress Score (TSS) ಮೆಟ್ರಿಕ್ಸ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ತೋರಿಸುವ Swim Analytics iOS ಅಪ್ಲಿಕೇಶನ್" width="400" height="auto" loading="eager" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Features Section -->
+<section id="features" class="app-features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">ವೈಶಿಷ್ಟ್ಯಗಳು</div>
+      <h2 class="section-title">ಸುಧಾರಿಸಲು ನಿಮಗೆ ಬೇಕಾದ ಎಲ್ಲವೂ</h2>
+      <p class="section-subtitle">ಎಲ್ಲಾ ಮಟ್ಟದ ಈಜುಗಾರರಿಗಾಗಿ ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ವೃತ್ತಿಪರ-ದರ್ಜೆಯ ಅನಾಲಿಟಿಕ್ಸ್</p>
+    </div>
+    <div class="app-features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-chart"></use>
+          </svg>
+        </div>
+        <h3>ವೈಜ್ಞಾನಿಕ ಮೆಟ್ರಿಕ್ಸ್</h3>
+        <p><a href="/kn/css/">Critical Swim Speed (CSS)</a> ನಿಮ್ಮ ಏರೋಬಿಕ್ ಥ್ರೆಶೋಲ್ಡ್ ಅನ್ನು ನಿರ್ಧರಿಸುತ್ತದೆ, <a href="/kn/training-load/">Training Stress Score (TSS)</a> ಲೆಕ್ಕಾಚಾರ ಮತ್ತು ಸಾಬೀತಾದ ಕ್ರೀಡಾ ವಿಜ್ಞಾನ ಸಂಶೋಧನೆಯ ಆಧಾರದ ಮೇಲೆ <a href="/kn/training-load/#pmc">CTL/ATL/TSB ಕಾರ್ಯಕ್ಷಮತೆ ಟ್ರ್ಯಾಕಿಂಗ್</a> ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುತ್ತದೆ.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-zones"></use>
+          </svg>
+        </div>
+        <h3>ತರಬೇತಿ ವಲಯಗಳು</h3>
+        <p>ನಿಮ್ಮ CSS ಗೆ ಮಾಪನಾಂಕಿತ 7 ವೈಯಕ್ತಿಕ ತರಬೇತಿ ವಲಯಗಳು. ಚೇತರಿಕೆ, ಏರೋಬಿಕ್, ಥ್ರೆಶೋಲ್ಡ್, ಅಥವಾ VO₂max ಅಭಿವೃದ್ಧಿಗಾಗಿ ಪ್ರತಿ ವರ್ಕೌಟ್ ಅನ್ನು ಅತ್ಯುತ್ತಮಗೊಳಿಸಿ.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-calendar"></use>
+          </svg>
+        </div>
+        <h3>ಸ್ಮಾರ್ಟ್ ಹೋಲಿಕೆಗಳು</h3>
+        <p>ಎಲ್ಲಾ ಮೆಟ್ರಿಕ್ಸ್‌ಗಳಿಗೆ ಸ್ವಯಂಚಾಲಿತ ಪ್ರವೃತ್ತಿ ಪತ್ತೆ ಮತ್ತು ಶೇಕಡಾವಾರು ಬದಲಾವಣೆಗಳೊಂದಿಗೆ ಸಾಪ್ತಾಹಿಕ, ಮಾಸಿಕ, ಮತ್ತು ವಾರ್ಷಿಕ ಅವಧಿ ಹೋಲಿಕೆಗಳು.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-shield"></use>
+          </svg>
+        </div>
+        <h3>ಸಂಪೂರ್ಣ ಗೌಪ್ಯತೆ</h3>
+        <p>ಎಲ್ಲಾ ಡೇಟಾ ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಸ್ಥಳೀಯವಾಗಿ ಪ್ರಕ್ರಿಯೆಗೊಳ್ಳುತ್ತದೆ. ಸರ್ವರ್‌ಗಳಿಲ್ಲ, ಕ್ಲೌಡ್ ಇಲ್ಲ, ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ. ನಿಮ್ಮ ಈಜು ಡೇಟಾವನ್ನು ನೀವು ಹೊಂದಿದ್ದೀರಿ ಮತ್ತು ನಿಯಂತ್ರಿಸುತ್ತೀರಿ.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-export"></use>
+          </svg>
+        </div>
+        <h3>ಎಲ್ಲಿಯಾದರೂ ರಫ್ತು ಮಾಡಿ</h3>
+        <p>JSON, CSV, HTML, ಅಥವಾ PDF ಫಾರ್ಮ್ಯಾಟ್‌ಗಳಲ್ಲಿ ವರ್ಕೌಟ್‌ಗಳು ಮತ್ತು ಅನಾಲಿಟಿಕ್ಸ್ ರಫ್ತು ಮಾಡಿ. ಕೋಚ್‌ಗಳು, ಸ್ಪ್ರೆಡ್‌ಶೀಟ್‌ಗಳು, ಮತ್ತು ತರಬೇತಿ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳೊಂದಿಗೆ ಹೊಂದಿಕೊಳ್ಳುತ್ತದೆ.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-lightning"></use>
+          </svg>
+        </div>
+        <h3>ತಕ್ಷಣ ಕಾರ್ಯಕ್ಷಮತೆ</h3>
+        <p>ಸ್ಥಳೀಯ-ಮೊದಲ ಆರ್ಕಿಟೆಕ್ಚರ್‌ನೊಂದಿಗೆ 0.35 ಸೆಕೆಂಡ್‌ಗಿಂತ ಕಡಿಮೆ ಅಪ್ಲಿಕೇಶನ್ ಲಾಂಚ್. ಸಿಂಕ್‌ಗಳು ಅಥವಾ ಡೌನ್‌ಲೋಡ್‌ಗಳಿಗಾಗಿ ಕಾಯದೆ ನಿಮ್ಮ ವರ್ಕೌಟ್‌ಗಳನ್ನು ತಕ್ಷಣ ವೀಕ್ಷಿಸಿ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Screenshots Carousel -->
+<section class="app-screenshots">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">ಸ್ಕ್ರೀನ್‌ಶಾಟ್‌ಗಳು</div>
+      <h2 class="section-title">Swim Analytics ಅನ್ನು ಕ್ರಿಯೆಯಲ್ಲಿ ನೋಡಿ</h2>
+      <p class="section-subtitle">ಈಜುಗಾರರಿಗಾಗಿ ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ಸುಂದರ, ಅರ್ಥಗರ್ಭಿತ ಇಂಟರ್ಫೇಸ್</p>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn-prev" aria-label="ಹಿಂದಿನ ಸ್ಕ್ರೀನ್‌ಶಾಟ್">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <div class="screenshots-carousel" id="screenshotsCarousel">
+        <div class="screenshot-item">
+          <picture>
+            <source srcset="/assets/images/screenshots/workouts-list-400w.webp 400w, /assets/images/screenshots/workouts-list-800w.webp 800w, /assets/images/screenshots/workouts-list.webp 1200w" type="image/webp" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+            <source srcset="/assets/images/screenshots/workouts-list-400w.png 400w, /assets/images/screenshots/workouts-list-800w.png 800w, /assets/images/screenshots/workouts-list.png 1200w" type="image/png" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+            <img src="/assets/images/screenshots/workouts-list.png" alt="TSS ಸ್ಕೋರ್‌ಗಳು ಮತ್ತು ತರಬೇತಿ ವಲಯಗಳೊಂದಿಗೆ ಈಜು ಸೆಷನ್‌ಗಳನ್ನು ತೋರಿಸುವ Swim Analytics ವರ್ಕೌಟ್ ಪಟ್ಟಿ" loading="lazy" width="1200" height="800">
+          </picture>
+          <p class="screenshot-caption">ವರ್ಕೌಟ್‌ಗಳ ಅವಲೋಕನ</p>
+        </div>
+        <div class="screenshot-item">
+          <picture>
+            <source srcset="/assets/images/screenshots/workout-detail-400w.webp 400w, /assets/images/screenshots/workout-detail-800w.webp 800w, /assets/images/screenshots/workout-detail.webp 1200w" type="image/webp" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+            <source srcset="/assets/images/screenshots/workout-detail-400w.png 400w, /assets/images/screenshots/workout-detail-800w.png 800w, /assets/images/screenshots/workout-detail.png 1200w" type="image/png" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+            <img src="/assets/images/screenshots/workout-detail.png" alt="ಲ್ಯಾಪ್-ಬೈ-ಲ್ಯಾಪ್ ಪೇಸ್, SWOLF ದಕ್ಷತೆ ಮತ್ತು ಹೃದಯ ಬಡಿತ ಡೇಟಾದೊಂದಿಗೆ ವಿವರವಾದ ಈಜು ವರ್ಕೌಟ್ ವಿಶ್ಲೇಷಣೆ" loading="lazy" width="1200" height="800">
+          </picture>
+          <p class="screenshot-caption">ಲ್ಯಾಪ್-ಬೈ-ಲ್ಯಾಪ್ ವಿಶ್ಲೇಷಣೆ</p>
+        </div>
+        <div class="screenshot-item">
+          <picture>
+            <source srcset="/assets/images/screenshots/analytics-400w.webp 400w, /assets/images/screenshots/analytics-800w.webp 800w, /assets/images/screenshots/analytics.webp 1200w" type="image/webp" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+            <source srcset="/assets/images/screenshots/analytics-400w.png 400w, /assets/images/screenshots/analytics-800w.png 800w, /assets/images/screenshots/analytics.png 1200w" type="image/png" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+            <img src="/assets/images/screenshots/analytics.png" alt="CTL, ATL, ಮತ್ತು TSB ಕಾರ್ಯಕ್ಷಮತೆ ನಿರ್ವಹಣೆ ಚಾರ್ಟ್ ಮೆಟ್ರಿಕ್ಸ್ ಪ್ರದರ್ಶಿಸುವ Swim Analytics ಡ್ಯಾಶ್‌ಬೋರ್ಡ್" loading="lazy" width="1200" height="800">
+          </picture>
+          <p class="screenshot-caption">ಸುಧಾರಿತ ಮೆಟ್ರಿಕ್ಸ್</p>
+        </div>
+        <div class="screenshot-item">
+          <picture>
+            <source srcset="/assets/images/screenshots/performance-400w.webp 400w, /assets/images/screenshots/performance-800w.webp 800w, /assets/images/screenshots/performance.webp 1200w" type="image/webp" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+            <source srcset="/assets/images/screenshots/performance-400w.png 400w, /assets/images/screenshots/performance-800w.png 800w, /assets/images/screenshots/performance.png 1200w" type="image/png" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+            <img src="/assets/images/screenshots/performance.png" alt="ಕಾಲಾನಂತರದಲ್ಲಿ CSS ಪ್ರಗತಿ ಮತ್ತು ತರಬೇತಿ ಹೊರೆ ತೋರಿಸುವ ಈಜು ಕಾರ್ಯಕ್ಷಮತೆ ಪ್ರವೃತ್ತಿಗಳ ಚಾರ್ಟ್" loading="lazy" width="1200" height="800">
+          </picture>
+          <p class="screenshot-caption">ಕಾರ್ಯಕ್ಷಮತೆ ಪ್ರವೃತ್ತಿಗಳು</p>
+        </div>
+        <div class="screenshot-item">
+          <picture>
+            <source srcset="/assets/images/screenshots/training-zones-400w.webp 400w, /assets/images/screenshots/training-zones-800w.webp 800w, /assets/images/screenshots/training-zones.webp 1200w" type="image/webp" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+            <source srcset="/assets/images/screenshots/training-zones-400w.png 400w, /assets/images/screenshots/training-zones-800w.png 800w, /assets/images/screenshots/training-zones.png 1200w" type="image/png" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+            <img src="/assets/images/screenshots/training-zones.png" alt="Critical Swim Speed ಥ್ರೆಶೋಲ್ಡ್ ಆಧಾರಿತ 7 ವೈಯಕ್ತಿಕ ಈಜು ತರಬೇತಿ ವಲಯಗಳು" loading="lazy" width="1200" height="800">
+          </picture>
+          <p class="screenshot-caption">ತರಬೇತಿ ವಲಯಗಳು</p>
+        </div>
+        <div class="screenshot-item">
+          <picture>
+            <source srcset="/assets/images/screenshots/export-options-400w.webp 400w, /assets/images/screenshots/export-options-800w.webp 800w, /assets/images/screenshots/export-options.webp 1200w" type="image/webp" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+            <source srcset="/assets/images/screenshots/export-options-400w.png 400w, /assets/images/screenshots/export-options-800w.png 800w, /assets/images/screenshots/export-options.png 1200w" type="image/png" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+            <img src="/assets/images/screenshots/export-options.png" alt="ಕೋಚ್‌ಗಳು ಮತ್ತು ವಿಶ್ಲೇಷಣೆಗಾಗಿ JSON, CSV, HTML ಮತ್ತು PDF ಫಾರ್ಮ್ಯಾಟ್‌ಗಳಲ್ಲಿ ಈಜು ಡೇಟಾ ರಫ್ತು ಮಾಡಿ" loading="lazy" width="1200" height="800">
+          </picture>
+          <p class="screenshot-caption">ರಫ್ತು ಆಯ್ಕೆಗಳು</p>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn-next" aria-label="ಮುಂದಿನ ಸ್ಕ್ರೀನ್‌ಶಾಟ್">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ನ್ಯಾವಿಗೇಶನ್"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Scientific Metrics Section -->
+<section class="app-metrics">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">ವಿಜ್ಞಾನ-ಆಧಾರಿತ</div>
+      <h2 class="section-title text-white">ಮುಖ್ಯವಾದ ವೃತ್ತಿಪರ ಮೆಟ್ರಿಕ್ಸ್</h2>
+      <p class="section-subtitle text-white-90">
+        Swim Analytics ಕ್ರೀಡಾ ವಿಜ್ಞಾನ ಸಂಶೋಧನೆಯಿಂದ ಮಾನ್ಯವಾದ ಮೆಟ್ರಿಕ್ಸ್ ಬಳಸಿ
+        ಕಚ್ಚಾ ಈಜು ಡೇಟಾವನ್ನು ಕ್ರಿಯಾಶೀಲ ಬುದ್ಧಿಮತ್ತೆಯಾಗಿ ಪರಿವರ್ತಿಸುತ್ತದೆ
+      </p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">🎯</div>
+        <div class="metric-label">ಥ್ರೆಶೋಲ್ಡ್ ಪೇಸ್</div>
+        <h3 class="metric-name">CSS</h3>
+        <p class="metric-description">Critical Swim Speed - ನಿಮ್ಮ ಏರೋಬಿಕ್ ಥ್ರೆಶೋಲ್ಡ್ ಪೇಸ್</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">📊</div>
+        <div class="metric-label">ವರ್ಕೌಟ್ ಹೊರೆ</div>
+        <h3 class="metric-name">TSS</h3>
+        <p class="metric-description">Training Stress Score ವರ್ಕೌಟ್ ತೀವ್ರತೆಯನ್ನು ಪ್ರಮಾಣೀಕರಿಸುತ್ತದೆ</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">💪</div>
+        <div class="metric-label">ಫಿಟ್‌ನೆಸ್</div>
+        <h3 class="metric-name">CTL</h3>
+        <p class="metric-description">Chronic Training Load - 42-ದಿನ ರೋಲಿಂಗ್ ಸರಾಸರಿ</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">😴</div>
+        <div class="metric-label">ಆಯಾಸ</div>
+        <h3 class="metric-name">ATL</h3>
+        <p class="metric-description">Acute Training Load - 7-ದಿನ ರೋಲಿಂಗ್ ಸರಾಸರಿ</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚖️</div>
+        <div class="metric-label">ಫಾರ್ಮ್</div>
+        <h3 class="metric-name">TSB</h3>
+        <p class="metric-description">Training Stress Balance ಸಿದ್ಧತೆಯನ್ನು ಸೂಚಿಸುತ್ತದೆ</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚡</div>
+        <div class="metric-label">ದಕ್ಷತೆ</div>
+        <h3 class="metric-name">SWOLF</h3>
+        <p class="metric-description">ಸ್ಟ್ರೋಕ್ ದಕ್ಷತೆ ಸ್ಕೋರ್ - ಕಡಿಮೆ ಉತ್ತಮ</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🏊</div>
+        <div class="metric-label">ವಲಯಗಳು</div>
+        <h3 class="metric-name">7 ವಲಯಗಳು</h3>
+        <p class="metric-description">ಚೇತರಿಕೆಯಿಂದ ಸ್ಪ್ರಿಂಟ್ ತೀವ್ರತೆ ಮಟ್ಟಗಳು</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🏆</div>
+        <div class="metric-label">ದಾಖಲೆಗಳು</div>
+        <h3 class="metric-name">PRs</h3>
+        <p class="metric-description">ಸ್ವಯಂಚಾಲಿತ ವೈಯಕ್ತಿಕ ದಾಖಲೆ ಟ್ರ್ಯಾಕಿಂಗ್</p>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        
+        <div class="footer-top">
+            <div class="footer-brand-section">
+                <h2>Swim Analytics</h2>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+            <div class="footer-download">
+                <h3 class="footer-heading">Download</h3>
+                <div class="footer-badges">
+                    
+                    <a href="https://apps.apple.com/app/swimanalytics/id6753306284" target="_blank" rel="noopener" aria-label="Download on the App Store">
+                        <img src="/assets/images/badge-app-store.svg" alt="Download on the App Store" width="135" height="40" loading="lazy">
+                    </a>
+                    
+                    
+                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+                        <img src="/assets/images/badge-google-play.svg" alt="Get it on Google Play" width="135" height="40" loading="lazy">
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="footer-languages">
+            <h3 class="footer-heading">Available in</h3>
+            <div class="lang-grid">
+                
+                <a href="/ca/"
+                   class="lang-link"
+                   hreflang="ca"
+                   >
+                    Català
+                </a>
+                
+                <a href="/en/"
+                   class="lang-link"
+                   hreflang="en"
+                   >
+                    English
+                </a>
+                
+                <a href="/es/"
+                   class="lang-link"
+                   hreflang="es"
+                   >
+                    Español
+                </a>
+                
+                <a href="/fr/"
+                   class="lang-link"
+                   hreflang="fr"
+                   >
+                    Français
+                </a>
+                
+                <a href="/de/"
+                   class="lang-link"
+                   hreflang="de"
+                   >
+                    Deutsch
+                </a>
+                
+                <a href="/it/"
+                   class="lang-link"
+                   hreflang="it"
+                   >
+                    Italiano
+                </a>
+                
+                <a href="/nl/"
+                   class="lang-link"
+                   hreflang="nl"
+                   >
+                    Nederlands
+                </a>
+                
+                <a href="/ja/"
+                   class="lang-link"
+                   hreflang="ja"
+                   >
+                    日本語
+                </a>
+                
+                <a href="/pl/"
+                   class="lang-link"
+                   hreflang="pl"
+                   >
+                    Polski
+                </a>
+                
+                <a href="/sv/"
+                   class="lang-link"
+                   hreflang="sv"
+                   >
+                    Svenska
+                </a>
+                
+                <a href="/pt/"
+                   class="lang-link"
+                   hreflang="pt"
+                   >
+                    Português
+                </a>
+                
+                <a href="/ru/"
+                   class="lang-link"
+                   hreflang="ru"
+                   >
+                    Русский
+                </a>
+                
+                <a href="/da/"
+                   class="lang-link"
+                   hreflang="da"
+                   >
+                    Dansk
+                </a>
+                
+                <a href="/ar/"
+                   class="lang-link"
+                   hreflang="ar"
+                   dir="rtl">
+                    العربية
+                </a>
+                
+                <a href="/el/"
+                   class="lang-link"
+                   hreflang="el"
+                   >
+                    Ελληνικά
+                </a>
+                
+                <a href="/gu/"
+                   class="lang-link"
+                   hreflang="gu"
+                   >
+                    ગુજરાતી
+                </a>
+                
+                <a href="/hi/"
+                   class="lang-link"
+                   hreflang="hi"
+                   >
+                    हिन्दी
+                </a>
+                
+                <a href="/hu/"
+                   class="lang-link"
+                   hreflang="hu"
+                   >
+                    Magyar
+                </a>
+                
+                <a href="/ro/"
+                   class="lang-link"
+                   hreflang="ro"
+                   >
+                    Română
+                </a>
+                
+                <a href="/cs/"
+                   class="lang-link"
+                   hreflang="cs"
+                   >
+                    Čeština
+                </a>
+                
+                <a href="/bg/"
+                   class="lang-link"
+                   hreflang="bg"
+                   >
+                    Български
+                </a>
+                
+                <a href="/sl/"
+                   class="lang-link"
+                   hreflang="sl"
+                   >
+                    Slovenščina
+                </a>
+                
+                <a href="/af/"
+                   class="lang-link"
+                   hreflang="af"
+                   >
+                    Afrikaans
+                </a>
+                
+                <a href="/is/"
+                   class="lang-link"
+                   hreflang="is"
+                   >
+                    Íslenska
+                </a>
+                
+                <a href="/bn/"
+                   class="lang-link"
+                   hreflang="bn"
+                   >
+                    বাংলা
+                </a>
+                
+                <a href="/sw/"
+                   class="lang-link"
+                   hreflang="sw"
+                   >
+                    Kiswahili
+                </a>
+                
+                <a href="/ur/"
+                   class="lang-link"
+                   hreflang="ur"
+                   dir="rtl">
+                    اردو
+                </a>
+                
+                <a href="/ha/"
+                   class="lang-link"
+                   hreflang="ha"
+                   >
+                    Hausa
+                </a>
+                
+                <a href="/yo/"
+                   class="lang-link"
+                   hreflang="yo"
+                   >
+                    Yorùbá
+                </a>
+                
+                <a href="/kn/"
+                   class="lang-link active"
+                   hreflang="kn"
+                   >
+                    ಕನ್ನಡ
+                </a>
+                
+                <a href="/ko/"
+                   class="lang-link"
+                   hreflang="ko"
+                   >
+                    Korean
+                </a>
+                
+                <a href="/zh/"
+                   class="lang-link"
+                   hreflang="zh"
+                   >
+                    Chinese
+                </a>
+                
+                <a href="/et/"
+                   class="lang-link"
+                   hreflang="et"
+                   >
+                    Eesti
+                </a>
+                
+                <a href="/fa/"
+                   class="lang-link"
+                   hreflang="fa"
+                   dir="rtl">
+                    فارسی
+                </a>
+                
+                <a href="/fi/"
+                   class="lang-link"
+                   hreflang="fi"
+                   >
+                    Suomi
+                </a>
+                
+                <a href="/he/"
+                   class="lang-link"
+                   hreflang="he"
+                   dir="rtl">
+                    עברית
+                </a>
+                
+                <a href="/hr/"
+                   class="lang-link"
+                   hreflang="hr"
+                   >
+                    Hrvatski
+                </a>
+                
+                <a href="/id/"
+                   class="lang-link"
+                   hreflang="id"
+                   >
+                    Bahasa Indonesia
+                </a>
+                
+                <a href="/lt/"
+                   class="lang-link"
+                   hreflang="lt"
+                   >
+                    Lietuvių
+                </a>
+                
+                <a href="/lv/"
+                   class="lang-link"
+                   hreflang="lv"
+                   >
+                    Latviešu
+                </a>
+                
+                <a href="/ms/"
+                   class="lang-link"
+                   hreflang="ms"
+                   >
+                    Bahasa Melayu
+                </a>
+                
+                <a href="/my/"
+                   class="lang-link"
+                   hreflang="my"
+                   >
+                    မြန်မာဘာသာ
+                </a>
+                
+                <a href="/nb/"
+                   class="lang-link"
+                   hreflang="nb"
+                   >
+                    Norsk Bokmål
+                </a>
+                
+                <a href="/sk/"
+                   class="lang-link"
+                   hreflang="sk"
+                   >
+                    Slovenčina
+                </a>
+                
+                <a href="/sr/"
+                   class="lang-link"
+                   hreflang="sr"
+                   >
+                    Српски
+                </a>
+                
+                <a href="/th/"
+                   class="lang-link"
+                   hreflang="th"
+                   >
+                    ไทย
+                </a>
+                
+                <a href="/tl/"
+                   class="lang-link"
+                   hreflang="tl"
+                   >
+                    Tagalog
+                </a>
+                
+                <a href="/tr/"
+                   class="lang-link"
+                   hreflang="tr"
+                   >
+                    Türkçe
+                </a>
+                
+                <a href="/uk/"
+                   class="lang-link"
+                   hreflang="uk"
+                   >
+                    Українська
+                </a>
+                
+                <a href="/vi/"
+                   class="lang-link"
+                   hreflang="vi"
+                   >
+                    Tiếng Việt
+                </a>
+                
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        
+        <div class="footer-bottom">
+            <p class="copyright">
+                &copy; 2026 Swim Analytics. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ
+            </p>
+            <ul class="footer-legal">
+                <li><a href="/kn/privacy/">ಗೌಪ್ಯತೆ</a></li>
+                <li><a href="/kn/terms/">ನಿಯಮಗಳು</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>ಈ ವೆಬ್‌ಸೈಟ್ ನಿಮ್ಮ ಅನುಭವವನ್ನು ಸುಧಾರಿಸಲು ಕುಕೀಗಳನ್ನು ಬಳಸುತ್ತದೆ.</p>
+            <a href="/kn/privacy/" class="text-sm">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">ನಿರಾಕರಿಸಿ</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">ಒಪ್ಪಿಕೊಳ್ಳಿ</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/core.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
+    
+
+    
+    <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js')}</script>
+</body>
+</html>
