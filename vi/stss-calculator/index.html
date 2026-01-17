@@ -994,92 +994,75 @@ img[width][height] {
     <main id="main-content" class="main-content">
         <section class="page-hero">
     <div class="container">
-        <h1>Free Swimming TSS Calculator</h1>
-        <p class="lead">Calculate Training Stress Score for swimming workouts - The only free sTSS calculator</p>
+        <h1>Máy Tính TSS Bơi Lội Miễn Phí</h1>
+        <p class="lead">Tính toán Điểm Căng Thẳng Tập Luyện cho các bài tập bơi - Máy tính sTSS miễn phí duy nhất</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>What is Swimming TSS (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> quantifies the training load of a swimming workout by combining intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Swim Speed (CSS) as the threshold pace. A 1-hour workout at CSS pace = 100 sTSS.</p>
+            <h2>TSS Bơi Lội (sTSS) là gì?</h2>
+            <p><strong>Điểm Căng Thẳng Tập Luyện Bơi Lội (sTSS)</strong> định lượng tải lượng tập luyện của một bài tập
+                bơi bằng cách kết hợp cường độ và thời lượng. Nó được điều chỉnh từ phương pháp TSS của đạp xe, sử dụng
+                Tốc độ Bơi Tới hạn (CSS) của bạn làm pace ngưỡng. Một bài tập 1 giờ ở pace CSS = 100 sTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Free sTSS Calculator</h2>
-        <p class="lead mb-xl">Calculate training stress for any swimming workout. Requires your CSS pace.</p>
+        <h2 class="mt-3xl">Máy Tính sTSS Miễn Phí</h2>
+        <p class="lead mb-xl">Tính toán căng thẳng tập luyện cho bất kỳ bài tập bơi nào. Yêu cầu pace CSS của bạn.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Your CSS Pace (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
-                        <small id="cssPace-help" class="form-help">Your threshold pace from CSS test (e.g., 1:49)</small>
+                        <label for="cssPace" class="form-label">Pace CSS của bạn (pp:gg trên 100m)</label>
+                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
+                        <small id="cssPace-help" class="form-help">Pace ngưỡng của bạn từ bài kiểm tra CSS (ví dụ:
+                            1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Workout Duration (minutes)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
-                        <small id="duration-help" class="form-help">Total workout time including rest (1-300 minutes)</small>
+                        <label for="workoutDuration" class="form-label">Thời Lượng Bài Tập (phút)</label>
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
+                        <small id="duration-help" class="form-help">Tổng thời gian bài tập bao gồm thời gian nghỉ (1-300
+                            phút)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Average Workout Pace (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">Your average pace during the workout (e.g., 2:05)</small>
+                        <label for="avgPace" class="form-label">Pace Bài Tập Trung Bình (pp:gg trên 100m)</label>
+                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">Pace trung bình của bạn trong suốt bài tập (ví dụ:
+                            2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calculate sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Clear</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Tính Toán sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Xóa</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Your Training Stress Score</h3>
+                <h3>Điểm Căng Thẳng Tập Luyện Của Bạn</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Intensity Factor (IF)</div>
+                        <div class="result-label">Hệ Số Cường Độ (IF)</div>
                         <div class="css-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Training Load Interpretation</h4>
+                    <h4>Giải Thích Tải Lượng Tập Luyện</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
                         <!-- Filled by JavaScript -->
                     </p>
@@ -1087,268 +1070,303 @@ img[width][height] {
             </div>
         </div>
 
-        <h2 class="mt-3xl">How sTSS is Calculated</h2>
+        <h2 class="mt-3xl">Cách Tính sTSS</h2>
 
         <div class="formula-box">
-            <h3>Formula</h3>
+            <h3>Công Thức</h3>
             <div class="formula">
-                sTSS = (Duration in hours) × (Intensity Factor)³ × 100
+                sTSS = (Thời lượng tính bằng giờ) × (Hệ Số Cường Độ)³ × 100
             </div>
             <div class="formula-explanation">
-                <p>Where:</p>
+                <p>Trong đó:</p>
                 <ul>
-                    <li><strong>Intensity Factor (IF)</strong> = CSS Pace / Average Workout Pace</li>
-                    <li><strong>Duration</strong> = Total workout time in hours</li>
-                    <li><strong>CSS Pace</strong> = Your threshold pace from CSS test</li>
+                    <li><strong>Hệ Số Cường Độ (IF)</strong> = Pace CSS / Pace Bài Tập Trung Bình</li>
+                    <li><strong>Thời lượng</strong> = Tổng thời gian bài tập tính bằng giờ</li>
+                    <li><strong>Pace CSS</strong> = Pace ngưỡng của bạn từ bài kiểm tra CSS</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Worked Example</h3>
+        <h3 class="mt-xl">Ví Dụ Cụ Thể</h3>
         <div class="example-box">
-            <h4>Workout Details:</h4>
+            <h4>Chi Tiết Bài Tập:</h4>
             <ul>
-                <li>CSS Pace: <strong>1:49/100m</strong> (109 seconds)</li>
-                <li>Workout Duration: <strong>60 minutes</strong> (1 hour)</li>
-                <li>Average Pace: <strong>2:05/100m</strong> (125 seconds)</li>
+                <li>Pace CSS: <strong>1:49/100m</strong> (109 giây)</li>
+                <li>Thời Lượng Bài Tập: <strong>60 phút</strong> (1 giờ)</li>
+                <li>Pace Trung Bình: <strong>2:05/100m</strong> (125 giây)</li>
             </ul>
 
-            <h4>Step 1: Calculate Intensity Factor</h4>
+            <h4>Bước 1: Tính Hệ Số Cường Độ</h4>
             <div class="calculation">
-                IF = CSS Pace / Workout Pace<br>
+                IF = Pace CSS / Pace Bài Tập<br>
                 IF = 109 / 125<br>
                 IF = <strong>0.872</strong>
             </div>
 
-            <h4>Step 2: Calculate sTSS</h4>
+            <h4>Bước 2: Tính sTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 hours × (0.872)² × 100<br>
+                sTSS = 1.0 giờ × (0.872)² × 100<br>
                 sTSS = 1.0 × 0.760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretation:</strong> This 60-minute workout at easy pace (slower than CSS) generated 76 sTSS - a moderate training load suitable for aerobic base building.</p>
+            <p class="mt-md"><strong>Giải thích:</strong> Bài tập 60 phút này ở pace dễ (chậm hơn CSS) tạo ra 76 sTSS -
+                một tải lượng tập luyện trung bình phù hợp để xây dựng nền tảng hiếu khí.</p>
         </div>
 
-        <h2 class="mt-3xl">Understanding sTSS Values</h2>
+        <h2 class="mt-3xl">Hiểu Về Các Giá Trị sTSS</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>sTSS Range</th>
-                        <th>Training Load</th>
-                        <th>Recovery Time</th>
-                        <th>Example Workout</th>
+                        <th>Phạm Vi sTSS</th>
+                        <th>Tải Lượng Tập Luyện</th>
+                        <th>Thời Gian Phục Hồi</th>
+                        <th>Ví Dụ Bài Tập</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Low</td>
-                        <td>Same day</td>
-                        <td>Easy 30-min swim, technique drills</td>
+                        <td>Thấp</td>
+                        <td>Cùng ngày</td>
+                        <td>30 phút bơi dễ, kỹ thuật</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderate</td>
-                        <td>1 day</td>
-                        <td>60-min endurance, steady pace</td>
+                        <td>Trung Bình</td>
+                        <td>1 ngày</td>
+                        <td>60 phút sức bền, pace ổn định</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>High</td>
-                        <td>1-2 days</td>
-                        <td>90-min threshold sets, race pace intervals</td>
+                        <td>Cao</td>
+                        <td>1-2 ngày</td>
+                        <td>90 phút tập ngưỡng, các khoảng pace thi đấu</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Very High</td>
-                        <td>2-3 days</td>
-                        <td>2-hour hard training, multiple threshold blocks</td>
+                        <td>Rất Cao</td>
+                        <td>2-3 ngày</td>
+                        <td>2 giờ tập nặng, nhiều khối ngưỡng</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extreme</td>
-                        <td>3+ days</td>
-                        <td>Long race (&gt;2 hours), ultra-endurance</td>
+                        <td>Cực Đoan</td>
+                        <td>3+ ngày</td>
+                        <td>Đua dài (&gt;2 giờ), siêu sức bền</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Weekly sTSS Guidelines</h2>
+        <h2 class="mt-3xl">Hướng Dẫn sTSS Hàng Tuần</h2>
 
-        <p class="mb-md">Target weekly sTSS depends on your training level and goals:</p>
+        <p class="mb-md">Mục tiêu sTSS hàng tuần phụ thuộc vào trình độ tập luyện và mục tiêu của bạn:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Recreational Swimmers</h3>
+                <h3 class="card-title">Người Bơi Giải Trí</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 150-300</p>
-                    <p>2-3 workouts per week, 50-100 sTSS each. Focus on technique and building aerobic base.</p>
+                    <p class="mb-sm"><strong>sTSS Hàng Tuần:</strong> 150-300</p>
+                    <p>2-3 bài tập mỗi tuần, 50-100 sTSS mỗi bài. Tập trung vào kỹ thuật và xây dựng nền tảng hiếu khí.
+                    </p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Fitness Swimmers / Triathletes</h3>
+                <h3 class="card-title">Người Bơi Thể Dục / Ba Môn Phối Hợp</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 300-500</p>
-                    <p>3-4 workouts per week, 75-125 sTSS each. Mix of aerobic endurance and threshold work.</p>
+                    <p class="mb-sm"><strong>sTSS Hàng Tuần:</strong> 300-500</p>
+                    <p>3-4 bài tập mỗi tuần, 75-125 sTSS mỗi bài. Kết hợp sức bền hiếu khí và công việc ngưỡng.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Competitive Masters Swimmers</h3>
+                <h3 class="card-title">Người Bơi Masters Cạnh Tranh</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 500-800</p>
-                    <p>4-6 workouts per week, 80-150 sTSS each. Structured training with periodization.</p>
+                    <p class="mb-sm"><strong>sTSS Hàng Tuần:</strong> 500-800</p>
+                    <p>4-6 bài tập mỗi tuần, 80-150 sTSS mỗi bài. Tập luyện có cấu trúc với phân kỳ.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Elite / Collegiate Swimmers</h3>
+                <h3 class="card-title">Vận Động Viên Bơi Lội Ưu Tú / Đại Học</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 800-1200+</p>
-                    <p>8-12 workouts per week, double days. High volume with recovery management critical.</p>
+                    <p class="mb-sm"><strong>sTSS Hàng Tuần:</strong> 800-1200+</p>
+                    <p>8-12 bài tập mỗi tuần, tập hai buổi. Khối lượng cao với việc quản lý phục hồi là quan trọng.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Important Notes</h3>
+            <h3>⚠️ Lưu Ý Quan Trọng</h3>
             <ul>
-                <li><strong>Requires accurate CSS:</strong> Your CSS must be current (tested within 6-8 weeks) for accurate sTSS.</li>
-                <li><strong>Simplified calculation:</strong> This calculator uses average pace. Advanced sTSS uses Normalized Graded Pace (NGP) which accounts for interval structure.</li>
-                <li><strong>Not for technique work:</strong> sTSS only measures physical training stress, not skill development.</li>
-                <li><strong>Individual variation:</strong> Same sTSS feels different for different swimmers. Adjust guidelines based on your recovery.</li>
+                <li><strong>Yêu cầu CSS chính xác:</strong> CSS của bạn phải là hiện tại (được kiểm tra trong vòng 6-8
+                    tuần) để sTSS chính xác.</li>
+                <li><strong>Tính toán đơn giản hóa:</strong> Máy tính này sử dụng pace trung bình. sTSS nâng cao sử dụng
+                    Pace Phân Loại Chuẩn Hóa (NGP) tính đến cấu trúc khoảng cách.</li>
+                <li><strong>Không dành cho tập kỹ thuật:</strong> sTSS chỉ đo lường căng thẳng tập luyện thể chất, không
+                    phải phát triển kỹ năng.</li>
+                <li><strong>Biến thiên cá nhân:</strong> Cùng một sTSS cảm thấy khác nhau đối với những người bơi khác
+                    nhau. Điều chỉnh hướng dẫn dựa trên sự phục hồi của bạn.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Why sTSS Matters</h2>
+        <h2 class="mt-3xl">Tại Sao sTSS Quan Trọng</h2>
 
-        <p class="mb-md">Training Stress Score is the foundation for:</p>
+        <p class="mb-md">Điểm Căng Thẳng Tập Luyện là nền tảng cho:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Your fitness level - 42-day exponentially weighted average of daily sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Your fatigue - 7-day exponentially weighted average of daily sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Your form - TSB = CTL - ATL (positive = fresh, negative = fatigued)</li>
-            <li><strong>Periodization:</strong> Plan training phases (base, build, peak, taper) using target CTL progressions</li>
-            <li><strong>Recovery Management:</strong> Know when to push and when to rest based on TSB</li>
+            <li><strong>CTL (Tải Lượng Tập Luyện Mãn Tính):</strong> Mức độ thể lực của bạn - trung bình trọng số mũ 42
+                ngày của sTSS hàng ngày</li>
+            <li><strong>ATL (Tải Lượng Tập Luyện Cấp Tính):</strong> Sự mệt mỏi của bạn - trung bình trọng số mũ 7 ngày
+                của sTSS hàng ngày</li>
+            <li><strong>TSB (Cân Bằng Căng Thẳng Tập Luyện):</strong> Phong độ của bạn - TSB = CTL - ATL (dương = tươi
+                mới, âm = mệt mỏi)</li>
+            <li><strong>Phân Kỳ:</strong> Lên kế hoạch các giai đoạn tập luyện (nền tảng, xây dựng, đỉnh cao, giảm tải)
+                sử dụng tiến trình CTL mục tiêu</li>
+            <li><strong>Quản Lý Phục Hồi:</strong> Biết khi nào nên đẩy mạnh và khi nào nên nghỉ ngơi dựa trên TSB</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Pro Tip: Track Your CTL</h3>
-            <p>Record daily sTSS in a spreadsheet or training log. Calculate your 42-day average (CTL) weekly. Target 5-10 CTL points increase per week during base building. Maintain or slightly reduce CTL during taper (1-2 weeks before race).</p>
+            <h3>Mẹo Chuyên Nghiệp: Theo Dõi CTL Của Bạn</h3>
+            <p>Ghi lại sTSS hàng ngày vào bảng tính hoặc nhật ký tập luyện. Tính trung bình 42 ngày (CTL) hàng tuần.
+                Nhắm mục tiêu tăng 5-10 điểm CTL mỗi tuần trong giai đoạn xây dựng nền tảng. Duy trì hoặc giảm nhẹ CTL
+                trong quá trình taper (1-2 tuần trước giải đua).</p>
         </div>
 
-        <h2 class="mt-3xl">Frequently Asked Questions</h2>
+        <h2 class="mt-3xl">Câu Hỏi Thường Gặp</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What is Swimming TSS (sTSS)?</h3>
+                <h3 itemprop="name">TSS Bơi Lội (sTSS) là gì?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Swimming Training Stress Score (sTSS) is a metric that quantifies the training load of a swimming workout by combining both intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Swim Speed (CSS) as the threshold pace. A workout of 1 hour at CSS pace equals 100 sTSS.</p>
+                        <p>Điểm Căng Thẳng Tập Luyện Bơi Lội (sTSS) là một chỉ số định lượng tải lượng tập luyện của một
+                            bài tập bơi bằng cách kết hợp cả cường độ và thời lượng. Nó được điều chỉnh từ phương pháp
+                            TSS của đạp xe, sử dụng Tốc độ Bơi Tới hạn (CSS) của bạn làm pace ngưỡng. Một bài tập 1 giờ
+                            ở pace CSS tương đương với 100 sTSS.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How do I calculate my sTSS?</h3>
+                <h3 itemprop="name">Làm cách nào để tính sTSS của tôi?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Use the calculator above by entering your CSS pace (from a CSS test), total workout duration, and average pace during the workout. The formula is: sTSS = Duration (hours) × Intensity Factor³ × 100, where Intensity Factor = CSS Pace / Average Workout Pace.</p>
+                        <p>Sử dụng máy tính ở trên bằng cách nhập pace CSS của bạn (từ bài kiểm tra CSS), tổng thời
+                            lượng bài tập và pace trung bình trong suốt bài tập. Công thức là: sTSS = Thời lượng (giờ) ×
+                            Hệ Số Cường Độ³ × 100, trong đó Hệ Số Cường Độ = Pace CSS / Pace Bài Tập Trung Bình.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Do I need CSS to calculate sTSS?</h3>
+                <h3 itemprop="name">Tôi có cần CSS để tính sTSS không?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, your Critical Swim Speed (CSS) is required to calculate the Intensity Factor, which is essential for sTSS calculation. CSS represents your threshold pace and should be tested every 6-8 weeks. You can find your CSS using our <a href="/vi/css/">CSS calculator</a>.</p>
+                        <p>Có, Tốc độ Bơi Tới hạn (CSS) của bạn là bắt buộc để tính Hệ Số Cường Độ, điều này rất cần
+                            thiết cho việc tính sTSS. CSS đại diện cho pace ngưỡng của bạn và nên được kiểm tra mỗi 6-8
+                            tuần. Bạn có thể tìm thấy CSS của mình bằng cách sử dụng <a href="/vi/css/">máy tính
+                                CSS</a> của chúng tôi.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's a good sTSS score for one workout?</h3>
+                <h3 itemprop="name">Điểm sTSS tốt cho một bài tập là bao nhiêu?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>It depends on workout intensity: Easy workouts typically score below 50 sTSS, moderate workouts 50-100 sTSS, hard workouts 100-200 sTSS, and very hard workouts above 200 sTSS. The appropriate score depends on your training goals and current fitness level.</p>
+                        <p>Nó phụ thuộc vào cường độ bài tập: Các bài tập dễ thường có điểm dưới 50 sTSS, bài tập trung
+                            bình 50-100 sTSS, bài tập nặng 100-200 sTSS, và bài tập rất nặng trên 200 sTSS. Điểm số phù
+                            hợp phụ thuộc vào mục tiêu tập luyện và mức độ thể lực hiện tại của bạn.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How much sTSS should I do per week?</h3>
+                <h3 itemprop="name">Tôi nên tập bao nhiêu sTSS mỗi tuần?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Weekly sTSS targets vary by level: Recreational swimmers: 150-300, Fitness swimmers/Triathletes: 300-500, Competitive Masters: 500-800, Elite/Collegiate: 800-1200+. Start conservatively and increase gradually to avoid overtraining.</p>
+                        <p>Mục tiêu sTSS hàng tuần thay đổi theo trình độ: Người bơi giải trí: 150-300, Người bơi thể
+                            dục/Ba môn phối hợp: 300-500, Masters cạnh tranh: 500-800, Ưu tú/Đại học: 800-1200+. Bắt đầu
+                            một cách thận trọng và tăng dần để tránh tập quá sức.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Is swimming TSS the same as cycling TSS?</h3>
+                <h3 itemprop="name">TSS bơi lội có giống TSS đạp xe không?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>The concept and formula are the same, but sTSS is adapted for swimming. Instead of using power (FTP) like cycling TSS, sTSS uses pace with CSS as the threshold. Both measure training load using Duration × Intensity Factor³ × 100.</p>
+                        <p>Khái niệm và công thức là giống nhau, nhưng sTSS được điều chỉnh cho bơi lội. Thay vì sử dụng
+                            công suất (FTP) như TSS đạp xe, sTSS sử dụng pace với CSS làm ngưỡng. Cả hai đều đo lường
+                            tải lượng tập luyện bằng cách sử dụng Thời lượng × Hệ Số Cường Độ³ × 100.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Can I use sTSS for all swim strokes?</h3>
+                <h3 itemprop="name">Tôi có thể sử dụng sTSS cho tất cả các kiểu bơi không?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, but your CSS should be stroke-specific. Most swimmers use freestyle CSS since it's the most commonly trained stroke. If you train primarily in another stroke, perform a CSS test in that stroke and use that pace for sTSS calculation.</p>
+                        <p>Có, nhưng CSS của bạn nên cụ thể theo kiểu bơi. Hầu hết người bơi sử dụng CSS bơi sải vì đó
+                            là kiểu bơi được tập luyện phổ biến nhất. Nếu bạn tập luyện chủ yếu bằng kiểu bơi khác, hãy
+                            thực hiện bài kiểm tra CSS ở kiểu bơi đó và sử dụng pace đó để tính sTSS.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's the difference between sTSS and CTL/ATL/TSB?</h3>
+                <h3 itemprop="name">Sự khác biệt giữa sTSS và CTL/ATL/TSB là gì?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS measures a single workout's training load. CTL (Chronic Training Load) is your long-term fitness, ATL (Acute Training Load) is your recent fatigue, and TSB (Training Stress Balance) is your freshness. These metrics use sTSS values over time to track your training state. Learn more in our <a href="/vi/training-load/">Training Load guide</a>.</p>
+                        <p>sTSS đo lường tải lượng tập luyện của một bài tập đơn lẻ. CTL (Tải Lượng Tập Luyện Mãn Tính)
+                            là thể lực dài hạn của bạn, ATL (Tải Lượng Tập Luyện Cấp Tính) là sự mệt mỏi gần đây của
+                            bạn, và TSB (Cân Bằng Căng Thẳng Tập Luyện) là sự tươi mới của bạn. Các chỉ số này sử dụng
+                            giá trị sTSS theo thời gian để theo dõi trạng thái tập luyện của bạn. Tìm hiểu thêm trong <a
+                                href="/vi/training-load/">hướng dẫn Tải Lượng Tập Luyện</a> của chúng tôi.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Related Resources</h2>
+        <h2 class="mt-3xl">Tài Nguyên Liên Quan</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">CSS Test</h3>
+                <h3 class="card-title">Kiểm Tra CSS</h3>
                 <div class="card-content">
-                    <p>Need your CSS pace? Use our free CSS calculator with 400m and 200m test times.</p>
-                    <a href="/vi/css/" class="btn btn-secondary btn-small mt-md">CSS Calculator →</a>
+                    <p>Cần pace CSS của bạn? Sử dụng máy tính CSS miễn phí của chúng tôi với thời gian kiểm tra 400m và
+                        200m.</p>
+                    <a href="/vi/css/" class="btn btn-secondary btn-small mt-md">Máy Tính CSS →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Training Load Guide</h3>
+                <h3 class="card-title">Hướng Dẫn Tải Lượng Tập Luyện</h3>
                 <div class="card-content">
-                    <p>Learn about CTL, ATL, TSB and Performance Management Chart metrics.</p>
-                    <a href="/vi/training-load/" class="btn btn-secondary btn-small mt-md">Training Load →</a>
+                    <p>Tìm hiểu về CTL, ATL, TSB và các chỉ số Biểu đồ Quản lý Hiệu suất.</p>
+                    <a href="/vi/training-load/" class="btn btn-secondary btn-small mt-md">Tải Lượng Tập Luyện
+                        →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Swim Analytics App</h3>
+                <h3 class="card-title">Ứng Dụng Swim Analytics</h3>
                 <div class="card-content">
-                    <p>Automatic sTSS calculation for all workouts. Track CTL/ATL/TSB trends over time.</p>
-                    <a href="/vi/" class="btn btn-secondary btn-small mt-md">Learn More →</a>
+                    <p>Tự động tính toán sTSS cho tất cả các bài tập. Theo dõi xu hướng CTL/ATL/TSB theo thời gian.</p>
+                    <a href="/vi/" class="btn btn-secondary btn-small mt-md">Tìm Hiểu Thêm →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Want automatic sTSS tracking?</strong></p>
-            <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download Swim Analytics Free</a>
+            <p class="mb-md"><strong>Muốn theo dõi sTSS tự động?</strong></p>
+            <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Tải
+                Swim Analytics Miễn Phí</a>
         </div>
     </div>
 </section>

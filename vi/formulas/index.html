@@ -994,23 +994,24 @@ img[width][height] {
     <main id="main-content" class="main-content">
         <section class="page-hero">
     <div class="container">
-        <h1>Technical Reference & Formulas</h1>
-        <p class="lead">Complete Mathematical Implementation</p>
+        <h1>Tài liệu Tham khảo Kỹ thuật & Công thức</h1>
+        <p class="lead">Triển khai Toán học Hoàn chỉnh</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Implementation Guide</h2>
-        <p class="lead">This page provides copy-paste formulas and step-by-step calculation methods for all Swim Analytics metrics. Use these for custom implementations, verification, or deeper understanding.</p>
+        <h2>Hướng dẫn Triển khai</h2>
+        <p class="lead">Trang này cung cấp các công thức sao chép-dán và phương pháp tính toán từng bước cho tất cả các
+            chỉ số của Swim Analytics. Sử dụng chúng để tự triển khai, xác minh, hoặc hiểu sâu hơn.</p>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Implementation Notes</h3>
+            <h3>⚠️ Ghi chú Triển khai</h3>
             <ul>
-                <li>All times should be converted to seconds for calculations</li>
-                <li>Swimming pace is inverse (higher % = slower pace)</li>
-                <li>Always validate inputs for reasonable ranges</li>
-                <li>Handle edge cases (division by zero, negative values)</li>
+                <li>Tất cả thời gian nên được chuyển đổi sang giây để tính toán</li>
+                <li>Tốc độ bơi là nghịch đảo (số càng cao = tốc độ càng chậm)</li>
+                <li>Luôn xác thực đầu vào cho các phạm vi hợp lý</li>
+                <li>Xử lý các trường hợp biên (chia cho không, giá trị âm)</li>
             </ul>
         </div>
     </div>
@@ -1018,48 +1019,50 @@ img[width][height] {
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Core Performance Metrics</h2>
+        <h2>Các Chỉ số Hiệu suất Cốt lõi</h2>
 
         <div class="formula-card">
-            <h3>Critical Swim Speed (CSS)</h3>
+            <h3>Tốc độ Bơi tới hạn (CSS)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Công thức:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
                     </div>
                     <div class="formula">
-                        CSS Pace/100m (seconds) = (T₄₀₀ - T₂₀₀) / 2
+                        Tốc độ CSS/100m (giây) = (T₄₀₀ - T₂₀₀) / 2
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 Máy tính Tương tác - Kiểm tra Công thức</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="css-d1">Distance 1 (meters):</label>
+                            <label for="css-d1">Khoảng cách 1 (m):</label>
                             <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t1">Time 1 (mm:ss):</label>
-                            <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
+                            <label for="css-t1">Thời gian 1 (phút:giây):</label>
+                            <input type="text" id="css-t1" value="2:30" placeholder="2:30"
+                                pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label for="css-d2">Distance 2 (meters):</label>
+                            <label for="css-d2">Khoảng cách 2 (m):</label>
                             <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t2">Time 2 (mm:ss):</label>
-                            <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
+                            <label for="css-t2">Thời gian 2 (phút:giây):</label>
+                            <input type="text" id="css-t2" value="6:08" placeholder="6:08"
+                                pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">CSS Pace per 100m:</div>
+                        <div class="result-label">Tốc độ CSS mỗi 100m:</div>
                         <div class="result-value" id="css-result">1:49</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation steps:</strong><br>
+                            <strong>Các bước tính toán:</strong><br>
                             <span id="css-steps">
                                 CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
                                 Pace/100m = 100 / 0.917 = 109 seconds = 1:49
@@ -1068,7 +1071,7 @@ img[width][height] {
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">Triển khai JavaScript:</h4>
                 <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
   // Convert times to seconds if needed
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
@@ -1096,96 +1099,97 @@ const result = calculateCSS(200, 150, 400, 368);
 // Returns: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
 
                 <script>
-                function timeToSecondsCSS(timeString) {
-                    const parts = timeString.split(':');
-                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
-                }
-
-                function secondsToTimeCSS(seconds) {
-                    const minutes = Math.floor(seconds / 60);
-                    const secs = Math.round(seconds % 60);
-                    return `${minutes}:${secs.toString().padStart(2, '0')}`;
-                }
-
-                function updateCSSCalculator() {
-                    try {
-                        const d1 = parseFloat(document.getElementById('css-d1').value);
-                        const t1Input = document.getElementById('css-t1').value;
-                        const d2 = parseFloat(document.getElementById('css-d2').value);
-                        const t2Input = document.getElementById('css-t2').value;
-
-                        if (!d1 || !t1Input || !d2 || !t2Input) return;
-
-                        const t1 = timeToSecondsCSS(t1Input);
-                        const t2 = timeToSecondsCSS(t2Input);
-
-                        const css_ms = (d2 - d1) / (t2 - t1);
-                        const pace_per_100m = 100 / css_ms;
-                        const pace_formatted = secondsToTimeCSS(pace_per_100m);
-
-                        document.getElementById('css-result').textContent = pace_formatted;
-                        document.getElementById('css-steps').innerHTML =
-                            `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
-                            `Pace/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} seconds = ${pace_formatted}`;
-                    } catch (e) {
-                        console.error('CSS calculation error:', e);
+                    function timeToSecondsCSS(timeString) {
+                        const parts = timeString.split(':');
+                        return parseInt(parts[0]) * 60 + parseInt(parts[1]);
                     }
-                }
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('css-d1').addEventListener('input', updateCSSCalculator);
-                    document.getElementById('css-t1').addEventListener('input', updateCSSCalculator);
-                    document.getElementById('css-d2').addEventListener('input', updateCSSCalculator);
-                    document.getElementById('css-t2').addEventListener('input', updateCSSCalculator);
-                    updateCSSCalculator();
-                });
+                    function secondsToTimeCSS(seconds) {
+                        const minutes = Math.floor(seconds / 60);
+                        const secs = Math.round(seconds % 60);
+                        return `${minutes}:${secs.toString().padStart(2, '0')}`;
+                    }
+
+                    function updateCSSCalculator() {
+                        try {
+                            const d1 = parseFloat(document.getElementById('css-d1').value);
+                            const t1Input = document.getElementById('css-t1').value;
+                            const d2 = parseFloat(document.getElementById('css-d2').value);
+                            const t2Input = document.getElementById('css-t2').value;
+
+                            if (!d1 || !t1Input || !d2 || !t2Input) return;
+
+                            const t1 = timeToSecondsCSS(t1Input);
+                            const t2 = timeToSecondsCSS(t2Input);
+
+                            const css_ms = (d2 - d1) / (t2 - t1);
+                            const pace_per_100m = 100 / css_ms;
+                            const pace_formatted = secondsToTimeCSS(pace_per_100m);
+
+                            document.getElementById('css-result').textContent = pace_formatted;
+                            document.getElementById('css-steps').innerHTML =
+                                `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
+                                `Pace/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} giây = ${pace_formatted}`;
+                        } catch (e) {
+                            console.error('CSS calculation error:', e);
+                        }
+                    }
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('css-d1').addEventListener('input', updateCSSCalculator);
+                        document.getElementById('css-t1').addEventListener('input', updateCSSCalculator);
+                        document.getElementById('css-d2').addEventListener('input', updateCSSCalculator);
+                        document.getElementById('css-t2').addEventListener('input', updateCSSCalculator);
+                        updateCSSCalculator();
+                    });
                 </script>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Swim Training Stress Score (sTSS)</h3>
+            <h3>Điểm Căng thẳng Tập luyện Bơi lội (sTSS)</h3>
             <div class="formula-content">
-                <h4>Complete Formula:</h4>
+                <h4>Công thức Hoàn chỉnh:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × Duration (hours) × 100
+                        sTSS = (IF³) × Thời lượng (giờ) × 100
                     </div>
                     <div class="formula">
                         IF = NSS / FTP
                     </div>
                     <div class="formula">
-                        NSS = Total Distance / Total Time (m/min)
+                        NSS = Tổng Khoảng cách / Tổng Thời gian (m/phút)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 Máy tính Tương tác - Kiểm tra Công thức</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="stss-distance">Distance (meters):</label>
+                            <label for="stss-distance">Khoảng cách (m):</label>
                             <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="stss-duration">Duration (minutes):</label>
+                            <label for="stss-duration">Thời lượng (phút):</label>
                             <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="stss-css">CSS Pace (mm:ss per 100m):</label>
-                            <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
+                            <label for="stss-css">Tốc độ CSS (phút:giây trên 100m):</label>
+                            <input type="text" id="stss-css" value="1:33" placeholder="1:33"
+                                pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label>FTP (calculated):</label>
+                            <label>FTP (đã tính):</label>
                             <input type="text" id="stss-ftp" readonly value="64.5 m/min">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Calculated sTSS:</div>
+                        <div class="result-label">sTSS Đã tính:</div>
                         <div class="result-value" id="stss-result">55</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation steps:</strong><br>
+                            <strong>Các bước tính toán:</strong><br>
                             <span id="stss-steps">
                                 NSS = 3000m / 55min = 54.5 m/min<br>
                                 FTP = 100 / (93/60) = 64.5 m/min<br>
@@ -1196,7 +1200,7 @@ const result = calculateCSS(200, 150, 400, 368);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">Triển khai JavaScript:</h4>
                 <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
   // Calculate Normalized Swim Speed
   const nss = distance / timeMinutes;
@@ -1227,76 +1231,76 @@ function cssToFTP(cssPacePer100mSeconds) {
 const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
 
                 <script>
-                // Time conversion helper
-                function timeToSeconds(timeString) {
-                    const parts = timeString.split(':');
-                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
-                }
-
-                // CSS to FTP conversion
-                function cssToFTP(cssPacePer100mSeconds) {
-                    return 100 / (cssPacePer100mSeconds / 60);
-                }
-
-                // sTSS calculation
-                function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
-                    const nss = distance / timeMinutes;
-                    const intensityFactor = nss / ftpMetersPerMin;
-                    const hours = timeMinutes / 60;
-                    const stss = Math.pow(intensityFactor, 3) * hours * 100;
-                    return Math.round(stss);
-                }
-
-                // Update calculator
-                function updateSTSSCalculator() {
-                    try {
-                        const distance = parseFloat(document.getElementById('stss-distance').value);
-                        const duration = parseFloat(document.getElementById('stss-duration').value);
-                        const cssInput = document.getElementById('stss-css').value;
-
-                        // Validate inputs
-                        if (!distance || !duration || !cssInput) return;
-
-                        // Convert CSS to seconds
-                        const cssPaceSeconds = timeToSeconds(cssInput);
-
-                        // Calculate FTP
-                        const ftp = cssToFTP(cssPaceSeconds);
-
-                        // Calculate NSS
-                        const nss = distance / duration;
-
-                        // Calculate Intensity Factor
-                        const intensityFactor = nss / ftp;
-
-                        // Calculate sTSS
-                        const stss = calculateSTSS(distance, duration, ftp);
-
-                        // Update display
-                        document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/min';
-                        document.getElementById('stss-result').textContent = stss;
-
-                        // Update calculation steps
-                        const hours = duration / 60;
-                        document.getElementById('stss-steps').innerHTML =
-                            `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1)} m/min<br>` +
-                            `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
-                            `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
-                            `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
-                    } catch (e) {
-                        console.error('Calculation error:', e);
+                    // Time conversion helper
+                    function timeToSeconds(timeString) {
+                        const parts = timeString.split(':');
+                        return parseInt(parts[0]) * 60 + parseInt(parts[1]);
                     }
-                }
 
-                // Add event listeners when page loads
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('stss-distance').addEventListener('input', updateSTSSCalculator);
-                    document.getElementById('stss-duration').addEventListener('input', updateSTSSCalculator);
-                    document.getElementById('stss-css').addEventListener('input', updateSTSSCalculator);
+                    // CSS to FTP conversion
+                    function cssToFTP(cssPacePer100mSeconds) {
+                        return 100 / (cssPacePer100mSeconds / 60);
+                    }
 
-                    // Initial calculation
-                    updateSTSSCalculator();
-                });
+                    // sTSS calculation
+                    function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+                        const nss = distance / timeMinutes;
+                        const intensityFactor = nss / ftpMetersPerMin;
+                        const hours = timeMinutes / 60;
+                        const stss = Math.pow(intensityFactor, 3) * hours * 100;
+                        return Math.round(stss);
+                    }
+
+                    // Update calculator
+                    function updateSTSSCalculator() {
+                        try {
+                            const distance = parseFloat(document.getElementById('stss-distance').value);
+                            const duration = parseFloat(document.getElementById('stss-duration').value);
+                            const cssInput = document.getElementById('stss-css').value;
+
+                            // Validate inputs
+                            if (!distance || !duration || !cssInput) return;
+
+                            // Convert CSS to seconds
+                            const cssPaceSeconds = timeToSeconds(cssInput);
+
+                            // Calculate FTP
+                            const ftp = cssToFTP(cssPaceSeconds);
+
+                            // Calculate NSS
+                            const nss = distance / duration;
+
+                            // Calculate Intensity Factor
+                            const intensityFactor = nss / ftp;
+
+                            // Calculate sTSS
+                            const stss = calculateSTSS(distance, duration, ftp);
+
+                            // Update display
+                            document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/min';
+                            document.getElementById('stss-result').textContent = stss;
+
+                            // Update calculation steps
+                            const hours = duration / 60;
+                            document.getElementById('stss-steps').innerHTML =
+                                `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1)} m/min<br>` +
+                                `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
+                                `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
+                                `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
+                        } catch (e) {
+                            console.error('Calculation error:', e);
+                        }
+                    }
+
+                    // Add event listeners when page loads
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('stss-distance').addEventListener('input', updateSTSSCalculator);
+                        document.getElementById('stss-duration').addEventListener('input', updateSTSSCalculator);
+                        document.getElementById('stss-css').addEventListener('input', updateSTSSCalculator);
+
+                        // Initial calculation
+                        updateSTSSCalculator();
+                    });
                 </script>
             </div>
         </div>
@@ -1304,29 +1308,29 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
         <div class="formula-card">
             <h3>SWOLF</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Công thức:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SWOLF = Lap Time (seconds) + Stroke Count
+                        SWOLF = Thời gian vòng bơi (giây) + Số sải tay
                     </div>
                     <div class="formula">
-                        SWOLF₂₅ = (Time × 25/Pool Length) + (Strokes × 25/Pool Length)
+                        SWOLF₂₅ = (Thời gian × 25/Chiều dài bể) + (Sải tay × 25/Chiều dài bể)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 Máy tính Tương tác - Kiểm tra Công thức</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="swolf-time">Lap Time (seconds):</label>
+                            <label for="swolf-time">Thời gian vòng (giây):</label>
                             <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-strokes">Stroke Count:</label>
+                            <label for="swolf-strokes">Số sải tay:</label>
                             <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-pool">Pool Length (m):</label>
+                            <label for="swolf-pool">Chiều dài bể (m):</label>
                             <select id="swolf-pool">
                                 <option value="25" selected>25m</option>
                                 <option value="50">50m</option>
@@ -1334,12 +1338,12 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">SWOLF Score:</div>
+                        <div class="result-label">Điểm SWOLF:</div>
                         <div class="result-value" id="swolf-result">35</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation:</strong><br>
+                            <strong>Tính toán:</strong><br>
                             <span id="swolf-steps">
                                 SWOLF = 20s + 15 strokes = 35
                             </span>
@@ -1347,7 +1351,7 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">Triển khai JavaScript:</h4>
                 <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
   return timeSeconds + strokeCount;
 }
@@ -1366,40 +1370,40 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
 // Returns: 35 (normalized to 25m)</code></pre>
 
                 <script>
-                function updateSWOLFCalculator() {
-                    try {
-                        const time = parseFloat(document.getElementById('swolf-time').value);
-                        const strokes = parseFloat(document.getElementById('swolf-strokes').value);
-                        const poolLength = parseFloat(document.getElementById('swolf-pool').value);
+                    function updateSWOLFCalculator() {
+                        try {
+                            const time = parseFloat(document.getElementById('swolf-time').value);
+                            const strokes = parseFloat(document.getElementById('swolf-strokes').value);
+                            const poolLength = parseFloat(document.getElementById('swolf-pool').value);
 
-                        if (!time || !strokes) return;
+                            if (!time || !strokes) return;
 
-                        let swolf, steps;
-                        if (poolLength === 25) {
-                            swolf = time + strokes;
-                            steps = `SWOLF = ${time}s + ${strokes} strokes = ${swolf}`;
-                        } else {
-                            const normalizedTime = time * (25 / poolLength);
-                            const normalizedStrokes = strokes * (25 / poolLength);
-                            swolf = normalizedTime + normalizedStrokes;
-                            steps = `Normalized Time = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
-                                   `Normalized Strokes = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
-                                   `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
+                            let swolf, steps;
+                            if (poolLength === 25) {
+                                swolf = time + strokes;
+                                steps = `SWOLF = ${time}s + ${strokes} strokes = ${swolf}`;
+                            } else {
+                                const normalizedTime = time * (25 / poolLength);
+                                const normalizedStrokes = strokes * (25 / poolLength);
+                                swolf = normalizedTime + normalizedStrokes;
+                                steps = `Normalized Time = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
+                                    `Normalized Strokes = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
+                                    `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
+                            }
+
+                            document.getElementById('swolf-result').textContent = swolf.toFixed(1);
+                            document.getElementById('swolf-steps').innerHTML = steps;
+                        } catch (e) {
+                            console.error('SWOLF calculation error:', e);
                         }
-
-                        document.getElementById('swolf-result').textContent = swolf.toFixed(1);
-                        document.getElementById('swolf-steps').innerHTML = steps;
-                    } catch (e) {
-                        console.error('SWOLF calculation error:', e);
                     }
-                }
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('swolf-time').addEventListener('input', updateSWOLFCalculator);
-                    document.getElementById('swolf-strokes').addEventListener('input', updateSWOLFCalculator);
-                    document.getElementById('swolf-pool').addEventListener('change', updateSWOLFCalculator);
-                    updateSWOLFCalculator();
-                });
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('swolf-time').addEventListener('input', updateSWOLFCalculator);
+                        document.getElementById('swolf-strokes').addEventListener('input', updateSWOLFCalculator);
+                        document.getElementById('swolf-pool').addEventListener('change', updateSWOLFCalculator);
+                        updateSWOLFCalculator();
+                    });
                 </script>
             </div>
         </div>
@@ -1408,40 +1412,40 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
 
 <section class="section">
     <div class="container">
-        <h2>Stroke Mechanics</h2>
+        <h2>Cơ học Sải tay</h2>
 
         <div class="formula-card">
-            <h3>Stroke Rate (SR)</h3>
+            <h3>Nhịp sải tay (Stroke Rate - SR)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Công thức:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SR = 60 / Cycle Time (seconds)
+                        SR = 60 / Thời gian chu kỳ (giây)
                     </div>
                     <div class="formula">
-                        SR = (Number of Strokes / Time in seconds) × 60
+                        SR = (Số sải tay / Thời gian tính bằng giây) × 60
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 Máy tính Tương tác - Kiểm tra Công thức</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="sr-strokes">Stroke Count:</label>
+                            <label for="sr-strokes">Số sải tay:</label>
                             <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="sr-time">Time (seconds):</label>
+                            <label for="sr-time">Thời gian (giây):</label>
                             <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Stroke Rate (SPM):</div>
+                        <div class="result-label">Nhịp sải tay (SPM):</div>
                         <div class="result-value" id="sr-result">72</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation:</strong><br>
+                            <strong>Tính toán:</strong><br>
                             <span id="sr-steps">
                                 SR = (30 / 25) × 60 = 72 SPM
                             </span>
@@ -1449,7 +1453,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">Triển khai JavaScript:</h4>
                 <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
   return (strokeCount / timeSeconds) * 60;
 }
@@ -1459,46 +1463,46 @@ const sr = calculateStrokeRate(30, 25);
 // Returns: 72 SPM</code></pre>
 
                 <script>
-                function updateSRCalculator() {
-                    try {
-                        const strokes = parseFloat(document.getElementById('sr-strokes').value);
-                        const time = parseFloat(document.getElementById('sr-time').value);
+                    function updateSRCalculator() {
+                        try {
+                            const strokes = parseFloat(document.getElementById('sr-strokes').value);
+                            const time = parseFloat(document.getElementById('sr-time').value);
 
-                        if (!strokes || !time) return;
+                            if (!strokes || !time) return;
 
-                        const sr = (strokes / time) * 60;
+                            const sr = (strokes / time) * 60;
 
-                        document.getElementById('sr-result').textContent = sr.toFixed(1);
-                        document.getElementById('sr-steps').innerHTML =
-                            `SR = (${strokes} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
-                    } catch (e) {
-                        console.error('SR calculation error:', e);
+                            document.getElementById('sr-result').textContent = sr.toFixed(1);
+                            document.getElementById('sr-steps').innerHTML =
+                                `SR = (${strokes} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
+                        } catch (e) {
+                            console.error('SR calculation error:', e);
+                        }
                     }
-                }
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('sr-strokes').addEventListener('input', updateSRCalculator);
-                    document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
-                    updateSRCalculator();
-                });
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('sr-strokes').addEventListener('input', updateSRCalculator);
+                        document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
+                        updateSRCalculator();
+                    });
                 </script>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Distance Per Stroke (DPS)</h3>
+            <h3>Khoảng cách mỗi Sải tay (Distance Per Stroke - DPS)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Công thức:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        DPS = Distance / Stroke Count
+                        DPS = Khoảng cách / Số sải tay
                     </div>
                     <div class="formula">
-                        DPS = Distance / (SR / 60)
+                        DPS = Khoảng cách / (SR / 60)
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance;
   return effectiveDistance / strokeCount;
@@ -1515,16 +1519,16 @@ const dps100m = calculateDPS(100, 48, 4 * 5);
         </div>
 
         <div class="formula-card">
-            <h3>Velocity from SR and DPS</h3>
+            <h3>Vận tốc từ SR và DPS</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Công thức:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        Velocity (m/s) = (SR / 60) × DPS
+                        Vận tốc (m/s) = (SR / 60) × DPS
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function calculateVelocity(strokeRate, dps) {
   return (strokeRate / 60) * dps;
 }
@@ -1536,16 +1540,16 @@ const velocity = calculateVelocity(70, 1.6);
         </div>
 
         <div class="formula-card">
-            <h3>Stroke Index (SI)</h3>
+            <h3>Chỉ số Sải tay (Stroke Index - SI)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Công thức:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SI = Velocity (m/s) × DPS (m/stroke)
+                        SI = Vận tốc (m/s) × DPS (m/stroke)
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function calculateStrokeIndex(velocity, dps) {
   return velocity * dps;
 }
@@ -1560,25 +1564,25 @@ const si = calculateStrokeIndex(1.5, 1.7);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Performance Management Chart (PMC)</h2>
+        <h2>Biểu đồ Quản lý Hiệu suất (PMC)</h2>
 
         <div class="formula-card">
-            <h3>CTL, ATL, TSB Calculations</h3>
+            <h3>Tính toán CTL, ATL, TSB</h3>
             <div class="formula-content">
-                <h4>Formulas:</h4>
+                <h4>Công thức:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        CTL today = CTL yesterday + (TSS today - CTL yesterday) × (1/42)
+                        CTL hôm nay = CTL hôm qua + (TSS hôm nay - CTL hôm qua) × (1/42)
                     </div>
                     <div class="formula">
-                        ATL today = ATL yesterday + (TSS today - ATL yesterday) × (1/7)
+                        ATL hôm nay = ATL hôm qua + (TSS hôm nay - ATL hôm qua) × (1/7)
                     </div>
                     <div class="formula">
-                        TSB = CTL yesterday - ATL yesterday
+                        TSB = CTL hôm qua - ATL hôm qua
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
@@ -1630,12 +1634,12 @@ const pmc = calculatePMC(workouts);
 
 <section class="section">
     <div class="container">
-        <h2>Advanced Calculations</h2>
+        <h2>Tính toán Nâng cao</h2>
 
         <div class="formula-card">
-            <h3>CSS from Multiple Distances (Regression Method)</h3>
+            <h3>CSS từ Nhiều khoảng cách (Phương pháp Hồi quy)</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function calculateCSSRegression(distances, times) {
   // Linear regression: distance = a + b*time
   const n = distances.length;
@@ -1662,9 +1666,9 @@ const result = calculateCSSRegression(distances, times);
         </div>
 
         <div class="formula-card">
-            <h3>Intensity Factor from Pace</h3>
+            <h3>Hệ số Cường độ (IF) từ Tốc độ</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
   // Convert pace to speed (m/s)
   const actualSpeed = 100 / actualPace100m;
@@ -1679,9 +1683,9 @@ const if_value = calculateIntensityFactor(110, 93);
         </div>
 
         <div class="formula-card">
-            <h3>Pace Consistency Analysis</h3>
+            <h3>Phân tích Sự ổn định Tốc độ</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function analyzePaceConsistency(laps) {
   const paces = laps.map(lap => lap.distance / lap.time);
   const avgPace = paces.reduce((a, b) => a + b) / paces.length;
@@ -1707,16 +1711,16 @@ const laps = [
   { distance: 100, time: 72 },
   { distance: 100, time: 71 },
   // ...
-];
+  ];
 const analysis = analyzePaceConsistency(laps);
 // Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Excellent" }</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Fatigue Detection from Stroke Count</h3>
+            <h3>Phát hiện Mệt mỏi từ Số sải tay</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function detectFatigue(laps) {
   const firstThird = laps.slice(0, Math.floor(laps.length/3));
   const lastThird = laps.slice(-Math.floor(laps.length/3));
@@ -1753,12 +1757,12 @@ const fatigue = detectFatigue(laps);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Data Validation</h2>
+        <h2>Xác thực Dữ liệu</h2>
 
         <div class="formula-card">
-            <h3>Workout Data Quality Checks</h3>
+            <h3>Kiểm tra Chất lượng Dữ liệu Bài tập</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
@@ -1793,81 +1797,10 @@ const fatigue = detectFatigue(laps);
 
   return {
     isValid: issues.length === 0,
-    issues
+    issues: issues
   };
-}
-
-// Example:
-const workout = {
-  totalDistance: 2000,
-  totalTime: 1800, // 30 minutes
-  totalStrokes: 800,
-  laps: [/* lap data */]
-};
-const validation = validateWorkoutData(workout);
-// Returns: { isValid: true, issues: [] }</code></pre>
+}</code></pre>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Helper Functions</h2>
-
-        <div class="formula-card">
-            <h3>Time Conversion Utilities</h3>
-            <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
-                <pre><code>// Convert mm:ss to seconds
-function timeToSeconds(timeString) {
-  const parts = timeString.split(':');
-  return parseInt(parts[0]) * 60 + parseInt(parts[1]);
-}
-
-// Convert seconds to mm:ss
-function secondsToTime(seconds) {
-  const minutes = Math.floor(seconds / 60);
-  const secs = Math.round(seconds % 60);
-  return `${minutes}:${secs.toString().padStart(2, '0')}`;
-}
-
-// Convert seconds to hh:mm:ss
-function secondsToTimeDetailed(seconds) {
-  const hours = Math.floor(seconds / 3600);
-  const minutes = Math.floor((seconds % 3600) / 60);
-  const secs = Math.round(seconds % 60);
-  return `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-}
-
-// Examples:
-timeToSeconds("1:33"); // Returns: 93
-secondsToTime(93); // Returns: "1:33"
-secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow text-center">
-        <h2>Implementation Resources</h2>
-        <p class="lead">All formulas on this page are production-ready and validated against scientific literature. Use them for custom analytics tools, verification, or deeper understanding of swimming performance calculations.</p>
-
-        <div class="callout callout-tip">
-            <h3>💡 Best Practices</h3>
-            <ul class="text-left">
-                <li><strong>Validate inputs:</strong> Check for reasonable ranges before calculating</li>
-                <li><strong>Handle edge cases:</strong> Division by zero, negative values, null data</li>
-                <li><strong>Round appropriately:</strong> CTL/ATL/TSB to 1 decimal, sTSS to integer</li>
-                <li><strong>Store precision:</strong> Keep full precision in database, round for display</li>
-                <li><strong>Test thoroughly:</strong> Use known-good data to verify calculations</li>
-            </ul>
-        </div>
-
-        <div class="mt-xl">
-            <a href="/vi/" class="btn btn-primary btn-large">Back to Home</a>
-            <a href="/vi/research/" class="btn btn-secondary">Scientific Foundation</a>
         </div>
     </div>
 </section>

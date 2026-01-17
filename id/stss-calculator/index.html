@@ -994,361 +994,385 @@ img[width][height] {
     <main id="main-content" class="main-content">
         <section class="page-hero">
     <div class="container">
-        <h1>Free Swimming TSS Calculator</h1>
-        <p class="lead">Calculate Training Stress Score for swimming workouts - The only free sTSS calculator</p>
+        <h1>Kalkulator TSS Berenang Gratis</h1>
+        <p class="lead">Hitung Skor Stres Latihan untuk latihan renang - Satu-satunya kalkulator sTSS gratis</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>What is Swimming TSS (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> quantifies the training load of a swimming workout by combining intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Swim Speed (CSS) as the threshold pace. A 1-hour workout at CSS pace = 100 sTSS.</p>
+            <h2>Apa Itu Skor Stres Latihan Renang (sTSS)?</h2>
+            <p><strong>Skor Stres Latihan Renang (sTSS)</strong> menguantifikasi beban latihan dari latihan renang
+                dengan menggabungkan intensitas dan durasi. Ini diadaptasi dari metodologi TSS bersepeda, menggunakan
+                Kecepatan Renang Kritis (CSS) Anda sebagai pace ambang batas. Latihan selama 1 jam pada pace CSS = 100
+                sTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Free sTSS Calculator</h2>
-        <p class="lead mb-xl">Calculate training stress for any swimming workout. Requires your CSS pace.</p>
+        <h2 class="mt-3xl">Kalkulator sTSS Gratis</h2>
+        <p class="lead mb-xl">Hitung stres latihan untuk setiap sesi renang. Membutuhkan pace CSS Anda.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Your CSS Pace (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
-                        <small id="cssPace-help" class="form-help">Your threshold pace from CSS test (e.g., 1:49)</small>
+                        <label for="cssPace" class="form-label">Pace CSS Anda (mm:ss per 100m)</label>
+                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
+                        <small id="cssPace-help" class="form-help">Pace ambang batas Anda dari tes CSS (misalnya,
+                            1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Workout Duration (minutes)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
-                        <small id="duration-help" class="form-help">Total workout time including rest (1-300 minutes)</small>
+                        <label for="workoutDuration" class="form-label">Durasi Latihan (menit)</label>
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
+                        <small id="duration-help" class="form-help">Total waktu latihan termasuk istirahat (1-300
+                            menit)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Average Workout Pace (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">Your average pace during the workout (e.g., 2:05)</small>
+                        <label for="avgPace" class="form-label">Pace Rata-Rata Latihan (mm:ss per 100m)</label>
+                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">Pace rata-rata Anda selama latihan (misalnya,
+                            2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calculate sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Clear</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Hitung sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Hapus</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Your Training Stress Score</h3>
+                <h3>Skor Stres Latihan Anda</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Intensity Factor (IF)</div>
+                        <div class="result-label">Faktor Intensitas (IF)</div>
                         <div class="css-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Training Load Interpretation</h4>
+                    <h4>Interpretasi Beban Latihan</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
-                        <!-- Filled by JavaScript -->
+                        <!-- Diisi oleh JavaScript -->
                     </p>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">How sTSS is Calculated</h2>
+        <h2 class="mt-3xl">Bagaimana sTSS Dihitung</h2>
 
         <div class="formula-box">
-            <h3>Formula</h3>
+            <h3>Rumus</h3>
             <div class="formula">
-                sTSS = (Duration in hours) × (Intensity Factor)³ × 100
+                sTSS = (Durasi dalam jam) × (Faktor Intensitas)³ × 100
             </div>
             <div class="formula-explanation">
-                <p>Where:</p>
+                <p>Di mana:</p>
                 <ul>
-                    <li><strong>Intensity Factor (IF)</strong> = CSS Pace / Average Workout Pace</li>
-                    <li><strong>Duration</strong> = Total workout time in hours</li>
-                    <li><strong>CSS Pace</strong> = Your threshold pace from CSS test</li>
+                    <li><strong>Faktor Intensitas (IF)</strong> = Pace CSS / Pace Rata-Rata Latihan</li>
+                    <li><strong>Durasi</strong> = Total waktu latihan dalam jam</li>
+                    <li><strong>Pace CSS</strong> = Pace ambang batas Anda dari tes CSS</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Worked Example</h3>
+        <h3 class="mt-xl">Contoh Cara Kerja</h3>
         <div class="example-box">
-            <h4>Workout Details:</h4>
+            <h4>Detail Latihan:</h4>
             <ul>
-                <li>CSS Pace: <strong>1:49/100m</strong> (109 seconds)</li>
-                <li>Workout Duration: <strong>60 minutes</strong> (1 hour)</li>
-                <li>Average Pace: <strong>2:05/100m</strong> (125 seconds)</li>
+                <li>Pace CSS: <strong>1:49/100m</strong> (109 detik)</li>
+                <li>Durasi Latihan: <strong>60 menit</strong> (1 jam)</li>
+                <li>Pace Rata-Rata: <strong>2:05/100m</strong> (125 detik)</li>
             </ul>
 
-            <h4>Step 1: Calculate Intensity Factor</h4>
+            <h4>Langkah 1: Hitung Faktor Intensitas</h4>
             <div class="calculation">
-                IF = CSS Pace / Workout Pace<br>
+                IF = Pace CSS / Pace Latihan<br>
                 IF = 109 / 125<br>
-                IF = <strong>0.872</strong>
+                IF = <strong>0,872</strong>
             </div>
 
-            <h4>Step 2: Calculate sTSS</h4>
+            <h4>Langkah 2: Hitung sTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 hours × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
+                sTSS = 1,0 jam × (0,872)² × 100<br>
+                sTSS = 1,0 × 0,760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretation:</strong> This 60-minute workout at easy pace (slower than CSS) generated 76 sTSS - a moderate training load suitable for aerobic base building.</p>
+            <p class="mt-md"><strong>Interpretasi:</strong> Latihan 60 menit dengan pace santai (lebih lambat dari CSS)
+                ini menghasilkan 76 sTSS — beban latihan moderat yang cocok untuk membangun basis aerobik.</p>
         </div>
 
-        <h2 class="mt-3xl">Understanding sTSS Values</h2>
+        <h2 class="mt-3xl">Memahami Nilai sTSS</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>sTSS Range</th>
-                        <th>Training Load</th>
-                        <th>Recovery Time</th>
-                        <th>Example Workout</th>
+                        <th>Rentang sTSS</th>
+                        <th>Beban Latihan</th>
+                        <th>Waktu Pemulihan</th>
+                        <th>Contoh Latihan</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Low</td>
-                        <td>Same day</td>
-                        <td>Easy 30-min swim, technique drills</td>
+                        <td>Rendah</td>
+                        <td>Hari yang sama</td>
+                        <td>Renang santai 30 menit, *drills* teknik</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderate</td>
-                        <td>1 day</td>
-                        <td>60-min endurance, steady pace</td>
+                        <td>Moderat</td>
+                        <td>1 hari</td>
+                        <td>Ketahanan 60 menit, pace stabil</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>High</td>
-                        <td>1-2 days</td>
-                        <td>90-min threshold sets, race pace intervals</td>
+                        <td>Tinggi</td>
+                        <td>1-2 hari</td>
+                        <td>Set ambang batas 90 menit, interval pace lomba</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Very High</td>
-                        <td>2-3 days</td>
-                        <td>2-hour hard training, multiple threshold blocks</td>
+                        <td>Sangat Tinggi</td>
+                        <td>2-3 hari</td>
+                        <td>Latihan berat 2 jam, beberapa blok ambang batas</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extreme</td>
-                        <td>3+ days</td>
-                        <td>Long race (&gt;2 hours), ultra-endurance</td>
+                        <td>Ekstrem</td>
+                        <td>3+ hari</td>
+                        <td>Lomba jarak jauh (&gt;2 jam), ketahanan ultra</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Weekly sTSS Guidelines</h2>
+        <h2 class="mt-3xl">Panduan sTSS Mingguan</h2>
 
-        <p class="mb-md">Target weekly sTSS depends on your training level and goals:</p>
+        <p class="mb-md">Target sTSS mingguan tergantung pada level latihan dan tujuan Anda:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Recreational Swimmers</h3>
+                <h3 class="card-title">Perenang Rekreasional</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 150-300</p>
-                    <p>2-3 workouts per week, 50-100 sTSS each. Focus on technique and building aerobic base.</p>
+                    <p class="mb-sm"><strong>sTSS Mingguan:</strong> 150-300</p>
+                    <p>2-3 latihan per minggu, masing-masing 50-100 sTSS. Fokus pada teknik dan membangun basis aerobik.
+                    </p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Fitness Swimmers / Triathletes</h3>
+                <h3 class="card-title">Perenang Kebugaran / Atlet Trilomba</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 300-500</p>
-                    <p>3-4 workouts per week, 75-125 sTSS each. Mix of aerobic endurance and threshold work.</p>
+                    <p class="mb-sm"><strong>sTSS Mingguan:</strong> 300-500</p>
+                    <p>3-4 latihan per minggu, masing-masing 75-125 sTSS. Campuran ketahanan aerobik dan latihan ambang
+                        batas.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Competitive Masters Swimmers</h3>
+                <h3 class="card-title">Perenang Masters Kompetitif</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 500-800</p>
-                    <p>4-6 workouts per week, 80-150 sTSS each. Structured training with periodization.</p>
+                    <p class="mb-sm"><strong>sTSS Mingguan:</strong> 500-800</p>
+                    <p>4-6 latihan per minggu, masing-masing 80-150 sTSS. Latihan terstruktur dengan periodisasi.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Elite / Collegiate Swimmers</h3>
+                <h3 class="card-title">Perenang Elite / Mahasiswa</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 800-1200+</p>
-                    <p>8-12 workouts per week, double days. High volume with recovery management critical.</p>
+                    <p class="mb-sm"><strong>sTSS Mingguan:</strong> 800-1200+</p>
+                    <p>8-12 latihan per minggu, sesi ganda harian. Volume tinggi dengan manajemen pemulihan yang kritis.
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Important Notes</h3>
+            <h3>⚠️ Catatan Penting</h3>
             <ul>
-                <li><strong>Requires accurate CSS:</strong> Your CSS must be current (tested within 6-8 weeks) for accurate sTSS.</li>
-                <li><strong>Simplified calculation:</strong> This calculator uses average pace. Advanced sTSS uses Normalized Graded Pace (NGP) which accounts for interval structure.</li>
-                <li><strong>Not for technique work:</strong> sTSS only measures physical training stress, not skill development.</li>
-                <li><strong>Individual variation:</strong> Same sTSS feels different for different swimmers. Adjust guidelines based on your recovery.</li>
+                <li><strong>Membutuhkan CSS yang akurat:</strong> CSS Anda harus terbaru (diuji dalam 6-8 minggu
+                    terakhir) untuk sTSS yang akurat.</li>
+                <li><strong>Penghitungan sederhana:</strong> Kalkulator ini menggunakan pace rata-rata. sTSS tingkat
+                    lanjut menggunakan *Normalized Graded Pace* (NGP) yang memperhitungkan struktur interval.</li>
+                <li><strong>Bukan untuk latihan teknik:</strong> sTSS hanya mengukur stres latihan fisik, bukan
+                    pengembangan keterampilan.</li>
+                <li><strong>Variasi individu:</strong> Nilai sTSS yang sama terasa berbeda bagi perenang yang berbeda.
+                    Sesuaikan panduan berdasarkan pemulihan Anda.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Why sTSS Matters</h2>
+        <h2 class="mt-3xl">Mengapa sTSS Penting</h2>
 
-        <p class="mb-md">Training Stress Score is the foundation for:</p>
+        <p class="mb-md">Skor Stres Latihan adalah fondasi untuk:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Your fitness level - 42-day exponentially weighted average of daily sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Your fatigue - 7-day exponentially weighted average of daily sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Your form - TSB = CTL - ATL (positive = fresh, negative = fatigued)</li>
-            <li><strong>Periodization:</strong> Plan training phases (base, build, peak, taper) using target CTL progressions</li>
-            <li><strong>Recovery Management:</strong> Know when to push and when to rest based on TSB</li>
+            <li><strong>CTL (*Chronic Training Load*):</strong> Tingkat kebugaran Anda — rata-rata tertimbang
+                eksponensial 42 hari dari sTSS harian</li>
+            <li><strong>ATL (*Acute Training Load*):</strong> Kelelahan Anda — rata-rata tertimbang eksponensial 7 hari
+                dari sTSS harian</li>
+            <li><strong>TSB (*Training Stress Balance*):</strong> Kesiapan Anda — TSB = CTL - ATL (positif = segar,
+                negatif = lelah)</li>
+            <li><strong>Periodisasi:</strong> Merencanakan fase latihan (dasar, pembangunan, puncak, *taper*)
+                menggunakan kemajuan target CTL</li>
+            <li><strong>Manajemen Pemulihan:</strong> Tahu kapan harus memacu diri dan kapan harus istirahat berdasarkan
+                TSB</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Pro Tip: Track Your CTL</h3>
-            <p>Record daily sTSS in a spreadsheet or training log. Calculate your 42-day average (CTL) weekly. Target 5-10 CTL points increase per week during base building. Maintain or slightly reduce CTL during taper (1-2 weeks before race).</p>
+            <h3>Tips Pro: Lacak CTL Anda</h3>
+            <p>Catat sTSS harian dalam *spreadsheet* atau buku log latihan. Hitung rata-rata 42 hari (CTL) setiap
+                minggu. Targetkan kenaikan 5-10 poin CTL per minggu selama fase pembangunan dasar. Pertahankan atau
+                kurangi CTL sedikit selama masa *taper* (1-2 minggu sebelum lomba).</p>
         </div>
 
-        <h2 class="mt-3xl">Frequently Asked Questions</h2>
+        <h2 class="mt-3xl">Pertanyaan yang Sering Diajukan</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What is Swimming TSS (sTSS)?</h3>
+                <h3 itemprop="name">Apa itu Skor Stres Latihan Renang (sTSS)?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Swimming Training Stress Score (sTSS) is a metric that quantifies the training load of a swimming workout by combining both intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Swim Speed (CSS) as the threshold pace. A workout of 1 hour at CSS pace equals 100 sTSS.</p>
+                        <p>Skor Stres Latihan Renang (sTSS) adalah metrik yang menguantifikasi beban latihan dari sesi
+                            renang dengan menggabungkan intensitas dan durasi. Ini diadaptasi dari metodologi TSS
+                            bersepeda, menggunakan Kecepatan Renang Kritis (CSS) Anda sebagai pace ambang batas. Latihan
+                            selama 1 jam pada pace CSS sama dengan 100 sTSS.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How do I calculate my sTSS?</h3>
+                <h3 itemprop="name">Bagaimana cara menghitung sTSS saya?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Use the calculator above by entering your CSS pace (from a CSS test), total workout duration, and average pace during the workout. The formula is: sTSS = Duration (hours) × Intensity Factor³ × 100, where Intensity Factor = CSS Pace / Average Workout Pace.</p>
+                        <p>Gunakan kalkulator di atas dengan memasukkan pace CSS Anda (dari tes CSS), total durasi
+                            latihan, dan pace rata-rata selama latihan. Rumusnya adalah: sTSS = Durasi (jam) × Faktor
+                            Intensitas³ × 100, di mana Faktor Intensitas = Pace CSS / Pace Rata-Rata Latihan.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Do I need CSS to calculate sTSS?</h3>
+                <h3 itemprop="name">Apakah saya butuh CSS untuk menghitung sTSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, your Critical Swim Speed (CSS) is required to calculate the Intensity Factor, which is essential for sTSS calculation. CSS represents your threshold pace and should be tested every 6-8 weeks. You can find your CSS using our <a href="/id/css/">CSS calculator</a>.</p>
+                        <p>Ya, Kecepatan Renang Kritis (CSS) Anda diperlukan untuk menghitung Faktor Intensitas, yang
+                            esensial bagi penghitungan sTSS. CSS mewakili pace ambang batas Anda dan harus diuji setiap
+                            6-8 minggu. Anda bisa menemukan CSS Anda menggunakan <a href="/id/css/">kalkulator CSS</a>
+                            kami.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's a good sTSS score for one workout?</h3>
+                <h3 itemprop="name">Apa skor sTSS yang bagus untuk satu kali latihan?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>It depends on workout intensity: Easy workouts typically score below 50 sTSS, moderate workouts 50-100 sTSS, hard workouts 100-200 sTSS, and very hard workouts above 200 sTSS. The appropriate score depends on your training goals and current fitness level.</p>
+                        <p>Tergantung pada intensitas latihan: Latihan ringan biasanya mendapat skor di bawah 50 sTSS,
+                            latihan moderat 50-100 sTSS, latihan berat 100-200 sTSS, dan latihan sangat berat di atas
+                            200 sTSS. Skor yang tepat tergantung pada tujuan latihan dan tingkat kebugaran Anda saat
+                            ini.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How much sTSS should I do per week?</h3>
+                <h3 itemprop="name">Berapa banyak sTSS yang harus saya lakukan per minggu?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Weekly sTSS targets vary by level: Recreational swimmers: 150-300, Fitness swimmers/Triathletes: 300-500, Competitive Masters: 500-800, Elite/Collegiate: 800-1200+. Start conservatively and increase gradually to avoid overtraining.</p>
+                        <p>Target sTSS mingguan bervariasi sesuai level: Perenang rekreasional: 150-300, Perenang
+                            kebugaran/Atlet trilomba: 300-500, Masters Kompetitif: 500-800, Elite/Mahasiswa: 800-1200+.
+                            Mulailah secara konservatif dan tingkatkan secara bertahap untuk menghindari *overtraining*.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Is swimming TSS the same as cycling TSS?</h3>
+                <h3 itemprop="name">Apakah TSS berenang sama dengan TSS bersepeda?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>The concept and formula are the same, but sTSS is adapted for swimming. Instead of using power (FTP) like cycling TSS, sTSS uses pace with CSS as the threshold. Both measure training load using Duration × Intensity Factor³ × 100.</p>
+                        <p>Konsep dan rumusnya sama, tetapi sTSS diadaptasi untuk renang. Alih-alih menggunakan tenaga
+                            (*power* / FTP) seperti TSS bersepeda, sTSS menggunakan pace dengan CSS sebagai ambang
+                            batasnya. Keduanya mengukur beban latihan menggunakan Durasi × Faktor Intensitas³ × 100.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Can I use sTSS for all swim strokes?</h3>
+                <h3 itemprop="name">Dapatkah saya menggunakan sTSS untuk semua gaya renang?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, but your CSS should be stroke-specific. Most swimmers use freestyle CSS since it's the most commonly trained stroke. If you train primarily in another stroke, perform a CSS test in that stroke and use that pace for sTSS calculation.</p>
+                        <p>Bisa, tetapi CSS Anda harus spesifik untuk setiap gaya. Kebanyakan perenang menggunakan CSS
+                            gaya bebas karena itu adalah gaya yang paling sering dilatih. Jika Anda melatih gaya lain
+                            secara utama, lakukan tes CSS pada gaya tersebut dan gunakan pace-nya untuk penghitungan
+                            sTSS.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's the difference between sTSS and CTL/ATL/TSB?</h3>
+                <h3 itemprop="name">Apa perbedaan antara sTSS dan CTL/ATL/TSB?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS measures a single workout's training load. CTL (Chronic Training Load) is your long-term fitness, ATL (Acute Training Load) is your recent fatigue, and TSB (Training Stress Balance) is your freshness. These metrics use sTSS values over time to track your training state. Learn more in our <a href="/id/training-load/">Training Load guide</a>.</p>
+                        <p>sTSS mengukur beban latihan satu kali sesi latihan. CTL (*Chronic Training Load*) adalah
+                            kebugaran jangka panjang Anda, ATL (*Acute Training Load*) adalah kelelahan terkini Anda,
+                            dan TSB (*Training Stress Balance*) adalah kesegaran Anda. Metrik-metrik ini menggunakan
+                            nilai sTSS dari waktu ke waktu untuk melacak status latihan Anda. Pelajari lebih lanjut di
+                            <a href="/id/training-load/">Panduan Beban Latihan</a> kami.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Related Resources</h2>
+        <h2 class="mt-3xl">Sumber Daya Terkait</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">CSS Test</h3>
+                <h3 class="card-title">Tes CSS</h3>
                 <div class="card-content">
-                    <p>Need your CSS pace? Use our free CSS calculator with 400m and 200m test times.</p>
-                    <a href="/id/css/" class="btn btn-secondary btn-small mt-md">CSS Calculator →</a>
+                    <p>Butuh pace CSS Anda? Gunakan kalkulator CSS gratis kami dengan waktu tes 400m dan 200m.</p>
+                    <a href="/id/css/" class="btn btn-secondary btn-small mt-md">Kalkulator CSS →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Training Load Guide</h3>
+                <h3 class="card-title">Panduan Beban Latihan</h3>
                 <div class="card-content">
-                    <p>Learn about CTL, ATL, TSB and Performance Management Chart metrics.</p>
-                    <a href="/id/training-load/" class="btn btn-secondary btn-small mt-md">Training Load →</a>
+                    <p>Pelajari tentang metrik CTL, ATL, TSB, dan Grafik Manajemen Performa.</p>
+                    <a href="/id/training-load/" class="btn btn-secondary btn-small mt-md">Beban Latihan →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Swim Analytics App</h3>
+                <h3 class="card-title">Aplikasi Analitik Renang</h3>
                 <div class="card-content">
-                    <p>Automatic sTSS calculation for all workouts. Track CTL/ATL/TSB trends over time.</p>
-                    <a href="/id/" class="btn btn-secondary btn-small mt-md">Learn More →</a>
+                    <p>Penghitungan sTSS otomatis untuk semua sesi latihan. Lacak tren CTL/ATL/TSB dari waktu ke waktu.
+                    </p>
+                    <a href="/id/" class="btn btn-secondary btn-small mt-md">Pelajari Lebih Lanjut →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Want automatic sTSS tracking?</strong></p>
-            <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download Swim Analytics Free</a>
+            <p class="mb-md"><strong>Ingin pelacakan sTSS otomatis?</strong></p>
+            <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank"
+                rel="noopener">Unduh Analitik Renang Gratis</a>
         </div>
     </div>
 </section>

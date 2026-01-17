@@ -994,23 +994,23 @@ img[width][height] {
     <main id="main-content" class="main-content">
         <section class="page-hero">
     <div class="container">
-        <h1>Technical Reference & Formulas</h1>
-        <p class="lead">Complete Mathematical Implementation</p>
+        <h1>เอกสารอ้างอิงทางเทคนิคและสูตรคำนวณ</h1>
+        <p class="lead">การนำคณิตศาสตร์มาใช้งานอย่างสมบูรณ์</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Implementation Guide</h2>
-        <p class="lead">This page provides copy-paste formulas and step-by-step calculation methods for all Swim Analytics metrics. Use these for custom implementations, verification, or deeper understanding.</p>
+        <h2>คู่มือการนำไปใช้งาน</h2>
+        <p class="lead">หน้านี้แสดงสูตรคำนวณที่คุณสามารถคัดลอกไปใช้ได้ทันที รวมถึงวิธีการคำนวณทีละขั้นตอนสำหรับตัวชี้วัดทั้งหมดใน Swim Analytics โดยคุณสามารถใช้ข้อมูลเหล่านี้ในการนำไปปรับใช้เอง ตรวจสอบความถูกต้อง หรือเพื่อทำความเข้าใจให้ลึกซึ้งยิ่งขึ้น</p>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Implementation Notes</h3>
+            <h3>⚠️ หมายเหตุการนำไปใช้งาน</h3>
             <ul>
-                <li>All times should be converted to seconds for calculations</li>
-                <li>Swimming pace is inverse (higher % = slower pace)</li>
-                <li>Always validate inputs for reasonable ranges</li>
-                <li>Handle edge cases (division by zero, negative values)</li>
+                <li>เวลาทั้งหมดควรถูกแปลงเป็นหน่วยวินาทีเพื่อใช้ในการคำนวณ</li>
+                <li>ความเร็วในการว่ายน้ำ (Pace) จะทำงานแบบผกผัน (ค่า % ยิ่งสูง = ความเร็วในการว่ายยิ่งช้าลง)</li>
+                <li>ควรตรวจสอบข้อมูลที่กรอกให้ส่งผลลัพธ์ที่สมเหตุสมผลเสมอ</li>
+                <li>จัดการกับกรณีพิเศษต่างๆ (เช่น การหารด้วยศูนย์ หรือค่าที่ติดลบ)</li>
             </ul>
         </div>
     </div>
@@ -1018,69 +1018,69 @@ img[width][height] {
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Core Performance Metrics</h2>
+        <h2>ตัวชี้วัดสมรรถภาพหลัก</h2>
 
         <div class="formula-card">
-            <h3>Critical Swim Speed (CSS)</h3>
+            <h3>ความเร็วขีดจำกัด (Critical Swim Speed - CSS)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>สูตรคำนวณ:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
+                        CSS (เมตร/วินาที) = (D₂ - D₁) / (T₂ - T₁)
                     </div>
                     <div class="formula">
-                        CSS Pace/100m (seconds) = (T₄₀₀ - T₂₀₀) / 2
+                        ความเร็ว CSS ต่อ 100 เมตร (วินาที) = (T₄₀₀ - T₂₀₀) / 2
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 เครื่องคำนวณแบบโต้ตอบ - ทดสอบสูตรคำนวณ</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="css-d1">Distance 1 (meters):</label>
+                            <label for="css-d1">ระยะทางที่ 1 (เมตร):</label>
                             <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t1">Time 1 (mm:ss):</label>
+                            <label for="css-t1">เวลาที่ 1 (นาที:วินาที):</label>
                             <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label for="css-d2">Distance 2 (meters):</label>
+                            <label for="css-d2">ระยะทางที่ 2 (เมตร):</label>
                             <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t2">Time 2 (mm:ss):</label>
+                            <label for="css-t2">เวลาที่ 2 (นาที:วินาที):</label>
                             <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">CSS Pace per 100m:</div>
+                        <div class="result-label">ความเร็ว CSS ต่อ 100 เมตร:</div>
                         <div class="result-value" id="css-result">1:49</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation steps:</strong><br>
+                            <strong>ขั้นตอนการคำนวณ:</strong><br>
                             <span id="css-steps">
-                                CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
-                                Pace/100m = 100 / 0.917 = 109 seconds = 1:49
+                                CSS (เมตร/วินาที) = (400 - 200) / (368 - 150) = 0.917 เมตร/วินาที<br>
+                                Pace/100m = 100 / 0.917 = 109 วินาที = 1:49
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">ตัวอย่างการเขียน Code ด้วย JavaScript:</h4>
                 <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
-  // Convert times to seconds if needed
+  // แปลงเวลาเป็นวินาทีหากจำเป็น
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
   const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
 
-  // Calculate CSS in m/s
+  // คำนวณ CSS ในหน่วย เมตร/วินาที
   const css_ms = (distance2 - distance1) / (t2 - t1);
 
-  // Calculate pace per 100m in seconds
+  // คำนวณ Pace ต่อ 100 เมตร ในหน่วยวินาที
   const pace_per_100m = 100 / css_ms;
 
-  // Convert to mm:ss format
+  // แปลงเป็นรูปแบบ mm:ss
   const minutes = Math.floor(pace_per_100m / 60);
   const seconds = Math.round(pace_per_100m % 60);
 
@@ -1091,9 +1091,9 @@ img[width][height] {
   };
 }
 
-// Example usage:
+// ตัวอย่างการใช้งาน:
 const result = calculateCSS(200, 150, 400, 368);
-// Returns: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
+// ผลลัพธ์: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
 
                 <script>
                 function timeToSecondsCSS(timeString) {
@@ -1125,8 +1125,8 @@ const result = calculateCSS(200, 150, 400, 368);
 
                         document.getElementById('css-result').textContent = pace_formatted;
                         document.getElementById('css-steps').innerHTML =
-                            `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
-                            `Pace/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} seconds = ${pace_formatted}`;
+                            `CSS (เมตร/วินาที) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} เมตร/วินาที<br>` +
+                            `Pace/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} วินาที = ${pace_formatted}`;
                     } catch (e) {
                         console.error('CSS calculation error:', e);
                     }
@@ -1142,53 +1142,52 @@ const result = calculateCSS(200, 150, 400, 368);
                 </script>
             </div>
         </div>
-
         <div class="formula-card">
-            <h3>Swim Training Stress Score (sTSS)</h3>
+            <h3>คะแนนความเค้นจากการฝึกซ้อมว่ายน้ำ (Swim Training Stress Score - sTSS)</h3>
             <div class="formula-content">
-                <h4>Complete Formula:</h4>
+                <h4>สูตรคำนวณฉบับสมบูรณ์:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × Duration (hours) × 100
+                        sTSS = (IF³) × ระยะเวลา (ชั่วโมง) × 100
                     </div>
                     <div class="formula">
                         IF = NSS / FTP
                     </div>
                     <div class="formula">
-                        NSS = Total Distance / Total Time (m/min)
+                        NSS = ระยะทางรวม / เวลารวม (เมตร/นาที)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 เครื่องคำนวณแบบโต้ตอบ - ทดสอบสูตรคำนวณ</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="stss-distance">Distance (meters):</label>
+                            <label for="stss-distance">ระยะทาง (เมตร):</label>
                             <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="stss-duration">Duration (minutes):</label>
+                            <label for="stss-duration">ระยะเวลา (นาที):</label>
                             <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="stss-css">CSS Pace (mm:ss per 100m):</label>
+                            <label for="stss-css">ความเร็ว CSS (นาที:วินาที ต่อ 100 เมตร):</label>
                             <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label>FTP (calculated):</label>
-                            <input type="text" id="stss-ftp" readonly value="64.5 m/min">
+                            <label>FTP (คำนวณได้):</label>
+                            <input type="text" id="stss-ftp" readonly value="64.5 เมตร/นาที">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Calculated sTSS:</div>
+                        <div class="result-label">ค่า sTSS ที่คำนวณได้:</div>
                         <div class="result-value" id="stss-result">55</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation steps:</strong><br>
+                            <strong>ขั้นตอนการคำนวณ:</strong><br>
                             <span id="stss-steps">
-                                NSS = 3000m / 55min = 54.5 m/min<br>
-                                FTP = 100 / (93/60) = 64.5 m/min<br>
+                                NSS = 3000 เมตร / 55 นาที = 54.5 เมตร/นาที<br>
+                                FTP = 100 / (93/60) = 64.5 เมตร/นาที<br>
                                 IF = 54.5 / 64.5 = 0.845<br>
                                 sTSS = 0.845³ × (55/60) × 100 = 55
                             </span>
@@ -1196,35 +1195,35 @@ const result = calculateCSS(200, 150, 400, 368);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">ตัวอย่างการเขียน Code ด้วย JavaScript:</h4>
                 <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
-  // Calculate Normalized Swim Speed
+  // คำนวณความเร็วการว่ายน้ำแบบปรับฐาน (Normalized Swim Speed)
   const nss = distance / timeMinutes;
 
-  // Calculate Intensity Factor
+  // คำนวณค่าปัจจัยความหนัก (Intensity Factor)
   const intensityFactor = nss / ftpMetersPerMin;
 
-  // Calculate hours
+  // คำนวณชั่วโมง
   const hours = timeMinutes / 60;
 
-  // Calculate sTSS using cubed intensity factor
+  // คำนวณ sTSS โดยใช้ค่าปัจจัยความหนักยกกำลังสาม
   const stss = Math.pow(intensityFactor, 3) * hours * 100;
 
   return Math.round(stss);
 }
 
-// Example usage:
+// ตัวอย่างการใช้งาน:
 const stss = calculateSTSS(3000, 55, 64.5);
-// Returns: 55
+// ผลลัพธ์: 55
 
-// Helper: Convert CSS to FTP
+// ตัวช่วย: แปลง CSS เป็น FTP
 function cssToFTP(cssPacePer100mSeconds) {
-  // FTP in m/min = 100m / (pace in minutes)
+  // FTP ในหน่วย เมตร/นาที = 100 เมตร / (Pace ในหน่วยนาที)
   return 100 / (cssPacePer100mSeconds / 60);
 }
 
-// Example: CSS of 1:33 (93 seconds)
-const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
+// ตัวอย่าง: CSS 1:33 (93 วินาที)
+const ftp = cssToFTP(93); // ผลลัพธ์: 64.5 เมตร/นาที</code></pre>
 
                 <script>
                 // Time conversion helper
@@ -1273,14 +1272,14 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         const stss = calculateSTSS(distance, duration, ftp);
 
                         // Update display
-                        document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/min';
+                        document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' เมตร/นาที';
                         document.getElementById('stss-result').textContent = stss;
 
                         // Update calculation steps
                         const hours = duration / 60;
                         document.getElementById('stss-steps').innerHTML =
-                            `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1)} m/min<br>` +
-                            `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
+                            `NSS = ${distance} เมตร / ${duration} นาที = ${nss.toFixed(1)} เมตร/นาที<br>` +
+                            `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} เมตร/นาที<br>` +
                             `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
                             `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
                     } catch (e) {
@@ -1300,54 +1299,53 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                 </script>
             </div>
         </div>
-
         <div class="formula-card">
             <h3>SWOLF</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>สูตรคำนวณ:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SWOLF = Lap Time (seconds) + Stroke Count
+                        SWOLF = เวลาต่อรอบ (วินาที) + จำนวนสโตรก
                     </div>
                     <div class="formula">
-                        SWOLF₂₅ = (Time × 25/Pool Length) + (Strokes × 25/Pool Length)
+                        SWOLF₂₅ = (เวลา × 25/ความยาวสระ) + (จำนวนสโตรก × 25/ความยาวสระ)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 เครื่องคำนวณแบบโต้ตอบ - ทดสอบสูตรคำนวณ</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="swolf-time">Lap Time (seconds):</label>
+                            <label for="swolf-time">เวลาต่อรอบ (วินาที):</label>
                             <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-strokes">Stroke Count:</label>
+                            <label for="swolf-strokes">จำนวนสโตรก:</label>
                             <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-pool">Pool Length (m):</label>
+                            <label for="swolf-pool">ความยาวสระ (เมตร):</label>
                             <select id="swolf-pool">
-                                <option value="25" selected>25m</option>
-                                <option value="50">50m</option>
+                                <option value="25" selected>25 เมตร</option>
+                                <option value="50">50 เมตร</option>
                             </select>
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">SWOLF Score:</div>
+                        <div class="result-label">ค่า SWOLF:</div>
                         <div class="result-value" id="swolf-result">35</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation:</strong><br>
+                            <strong>การคำนวณ:</strong><br>
                             <span id="swolf-steps">
-                                SWOLF = 20s + 15 strokes = 35
+                                SWOLF = 20 วินาที + 15 สโตรก = 35
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">ตัวอย่างการเขียน Code ด้วย JavaScript:</h4>
                 <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
   return timeSeconds + strokeCount;
 }
@@ -1358,12 +1356,12 @@ function calculateNormalizedSWOLF(timeSeconds, strokeCount, poolLength) {
   return normalizedTime + normalizedStrokes;
 }
 
-// Example:
+// ตัวอย่าง:
 const swolf = calculateSWOLF(20, 15);
-// Returns: 35
+// ผลลัพธ์: 35
 
 const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
-// Returns: 35 (normalized to 25m)</code></pre>
+// ผลลัพธ์: 35 (ปรับฐานเป็นสระ 25 เมตร)</code></pre>
 
                 <script>
                 function updateSWOLFCalculator() {
@@ -1377,13 +1375,13 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                         let swolf, steps;
                         if (poolLength === 25) {
                             swolf = time + strokes;
-                            steps = `SWOLF = ${time}s + ${strokes} strokes = ${swolf}`;
+                            steps = `SWOLF = ${time} วินาที + ${strokes} สโตรก = ${swolf}`;
                         } else {
                             const normalizedTime = time * (25 / poolLength);
                             const normalizedStrokes = strokes * (25 / poolLength);
                             swolf = normalizedTime + normalizedStrokes;
-                            steps = `Normalized Time = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
-                                   `Normalized Strokes = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
+                            steps = `เวลาปรับฐาน = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)} วินาที<br>` +
+                                   `จำนวนสโตรกปรับฐาน = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
                                    `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
                         }
 
@@ -1405,43 +1403,42 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
         </div>
     </div>
 </section>
-
 <section class="section">
     <div class="container">
-        <h2>Stroke Mechanics</h2>
+        <h2>ชีวกลศาสตร์ของสโตรก (Stroke Mechanics)</h2>
 
         <div class="formula-card">
-            <h3>Stroke Rate (SR)</h3>
+            <h3>ความถี่สโตรก (Stroke Rate - SR)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>สูตรคำนวณ:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SR = 60 / Cycle Time (seconds)
+                        SR = 60 / เวลาครบรอบสโตรก (วินาที)
                     </div>
                     <div class="formula">
-                        SR = (Number of Strokes / Time in seconds) × 60
+                        SR = (จำนวนสโตรก / เวลาเป็นวินาที) × 60
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 เครื่องคำนวณแบบโต้ตอบ - ทดสอบสูตรคำนวณ</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="sr-strokes">Stroke Count:</label>
+                            <label for="sr-strokes">จำนวนสโตรก:</label>
                             <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="sr-time">Time (seconds):</label>
+                            <label for="sr-time">เวลา (วินาที):</label>
                             <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Stroke Rate (SPM):</div>
+                        <div class="result-label">ความถี่สโตรก (SPM):</div>
                         <div class="result-value" id="sr-result">72</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation:</strong><br>
+                            <strong>การคำนวณ:</strong><br>
                             <span id="sr-steps">
                                 SR = (30 / 25) × 60 = 72 SPM
                             </span>
@@ -1449,14 +1446,14 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">ตัวอย่างการเขียน Code ด้วย JavaScript:</h4>
                 <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
   return (strokeCount / timeSeconds) * 60;
 }
 
-// Example:
+// ตัวอย่าง:
 const sr = calculateStrokeRate(30, 25);
-// Returns: 72 SPM</code></pre>
+// ผลลัพธ์: 72 SPM</code></pre>
 
                 <script>
                 function updateSRCalculator() {
@@ -1486,73 +1483,73 @@ const sr = calculateStrokeRate(30, 25);
         </div>
 
         <div class="formula-card">
-            <h3>Distance Per Stroke (DPS)</h3>
+            <h3>ระยะทางต่อสโตรก (Distance Per Stroke - DPS)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>สูตรคำนวณ:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        DPS = Distance / Stroke Count
+                        DPS = ระยะทาง / จำนวนสโตรก
                     </div>
                     <div class="formula">
-                        DPS = Distance / (SR / 60)
+                        DPS = ระยะทาง / (SR / 60)
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>ตัวอย่างการเขียน Code ด้วย JavaScript:</h4>
                 <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance;
   return effectiveDistance / strokeCount;
 }
 
-// Example (25m pool, 5m push-off):
+// ตัวอย่าง (สระ 25 เมตร, ระยะถีบตัวขอบสระ 5 เมตร):
 const dps = calculateDPS(25, 12, 5);
-// Returns: 1.67 m/stroke
+// ผลลัพธ์: 1.67 เมตร/สโตรก
 
-// For multiple laps:
+// สำหรับการว่ายหลายรอบ:
 const dps100m = calculateDPS(100, 48, 4 * 5);
-// Returns: 1.67 m/stroke (4 laps × 5m push-off)</code></pre>
+// ผลลัพธ์: 1.67 เมตร/สโตรก (4 รอบ × ระยะถีบตัว 5 เมตร)</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Velocity from SR and DPS</h3>
+            <h3>ความเร็วจาก SR และ DPS</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>สูตรคำนวณ:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        Velocity (m/s) = (SR / 60) × DPS
+                        ความเร็ว (เมตร/วินาที) = (SR / 60) × DPS
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>ตัวอย่างการเขียน Code ด้วย JavaScript:</h4>
                 <pre><code>function calculateVelocity(strokeRate, dps) {
   return (strokeRate / 60) * dps;
 }
 
-// Example:
+// ตัวอย่าง:
 const velocity = calculateVelocity(70, 1.6);
-// Returns: 1.87 m/s</code></pre>
+// ผลลัพธ์: 1.87 เมตร/วินาที</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Stroke Index (SI)</h3>
+            <h3>ดัชนีสโตรก (Stroke Index - SI)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>สูตรคำนวณ:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SI = Velocity (m/s) × DPS (m/stroke)
+                        SI = ความเร็ว (เมตร/วินาที) × DPS (เมตร/สโตรก)
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>ตัวอย่างการเขียน Code ด้วย JavaScript:</h4>
                 <pre><code>function calculateStrokeIndex(velocity, dps) {
   return velocity * dps;
 }
 
-// Example:
+// ตัวอย่าง:
 const si = calculateStrokeIndex(1.5, 1.7);
-// Returns: 2.55</code></pre>
+// ผลลัพธ์: 2.55</code></pre>
             </div>
         </div>
     </div>
@@ -1560,25 +1557,25 @@ const si = calculateStrokeIndex(1.5, 1.7);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Performance Management Chart (PMC)</h2>
+        <h2>กราฟบริหารจัดการสมรรถภาพ (Performance Management Chart - PMC)</h2>
 
         <div class="formula-card">
-            <h3>CTL, ATL, TSB Calculations</h3>
+            <h3>การคำนวณค่า CTL, ATL และ TSB</h3>
             <div class="formula-content">
-                <h4>Formulas:</h4>
+                <h4>สูตรคำนวณ:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        CTL today = CTL yesterday + (TSS today - CTL yesterday) × (1/42)
+                        CTL วันนี้ = CTL เมื่อวาน + (TSS วันนี้ - CTL เมื่อวาน) × (1/42)
                     </div>
                     <div class="formula">
-                        ATL today = ATL yesterday + (TSS today - ATL yesterday) × (1/7)
+                        ATL วันนี้ = ATL เมื่อวาน + (TSS วันนี้ - ATL เมื่อวาน) × (1/7)
                     </div>
                     <div class="formula">
-                        TSB = CTL yesterday - ATL yesterday
+                        TSB = CTL เมื่อวาน - ATL เมื่อวาน
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>ตัวอย่างการเขียน Code ด้วย JavaScript:</h4>
                 <pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
@@ -1591,7 +1588,7 @@ function calculateTSB(yesterdayCTL, yesterdayATL) {
   return yesterdayCTL - yesterdayATL;
 }
 
-// Calculate PMC for series of workouts
+// คำนวณ PMC สำหรับชุดการออกกำลังกาย
 function calculatePMC(workouts) {
   let ctl = 0, atl = 0;
   const results = [];
@@ -1613,31 +1610,30 @@ function calculatePMC(workouts) {
   return results;
 }
 
-// Example usage:
+// ตัวอย่างการใช้งาน:
 const workouts = [
   { date: '2025-01-01', tss: 50 },
   { date: '2025-01-02', tss: 60 },
   { date: '2025-01-03', tss: 45 },
-  // ... more workouts
+  // ... รายการออกกำลังกายอื่นๆ
 ];
 
 const pmc = calculatePMC(workouts);
-// Returns array with CTL, ATL, TSB for each day</code></pre>
+// คืนค่าอาร์เรย์ที่มี CTL, ATL, TSB สำหรับแต่ละวัน</code></pre>
             </div>
         </div>
     </div>
 </section>
-
 <section class="section">
     <div class="container">
-        <h2>Advanced Calculations</h2>
+        <h2>การคำนวณขั้นสูง (Advanced Calculations)</h2>
 
         <div class="formula-card">
-            <h3>CSS from Multiple Distances (Regression Method)</h3>
+            <h3>CSS จากหลายระยะทาง (Regression Method)</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>ตัวอย่างการเขียน Code ด้วย JavaScript:</h4>
                 <pre><code>function calculateCSSRegression(distances, times) {
-  // Linear regression: distance = a + b*time
+  // การถดถอยเชิงเส้น (Linear regression): distance = a + b*time
   const n = distances.length;
   const sumX = times.reduce((a, b) => a + b, 0);
   const sumY = distances.reduce((a, b) => a + b, 0);
@@ -1648,40 +1644,40 @@ const pmc = calculatePMC(workouts);
   const intercept = (sumY - slope * sumX) / n;
 
   return {
-    css: slope, // Critical swimming velocity (m/s)
-    anaerobic_capacity: intercept // Anaerobic distance capacity (m)
+    css: slope, // ความเร็วขีดจำกัดในการว่ายน้ำ (เมตร/วินาที)
+    anaerobic_capacity: intercept // ความจุระยะทางแบบไม่ใช้ออกซิเจน (เมตร)
   };
 }
 
-// Example with multiple test distances:
+// ตัวอย่างที่มีระยะทางทดสอบหลายระยะ:
 const distances = [100, 200, 400, 800];
-const times = [65, 150, 340, 720]; // in seconds
+const times = [65, 150, 340, 720]; // หน่วยเป็นวินาที
 const result = calculateCSSRegression(distances, times);
-// Returns: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
+// ผลลัพธ์: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Intensity Factor from Pace</h3>
+            <h3>ปัจจัยความหนัก (Intensity Factor) จากความเร็ว (Pace)</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>ตัวอย่างการเขียน Code ด้วย JavaScript:</h4>
                 <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
-  // Convert pace to speed (m/s)
+  // แปลง Pace เป็นความเร็ว (เมตร/วินาที)
   const actualSpeed = 100 / actualPace100m;
   const thresholdSpeed = 100 / thresholdPace100m;
   return actualSpeed / thresholdSpeed;
 }
 
-// Example:
+// ตัวอย่าง:
 const if_value = calculateIntensityFactor(110, 93);
-// Returns: 0.845 (swimming at 84.5% of threshold)</code></pre>
+// ผลลัพธ์: 0.845 (การว่ายอยู่ที่ 84.5% ของระดับขีดจำกัด)</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Pace Consistency Analysis</h3>
+            <h3>การวิเคราะห์ความสม่ำเสมอของความเร็ว (Pace Consistency Analysis)</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>ตัวอย่างการเขียน Code ด้วย JavaScript:</h4>
                 <pre><code>function analyzePaceConsistency(laps) {
   const paces = laps.map(lap => lap.distance / lap.time);
   const avgPace = paces.reduce((a, b) => a + b) / paces.length;
@@ -1695,13 +1691,13 @@ const if_value = calculateIntensityFactor(110, 93);
     avgPace,
     stdDev,
     coefficientOfVariation,
-    consistency: coefficientOfVariation < 5 ? "Excellent" :
-                 coefficientOfVariation < 10 ? "Good" :
-                 coefficientOfVariation < 15 ? "Moderate" : "Variable"
+    consistency: coefficientOfVariation < 5 ? "ยอดเยี่ยม (Excellent)" :
+                 coefficientOfVariation < 10 ? "ดี (Good)" :
+                 coefficientOfVariation < 15 ? "ปานกลาง (Moderate)" : "แปรปรวน (Variable)"
   };
 }
 
-// Example:
+// ตัวอย่าง:
 const laps = [
   { distance: 100, time: 70 },
   { distance: 100, time: 72 },
@@ -1709,14 +1705,14 @@ const laps = [
   // ...
 ];
 const analysis = analyzePaceConsistency(laps);
-// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Excellent" }</code></pre>
+// ผลลัพธ์: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "ยอดเยี่ยม (Excellent)" }</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Fatigue Detection from Stroke Count</h3>
+            <h3>การตรวจจับความเหนื่อยล้าจากจำนวนสโตรก</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>ตัวอย่างการเขียน Code ด้วย JavaScript:</h4>
                 <pre><code>function detectFatigue(laps) {
   const firstThird = laps.slice(0, Math.floor(laps.length/3));
   const lastThird = laps.slice(-Math.floor(laps.length/3));
@@ -1732,20 +1728,20 @@ const analysis = analyzePaceConsistency(laps);
     firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
     lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
     percentIncrease: Math.round(strokeCountIncrease * 10) / 10,
-    fatigueLevel: strokeCountIncrease < 5 ? "Minimal" :
-                  strokeCountIncrease < 10 ? "Moderate" :
-                  strokeCountIncrease < 20 ? "Significant" : "Severe"
+    fatigueLevel: strokeCountIncrease < 5 ? "น้อยมาก (Minimal)" :
+                  strokeCountIncrease < 10 ? "ปานกลาง (Moderate)" :
+                  strokeCountIncrease < 20 ? "เห็นได้ชัด (Significant)" : "รุนแรง (Severe)"
   };
 }
 
-// Example:
+// ตัวอย่าง:
 const laps = [
   { strokeCount: 14 }, { strokeCount: 14 }, { strokeCount: 15 },
   { strokeCount: 15 }, { strokeCount: 16 }, { strokeCount: 16 },
   { strokeCount: 17 }, { strokeCount: 18 }, { strokeCount: 18 }
 ];
 const fatigue = detectFatigue(laps);
-// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Severe" }</code></pre>
+// ผลลัพธ์: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "รุนแรง (Severe)" }</code></pre>
             </div>
         </div>
     </div>
@@ -1753,121 +1749,61 @@ const fatigue = detectFatigue(laps);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Data Validation</h2>
+        <h2>การตรวจสอบความถูกต้องของข้อมูล (Data Validation)</h2>
 
         <div class="formula-card">
-            <h3>Workout Data Quality Checks</h3>
+            <h3>การตรวจสอบคุณภาพข้อมูลการออกกำลังกาย</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>ตัวอย่างการเขียน Code ด้วย JavaScript:</h4>
                 <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
-  // Check for reasonable pace ranges (1:00-5:00 per 100m)
+  // ตรวจสอบช่วง Pace ที่สมเหตุสมผล (1:00-5:00 ต่อ 100 เมตร)
   const avgPace = (workout.totalTime / workout.totalDistance) * 100;
   if (avgPace < 60 || avgPace > 300) {
-    issues.push(`Unusual average pace: ${Math.round(avgPace)}s per 100m`);
+    issues.push(`Pace เฉลี่ยผิดปกติ: ${Math.round(avgPace)} วินาทีต่อ 100 เมตร`);
   }
 
-  // Check for reasonable stroke counts (10-50 per 25m)
+  // ตรวจสอบจำนวนสโตรกที่สมเหตุสมผล (10-50 ต่อ 25 เมตร)
   const avgStrokesPer25m = (workout.totalStrokes / workout.totalDistance) * 25;
   if (avgStrokesPer25m < 10 || avgStrokesPer25m > 50) {
-    issues.push(`Unusual stroke count: ${Math.round(avgStrokesPer25m)} per 25m`);
+    issues.push(`จำนวนสโตรกผิดปกติ: ${Math.round(avgStrokesPer25m)} ครั้งต่อ 25 เมตร`);
   }
 
-  // Check for reasonable stroke rate (30-150 SPM)
+  // ตรวจสอบความถี่สโตรกที่สมเหตุสมผล (30-150 SPM)
   const avgSR = calculateStrokeRate(workout.totalStrokes, workout.totalTime);
   if (avgSR < 30 || avgSR > 150) {
-    issues.push(`Unusual stroke rate: ${Math.round(avgSR)} SPM`);
+    issues.push(`ความถี่สโตรกผิดปกติ: ${Math.round(avgSR)} SPM`);
   }
 
-  // Check for missing laps (gaps in time)
+  // ตรวจสอบรอบที่ขาดหายไป (ช่วงเวลาที่เว้นว่าง)
   if (workout.laps && workout.laps.length > 1) {
     for (let i = 1; i < workout.laps.length; i++) {
       const gap = workout.laps[i].startTime -
                   (workout.laps[i-1].startTime + workout.laps[i-1].duration);
-      if (gap > 300) { // 5 minute gap
-        issues.push(`Large gap detected between laps ${i} and ${i+1}`);
+      if (gap > 300) { // เว้นช่วงเกิน 5 นาที
+        issues.push(`ตรวจพบช่องว่างขนาดใหญ่ระหว่างรอบที่ ${i} และ ${i+1}`);
       }
     }
   }
 
   return {
     isValid: issues.length === 0,
-    issues
+    issues: issues
   };
-}
-
-// Example:
-const workout = {
-  totalDistance: 2000,
-  totalTime: 1800, // 30 minutes
-  totalStrokes: 800,
-  laps: [/* lap data */]
-};
-const validation = validateWorkoutData(workout);
-// Returns: { isValid: true, issues: [] }</code></pre>
+}</code></pre>
             </div>
         </div>
     </div>
 </section>
 
 <section class="section">
-    <div class="container container-narrow">
-        <h2>Helper Functions</h2>
-
-        <div class="formula-card">
-            <h3>Time Conversion Utilities</h3>
-            <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
-                <pre><code>// Convert mm:ss to seconds
-function timeToSeconds(timeString) {
-  const parts = timeString.split(':');
-  return parseInt(parts[0]) * 60 + parseInt(parts[1]);
-}
-
-// Convert seconds to mm:ss
-function secondsToTime(seconds) {
-  const minutes = Math.floor(seconds / 60);
-  const secs = Math.round(seconds % 60);
-  return `${minutes}:${secs.toString().padStart(2, '0')}`;
-}
-
-// Convert seconds to hh:mm:ss
-function secondsToTimeDetailed(seconds) {
-  const hours = Math.floor(seconds / 3600);
-  const minutes = Math.floor((seconds % 3600) / 60);
-  const secs = Math.round(seconds % 60);
-  return `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-}
-
-// Examples:
-timeToSeconds("1:33"); // Returns: 93
-secondsToTime(93); // Returns: "1:33"
-secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
     <div class="container container-narrow text-center">
-        <h2>Implementation Resources</h2>
-        <p class="lead">All formulas on this page are production-ready and validated against scientific literature. Use them for custom analytics tools, verification, or deeper understanding of swimming performance calculations.</p>
-
-        <div class="callout callout-tip">
-            <h3>💡 Best Practices</h3>
-            <ul class="text-left">
-                <li><strong>Validate inputs:</strong> Check for reasonable ranges before calculating</li>
-                <li><strong>Handle edge cases:</strong> Division by zero, negative values, null data</li>
-                <li><strong>Round appropriately:</strong> CTL/ATL/TSB to 1 decimal, sTSS to integer</li>
-                <li><strong>Store precision:</strong> Keep full precision in database, round for display</li>
-                <li><strong>Test thoroughly:</strong> Use known-good data to verify calculations</li>
-            </ul>
-        </div>
+        <h2>มาตรฐานการคำนวณที่โปร่งใส</h2>
+        <p class="lead">ความถูกต้องแม่นยำคือหัวใจสำคัญของ Swim Analytics เราเปิดเผยสูตรคำนวณและวิธีการทำงานเพื่อให้คุณมั่นใจในข้อมูลที่คุณได้รับจากการฝึกซ้อมทุกครั้ง</p>
 
         <div class="mt-xl">
-            <a href="/th/" class="btn btn-primary btn-large">Back to Home</a>
-            <a href="/th/research/" class="btn btn-secondary">Scientific Foundation</a>
+            <a href="/th/getting-started/" class="btn btn-primary btn-large">เริ่มต้นใช้งาน Swim Analytics →</a>
         </div>
     </div>
 </section>
