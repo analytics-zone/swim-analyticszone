@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="ta" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>நீச்சல் TSS கால்குலேட்டர்: பயிற்சி சுமை &amp; PMC (CTL/ATL/TSB)</title>
-  <meta name="description" content="நீச்சல் பயிற்சி அழுத்த மதிப்பெண் (sTSS) கணக்கீடு மற்றும் செயல்திறன் மேலாண்மை விளக்கப்பட அளவீடுகள் (CTL, ATL, TSB) கற்றுக்கொள்ளுங்கள். உடற்தகுதி மற்றும் சோர்வை...">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="நீச்சல் TSS, sTSS கால்குலேட்டர், பயிற்சி அழுத்த மதிப்பெண், CTL ATL TSB, நீச்சல் PMC">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/ta/training-load/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-05T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/ta/training-load/">
-  <meta property="og:title" content="நீச்சல் TSS கால்குலேட்டர்: பயிற்சி சுமை &amp; PMC (CTL/ATL/TSB)">
-  <meta property="og:description" content="நீச்சல் பயிற்சி அழுத்த மதிப்பெண் (sTSS) கணக்கீடு மற்றும் செயல்திறன் மேலாண்மை விளக்கப்பட அளவீடுகள் (CTL, ATL, TSB) கற்றுக்கொள்ளுங்கள். உடற்தகுதி மற்றும் சோர்வை...">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="ta_IN">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/ta/training-load/">
-  <meta name="twitter:title" content="நீச்சல் TSS கால்குலேட்டர்: பயிற்சி சுமை &amp; PMC (CTL/ATL/TSB)">
-  <meta name="twitter:description" content="நீச்சல் பயிற்சி அழுத்த மதிப்பெண் (sTSS) கணக்கீடு மற்றும் செயல்திறன் மேலாண்மை விளக்கப்பட அளவீடுகள் (CTL, ATL, TSB) கற்றுக்கொள்ளுங்கள். உடற்தகுதி மற்றும் சோர்வை...">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/training-load/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/training-load/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/training-load/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/training-load/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/training-load/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/training-load/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/training-load/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/training-load/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/training-load/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/training-load/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/training-load/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/training-load/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/training-load/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/training-load/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/training-load/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/training-load/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/training-load/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/training-load/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/training-load/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/training-load/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/training-load/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/training-load/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/training-load/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/training-load/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/training-load/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/training-load/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/training-load/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/training-load/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/training-load/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/training-load/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/training-load/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/training-load/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/training-load/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/training-load/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/training-load/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/training-load/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/training-load/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/training-load/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/training-load/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/training-load/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/training-load/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/training-load/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/training-load/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/training-load/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/training-load/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/training-load/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/training-load/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/training-load/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/training-load/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/training-load/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/training-load/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/training-load/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/training-load/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/training-load/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/training-load/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/training-load/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="ta" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>நீச்சல் TSS கால்குலேட்டர்: பயிற்சி சுமை &amp; PMC (CTL/ATL/TSB)</title><meta name="description" content="நீச்சல் பயிற்சி அழுத்த மதிப்பெண் (sTSS) கணக்கீடு மற்றும் செயல்திறன் மேலாண்மை விளக்கப்பட அளவீடுகள் (CTL, ATL, TSB) கற்றுக்கொள்ளுங்கள். உடற்தகுதி மற்றும் சோர்வை..."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="நீச்சல் TSS, sTSS கால்குலேட்டர், பயிற்சி அழுத்த மதிப்பெண், CTL ATL TSB, நீச்சல் PMC"><link rel="canonical" href="https://swim.analyticszone.app/ta/training-load/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-05T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/ta/training-load/"><meta property="og:title" content="நீச்சல் TSS கால்குலேட்டர்: பயிற்சி சுமை &amp; PMC (CTL/ATL/TSB)"><meta property="og:description" content="நீச்சல் பயிற்சி அழுத்த மதிப்பெண் (sTSS) கணக்கீடு மற்றும் செயல்திறன் மேலாண்மை விளக்கப்பட அளவீடுகள் (CTL, ATL, TSB) கற்றுக்கொள்ளுங்கள். உடற்தகுதி மற்றும் சோர்வை..."><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="ta_IN"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/ta/training-load/"><meta name="twitter:title" content="நீச்சல் TSS கால்குலேட்டர்: பயிற்சி சுமை &amp; PMC (CTL/ATL/TSB)"><meta name="twitter:description" content="நீச்சல் பயிற்சி அழுத்த மதிப்பெண் (sTSS) கணக்கீடு மற்றும் செயல்திறன் மேலாண்மை விளக்கப்பட அளவீடுகள் (CTL, ATL, TSB) கற்றுக்கொள்ளுங்கள். உடற்தகுதி மற்றும் சோர்வை..."><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/training-load/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/training-load/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/training-load/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/training-load/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/training-load/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/training-load/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/training-load/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/training-load/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/training-load/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/training-load/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/training-load/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/training-load/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/training-load/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/training-load/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/training-load/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/training-load/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/training-load/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/training-load/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/training-load/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/training-load/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/training-load/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/training-load/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/training-load/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/training-load/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/training-load/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/training-load/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/training-load/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/training-load/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/training-load/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/training-load/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/training-load/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/training-load/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/training-load/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/training-load/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/training-load/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/training-load/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/training-load/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/training-load/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/training-load/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/training-load/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/training-load/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/training-load/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/training-load/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/training-load/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/training-load/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/training-load/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/training-load/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/training-load/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/training-load/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/training-load/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/training-load/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/training-load/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/training-load/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/training-load/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/training-load/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/training-load/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "ta"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "நீச்சல் பயிற்சி அழுத்த மதிப்பெண் (sTSS) கணக்கீடு மற்றும் செயல்திறன் மேலாண்மை விளக்கப்பட அளவீடுகள் (CTL, ATL, TSB) கற்றுக்கொள்ளுங்கள். உடற்தகுதி மற்றும் சோர்வை...",
   "url": "https://swim.analyticszone.app/ta/training-load/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/ta/training-load/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1384 +449,361 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">உள்ளடக்கத்திற்குச் செல்லவும்</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/ta/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/ta/" 
+  </script></head><body><a href="#main-content" class="skip-link">உள்ளடக்கத்திற்குச் செல்லவும்</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/ta/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/ta/" 
                                 aria-current="">
                                 முகப்பு
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/ta/getting-started/" class="nav-label">கற்க</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/ta/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/ta/getting-started/" class="nav-label">கற்க</a><ul class="submenu"><li><a href="/ta/getting-started/" 
                                         aria-current="">
                                         தொடங்குதல்
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ta/css/" 
+                                    </a></li><li><a href="/ta/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ta/training-zones/" 
+                                    </a></li><li><a href="/ta/training-zones/" 
                                         aria-current="">
                                         பயிற்சி மண்டலங்கள்
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ta/training-load/" class="active" 
+                                    </a></li><li><a href="/ta/training-load/" class="active" 
                                         aria-current="page">
                                         பயிற்சிச் சுமை
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ta/stss-calculator/" 
+                                    </a></li><li><a href="/ta/stss-calculator/" 
                                         aria-current="">
                                         sTSS கால்குலேட்டர்
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/ta/research/" class="nav-label">அறிவியல்</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/ta/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/ta/research/" class="nav-label">அறிவியல்</a><ul class="submenu"><li><a href="/ta/research/" 
                                         aria-current="">
                                         ஆராய்ச்சி
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ta/formulas/" 
+                                    </a></li><li><a href="/ta/formulas/" 
                                         aria-current="">
                                         சூத்திரங்கள்
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ta/efficiency/" 
+                                    </a></li><li><a href="/ta/efficiency/" 
                                         aria-current="">
                                         செயல்திறன்
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ta/stroke-mechanics/" 
+                                    </a></li><li><a href="/ta/stroke-mechanics/" 
                                         aria-current="">
                                         ஸ்ட்ரோக் இயக்கவியல்
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ta/bibliography/" 
+                                    </a></li><li><a href="/ta/bibliography/" 
                                         aria-current="">
                                         ஆதார நூற்பட்டியல்
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/ta/contact/" 
+                                    </a></li></ul></li><li><a href="/ta/contact/" 
                                 aria-current="">
                                 தொடர்பு
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="மொழியைத் தேர்ந்தெடுக்கவும்">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="மொழியைத் தேர்ந்தெடுக்கவும்"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" selected>
+                        </option><option value="ta" selected>
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="மெனுவை மாற்றவும்"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/ta/">முகப்பு</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/ta/getting-started/">கற்க</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">பயிற்சிச் சுமை</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>பயிற்சி சுமை & செயல்திறன் மேலாண்மை</h1>
-        <p class="lead">அழுத்தத்தை அளவிடுதல், உடற்தகுதியை கண்காணித்தல், செயல்திறனை மேம்படுத்தல்</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>பயிற்சி சுமையைப் புரிந்துகொள்ளுதல்</h2>
-        <p class="lead">பயிற்சி சுமை அளவிடுதல் முக்கியமான கேள்விக்கு பதில் அளிக்கிறது: <strong>அந்த பயிற்சி எவ்வளவு கடினம்?</strong> தூரம் அல்லது நேரம் மட்டும் அல்ல; உங்கள் உடலில் ஏற்பட்ட உண்மையான உடலியல் அழுத்தம்.</p>
-
-        <p>Dr. Andrew Coggan உருவாக்கிய Training Stress Score (TSS) முறையியல், பயிற்சியின் தீவிரம் மற்றும் கால அளவைக் ஒரே எண்ணாக அளவிடும் தரநிலையான முறையைக் கொடுக்கிறது. நீச்சலுக்கு, நீரின் தனித்துவமான எதிர்ப்பு பண்புகளை கணக்கில் கொள்ளும் முக்கிய மாற்றத்துடன் <strong>Swim Training Stress Score (sTSS)</strong> பயன்படுத்துகிறோம்.</p>
-
-        <div class="callout callout-info">
-            <h3>TSS தரநிலை</h3>
-            <p>உங்கள் செயல்திறன் வரம்பு வேகம் (CSS) இல் ஒரு மணி நேரம் = <strong>100 TSS</strong></p>
-            <p>இந்த தரநிலைப்படுத்தல் பயிற்சிகள், வாரங்கள், மற்றும் பயிற்சி சுழற்சிகள் முழுவதும் ஒப்பிட உதவுகிறது. 30-நிமிட வரம்பு நீச்சல் ≈ 50 TSS. 2-மணி வரம்பு நீச்சல் ≈ 200 TSS.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">நீச்சல் பயிற்சி அழுத்த மதிப்பெண் (sTSS)</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>சூத்திரம்</h3>
-                <div class="formula-box">
-                    <div class="formula">
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="மெனுவை மாற்றவும்"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/ta/">முகப்பு</a></li><li><a href="/ta/getting-started/">கற்க</a></li><li><span aria-current="page">பயிற்சிச் சுமை</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>பயிற்சி சுமை & செயல்திறன் மேலாண்மை</h1><p class="lead">அழுத்தத்தை அளவிடுதல், உடற்தகுதியை கண்காணித்தல், செயல்திறனை மேம்படுத்தல்</p></div></section><section class="section"><div class="container container-narrow"><h2>பயிற்சி சுமையைப் புரிந்துகொள்ளுதல்</h2><p class="lead">பயிற்சி சுமை அளவிடுதல் முக்கியமான கேள்விக்கு பதில் அளிக்கிறது: <strong>அந்த பயிற்சி எவ்வளவு கடினம்?</strong> தூரம் அல்லது நேரம் மட்டும் அல்ல; உங்கள் உடலில் ஏற்பட்ட உண்மையான உடலியல் அழுத்தம்.</p><p>Dr. Andrew Coggan உருவாக்கிய Training Stress Score (TSS) முறையியல், பயிற்சியின் தீவிரம் மற்றும் கால அளவைக் ஒரே எண்ணாக அளவிடும் தரநிலையான முறையைக் கொடுக்கிறது. நீச்சலுக்கு, நீரின் தனித்துவமான எதிர்ப்பு பண்புகளை கணக்கில் கொள்ளும் முக்கிய மாற்றத்துடன் <strong>Swim Training Stress Score (sTSS)</strong> பயன்படுத்துகிறோம்.</p><div class="callout callout-info"><h3>TSS தரநிலை</h3><p>உங்கள் செயல்திறன் வரம்பு வேகம் (CSS) இல் ஒரு மணி நேரம் = <strong>100 TSS</strong></p><p>இந்த தரநிலைப்படுத்தல் பயிற்சிகள், வாரங்கள், மற்றும் பயிற்சி சுழற்சிகள் முழுவதும் ஒப்பிட உதவுகிறது. 30-நிமிட வரம்பு நீச்சல் ≈ 50 TSS. 2-மணி வரம்பு நீச்சல் ≈ 200 TSS.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">நீச்சல் பயிற்சி அழுத்த மதிப்பெண் (sTSS)</h2><div class="grid grid-2"><div><h3>சூத்திரம்</h3><div class="formula-box"><div class="formula">
                         sTSS = (IF³) × காலம் (மணிநேரங்கள்) × 100
-                    </div>
-                    <div class="formula-explanation">
-                        <p>Intensity Factor (IF) என்பது:</p>
-                        <div class="formula">
+                    </div><div class="formula-explanation"><p>Intensity Factor (IF) என்பது:</p><div class="formula">
                             IF = NSS / FTP
-                        </div>
-                        <p>மேலும் Normalized Swim Speed (NSS) என்பது:</p>
-                        <div class="formula">
+                        </div><p>மேலும் Normalized Swim Speed (NSS) என்பது:</p><div class="formula">
                             NSS = மொத்த தூரம் / மொத்த நேரம் (m/min)
-                        </div>
-                    </div>
-                </div>
-
-                <div class="callout callout-warning mt-md">
-                    <h4>⚡ கியூபிக் காரணி (IF³)</h4>
-                    <p><strong>முக்கிய புதுமை:</strong> சைக்கிளிங்/ஓட்டம் IF² பயன்படுத்தும் போது, நீச்சல் IF³ பயன்படுத்துகிறது. இது நீரின் இயற்பியலை பிரதிபலிக்கிறது—வேகம் அதிகரிக்கும்போது எதிர்ப்பு <em>எக்ஸ்போனென்ஷியலாக</em> அதிகரிக்கிறது.</p>
-                    <p>நீரில் 10% வேகமாக நீந்துவதற்கு ~33% அதிக சக்தி தேவை. கியூபிக் காரணி இந்த கூடுதல் உடலியல் செலவை துல்லியமாக எடையிடுகிறது.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>வேலை செய்யப்பட்ட உதாரணம்</h3>
-                <div class="example-box">
-                    <h4>நீச்சல் வீரர் சுயவிவரம்:</h4>
-                    <ul>
-                        <li>CSS: 1:33/100m = 93 வினாடிகள்/100m</li>
-                        <li>FTP: 64.5 m/min (100m / 1.55min)</li>
-                    </ul>
-
-                    <h4>பயிற்சி தரவு:</h4>
-                    <ul>
-                        <li>மொத்த தூரம்: 3000m</li>
-                        <li>இயக்க நேரம்: 55:00 (3300 வினாடிகள்)</li>
-                        <li>ஓய்வு நேரம்: 10:00 (கணக்கில் சேர்க்கப்படாது)</li>
-                    </ul>
-
-                    <h4>படி 1: NSS கணக்கிடுங்கள்</h4>
-                    <div class="calculation">
+                        </div></div></div><div class="callout callout-warning mt-md"><h4>⚡ கியூபிக் காரணி (IF³)</h4><p><strong>முக்கிய புதுமை:</strong> சைக்கிளிங்/ஓட்டம் IF² பயன்படுத்தும் போது, நீச்சல் IF³ பயன்படுத்துகிறது. இது நீரின் இயற்பியலை பிரதிபலிக்கிறது—வேகம் அதிகரிக்கும்போது எதிர்ப்பு <em>எக்ஸ்போனென்ஷியலாக</em> அதிகரிக்கிறது.</p><p>நீரில் 10% வேகமாக நீந்துவதற்கு ~33% அதிக சக்தி தேவை. கியூபிக் காரணி இந்த கூடுதல் உடலியல் செலவை துல்லியமாக எடையிடுகிறது.</p></div></div><div><h3>வேலை செய்யப்பட்ட உதாரணம்</h3><div class="example-box"><h4>நீச்சல் வீரர் சுயவிவரம்:</h4><ul><li>CSS: 1:33/100m = 93 வினாடிகள்/100m</li><li>FTP: 64.5 m/min (100m / 1.55min)</li></ul><h4>பயிற்சி தரவு:</h4><ul><li>மொத்த தூரம்: 3000m</li><li>இயக்க நேரம்: 55:00 (3300 வினாடிகள்)</li><li>ஓய்வு நேரம்: 10:00 (கணக்கில் சேர்க்கப்படாது)</li></ul><h4>படி 1: NSS கணக்கிடுங்கள்</h4><div class="calculation">
                         NSS = 3000m / 55min<br>
-                        NSS = <strong>54.5 m/min</strong>
-                    </div>
-
-                    <h4>படி 2: IF கணக்கிடுங்கள்</h4>
-                    <div class="calculation">
+                        NSS = <strong>54.5 m/min</strong></div><h4>படி 2: IF கணக்கிடுங்கள்</h4><div class="calculation">
                         IF = 54.5 / 64.5<br>
-                        IF = <strong>0.845</strong>
-                    </div>
-
-                    <h4>படி 3: sTSS கணக்கிடுங்கள்</h4>
-                    <div class="calculation">
+                        IF = <strong>0.845</strong></div><h4>படி 3: sTSS கணக்கிடுங்கள்</h4><div class="calculation">
                         sTSS = (0.845³) × (55/60) × 100<br>
                         sTSS = 0.603 × 0.917 × 100<br>
-                        sTSS = <strong>55.3</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="intensity-guide mt-xl">
-            <h3>sTSS தீவிர வழிகாட்டிகள்</h3>
-            <table class="intensity-table">
-                <thead>
-                    <tr>
-                        <th>sTSS வரம்பு</th>
-                        <th>தீவிர நிலை</th>
-                        <th>விளக்கம்</th>
-                        <th>உதாரண பயிற்சிகள்</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt; 50</td>
-                        <td>எளிய மீட்பு</td>
-                        <td>மெதுவான நீச்சல், நுட்ப கவனம், செயல்முறை ஓய்வு</td>
-                        <td>30-45 நிமிட மீட்பு நீச்சல், ட்ரில் செட்கள்</td>
-                    </tr>
-                    <tr>
-                        <td>50-100</td>
-                        <td>மிதமான பயிற்சி</td>
-                        <td>சாதாரண தினசரி பயிற்சி அளவு</td>
-                        <td>60-90 நிமிட ஏரோபிக் சகிப்புத்தன்மை, கலந்த மண்டல்கள்</td>
-                    </tr>
-                    <tr>
-                        <td>100-200</td>
-                        <td>கடின பயிற்சி</td>
-                        <td>வரம்பு/VO₂ தர பயிற்சிகளுடன் தரமான அமர்வுகள்</td>
-                        <td>90-120 நிமிட CSS இடைவேளைகள், போட்டி வேக செட்கள்</td>
-                    </tr>
-                    <tr>
-                        <td>200-300</td>
-                        <td>மிகக் கடினம்</td>
-                        <td>போட்டி ஒப்புநிலை, மிக உயர்தீவிர தொகுதிகள்</td>
-                        <td>2-3 மணி அமர்வுகள், நேர சோதனைகள், முழு முயற்சி செட்கள்</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; 300</td>
-                        <td>தீவிரம்</td>
-                        <td>போட்டி நாள், மிக நீண்ட தூர நிகழ்வுகள்</td>
-                        <td>போட்டி, ஐரன்மேன் நீச்சல்கள், மேரத்தான் நீச்சல்</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-lg">
-            <h3>📊 நிலை வாரியாக வாராந்திர TSS இலக்குகள்</h3>
-            <ul>
-                <li><strong>தொடக்கநிலை:</strong> 200-400 TSS/வாரம்</li>
-                <li><strong>இடைநிலை:</strong> 400-700 TSS/வாரம்</li>
-                <li><strong>மேம்பட்ட/உயர்மட்டம்:</strong> 700-1000+ TSS/வாரம்</li>
-            </ul>
-            <p>இவை உங்கள் Chronic Training Load (CTL) இல் சேர்ந்து குவிகின்றன.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2 class="text-center mb-xl">செயல்திறன் மேலாண்மை விளக்கப்படம் (PMC)</h2>
-        <p class="text-center lead">PMC உங்கள் பயிற்சியின் முழு கதையைச் சொல்வதற்கான மூன்று இணைந்த அளவீடுகளை காட்சிப்படுத்துகிறது: உடற்தகுதி, சோர்வு, மற்றும் வடிவு.</p>
-
-        <div class="pmc-overview">
-            <div class="grid grid-3">
-                <div class="pmc-metric">
-                    <div class="metric-icon">📈</div>
-                    <h3>CTL - நாள்பட்ட பயிற்சி சுமை</h3>
-                    <div class="metric-value-label">உங்கள் உடற்தகுதி</div>
-                    <p>தினசரி TSS இன் 42-நாள் எக்ஸ்போனென்ஷியலி எடையிட்ட சராசரி. நீண்டகால ஏரோபிக் உடற்தகுதி மற்றும் பயிற்சி தகவமைப்பைக் குறிக்கிறது.</p>
-                    <div class="formula-small">
+                        sTSS = <strong>55.3</strong></div></div></div></div><div class="intensity-guide mt-xl"><h3>sTSS தீவிர வழிகாட்டிகள்</h3><table class="intensity-table"><thead><tr><th>sTSS வரம்பு</th><th>தீவிர நிலை</th><th>விளக்கம்</th><th>உதாரண பயிற்சிகள்</th></tr></thead><tbody><tr><td>&lt; 50</td><td>எளிய மீட்பு</td><td>மெதுவான நீச்சல், நுட்ப கவனம், செயல்முறை ஓய்வு</td><td>30-45 நிமிட மீட்பு நீச்சல், ட்ரில் செட்கள்</td></tr><tr><td>50-100</td><td>மிதமான பயிற்சி</td><td>சாதாரண தினசரி பயிற்சி அளவு</td><td>60-90 நிமிட ஏரோபிக் சகிப்புத்தன்மை, கலந்த மண்டல்கள்</td></tr><tr><td>100-200</td><td>கடின பயிற்சி</td><td>வரம்பு/VO₂ தர பயிற்சிகளுடன் தரமான அமர்வுகள்</td><td>90-120 நிமிட CSS இடைவேளைகள், போட்டி வேக செட்கள்</td></tr><tr><td>200-300</td><td>மிகக் கடினம்</td><td>போட்டி ஒப்புநிலை, மிக உயர்தீவிர தொகுதிகள்</td><td>2-3 மணி அமர்வுகள், நேர சோதனைகள், முழு முயற்சி செட்கள்</td></tr><tr><td>&gt; 300</td><td>தீவிரம்</td><td>போட்டி நாள், மிக நீண்ட தூர நிகழ்வுகள்</td><td>போட்டி, ஐரன்மேன் நீச்சல்கள், மேரத்தான் நீச்சல்</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>📊 நிலை வாரியாக வாராந்திர TSS இலக்குகள்</h3><ul><li><strong>தொடக்கநிலை:</strong> 200-400 TSS/வாரம்</li><li><strong>இடைநிலை:</strong> 400-700 TSS/வாரம்</li><li><strong>மேம்பட்ட/உயர்மட்டம்:</strong> 700-1000+ TSS/வாரம்</li></ul><p>இவை உங்கள் Chronic Training Load (CTL) இல் சேர்ந்து குவிகின்றன.</p></div></div></section><section class="section"><div class="container"><h2 class="text-center mb-xl">செயல்திறன் மேலாண்மை விளக்கப்படம் (PMC)</h2><p class="text-center lead">PMC உங்கள் பயிற்சியின் முழு கதையைச் சொல்வதற்கான மூன்று இணைந்த அளவீடுகளை காட்சிப்படுத்துகிறது: உடற்தகுதி, சோர்வு, மற்றும் வடிவு.</p><div class="pmc-overview"><div class="grid grid-3"><div class="pmc-metric"><div class="metric-icon">📈</div><h3>CTL - நாள்பட்ட பயிற்சி சுமை</h3><div class="metric-value-label">உங்கள் உடற்தகுதி</div><p>தினசரி TSS இன் 42-நாள் எக்ஸ்போனென்ஷியலி எடையிட்ட சராசரி. நீண்டகால ஏரோபிக் உடற்தகுதி மற்றும் பயிற்சி தகவமைப்பைக் குறிக்கிறது.</p><div class="formula-small">
                         CTL இன்று = CTL நேற்று + (TSS இன்று - CTL நேற்று) × (1/42)
-                    </div>
-                </div>
-
-                <div class="pmc-metric">
-                    <div class="metric-icon">⚡</div>
-                    <h3>ATL - கடுமையான பயிற்சி சுமை</h3>
-                    <div class="metric-value-label">உங்கள் சோர்வு</div>
-                    <p>தினசரி TSS இன் 7-நாள் எக்ஸ்போனென்ஷியலி எடையிட்ட சராசரி. சமீபத்திய பயிற்சி அழுத்தம் மற்றும் குவிந்த சோர்வை காட்டுகிறது.</p>
-                    <div class="formula-small">
+                    </div></div><div class="pmc-metric"><div class="metric-icon">⚡</div><h3>ATL - கடுமையான பயிற்சி சுமை</h3><div class="metric-value-label">உங்கள் சோர்வு</div><p>தினசரி TSS இன் 7-நாள் எக்ஸ்போனென்ஷியலி எடையிட்ட சராசரி. சமீபத்திய பயிற்சி அழுத்தம் மற்றும் குவிந்த சோர்வை காட்டுகிறது.</p><div class="formula-small">
                         ATL இன்று = ATL நேற்று + (TSS இன்று - ATL நேற்று) × (1/7)
-                    </div>
-                </div>
-
-                <div class="pmc-metric">
-                    <div class="metric-icon">🎯</div>
-                    <h3>TSB - பயிற்சி அழுத்த சமநிலை</h3>
-                    <div class="metric-value-label">உங்கள் வடிவு</div>
-                    <p>நேற்றைய உடற்தகுதி மற்றும் சோர்வின் வித்தியாசம். போட்டிக்கு தயாரா அல்லது ஓய்வு தேவையா என்பதைக் குறிக்கிறது.</p>
-                    <div class="formula-small">
+                    </div></div><div class="pmc-metric"><div class="metric-icon">🎯</div><h3>TSB - பயிற்சி அழுத்த சமநிலை</h3><div class="metric-value-label">உங்கள் வடிவு</div><p>நேற்றைய உடற்தகுதி மற்றும் சோர்வின் வித்தியாசம். போட்டிக்கு தயாரா அல்லது ஓய்வு தேவையா என்பதைக் குறிக்கிறது.</p><div class="formula-small">
                         TSB = CTL நேற்று - ATL நேற்று
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2>CTL-ஐப் புரிந்துகொள்ளுதல்: உங்கள் உடற்தகுதி அளவீடு</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>CTL என்னை குறிக்கிறது</h3>
-                <p>CTL கடந்த 6 வாரங்களில் உங்கள் உடல் <em>தகவமைந்த</em> பயிற்சி சுமையை அளவிடுகிறது. அதிகமான CTL என்றால்:</p>
-                <ul>
-                    <li>மேம்பட்ட ஏரோபிக் திறன் மற்றும் சகிப்புத்தன்மை</li>
-                    <li>அதிக பயிற்சி அளவை தாங்கும் திறன்</li>
-                    <li>மேம்பட்ட தசை மற்றும் மாற்றுச்சத்து தகவமைப்புகள்</li>
-                    <li>உயர்ந்த நிலையான செயல்திறன்</li>
-                </ul>
-
-                <div class="callout callout-info">
-                    <h4>நேர மாறிலி: 42 நாட்கள்</h4>
-                    <p>CTL இன் அரை ஆயுள் ~14.7 நாட்கள். 42 நாட்கள் கழித்து, ஒரு பயிற்சியின் தாக்கத்தின் சுமார் 36.8% (1/e) மிச்சம் இருக்கும்.</p>
-                    <p>இந்த மெதுவான குறைதல் உடற்தகுதி மெதுவாக உருவாகவும் மெதுவாகக் குறையவும் உதவுகிறது — குறுகிய இடைவெளிகளில் detraining ஆகாமல் பாதுகாக்கிறது.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>வழக்கமான CTL மதிப்புகள்</h3>
-                <div class="levels-comparison">
-                    <div class="level-card-compact">
-                        <strong>தொடக்கநிலை:</strong>
-                        <div class="value">20-40 CTL</div>
-                        <p>அடித்தள உடற்தகுதியை உருவாக்குதல், வாரத்திற்கு 3-4 நீச்சல்கள்</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>இடைநிலை:</strong>
-                        <div class="value">40-70 CTL</div>
-                        <p>தொடர்ச்சியான பயிற்சி, வாரத்திற்கு 4-5 நீச்சல்கள்</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>மேம்பட்ட:</strong>
-                        <div class="value">70-100 CTL</div>
-                        <p>அதிக அளவு, வாரத்திற்கு 5-6 நீச்சல்கள், இரட்டை அமர்வுகள்</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>உயர்மட்டம்:</strong>
-                        <div class="value">100-150+ CTL</div>
-                        <p>தொழில்முறை பயிற்சி சுமை, வாரத்திற்கு 8-12 அமர்வுகள்</p>
-                    </div>
-                </div>
-
-                <div class="warning-box mt-md">
-                    <strong>⚠️ CTL உயர்வு வேக வரம்புகள்</strong>
-                    <ul>
-                        <li><strong>தொடக்கநிலை:</strong> வாரத்திற்கு +3-5 CTL</li>
-                        <li><strong>இடைநிலை:</strong> வாரத்திற்கு +5-7 CTL</li>
-                        <li><strong>மேம்பட்ட:</strong> வாரத்திற்கு +7-10 CTL</li>
-                    </ul>
-                    <p>இந்த வேகங்களை மீறுவது காயம் மற்றும் burnout அபாயத்தை கணிசமாக அதிகரிக்கும்.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>ATL-ஐப் புரிந்துகொள்ளுதல்: உங்கள் சோர்வு அளவீடு</h2>
-
-        <div class="content-split">
-            <div>
-                <p>ATL குறுகியகால பயிற்சி அழுத்தத்தை கண்காணிக்கிறது—கடந்த வாரத்தில் குவிந்த சோர்வு. கடின பயிற்சிக்குப் பிறகு இது விரைவாக உயரும் மற்றும் ஓய்வில் விரைவாக குறையும்.</p>
-
-                <h3>ATL இயக்கம்</h3>
-                <ul>
-                    <li><strong>விரைவான பதில்:</strong> 7-நாள் நேர மாறிலி (அரை ஆயுள் ~2.4 நாட்கள்)</li>
-                    <li><strong>முளை வடிவமைப்பு:</strong> கடின அமர்வுகளுக்குப் பிறகு திடீரென உயர்வு, மீட்பில் குறைவு</li>
-                    <li><strong>மீட்பு குறிகாட்டி:</strong> குறையும் ATL = சோர்வு நீங்குகிறது</li>
-                    <li><strong>அதிகபயிற்சி எச்சரிக்கை:</strong> தொடர்ந்து உயர்ந்த ATL என்பது போதிய மீட்பு இல்லாததைச் சுட்டுகிறது</li>
-                </ul>
-
-                <div class="callout callout-science">
-                    <h4>🔬 உடற்தகுதி-சோர்வு மாதிரி</h4>
-                    <p>ஒவ்வொரு பயிற்சி அமர்வும் இரண்டு விளைவுகளை உருவாக்குகிறது:</p>
-                    <ol>
-                        <li><strong>உடற்தகுதி தூண்டுதல்</strong> (மெதுவாக உருவாகும், நீண்ட காலம் நீடிக்கும்)</li>
-                        <li><strong>சோர்வு</strong> (விரைவாக உருவாகும், விரைவாக குறையும்)</li>
-                    </ol>
-                    <p>செயல்திறன் = உடற்தகுதி - சோர்வு. PMC இந்த மாதிரியை காட்சிப்படுத்துகிறது; அறிவியல் காலமுறை பயிற்சியை இயலுமைப்படுத்துகிறது.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>நிலையான நிலை (Steady State)</h3>
-                <p>பயிற்சி சுமை வாரத்துக்கு வாரம் நிலையாக இருக்கும் போது, CTL மற்றும் ATL ஒன்றாக நெருங்கும்:</p>
-                <div class="example-box">
-                    <h4>உதாரணம்: வாரத்திற்கு 500 TSS தொடர்ச்சியாக</h4>
-                    <div class="calculation">
+                    </div></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>CTL-ஐப் புரிந்துகொள்ளுதல்: உங்கள் உடற்தகுதி அளவீடு</h2><div class="grid grid-2"><div><h3>CTL என்னை குறிக்கிறது</h3><p>CTL கடந்த 6 வாரங்களில் உங்கள் உடல் <em>தகவமைந்த</em> பயிற்சி சுமையை அளவிடுகிறது. அதிகமான CTL என்றால்:</p><ul><li>மேம்பட்ட ஏரோபிக் திறன் மற்றும் சகிப்புத்தன்மை</li><li>அதிக பயிற்சி அளவை தாங்கும் திறன்</li><li>மேம்பட்ட தசை மற்றும் மாற்றுச்சத்து தகவமைப்புகள்</li><li>உயர்ந்த நிலையான செயல்திறன்</li></ul><div class="callout callout-info"><h4>நேர மாறிலி: 42 நாட்கள்</h4><p>CTL இன் அரை ஆயுள் ~14.7 நாட்கள். 42 நாட்கள் கழித்து, ஒரு பயிற்சியின் தாக்கத்தின் சுமார் 36.8% (1/e) மிச்சம் இருக்கும்.</p><p>இந்த மெதுவான குறைதல் உடற்தகுதி மெதுவாக உருவாகவும் மெதுவாகக் குறையவும் உதவுகிறது — குறுகிய இடைவெளிகளில் detraining ஆகாமல் பாதுகாக்கிறது.</p></div></div><div><h3>வழக்கமான CTL மதிப்புகள்</h3><div class="levels-comparison"><div class="level-card-compact"><strong>தொடக்கநிலை:</strong><div class="value">20-40 CTL</div><p>அடித்தள உடற்தகுதியை உருவாக்குதல், வாரத்திற்கு 3-4 நீச்சல்கள்</p></div><div class="level-card-compact"><strong>இடைநிலை:</strong><div class="value">40-70 CTL</div><p>தொடர்ச்சியான பயிற்சி, வாரத்திற்கு 4-5 நீச்சல்கள்</p></div><div class="level-card-compact"><strong>மேம்பட்ட:</strong><div class="value">70-100 CTL</div><p>அதிக அளவு, வாரத்திற்கு 5-6 நீச்சல்கள், இரட்டை அமர்வுகள்</p></div><div class="level-card-compact"><strong>உயர்மட்டம்:</strong><div class="value">100-150+ CTL</div><p>தொழில்முறை பயிற்சி சுமை, வாரத்திற்கு 8-12 அமர்வுகள்</p></div></div><div class="warning-box mt-md"><strong>⚠️ CTL உயர்வு வேக வரம்புகள்</strong><ul><li><strong>தொடக்கநிலை:</strong> வாரத்திற்கு +3-5 CTL</li><li><strong>இடைநிலை:</strong> வாரத்திற்கு +5-7 CTL</li><li><strong>மேம்பட்ட:</strong> வாரத்திற்கு +7-10 CTL</li></ul><p>இந்த வேகங்களை மீறுவது காயம் மற்றும் burnout அபாயத்தை கணிசமாக அதிகரிக்கும்.</p></div></div></div></div></section><section class="section"><div class="container"><h2>ATL-ஐப் புரிந்துகொள்ளுதல்: உங்கள் சோர்வு அளவீடு</h2><div class="content-split"><div><p>ATL குறுகியகால பயிற்சி அழுத்தத்தை கண்காணிக்கிறது—கடந்த வாரத்தில் குவிந்த சோர்வு. கடின பயிற்சிக்குப் பிறகு இது விரைவாக உயரும் மற்றும் ஓய்வில் விரைவாக குறையும்.</p><h3>ATL இயக்கம்</h3><ul><li><strong>விரைவான பதில்:</strong> 7-நாள் நேர மாறிலி (அரை ஆயுள் ~2.4 நாட்கள்)</li><li><strong>முளை வடிவமைப்பு:</strong> கடின அமர்வுகளுக்குப் பிறகு திடீரென உயர்வு, மீட்பில் குறைவு</li><li><strong>மீட்பு குறிகாட்டி:</strong> குறையும் ATL = சோர்வு நீங்குகிறது</li><li><strong>அதிகபயிற்சி எச்சரிக்கை:</strong> தொடர்ந்து உயர்ந்த ATL என்பது போதிய மீட்பு இல்லாததைச் சுட்டுகிறது</li></ul><div class="callout callout-science"><h4>🔬 உடற்தகுதி-சோர்வு மாதிரி</h4><p>ஒவ்வொரு பயிற்சி அமர்வும் இரண்டு விளைவுகளை உருவாக்குகிறது:</p><ol><li><strong>உடற்தகுதி தூண்டுதல்</strong> (மெதுவாக உருவாகும், நீண்ட காலம் நீடிக்கும்)</li><li><strong>சோர்வு</strong> (விரைவாக உருவாகும், விரைவாக குறையும்)</li></ol><p>செயல்திறன் = உடற்தகுதி - சோர்வு. PMC இந்த மாதிரியை காட்சிப்படுத்துகிறது; அறிவியல் காலமுறை பயிற்சியை இயலுமைப்படுத்துகிறது.</p></div></div><div><h3>நிலையான நிலை (Steady State)</h3><p>பயிற்சி சுமை வாரத்துக்கு வாரம் நிலையாக இருக்கும் போது, CTL மற்றும் ATL ஒன்றாக நெருங்கும்:</p><div class="example-box"><h4>உதாரணம்: வாரத்திற்கு 500 TSS தொடர்ச்சியாக</h4><div class="calculation">
                         தினசரி TSS ≈ 71<br>
                         CTL ≈ 71 ஆகும்<br>
                         ATL ≈ 71 ஆகும்<br>
                         TSB ≈ 0 ஆகும்
-                    </div>
-                    <p><strong>விளக்கம்:</strong> உடற்தகுதியும் சோர்வும் சமநிலையில் உள்ளன. குறைவு அல்லது அதிகப்படியான சுமை இல்லை.</p>
-                </div>
-
-                <h3>கட்டுமான கட்டங்களில்</h3>
-                <p>பயிற்சி சுமையை உயர்த்தும்போது:</p>
-                <div class="example-box">
-                    <p>குறுகிய நேர மாறிலியால் ATL, CTL-ஐ விட <em>வேகமாக</em> உயர்கிறது. TSB எதிர்மறையாகிறது (சோர்வு > உடற்தகுதி). இது இயல்பானதும் பயனுள்ளதும்தான்—தகவமைப்பை தூண்டும் அதிகப்படியான சுமையை நீங்கள் பயன்படுத்துகிறீர்கள்.</p>
-                </div>
-
-                <h3>டேப்பர் காலத்தில்</h3>
-                <p>பயிற்சி சுமையை குறைக்கும் போது:</p>
-                <div class="example-box">
-                    <p>ATL, CTL-ஐ விட <em>வேகமாக</em> குறைகிறது. TSB நேர்மறையாகிறது (உடற்தகுதி > சோர்வு). இதுவே இலக்கு—உடற்தகுதியை வைத்துக்கொண்டு போட்டி நாளில் புத்துணர்ச்சியாக இருக்க.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2>TSB-ஐப் புரிந்துகொள்ளுதல்: உங்கள் வடிவு/தயார்நிலை அளவீடு</h2>
-
-        <p class="lead">TSB என்பது நேற்றைய உடற்தகுதி (CTL) மற்றும் நேற்றைய சோர்வு (ATL) வித்தியாசம். நீங்கள் புத்துணர்ச்சியாக உள்ளீர்களா அல்லது சோர்வாக உள்ளீர்களா, போட்டிக்கு தயாரா அல்லது மீட்பு தேவையா என்பதை இது காட்டுகிறது.</p>
-
-        <div class="tsb-zones-container">
-            <h3>TSB விளக்க வழிகாட்டி</h3>
-            <table class="tsb-zones-table">
-                <thead>
-                    <tr>
-                        <th>TSB வரம்பு</th>
-                        <th>நிலை</th>
-                        <th>விளக்கம்</th>
-                        <th>பரிந்துரைக்கப்படும் நடவடிக்கை</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tsb-critical">
-                        <td>&lt; -30</td>
-                        <td><strong>அதிக சுமை அபாயம்</strong></td>
-                        <td>மிகுந்த சோர்வு. அதிகபயிற்சி அபாயம்.</td>
-                        <td>உடனடி மீட்பு தேவை. அளவை 50%+ குறைக்கவும்.</td>
-                    </tr>
-                    <tr class="tsb-training">
-                        <td>-20 to -30</td>
-                        <td><strong>சிறந்த பயிற்சி கட்டம்</strong></td>
-                        <td>திறன் கூட்டும் அதிகசுமை. உடற்தகுதி உருவாகிறது.</td>
-                        <td>திட்டத்தைத் தொடருங்கள். அதிக சோர்வு அறிகுறிகளை கண்காணிக்கவும்.</td>
-                    </tr>
-                    <tr class="tsb-moderate">
-                        <td>-10 to -20</td>
-                        <td><strong>மிதமான சுமை</strong></td>
-                        <td>சாதாரண பயிற்சி குவிப்பு.</td>
-                        <td>சாதாரண பயிற்சி. தரமான அமர்வுகளைத் தாங்க முடியும்.</td>
-                    </tr>
-                    <tr class="tsb-neutral">
-                        <td>-10 to +15</td>
-                        <td><strong>மாற்றம்/பராமரிப்பு</strong></td>
-                        <td>சமநிலை நிலை. லேசான சோர்வு அல்லது புத்துணர்ச்சி.</td>
-                        <td>B/C போட்டிகள், சோதனைகள் அல்லது மீட்பு வாரங்களுக்கு நல்லது.</td>
-                    </tr>
-                    <tr class="tsb-fresh">
-                        <td>+15 to +25</td>
-                        <td><strong>உச்ச போட்டி வடிவு</strong></td>
-                        <td>புத்துணர்ச்சியும் உடற்தகுதியும். சிறந்த செயல்திறன் சாளரம்.</td>
-                        <td>A-முன்னுரிமை போட்டிகள். உச்ச செயல்திறன் எதிர்பார்ப்பு.</td>
-                    </tr>
-                    <tr class="tsb-very-fresh">
-                        <td>+25 to +35</td>
-                        <td><strong>மிக புத்துணர்ச்சி</strong></td>
-                        <td>மிக ஓய்வாக உள்ளது. ஸ்பிரிண்ட்களுக்கு நல்லது.</td>
-                        <td>குறுகிய போட்டிகள், நேர சோதனைகள், மிக ஓய்வு நிலை.</td>
-                    </tr>
-                    <tr class="tsb-detraining">
-                        <td>&gt; +35</td>
-                        <td><strong>Detraining</strong></td>
-                        <td>செயலற்ற நிலையில் உடற்தகுதி குறைகிறது.</td>
-                        <td>பயிற்சியை மீண்டும் தொடங்குங்கள். நீண்ட ஓய்வால் உடற்தகுதி குறைகிறது.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>🎯 போட்டி தூரத்தின் அடிப்படையில் இலக்கு TSB</h3>
-            <ul>
-                <li><strong>ஸ்பிரிண்ட்/ஒலிம்பிக் ட்ரையத்லான்:</strong> TSB +15 to +25 (7-10 நாள் டேப்பர்)</li>
-                <li><strong>ஹாஃப் ஐரன்மேன் (70.3):</strong> TSB +20 to +30 (10-14 நாள் டேப்பர்)</li>
-                <li><strong>பூரண ஐரன்மேன்:</strong> TSB +15 to +25 (14-21 நாள் டேப்பர்)</li>
-                <li><strong>குள நீச்சல் போட்டிகள்:</strong> TSB +15 to +25 (நிகழ்வை பொறுத்து 7-14 நாள் டேப்பர்)</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>PMC உதாரணம்: பயிற்சி கட்டம் → டேப்பர் → போட்டி</h2>
-
-        <div class="example-box">
-            <h3>8-வார பயிற்சி சுழற்சி</h3>
-
-            <h4>வாரம் 1-5: கட்டுமான கட்டம்</h4>
-            <ul>
-                <li>வாராந்திர TSS: 400 → 450 → 500 → 550 → 550</li>
-                <li>CTL: மெதுவாக 50 → 65 ஆக உயர்கிறது</li>
-                <li>ATL: வாராந்திர சுமையைப் பின்தொடர்கிறது, 55-80 வரை மாறுகிறது</li>
-                <li>TSB: எதிர்மறை (-15 முதல் -25), பயனுள்ள பயிற்சி அழுத்தத்தைக் காட்டுகிறது</li>
-            </ul>
-
-            <h4>வாரம் 6: மீட்பு வாரம்</h4>
-            <ul>
-                <li>வாராந்திர TSS: 300 (40% குறைப்பு)</li>
-                <li>CTL: சிறிய குறைவு ~63 (உடற்தகுதி தக்கவைக்கப்படுகிறது)</li>
-                <li>ATL: ~50 ஆக குறைகிறது (சோர்வு குறைகிறது)</li>
-                <li>TSB: +5 ஆக உயர்கிறது (பகுதி புத்துணர்ச்சி)</li>
-            </ul>
-
-            <h4>வாரம் 7: இறுதி கட்டுமானம்</h4>
-            <ul>
-                <li>வாராந்திர TSS: 500</li>
-                <li>CTL: ~65 ஆக உயர்கிறது</li>
-                <li>ATL: ~75 ஆக குதிக்கிறது</li>
-                <li>TSB: -20 க்கு திரும்புகிறது (தரமான பயிற்சி உறிஞ்சப்பட்டது)</li>
-            </ul>
-
-            <h4>வாரம் 8: டேப்பர் + போட்டி</h4>
-            <ul>
-                <li>நாட்கள் 1-9: அளவை குறைத்து, தீவிரத்தை பராமரிக்கவும் (மொத்தம் 200 TSS)</li>
-                <li>CTL: மென்மையாக ~62 வரை குறைகிறது (குறைந்த உடற்தகுதி இழப்பு)</li>
-                <li>ATL: ~40 வரை விரைவாக குறைகிறது (சோர்வு நீங்குகிறது)</li>
-                <li>TSB: <strong>போட்டி நாளில் +20</strong> ஆக உச்சம் அடைகிறது</li>
-                <li><strong>முடிவு:</strong> புத்துணர்ச்சி, உடற்தகுதி, செயல்திறனுக்கு தயாராக</li>
-            </ul>
-        </div>
-
-        <div class="callout callout-success">
-            <h3>✅ டேப்பர் ஏன் வேலை செய்கிறது</h3>
-            <p>வேறு நேர மாறிலிகள் (CTL க்கு 42 நாட்கள், ATL க்கு 7 நாட்கள்) டேப்பர் விளைவைக் உருவாக்குகின்றன:</p>
-            <ul>
-                <li>ATL விரைவாக பதிலளிக்கிறது → 7-10 நாட்களில் சோர்வு மறையும்</li>
-                <li>CTL மெதுவாக பதிலளிக்கிறது → உடற்தகுதி வாரங்களுக்கும் நீடிக்கும்</li>
-                <li>முடிவு: உடற்தகுதி நீடிக்கும், சோர்வு மறையும் = உச்ச செயல்திறன்</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>நடைமுறை பயன்பாட்டு வழிகாட்டிகள்</h2>
-
-        <div class="guidelines-grid">
-            <div class="guideline-item">
-                <h3>1️⃣ தினசரி sTSS-ஐ கண்காணிக்கவும்</h3>
-                <p>தொடர்ச்சி முக்கியம். துல்லியமான CTL/ATL/TSB போக்குகளை உருவாக்க ஒவ்வொரு பயிற்சியின் sTSS-ஐ பதிவு செய்யுங்கள். தரவு இல்லாமல் உடற்தகுதி வளைவில் இடைவெளிகள் உருவாகும்.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>2️⃣ CTL உயர்வு வேகத்தை கண்காணிக்கவும்</h3>
-                <p>CTL-ஐ மெதுவாக உயர்த்துங்கள். வாரத்திற்கு 5-7 புள்ளி உயர்வு பல நீச்சல் வீரர்களுக்கு நிலையானது. 15-20 புள்ளிகளை திடீரென உயர்த்துவது காயத்திற்கு அழைப்பு.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>3️⃣ மீட்பு வாரங்களை திட்டமிடுங்கள்</h3>
-                <p>ஒவ்வொரு 3-4 வாரங்களுக்கும் ஒரு வாரத்திற்கு அளவை 30-50% குறைக்கவும். TSB -5 முதல் +10 வரை உயர அனுமதிக்கவும். இது உடற்தகுதியை ஒருங்கிணைத்து அதிகபயிற்சியைத் தடுக்கிறது.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>4️⃣ உங்கள் டேப்பரை நேரமைக்கவும்</h3>
-                <p>போட்டி நாளில் TSB +15 முதல் +25 வரை இலக்காகக் கொள்ளுங்கள். நிகழ்வின் தூரம் மற்றும் தற்போதைய TSB-ஐ பொறுத்து 7-14 நாட்களுக்கு முன் டேப்பரைத் தொடங்குங்கள்.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>5️⃣ எதிர்மறை TSB-க்கு அஞ்ச வேண்டாம்</h3>
-                <p>கட்டுமான கட்டங்களில் -20 முதல் -30 வரை TSB சாதாரணமும் பயனுள்ளதுமாகும். இது தகவமைப்பிற்கான தூண்டுதலை நீங்கள் வழங்குகிறீர்கள் என்பதைக் காட்டுகிறது.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>6️⃣ CTL குறைதலை மதியுங்கள்</h3>
-                <p>பயிற்சி இடைவெளிக்கு பிறகு, முந்தைய CTL-க்கு உடனடியாக திரும்ப முயற்சிக்காதீர்கள். காயத்தைத் தவிர்க்க மெதுவாக மீண்டும் கட்டியெழுப்புங்கள்.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow text-center">
-        <h2>உங்கள் பயிற்சி சுமையை கைப்பற்றுங்கள்</h2>
-        <p class="lead">PMC தனிப்பட்ட பயிற்சியை பொருள்-மிக்க தரவாக மாற்றுகிறது. sTSS, CTL, ATL, மற்றும் TSB-ஐ கண்காணிப்பதன் மூலம் உடற்தகுதி முன்னேற்றம், சோர்வு மேலாண்மை மற்றும் உச்ச செயல்திறன் நேரமிடலில் துல்லியமான கட்டுப்பாட்டைப் பெறுகிறீர்கள்.</p>
-
-        <div class="mt-xl">
-            <a href="/ta/css/" class="btn btn-secondary">← CSS அடித்தளம்</a>
-            <a href="/ta/efficiency/" class="btn btn-primary">திறன் அளவீடுகள் →</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                    </div><p><strong>விளக்கம்:</strong> உடற்தகுதியும் சோர்வும் சமநிலையில் உள்ளன. குறைவு அல்லது அதிகப்படியான சுமை இல்லை.</p></div><h3>கட்டுமான கட்டங்களில்</h3><p>பயிற்சி சுமையை உயர்த்தும்போது:</p><div class="example-box"><p>குறுகிய நேர மாறிலியால் ATL, CTL-ஐ விட <em>வேகமாக</em> உயர்கிறது. TSB எதிர்மறையாகிறது (சோர்வு > உடற்தகுதி). இது இயல்பானதும் பயனுள்ளதும்தான்—தகவமைப்பை தூண்டும் அதிகப்படியான சுமையை நீங்கள் பயன்படுத்துகிறீர்கள்.</p></div><h3>டேப்பர் காலத்தில்</h3><p>பயிற்சி சுமையை குறைக்கும் போது:</p><div class="example-box"><p>ATL, CTL-ஐ விட <em>வேகமாக</em> குறைகிறது. TSB நேர்மறையாகிறது (உடற்தகுதி > சோர்வு). இதுவே இலக்கு—உடற்தகுதியை வைத்துக்கொண்டு போட்டி நாளில் புத்துணர்ச்சியாக இருக்க.</p></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>TSB-ஐப் புரிந்துகொள்ளுதல்: உங்கள் வடிவு/தயார்நிலை அளவீடு</h2><p class="lead">TSB என்பது நேற்றைய உடற்தகுதி (CTL) மற்றும் நேற்றைய சோர்வு (ATL) வித்தியாசம். நீங்கள் புத்துணர்ச்சியாக உள்ளீர்களா அல்லது சோர்வாக உள்ளீர்களா, போட்டிக்கு தயாரா அல்லது மீட்பு தேவையா என்பதை இது காட்டுகிறது.</p><div class="tsb-zones-container"><h3>TSB விளக்க வழிகாட்டி</h3><table class="tsb-zones-table"><thead><tr><th>TSB வரம்பு</th><th>நிலை</th><th>விளக்கம்</th><th>பரிந்துரைக்கப்படும் நடவடிக்கை</th></tr></thead><tbody><tr class="tsb-critical"><td>&lt; -30</td><td><strong>அதிக சுமை அபாயம்</strong></td><td>மிகுந்த சோர்வு. அதிகபயிற்சி அபாயம்.</td><td>உடனடி மீட்பு தேவை. அளவை 50%+ குறைக்கவும்.</td></tr><tr class="tsb-training"><td>-20 to -30</td><td><strong>சிறந்த பயிற்சி கட்டம்</strong></td><td>திறன் கூட்டும் அதிகசுமை. உடற்தகுதி உருவாகிறது.</td><td>திட்டத்தைத் தொடருங்கள். அதிக சோர்வு அறிகுறிகளை கண்காணிக்கவும்.</td></tr><tr class="tsb-moderate"><td>-10 to -20</td><td><strong>மிதமான சுமை</strong></td><td>சாதாரண பயிற்சி குவிப்பு.</td><td>சாதாரண பயிற்சி. தரமான அமர்வுகளைத் தாங்க முடியும்.</td></tr><tr class="tsb-neutral"><td>-10 to +15</td><td><strong>மாற்றம்/பராமரிப்பு</strong></td><td>சமநிலை நிலை. லேசான சோர்வு அல்லது புத்துணர்ச்சி.</td><td>B/C போட்டிகள், சோதனைகள் அல்லது மீட்பு வாரங்களுக்கு நல்லது.</td></tr><tr class="tsb-fresh"><td>+15 to +25</td><td><strong>உச்ச போட்டி வடிவு</strong></td><td>புத்துணர்ச்சியும் உடற்தகுதியும். சிறந்த செயல்திறன் சாளரம்.</td><td>A-முன்னுரிமை போட்டிகள். உச்ச செயல்திறன் எதிர்பார்ப்பு.</td></tr><tr class="tsb-very-fresh"><td>+25 to +35</td><td><strong>மிக புத்துணர்ச்சி</strong></td><td>மிக ஓய்வாக உள்ளது. ஸ்பிரிண்ட்களுக்கு நல்லது.</td><td>குறுகிய போட்டிகள், நேர சோதனைகள், மிக ஓய்வு நிலை.</td></tr><tr class="tsb-detraining"><td>&gt; +35</td><td><strong>Detraining</strong></td><td>செயலற்ற நிலையில் உடற்தகுதி குறைகிறது.</td><td>பயிற்சியை மீண்டும் தொடங்குங்கள். நீண்ட ஓய்வால் உடற்தகுதி குறைகிறது.</td></tr></tbody></table></div><div class="callout callout-tip mt-xl"><h3>🎯 போட்டி தூரத்தின் அடிப்படையில் இலக்கு TSB</h3><ul><li><strong>ஸ்பிரிண்ட்/ஒலிம்பிக் ட்ரையத்லான்:</strong> TSB +15 to +25 (7-10 நாள் டேப்பர்)</li><li><strong>ஹாஃப் ஐரன்மேன் (70.3):</strong> TSB +20 to +30 (10-14 நாள் டேப்பர்)</li><li><strong>பூரண ஐரன்மேன்:</strong> TSB +15 to +25 (14-21 நாள் டேப்பர்)</li><li><strong>குள நீச்சல் போட்டிகள்:</strong> TSB +15 to +25 (நிகழ்வை பொறுத்து 7-14 நாள் டேப்பர்)</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>PMC உதாரணம்: பயிற்சி கட்டம் → டேப்பர் → போட்டி</h2><div class="example-box"><h3>8-வார பயிற்சி சுழற்சி</h3><h4>வாரம் 1-5: கட்டுமான கட்டம்</h4><ul><li>வாராந்திர TSS: 400 → 450 → 500 → 550 → 550</li><li>CTL: மெதுவாக 50 → 65 ஆக உயர்கிறது</li><li>ATL: வாராந்திர சுமையைப் பின்தொடர்கிறது, 55-80 வரை மாறுகிறது</li><li>TSB: எதிர்மறை (-15 முதல் -25), பயனுள்ள பயிற்சி அழுத்தத்தைக் காட்டுகிறது</li></ul><h4>வாரம் 6: மீட்பு வாரம்</h4><ul><li>வாராந்திர TSS: 300 (40% குறைப்பு)</li><li>CTL: சிறிய குறைவு ~63 (உடற்தகுதி தக்கவைக்கப்படுகிறது)</li><li>ATL: ~50 ஆக குறைகிறது (சோர்வு குறைகிறது)</li><li>TSB: +5 ஆக உயர்கிறது (பகுதி புத்துணர்ச்சி)</li></ul><h4>வாரம் 7: இறுதி கட்டுமானம்</h4><ul><li>வாராந்திர TSS: 500</li><li>CTL: ~65 ஆக உயர்கிறது</li><li>ATL: ~75 ஆக குதிக்கிறது</li><li>TSB: -20 க்கு திரும்புகிறது (தரமான பயிற்சி உறிஞ்சப்பட்டது)</li></ul><h4>வாரம் 8: டேப்பர் + போட்டி</h4><ul><li>நாட்கள் 1-9: அளவை குறைத்து, தீவிரத்தை பராமரிக்கவும் (மொத்தம் 200 TSS)</li><li>CTL: மென்மையாக ~62 வரை குறைகிறது (குறைந்த உடற்தகுதி இழப்பு)</li><li>ATL: ~40 வரை விரைவாக குறைகிறது (சோர்வு நீங்குகிறது)</li><li>TSB: <strong>போட்டி நாளில் +20</strong> ஆக உச்சம் அடைகிறது</li><li><strong>முடிவு:</strong> புத்துணர்ச்சி, உடற்தகுதி, செயல்திறனுக்கு தயாராக</li></ul></div><div class="callout callout-success"><h3>✅ டேப்பர் ஏன் வேலை செய்கிறது</h3><p>வேறு நேர மாறிலிகள் (CTL க்கு 42 நாட்கள், ATL க்கு 7 நாட்கள்) டேப்பர் விளைவைக் உருவாக்குகின்றன:</p><ul><li>ATL விரைவாக பதிலளிக்கிறது → 7-10 நாட்களில் சோர்வு மறையும்</li><li>CTL மெதுவாக பதிலளிக்கிறது → உடற்தகுதி வாரங்களுக்கும் நீடிக்கும்</li><li>முடிவு: உடற்தகுதி நீடிக்கும், சோர்வு மறையும் = உச்ச செயல்திறன்</li></ul></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>நடைமுறை பயன்பாட்டு வழிகாட்டிகள்</h2><div class="guidelines-grid"><div class="guideline-item"><h3>1️⃣ தினசரி sTSS-ஐ கண்காணிக்கவும்</h3><p>தொடர்ச்சி முக்கியம். துல்லியமான CTL/ATL/TSB போக்குகளை உருவாக்க ஒவ்வொரு பயிற்சியின் sTSS-ஐ பதிவு செய்யுங்கள். தரவு இல்லாமல் உடற்தகுதி வளைவில் இடைவெளிகள் உருவாகும்.</p></div><div class="guideline-item"><h3>2️⃣ CTL உயர்வு வேகத்தை கண்காணிக்கவும்</h3><p>CTL-ஐ மெதுவாக உயர்த்துங்கள். வாரத்திற்கு 5-7 புள்ளி உயர்வு பல நீச்சல் வீரர்களுக்கு நிலையானது. 15-20 புள்ளிகளை திடீரென உயர்த்துவது காயத்திற்கு அழைப்பு.</p></div><div class="guideline-item"><h3>3️⃣ மீட்பு வாரங்களை திட்டமிடுங்கள்</h3><p>ஒவ்வொரு 3-4 வாரங்களுக்கும் ஒரு வாரத்திற்கு அளவை 30-50% குறைக்கவும். TSB -5 முதல் +10 வரை உயர அனுமதிக்கவும். இது உடற்தகுதியை ஒருங்கிணைத்து அதிகபயிற்சியைத் தடுக்கிறது.</p></div><div class="guideline-item"><h3>4️⃣ உங்கள் டேப்பரை நேரமைக்கவும்</h3><p>போட்டி நாளில் TSB +15 முதல் +25 வரை இலக்காகக் கொள்ளுங்கள். நிகழ்வின் தூரம் மற்றும் தற்போதைய TSB-ஐ பொறுத்து 7-14 நாட்களுக்கு முன் டேப்பரைத் தொடங்குங்கள்.</p></div><div class="guideline-item"><h3>5️⃣ எதிர்மறை TSB-க்கு அஞ்ச வேண்டாம்</h3><p>கட்டுமான கட்டங்களில் -20 முதல் -30 வரை TSB சாதாரணமும் பயனுள்ளதுமாகும். இது தகவமைப்பிற்கான தூண்டுதலை நீங்கள் வழங்குகிறீர்கள் என்பதைக் காட்டுகிறது.</p></div><div class="guideline-item"><h3>6️⃣ CTL குறைதலை மதியுங்கள்</h3><p>பயிற்சி இடைவெளிக்கு பிறகு, முந்தைய CTL-க்கு உடனடியாக திரும்ப முயற்சிக்காதீர்கள். காயத்தைத் தவிர்க்க மெதுவாக மீண்டும் கட்டியெழுப்புங்கள்.</p></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>உங்கள் பயிற்சி சுமையை கைப்பற்றுங்கள்</h2><p class="lead">PMC தனிப்பட்ட பயிற்சியை பொருள்-மிக்க தரவாக மாற்றுகிறது. sTSS, CTL, ATL, மற்றும் TSB-ஐ கண்காணிப்பதன் மூலம் உடற்தகுதி முன்னேற்றம், சோர்வு மேலாண்மை மற்றும் உச்ச செயல்திறன் நேரமிடலில் துல்லியமான கட்டுப்பாட்டைப் பெறுகிறீர்கள்.</p><div class="mt-xl"><a href="/ta/css/" class="btn btn-secondary">← CSS அடித்தளம்</a><a href="/ta/efficiency/" class="btn btn-primary">திறன் அளவீடுகள் →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link active"
+                </a><a href="/ta/" class="lang-link active"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/ta/privacy/">தனியுரிமை</a></li>
-                <li><a href="/ta/terms/">விதிமுறைகள்</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>உங்கள் அனுபவத்தை மேம்படுத்த இந்த இணையதளம் குக்கீகளைப் பயன்படுத்துகிறது.</p>
-            <a href="/ta/privacy/" class="text-sm">மேலும் அறிய</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">நிராகரி</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">ஏற்றுக்கொள்</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/ta/privacy/">தனியுரிமை</a></li><li><a href="/ta/terms/">விதிமுறைகள்</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>உங்கள் அனுபவத்தை மேம்படுத்த இந்த இணையதளம் குக்கீகளைப் பயன்படுத்துகிறது.</p><a href="/ta/privacy/" class="text-sm">மேலும் அறிய</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">நிராகரி</button><button id="cookie-accept" class="btn btn-primary btn-small">ஏற்றுக்கொள்</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

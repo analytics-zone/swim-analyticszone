@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="vi" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Máy Tính Critical Swim Speed (CSS) - Bài Kiểm tra Miễn phí và Vùng</title>
-  <meta name="description" content="Máy tính CSS miễn phí cho vận động viên bơi lội. Tính Critical Swim Speed từ thời gian kiểm tra 400m và 200m. Nhận vùng luyện tập cá nhân hóa, tốc độ ngưỡng và dự đoán">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="critical swim speed, máy tính CSS, vùng luyện tập bơi lội, bài kiểm tra CSS, tốc độ ngưỡng">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/vi/css/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-13T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/vi/css/">
-  <meta property="og:title" content="Máy Tính Critical Swim Speed (CSS) - Bài Kiểm tra Miễn phí và Vùng">
-  <meta property="og:description" content="Máy tính CSS miễn phí cho vận động viên bơi lội. Tính Critical Swim Speed từ thời gian kiểm tra 400m và 200m. Nhận vùng luyện tập cá nhân hóa, tốc độ ngưỡng và dự đoán">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="vi_VN">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/vi/css/">
-  <meta name="twitter:title" content="Máy Tính Critical Swim Speed (CSS) - Bài Kiểm tra Miễn phí và Vùng">
-  <meta name="twitter:description" content="Máy tính CSS miễn phí cho vận động viên bơi lội. Tính Critical Swim Speed từ thời gian kiểm tra 400m và 200m. Nhận vùng luyện tập cá nhân hóa, tốc độ ngưỡng và dự đoán">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/css/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/css/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/css/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/css/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/css/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/css/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/css/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/css/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/css/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/css/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/css/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/css/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/css/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/css/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/css/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/css/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/css/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/css/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/css/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/css/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/css/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/css/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/css/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/css/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/css/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/css/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/css/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/css/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/css/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/css/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/css/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/css/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/css/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/css/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/css/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/css/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/css/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/css/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/css/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/css/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/css/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/css/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/css/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/css/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/css/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/css/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/css/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/css/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/css/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/css/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/css/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/css/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/css/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/css/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/css/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/css/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="vi" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Máy Tính Critical Swim Speed (CSS) - Bài Kiểm tra Miễn phí và Vùng</title><meta name="description" content="Máy tính CSS miễn phí cho vận động viên bơi lội. Tính Critical Swim Speed từ thời gian kiểm tra 400m và 200m. Nhận vùng luyện tập cá nhân hóa, tốc độ ngưỡng và dự đoán"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="critical swim speed, máy tính CSS, vùng luyện tập bơi lội, bài kiểm tra CSS, tốc độ ngưỡng"><link rel="canonical" href="https://swim.analyticszone.app/vi/css/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-02-20T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/vi/css/"><meta property="og:title" content="Máy Tính Critical Swim Speed (CSS) - Bài Kiểm tra Miễn phí và Vùng"><meta property="og:description" content="Máy tính CSS miễn phí cho vận động viên bơi lội. Tính Critical Swim Speed từ thời gian kiểm tra 400m và 200m. Nhận vùng luyện tập cá nhân hóa, tốc độ ngưỡng và dự đoán"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="vi_VN"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/vi/css/"><meta name="twitter:title" content="Máy Tính Critical Swim Speed (CSS) - Bài Kiểm tra Miễn phí và Vùng"><meta name="twitter:description" content="Máy tính CSS miễn phí cho vận động viên bơi lội. Tính Critical Swim Speed từ thời gian kiểm tra 400m và 200m. Nhận vùng luyện tập cá nhân hóa, tốc độ ngưỡng và dự đoán"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/css/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/css/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/css/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/css/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/css/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/css/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/css/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/css/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/css/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/css/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/css/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/css/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/css/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/css/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/css/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/css/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/css/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/css/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/css/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/css/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/css/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/css/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/css/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/css/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/css/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/css/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/css/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/css/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/css/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/css/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/css/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/css/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/css/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/css/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/css/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/css/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/css/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/css/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/css/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/css/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/css/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/css/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/css/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/css/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/css/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/css/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/css/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/css/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/css/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/css/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/css/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/css/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/css/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/css/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/css/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/css/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "vi"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "Máy tính CSS miễn phí cho vận động viên bơi lội. Tính Critical Swim Speed từ thời gian kiểm tra 400m và 200m. Nhận vùng luyện tập cá nhân hóa, tốc độ ngưỡng và dự đoán",
   "url": "https://swim.analyticszone.app/vi/css/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -647,23 +429,13 @@ img[width][height] {
     }
   },
   "datePublished": "2025-01-15",
-  "dateModified": "2026-01-13",
+  "dateModified": "2026-02-20",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://swim.analyticszone.app/vi/css/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1419 +449,400 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">Đến nội dung</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/vi/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/vi/" 
+  </script></head><body><a href="#main-content" class="skip-link">Đến nội dung</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/vi/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/vi/" 
                                 aria-current="">
                                 Trang Chủ
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/vi/getting-started/" class="nav-label">Học Tập</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/vi/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/vi/getting-started/" class="nav-label">Học Tập</a><ul class="submenu"><li><a href="/vi/getting-started/" 
                                         aria-current="">
                                         Bắt Đầu
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/css/" class="active" 
+                                    </a></li><li><a href="/vi/css/" class="active" 
                                         aria-current="page">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/training-zones/" 
+                                    </a></li><li><a href="/vi/training-zones/" 
                                         aria-current="">
                                         Vùng Tập Luyện
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/training-load/" 
+                                    </a></li><li><a href="/vi/training-load/" 
                                         aria-current="">
                                         Tải Tập Luyện
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/stss-calculator/" 
+                                    </a></li><li><a href="/vi/stss-calculator/" 
                                         aria-current="">
                                         Máy Tính sTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/vi/research/" class="nav-label">Khoa Học</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/vi/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/vi/research/" class="nav-label">Khoa Học</a><ul class="submenu"><li><a href="/vi/research/" 
                                         aria-current="">
                                         Nghiên Cứu
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/formulas/" 
+                                    </a></li><li><a href="/vi/formulas/" 
                                         aria-current="">
                                         Công Thức
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/efficiency/" 
+                                    </a></li><li><a href="/vi/efficiency/" 
                                         aria-current="">
                                         Hiệu Quả
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/stroke-mechanics/" 
+                                    </a></li><li><a href="/vi/stroke-mechanics/" 
                                         aria-current="">
                                         Cơ Học Động Tác
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/bibliography/" 
+                                    </a></li><li><a href="/vi/bibliography/" 
                                         aria-current="">
                                         Thư Mục
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/vi/contact/" 
+                                    </a></li></ul></li><li><a href="/vi/contact/" 
                                 aria-current="">
                                 Liên Hệ
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Chọn ngôn ngữ">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Chọn ngôn ngữ"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" selected>
+                        </option><option value="vi" selected>
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Chuyển menu"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/vi/">Trang Chủ</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/vi/getting-started/">Học Tập</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">CSS</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>Tốc độ Bơi Tới hạn (CSS)</h1>
-        <p class="lead">Nền Tảng Của Tập Luyện Bơi Lội Dựa Trên Dữ Liệu</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>Tốc độ Bơi Tới hạn (CSS) là gì?</h2>
-            <p><strong>Tốc độ Bơi Tới hạn (CSS)</strong> là vận tốc bơi tối đa về mặt lý thuyết mà bạn có thể duy trì mà
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Chuyển menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/vi/">Trang Chủ</a></li><li><a href="/vi/getting-started/">Học Tập</a></li><li><span aria-current="page">CSS</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Tốc độ Bơi Tới hạn (CSS)</h1><p class="lead">Nền Tảng Của Tập Luyện Bơi Lội Dựa Trên Dữ Liệu</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-info mb-xl"><h2>Tốc độ Bơi Tới hạn (CSS) là gì?</h2><p><strong>Tốc độ Bơi Tới hạn (CSS)</strong> là vận tốc bơi tối đa về mặt lý thuyết mà bạn có thể duy trì mà
                 không bị kiệt sức. Nó đại diện cho pace ngưỡng hiếu khí của bạn, thường tương ứng với 4 mmol/L lactate
                 trong máu và bền vững trong khoảng 30 phút. CSS được tính toán bằng cách sử dụng bài kiểm tra thời gian
-                400m và 200m để xác định các vùng tập luyện cá nhân hóa.</p>
-        </div>
-
-        <p class="lead">Tốc độ Bơi Tới hạn (CSS) đại diện cho vận tốc bơi tối đa về mặt lý thuyết mà bạn có thể duy trì
+                400m và 200m để xác định các vùng tập luyện cá nhân hóa.</p></div><p class="lead">Tốc độ Bơi Tới hạn (CSS) đại diện cho vận tốc bơi tối đa về mặt lý thuyết mà bạn có thể duy trì
             liên tục mà không bị kiệt sức. Đó là ngưỡng hiếu khí của bạn trong nước—cường độ mà tại đó sự sản sinh
-            lactate bằng với sự loại bỏ lactate.</p>
-
-        <div class="callout callout-info">
-            <h3>🎯 Ý Nghĩa Sinh Lý</h3>
-            <p>CSS tương ứng chặt chẽ với:</p>
-            <ul>
-                <li><strong>Ngưỡng Lactate 2 (LT2)</strong> - Ngưỡng thông khí thứ hai</li>
-                <li><strong>Trạng Thái Ổn Định Lactate Tối Đa (MLSS)</strong> - Mức lactate bền vững cao nhất</li>
-                <li><strong>Pace Ngưỡng Chức Năng (FTP)</strong> - Tương đương bơi lội của FTP đạp xe</li>
-                <li><strong>~4 mmol/L lactate máu</strong> - Dấu hiệu OBLA truyền thống</li>
-            </ul>
-        </div>
-
-        <h3>Tại Sao CSS Quan Trọng</h3>
-        <p>CSS là <strong>chỉ số nền tảng</strong> mở khóa tất cả các phân tích tải lượng tập luyện nâng cao:</p>
-        <ul>
-            <li><strong>Vùng Tập Luyện:</strong> Cá nhân hóa các vùng cường độ dựa trên sinh lý của bạn</li>
-            <li><strong>Tính Toán sTSS:</strong> Cho phép định lượng chính xác Điểm Căng Thẳng Tập Luyện</li>
-            <li><strong>CTL/ATL/TSB:</strong> Yêu cầu cho các chỉ số Biểu đồ Quản lý Hiệu suất</li>
-            <li><strong>Theo Dõi Tiến Trình:</strong> Thước đo khách quan về sự cải thiện thể lực hiếu khí</li>
-        </ul>
-
-        <div class="warning-box">
-            <strong>⚠️ Phụ Thuộc Quan Trọng:</strong> Nếu không có bài kiểm tra CSS hợp lệ, các chỉ số tải lượng tập
+            lactate bằng với sự loại bỏ lactate.</p><div class="callout callout-info"><h3>🎯 Ý Nghĩa Sinh Lý</h3><p>CSS tương ứng chặt chẽ với:</p><ul><li><strong>Ngưỡng Lactate 2 (LT2)</strong> - Ngưỡng thông khí thứ hai</li><li><strong>Trạng Thái Ổn Định Lactate Tối Đa (MLSS)</strong> - Mức lactate bền vững cao nhất</li><li><strong>Pace Ngưỡng Chức Năng (FTP)</strong> - Tương đương bơi lội của FTP đạp xe</li><li><strong>~4 mmol/L lactate máu</strong> - Dấu hiệu OBLA truyền thống</li></ul></div><h3>Tại Sao CSS Quan Trọng</h3><p>CSS là <strong>chỉ số nền tảng</strong> mở khóa tất cả các phân tích tải lượng tập luyện nâng cao:</p><ul><li><strong>Vùng Tập Luyện:</strong> Cá nhân hóa các vùng cường độ dựa trên sinh lý của bạn</li><li><strong>Tính Toán sTSS:</strong> Cho phép định lượng chính xác Điểm Căng Thẳng Tập Luyện</li><li><strong>CTL/ATL/TSB:</strong> Yêu cầu cho các chỉ số Biểu đồ Quản lý Hiệu suất</li><li><strong>Theo Dõi Tiến Trình:</strong> Thước đo khách quan về sự cải thiện thể lực hiếu khí</li></ul><div class="warning-box"><strong>⚠️ Phụ Thuộc Quan Trọng:</strong> Nếu không có bài kiểm tra CSS hợp lệ, các chỉ số tải lượng tập
             luyện nâng cao (sTSS, CTL, ATL, TSB) không thể được tính toán. Một CSS không chính xác sẽ làm hỏng tất cả
             các phân tích tập luyện tiếp theo.
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">Giao Thức Kiểm Tra CSS</h2>
-        <div class="grid grid-2">
-            <div class="protocol-card">
-                <h3>📋 Giao Thức Tiêu Chuẩn</h3>
-                <ol class="protocol-steps">
-                    <li>
-                        <strong>Khởi động</strong>
-                        <p>300-800m bơi nhẹ, kỹ thuật và tăng tốc dần để chuẩn bị cho nỗ lực tối đa.</p>
-                    </li>
-                    <li>
-                        <strong>Thử Nghiệm Thời Gian 400m</strong>
-                        <p>Nỗ lực bền vững tối đa từ đẩy thành (không lặn). Ghi lại thời gian đến từng giây. Mục tiêu:
-                            400m bền vững nhanh nhất.</p>
-                    </li>
-                    <li>
-                        <strong>Phục Hồi Hoàn Toàn</strong>
-                        <p><span class="highlight-text">5-10 phút</span> bơi nhẹ hoặc nghỉ hoàn toàn. Điều này QUAN
-                            TRỌNG cho kết quả chính xác.</p>
-                    </li>
-                    <li>
-                        <strong>Thử Nghiệm Thời Gian 200m</strong>
-                        <p>Nỗ lực tối đa từ đẩy thành. Ghi lại thời gian chính xác. Pace này nên nhanh hơn mỗi 100m so
-                            với 400m.</p>
-                    </li>
-                </ol>
-            </div>
-
-            <div class="protocol-card">
-                <h3>⚠️ Những Lỗi Phổ Biến</h3>
-                <div class="mistake-list">
-                    <div class="mistake-item">
-                        <h4>Phục Hồi Không Đủ</h4>
-                        <p><strong>Vấn đề:</strong> Sự mệt mỏi làm chậm thời gian 200m một cách giả tạo</p>
-                        <p><strong>Kết quả:</strong> CSS tính toán trở nên <em>nhanh hơn thực tế</em>, dẫn đến các vùng
-                            tập luyện bị quá tải</p>
-                        <p><strong>Giải pháp:</strong> Nghỉ ngơi cho đến khi nhịp tim giảm xuống dưới 120 bpm hoặc cho
-                            đến khi hơi thở phục hồi hoàn toàn</p>
-                    </div>
-
-                    <div class="mistake-item">
-                        <h4>Phân Phối Sức Kém ở 400m</h4>
-                        <p><strong>Vấn đề:</strong> Bắt đầu quá nhanh gây ra sự chậm lại đáng kể</p>
-                        <p><strong>Kết quả:</strong> Thời gian 400m không phản ánh pace bền vững thực sự</p>
-                        <p><strong>Giải pháp:</strong> Nhắm đến việc chia đều thời gian hoặc negative split (200m sau ≤
-                            200m đầu)</p>
-                    </div>
-
-                    <div class="mistake-item">
-                        <h4>Sử Dụng Xuất Phát Lặn</h4>
-                        <p><strong>Vấn đề:</strong> Thêm lợi thế ~0.5-1.5 giây, làm lệch tính toán</p>
-                        <p><strong>Giải pháp:</strong> Luôn sử dụng đẩy xuất phát từ thành hồ</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>🔄 Tần Suất Kiểm Tra Lại</h3>
-            <p>Kiểm tra lại CSS mỗi <strong>6-8 tuần</strong> để cập nhật các vùng tập luyện khi thể lực cải thiện. Các
-                vùng của bạn sẽ dần trở nên nhanh hơn khi bạn thích ứng với việc tập luyện.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Công Thức Tính Toán CSS</h2>
-
-        <div class="formula-box">
-            <h3>Công Thức</h3>
-            <div class="formula">
+        </div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Cách tính CSS trong 4 bước đơn giản</h2><div class="grid grid-2"><div class="protocol-card"><h3>📋 Giao Thức Tiêu Chuẩn</h3><ol class="protocol-steps"><li><strong>Khởi động</strong><p>300-800m bơi nhẹ, kỹ thuật và tăng tốc dần để chuẩn bị cho nỗ lực tối đa.</p></li><li><strong>Thử Nghiệm Thời Gian 400m</strong><p>Nỗ lực bền vững tối đa từ đẩy thành (không lặn). Ghi lại thời gian đến từng giây. Mục tiêu:
+                            400m bền vững nhanh nhất.</p></li><li><strong>Phục Hồi Hoàn Toàn</strong><p><span class="highlight-text">5-10 phút</span> bơi nhẹ hoặc nghỉ hoàn toàn. Điều này QUAN
+                            TRỌNG cho kết quả chính xác.</p></li><li><strong>Thử Nghiệm Thời Gian 200m</strong><p>Nỗ lực tối đa từ đẩy thành. Ghi lại thời gian chính xác. Pace này nên nhanh hơn mỗi 100m so
+                            với 400m.</p></li></ol></div><div class="protocol-card"><h3>⚠️ Những Lỗi Phổ Biến</h3><div class="mistake-list"><div class="mistake-item"><h4>Phục Hồi Không Đủ</h4><p><strong>Vấn đề:</strong> Sự mệt mỏi làm chậm thời gian 200m một cách giả tạo</p><p><strong>Kết quả:</strong> CSS tính toán trở nên <em>nhanh hơn thực tế</em>, dẫn đến các vùng
+                            tập luyện bị quá tải</p><p><strong>Giải pháp:</strong> Nghỉ ngơi cho đến khi nhịp tim giảm xuống dưới 120 bpm hoặc cho
+                            đến khi hơi thở phục hồi hoàn toàn</p></div><div class="mistake-item"><h4>Phân Phối Sức Kém ở 400m</h4><p><strong>Vấn đề:</strong> Bắt đầu quá nhanh gây ra sự chậm lại đáng kể</p><p><strong>Kết quả:</strong> Thời gian 400m không phản ánh pace bền vững thực sự</p><p><strong>Giải pháp:</strong> Nhắm đến việc chia đều thời gian hoặc negative split (200m sau ≤
+                            200m đầu)</p></div><div class="mistake-item"><h4>Sử Dụng Xuất Phát Lặn</h4><p><strong>Vấn đề:</strong> Thêm lợi thế ~0.5-1.5 giây, làm lệch tính toán</p><p><strong>Giải pháp:</strong> Luôn sử dụng đẩy xuất phát từ thành hồ</p></div></div></div></div><div class="callout callout-tip mt-xl"><h3>🔄 Tần Suất Kiểm Tra Lại</h3><p>Kiểm tra lại CSS mỗi <strong>6-8 tuần</strong> để cập nhật các vùng tập luyện khi thể lực cải thiện. Các
+                vùng của bạn sẽ dần trở nên nhanh hơn khi bạn thích ứng với việc tập luyện.</p></div></div></section><section class="section"><div class="container container-narrow"><h2>Công Thức Tính Toán CSS</h2><div class="formula-box"><h3>Công Thức</h3><div class="formula">
                 CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
-            </div>
-            <div class="formula-explanation">
-                <p>Trong đó:</p>
-                <ul>
-                    <li>D₁ = 200 mét</li>
-                    <li>D₂ = 400 mét</li>
-                    <li>T₁ = Thời gian cho 200m (tính bằng giây)</li>
-                    <li>T₂ = Thời gian cho 400m (tính bằng giây)</li>
-                </ul>
-            </div>
-
-            <h3 class="mt-lg">Đơn Giản Hóa cho Pace trên 100m</h3>
-            <div class="formula">
+            </div><div class="formula-explanation"><p>Trong đó:</p><ul><li>D₁ = 200 mét</li><li>D₂ = 400 mét</li><li>T₁ = Thời gian cho 200m (tính bằng giây)</li><li>T₂ = Thời gian cho 400m (tính bằng giây)</li></ul></div><h3 class="mt-lg">Đơn Giản Hóa cho Pace trên 100m</h3><div class="formula">
                 Pace CSS/100m (giây) = (T₄₀₀ - T₂₀₀) / 2
-            </div>
-        </div>
-
-        <h3>Ví Dụ Cụ Thể</h3>
-        <div class="example-box">
-            <h4>Kết Quả Kiểm Tra:</h4>
-            <ul>
-                <li>Thời gian 400m: <strong>6:08</strong> (368 giây)</li>
-                <li>Thời gian 200m: <strong>2:30</strong> (150 giây)</li>
-            </ul>
-
-            <h4>Bước 1: Tính CSS theo m/s</h4>
-            <div class="calculation">
-                CSS = (400 - 200) / (368 - 150)<br>
-                CSS = 200 / 218<br>
-                CSS = <strong>0.917 m/s</strong>
-            </div>
-
-            <h4>Bước 2: Chuyển đổi sang pace trên 100m</h4>
-            <div class="calculation">
-                Pace = 100 / 0.917<br>
-                Pace = 109 giây<br>
-                Pace = <strong>1:49 trên 100m</strong>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">Máy Tính CSS Miễn Phí</h2>
-        <p class="lead">Tính toán Tốc độ Bơi Tới hạn và các vùng tập luyện cá nhân hóa của bạn ngay lập tức</p>
-
-        <div class="css-calculator">
-            <form id="cssCalculatorForm">
-                <div class="calculator-inputs">
-                    <div class="form-group">
-                        <label for="time400" class="form-label">Thời gian 400m (pp:gg)</label>
-                        <input type="text" id="time400" class="form-input" placeholder="6:08"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="time400-help" />
-                        <small id="time400-help" class="form-help">Định dạng: phút:giây (ví dụ: 6:08)</small>
-                        <div class="form-error" id="time400-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="time200" class="form-label">Thời gian 200m (pp:gg)</label>
-                        <input type="text" id="time200" class="form-input" placeholder="2:30"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="time200-help" />
-                        <small id="time200-help" class="form-help">Định dạng: phút:giây (ví dụ: 2:30)</small>
-                        <div class="form-error" id="time200-error"></div>
-                    </div>
-                    <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateBtn">Tính Toán CSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetBtn">Xóa</button>
-                    </div>
-                </div>
-            </form>
-
-            <div class="calculator-results hidden" id="cssResults" aria-live="polite">
-                <h3>Kết Quả Của Bạn</h3>
-                <div class="results-summary">
-                    <div class="result-item">
-                        <div class="result-label">Tốc độ Bơi Tới hạn</div>
-                        <div class="css-result-value" id="cssValue">--</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-label">Pace CSS trên 100m</div>
-                        <div class="css-result-value" id="cssPace">--</div>
-                    </div>
-                </div>
-
-                <div class="zones-result">
-                    <h4>Các Vùng Tập Luyện Cá Nhân Hóa Của Bạn</h4>
-                    <p class="mb-md text-secondary">
+            </div></div><h3>Ví Dụ Cụ Thể</h3><div class="example-box"><h4>Kết Quả Kiểm Tra:</h4><ul><li>Thời gian 400m: <strong>6:08</strong> (368 giây)</li><li>Thời gian 200m: <strong>2:30</strong> (150 giây)</li></ul><h4>Bước 1: Tính CSS theo m/s</h4><div class="calculation">
+                CSS = (400 - 200) / (368 - 150)<br/>
+                CSS = 200 / 218<br/>
+                CSS = <strong>0.917 m/s</strong></div><h4>Bước 2: Chuyển đổi sang pace trên 100m</h4><div class="calculation">
+                Pace = 100 / 0.917<br/>
+                Pace = 109 giây<br/>
+                Pace = <strong>1:49 trên 100m</strong></div></div><h2 class="mt-3xl">Máy Tính CSS Miễn Phí</h2><p class="lead">Tính toán Tốc độ Bơi Tới hạn và các vùng tập luyện cá nhân hóa của bạn ngay lập tức</p><div class="css-calculator"><form id="cssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label class="form-label" for="time400">Thời gian 400m (pp:gg)</label><input aria-describedby="time400-help" aria-required="true" class="form-input" id="time400" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="6:08" type="text"/><small class="form-help" id="time400-help">Định dạng: phút:giây (ví dụ: 6:08)</small><div class="form-error" id="time400-error"></div></div><div class="form-group"><label class="form-label" for="time200">Thời gian 200m (pp:gg)</label><input aria-describedby="time200-help" aria-required="true" class="form-input" id="time200" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="2:30" type="text"/><small class="form-help" id="time200-help">Định dạng: phút:giây (ví dụ: 2:30)</small><div class="form-error" id="time200-error"></div></div><div class="calculator-buttons"><button class="btn btn-primary" id="calculateBtn" type="submit">Tính Toán CSS</button><button class="btn btn-ghost" id="resetBtn" type="reset">Xóa</button></div></div></form><div aria-live="polite" class="calculator-results hidden" id="cssResults"><h3>Kết Quả Của Bạn</h3><div class="results-summary"><div class="result-item"><div class="result-label">Tốc độ Bơi Tới hạn</div><div class="css-result-value" id="cssValue">--</div></div><div class="result-item"><div class="result-label">Pace CSS trên 100m</div><div class="css-result-value" id="cssPace">--</div></div></div><div class="zones-result"><h4>Các Vùng Tập Luyện Cá Nhân Hóa Của Bạn</h4><p class="mb-md text-secondary">
                         Dựa trên CSS của bạn, đây là các vùng tập luyện của bạn theo pace trên 100m:
-                    </p>
-                    <div id="zonesTable"></div>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="mt-xl">Phương Pháp Thay Thế (Đơn Giản Hóa):</h3>
-        <div class="example-box">
-            <div class="calculation">
-                Pace = (368 - 150) / 2<br>
-                Pace = 218 / 2<br>
-                Pace = 109 giây = <strong>1:49 trên 100m</strong>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="mb-xl">Các Vùng Tập Luyện Dựa Trên CSS</h2>
-
-        <div class="callout callout-info">
-            <p><strong>Lưu ý:</strong> Trong bơi lội, pace được đo bằng <em>thời gian trên khoảng cách</em>. Do đó, một
+                    </p><div id="zonesTable"></div></div></div></div><h3 class="mt-xl">Phương Pháp Thay Thế (Đơn Giản Hóa):</h3><div class="example-box"><div class="calculation">
+                Pace = (368 - 150) / 2<br/>
+                Pace = 218 / 2<br/>
+                Pace = 109 giây = <strong>1:49 trên 100m</strong></div></div></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl">Các Vùng Tập Luyện Dựa Trên CSS</h2><div class="callout callout-info"><p><strong>Lưu ý:</strong> Trong bơi lội, pace được đo bằng <em>thời gian trên khoảng cách</em>. Do đó, một
                 <strong>tỷ lệ phần trăm cao hơn = pace chậm hơn</strong>, và một <strong>tỷ lệ phần trăm thấp hơn = pace
-                    nhanh hơn</strong>. Điều này ngược với đạp xe/chạy bộ nơi % cao hơn = nỗ lực khó hơn.</p>
-        </div>
-
-        <div class="zones-table-container">
-            <table class="zones-table">
-                <thead>
-                    <tr>
-                        <th>Vùng</th>
-                        <th>Tên</th>
-                        <th>% Pace CSS</th>
-                        <th>Ví dụ cho CSS 1:40/100m</th>
-                        <th>RPE</th>
-                        <th>Mục Đích Sinh Lý</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="zone-1">
-                        <td><strong>1</strong></td>
-                        <td>Phục Hồi</td>
-                        <td>&gt;108%</td>
-                        <td>&gt;1:48/100m</td>
-                        <td>2-3/10</td>
-                        <td>Phục hồi tích cực, hoàn thiện kỹ thuật, khởi động/thả lỏng</td>
-                    </tr>
-                    <tr class="zone-2">
-                        <td><strong>2</strong></td>
-                        <td>Nền Tảng Hiếu Khí</td>
-                        <td>104-108%</td>
-                        <td>1:44-1:48/100m</td>
-                        <td>4-5/10</td>
-                        <td>Xây dựng khả năng hiếu khí, mật độ ty thể, oxy hóa chất béo</td>
-                    </tr>
-                    <tr class="zone-3">
-                        <td><strong>3</strong></td>
-                        <td>Tempo/Sweet Spot</td>
-                        <td>99-103%</td>
-                        <td>1:39-1:43/100m</td>
-                        <td>6-7/10</td>
-                        <td>Thích ứng tốc độ thi đấu, hiệu quả thần kinh cơ</td>
-                    </tr>
-                    <tr class="zone-4">
-                        <td><strong>4</strong></td>
-                        <td>Ngưỡng (CSS)</td>
-                        <td>96-100%</td>
-                        <td>1:36-1:40/100m</td>
-                        <td>7-8/10</td>
-                        <td>Cải thiện ngưỡng lactate, duy trì cường độ cao</td>
-                    </tr>
-                    <tr class="zone-5">
-                        <td><strong>5</strong></td>
-                        <td>VO₂max/Kỵ Khí</td>
-                        <td>&lt;96%</td>
-                        <td>&lt;1:36/100m</td>
-                        <td>9-10/10</td>
-                        <td>Phát triển VO₂max, sức mạnh, khả năng chịu đựng lactate</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-lg">
-            <h3>🎯 Lợi Ích Của Tập Luyện Dựa Trên Vùng</h3>
-            <p>Sử dụng các vùng dựa trên CSS biến việc tập luyện theo "cảm giác" chủ quan thành các bài tập khách quan,
-                có thể lặp lại. Mỗi vùng nhắm mục tiêu vào các thích ứng sinh lý cụ thể:</p>
-            <ul>
-                <li><strong>Vùng 2:</strong> Xây dựng bộ máy hiếu khí (60-70% khối lượng hàng tuần)</li>
-                <li><strong>Vùng 3:</strong> Tăng cường hiệu quả pace thi đấu (15-20% khối lượng)</li>
-                <li><strong>Vùng 4:</strong> Đẩy ngưỡng lactate lên cao hơn (10-15% khối lượng)</li>
-                <li><strong>Vùng 5:</strong> Phát triển tốc độ và sức mạnh tối đa (5-10% khối lượng)</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Các Giá Trị CSS Điển Hình Theo Trình Độ</h2>
-
-        <div class="levels-comparison">
-            <div class="level-card">
-                <h3>🥇 Vận Động Viên Bơi Lội Ưu Tú</h3>
-                <div class="pace-value">1.5-1.8 m/s</div>
-                <div class="pace-equivalent">0:56-1:07 trên 100m</div>
-                <p>Đại diện cho 80-85% tốc độ 100m tối đa. Vận động viên cấp quốc gia/quốc tế với nhiều năm tập luyện có
-                    cấu trúc.</p>
-            </div>
-
-            <div class="level-card">
-                <h3>🏊 Nhóm Tuổi Cạnh Tranh</h3>
-                <div class="pace-value">1.2-1.5 m/s</div>
-                <div class="pace-equivalent">1:07-1:23 trên 100m</div>
-                <p>Đội tuyển trung học, bơi lội đại học, masters cạnh tranh. Tập luyện có cấu trúc thường xuyên 5-6
-                    ngày/tuần.</p>
-            </div>
-
-            <div class="level-card">
-                <h3>🏃 Ba Môn Phối Hợp & Bơi Thể Dục</h3>
-                <div class="pace-value">0.9-1.2 m/s</div>
-                <div class="pace-equivalent">1:23-1:51 trên 100m</div>
-                <p>Tập luyện thường xuyên 3-4 ngày/tuần. Kỹ thuật vững chắc. Hoàn thành 2000-4000m mỗi phiên.</p>
-            </div>
-
-            <div class="level-card">
-                <h3>🌊 Người Bơi Đang Phát Triển</h3>
-                <div class="pace-value">&lt;0.9 m/s</div>
-                <div class="pace-equivalent">&gt;1:51 trên 100m</div>
-                <p>Xây dựng nền tảng hiếu khí và kỹ thuật. Dưới 1-2 năm tập luyện nhất quán.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Xác Thực Khoa Học</h2>
-
-        <div class="research-highlight">
-            <h3>Wakayoshi và cộng sự (1992-1993) - Nghiên Cứu Nền Tảng</h3>
-            <p>Các nghiên cứu chuyên sâu của Kohji Wakayoshi tại Đại học Osaka đã xác lập CSS như một giải pháp thay thế
-                hợp lệ, thiết thực cho việc kiểm tra lactate trong phòng thí nghiệm:</p>
-
-            <ul class="research-findings">
-                <li><strong>Tương quan mạnh với VO₂ tại ngưỡng kỵ khí</strong> (r = 0.818)</li>
-                <li><strong>Tương quan xuất sắc với vận tốc tại OBLA</strong> (r = 0.949)</li>
-                <li><strong>Dự đoán hiệu suất 400m</strong> (r = 0.864)</li>
-                <li><strong>Tương ứng với 4 mmol/L lactate máu</strong> - trạng thái ổn định lactate tối đa</li>
-                <li><strong>Mối quan hệ tuyến tính giữa khoảng cách và thời gian</strong> (r² &gt; 0.998)</li>
-            </ul>
-
-            <div class="citation">
-                <p><strong>Các Bài Báo Chính:</strong></p>
-                <ol>
-                    <li>Wakayoshi K, et al. (1992). "Determination and validity of critical velocity as an index of
+                    nhanh hơn</strong>. Điều này ngược với đạp xe/chạy bộ nơi % cao hơn = nỗ lực khó hơn.</p></div><div class="zones-table-container"><table class="zones-table"><thead><tr><th>Vùng</th><th>Tên</th><th>% Pace CSS</th><th>Ví dụ cho CSS 1:40/100m</th><th>RPE</th><th>Mục Đích Sinh Lý</th></tr></thead><tbody><tr class="zone-1"><td><strong>1</strong></td><td>Phục Hồi</td><td>&gt;108%</td><td>&gt;1:48/100m</td><td>2-3/10</td><td>Phục hồi tích cực, hoàn thiện kỹ thuật, khởi động/thả lỏng</td></tr><tr class="zone-2"><td><strong>2</strong></td><td>Nền Tảng Hiếu Khí</td><td>104-108%</td><td>1:44-1:48/100m</td><td>4-5/10</td><td>Xây dựng khả năng hiếu khí, mật độ ty thể, oxy hóa chất béo</td></tr><tr class="zone-3"><td><strong>3</strong></td><td>Tempo/Sweet Spot</td><td>99-103%</td><td>1:39-1:43/100m</td><td>6-7/10</td><td>Thích ứng tốc độ thi đấu, hiệu quả thần kinh cơ</td></tr><tr class="zone-4"><td><strong>4</strong></td><td>Ngưỡng (CSS)</td><td>96-100%</td><td>1:36-1:40/100m</td><td>7-8/10</td><td>Cải thiện ngưỡng lactate, duy trì cường độ cao</td></tr><tr class="zone-5"><td><strong>5</strong></td><td>VO₂max/Kỵ Khí</td><td>&lt;96%</td><td>&lt;1:36/100m</td><td>9-10/10</td><td>Phát triển VO₂max, sức mạnh, khả năng chịu đựng lactate</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>🎯 Lợi Ích Của Tập Luyện Dựa Trên Vùng</h3><p>Sử dụng các vùng dựa trên CSS biến việc tập luyện theo "cảm giác" chủ quan thành các bài tập khách quan,
+                có thể lặp lại. Mỗi vùng nhắm mục tiêu vào các thích ứng sinh lý cụ thể:</p><ul><li><strong>Vùng 2:</strong> Xây dựng bộ máy hiếu khí (60-70% khối lượng hàng tuần)</li><li><strong>Vùng 3:</strong> Tăng cường hiệu quả pace thi đấu (15-20% khối lượng)</li><li><strong>Vùng 4:</strong> Đẩy ngưỡng lactate lên cao hơn (10-15% khối lượng)</li><li><strong>Vùng 5:</strong> Phát triển tốc độ và sức mạnh tối đa (5-10% khối lượng)</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Các Giá Trị CSS Điển Hình Theo Trình Độ</h2><div class="levels-comparison"><div class="level-card"><h3>🥇 Vận Động Viên Bơi Lội Ưu Tú</h3><div class="pace-value">1.5-1.8 m/s</div><div class="pace-equivalent">0:56-1:07 trên 100m</div><p>Đại diện cho 80-85% tốc độ 100m tối đa. Vận động viên cấp quốc gia/quốc tế với nhiều năm tập luyện có
+                    cấu trúc.</p></div><div class="level-card"><h3>🏊 Nhóm Tuổi Cạnh Tranh</h3><div class="pace-value">1.2-1.5 m/s</div><div class="pace-equivalent">1:07-1:23 trên 100m</div><p>Đội tuyển trung học, bơi lội đại học, masters cạnh tranh. Tập luyện có cấu trúc thường xuyên 5-6
+                    ngày/tuần.</p></div><div class="level-card"><h3>🏃 Ba Môn Phối Hợp &amp; Bơi Thể Dục</h3><div class="pace-value">0.9-1.2 m/s</div><div class="pace-equivalent">1:23-1:51 trên 100m</div><p>Tập luyện thường xuyên 3-4 ngày/tuần. Kỹ thuật vững chắc. Hoàn thành 2000-4000m mỗi phiên.</p></div><div class="level-card"><h3>🌊 Người Bơi Đang Phát Triển</h3><div class="pace-value">&lt;0.9 m/s</div><div class="pace-equivalent">&gt;1:51 trên 100m</div><p>Xây dựng nền tảng hiếu khí và kỹ thuật. Dưới 1-2 năm tập luyện nhất quán.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Xác Thực Khoa Học</h2><div class="research-highlight"><h3>Wakayoshi và cộng sự (1992-1993) - Nghiên Cứu Nền Tảng</h3><p>Các nghiên cứu chuyên sâu của Kohji Wakayoshi tại Đại học Osaka đã xác lập CSS như một giải pháp thay thế
+                hợp lệ, thiết thực cho việc kiểm tra lactate trong phòng thí nghiệm:</p><ul class="research-findings"><li><strong>Tương quan mạnh với VO₂ tại ngưỡng kỵ khí</strong> (r = 0.818)</li><li><strong>Tương quan xuất sắc với vận tốc tại OBLA</strong> (r = 0.949)</li><li><strong>Dự đoán hiệu suất 400m</strong> (r = 0.864)</li><li><strong>Tương ứng với 4 mmol/L lactate máu</strong> - trạng thái ổn định lactate tối đa</li><li><strong>Mối quan hệ tuyến tính giữa khoảng cách và thời gian</strong> (r² &gt; 0.998)</li></ul><div class="citation"><p><strong>Các Bài Báo Chính:</strong></p><ol><li>Wakayoshi K, et al. (1992). "Determination and validity of critical velocity as an index of
                         swimming performance in the competitive swimmer." <em>European Journal of Applied
-                            Physiology</em>, 64(2), 153-157.</li>
-                    <li>Wakayoshi K, et al. (1992). "A simple method for determining critical speed as swimming fatigue
+                            Physiology</em>, 64(2), 153-157.</li><li>Wakayoshi K, et al. (1992). "A simple method for determining critical speed as swimming fatigue
                         threshold in competitive swimming." <em>International Journal of Sports Medicine</em>, 13(5),
-                        367-371.</li>
-                    <li>Wakayoshi K, et al. (1993). "Does critical swimming velocity represent exercise intensity at
+                        367-371.</li><li>Wakayoshi K, et al. (1993). "Does critical swimming velocity represent exercise intensity at
                         maximal lactate steady state?" <em>European Journal of Applied Physiology</em>, 66(1), 90-95.
-                    </li>
-                </ol>
-            </div>
-        </div>
-
-        <div class="callout callout-science">
-            <h3>🔬 Tại Sao CSS Hiệu Quả</h3>
-            <p>CSS đại diện cho ranh giới giữa <strong>các miền bài tập nặng và nghiêm trọng</strong>. Dưới CSS, sản
+                    </li></ol></div></div><div class="callout callout-science"><h3>🔬 Tại Sao CSS Hiệu Quả</h3><p>CSS đại diện cho ranh giới giữa <strong>các miền bài tập nặng và nghiêm trọng</strong>. Dưới CSS, sản
                 xuất và loại bỏ lactate vẫn cân bằng—bạn có thể bơi trong thời gian dài. Trên CSS, lactate tích tụ dần
-                dần cho đến khi kiệt sức trong vòng 20-40 phút.</p>
-            <p>Điều này làm cho CSS trở thành cường độ hoàn hảo để:</p>
-            <ul>
-                <li>Thiết lập pace thi đấu bền vững cho các sự kiện 800m-1500m</li>
-                <li>Chỉ định tập luyện khoảng thời gian ngưỡng</li>
-                <li>Theo dõi cải thiện thể lực hiếu khí</li>
-                <li>Tính toán tải lượng tập luyện và nhu cầu phục hồi</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2 class="mt-3xl">Cách Kiểm Tra CSS Của Bạn</h2>
-
-        <div class="howto-section" itemscope itemtype="https://schema.org/HowTo">
-            <meta itemprop="name" content="Cách Kiểm Tra CSS Của Bạn">
-            <meta itemprop="description"
-                content="Thực hiện theo giao thức từng bước này để đo chính xác Tốc độ Bơi Tới hạn (CSS) của bạn">
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="1">
-                <h3 itemprop="name">Bước 1: Khởi Động Đúng Cách</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Hoàn thành 300-800 mét bơi nhẹ, bao gồm kỹ thuật và tăng tốc dần. Điều này chuẩn bị cho cơ
-                            thể của bạn cho nỗ lực tối đa và ngăn ngừa chấn thương.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="2">
-                <h3 itemprop="name">Bước 2: Thực Hiện Thử Nghiệm Thời Gian 400m</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Bơi 400 mét với nỗ lực bền vững tối đa từ đẩy thành (không lặn). Ghi lại thời gian của bạn
+                dần cho đến khi kiệt sức trong vòng 20-40 phút.</p><p>Điều này làm cho CSS trở thành cường độ hoàn hảo để:</p><ul><li>Thiết lập pace thi đấu bền vững cho các sự kiện 800m-1500m</li><li>Chỉ định tập luyện khoảng thời gian ngưỡng</li><li>Theo dõi cải thiện thể lực hiếu khí</li><li>Tính toán tải lượng tập luyện và nhu cầu phục hồi</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-3xl">Cách Kiểm Tra CSS Của Bạn</h2><div class="howto-section" itemscope="" itemtype="https://schema.org/HowTo"><meta content="Cách Kiểm Tra CSS Của Bạn" itemprop="name"/><meta content="Thực hiện theo giao thức từng bước này để đo chính xác Tốc độ Bơi Tới hạn (CSS) của bạn" itemprop="description"/><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="1" itemprop="position"/><h3 itemprop="name">Bước 1: Khởi Động Đúng Cách</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Hoàn thành 300-800 mét bơi nhẹ, bao gồm kỹ thuật và tăng tốc dần. Điều này chuẩn bị cho cơ
+                            thể của bạn cho nỗ lực tối đa và ngăn ngừa chấn thương.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="2" itemprop="position"/><h3 itemprop="name">Bước 2: Thực Hiện Thử Nghiệm Thời Gian 400m</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Bơi 400 mét với nỗ lực bền vững tối đa từ đẩy thành (không lặn). Ghi lại thời gian của bạn
                             đến từng giây. Nhắm đến các lần chia đều hoặc negative split (200m sau bằng hoặc nhanh hơn
-                            200m đầu).</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="3">
-                <h3 itemprop="name">Bước 3: Phục Hồi Hoàn Toàn</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Nghỉ ngơi 5-10 phút với bơi nhẹ hoặc nghỉ hoàn toàn. Sự phục hồi này là QUAN TRỌNG. Đợi cho
+                            200m đầu).</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="3" itemprop="position"/><h3 itemprop="name">Bước 3: Phục Hồi Hoàn Toàn</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Nghỉ ngơi 5-10 phút với bơi nhẹ hoặc nghỉ hoàn toàn. Sự phục hồi này là QUAN TRỌNG. Đợi cho
                             đến khi nhịp tim của bạn giảm xuống dưới 120 bpm và hơi thở hoàn toàn hồi phục trước khi
-                            tiếp tục.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="4">
-                <h3 itemprop="name">Bước 4: Thực Hiện Thử Nghiệm Thời Gian 200m</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Bơi 200 mét với nỗ lực tối đa từ đẩy thành. Ghi lại thời gian của bạn thật chính xác. Pace
-                            này nên nhanh hơn mỗi 100m so với pace 400m của bạn.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="5">
-                <h3 itemprop="name">Bước 5: Tính Toán CSS Của Bạn</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Sử dụng công thức: Pace CSS/100m = (T400 - T200) / 2. Ví dụ: (368s - 150s) / 2 = 109s =
+                            tiếp tục.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="4" itemprop="position"/><h3 itemprop="name">Bước 4: Thực Hiện Thử Nghiệm Thời Gian 200m</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Bơi 200 mét với nỗ lực tối đa từ đẩy thành. Ghi lại thời gian của bạn thật chính xác. Pace
+                            này nên nhanh hơn mỗi 100m so với pace 400m của bạn.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="5" itemprop="position"/><h3 itemprop="name">Bước 5: Tính Toán CSS Của Bạn</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Sử dụng công thức: Pace CSS/100m = (T400 - T200) / 2. Ví dụ: (368s - 150s) / 2 = 109s =
                             1:49/100m. Hoặc sử dụng máy tính trên trang này để nhận kết quả ngay lập tức với các vùng
-                            tập luyện cá nhân hóa.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <h2>Ứng Dụng Thực Tế</h2>
-
-        <div class="application-grid">
-            <div class="application-item">
-                <h3>1️⃣ Mở Khóa Các Chỉ Số Tải Lượng Tập Luyện</h3>
-                <p>CSS là mẫu số trong tính toán Hệ Số Cường Độ cho sTSS. Nếu không có nó, bạn không thể định lượng mức
-                    độ căng thẳng của bài tập hoặc theo dõi xu hướng thể lực/mệt mỏi.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>2️⃣ Cá Nhân Hóa Vùng Tập Luyện</h3>
-                <p>Các biểu đồ pace chung không tính đến sinh lý cá nhân. Các vùng dựa trên CSS đảm bảo mọi người bơi
-                    đều tập luyện ở cường độ tối ưu của họ.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>3️⃣ Theo Dõi Tiến Bộ Thể Lực</h3>
-                <p>Kiểm tra lại mỗi 6-8 tuần. Cải thiện CSS (pace nhanh hơn) cho thấy sự thích ứng hiếu khí thành công.
-                    CSS trì trệ cho thấy việc tập luyện cần điều chỉnh.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>4️⃣ Dự Đoán Hiệu Suất Thi Đấu</h3>
-                <p>Pace CSS xấp xỉ pace thi đấu bền vững trong 30 phút của bạn. Sử dụng nó để đặt mục tiêu thực tế cho
-                    các sự kiện 800m, 1500m và bơi nước mở.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>5️⃣ Thiết Kế Bài Tập Ngưỡng</h3>
-                <p>Các set CSS cổ điển: 8×100 @ pace CSS (nghỉ 15s), 5×200 @ 101% CSS (nghỉ 20s), 3×400 @ 103% CSS (nghỉ
-                    30s). Xây dựng khả năng loại bỏ lactate.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>6️⃣ Tối Ưu Hóa Chiến Lược Taper</h3>
-                <p>Theo dõi CSS trước và sau khi taper. Một đợt taper thành công duy trì hoặc cải thiện nhẹ CSS trong
-                    khi giảm mệt mỏi (tăng TSB).</p>
-            </div>
-        </div>
-
-        <div class="callout mt-2xl">
-            <h3>Áp Dụng Kiến Thức CSS Của Bạn</h3>
-            <p>Bây giờ bạn đã hiểu Tốc độ Bơi Tới hạn, hãy thực hiện các bước tiếp theo để tối ưu hóa việc tập luyện:
-            </p>
-            <ul>
-                <li><a href="/vi/training-load/">Tính toán Điểm Căng Thẳng Tập Luyện (TSS)</a> dựa trên CSS của
-                    bạn để định lượng cường độ bài tập</li>
-                <li><a href="/vi/training-zones/">Khám phá 7 vùng tập luyện</a> và tìm hiểu cách cấu trúc bài
-                    tập cho các thích ứng cụ thể</li>
-                <li><a href="/vi/formulas/">Xem tất cả các công thức</a> được sử dụng trong Swim Analytics để
-                    hoàn toàn minh bạch</li>
-                <li><a href="/vi/">Tải xuống Swim Analytics</a> để tự động theo dõi CSS, TSS và xu hướng hiệu
-                    suất</li>
-            </ul>
-        </div>
-
-        <div class="mt-xl text-center">
-            <a href="/vi/training-load/" class="btn btn-primary">Tìm Hiểu Về Tính Toán sTSS →</a>
-            <a href="/vi/formulas/" class="btn btn-secondary">Xem Tất Cả Công Thức →</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                            tập luyện cá nhân hóa.</p></div></div></div></div><h2>Ứng Dụng Thực Tế</h2><div class="application-grid"><div class="application-item"><h3>1️⃣ Mở Khóa Các Chỉ Số Tải Lượng Tập Luyện</h3><p>CSS là mẫu số trong tính toán Hệ Số Cường Độ cho sTSS. Nếu không có nó, bạn không thể định lượng mức
+                    độ căng thẳng của bài tập hoặc theo dõi xu hướng thể lực/mệt mỏi.</p></div><div class="application-item"><h3>2️⃣ Cá Nhân Hóa Vùng Tập Luyện</h3><p>Các biểu đồ pace chung không tính đến sinh lý cá nhân. Các vùng dựa trên CSS đảm bảo mọi người bơi
+                    đều tập luyện ở cường độ tối ưu của họ.</p></div><div class="application-item"><h3>3️⃣ Theo Dõi Tiến Bộ Thể Lực</h3><p>Kiểm tra lại mỗi 6-8 tuần. Cải thiện CSS (pace nhanh hơn) cho thấy sự thích ứng hiếu khí thành công.
+                    CSS trì trệ cho thấy việc tập luyện cần điều chỉnh.</p></div><div class="application-item"><h3>4️⃣ Dự Đoán Hiệu Suất Thi Đấu</h3><p>Pace CSS xấp xỉ pace thi đấu bền vững trong 30 phút của bạn. Sử dụng nó để đặt mục tiêu thực tế cho
+                    các sự kiện 800m, 1500m và bơi nước mở.</p></div><div class="application-item"><h3>5️⃣ Thiết Kế Bài Tập Ngưỡng</h3><p>Các set CSS cổ điển: 8×100 @ pace CSS (nghỉ 15s), 5×200 @ 101% CSS (nghỉ 20s), 3×400 @ 103% CSS (nghỉ
+                    30s). Xây dựng khả năng loại bỏ lactate.</p></div><div class="application-item"><h3>6️⃣ Tối Ưu Hóa Chiến Lược Taper</h3><p>Theo dõi CSS trước và sau khi taper. Một đợt taper thành công duy trì hoặc cải thiện nhẹ CSS trong
+                    khi giảm mệt mỏi (tăng TSB).</p></div></div><div class="callout mt-2xl"><h3>Áp Dụng Kiến Thức CSS Của Bạn</h3><p>Bây giờ bạn đã hiểu Tốc độ Bơi Tới hạn, hãy thực hiện các bước tiếp theo để tối ưu hóa việc tập luyện:
+            </p><ul><li><a href="/vi/training-load/">Tính toán Điểm Căng Thẳng Tập Luyện (TSS)</a> dựa trên CSS của
+                    bạn để định lượng cường độ bài tập</li><li><a href="/vi/training-zones/">Khám phá 7 vùng tập luyện</a> và tìm hiểu cách cấu trúc bài
+                    tập cho các thích ứng cụ thể</li><li><a href="/vi/formulas/">Xem tất cả các công thức</a> được sử dụng trong Swim Analytics để
+                    hoàn toàn minh bạch</li><li><a href="/vi/">Tải xuống Swim Analytics</a> để tự động theo dõi CSS, TSS và xu hướng hiệu
+                    suất</li></ul></div><div class="mt-xl text-center"><a class="btn btn-primary" href="/vi/training-load/">Tìm Hiểu Về Tính Toán sTSS →</a><a class="btn btn-secondary" href="/vi/formulas/">Xem Tất Cả Công Thức →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link active"
+                </a><a href="/vi/" class="lang-link active"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. Bảo lưu mọi quyền
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/vi/privacy/">Quyền Riêng Tư</a></li>
-                <li><a href="/vi/terms/">Điều Khoản</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>Trang web này sử dụng cookie để cải thiện trải nghiệm của bạn.</p>
-            <a href="/vi/privacy/" class="text-sm">Tìm hiểu thêm</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Từ Chối</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Chấp Nhận</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/vi/privacy/">Quyền Riêng Tư</a></li><li><a href="/vi/terms/">Điều Khoản</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Trang web này sử dụng cookie để cải thiện trải nghiệm của bạn.</p><a href="/vi/privacy/" class="text-sm">Tìm hiểu thêm</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Từ Chối</button><button id="cookie-accept" class="btn btn-primary btn-small">Chấp Nhận</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

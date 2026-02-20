@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="nb" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>SWOLF Kalkulator: Mål Svømmeeffektivitet | Lavere er Bedre</title>
-  <meta name="description" content="SWOLF (Svømme + Golf) kalkulator måler svømmeeffektivitet. Beregn poengsummen din, sammenlign referanseverdier per nivå og bruk treningsøvelser for å forbedre. Lavere">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="SWOLF, svømmeeffektivitet, takeffektivitet, svømmeekonomi, SWOLF-kalkulator">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/nb/efficiency/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/nb/efficiency/">
-  <meta property="og:title" content="SWOLF Kalkulator: Mål Svømmeeffektivitet | Lavere er Bedre">
-  <meta property="og:description" content="SWOLF (Svømme + Golf) kalkulator måler svømmeeffektivitet. Beregn poengsummen din, sammenlign referanseverdier per nivå og bruk treningsøvelser for å forbedre. Lavere">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="nb_NO">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/nb/efficiency/">
-  <meta name="twitter:title" content="SWOLF Kalkulator: Mål Svømmeeffektivitet | Lavere er Bedre">
-  <meta name="twitter:description" content="SWOLF (Svømme + Golf) kalkulator måler svømmeeffektivitet. Beregn poengsummen din, sammenlign referanseverdier per nivå og bruk treningsøvelser for å forbedre. Lavere">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/efficiency/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/efficiency/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/efficiency/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/efficiency/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/efficiency/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/efficiency/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/efficiency/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/efficiency/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/efficiency/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/efficiency/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/efficiency/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/efficiency/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/efficiency/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/efficiency/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/efficiency/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/efficiency/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/efficiency/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/efficiency/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/efficiency/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/efficiency/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/efficiency/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/efficiency/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/efficiency/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/efficiency/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/efficiency/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/efficiency/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/efficiency/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/efficiency/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/efficiency/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/efficiency/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/efficiency/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/efficiency/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/efficiency/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/efficiency/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/efficiency/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/efficiency/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/efficiency/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/efficiency/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/efficiency/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/efficiency/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/efficiency/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/efficiency/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/efficiency/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/efficiency/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/efficiency/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/efficiency/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/efficiency/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/efficiency/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/efficiency/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/efficiency/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/efficiency/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/efficiency/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/efficiency/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/efficiency/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/efficiency/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/efficiency/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="nb" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>SWOLF Kalkulator: Mål Svømmeeffektivitet | Lavere er Bedre</title><meta name="description" content="SWOLF (Svømme + Golf) kalkulator måler svømmeeffektivitet. Beregn poengsummen din, sammenlign referanseverdier per nivå og bruk treningsøvelser for å forbedre. Lavere"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="SWOLF, svømmeeffektivitet, takeffektivitet, svømmeekonomi, SWOLF-kalkulator"><link rel="canonical" href="https://swim.analyticszone.app/nb/efficiency/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-04T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/nb/efficiency/"><meta property="og:title" content="SWOLF Kalkulator: Mål Svømmeeffektivitet | Lavere er Bedre"><meta property="og:description" content="SWOLF (Svømme + Golf) kalkulator måler svømmeeffektivitet. Beregn poengsummen din, sammenlign referanseverdier per nivå og bruk treningsøvelser for å forbedre. Lavere"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="nb_NO"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/nb/efficiency/"><meta name="twitter:title" content="SWOLF Kalkulator: Mål Svømmeeffektivitet | Lavere er Bedre"><meta name="twitter:description" content="SWOLF (Svømme + Golf) kalkulator måler svømmeeffektivitet. Beregn poengsummen din, sammenlign referanseverdier per nivå og bruk treningsøvelser for å forbedre. Lavere"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/efficiency/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/efficiency/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/efficiency/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/efficiency/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/efficiency/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/efficiency/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/efficiency/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/efficiency/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/efficiency/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/efficiency/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/efficiency/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/efficiency/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/efficiency/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/efficiency/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/efficiency/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/efficiency/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/efficiency/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/efficiency/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/efficiency/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/efficiency/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/efficiency/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/efficiency/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/efficiency/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/efficiency/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/efficiency/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/efficiency/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/efficiency/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/efficiency/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/efficiency/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/efficiency/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/efficiency/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/efficiency/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/efficiency/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/efficiency/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/efficiency/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/efficiency/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/efficiency/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/efficiency/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/efficiency/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/efficiency/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/efficiency/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/efficiency/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/efficiency/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/efficiency/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/efficiency/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/efficiency/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/efficiency/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/efficiency/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/efficiency/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/efficiency/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/efficiency/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/efficiency/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/efficiency/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/efficiency/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/efficiency/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/efficiency/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "nb"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "SWOLF (Svømme + Golf) kalkulator måler svømmeeffektivitet. Beregn poengsummen din, sammenlign referanseverdier per nivå og bruk treningsøvelser for å forbedre. Lavere",
   "url": "https://swim.analyticszone.app/nb/efficiency/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/nb/efficiency/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1389 +449,399 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">Hopp til innhold</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/nb/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/nb/" 
+  </script></head><body><a href="#main-content" class="skip-link">Hopp til innhold</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/nb/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/nb/" 
                                 aria-current="">
                                 Hjem
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/nb/getting-started/" class="nav-label">Lær</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/nb/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/nb/getting-started/" class="nav-label">Lær</a><ul class="submenu"><li><a href="/nb/getting-started/" 
                                         aria-current="">
                                         Komme I Gang
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/nb/css/" 
+                                    </a></li><li><a href="/nb/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/nb/training-zones/" 
+                                    </a></li><li><a href="/nb/training-zones/" 
                                         aria-current="">
                                         Treningssoner
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/nb/training-load/" 
+                                    </a></li><li><a href="/nb/training-load/" 
                                         aria-current="">
                                         Treningsbelastning
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/nb/stss-calculator/" 
+                                    </a></li><li><a href="/nb/stss-calculator/" 
                                         aria-current="">
                                         sTSS Kalkulator
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/nb/research/" class="nav-label">Vitenskap</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/nb/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/nb/research/" class="nav-label">Vitenskap</a><ul class="submenu"><li><a href="/nb/research/" 
                                         aria-current="">
                                         Forskning
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/nb/formulas/" 
+                                    </a></li><li><a href="/nb/formulas/" 
                                         aria-current="">
                                         Formler
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/nb/efficiency/" class="active" 
+                                    </a></li><li><a href="/nb/efficiency/" class="active" 
                                         aria-current="page">
                                         Effektivitet
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/nb/stroke-mechanics/" 
+                                    </a></li><li><a href="/nb/stroke-mechanics/" 
                                         aria-current="">
                                         Svømmetakmekanikk
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/nb/bibliography/" 
+                                    </a></li><li><a href="/nb/bibliography/" 
                                         aria-current="">
                                         Bibliografi
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/nb/contact/" 
+                                    </a></li></ul></li><li><a href="/nb/contact/" 
                                 aria-current="">
                                 Kontakt
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Velg språk">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Velg språk"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" selected>
+                        </option><option value="nb" selected>
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Veksle meny"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/nb/">Hjem</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/nb/research/">Vitenskap</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">Effektivitet</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>SWOLF - Svømmeeffektivitetsmåling</h1>
-        <p class="lead">Kombiner tempo og takningsantall for å måle teknisk effektivitet</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Hva er SWOLF?</h2>
-        <p class="lead"><strong>SWOLF</strong> (Swim + Golf) er en måling som kombinerer tiden din og takningsantallet
-            for å kvantifisere teknisk effektivitet. Lavere SWOLF = bedre effektivitet.</p>
-
-        <div class="formula-box formula-highlight">
-            <h3>SWOLF-formelen</h3>
-            <div class="formula formula-large">
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Veksle meny"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/nb/">Hjem</a></li><li><a href="/nb/research/">Vitenskap</a></li><li><span aria-current="page">Effektivitet</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>SWOLF - Svømmeeffektivitetsmåling</h1><p class="lead">Kombiner tempo og takningsantall for å måle teknisk effektivitet</p></div></section><section class="section"><div class="container container-narrow"><h2>Hva er SWOLF?</h2><p class="lead"><strong>SWOLF</strong> (Swim + Golf) er en måling som kombinerer tiden din og takningsantallet
+            for å kvantifisere teknisk effektivitet. Lavere SWOLF = bedre effektivitet.</p><div class="formula-box formula-highlight"><h3>SWOLF-formelen</h3><div class="formula formula-large">
                 SWOLF = Tid (sekunder) + Takningsantall
-            </div>
-            <p class="formula-explanation">For en lengde på 25m: Hvis du svømmer 25m på 20 sekunder med 16 tak, er
-                SWOLF-poengsummen din 36.</p>
-        </div>
-
-        <div class="callout callout-info">
-            <h3>Hvorfor "Golf"?</h3>
-            <p>Som i golf, lavere poengsum = bedre. En SWOLF på 30 er mer effektiv enn en SWOLF på 40. Målsettingen er å
-                <strong>minimere summen</strong> ved å svømme raskere (lavere tid) med færre tak (bedre teknikk).</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="mb-xl text-center">Hvordan beregne SWOLF</h2>
-
-        <div class="grid grid-2">
-            <div class="card">
-                <h3 class="card-title">Bassengeksempel (25m)</h3>
-                <div class="card-content">
-                    <h4>Svømmer A:</h4>
-                    <ul>
-                        <li>Tid: 18 sekunder</li>
-                        <li>Takningsantall: 14 tak</li>
-                        <li><strong>SWOLF: 18 + 14 = 32</strong></li>
-                    </ul>
-
-                    <h4 class="mt-md">Svømmer B:</h4>
-                    <ul>
-                        <li>Tid: 22 sekunder</li>
-                        <li>Takningsantall: 18 tak</li>
-                        <li><strong>SWOLF: 22 + 18 = 40</strong></li>
-                    </ul>
-
-                    <p class="mt-md"><strong>Analyse:</strong> Svømmer A er mer effektiv til tross for samme distanse.
-                        Lavere SWOLF indikerer bedre takningsteknikk og/eller raskere hastighet.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Bassengeksempel (50m)</h3>
-                <div class="card-content">
-                    <h4>Svømmer A:</h4>
-                    <ul>
-                        <li>Tid: 38 sekunder</li>
-                        <li>Takningsantall: 26 tak</li>
-                        <li><strong>SWOLF: 38 + 26 = 64</strong></li>
-                    </ul>
-
-                    <h4 class="mt-md">Svømmer B:</h4>
-                    <ul>
-                        <li>Tid: 42 sekunder</li>
-                        <li>Takningsantall: 32 tak</li>
-                        <li><strong>SWOLF: 42 + 32 = 74</strong></li>
-                    </ul>
-
-                    <p class="mt-md"><strong>Viktig merknad:</strong> SWOLF er <strong>ikke sammenlignbar</strong> på
+            </div><p class="formula-explanation">For en lengde på 25m: Hvis du svømmer 25m på 20 sekunder med 16 tak, er
+                SWOLF-poengsummen din 36.</p></div><div class="callout callout-info"><h3>Hvorfor "Golf"?</h3><p>Som i golf, lavere poengsum = bedre. En SWOLF på 30 er mer effektiv enn en SWOLF på 40. Målsettingen er å
+                <strong>minimere summen</strong> ved å svømme raskere (lavere tid) med færre tak (bedre teknikk).</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">Hvordan beregne SWOLF</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">Bassengeksempel (25m)</h3><div class="card-content"><h4>Svømmer A:</h4><ul><li>Tid: 18 sekunder</li><li>Takningsantall: 14 tak</li><li><strong>SWOLF: 18 + 14 = 32</strong></li></ul><h4 class="mt-md">Svømmer B:</h4><ul><li>Tid: 22 sekunder</li><li>Takningsantall: 18 tak</li><li><strong>SWOLF: 22 + 18 = 40</strong></li></ul><p class="mt-md"><strong>Analyse:</strong> Svømmer A er mer effektiv til tross for samme distanse.
+                        Lavere SWOLF indikerer bedre takningsteknikk og/eller raskere hastighet.</p></div></div><div class="card"><h3 class="card-title">Bassengeksempel (50m)</h3><div class="card-content"><h4>Svømmer A:</h4><ul><li>Tid: 38 sekunder</li><li>Takningsantall: 26 tak</li><li><strong>SWOLF: 38 + 26 = 64</strong></li></ul><h4 class="mt-md">Svømmer B:</h4><ul><li>Tid: 42 sekunder</li><li>Takningsantall: 32 tak</li><li><strong>SWOLF: 42 + 32 = 74</strong></li></ul><p class="mt-md"><strong>Viktig merknad:</strong> SWOLF er <strong>ikke sammenlignbar</strong> på
                         tvers av bassenglengder. En SWOLF på 32 i et 25m-basseng ≠ SWOLF på 64 i et 50m-basseng.
-                        Sammenlign alltid SWOLF innenfor samme bassenglengde.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Tolkning av SWOLF-poengsum</h2>
-
-        <p class="mb-md">SWOLF-benchmarks varierer etter bassenglengde, takningstil og utøvernivå. Her er generelle
-            retningslinjer for <strong>fristilssvømming i 25m-basseng</strong>:</p>
-
-        <div class="swolf-benchmarks">
-            <h3>Elite svømmere</h3>
-            <div class="benchmark-range">
-                <span class="range-label">SWOLF:</span>
-                <span class="range-value">25-35</span>
-            </div>
-            <p>Kombinasjon av høy hastighet (~15-18s/25m) og lav takningsantall (10-14 tak). Utmerket teknikk + kraft.
-            </p>
-
-            <h3 class="mt-lg">Konkurransesvømmere</h3>
-            <div class="benchmark-range">
-                <span class="range-label">SWOLF:</span>
-                <span class="range-value">35-45</span>
-            </div>
-            <p>God takningslengde (12-16 tak) med moderat hastighet (18-24s/25m). Solid teknikk.</p>
-
-            <h3 class="mt-lg">Kondisjonstrente svømmere</h3>
-            <div class="benchmark-range">
-                <span class="range-label">SWOLF:</span>
-                <span class="range-value">45-55</span>
-            </div>
-            <p>Gjennomsnittlig effektivitet. Takningsantall 16-20, tempo 25-30s/25m. Rom for tekniske forbedringer.</p>
-
-            <h3 class="mt-lg">Nybegynnere</h3>
-            <div class="benchmark-range">
-                <span class="range-label">SWOLF:</span>
-                <span class="range-value">55+</span>
-            </div>
-            <p>Høyt takningsantall (20+ tak), langsom hastighet. Fokus på grunnleggende teknikk før intensitet.</p>
-        </div>
-
-        <div class="callout callout-warning mt-xl">
-            <h3>⚠️ SWOLF-begrensninger</h3>
-            <ul>
-                <li><strong>Avhenger av bassenglengde:</strong> Sammenlign kun SWOLF innenfor samme bassenglengde (25m
-                    vs 25m, 50m vs 50m)</li>
-                <li><strong>Ikke tempo-standardisert:</strong> SWOLF på 35 ved lett tempo ≠ SWOLF på 35 ved maksimal
-                    innsats</li>
-                <li><strong>Varierer etter takningstil:</strong> Fristil SWOLF ≠ Brystsvømming SWOLF</li>
-                <li><strong>Ikke avstandskorrigert:</strong> Push-off og turns påvirker SWOLF asymmetrisk</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Forbedring av SWOLF-poengsum</h2>
-
-        <p class="lead mb-lg">Det er to måter å redusere SWOLF på: Reduser tiden (svøm raskere) eller reduser
-            takningsantallet (forbedre teknikken). Ideelt sett, forbedre begge.</p>
-
-        <div class="improvement-strategies">
-            <div class="strategy-card">
-                <h3>1️⃣ Øk takningslengden (DPS)</h3>
-                <p><strong>Mål:</strong> Reduser takningsantall ved å reise lenger per tak.</p>
-                <h4>Hvordan:</h4>
-                <ul>
-                    <li><strong>Full forlengelse:</strong> Strekk frem full distanse, fang vann frem i stedet for ved
-                        skulder</li>
-                    <li><strong>Kraftig trykk:</strong> Fullfør takning ved hoften (ikke slip tidlig)</li>
-                    <li><strong>Høye albuer:</strong> Hold albuen over hånden under fange- og trekkfasen</li>
-                    <li><strong>Reduser glidefaser:</strong> Ikke gli for lenge—oppretthold momentum</li>
-                </ul>
-                <p class="drill-example"><strong>Øvelse:</strong> Catch-up drill, Fist swimming (svømming med
-                    knyttnever), Takningsantall-øvelse (reduser med 2 tak per lengde)</p>
-            </div>
-
-            <div class="strategy-card">
-                <h3>2️⃣ Forbedre kroppsposisjon & streamline</h3>
-                <p><strong>Mål:</strong> Reduser motstand, reis lenger per tak uten ekstra kraft.</p>
-                <h4>Hvordan:</h4>
-                <ul>
-                    <li><strong>Høye hofter:</strong> Engasjer core, hold hofter nær overflaten</li>
-                    <li><strong>Horisontal linje:</strong> Hodet i nøytral posisjon, unngå å løfte for høyt til pust
-                    </li>
-                    <li><strong>Rotering:</strong> Roter fra hofter, ikke skuldre, for effektivt pust og kraft</li>
-                    <li><strong>Stram streamline:</strong> Minimér frontal motestand under glidefase</li>
-                </ul>
-                <p class="drill-example"><strong>Øvelse:</strong> Kick på siden, Streamline push-offs, 6-kick switch
-                    drill</p>
-            </div>
-
-            <div class="strategy-card">
-                <h3>3️⃣ Øk takningsfrekvens (uten å ofre lengde)</h3>
-                <p><strong>Mål:</strong> Oppretthold takningslengde mens du øker turnover for raskere tid.</p>
-                <h4>Hvordan:</h4>
-                <ul>
-                    <li><strong>Reduser døde soner:</strong> Ingen glidefaser—umiddelbar gjentakningsfase etter inngang
-                    </li>
-                    <li><strong>Raskere armbevegelse:</strong> Akselerér undervanns trykk gjennom frigjøring</li>
-                    <li><strong>Koordinasjon:</strong> Synkronisér spak og sparkfrekvens for kontinuerlig fremdrift</li>
-                    <li><strong>Tempotrener:</strong> Bruk Finis Tempo Trainer for kontrollert kadensøkning</li>
-                </ul>
-                <p class="drill-example"><strong>Øvelse:</strong> Tempo-kontroll sett (gradvis økende SPM),
-                    Overgear/undergear drills</p>
-            </div>
-
-            <div class="strategy-card">
-                <h3>4️⃣ Bruk SWOLF Golf-sett</h3>
-                <p><strong>Mål:</strong> Gjør SWOLF-forbedring til en lek—konkurrer mot deg selv.</p>
-                <h4>Eksempeløkt:</h4>
-                <p class="mb-sm"><strong>8 × 25m (15s hvile)</strong></p>
-                <ul>
-                    <li>Lengde 1: Etabler baseline SWOLF (f.eks., 40)</li>
-                    <li>Lengde 2: Prøv å redusere med 2 poeng (mål: 38)</li>
-                    <li>Lengde 3-4: Eksperimentér—reduser takningsantall vs øk tempo</li>
-                    <li>Lengde 5-8: Finn optimal balanse, oppretthold lavest mulig SWOLF</li>
-                </ul>
-                <p class="drill-example"><strong>Mål:</strong> Oppnå konsekvent SWOLF-poengsum ved CSS-tempo. Stigende
-                    SWOLF = utmattelse bryter ned teknikk.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>SWOLF vs takningsindeks (SI)</h2>
-
-        <p class="mb-md">SWOLF og takningsindeks (SI) måler begge effektivitet, men på forskjellige måter:</p>
-
-        <div class="comparison-grid">
-            <div class="comparison-item">
-                <h3>SWOLF</h3>
-                <div class="formula-box">
-                    <div class="formula">SWOLF = Tid + Takningsantall</div>
-                </div>
-                <p><strong>Hva det måler:</strong> Kombinert effektivitet—minimere både tid og takningsantall.</p>
-                <p><strong>Fordel:</strong> Enkel å beregne, intuitiv måling, oppfordrer til balanse mellom tempo og
-                    teknikk.</p>
-                <p><strong>Ulempe:</strong> Ikke standardisert på tvers av bassenglengder eller tempo.</p>
-            </div>
-
-            <div class="comparison-item">
-                <h3>Takningsindeks (SI)</h3>
-                <div class="formula-box">
-                    <div class="formula">SI = Hastighet × Takningslengde (DPS)</div>
-                </div>
-                <p><strong>Hva det måler:</strong> Kraft-effektivitetsprofil—hvor raskt du svømmer gitt teknikk.</p>
-                <p><strong>Fordel:</strong> Skalerer med tempo, mer meningsfull for prestasjonssammenligning.</p>
-                <p><strong>Ulempe:</strong> Vanskeligere å beregne under økter, krever hastighetskonvertering.</p>
-            </div>
-        </div>
-
-        <div class="callout mt-lg">
-            <h3>Når bruke hver enkelt</h3>
-            <p><strong>Bruk SWOLF:</strong> Under økter for umiddelbar tilbakemelding. Enkelt å beregne hodet—bare legg
-                til sekunder + takningsantall. Ideelt for "golf"-sett der målet er å minimere poengsummen.</p>
-            <p class="mb-0"><strong>Bruk SI:</strong> For å sammenligne prestasjoner på tvers av temponivåer. Eksempel:
+                        Sammenlign alltid SWOLF innenfor samme bassenglengde.</p></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2>Tolkning av SWOLF-poengsum</h2><p class="mb-md">SWOLF-benchmarks varierer etter bassenglengde, takningstil og utøvernivå. Her er generelle
+            retningslinjer for <strong>fristilssvømming i 25m-basseng</strong>:</p><div class="swolf-benchmarks"><h3>Elite svømmere</h3><div class="benchmark-range"><span class="range-label">SWOLF:</span><span class="range-value">25-35</span></div><p>Kombinasjon av høy hastighet (~15-18s/25m) og lav takningsantall (10-14 tak). Utmerket teknikk + kraft.
+            </p><h3 class="mt-lg">Konkurransesvømmere</h3><div class="benchmark-range"><span class="range-label">SWOLF:</span><span class="range-value">35-45</span></div><p>God takningslengde (12-16 tak) med moderat hastighet (18-24s/25m). Solid teknikk.</p><h3 class="mt-lg">Kondisjonstrente svømmere</h3><div class="benchmark-range"><span class="range-label">SWOLF:</span><span class="range-value">45-55</span></div><p>Gjennomsnittlig effektivitet. Takningsantall 16-20, tempo 25-30s/25m. Rom for tekniske forbedringer.</p><h3 class="mt-lg">Nybegynnere</h3><div class="benchmark-range"><span class="range-label">SWOLF:</span><span class="range-value">55+</span></div><p>Høyt takningsantall (20+ tak), langsom hastighet. Fokus på grunnleggende teknikk før intensitet.</p></div><div class="callout callout-warning mt-xl"><h3>⚠️ SWOLF-begrensninger</h3><ul><li><strong>Avhenger av bassenglengde:</strong> Sammenlign kun SWOLF innenfor samme bassenglengde (25m
+                    vs 25m, 50m vs 50m)</li><li><strong>Ikke tempo-standardisert:</strong> SWOLF på 35 ved lett tempo ≠ SWOLF på 35 ved maksimal
+                    innsats</li><li><strong>Varierer etter takningstil:</strong> Fristil SWOLF ≠ Brystsvømming SWOLF</li><li><strong>Ikke avstandskorrigert:</strong> Push-off og turns påvirker SWOLF asymmetrisk</li></ul></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Forbedring av SWOLF-poengsum</h2><p class="lead mb-lg">Det er to måter å redusere SWOLF på: Reduser tiden (svøm raskere) eller reduser
+            takningsantallet (forbedre teknikken). Ideelt sett, forbedre begge.</p><div class="improvement-strategies"><div class="strategy-card"><h3>1️⃣ Øk takningslengden (DPS)</h3><p><strong>Mål:</strong> Reduser takningsantall ved å reise lenger per tak.</p><h4>Hvordan:</h4><ul><li><strong>Full forlengelse:</strong> Strekk frem full distanse, fang vann frem i stedet for ved
+                        skulder</li><li><strong>Kraftig trykk:</strong> Fullfør takning ved hoften (ikke slip tidlig)</li><li><strong>Høye albuer:</strong> Hold albuen over hånden under fange- og trekkfasen</li><li><strong>Reduser glidefaser:</strong> Ikke gli for lenge—oppretthold momentum</li></ul><p class="drill-example"><strong>Øvelse:</strong> Catch-up drill, Fist swimming (svømming med
+                    knyttnever), Takningsantall-øvelse (reduser med 2 tak per lengde)</p></div><div class="strategy-card"><h3>2️⃣ Forbedre kroppsposisjon & streamline</h3><p><strong>Mål:</strong> Reduser motstand, reis lenger per tak uten ekstra kraft.</p><h4>Hvordan:</h4><ul><li><strong>Høye hofter:</strong> Engasjer core, hold hofter nær overflaten</li><li><strong>Horisontal linje:</strong> Hodet i nøytral posisjon, unngå å løfte for høyt til pust
+                    </li><li><strong>Rotering:</strong> Roter fra hofter, ikke skuldre, for effektivt pust og kraft</li><li><strong>Stram streamline:</strong> Minimér frontal motestand under glidefase</li></ul><p class="drill-example"><strong>Øvelse:</strong> Kick på siden, Streamline push-offs, 6-kick switch
+                    drill</p></div><div class="strategy-card"><h3>3️⃣ Øk takningsfrekvens (uten å ofre lengde)</h3><p><strong>Mål:</strong> Oppretthold takningslengde mens du øker turnover for raskere tid.</p><h4>Hvordan:</h4><ul><li><strong>Reduser døde soner:</strong> Ingen glidefaser—umiddelbar gjentakningsfase etter inngang
+                    </li><li><strong>Raskere armbevegelse:</strong> Akselerér undervanns trykk gjennom frigjøring</li><li><strong>Koordinasjon:</strong> Synkronisér spak og sparkfrekvens for kontinuerlig fremdrift</li><li><strong>Tempotrener:</strong> Bruk Finis Tempo Trainer for kontrollert kadensøkning</li></ul><p class="drill-example"><strong>Øvelse:</strong> Tempo-kontroll sett (gradvis økende SPM),
+                    Overgear/undergear drills</p></div><div class="strategy-card"><h3>4️⃣ Bruk SWOLF Golf-sett</h3><p><strong>Mål:</strong> Gjør SWOLF-forbedring til en lek—konkurrer mot deg selv.</p><h4>Eksempeløkt:</h4><p class="mb-sm"><strong>8 × 25m (15s hvile)</strong></p><ul><li>Lengde 1: Etabler baseline SWOLF (f.eks., 40)</li><li>Lengde 2: Prøv å redusere med 2 poeng (mål: 38)</li><li>Lengde 3-4: Eksperimentér—reduser takningsantall vs øk tempo</li><li>Lengde 5-8: Finn optimal balanse, oppretthold lavest mulig SWOLF</li></ul><p class="drill-example"><strong>Mål:</strong> Oppnå konsekvent SWOLF-poengsum ved CSS-tempo. Stigende
+                    SWOLF = utmattelse bryter ned teknikk.</p></div></div></div></section><section class="section"><div class="container container-narrow"><h2>SWOLF vs takningsindeks (SI)</h2><p class="mb-md">SWOLF og takningsindeks (SI) måler begge effektivitet, men på forskjellige måter:</p><div class="comparison-grid"><div class="comparison-item"><h3>SWOLF</h3><div class="formula-box"><div class="formula">SWOLF = Tid + Takningsantall</div></div><p><strong>Hva det måler:</strong> Kombinert effektivitet—minimere både tid og takningsantall.</p><p><strong>Fordel:</strong> Enkel å beregne, intuitiv måling, oppfordrer til balanse mellom tempo og
+                    teknikk.</p><p><strong>Ulempe:</strong> Ikke standardisert på tvers av bassenglengder eller tempo.</p></div><div class="comparison-item"><h3>Takningsindeks (SI)</h3><div class="formula-box"><div class="formula">SI = Hastighet × Takningslengde (DPS)</div></div><p><strong>Hva det måler:</strong> Kraft-effektivitetsprofil—hvor raskt du svømmer gitt teknikk.</p><p><strong>Fordel:</strong> Skalerer med tempo, mer meningsfull for prestasjonssammenligning.</p><p><strong>Ulempe:</strong> Vanskeligere å beregne under økter, krever hastighetskonvertering.</p></div></div><div class="callout mt-lg"><h3>Når bruke hver enkelt</h3><p><strong>Bruk SWOLF:</strong> Under økter for umiddelbar tilbakemelding. Enkelt å beregne hodet—bare legg
+                til sekunder + takningsantall. Ideelt for "golf"-sett der målet er å minimere poengsummen.</p><p class="mb-0"><strong>Bruk SI:</strong> For å sammenligne prestasjoner på tvers av temponivåer. Eksempel:
                 Er din SI bedre på sprinter eller distanse-tempo? SI skiller mellom "rask men ineffektiv" vs "effektiv
-                men langsom".</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Eksempeløkt: SWOLF Golf-utfordring</h2>
-
-        <div class="workout-box">
-            <h3>Mål: Lavest SWOLF-poengsum ved moderat tempo</h3>
-
-            <h4>Oppvarming:</h4>
-            <ul>
-                <li>400m lett svømming, drills, progressiv bygging</li>
-            </ul>
-
-            <h4 class="mt-md">Hovedsett: 10 × 50m (20s hvile)</h4>
-            <p>Svøm ved ~85% CSS-tempo (moderat innsats, ikke alt-ut).</p>
-            <ul>
-                <li><strong>50 #1:</strong> Etabler baseline SWOLF (f.eks., 70 for 50m)</li>
-                <li><strong>50 #2-4:</strong> Prøv forskjellige tilnærminger:
-                    <ul>
-                        <li>Lavere takningsantall (lengre tak, litt langsommere)</li>
-                        <li>Høyere tempo (raskere tempo, litt flere tak)</li>
-                        <li>Balansert (kombiner begge)</li>
-                    </ul>
-                </li>
-                <li><strong>50 #5-7:</strong> Lås inn på tilnærming som ga laveste SWOLF, gjenta den</li>
-                <li><strong>50 #8-10:</strong> Prøv å forbedre ved 1-2 poeng hver lengde (f.eks., 68 → 67 → 66)</li>
-            </ul>
-
-            <h4 class="mt-md">Avkjøling:</h4>
-            <ul>
-                <li>300m lett, strekk</li>
-            </ul>
-
-            <div class="workout-note mt-md">
-                <strong>Suksessmåling:</strong> Hvis din gjennomsnittlige SWOLF over lengdene #5-10 er lavere enn
+                men langsom".</p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Eksempeløkt: SWOLF Golf-utfordring</h2><div class="workout-box"><h3>Mål: Lavest SWOLF-poengsum ved moderat tempo</h3><h4>Oppvarming:</h4><ul><li>400m lett svømming, drills, progressiv bygging</li></ul><h4 class="mt-md">Hovedsett: 10 × 50m (20s hvile)</h4><p>Svøm ved ~85% CSS-tempo (moderat innsats, ikke alt-ut).</p><ul><li><strong>50 #1:</strong> Etabler baseline SWOLF (f.eks., 70 for 50m)</li><li><strong>50 #2-4:</strong> Prøv forskjellige tilnærminger:
+                    <ul><li>Lavere takningsantall (lengre tak, litt langsommere)</li><li>Høyere tempo (raskere tempo, litt flere tak)</li><li>Balansert (kombiner begge)</li></ul></li><li><strong>50 #5-7:</strong> Lås inn på tilnærming som ga laveste SWOLF, gjenta den</li><li><strong>50 #8-10:</strong> Prøv å forbedre ved 1-2 poeng hver lengde (f.eks., 68 → 67 → 66)</li></ul><h4 class="mt-md">Avkjøling:</h4><ul><li>300m lett, strekk</li></ul><div class="workout-note mt-md"><strong>Suksessmåling:</strong> Hvis din gjennomsnittlige SWOLF over lengdene #5-10 er lavere enn
                 baseline (#1), har du forbedret effektiviteten. Spor dette over uker—fallende SWOLF = tekniske
                 fremskritt.
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>SWOLF-sporing i Swim Analytics</h2>
-
-        <p class="mb-md">Swim Analytics beregner automatisk SWOLF for hver lengde og økten som helhet ved hjelp av Apple
-            Watch-data:</p>
-
-        <ul class="mb-lg">
-            <li><strong>Per lengde SWOLF:</strong> Se SWOLF for hver 25m/50m lengde for å identifisere hvilke lengder
-                som var mest/minst effektive</li>
-            <li><strong>Gjennomsnittlig økt SWOLF:</strong> Samlet effektivitetsmåling på tvers av hele økten</li>
-            <li><strong>SWOLF-trender:</strong> Spor SWOLF over tid for å måle tekniske forbedringer</li>
-            <li><strong>Sammenlikningsflagter:</strong> Sammenlikn SWOLF ved forskjellige tempo (f.eks., lett tempo vs
-                CSS-tempo)</li>
-        </ul>
-
-        <div class="callout callout-tip">
-            <h3>💡 Pro tips for SWOLF-sporing</h3>
-            <ul>
-                <li><strong>Test samme basseng:</strong> SWOLF er bassengstørrelse-spesifikt. Sammenlign bare SWOLF fra
-                    samme 25m- eller 50m-basseng.</li>
-                <li><strong>Konsistent tempo:</strong> SWOLF ved CSS-tempo er mer meningsfull enn SWOLF ved varierende
-                    intensitet.</li>
-                <li><strong>Spor per takningstil:</strong> Fristil SWOLF ≠ Brystsvømming SWOLF. Segmenter for nøyaktige
-                    sammenligninger.</li>
-                <li><strong>Bruk som teknikk-prøve:</strong> Hvis SWOLF stiger under økter (f.eks., 35 → 40 → 44),
-                    fatigerer teknikken din. Fokus på vedlikehold av form.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Ofte stilte spørsmål</h2>
-
-        <div class="faq-item">
-            <h3>Hva er en "god" SWOLF-poengsum?</h3>
-            <p><strong>Det avhenger av bassenglengde og nivå.</strong> For 25m fristil: <35 er elite, 35-45 er
+            </div></div></div></section><section class="section"><div class="container container-narrow"><h2>SWOLF-sporing i Swim Analytics</h2><p class="mb-md">Swim Analytics beregner automatisk SWOLF for hver lengde og økten som helhet ved hjelp av Apple
+            Watch-data:</p><ul class="mb-lg"><li><strong>Per lengde SWOLF:</strong> Se SWOLF for hver 25m/50m lengde for å identifisere hvilke lengder
+                som var mest/minst effektive</li><li><strong>Gjennomsnittlig økt SWOLF:</strong> Samlet effektivitetsmåling på tvers av hele økten</li><li><strong>SWOLF-trender:</strong> Spor SWOLF over tid for å måle tekniske forbedringer</li><li><strong>Sammenlikningsflagter:</strong> Sammenlikn SWOLF ved forskjellige tempo (f.eks., lett tempo vs
+                CSS-tempo)</li></ul><div class="callout callout-tip"><h3>💡 Pro tips for SWOLF-sporing</h3><ul><li><strong>Test samme basseng:</strong> SWOLF er bassengstørrelse-spesifikt. Sammenlign bare SWOLF fra
+                    samme 25m- eller 50m-basseng.</li><li><strong>Konsistent tempo:</strong> SWOLF ved CSS-tempo er mer meningsfull enn SWOLF ved varierende
+                    intensitet.</li><li><strong>Spor per takningstil:</strong> Fristil SWOLF ≠ Brystsvømming SWOLF. Segmenter for nøyaktige
+                    sammenligninger.</li><li><strong>Bruk som teknikk-prøve:</strong> Hvis SWOLF stiger under økter (f.eks., 35 → 40 → 44),
+                    fatigerer teknikken din. Fokus på vedlikehold av form.</li></ul></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Ofte stilte spørsmål</h2><div class="faq-item"><h3>Hva er en "god" SWOLF-poengsum?</h3><p><strong>Det avhenger av bassenglengde og nivå.</strong> For 25m fristil: <35 er elite, 35-45 er
                     konkurransedyktig, 45-55 er kondisjonstrening, 55+ er nybegynner. Fokusér på forbedring over tid,
-                    ikke absolutte tall.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Bør SWOLF alltid gå ned?</h3>
-            <p><strong>Ikke nødvendigvis.</strong> SWOLF-forbedringer flater ut ettersom teknikken modnes. Etter initial
+                    ikke absolutte tall.</p></div><div class="faq-item"><h3>Bør SWOLF alltid gå ned?</h3><p><strong>Ikke nødvendigvis.</strong> SWOLF-forbedringer flater ut ettersom teknikken modnes. Etter initial
                 forbedringsfase, kan SWOLF-poengsum stabilisere seg. Fokusér da på å opprettholde lav SWOLF ved høyere
-                tempo (som forbedrer takningsindeks).</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Hvorfor er SWOLF høyere i 50m-basseng?</h3>
-            <p><strong>Fordi du svømmer lenger distanse.</strong> SWOLF = tid + takningsantall. Begge øker for 50m vs
+                tempo (som forbedrer takningsindeks).</p></div><div class="faq-item"><h3>Hvorfor er SWOLF høyere i 50m-basseng?</h3><p><strong>Fordi du svømmer lenger distanse.</strong> SWOLF = tid + takningsantall. Begge øker for 50m vs
                 25m. 50m-SWOLF er omtrent dobbelt så høy som 25m-SWOLF for samme svømmer. <em>Sammenlign aldri
-                    direkte</em>.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Er lavere SWOLF alltid bedre?</h3>
-            <p><strong>For det meste, ja—men vær oppmerksom på tempo.</strong> Du kan "jukse" SWOLF ved å svømme
+                    direkte</em>.</p></div><div class="faq-item"><h3>Er lavere SWOLF alltid bedre?</h3><p><strong>For det meste, ja—men vær oppmerksom på tempo.</strong> Du kan "jukse" SWOLF ved å svømme
                 ekstremt langsomt med veldig få tak (f.eks., 40s + 10 tak = SWOLF 50). Men dette er ikke effektivt—det
-                er bare langsomt. SWOLF er mest meningsfull ved konsistent CSS eller racetempo.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Hvordan forbedrer jeg SWOLF uten å ofre hastighet?</h3>
-            <p><strong>Fokusér på takningslengde (DPS).</strong> Bruk drills som forlenger din takningslengde (catch-up,
+                er bare langsomt. SWOLF er mest meningsfull ved konsistent CSS eller racetempo.</p></div><div class="faq-item"><h3>Hvordan forbedrer jeg SWOLF uten å ofre hastighet?</h3><p><strong>Fokusér på takningslengde (DPS).</strong> Bruk drills som forlenger din takningslengde (catch-up,
                 takningsantall, streamline-pushoffs) uten å redusere takningsfrekvens. Målet er å opprettholde eller øke
-                DPS mens takningsfrekvensen holder seg stabil eller øker litt.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Ofte Stilte Spørsmål</h2>
-
-        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hva er SWOLF?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>SWOLF (Swim + Golf) er en kombinert effektivitetsmetrikk som legger til taknummeret ditt til
+                DPS mens takningsfrekvensen holder seg stabil eller øker litt.</p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Ofte Stilte Spørsmål</h2><div class="faq-section" itemscope itemtype="https://schema.org/FAQPage"><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Hva er SWOLF?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>SWOLF (Swim + Golf) er en kombinert effektivitetsmetrikk som legger til taknummeret ditt til
                             tiden din for en lengde. Som i golf er målet å minimere poengsummen din. For eksempel, 20
-                            sekunder + 15 tak = SWOLF 35.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hvordan beregner jeg min SWOLF?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Tell hvert tak (hver håndinngang) for en lengde og legg til tiden din i sekunder. SWOLF = Tid
-                            (sekunder) + Taknummer. Noen klokker beregner dette automatisk.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hva er en god SWOLF-poengsum?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>For 25m fri: Elitesvømmere scorer 30-35, konkurransesvømmere 35-45, treningssvømmere 45-60,
+                            sekunder + 15 tak = SWOLF 35.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Hvordan beregner jeg min SWOLF?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Tell hvert tak (hver håndinngang) for en lengde og legg til tiden din i sekunder. SWOLF = Tid
+                            (sekunder) + Taknummer. Noen klokker beregner dette automatisk.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Hva er en god SWOLF-poengsum?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>For 25m fri: Elitesvømmere scorer 30-35, konkurransesvømmere 35-45, treningssvømmere 45-60,
                             nybegynnere 60+. Høyden din og armspenn påvirker taknummeret, så fokuser på å forbedre din
-                            egen poengsum over tid i stedet for å sammenligne med andre.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Kan jeg sammenligne min SWOLF med andre svømmere?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Nei. SWOLF er svært individuelt fordi høyere svømmere naturlig tar færre tak. Bruk SWOLF til
+                            egen poengsum over tid i stedet for å sammenligne med andre.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Kan jeg sammenligne min SWOLF med andre svømmere?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Nei. SWOLF er svært individuelt fordi høyere svømmere naturlig tar færre tak. Bruk SWOLF til
                             å spore din egen fremgang, ikke for å sammenligne med andre. En høy svømmer med dårlig
-                            teknikk kan ha samme SWOLF som en kortere svømmer med utmerket teknikk.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Skal SWOLF gå opp eller ned når jeg svømmer raskere?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>SWOLF øker naturlig litt når du svømmer raskere på grunn av fysikk - du trenger flere tak per
+                            teknikk kan ha samme SWOLF som en kortere svømmer med utmerket teknikk.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Skal SWOLF gå opp eller ned når jeg svømmer raskere?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>SWOLF øker naturlig litt når du svømmer raskere på grunn av fysikk - du trenger flere tak per
                             sekund. Fokuser på SWOLF ved spesifikke, konsistente tempo. Spor 'SWOLF ved lett tempo' vs
-                            'SWOLF ved terskel tempo' separat.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hvorfor blir min SWOLF verre under et sett?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Økende SWOLF under et sett indikerer tretthet som forårsaker teknikk sammenbrudd. Dette er
+                            'SWOLF ved terskel tempo' separat.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Hvorfor blir min SWOLF verre under et sett?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Økende SWOLF under et sett indikerer tretthet som forårsaker teknikk sammenbrudd. Dette er
                             normalt og viser hvor teknikken din faller fra hverandre under stress. Bruk denne
-                            informasjonen til å identifisere tekniske svakheter å jobbe med.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Kan jeg bruke SWOLF for rygg, bryst eller butterfly?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Ja, men tak-spesifikke referanseverdier varierer. Rygg er vanligvis 5-10 poeng høyere enn
+                            informasjonen til å identifisere tekniske svakheter å jobbe med.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Kan jeg bruke SWOLF for rygg, bryst eller butterfly?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Ja, men tak-spesifikke referanseverdier varierer. Rygg er vanligvis 5-10 poeng høyere enn
                             fri. Bryst har et bredt spekter på grunn av glideteknikk. Butterfly er lik fri for dyktige
-                            svømmere. Spor hvert tak separat.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hvordan kan jeg forbedre min SWOLF?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Fokuser på teknikk: lengre tak (bedre grep og gjennomtrekk), forbedret strømlinje (fra vegger
+                            svømmere. Spor hvert tak separat.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Hvordan kan jeg forbedre min SWOLF?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Fokuser på teknikk: lengre tak (bedre grep og gjennomtrekk), forbedret strømlinje (fra vegger
                             og under tak), bedre kroppsposisjon (reduser motstand) og konsistent rotasjon. Øvelser og
                             videoanalyse hjelper med å identifisere spesifikke områder for forbedring. Lær mer i vår <a
-                                href="/nb/stroke-mechanics/">Takmekanikk-guide</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <h2 class="mt-3xl">Relaterte Ressurser</h2>
-
-    <div class="related-articles">
-        <a href="/nb/css/" class="related-card">
-            <h3>Kritisk Svømmehastighet (CSS) Test</h3>
-            <p>Lær hvordan du måler din terskelfart i svømming med CSS-protokollen</p>
-        </a>
-
-        <a href="/nb/training-zones/" class="related-card">
-            <h3>Treningssoneguide</h3>
-            <p>Forstå de 5 treningssonene og hvordan du strukturerer økter for spesifikke tilpasninger</p>
-        </a>
-
-        <a href="/nb/stss-calculator/" class="related-card">
-            <h3>Svømming TSS Kalkulator</h3>
-            <p>Kvantifiser treningsbelastningen din og spor formen med sTSS-beregninger</p>
-        </a>
-
-        <a href="/nb/getting-started/" class="related-card">
-            <h3>Kom i Gang Guide</h3>
-            <p>Komplett introduksjonsressurs for nye Swim Analytics-brukere</p>
-        </a>
-    </div>
-
-
-</section>
-
-<section class="section">
-    <div class="container container-narrow text-center">
-        <h2>Mestre din svømmeeffektivitet</h2>
-        <p class="lead">SWOLF gir umiddelbar tilbakemelding på teknisk effektivitet. Spor det, forbedre det, bruk det
-            til å guide treningsfokus—men alltid i kontekst av tempo og takningstil.</p>
-
-        <div class="mt-xl">
-            <a href="/nb/stroke-mechanics/" class="btn btn-primary">Takningsmekanikk →</a>
-            <a href="/nb/training-zones/" class="btn btn-secondary">← Treningssoner</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                                href="/nb/stroke-mechanics/">Takmekanikk-guide</a>.</p></div></div></div></div></div><h2 class="mt-3xl">Relaterte Ressurser</h2><div class="related-articles"><a href="/nb/css/" class="related-card"><h3>Kritisk Svømmehastighet (CSS) Test</h3><p>Lær hvordan du måler din terskelfart i svømming med CSS-protokollen</p></a><a href="/nb/training-zones/" class="related-card"><h3>Treningssoneguide</h3><p>Forstå de 5 treningssonene og hvordan du strukturerer økter for spesifikke tilpasninger</p></a><a href="/nb/stss-calculator/" class="related-card"><h3>Svømming TSS Kalkulator</h3><p>Kvantifiser treningsbelastningen din og spor formen med sTSS-beregninger</p></a><a href="/nb/getting-started/" class="related-card"><h3>Kom i Gang Guide</h3><p>Komplett introduksjonsressurs for nye Swim Analytics-brukere</p></a></div></section><section class="section"><div class="container container-narrow text-center"><h2>Mestre din svømmeeffektivitet</h2><p class="lead">SWOLF gir umiddelbar tilbakemelding på teknisk effektivitet. Spor det, forbedre det, bruk det
+            til å guide treningsfokus—men alltid i kontekst av tempo og takningstil.</p><div class="mt-xl"><a href="/nb/stroke-mechanics/" class="btn btn-primary">Takningsmekanikk →</a><a href="/nb/training-zones/" class="btn btn-secondary">← Treningssoner</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link active"
+                </a><a href="/nb/" class="lang-link active"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. Alle rettigheter reservert
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/nb/privacy/">Personvern</a></li>
-                <li><a href="/nb/terms/">Vilkår</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>Dette nettstedet bruker informasjonskapsler for å forbedre opplevelsen din.</p>
-            <a href="/nb/privacy/" class="text-sm">Lær mer</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Avvis</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Aksepter</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/nb/privacy/">Personvern</a></li><li><a href="/nb/terms/">Vilkår</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Dette nettstedet bruker informasjonskapsler for å forbedre opplevelsen din.</p><a href="/nb/privacy/" class="text-sm">Lær mer</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Avvis</button><button id="cookie-accept" class="btn btn-primary btn-small">Aksepter</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

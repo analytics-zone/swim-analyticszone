@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="bn" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Swim Analytics দিয়ে শুরু করুন - সম্পূর্ণ সেটআপ গাইড | CSS পরীক্ষা</title>
-  <meta name="description" content="সম্পূর্ণ Swim Analytics সেটআপ গাইড। CSS পরীক্ষা কীভাবে করতে হয়, ফলাফল কীভাবে প্রবেশ করাতে হয়, ওয়ার্কআউট কীভাবে ট্র্যাক করতে হয় এবং sTSS, CTL/ATL/TSB মেট্রিক্স">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="Swim Analytics গাইড, CSS পরীক্ষা টিউটোরিয়াল, সাঁতার অ্যাপ টিউটোরিয়াল, Swim Analytics কীভাবে ব্যবহার করবেন, সাঁতার অ্যানালিটিক্স গাইড">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/bn/getting-started/">
-
-  
-  
-  <meta property="article:published_time" content="2025-10-12T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/bn/getting-started/">
-  <meta property="og:title" content="Swim Analytics দিয়ে শুরু করুন - সম্পূর্ণ সেটআপ গাইড | CSS পরীক্ষা">
-  <meta property="og:description" content="সম্পূর্ণ Swim Analytics সেটআপ গাইড। CSS পরীক্ষা কীভাবে করতে হয়, ফলাফল কীভাবে প্রবেশ করাতে হয়, ওয়ার্কআউট কীভাবে ট্র্যাক করতে হয় এবং sTSS, CTL/ATL/TSB মেট্রিক্স">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="bn_BD">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/bn/getting-started/">
-  <meta name="twitter:title" content="Swim Analytics দিয়ে শুরু করুন - সম্পূর্ণ সেটআপ গাইড | CSS পরীক্ষা">
-  <meta name="twitter:description" content="সম্পূর্ণ Swim Analytics সেটআপ গাইড। CSS পরীক্ষা কীভাবে করতে হয়, ফলাফল কীভাবে প্রবেশ করাতে হয়, ওয়ার্কআউট কীভাবে ট্র্যাক করতে হয় এবং sTSS, CTL/ATL/TSB মেট্রিক্স">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/getting-started/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/getting-started/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/getting-started/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/getting-started/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/getting-started/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/getting-started/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/getting-started/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/getting-started/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/getting-started/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/getting-started/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/getting-started/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/getting-started/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/getting-started/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/getting-started/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/getting-started/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/getting-started/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/getting-started/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/getting-started/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/getting-started/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/getting-started/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/getting-started/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/getting-started/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/getting-started/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/getting-started/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/getting-started/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/getting-started/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/getting-started/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/getting-started/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/getting-started/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/getting-started/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/getting-started/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/getting-started/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/getting-started/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/getting-started/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/getting-started/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/getting-started/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/getting-started/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/getting-started/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/getting-started/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/getting-started/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/getting-started/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/getting-started/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/getting-started/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/getting-started/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/getting-started/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/getting-started/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/getting-started/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/getting-started/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/getting-started/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/getting-started/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/getting-started/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/getting-started/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/getting-started/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/getting-started/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/getting-started/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/getting-started/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="bn" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Swim Analytics দিয়ে শুরু করুন - সম্পূর্ণ সেটআপ গাইড | CSS পরীক্ষা</title><meta name="description" content="সম্পূর্ণ Swim Analytics সেটআপ গাইড। CSS পরীক্ষা কীভাবে করতে হয়, ফলাফল কীভাবে প্রবেশ করাতে হয়, ওয়ার্কআউট কীভাবে ট্র্যাক করতে হয় এবং sTSS, CTL/ATL/TSB মেট্রিক্স"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="Swim Analytics গাইড, CSS পরীক্ষা টিউটোরিয়াল, সাঁতার অ্যাপ টিউটোরিয়াল, Swim Analytics কীভাবে ব্যবহার করবেন, সাঁতার অ্যানালিটিক্স গাইড"><link rel="canonical" href="https://swim.analyticszone.app/bn/getting-started/"><meta property="article:published_time" content="2025-10-12T10:00:00Z"><meta property="article:modified_time" content="2026-01-04T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/bn/getting-started/"><meta property="og:title" content="Swim Analytics দিয়ে শুরু করুন - সম্পূর্ণ সেটআপ গাইড | CSS পরীক্ষা"><meta property="og:description" content="সম্পূর্ণ Swim Analytics সেটআপ গাইড। CSS পরীক্ষা কীভাবে করতে হয়, ফলাফল কীভাবে প্রবেশ করাতে হয়, ওয়ার্কআউট কীভাবে ট্র্যাক করতে হয় এবং sTSS, CTL/ATL/TSB মেট্রিক্স"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="bn_BD"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/bn/getting-started/"><meta name="twitter:title" content="Swim Analytics দিয়ে শুরু করুন - সম্পূর্ণ সেটআপ গাইড | CSS পরীক্ষা"><meta name="twitter:description" content="সম্পূর্ণ Swim Analytics সেটআপ গাইড। CSS পরীক্ষা কীভাবে করতে হয়, ফলাফল কীভাবে প্রবেশ করাতে হয়, ওয়ার্কআউট কীভাবে ট্র্যাক করতে হয় এবং sTSS, CTL/ATL/TSB মেট্রিক্স"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/getting-started/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/getting-started/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/getting-started/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/getting-started/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/getting-started/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/getting-started/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/getting-started/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/getting-started/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/getting-started/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/getting-started/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/getting-started/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/getting-started/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/getting-started/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/getting-started/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/getting-started/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/getting-started/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/getting-started/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/getting-started/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/getting-started/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/getting-started/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/getting-started/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/getting-started/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/getting-started/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/getting-started/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/getting-started/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/getting-started/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/getting-started/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/getting-started/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/getting-started/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/getting-started/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/getting-started/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/getting-started/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/getting-started/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/getting-started/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/getting-started/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/getting-started/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/getting-started/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/getting-started/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/getting-started/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/getting-started/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/getting-started/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/getting-started/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/getting-started/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/getting-started/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/getting-started/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/getting-started/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/getting-started/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/getting-started/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/getting-started/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/getting-started/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/getting-started/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/getting-started/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/getting-started/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/getting-started/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/getting-started/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/getting-started/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "bn"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "সম্পূর্ণ Swim Analytics সেটআপ গাইড। CSS পরীক্ষা কীভাবে করতে হয়, ফলাফল কীভাবে প্রবেশ করাতে হয়, ওয়ার্কআউট কীভাবে ট্র্যাক করতে হয় এবং sTSS, CTL/ATL/TSB মেট্রিক্স",
   "url": "https://swim.analyticszone.app/bn/getting-started/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/bn/getting-started/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1301 +449,339 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">सामग्री पर जाएं</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/bn/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/bn/" 
+  </script></head><body><a href="#main-content" class="skip-link">सामग्री पर जाएं</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/bn/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/bn/" 
                                 aria-current="">
                                 होम
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/bn/getting-started/" class="nav-label">सीखें</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/bn/getting-started/" class="active" 
+                            </a></li><li class="has-submenu" ><a href="/bn/getting-started/" class="nav-label">सीखें</a><ul class="submenu"><li><a href="/bn/getting-started/" class="active" 
                                         aria-current="page">
                                         शुरू करें
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/css/" 
+                                    </a></li><li><a href="/bn/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/training-zones/" 
+                                    </a></li><li><a href="/bn/training-zones/" 
                                         aria-current="">
                                         प्रशिक्षण क्षेत्र
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/training-load/" 
+                                    </a></li><li><a href="/bn/training-load/" 
                                         aria-current="">
                                         प्रशिक्षण भार
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/stss-calculator/" 
+                                    </a></li><li><a href="/bn/stss-calculator/" 
                                         aria-current="">
                                         sTSS कैलकुलेटर
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/bn/research/" class="nav-label">विज्ञान</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/bn/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/bn/research/" class="nav-label">विज्ञान</a><ul class="submenu"><li><a href="/bn/research/" 
                                         aria-current="">
                                         अनुसंधान
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/formulas/" 
+                                    </a></li><li><a href="/bn/formulas/" 
                                         aria-current="">
                                         सूत्र
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/efficiency/" 
+                                    </a></li><li><a href="/bn/efficiency/" 
                                         aria-current="">
                                         दक्षता
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/stroke-mechanics/" 
+                                    </a></li><li><a href="/bn/stroke-mechanics/" 
                                         aria-current="">
                                         स्ट्रोक मैकेनिक्स
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/bibliography/" 
+                                    </a></li><li><a href="/bn/bibliography/" 
                                         aria-current="">
                                         ग्रंथ सूची
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/bn/contact/" 
+                                    </a></li></ul></li><li><a href="/bn/contact/" 
                                 aria-current="">
                                 संपर्क
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="भाषा चुनें">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="भाषा चुनें"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" selected>
+                        </option><option value="bn" selected>
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="मेनू टॉगल करें"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/bn/">होम</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/bn/getting-started/">सीखें</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">शुरू करें</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>Swim Analytics দিয়ে শুরু করা</h1>
-        <p class="lead">সাঁতার পারফরম্যান্স ট্র্যাকিং, CSS পরীক্ষা এবং ট্রেনিং লোড বিশ্লেষণের জন্য আপনার সম্পূর্ণ নির্দেশিকা</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>ডেটা-চালিত সাঁতারে স্বাগতম</h2>
-            <p>Swim Analytics আপনার সাঁতার ওয়ার্কআউটকে <strong>Critical Swim Speed (CSS)</strong>, <strong>Training Stress Score (sTSS)</strong> এবং <strong>Performance Management Chart (PMC)</strong> মেট্রিক্স ব্যবহার করে কার্যকরী অন্তর্দৃষ্টিতে রূপান্তরিত করে। এই গাইড আপনাকে প্রাথমিক সেটআপ থেকে উন্নত ট্রেনিং লোড বিশ্লেষণ পর্যন্ত 4টি সহজ ধাপে নিয়ে যাবে।</p>
-        </div>
-
-        <h2>দ্রুত শুরু (5 মিনিট)</h2>
-
-        <div class="steps-container">
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <h3>ডাউনলোড এবং ইনস্টল করুন</h3>
-                    <p>App Store থেকে Swim Analytics ডাউনলোড করুন এবং Apple Health অ্যাক্সেসের অনুমতি দিন। অ্যাপ স্বয়ংক্রিয়ভাবে সাঁতার ওয়ার্কআউট সিঙ্ক করে: কোনো ম্যানুয়াল রেজিস্ট্রেশন প্রয়োজন নেই।</p>
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">অ্যাপ ডাউনলোড করুন →</a>
-                </div>
-            </div>
-
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h3>CSS পরীক্ষা সম্পন্ন করুন</h3>
-                    <p>আপনার Critical Swim Speed প্রতিষ্ঠা করতে একটি 400m এবং 200m টাইম ট্রায়াল সম্পন্ন করুন। এটি সমস্ত মেট্রিক্সের ভিত্তি: CSS ছাড়া, sTSS বা ট্রেনিং জোন গণনা করা যায় না।</p>
-                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">CSS পরীক্ষা প্রোটোকল ↓</a>
-                </div>
-            </div>
-
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h3>CSS ফলাফল প্রবেশ করান</h3>
-                    <p>অ্যাপে আপনার 400m এবং 200m সময় প্রবেশ করান। Swim Analytics CSS, পেস জোন গণনা করে এবং আপনার শারীরবৃত্তির উপর ভিত্তি করে সমস্ত মেট্রিক্স ব্যক্তিগতকৃত করে। আপনার ফিটনেস উন্নত হওয়ার সাথে সাথে প্রতি 6-8 সপ্তাহে আপডেট করুন।</p>
-                </div>
-            </div>
-
-            <div class="step-card">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <h3>ওয়ার্কআউট রেকর্ড করা শুরু করুন</h3>
-                    <p>Apple Watch এবং Health অ্যাপ দিয়ে সাঁতার কাটুন। Swim Analytics স্বয়ংক্রিয়ভাবে ওয়ার্কআউট আমদানি করে, sTSS গণনা করে, CTL/ATL/TSB আপডেট করে এবং অগ্রগতি ট্র্যাক করে। কোনো ম্যানুয়াল ডেটা এন্ট্রি প্রয়োজন নেই।</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt" id="css-test-guide">
-    <div class="container">
-        <h2 class="mb-xl text-center">সম্পূর্ণ CSS পরীক্ষা প্রোটোকল</h2>
-
-        <div class="grid grid-2">
-            <div class="card">
-                <h3 class="card-title">📋 আপনার যা প্রয়োজন</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>পুল অ্যাক্সেস:</strong> 25m বা 50m পুল (25yd গ্রহণযোগ্য)</li>
-                        <li><strong>সময়:</strong> স্টপওয়াচ, ওয়াল ক্লক বা Apple Watch</li>
-                        <li><strong>ওয়ার্ম-আপ সময়:</strong> পরীক্ষার আগে 15-20 মিনিট</li>
-                        <li><strong>পুনরুদ্ধার:</strong> পরীক্ষার মধ্যে 5-10 মিনিট</li>
-                        <li><strong>প্রচেষ্টা:</strong> সর্বোচ্চ টেকসই পেস (সম্পূর্ণ স্প্রিন্ট নয়)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">⏱️ পরীক্ষা দিনের শর্তাবলী</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>বিশ্রামপ্রাপ্ত:</strong> 24-48 ঘন্টা আগে কোনো কঠোর প্রশিক্ষণ নেই</li>
-                        <li><strong>হাইড্রেটেড:</strong> ভালভাবে হাইড্রেটেড, স্বাভাবিক খাওয়া</li>
-                        <li><strong>পুল তাপমাত্রা:</strong> 26-28°C আদর্শ (খুব ঠান্ডা/গরম এড়িয়ে চলুন)</li>
-                        <li><strong>দিনের সময়:</strong> যখন আপনি সাধারণত সবচেয়ে ভাল প্রশিক্ষণ নেন</li>
-                        <li><strong>সরঞ্জাম:</strong> ওয়ার্কআউটের মতো একই (গগলস, ক্যাপ, স্যুট)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="mt-3xl">ধাপে ধাপে CSS পরীক্ষা</h3>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-marker">ওয়ার্ম-আপ</div>
-                <div class="timeline-content">
-                    <h4>15-20 মিনিট</h4>
-                    <p>400-800m সহজ সাঁতার, ড্রিল এবং প্রগতিশীল। 2-3×50 বৃদ্ধি পেস (60%, 75%, 85% প্রচেষ্টা) অন্তর্ভুক্ত করুন। পরীক্ষার আগে 2-3 মিনিট বিশ্রাম নিন।</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">পরীক্ষা 1</div>
-                <div class="timeline-content">
-                    <h4>400m সর্বোচ্চ প্রচেষ্টা</h4>
-                    <p><strong>দেয়াল থেকে শুরু</strong> (কোনো ডাইভ নেই)। পুরো দূরত্ব ধরে রাখতে পারেন এমন সবচেয়ে দ্রুত পেসে 400m সাঁতার কাটুন। এটি একটি স্প্রিন্ট নয়: আপনার প্রচেষ্টা নিয়ন্ত্রণ করুন। সময় <strong>mm:ss</strong> ফরম্যাটে রেকর্ড করুন (উদা.: 6:08)।</p>
-                    <div class="tip-box mt-sm">
-                        <strong>পেস পরামর্শ:</strong> 100m স্প্লিট সমান রাখার চেষ্টা করুন। দ্বিতীয় 200m প্রথম 200m ≤ হওয়া উচিত (নেগেটিভ আদর্শ)।
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">পুনরুদ্ধার</div>
-                <div class="timeline-content">
-                    <h4>5-10 মিনিট</h4>
-                    <p><strong>জটিল পর্যায়:</strong> সহজ সাঁতার বা সম্পূর্ণ বিশ্রাম। হার্ট রেট 120 bpm এর নিচে নেমে আসা এবং শ্বাস সম্পূর্ণ পুনরুদ্ধার হওয়া পর্যন্ত অপেক্ষা করুন। অপর্যাপ্ত পুনরুদ্ধার = ভুল CSS।</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">পরীক্ষা 2</div>
-                <div class="timeline-content">
-                    <h4>200m সর্বোচ্চ প্রচেষ্টা</h4>
-                    <p><strong>দেয়াল থেকে শুরু</strong> (কোনো ডাইভ নেই)। 200m এর জন্য সর্বোচ্চ টেকসই প্রচেষ্টা। এটি 400m এর তুলনায় প্রতি 100m এ কঠিন অনুভব করা উচিত। সময় <strong>mm:ss</strong> ফরম্যাটে রেকর্ড করুন (উদা.: 2:30)।</p>
-                    <div class="tip-box mt-sm">
-                        <strong>বৈধতা পরীক্ষা:</strong> 200m/100m পেস 400m/100m পেসের চেয়ে 3-6 সেকেন্ড দ্রুত হওয়া উচিত। যদি না হয়, পুনরুদ্ধার অপর্যাপ্ত বা পেসিং বন্ধ ছিল।
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">কুল-ডাউন</div>
-                <div class="timeline-content">
-                    <h4>10-15 মিনিট</h4>
-                    <p>300-500m সহজ সাঁতার, স্ট্রেচিং। অবিলম্বে আপনার সময় লগ করুন: স্মৃতির উপর বিশ্বাস করবেন না।</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-warning mt-xl">
-            <h3>⚠️ সাধারণ CSS পরীক্ষার ভুল</h3>
-            <ul>
-                <li><strong>400m এ খুব দ্রুত বের হওয়া:</strong> ব্লো-আপে ফলাফল, ভুল CSS। সমান পেস ব্যবহার করুন।</li>
-                <li><strong>পরীক্ষার মধ্যে অপর্যাপ্ত পুনরুদ্ধার:</strong> ক্লান্তি 200m ধীর করে, CSS কৃত্রিমভাবে দ্রুত করে → অতিরিক্ত প্রশিক্ষণ জোন।</li>
-                <li><strong>ডাইভ স্টার্ট ব্যবহার:</strong> 0.5-1.5s সুবিধা যোগ করে, গণনা বিকৃত করে। সবসময় দেয়াল থেকে শুরু করুন।</li>
-                <li><strong>ক্লান্ত থাকা অবস্থায় পরীক্ষা:</strong> 24-48h আগে ভারী প্রশিক্ষণ লোড = অবনমিত ফলাফল। তাজা থাকাকালীন পরীক্ষা করুন।</li>
-                <li><strong>অবিলম্বে লগিং করা হয়নি:</strong> মেমরি নির্ভরযোগ্য নয়। কুল-ডাউনের আগে সময় লিখুন।</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Swim Analytics এ CSS ফলাফল প্রবেশ করানো</h2>
-
-        <div class="screenshot-guide">
-            <div class="step-item">
-                <h3>ধাপ 1: CSS সেটিংস খুলুন</h3>
-                <p>Swim Analytics অ্যাপে, <strong>সেটিংস → Critical Swim Speed</strong> এ যান। "CSS পরীক্ষা নিন" বা "CSS আপডেট করুন" ট্যাপ করুন।</p>
-            </div>
-
-            <div class="step-item">
-                <h3>ধাপ 2: সময় প্রবেশ করান</h3>
-                <p>আপনার 400m সময় (উদা.: <code>6:08</code>) এবং 200m সময় (উদা.: <code>2:30</code>) প্রবেশ করান। দেখানো সঠিক ফরম্যাট ব্যবহার করুন। "গণনা করুন" ট্যাপ করুন।</p>
-            </div>
-
-            <div class="step-item">
-                <h3>ধাপ 3: ফলাফল পর্যালোচনা করুন</h3>
-                <p>অ্যাপ প্রদর্শন করে:</p>
-                <ul>
-                    <li><strong>CSS স্পিড:</strong> 0.917 m/s</li>
-                    <li><strong>CSS পেস:</strong> 1:49/100m</li>
-                    <li><strong>ট্রেনিং জোন:</strong> 7টি ব্যক্তিগতকৃত জোন (জোন 1-7)</li>
-                    <li><strong>sTSS বেসলাইন:</strong> এখন সব ওয়ার্কআউটের জন্য সক্রিয়</li>
-                </ul>
-            </div>
-
-            <div class="step-item">
-                <h3>ধাপ 4: সংরক্ষণ এবং সিঙ্ক করুন</h3>
-                <p>"CSS সংরক্ষণ করুন" ট্যাপ করুন। অ্যাপ অবিলম্বে:</p>
-                <ul>
-                    <li>ট্রেনিং জোন পুনঃগণনা করে</li>
-                    <li>গত 90 দিনের sTSS পূর্ববর্তীভাবে আপডেট করে</li>
-                    <li>CTL/ATL/TSB গণনা সমন্বয় করে</li>
-                    <li>জোন দ্বারা ওয়ার্কআউট বিশ্লেষণ সক্রিয় করে</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>💡 প্রো টিপ: ঐতিহাসিক CSS পরীক্ষা</h3>
-            <p>যদি আপনি ইতিমধ্যে পূর্ববর্তী পরীক্ষা থেকে আপনার CSS জানেন, আপনি সেই সময়গুলি সরাসরি প্রবেশ করাতে পারেন। তবে, সবচেয়ে সঠিক ফলাফলের জন্য, প্রতি 6-8 সপ্তাহে একটি নতুন পরীক্ষা নিন। প্রশিক্ষণ অগ্রগতির সাথে সাথে আপনার CSS উন্নত হওয়া উচিত (দ্রুত হওয়া)।</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="mb-xl text-center">আপনার মেট্রিক্স বোঝা</h2>
-
-        <div class="grid grid-2">
-            <div class="card">
-                <h3 class="card-title">Critical Swim Speed (CSS)</h3>
-                <div class="card-content">
-                    <p><strong>এটি কী:</strong> আপনার অ্যারোবিক থ্রেশহোল্ড পেস: সবচেয়ে দ্রুত গতি যা আপনি ~30 মিনিট ক্লান্তি ছাড়াই বজায় রাখতে পারেন।</p>
-                    <p><strong>এটি কী বোঝায়:</strong> CSS = 1:49/100m মানে আপনি টেকসই থ্রেশহোল্ড প্রচেষ্টায় 1:49 পেস ধরে রাখতে পারেন।</p>
-                    <p><strong>কীভাবে এটি ব্যবহার করবেন:</strong> সমস্ত ট্রেনিং জোনের ভিত্তি এবং sTSS গণনা। প্রতি 6-8 সপ্তাহে আপডেট করুন।</p>
-                    <a href="/bn/css/" class="btn btn-secondary btn-small mt-md">CSS শিখুন →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">ট্রেনিং জোন</h3>
-                <div class="card-content">
-                    <p><strong>এগুলি কী:</strong> আপনার CSS এর উপর ভিত্তি করে 7টি তীব্রতার পরিসীমা, পুনরুদ্ধার (জোন 1) থেকে স্প্রিন্ট (জোন 7) পর্যন্ত।</p>
-                    <p><strong>এগুলি কী বোঝায়:</strong> প্রতিটি জোন নির্দিষ্ট শারীরবৃত্তীয় অভিযোজন লক্ষ্য করে (অ্যারোবিক বেস, থ্রেশহোল্ড, VO₂max)।</p>
-                    <p><strong>কীভাবে এগুলি ব্যবহার করবেন:</strong> কাঠামোবদ্ধ প্রশিক্ষণের জন্য জোন প্রেসক্রিপশন অনুসরণ করুন। অ্যাপ প্রতিটি ওয়ার্কআউটের জন্য জোনে সময় দেখায়।</p>
-                    <a href="/bn/training-zones/" class="btn btn-secondary btn-small mt-md">ট্রেনিং জোন →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Swimming Training Stress Score (sTSS)</h3>
-                <div class="card-content">
-                    <p><strong>এটি কী:</strong> তীব্রতা এবং সময়কাল একত্রিত করে পরিমাপ করা ওয়ার্কআউট স্ট্রেস। CSS পেসে 1 ঘন্টা = 100 sTSS।</p>
-                    <p><strong>এটি কী বোঝায়:</strong> sTSS 50 = সহজ পুনরুদ্ধার, sTSS 100 = মাঝারি, sTSS 200+ = খুব কঠিন সেশন।</p>
-                    <p><strong>কীভাবে এটি ব্যবহার করবেন:</strong> ট্রেনিং লোড পরিচালনা করতে দৈনিক/সাপ্তাহিক sTSS ট্র্যাক করুন। সর্বাধিক 5-10 sTSS/সপ্তাহ বৃদ্ধির লক্ষ্য রাখুন।</p>
-                    <a href="/bn/training-load/" class="btn btn-secondary btn-small mt-md">sTSS গাইড →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">CTL / ATL / TSB</h3>
-                <div class="card-content">
-                    <p><strong>এগুলি কী:</strong></p>
-                    <ul>
-                        <li><strong>CTL:</strong> Chronic Training Load (ফিটনেস) - 42 দিনের sTSS গড়</li>
-                        <li><strong>ATL:</strong> Acute Training Load (ক্লান্তি) - 7 দিনের sTSS গড়</li>
-                        <li><strong>TSB:</strong> Training Stress Balance (ফর্ম) = CTL - ATL</li>
-                    </ul>
-                    <p><strong>কীভাবে এগুলি ব্যবহার করবেন:</strong> ইতিবাচক TSB = তাজা/টেপারড, নেতিবাচক TSB = ক্লান্ত। TSB = +5 থেকে +25 এ প্রতিযোগিতা করুন।</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout mt-xl">
-            <h3>📊 আপনার প্রথম সপ্তাহের লক্ষ্য</h3>
-            <p>CSS প্রবেশ করানো এবং 3-5টি ওয়ার্কআউট সম্পন্ন করার পরে:</p>
-            <ul>
-                <li><strong>sTSS মান যাচাই করুন:</strong> নিশ্চিত করুন তারা প্রচেষ্টা উপলব্ধির সাথে মেলে (সহজ ~50, মাঝারি ~100, কঠিন ~150+)</li>
-                <li><strong>জোন বিতরণ পর্যালোচনা করুন:</strong> আপনি কি জোন 2 (অ্যারোবিক বেস) এ 60-70% ব্যয় করছেন?</li>
-                <li><strong>বেসলাইন CTL প্রতিষ্ঠা করুন:</strong> আপনার প্রথম সপ্তাহের গড় sTSS প্রাথমিক ফিটনেস বেসলাইন হয়ে যায়</li>
-                <li><strong>প্যাটার্ন সনাক্ত করুন:</strong> কোন ওয়ার্কআউটগুলি উচ্চ sTSS উৎপন্ন করে? আপনি কি পর্যাপ্তভাবে পুনরুদ্ধার করছেন?</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>সাধারণ ব্যবহারকারী যাত্রা (প্রথম 8 সপ্তাহ)</h2>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                <h3>সপ্তাহ 1-2: বেসলাইন প্রতিষ্ঠা</h3>
-                <ul>
-                    <li>CSS পরীক্ষা নিন এবং ফলাফল প্রবেশ করান</li>
-                    <li>3-5টি স্বাভাবিক ওয়ার্কআউট সম্পন্ন করুন</li>
-                    <li>sTSS মান এবং জোন বিতরণ পর্যবেক্ষণ করুন</li>
-                    <li>প্রাথমিক CTL প্রতিষ্ঠা করুন (ফিটনেস স্তর)</li>
-                    <li><strong>লক্ষ্য:</strong> মেট্রিক্স বুঝুন, এখনও কোনো পরিবর্তন নেই</li>
-                </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                <h3>সপ্তাহ 3-4: জোন প্রয়োগ করুন</h3>
-                <ul>
-                    <li>ওয়ার্কআউট পরিকল্পনায় CSS জোন ব্যবহার করুন</li>
-                    <li>অ্যারোবিক সেটের জন্য ইচ্ছাকৃতভাবে জোন 2 এ সাঁতার কাটুন</li>
-                    <li>সাপ্তাহিক sTSS মোট ট্র্যাক করুন (সামঞ্জস্যের সন্ধান করুন)</li>
-                    <li>TSB পর্যবেক্ষণ করুন (সামান্য নেগেটিভ হওয়া উচিত = প্রশিক্ষণ)</li>
-                    <li><strong>লক্ষ্য:</strong> অনুভূতি দ্বারা নয়, জোন দ্বারা প্রশিক্ষণ</li>
-                </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                <h3>সপ্তাহ 5-6: প্রগতিশীল অতিরিক্ত লোড</h3>
-                <ul>
-                    <li>বেসলাইন থেকে সাপ্তাহিক sTSS 5-10% বৃদ্ধি করুন</li>
-                    <li>প্রতি সপ্তাহে 1টি থ্রেশহোল্ড সেশন (জোন 4) যোগ করুন</li>
-                    <li>CTL ধীরে ধীরে বৃদ্ধি পেতে হবে (ফিটনেস উন্নতি)</li>
-                    <li>কঠিন সপ্তাহে ATL শিখর হতে পারে (স্বাভাবিক)</li>
-                    <li><strong>লক্ষ্য:</strong> ফিটনেসের নিয়ন্ত্রিত অগ্রগতি</li>
-                </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                <h3>সপ্তাহ 7-8: পুনঃমূল্যায়ন এবং সমন্বয়</h3>
-                <ul>
-                    <li>দ্বিতীয় CSS পরীক্ষা নিন (দ্রুত হওয়া উচিত)</li>
-                    <li>অ্যাপে জোন আপডেট করুন (পেস উন্নতি)</li>
-                    <li>সপ্তাহ 1 বনাম সপ্তাহ 8 CTL তুলনা করুন (+10-20 হওয়া উচিত)</li>
-                    <li>অগ্রগতি পর্যালোচনা করুন: সময় কি কমছে? সহজ অনুভব হচ্ছে?</li>
-                    <li><strong>লক্ষ্য:</strong> প্রশিক্ষণ কার্যকারিতা যাচাই করুন</li>
-                </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-success mt-xl">
-            <h3>✅ সাফল্যের সূচক</h3>
-            <p>Swim Analytics দিয়ে 8 সপ্তাহের কাঠামোবদ্ধ প্রশিক্ষণের পরে, আপনার দেখা উচিত:</p>
-            <ul>
-                <li><strong>CSS উন্নতি:</strong> CSS পেসে 1-3% দ্রুত (উদা.: 1:49 → 1:47)</li>
-                <li><strong>CTL বৃদ্ধি:</strong> +15-25 পয়েন্ট (উদা.: 30 → 50 CTL)</li>
-                <li><strong>সামঞ্জস্যপূর্ণ sTSS:</strong> সাপ্তাহিক মোট 10-15% পার্থক্যের মধ্যে</li>
-                <li><strong>ভাল পেসিং:</strong> আরও সমান স্প্লিট, ভাল প্রচেষ্টা ক্যালিব্রেশন</li>
-                <li><strong>উন্নত পুনরুদ্ধার:</strong> TSB পূর্বাভাসিতভাবে চক্র (-10 থেকে +5)</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>সমস্যা সমাধান এবং প্রায়শই জিজ্ঞাসিত প্রশ্ন</h2>
-
-        <div class="faq-item">
-            <h3>আমার sTSS ওয়ার্কআউট প্রচেষ্টার জন্য খুব বেশি/কম মনে হয়</h3>
-            <p><strong>কারণ:</strong> CSS পুরানো বা ভুল।</p>
-            <p><strong>সমাধান:</strong> CSS পুনরায় পরীক্ষা করুন। যদি আপনি ক্লান্ত থাকাকালীন পরীক্ষা করেন বা ভুল পেসিং করেন, CSS ভুল হবে। একটি সঠিক CSS পরীক্ষা পরবর্তী সমস্ত মেট্রিক্সের জন্য গুরুত্বপূর্ণ।</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>অ্যাপ "কোনো CSS কনফিগার করা হয়নি" দেখায়</h3>
-            <p><strong>কারণ:</strong> CSS পরীক্ষা সম্পূর্ণ বা সংরক্ষণ করা হয়নি।</p>
-            <p><strong>সমাধান:</strong> সেটিংস → Critical Swim Speed → পরীক্ষা নিন এ যান। 400m এবং 200m উভয় সময় প্রবেশ করান, তারপর সংরক্ষণ ট্যাপ করুন।</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Apple Watch থেকে ওয়ার্কআউট সিঙ্ক হচ্ছে না</h3>
-            <p><strong>কারণ:</strong> Health অ্যাপ অনুমতি দেওয়া হয়নি বা ওয়ার্কআউট "সাঁতার" হিসাবে শ্রেণীবদ্ধ নয়।</p>
-            <p><strong>সমাধান:</strong> সেটিংস → গোপনীয়তা → স্বাস্থ্য → Swim Analytics → ওয়ার্কআউট পড়ার অনুমতি দিন যাচাই করুন। নিশ্চিত করুন Apple Watch এ ওয়ার্কআউট টাইপ "পুল সাঁতার" বা "খোলা জল সাঁতার"।</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>সামঞ্জস্যপূর্ণ প্রশিক্ষণ সত্ত্বেও CTL বৃদ্ধি পাচ্ছে না</h3>
-            <p><strong>কারণ:</strong> sTSS মোট খুব কম বা অসামঞ্জস্যপূর্ণ ফ্রিকোয়েন্সি।</p>
-            <p><strong>সমাধান:</strong> CTL একটি 42 দিনের ঘাতাঙ্কিত ওজনযুক্ত গড়। এটি ধীরে ধীরে বৃদ্ধি পায়। সাপ্তাহিক sTSS 5-10% বৃদ্ধি করুন, এবং সামঞ্জস্যপূর্ণ CTL বৃদ্ধির জন্য 4+ ওয়ার্কআউট/সপ্তাহ বজায় রাখুন।</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>কত ঘন ঘন আমার CSS পুনরায় পরীক্ষা করা উচিত?</h3>
-            <p><strong>সুপারিশ:</strong> বেস/বিল্ড ফেজে প্রতি 6-8 সপ্তাহে। অসুস্থতা, আঘাত, দীর্ঘ বিরতি, বা জোন ধারাবাহিকভাবে খুব সহজ/কঠিন অনুভব করলে পুনরায় পরীক্ষা করুন।</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>আমি কি অন্যান্য স্ট্রোকের জন্য Swim Analytics ব্যবহার করতে পারি?</h3>
-            <p><strong>হ্যাঁ, সীমাবদ্ধতা সহ:</strong> CSS সাধারণত ফ্রিস্টাইলে পরীক্ষা করা হয়। IM/ব্যাকস্ট্রোক/ব্রেস্টস্ট্রোক ওয়ার্কআউটের জন্য, sTSS ফ্রিস্টাইল CSS এর উপর ভিত্তি করে গণনা করা হয়। উচ্চতর নির্ভুলতার জন্য স্ট্রোক-নির্দিষ্ট CSS পরীক্ষা বিবেচনা করুন।</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>পরবর্তী পদক্ষেপ</h2>
-
-        <div class="grid grid-3">
-            <div class="card">
-                <h3 class="card-title">ট্রেনিং জোন শিখুন</h3>
-                <div class="card-content">
-                    <p>নির্দিষ্ট অভিযোজনের জন্য জোন 2 (অ্যারোবিক বেস), জোন 4 (থ্রেশহোল্ড) এবং জোন 5 (VO₂max) এ কীভাবে প্রশিক্ষণ নিতে হয় তা বুঝুন।</p>
-                    <a href="/bn/training-zones/" class="btn btn-secondary btn-small mt-md">ট্রেনিং জোন →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">sTSS গণনা করুন</h3>
-                <div class="card-content">
-                    <p>ওয়ার্কআউটে প্রতিশ্রুতিবদ্ধ হওয়ার আগে ট্রেনিং লোড বুঝতে আমাদের বিনামূল্যে sTSS ক্যালকুলেটর ব্যবহার করুন।</p>
-                    <a href="/bn/stss-calculator/" class="btn btn-secondary btn-small mt-md">sTSS ক্যালকুলেটর →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">মেট্রিক্সে গভীরভাবে ডুব দিন</h3>
-                <div class="card-content">
-                    <p>পিয়ার-পর্যালোচিত গবেষণা রেফারেন্স সহ CSS, sTSS, CTL/ATL/TSB এর পিছনের বিজ্ঞান অন্বেষণ করুন।</p>
-                    <a href="/bn/research/" class="btn btn-secondary btn-small mt-md">গবেষণা →</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-xl text-center">
-            <p class="mb-md"><strong>ট্র্যাকিং শুরু করতে প্রস্তুত?</strong></p>
-            <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Swim Analytics বিনামূল্যে ডাউনলোড করুন</a>
-            <p class="mt-sm text-secondary">7-দিনের বিনামূল্যে ট্রায়াল • কোনো ক্রেডিট কার্ড নেই • iOS 16+</p>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="मेनू टॉगल करें"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/bn/">होम</a></li><li><a href="/bn/getting-started/">सीखें</a></li><li><span aria-current="page">शुरू करें</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Swim Analytics দিয়ে শুরু করা</h1><p class="lead">সাঁতার পারফরম্যান্স ট্র্যাকিং, CSS পরীক্ষা এবং ট্রেনিং লোড বিশ্লেষণের জন্য আপনার সম্পূর্ণ নির্দেশিকা</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-info mb-xl"><h2>ডেটা-চালিত সাঁতারে স্বাগতম</h2><p>Swim Analytics আপনার সাঁতার ওয়ার্কআউটকে <strong>Critical Swim Speed (CSS)</strong>, <strong>Training Stress Score (sTSS)</strong> এবং <strong>Performance Management Chart (PMC)</strong> মেট্রিক্স ব্যবহার করে কার্যকরী অন্তর্দৃষ্টিতে রূপান্তরিত করে। এই গাইড আপনাকে প্রাথমিক সেটআপ থেকে উন্নত ট্রেনিং লোড বিশ্লেষণ পর্যন্ত 4টি সহজ ধাপে নিয়ে যাবে।</p></div><h2>দ্রুত শুরু (5 মিনিট)</h2><div class="steps-container"><div class="step-card"><div class="step-number">1</div><div class="step-content"><h3>ডাউনলোড এবং ইনস্টল করুন</h3><p>App Store থেকে Swim Analytics ডাউনলোড করুন এবং Apple Health অ্যাক্সেসের অনুমতি দিন। অ্যাপ স্বয়ংক্রিয়ভাবে সাঁতার ওয়ার্কআউট সিঙ্ক করে: কোনো ম্যানুয়াল রেজিস্ট্রেশন প্রয়োজন নেই।</p><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">অ্যাপ ডাউনলোড করুন →</a></div></div><div class="step-card"><div class="step-number">2</div><div class="step-content"><h3>CSS পরীক্ষা সম্পন্ন করুন</h3><p>আপনার Critical Swim Speed প্রতিষ্ঠা করতে একটি 400m এবং 200m টাইম ট্রায়াল সম্পন্ন করুন। এটি সমস্ত মেট্রিক্সের ভিত্তি: CSS ছাড়া, sTSS বা ট্রেনিং জোন গণনা করা যায় না।</p><a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">CSS পরীক্ষা প্রোটোকল ↓</a></div></div><div class="step-card"><div class="step-number">3</div><div class="step-content"><h3>CSS ফলাফল প্রবেশ করান</h3><p>অ্যাপে আপনার 400m এবং 200m সময় প্রবেশ করান। Swim Analytics CSS, পেস জোন গণনা করে এবং আপনার শারীরবৃত্তির উপর ভিত্তি করে সমস্ত মেট্রিক্স ব্যক্তিগতকৃত করে। আপনার ফিটনেস উন্নত হওয়ার সাথে সাথে প্রতি 6-8 সপ্তাহে আপডেট করুন।</p></div></div><div class="step-card"><div class="step-number">4</div><div class="step-content"><h3>ওয়ার্কআউট রেকর্ড করা শুরু করুন</h3><p>Apple Watch এবং Health অ্যাপ দিয়ে সাঁতার কাটুন। Swim Analytics স্বয়ংক্রিয়ভাবে ওয়ার্কআউট আমদানি করে, sTSS গণনা করে, CTL/ATL/TSB আপডেট করে এবং অগ্রগতি ট্র্যাক করে। কোনো ম্যানুয়াল ডেটা এন্ট্রি প্রয়োজন নেই।</p></div></div></div></div></section><section class="section section-alt" id="css-test-guide"><div class="container"><h2 class="mb-xl text-center">সম্পূর্ণ CSS পরীক্ষা প্রোটোকল</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">📋 আপনার যা প্রয়োজন</h3><div class="card-content"><ul><li><strong>পুল অ্যাক্সেস:</strong> 25m বা 50m পুল (25yd গ্রহণযোগ্য)</li><li><strong>সময়:</strong> স্টপওয়াচ, ওয়াল ক্লক বা Apple Watch</li><li><strong>ওয়ার্ম-আপ সময়:</strong> পরীক্ষার আগে 15-20 মিনিট</li><li><strong>পুনরুদ্ধার:</strong> পরীক্ষার মধ্যে 5-10 মিনিট</li><li><strong>প্রচেষ্টা:</strong> সর্বোচ্চ টেকসই পেস (সম্পূর্ণ স্প্রিন্ট নয়)</li></ul></div></div><div class="card"><h3 class="card-title">⏱️ পরীক্ষা দিনের শর্তাবলী</h3><div class="card-content"><ul><li><strong>বিশ্রামপ্রাপ্ত:</strong> 24-48 ঘন্টা আগে কোনো কঠোর প্রশিক্ষণ নেই</li><li><strong>হাইড্রেটেড:</strong> ভালভাবে হাইড্রেটেড, স্বাভাবিক খাওয়া</li><li><strong>পুল তাপমাত্রা:</strong> 26-28°C আদর্শ (খুব ঠান্ডা/গরম এড়িয়ে চলুন)</li><li><strong>দিনের সময়:</strong> যখন আপনি সাধারণত সবচেয়ে ভাল প্রশিক্ষণ নেন</li><li><strong>সরঞ্জাম:</strong> ওয়ার্কআউটের মতো একই (গগলস, ক্যাপ, স্যুট)</li></ul></div></div></div><h3 class="mt-3xl">ধাপে ধাপে CSS পরীক্ষা</h3><div class="timeline"><div class="timeline-item"><div class="timeline-marker">ওয়ার্ম-আপ</div><div class="timeline-content"><h4>15-20 মিনিট</h4><p>400-800m সহজ সাঁতার, ড্রিল এবং প্রগতিশীল। 2-3×50 বৃদ্ধি পেস (60%, 75%, 85% প্রচেষ্টা) অন্তর্ভুক্ত করুন। পরীক্ষার আগে 2-3 মিনিট বিশ্রাম নিন।</p></div></div><div class="timeline-item"><div class="timeline-marker">পরীক্ষা 1</div><div class="timeline-content"><h4>400m সর্বোচ্চ প্রচেষ্টা</h4><p><strong>দেয়াল থেকে শুরু</strong> (কোনো ডাইভ নেই)। পুরো দূরত্ব ধরে রাখতে পারেন এমন সবচেয়ে দ্রুত পেসে 400m সাঁতার কাটুন। এটি একটি স্প্রিন্ট নয়: আপনার প্রচেষ্টা নিয়ন্ত্রণ করুন। সময় <strong>mm:ss</strong> ফরম্যাটে রেকর্ড করুন (উদা.: 6:08)।</p><div class="tip-box mt-sm"><strong>পেস পরামর্শ:</strong> 100m স্প্লিট সমান রাখার চেষ্টা করুন। দ্বিতীয় 200m প্রথম 200m ≤ হওয়া উচিত (নেগেটিভ আদর্শ)।
+                    </div></div></div><div class="timeline-item"><div class="timeline-marker">পুনরুদ্ধার</div><div class="timeline-content"><h4>5-10 মিনিট</h4><p><strong>জটিল পর্যায়:</strong> সহজ সাঁতার বা সম্পূর্ণ বিশ্রাম। হার্ট রেট 120 bpm এর নিচে নেমে আসা এবং শ্বাস সম্পূর্ণ পুনরুদ্ধার হওয়া পর্যন্ত অপেক্ষা করুন। অপর্যাপ্ত পুনরুদ্ধার = ভুল CSS।</p></div></div><div class="timeline-item"><div class="timeline-marker">পরীক্ষা 2</div><div class="timeline-content"><h4>200m সর্বোচ্চ প্রচেষ্টা</h4><p><strong>দেয়াল থেকে শুরু</strong> (কোনো ডাইভ নেই)। 200m এর জন্য সর্বোচ্চ টেকসই প্রচেষ্টা। এটি 400m এর তুলনায় প্রতি 100m এ কঠিন অনুভব করা উচিত। সময় <strong>mm:ss</strong> ফরম্যাটে রেকর্ড করুন (উদা.: 2:30)।</p><div class="tip-box mt-sm"><strong>বৈধতা পরীক্ষা:</strong> 200m/100m পেস 400m/100m পেসের চেয়ে 3-6 সেকেন্ড দ্রুত হওয়া উচিত। যদি না হয়, পুনরুদ্ধার অপর্যাপ্ত বা পেসিং বন্ধ ছিল।
+                    </div></div></div><div class="timeline-item"><div class="timeline-marker">কুল-ডাউন</div><div class="timeline-content"><h4>10-15 মিনিট</h4><p>300-500m সহজ সাঁতার, স্ট্রেচিং। অবিলম্বে আপনার সময় লগ করুন: স্মৃতির উপর বিশ্বাস করবেন না।</p></div></div></div><div class="callout callout-warning mt-xl"><h3>⚠️ সাধারণ CSS পরীক্ষার ভুল</h3><ul><li><strong>400m এ খুব দ্রুত বের হওয়া:</strong> ব্লো-আপে ফলাফল, ভুল CSS। সমান পেস ব্যবহার করুন।</li><li><strong>পরীক্ষার মধ্যে অপর্যাপ্ত পুনরুদ্ধার:</strong> ক্লান্তি 200m ধীর করে, CSS কৃত্রিমভাবে দ্রুত করে → অতিরিক্ত প্রশিক্ষণ জোন।</li><li><strong>ডাইভ স্টার্ট ব্যবহার:</strong> 0.5-1.5s সুবিধা যোগ করে, গণনা বিকৃত করে। সবসময় দেয়াল থেকে শুরু করুন।</li><li><strong>ক্লান্ত থাকা অবস্থায় পরীক্ষা:</strong> 24-48h আগে ভারী প্রশিক্ষণ লোড = অবনমিত ফলাফল। তাজা থাকাকালীন পরীক্ষা করুন।</li><li><strong>অবিলম্বে লগিং করা হয়নি:</strong> মেমরি নির্ভরযোগ্য নয়। কুল-ডাউনের আগে সময় লিখুন।</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Swim Analytics এ CSS ফলাফল প্রবেশ করানো</h2><div class="screenshot-guide"><div class="step-item"><h3>ধাপ 1: CSS সেটিংস খুলুন</h3><p>Swim Analytics অ্যাপে, <strong>সেটিংস → Critical Swim Speed</strong> এ যান। "CSS পরীক্ষা নিন" বা "CSS আপডেট করুন" ট্যাপ করুন।</p></div><div class="step-item"><h3>ধাপ 2: সময় প্রবেশ করান</h3><p>আপনার 400m সময় (উদা.: <code>6:08</code>) এবং 200m সময় (উদা.: <code>2:30</code>) প্রবেশ করান। দেখানো সঠিক ফরম্যাট ব্যবহার করুন। "গণনা করুন" ট্যাপ করুন।</p></div><div class="step-item"><h3>ধাপ 3: ফলাফল পর্যালোচনা করুন</h3><p>অ্যাপ প্রদর্শন করে:</p><ul><li><strong>CSS স্পিড:</strong> 0.917 m/s</li><li><strong>CSS পেস:</strong> 1:49/100m</li><li><strong>ট্রেনিং জোন:</strong> 7টি ব্যক্তিগতকৃত জোন (জোন 1-7)</li><li><strong>sTSS বেসলাইন:</strong> এখন সব ওয়ার্কআউটের জন্য সক্রিয়</li></ul></div><div class="step-item"><h3>ধাপ 4: সংরক্ষণ এবং সিঙ্ক করুন</h3><p>"CSS সংরক্ষণ করুন" ট্যাপ করুন। অ্যাপ অবিলম্বে:</p><ul><li>ট্রেনিং জোন পুনঃগণনা করে</li><li>গত 90 দিনের sTSS পূর্ববর্তীভাবে আপডেট করে</li><li>CTL/ATL/TSB গণনা সমন্বয় করে</li><li>জোন দ্বারা ওয়ার্কআউট বিশ্লেষণ সক্রিয় করে</li></ul></div></div><div class="callout callout-tip mt-xl"><h3>💡 প্রো টিপ: ঐতিহাসিক CSS পরীক্ষা</h3><p>যদি আপনি ইতিমধ্যে পূর্ববর্তী পরীক্ষা থেকে আপনার CSS জানেন, আপনি সেই সময়গুলি সরাসরি প্রবেশ করাতে পারেন। তবে, সবচেয়ে সঠিক ফলাফলের জন্য, প্রতি 6-8 সপ্তাহে একটি নতুন পরীক্ষা নিন। প্রশিক্ষণ অগ্রগতির সাথে সাথে আপনার CSS উন্নত হওয়া উচিত (দ্রুত হওয়া)।</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">আপনার মেট্রিক্স বোঝা</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">Critical Swim Speed (CSS)</h3><div class="card-content"><p><strong>এটি কী:</strong> আপনার অ্যারোবিক থ্রেশহোল্ড পেস: সবচেয়ে দ্রুত গতি যা আপনি ~30 মিনিট ক্লান্তি ছাড়াই বজায় রাখতে পারেন।</p><p><strong>এটি কী বোঝায়:</strong> CSS = 1:49/100m মানে আপনি টেকসই থ্রেশহোল্ড প্রচেষ্টায় 1:49 পেস ধরে রাখতে পারেন।</p><p><strong>কীভাবে এটি ব্যবহার করবেন:</strong> সমস্ত ট্রেনিং জোনের ভিত্তি এবং sTSS গণনা। প্রতি 6-8 সপ্তাহে আপডেট করুন।</p><a href="/bn/css/" class="btn btn-secondary btn-small mt-md">CSS শিখুন →</a></div></div><div class="card"><h3 class="card-title">ট্রেনিং জোন</h3><div class="card-content"><p><strong>এগুলি কী:</strong> আপনার CSS এর উপর ভিত্তি করে 7টি তীব্রতার পরিসীমা, পুনরুদ্ধার (জোন 1) থেকে স্প্রিন্ট (জোন 7) পর্যন্ত।</p><p><strong>এগুলি কী বোঝায়:</strong> প্রতিটি জোন নির্দিষ্ট শারীরবৃত্তীয় অভিযোজন লক্ষ্য করে (অ্যারোবিক বেস, থ্রেশহোল্ড, VO₂max)।</p><p><strong>কীভাবে এগুলি ব্যবহার করবেন:</strong> কাঠামোবদ্ধ প্রশিক্ষণের জন্য জোন প্রেসক্রিপশন অনুসরণ করুন। অ্যাপ প্রতিটি ওয়ার্কআউটের জন্য জোনে সময় দেখায়।</p><a href="/bn/training-zones/" class="btn btn-secondary btn-small mt-md">ট্রেনিং জোন →</a></div></div><div class="card"><h3 class="card-title">Swimming Training Stress Score (sTSS)</h3><div class="card-content"><p><strong>এটি কী:</strong> তীব্রতা এবং সময়কাল একত্রিত করে পরিমাপ করা ওয়ার্কআউট স্ট্রেস। CSS পেসে 1 ঘন্টা = 100 sTSS।</p><p><strong>এটি কী বোঝায়:</strong> sTSS 50 = সহজ পুনরুদ্ধার, sTSS 100 = মাঝারি, sTSS 200+ = খুব কঠিন সেশন।</p><p><strong>কীভাবে এটি ব্যবহার করবেন:</strong> ট্রেনিং লোড পরিচালনা করতে দৈনিক/সাপ্তাহিক sTSS ট্র্যাক করুন। সর্বাধিক 5-10 sTSS/সপ্তাহ বৃদ্ধির লক্ষ্য রাখুন।</p><a href="/bn/training-load/" class="btn btn-secondary btn-small mt-md">sTSS গাইড →</a></div></div><div class="card"><h3 class="card-title">CTL / ATL / TSB</h3><div class="card-content"><p><strong>এগুলি কী:</strong></p><ul><li><strong>CTL:</strong> Chronic Training Load (ফিটনেস) - 42 দিনের sTSS গড়</li><li><strong>ATL:</strong> Acute Training Load (ক্লান্তি) - 7 দিনের sTSS গড়</li><li><strong>TSB:</strong> Training Stress Balance (ফর্ম) = CTL - ATL</li></ul><p><strong>কীভাবে এগুলি ব্যবহার করবেন:</strong> ইতিবাচক TSB = তাজা/টেপারড, নেতিবাচক TSB = ক্লান্ত। TSB = +5 থেকে +25 এ প্রতিযোগিতা করুন।</p></div></div></div><div class="callout mt-xl"><h3>📊 আপনার প্রথম সপ্তাহের লক্ষ্য</h3><p>CSS প্রবেশ করানো এবং 3-5টি ওয়ার্কআউট সম্পন্ন করার পরে:</p><ul><li><strong>sTSS মান যাচাই করুন:</strong> নিশ্চিত করুন তারা প্রচেষ্টা উপলব্ধির সাথে মেলে (সহজ ~50, মাঝারি ~100, কঠিন ~150+)</li><li><strong>জোন বিতরণ পর্যালোচনা করুন:</strong> আপনি কি জোন 2 (অ্যারোবিক বেস) এ 60-70% ব্যয় করছেন?</li><li><strong>বেসলাইন CTL প্রতিষ্ঠা করুন:</strong> আপনার প্রথম সপ্তাহের গড় sTSS প্রাথমিক ফিটনেস বেসলাইন হয়ে যায়</li><li><strong>প্যাটার্ন সনাক্ত করুন:</strong> কোন ওয়ার্কআউটগুলি উচ্চ sTSS উৎপন্ন করে? আপনি কি পর্যাপ্তভাবে পুনরুদ্ধার করছেন?</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>সাধারণ ব্যবহারকারী যাত্রা (প্রথম 8 সপ্তাহ)</h2><div class="timeline"><div class="timeline-item"><div class="timeline-content"><h3>সপ্তাহ 1-2: বেসলাইন প্রতিষ্ঠা</h3><ul><li>CSS পরীক্ষা নিন এবং ফলাফল প্রবেশ করান</li><li>3-5টি স্বাভাবিক ওয়ার্কআউট সম্পন্ন করুন</li><li>sTSS মান এবং জোন বিতরণ পর্যবেক্ষণ করুন</li><li>প্রাথমিক CTL প্রতিষ্ঠা করুন (ফিটনেস স্তর)</li><li><strong>লক্ষ্য:</strong> মেট্রিক্স বুঝুন, এখনও কোনো পরিবর্তন নেই</li></ul></div></div><div class="timeline-item"><div class="timeline-content"><h3>সপ্তাহ 3-4: জোন প্রয়োগ করুন</h3><ul><li>ওয়ার্কআউট পরিকল্পনায় CSS জোন ব্যবহার করুন</li><li>অ্যারোবিক সেটের জন্য ইচ্ছাকৃতভাবে জোন 2 এ সাঁতার কাটুন</li><li>সাপ্তাহিক sTSS মোট ট্র্যাক করুন (সামঞ্জস্যের সন্ধান করুন)</li><li>TSB পর্যবেক্ষণ করুন (সামান্য নেগেটিভ হওয়া উচিত = প্রশিক্ষণ)</li><li><strong>লক্ষ্য:</strong> অনুভূতি দ্বারা নয়, জোন দ্বারা প্রশিক্ষণ</li></ul></div></div><div class="timeline-item"><div class="timeline-content"><h3>সপ্তাহ 5-6: প্রগতিশীল অতিরিক্ত লোড</h3><ul><li>বেসলাইন থেকে সাপ্তাহিক sTSS 5-10% বৃদ্ধি করুন</li><li>প্রতি সপ্তাহে 1টি থ্রেশহোল্ড সেশন (জোন 4) যোগ করুন</li><li>CTL ধীরে ধীরে বৃদ্ধি পেতে হবে (ফিটনেস উন্নতি)</li><li>কঠিন সপ্তাহে ATL শিখর হতে পারে (স্বাভাবিক)</li><li><strong>লক্ষ্য:</strong> ফিটনেসের নিয়ন্ত্রিত অগ্রগতি</li></ul></div></div><div class="timeline-item"><div class="timeline-content"><h3>সপ্তাহ 7-8: পুনঃমূল্যায়ন এবং সমন্বয়</h3><ul><li>দ্বিতীয় CSS পরীক্ষা নিন (দ্রুত হওয়া উচিত)</li><li>অ্যাপে জোন আপডেট করুন (পেস উন্নতি)</li><li>সপ্তাহ 1 বনাম সপ্তাহ 8 CTL তুলনা করুন (+10-20 হওয়া উচিত)</li><li>অগ্রগতি পর্যালোচনা করুন: সময় কি কমছে? সহজ অনুভব হচ্ছে?</li><li><strong>লক্ষ্য:</strong> প্রশিক্ষণ কার্যকারিতা যাচাই করুন</li></ul></div></div></div><div class="callout callout-success mt-xl"><h3>✅ সাফল্যের সূচক</h3><p>Swim Analytics দিয়ে 8 সপ্তাহের কাঠামোবদ্ধ প্রশিক্ষণের পরে, আপনার দেখা উচিত:</p><ul><li><strong>CSS উন্নতি:</strong> CSS পেসে 1-3% দ্রুত (উদা.: 1:49 → 1:47)</li><li><strong>CTL বৃদ্ধি:</strong> +15-25 পয়েন্ট (উদা.: 30 → 50 CTL)</li><li><strong>সামঞ্জস্যপূর্ণ sTSS:</strong> সাপ্তাহিক মোট 10-15% পার্থক্যের মধ্যে</li><li><strong>ভাল পেসিং:</strong> আরও সমান স্প্লিট, ভাল প্রচেষ্টা ক্যালিব্রেশন</li><li><strong>উন্নত পুনরুদ্ধার:</strong> TSB পূর্বাভাসিতভাবে চক্র (-10 থেকে +5)</li></ul></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>সমস্যা সমাধান এবং প্রায়শই জিজ্ঞাসিত প্রশ্ন</h2><div class="faq-item"><h3>আমার sTSS ওয়ার্কআউট প্রচেষ্টার জন্য খুব বেশি/কম মনে হয়</h3><p><strong>কারণ:</strong> CSS পুরানো বা ভুল।</p><p><strong>সমাধান:</strong> CSS পুনরায় পরীক্ষা করুন। যদি আপনি ক্লান্ত থাকাকালীন পরীক্ষা করেন বা ভুল পেসিং করেন, CSS ভুল হবে। একটি সঠিক CSS পরীক্ষা পরবর্তী সমস্ত মেট্রিক্সের জন্য গুরুত্বপূর্ণ।</p></div><div class="faq-item"><h3>অ্যাপ "কোনো CSS কনফিগার করা হয়নি" দেখায়</h3><p><strong>কারণ:</strong> CSS পরীক্ষা সম্পূর্ণ বা সংরক্ষণ করা হয়নি।</p><p><strong>সমাধান:</strong> সেটিংস → Critical Swim Speed → পরীক্ষা নিন এ যান। 400m এবং 200m উভয় সময় প্রবেশ করান, তারপর সংরক্ষণ ট্যাপ করুন।</p></div><div class="faq-item"><h3>Apple Watch থেকে ওয়ার্কআউট সিঙ্ক হচ্ছে না</h3><p><strong>কারণ:</strong> Health অ্যাপ অনুমতি দেওয়া হয়নি বা ওয়ার্কআউট "সাঁতার" হিসাবে শ্রেণীবদ্ধ নয়।</p><p><strong>সমাধান:</strong> সেটিংস → গোপনীয়তা → স্বাস্থ্য → Swim Analytics → ওয়ার্কআউট পড়ার অনুমতি দিন যাচাই করুন। নিশ্চিত করুন Apple Watch এ ওয়ার্কআউট টাইপ "পুল সাঁতার" বা "খোলা জল সাঁতার"।</p></div><div class="faq-item"><h3>সামঞ্জস্যপূর্ণ প্রশিক্ষণ সত্ত্বেও CTL বৃদ্ধি পাচ্ছে না</h3><p><strong>কারণ:</strong> sTSS মোট খুব কম বা অসামঞ্জস্যপূর্ণ ফ্রিকোয়েন্সি।</p><p><strong>সমাধান:</strong> CTL একটি 42 দিনের ঘাতাঙ্কিত ওজনযুক্ত গড়। এটি ধীরে ধীরে বৃদ্ধি পায়। সাপ্তাহিক sTSS 5-10% বৃদ্ধি করুন, এবং সামঞ্জস্যপূর্ণ CTL বৃদ্ধির জন্য 4+ ওয়ার্কআউট/সপ্তাহ বজায় রাখুন।</p></div><div class="faq-item"><h3>কত ঘন ঘন আমার CSS পুনরায় পরীক্ষা করা উচিত?</h3><p><strong>সুপারিশ:</strong> বেস/বিল্ড ফেজে প্রতি 6-8 সপ্তাহে। অসুস্থতা, আঘাত, দীর্ঘ বিরতি, বা জোন ধারাবাহিকভাবে খুব সহজ/কঠিন অনুভব করলে পুনরায় পরীক্ষা করুন।</p></div><div class="faq-item"><h3>আমি কি অন্যান্য স্ট্রোকের জন্য Swim Analytics ব্যবহার করতে পারি?</h3><p><strong>হ্যাঁ, সীমাবদ্ধতা সহ:</strong> CSS সাধারণত ফ্রিস্টাইলে পরীক্ষা করা হয়। IM/ব্যাকস্ট্রোক/ব্রেস্টস্ট্রোক ওয়ার্কআউটের জন্য, sTSS ফ্রিস্টাইল CSS এর উপর ভিত্তি করে গণনা করা হয়। উচ্চতর নির্ভুলতার জন্য স্ট্রোক-নির্দিষ্ট CSS পরীক্ষা বিবেচনা করুন।</p></div></div></section><section class="section"><div class="container container-narrow"><h2>পরবর্তী পদক্ষেপ</h2><div class="grid grid-3"><div class="card"><h3 class="card-title">ট্রেনিং জোন শিখুন</h3><div class="card-content"><p>নির্দিষ্ট অভিযোজনের জন্য জোন 2 (অ্যারোবিক বেস), জোন 4 (থ্রেশহোল্ড) এবং জোন 5 (VO₂max) এ কীভাবে প্রশিক্ষণ নিতে হয় তা বুঝুন।</p><a href="/bn/training-zones/" class="btn btn-secondary btn-small mt-md">ট্রেনিং জোন →</a></div></div><div class="card"><h3 class="card-title">sTSS গণনা করুন</h3><div class="card-content"><p>ওয়ার্কআউটে প্রতিশ্রুতিবদ্ধ হওয়ার আগে ট্রেনিং লোড বুঝতে আমাদের বিনামূল্যে sTSS ক্যালকুলেটর ব্যবহার করুন।</p><a href="/bn/stss-calculator/" class="btn btn-secondary btn-small mt-md">sTSS ক্যালকুলেটর →</a></div></div><div class="card"><h3 class="card-title">মেট্রিক্সে গভীরভাবে ডুব দিন</h3><div class="card-content"><p>পিয়ার-পর্যালোচিত গবেষণা রেফারেন্স সহ CSS, sTSS, CTL/ATL/TSB এর পিছনের বিজ্ঞান অন্বেষণ করুন।</p><a href="/bn/research/" class="btn btn-secondary btn-small mt-md">গবেষণা →</a></div></div></div><div class="mt-xl text-center"><p class="mb-md"><strong>ট্র্যাকিং শুরু করতে প্রস্তুত?</strong></p><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Swim Analytics বিনামূল্যে ডাউনলোড করুন</a><p class="mt-sm text-secondary">7-দিনের বিনামূল্যে ট্রায়াল • কোনো ক্রেডিট কার্ড নেই • iOS 16+</p></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link active"
+                </a><a href="/bn/" class="lang-link active"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. सर्वाधिकार सुरक्षित
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/bn/privacy/">गोपनीयता</a></li>
-                <li><a href="/bn/terms/">शर्तें</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>यह वेबसाइट आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग करती है।</p>
-            <a href="/bn/privacy/" class="text-sm">और जानें</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">अस्वीकार करें</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">स्वीकार करें</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/bn/privacy/">गोपनीयता</a></li><li><a href="/bn/terms/">शर्तें</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>यह वेबसाइट आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग करती है।</p><a href="/bn/privacy/" class="text-sm">और जानें</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">अस्वीकार करें</button><button id="cookie-accept" class="btn btn-primary btn-small">स्वीकार करें</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

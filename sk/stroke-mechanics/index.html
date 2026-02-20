@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="sk" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Mechanika plaveckého pohybu: DPS, frekvencia záberov a index záberov</title>
-  <meta name="description" content="Pochopte mechaniku plaveckého pohybu: Distance Per Stroke (DPS), Stroke Rate (SR) a Stroke Index (SI). Naučte sa zlepšovať efektivitu a rýchlosť pomocou technickej">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="mechanika plávania, distance per stroke, frekvencia záberov, index záberov, plavecká technika">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/sk/stroke-mechanics/">
-
-  
-  
-  <meta property="article:published_time" content="2025-10-12T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/sk/stroke-mechanics/">
-  <meta property="og:title" content="Mechanika plaveckého pohybu: DPS, frekvencia záberov a index záberov">
-  <meta property="og:description" content="Pochopte mechaniku plaveckého pohybu: Distance Per Stroke (DPS), Stroke Rate (SR) a Stroke Index (SI). Naučte sa zlepšovať efektivitu a rýchlosť pomocou technickej">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="sk_SK">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/sk/stroke-mechanics/">
-  <meta name="twitter:title" content="Mechanika plaveckého pohybu: DPS, frekvencia záberov a index záberov">
-  <meta name="twitter:description" content="Pochopte mechaniku plaveckého pohybu: Distance Per Stroke (DPS), Stroke Rate (SR) a Stroke Index (SI). Naučte sa zlepšovať efektivitu a rýchlosť pomocou technickej">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/stroke-mechanics/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/stroke-mechanics/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="sk" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Mechanika plaveckého pohybu: DPS, frekvencia záberov a index záberov</title><meta name="description" content="Pochopte mechaniku plaveckého pohybu: Distance Per Stroke (DPS), Stroke Rate (SR) a Stroke Index (SI). Naučte sa zlepšovať efektivitu a rýchlosť pomocou technickej"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="mechanika plávania, distance per stroke, frekvencia záberov, index záberov, plavecká technika"><link rel="canonical" href="https://swim.analyticszone.app/sk/stroke-mechanics/"><meta property="article:published_time" content="2025-10-12T10:00:00Z"><meta property="article:modified_time" content="2026-01-04T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/sk/stroke-mechanics/"><meta property="og:title" content="Mechanika plaveckého pohybu: DPS, frekvencia záberov a index záberov"><meta property="og:description" content="Pochopte mechaniku plaveckého pohybu: Distance Per Stroke (DPS), Stroke Rate (SR) a Stroke Index (SI). Naučte sa zlepšovať efektivitu a rýchlosť pomocou technickej"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="sk_SK"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/sk/stroke-mechanics/"><meta name="twitter:title" content="Mechanika plaveckého pohybu: DPS, frekvencia záberov a index záberov"><meta name="twitter:description" content="Pochopte mechaniku plaveckého pohybu: Distance Per Stroke (DPS), Stroke Rate (SR) a Stroke Index (SI). Naučte sa zlepšovať efektivitu a rýchlosť pomocou technickej"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/stroke-mechanics/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/stroke-mechanics/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/stroke-mechanics/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/stroke-mechanics/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/stroke-mechanics/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/stroke-mechanics/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/stroke-mechanics/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/stroke-mechanics/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/stroke-mechanics/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/stroke-mechanics/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/stroke-mechanics/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/stroke-mechanics/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/stroke-mechanics/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/stroke-mechanics/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/stroke-mechanics/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/stroke-mechanics/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/stroke-mechanics/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/stroke-mechanics/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/stroke-mechanics/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/stroke-mechanics/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/stroke-mechanics/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/stroke-mechanics/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/stroke-mechanics/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/stroke-mechanics/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/stroke-mechanics/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/stroke-mechanics/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/stroke-mechanics/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/stroke-mechanics/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/stroke-mechanics/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/stroke-mechanics/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/stroke-mechanics/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/stroke-mechanics/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/stroke-mechanics/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/stroke-mechanics/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/stroke-mechanics/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/stroke-mechanics/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/stroke-mechanics/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/stroke-mechanics/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/stroke-mechanics/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/stroke-mechanics/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/stroke-mechanics/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/stroke-mechanics/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/stroke-mechanics/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/stroke-mechanics/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/stroke-mechanics/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/stroke-mechanics/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/stroke-mechanics/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/stroke-mechanics/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/stroke-mechanics/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/stroke-mechanics/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/stroke-mechanics/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/stroke-mechanics/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/stroke-mechanics/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/stroke-mechanics/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/stroke-mechanics/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/stroke-mechanics/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "sk"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "Pochopte mechaniku plaveckého pohybu: Distance Per Stroke (DPS), Stroke Rate (SR) a Stroke Index (SI). Naučte sa zlepšovať efektivitu a rýchlosť pomocou technickej",
   "url": "https://swim.analyticszone.app/sk/stroke-mechanics/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/sk/stroke-mechanics/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1342 +449,358 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">Przejdź do treści</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/sk/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/sk/" 
+  </script></head><body><a href="#main-content" class="skip-link">Przejdź do treści</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/sk/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/sk/" 
                                 aria-current="">
                                 Strona Główna
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/sk/getting-started/" class="nav-label">Ucz Się</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/sk/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/sk/getting-started/" class="nav-label">Ucz Się</a><ul class="submenu"><li><a href="/sk/getting-started/" 
                                         aria-current="">
                                         Rozpocznij
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/css/" 
+                                    </a></li><li><a href="/sk/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/training-zones/" 
+                                    </a></li><li><a href="/sk/training-zones/" 
                                         aria-current="">
                                         Strefy Treningowe
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/training-load/" 
+                                    </a></li><li><a href="/sk/training-load/" 
                                         aria-current="">
                                         Obciążenie Treningowe
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/stss-calculator/" 
+                                    </a></li><li><a href="/sk/stss-calculator/" 
                                         aria-current="">
                                         Kalkulator sTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/sk/research/" class="nav-label">Nauka</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/sk/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/sk/research/" class="nav-label">Nauka</a><ul class="submenu"><li><a href="/sk/research/" 
                                         aria-current="">
                                         Badania
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/formulas/" 
+                                    </a></li><li><a href="/sk/formulas/" 
                                         aria-current="">
                                         Formuły
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/efficiency/" 
+                                    </a></li><li><a href="/sk/efficiency/" 
                                         aria-current="">
                                         Wydajność
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/stroke-mechanics/" class="active" 
+                                    </a></li><li><a href="/sk/stroke-mechanics/" class="active" 
                                         aria-current="page">
                                         Mechanika Ruchu
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/bibliography/" 
+                                    </a></li><li><a href="/sk/bibliography/" 
                                         aria-current="">
                                         Bibliografia
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/sk/contact/" 
+                                    </a></li></ul></li><li><a href="/sk/contact/" 
                                 aria-current="">
                                 Kontakt
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Wybierz język">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Wybierz język"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" selected>
+                        </option><option value="sk" selected>
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Przełącz menu"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/sk/">Strona Główna</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/sk/research/">Nauka</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">Mechanika Ruchu</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>Stroke Mechanics</h1>
-        <p class="lead">The Biomechanics of Swimming Speed</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>The Fundamental Equation of Swimming Speed</h2>
-
-        <div class="formula-box formula-highlight">
-            <h3>The Velocity Equation</h3>
-            <div class="formula formula-large">
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Przełącz menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/sk/">Strona Główna</a></li><li><a href="/sk/research/">Nauka</a></li><li><span aria-current="page">Mechanika Ruchu</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Stroke Mechanics</h1><p class="lead">The Biomechanics of Swimming Speed</p></div></section><section class="section"><div class="container container-narrow"><h2>The Fundamental Equation of Swimming Speed</h2><div class="formula-box formula-highlight"><h3>The Velocity Equation</h3><div class="formula formula-large">
                 Velocity = Stroke Rate (SR) × Distance Per Stroke (DPS)
-            </div>
-            <p class="formula-explanation"><strong>Translation:</strong> How fast you swim depends on how <em>often</em> you stroke (SR) multiplied by how <em>far</em> you travel per stroke (DPS).</p>
-        </div>
-
-        <p class="lead">This deceptively simple equation governs all swimming performance. To get faster, you must either:</p>
-        <ul class="lead-list">
-            <li><strong>Increase Stroke Rate</strong> (turnover faster) while maintaining DPS</li>
-            <li><strong>Increase Distance Per Stroke</strong> (travel farther per stroke) while maintaining SR</li>
-            <li><strong>Optimize both</strong> (the ideal approach)</li>
-        </ul>
-
-        <div class="callout callout-warning">
-            <h3>⚖️ The Trade-off</h3>
-            <p>SR and DPS are generally <strong>inversely related</strong>. As one increases, the other tends to decrease. The art of swimming is finding the optimal balance for your event, body type, and current fitness level.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">Stroke Rate (SR)</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>What is Stroke Rate?</h3>
-                <p><strong>Stroke Rate (SR)</strong>, also called <em>cadence</em> or <em>tempo</em>, measures how many complete stroke cycles you perform per minute, expressed in <strong>Strokes Per Minute (SPM)</strong>.</p>
-
-                <div class="formula-box">
-                    <h4>Formula</h4>
-                    <div class="formula">
+            </div><p class="formula-explanation"><strong>Translation:</strong> How fast you swim depends on how <em>often</em> you stroke (SR) multiplied by how <em>far</em> you travel per stroke (DPS).</p></div><p class="lead">This deceptively simple equation governs all swimming performance. To get faster, you must either:</p><ul class="lead-list"><li><strong>Increase Stroke Rate</strong> (turnover faster) while maintaining DPS</li><li><strong>Increase Distance Per Stroke</strong> (travel farther per stroke) while maintaining SR</li><li><strong>Optimize both</strong> (the ideal approach)</li></ul><div class="callout callout-warning"><h3>⚖️ The Trade-off</h3><p>SR and DPS are generally <strong>inversely related</strong>. As one increases, the other tends to decrease. The art of swimming is finding the optimal balance for your event, body type, and current fitness level.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Stroke Rate (SR)</h2><div class="grid grid-2"><div><h3>What is Stroke Rate?</h3><p><strong>Stroke Rate (SR)</strong>, also called <em>cadence</em> or <em>tempo</em>, measures how many complete stroke cycles you perform per minute, expressed in <strong>Strokes Per Minute (SPM)</strong>.</p><div class="formula-box"><h4>Formula</h4><div class="formula">
                         SR = 60 / Cycle Time
-                    </div>
-                    <p>Or:</p>
-                    <div class="formula">
+                    </div><p>Or:</p><div class="formula">
                         SR = (Number of Strokes / Time in seconds) × 60
-                    </div>
-
-                    <div class="example-box mt-md">
-                        <h4>Example:</h4>
-                        <p>If your stroke cycle takes 1 second:</p>
-                        <div class="calculation">
-                            SR = 60 / 1 = <strong>60 SPM</strong>
-                        </div>
-                        <p>If you complete 30 strokes in 25 seconds:</p>
-                        <div class="calculation">
-                            SR = (30 / 25) × 60 = <strong>72 SPM</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="callout callout-info">
-                    <h4>📝 Stroke Counting Note</h4>
-                    <p>For <strong>freestyle/backstroke:</strong> Count individual arm entries (left + right = 2 strokes)</p>
-                    <p>For <strong>breaststroke/butterfly:</strong> Arms move simultaneously (one pull = 1 stroke)</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>Typical Stroke Rates by Event</h3>
-
-                <div class="sr-benchmarks">
-                    <h4>Freestyle Sprint (50m)</h4>
-                    <div class="benchmark-row">
-                        <span class="label">Elite:</span>
-                        <span class="value">120-150 SPM</span>
-                    </div>
-                    <div class="benchmark-row">
-                        <span class="label">Age-Group:</span>
-                        <span class="value">100-120 SPM</span>
-                    </div>
-
-                    <h4>Freestyle 100m</h4>
-                    <div class="benchmark-row">
-                        <span class="label">Elite:</span>
-                        <span class="value">95-110 SPM</span>
-                    </div>
-                    <div class="benchmark-row">
-                        <span class="label">Age-Group:</span>
-                        <span class="value">85-100 SPM</span>
-                    </div>
-
-                    <h4>Middle Distance (200-800m)</h4>
-                    <div class="benchmark-row">
-                        <span class="label">Elite:</span>
-                        <span class="value">70-100 SPM</span>
-                    </div>
-                    <div class="benchmark-row">
-                        <span class="label">Age-Group:</span>
-                        <span class="value">60-85 SPM</span>
-                    </div>
-
-                    <h4>Distance (1500m+ / Open Water)</h4>
-                    <div class="benchmark-row">
-                        <span class="label">Elite:</span>
-                        <span class="value">60-100 SPM</span>
-                    </div>
-                    <div class="benchmark-row">
-                        <span class="label">Age-Group:</span>
-                        <span class="value">50-75 SPM</span>
-                    </div>
-                </div>
-
-                <div class="callout callout-tip">
-                    <h4>🎯 Gender Differences</h4>
-                    <p>Elite male 50m free: ~65-70 SPM<br>
+                    </div><div class="example-box mt-md"><h4>Example:</h4><p>If your stroke cycle takes 1 second:</p><div class="calculation">
+                            SR = 60 / 1 = <strong>60 SPM</strong></div><p>If you complete 30 strokes in 25 seconds:</p><div class="calculation">
+                            SR = (30 / 25) × 60 = <strong>72 SPM</strong></div></div></div><div class="callout callout-info"><h4>📝 Stroke Counting Note</h4><p>For <strong>freestyle/backstroke:</strong> Count individual arm entries (left + right = 2 strokes)</p><p>For <strong>breaststroke/butterfly:</strong> Arms move simultaneously (one pull = 1 stroke)</p></div></div><div><h3>Typical Stroke Rates by Event</h3><div class="sr-benchmarks"><h4>Freestyle Sprint (50m)</h4><div class="benchmark-row"><span class="label">Elite:</span><span class="value">120-150 SPM</span></div><div class="benchmark-row"><span class="label">Age-Group:</span><span class="value">100-120 SPM</span></div><h4>Freestyle 100m</h4><div class="benchmark-row"><span class="label">Elite:</span><span class="value">95-110 SPM</span></div><div class="benchmark-row"><span class="label">Age-Group:</span><span class="value">85-100 SPM</span></div><h4>Middle Distance (200-800m)</h4><div class="benchmark-row"><span class="label">Elite:</span><span class="value">70-100 SPM</span></div><div class="benchmark-row"><span class="label">Age-Group:</span><span class="value">60-85 SPM</span></div><h4>Distance (1500m+ / Open Water)</h4><div class="benchmark-row"><span class="label">Elite:</span><span class="value">60-100 SPM</span></div><div class="benchmark-row"><span class="label">Age-Group:</span><span class="value">50-75 SPM</span></div></div><div class="callout callout-tip"><h4>🎯 Gender Differences</h4><p>Elite male 50m free: ~65-70 SPM<br>
                     Elite female 50m free: ~60-64 SPM<br>
                     Elite male 100m free: ~50-54 SPM<br>
-                    Elite female 100m free: ~53-56 SPM</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Interpreting Stroke Rate</h2>
-
-        <div class="interpretation-grid">
-            <div class="interpretation-item interpretation-low">
-                <h3>🐢 SR Too Low</h3>
-                <p><strong>Characteristics:</strong></p>
-                <ul>
-                    <li>Long glide phases between strokes</li>
-                    <li>Deceleration and momentum loss</li>
-                    <li>"Dead spots" where velocity drops significantly</li>
-                </ul>
-                <p><strong>Result:</strong> Inefficient energy use—you're constantly re-accelerating from reduced speed.</p>
-                <p><strong>Fix:</strong> Reduce glide time, initiate catch earlier, maintain continuous propulsion.</p>
-            </div>
-
-            <div class="interpretation-item interpretation-high">
-                <h3>🏃 SR Too High</h3>
-                <p><strong>Characteristics:</strong></p>
-                <ul>
-                    <li>Short, choppy strokes ("spinning wheels")</li>
-                    <li>Poor catch mechanics—hand slipping past water</li>
-                    <li>Excessive energy expenditure for minimal propulsion</li>
-                </ul>
-                <p><strong>Result:</strong> High effort, low efficiency. Feels busy but not fast.</p>
-                <p><strong>Fix:</strong> Lengthen stroke, improve catch, ensure full extension and push-through.</p>
-            </div>
-
-            <div class="interpretation-item interpretation-optimal">
-                <h3>⚡ Optimal SR</h3>
-                <p><strong>Characteristics:</strong></p>
-                <ul>
-                    <li>Balanced rhythm—continuous but not frantic</li>
-                    <li>Minimal deceleration between strokes</li>
-                    <li>Strong catch and full extension</li>
-                    <li>Sustainable at race pace</li>
-                </ul>
-                <p><strong>Result:</strong> Maximum velocity with minimum wasted energy.</p>
-                <p><strong>How to Find:</strong> Experiment with ±5 SPM adjustments while maintaining pace. Lowest RPE = optimal SR.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">Distance Per Stroke (DPS)</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>What is Distance Per Stroke?</h3>
-                <p><strong>Distance Per Stroke (DPS)</strong>, also called <em>Stroke Length</em>, measures how far you travel with each complete stroke cycle. It's a primary indicator of stroke efficiency and "feel for the water."</p>
-
-                <div class="formula-box">
-                    <h4>Formula</h4>
-                    <div class="formula">
+                    Elite female 100m free: ~53-56 SPM</p></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2>Interpreting Stroke Rate</h2><div class="interpretation-grid"><div class="interpretation-item interpretation-low"><h3>🐢 SR Too Low</h3><p><strong>Characteristics:</strong></p><ul><li>Long glide phases between strokes</li><li>Deceleration and momentum loss</li><li>"Dead spots" where velocity drops significantly</li></ul><p><strong>Result:</strong> Inefficient energy use—you're constantly re-accelerating from reduced speed.</p><p><strong>Fix:</strong> Reduce glide time, initiate catch earlier, maintain continuous propulsion.</p></div><div class="interpretation-item interpretation-high"><h3>🏃 SR Too High</h3><p><strong>Characteristics:</strong></p><ul><li>Short, choppy strokes ("spinning wheels")</li><li>Poor catch mechanics—hand slipping past water</li><li>Excessive energy expenditure for minimal propulsion</li></ul><p><strong>Result:</strong> High effort, low efficiency. Feels busy but not fast.</p><p><strong>Fix:</strong> Lengthen stroke, improve catch, ensure full extension and push-through.</p></div><div class="interpretation-item interpretation-optimal"><h3>⚡ Optimal SR</h3><p><strong>Characteristics:</strong></p><ul><li>Balanced rhythm—continuous but not frantic</li><li>Minimal deceleration between strokes</li><li>Strong catch and full extension</li><li>Sustainable at race pace</li></ul><p><strong>Result:</strong> Maximum velocity with minimum wasted energy.</p><p><strong>How to Find:</strong> Experiment with ±5 SPM adjustments while maintaining pace. Lowest RPE = optimal SR.</p></div></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Distance Per Stroke (DPS)</h2><div class="grid grid-2"><div><h3>What is Distance Per Stroke?</h3><p><strong>Distance Per Stroke (DPS)</strong>, also called <em>Stroke Length</em>, measures how far you travel with each complete stroke cycle. It's a primary indicator of stroke efficiency and "feel for the water."</p><div class="formula-box"><h4>Formula</h4><div class="formula">
                         DPS (m/stroke) = Distance / Number of Strokes
-                    </div>
-                    <p>Or:</p>
-                    <div class="formula">
+                    </div><p>Or:</p><div class="formula">
                         DPS = Velocity / (SR / 60)
-                    </div>
-
-                    <div class="example-box mt-md">
-                        <h4>Example (25m pool, 5m push-off):</h4>
-                        <p>Swim 20m in 12 strokes:</p>
-                        <div class="calculation">
-                            DPS = 20 / 12 = <strong>1.67 m/stroke</strong>
-                        </div>
-
-                        <h4 class="mt-sm">For 100m with 48 strokes (4 × 5m push-offs):</h4>
-                        <div class="calculation">
+                    </div><div class="example-box mt-md"><h4>Example (25m pool, 5m push-off):</h4><p>Swim 20m in 12 strokes:</p><div class="calculation">
+                            DPS = 20 / 12 = <strong>1.67 m/stroke</strong></div><h4 class="mt-sm">For 100m with 48 strokes (4 × 5m push-offs):</h4><div class="calculation">
                             Effective distance = 100 - (4 × 5) = 80m<br>
-                            DPS = 80 / 48 = <strong>1.67 m/stroke</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h3>Typical DPS Values (25m Pool Freestyle)</h3>
-
-                <div class="dps-benchmarks">
-                    <h4>Elite Swimmers</h4>
-                    <div class="benchmark-row">
-                        <span class="label">DPS:</span>
-                        <span class="value">1.8-2.2 m/stroke</span>
-                    </div>
-                    <div class="benchmark-row">
-                        <span class="label">SPL:</span>
-                        <span class="value">11-14 strokes/length</span>
-                    </div>
-
-                    <h4>Competitive Swimmers</h4>
-                    <div class="benchmark-row">
-                        <span class="label">DPS:</span>
-                        <span class="value">1.5-1.8 m/stroke</span>
-                    </div>
-                    <div class="benchmark-row">
-                        <span class="label">SPL:</span>
-                        <span class="value">14-17 strokes/length</span>
-                    </div>
-
-                    <h4>Fitness Swimmers</h4>
-                    <div class="benchmark-row">
-                        <span class="label">DPS:</span>
-                        <span class="value">1.2-1.5 m/stroke</span>
-                    </div>
-                    <div class="benchmark-row">
-                        <span class="label">SPL:</span>
-                        <span class="value">17-21 strokes/length</span>
-                    </div>
-
-                    <h4>Beginners</h4>
-                    <div class="benchmark-row">
-                        <span class="label">DPS:</span>
-                        <span class="value">&lt;1.2 m/stroke</span>
-                    </div>
-                    <div class="benchmark-row">
-                        <span class="label">SPL:</span>
-                        <span class="value">21+ strokes/length</span>
-                    </div>
-                </div>
-
-                <div class="callout callout-info">
-                    <h4>📏 Height Adjustments</h4>
-                    <p><strong>6'0" (183cm):</strong> Target ~12 strokes/25m<br>
-                    <strong>5'6" (168cm):</strong> Target ~13 strokes/25m<br>
-                    <strong>5'0" (152cm):</strong> Target ~14 strokes/25m</p>
-                    <p>Taller swimmers naturally have longer DPS due to arm length and body size.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Factors Affecting DPS</h2>
-
-        <div class="factors-list">
-            <div class="factor-item">
-                <h3>1️⃣ Catch Quality</h3>
-                <p>The ability to "hold" water with your hand and forearm during the pull phase. A strong catch = more propulsion per stroke.</p>
-                <p><strong>Drill:</strong> Catch-up drill, fist swimming, sculling exercises.</p>
-            </div>
-
-            <div class="factor-item">
-                <h3>2️⃣ Stroke Completion</h3>
-                <p>Pushing all the way through to full extension at the hip. Many swimmers release early, losing the final 20% of propulsion.</p>
-                <p><strong>Drill:</strong> Fingertip drag drill, extension focus sets.</p>
-            </div>
-
-            <div class="factor-item">
-                <h3>3️⃣ Body Position & Streamline</h3>
-                <p>Reduced drag = farther travel per stroke. High hips, horizontal body, tight core all minimize resistance.</p>
-                <p><strong>Drill:</strong> Kick on side, streamline push-offs, core stability work.</p>
-            </div>
-
-            <div class="factor-item">
-                <h3>4️⃣ Kick Effectiveness</h3>
-                <p>The kick maintains velocity between arm strokes. Weak kick = deceleration = shorter DPS.</p>
-                <p><strong>Drill:</strong> Vertical kicking, kick with board, kick on side.</p>
-            </div>
-
-            <div class="factor-item">
-                <h3>5️⃣ Breathing Technique</h3>
-                <p>Poor breathing disrupts body position and creates drag. Minimize head movement and rotation.</p>
-                <p><strong>Drill:</strong> Side breathing drill, bilateral breathing, breathing every 3/5 strokes.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>The SR × DPS Balance</h2>
-
-        <p class="lead">Elite swimmers don't just have high SR or high DPS—they have the optimal <em>combination</em> for their event.</p>
-
-        <div class="example-box">
-            <h3>Real-World Example: Caeleb Dressel's 50m Freestyle</h3>
-            <p><strong>World Record Metrics:</strong></p>
-            <ul>
-                <li>Stroke Rate: ~130 strokes/min</li>
-                <li>Distance Per Stroke: ~0.92 yards/stroke (~0.84 m/stroke)</li>
-                <li>Velocity: ~2.3 m/s (world record pace)</li>
-            </ul>
-            <p><strong>Analysis:</strong> Dressel combines exceptionally high SR with good DPS. His power allows him to maintain reasonable stroke length despite extreme turnover.</p>
-        </div>
-
-        <div class="sr-dps-scenarios">
-            <h3>Scenario Analysis</h3>
-
-            <div class="scenario">
-                <h4>🔴 High DPS + Low SR = "Overgliding"</h4>
-                <p><strong>Example:</strong> 1.8 m/stroke × 50 SPM = 1.5 m/s</p>
-                <p><strong>Problem:</strong> Too much glide creates dead spots where velocity drops. Inefficient despite good stroke length.</p>
-            </div>
-
-            <div class="scenario">
-                <h4>🔴 Low DPS + High SR = "Spinning Wheels"</h4>
-                <p><strong>Example:</strong> 1.2 m/stroke × 90 SPM = 1.8 m/s</p>
-                <p><strong>Problem:</strong> High energy cost. Feels busy but lacks propulsion per stroke. Unsustainable.</p>
-            </div>
-
-            <div class="scenario">
-                <h4>🟢 Balanced DPS + SR = Optimal</h4>
-                <p><strong>Example:</strong> 1.6 m/stroke × 70 SPM = 1.87 m/s</p>
-                <p><strong>Result:</strong> Strong propulsion per stroke with sustainable turnover. Efficient and fast.</p>
-            </div>
-        </div>
-
-        <div class="callout callout-success">
-            <h3>✅ Finding Your Optimal Balance</h3>
-            <p><strong>Set:</strong> 6 × 100m @ CSS pace</p>
-            <ul>
-                <li><strong>100 #1-2:</strong> Swim naturally, record SR and DPS</li>
-                <li><strong>100 #3:</strong> Reduce stroke count by 2-3 (increase DPS), try to maintain pace</li>
-                <li><strong>100 #4:</strong> Increase SR by 5 SPM, try to maintain pace</li>
-                <li><strong>100 #5:</strong> Find middle ground—balance SR and DPS</li>
-                <li><strong>100 #6:</strong> Lock in on what felt most efficient</li>
-            </ul>
-            <p>The rep that felt easiest at pace = your optimal SR/DPS combination. Each swimmer has a "critical stroke rate"—the turnover frequency where stroke length begins to collapse. Finding this threshold helps optimize the SR/DPS balance.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Stroke Index: The Power-Efficiency Metric</h2>
-
-        <div class="formula-box">
-            <h3>Formula</h3>
-            <div class="formula">
+                            DPS = 80 / 48 = <strong>1.67 m/stroke</strong></div></div></div></div><div><h3>Typical DPS Values (25m Pool Freestyle)</h3><div class="dps-benchmarks"><h4>Elite Swimmers</h4><div class="benchmark-row"><span class="label">DPS:</span><span class="value">1.8-2.2 m/stroke</span></div><div class="benchmark-row"><span class="label">SPL:</span><span class="value">11-14 strokes/length</span></div><h4>Competitive Swimmers</h4><div class="benchmark-row"><span class="label">DPS:</span><span class="value">1.5-1.8 m/stroke</span></div><div class="benchmark-row"><span class="label">SPL:</span><span class="value">14-17 strokes/length</span></div><h4>Fitness Swimmers</h4><div class="benchmark-row"><span class="label">DPS:</span><span class="value">1.2-1.5 m/stroke</span></div><div class="benchmark-row"><span class="label">SPL:</span><span class="value">17-21 strokes/length</span></div><h4>Beginners</h4><div class="benchmark-row"><span class="label">DPS:</span><span class="value">&lt;1.2 m/stroke</span></div><div class="benchmark-row"><span class="label">SPL:</span><span class="value">21+ strokes/length</span></div></div><div class="callout callout-info"><h4>📏 Height Adjustments</h4><p><strong>6'0" (183cm):</strong> Target ~12 strokes/25m<br><strong>5'6" (168cm):</strong> Target ~13 strokes/25m<br><strong>5'0" (152cm):</strong> Target ~14 strokes/25m</p><p>Taller swimmers naturally have longer DPS due to arm length and body size.</p></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2>Factors Affecting DPS</h2><div class="factors-list"><div class="factor-item"><h3>1️⃣ Catch Quality</h3><p>The ability to "hold" water with your hand and forearm during the pull phase. A strong catch = more propulsion per stroke.</p><p><strong>Drill:</strong> Catch-up drill, fist swimming, sculling exercises.</p></div><div class="factor-item"><h3>2️⃣ Stroke Completion</h3><p>Pushing all the way through to full extension at the hip. Many swimmers release early, losing the final 20% of propulsion.</p><p><strong>Drill:</strong> Fingertip drag drill, extension focus sets.</p></div><div class="factor-item"><h3>3️⃣ Body Position & Streamline</h3><p>Reduced drag = farther travel per stroke. High hips, horizontal body, tight core all minimize resistance.</p><p><strong>Drill:</strong> Kick on side, streamline push-offs, core stability work.</p></div><div class="factor-item"><h3>4️⃣ Kick Effectiveness</h3><p>The kick maintains velocity between arm strokes. Weak kick = deceleration = shorter DPS.</p><p><strong>Drill:</strong> Vertical kicking, kick with board, kick on side.</p></div><div class="factor-item"><h3>5️⃣ Breathing Technique</h3><p>Poor breathing disrupts body position and creates drag. Minimize head movement and rotation.</p><p><strong>Drill:</strong> Side breathing drill, bilateral breathing, breathing every 3/5 strokes.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>The SR × DPS Balance</h2><p class="lead">Elite swimmers don't just have high SR or high DPS—they have the optimal <em>combination</em> for their event.</p><div class="example-box"><h3>Real-World Example: Caeleb Dressel's 50m Freestyle</h3><p><strong>World Record Metrics:</strong></p><ul><li>Stroke Rate: ~130 strokes/min</li><li>Distance Per Stroke: ~0.92 yards/stroke (~0.84 m/stroke)</li><li>Velocity: ~2.3 m/s (world record pace)</li></ul><p><strong>Analysis:</strong> Dressel combines exceptionally high SR with good DPS. His power allows him to maintain reasonable stroke length despite extreme turnover.</p></div><div class="sr-dps-scenarios"><h3>Scenario Analysis</h3><div class="scenario"><h4>🔴 High DPS + Low SR = "Overgliding"</h4><p><strong>Example:</strong> 1.8 m/stroke × 50 SPM = 1.5 m/s</p><p><strong>Problem:</strong> Too much glide creates dead spots where velocity drops. Inefficient despite good stroke length.</p></div><div class="scenario"><h4>🔴 Low DPS + High SR = "Spinning Wheels"</h4><p><strong>Example:</strong> 1.2 m/stroke × 90 SPM = 1.8 m/s</p><p><strong>Problem:</strong> High energy cost. Feels busy but lacks propulsion per stroke. Unsustainable.</p></div><div class="scenario"><h4>🟢 Balanced DPS + SR = Optimal</h4><p><strong>Example:</strong> 1.6 m/stroke × 70 SPM = 1.87 m/s</p><p><strong>Result:</strong> Strong propulsion per stroke with sustainable turnover. Efficient and fast.</p></div></div><div class="callout callout-success"><h3>✅ Finding Your Optimal Balance</h3><p><strong>Set:</strong> 6 × 100m @ CSS pace</p><ul><li><strong>100 #1-2:</strong> Swim naturally, record SR and DPS</li><li><strong>100 #3:</strong> Reduce stroke count by 2-3 (increase DPS), try to maintain pace</li><li><strong>100 #4:</strong> Increase SR by 5 SPM, try to maintain pace</li><li><strong>100 #5:</strong> Find middle ground—balance SR and DPS</li><li><strong>100 #6:</strong> Lock in on what felt most efficient</li></ul><p>The rep that felt easiest at pace = your optimal SR/DPS combination. Each swimmer has a "critical stroke rate"—the turnover frequency where stroke length begins to collapse. Finding this threshold helps optimize the SR/DPS balance.</p></div></div></section><section class="section"><div class="container container-narrow"><h2>Stroke Index: The Power-Efficiency Metric</h2><div class="formula-box"><h3>Formula</h3><div class="formula">
                 Stroke Index (SI) = Velocity (m/s) × DPS (m/stroke)
-            </div>
-            <div class="formula-explanation">
-                <p>Stroke Index combines speed and efficiency into one metric. Higher SI = better performance.</p>
-            </div>
-        </div>
-
-        <div class="example-box">
-            <h4>Example:</h4>
-            <p>Swimmer A: 1.5 m/s velocity × 1.7 m/stroke DPS = <strong>SI of 2.55</strong><br>
-            Swimmer B: 1.4 m/s velocity × 1.9 m/stroke DPS = <strong>SI of 2.66</strong></p>
-            <p><strong>Analysis:</strong> Swimmer B is slightly slower but more efficient. With improved power, they have higher performance potential.</p>
-        </div>
-
-        <div class="callout callout-science">
-            <h3>🔬 Research Foundation</h3>
-            <p>Barbosa et al. (2010) found that <strong>stroke length is a more important predictor of performance than stroke rate</strong> in competitive swimming. However, the relationship isn't linear—there's an optimal point beyond which increasing DPS (by decreasing SR) becomes counterproductive due to lost momentum.</p>
-            <p>The key is <strong>biomechanical efficiency</strong>: maximizing propulsion per stroke while maintaining rhythm that prevents deceleration.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Practical Training Applications</h2>
-
-        <div class="application-workout">
-            <h3>🎯 SR Control Set</h3>
-            <div class="workout-box">
-                <h4>8 × 50m (20s rest)</h4>
-                <p><strong>Use a Tempo Trainer or count strokes/time</strong></p>
-                <ol>
-                    <li>50 #1-2: Baseline SR (swim naturally)</li>
-                    <li>50 #3-4: SR +10 SPM (faster turnover)</li>
-                    <li>50 #5-6: SR -10 SPM (slower, longer strokes)</li>
-                    <li>50 #7-8: Return to baseline, note which felt most efficient</li>
-                </ol>
-                <p><strong>Goal:</strong> Develop awareness of how SR changes affect pace and effort.</p>
-            </div>
-        </div>
-
-        <div class="application-workout">
-            <h3>🎯 DPS Maximization Set</h3>
-            <div class="workout-box">
-                <h4>8 × 25m (15s rest)</h4>
-                <p><strong>Count strokes per length</strong></p>
-                <ol>
-                    <li>25 #1: Establish baseline stroke count</li>
-                    <li>25 #2-4: Reduce by 1 stroke per lap (max DPS)</li>
-                    <li>25 #5: Hold minimum stroke count, increase pace slightly</li>
-                    <li>25 #6-8: Find sustainable reduced stroke count at target pace</li>
-                </ol>
-                <p><strong>Goal:</strong> Improve stroke efficiency—travel farther per stroke without slowing down.</p>
-            </div>
-        </div>
-
-        <div class="application-workout">
-            <h3>🎯 Golf Set (Minimize SWOLF)</h3>
-            <div class="workout-box">
-                <h4>4 × 100m (30s rest)</h4>
-                <p><strong>Goal: Lowest SWOLF score (time + strokes) at CSS pace</strong></p>
-                <p>Experiment with different SR/DPS combinations. The rep with lowest SWOLF = most efficient.</p>
-                <p>Track how SWOLF changes across reps—rising SWOLF indicates fatigue breaking down technique.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow text-center">
-        <h2>Master the Mechanics, Master the Speed</h2>
-        <p class="lead">Velocity = SR × DPS isn't just a formula—it's a framework for understanding and improving every aspect of your swimming technique.</p>
-
-        <p>Track both variables. Experiment with the balance. Find your optimal combination. Speed will follow.</p>
-
-        <div class="mt-xl">
-            <a href="/sk/efficiency/" class="btn btn-secondary">← SWOLF Efficiency</a>
-            <a href="/sk/research/" class="btn btn-primary">Scientific Research →</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+            </div><div class="formula-explanation"><p>Stroke Index combines speed and efficiency into one metric. Higher SI = better performance.</p></div></div><div class="example-box"><h4>Example:</h4><p>Swimmer A: 1.5 m/s velocity × 1.7 m/stroke DPS = <strong>SI of 2.55</strong><br>
+            Swimmer B: 1.4 m/s velocity × 1.9 m/stroke DPS = <strong>SI of 2.66</strong></p><p><strong>Analysis:</strong> Swimmer B is slightly slower but more efficient. With improved power, they have higher performance potential.</p></div><div class="callout callout-science"><h3>🔬 Research Foundation</h3><p>Barbosa et al. (2010) found that <strong>stroke length is a more important predictor of performance than stroke rate</strong> in competitive swimming. However, the relationship isn't linear—there's an optimal point beyond which increasing DPS (by decreasing SR) becomes counterproductive due to lost momentum.</p><p>The key is <strong>biomechanical efficiency</strong>: maximizing propulsion per stroke while maintaining rhythm that prevents deceleration.</p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Practical Training Applications</h2><div class="application-workout"><h3>🎯 SR Control Set</h3><div class="workout-box"><h4>8 × 50m (20s rest)</h4><p><strong>Use a Tempo Trainer or count strokes/time</strong></p><ol><li>50 #1-2: Baseline SR (swim naturally)</li><li>50 #3-4: SR +10 SPM (faster turnover)</li><li>50 #5-6: SR -10 SPM (slower, longer strokes)</li><li>50 #7-8: Return to baseline, note which felt most efficient</li></ol><p><strong>Goal:</strong> Develop awareness of how SR changes affect pace and effort.</p></div></div><div class="application-workout"><h3>🎯 DPS Maximization Set</h3><div class="workout-box"><h4>8 × 25m (15s rest)</h4><p><strong>Count strokes per length</strong></p><ol><li>25 #1: Establish baseline stroke count</li><li>25 #2-4: Reduce by 1 stroke per lap (max DPS)</li><li>25 #5: Hold minimum stroke count, increase pace slightly</li><li>25 #6-8: Find sustainable reduced stroke count at target pace</li></ol><p><strong>Goal:</strong> Improve stroke efficiency—travel farther per stroke without slowing down.</p></div></div><div class="application-workout"><h3>🎯 Golf Set (Minimize SWOLF)</h3><div class="workout-box"><h4>4 × 100m (30s rest)</h4><p><strong>Goal: Lowest SWOLF score (time + strokes) at CSS pace</strong></p><p>Experiment with different SR/DPS combinations. The rep with lowest SWOLF = most efficient.</p><p>Track how SWOLF changes across reps—rising SWOLF indicates fatigue breaking down technique.</p></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>Master the Mechanics, Master the Speed</h2><p class="lead">Velocity = SR × DPS isn't just a formula—it's a framework for understanding and improving every aspect of your swimming technique.</p><p>Track both variables. Experiment with the balance. Find your optimal combination. Speed will follow.</p><div class="mt-xl"><a href="/sk/efficiency/" class="btn btn-secondary">← SWOLF Efficiency</a><a href="/sk/research/" class="btn btn-primary">Scientific Research →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link active"
+                </a><a href="/sk/" class="lang-link active"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. Wszelkie prawa zastrzeżone
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/sk/privacy/">Prywatność</a></li>
-                <li><a href="/sk/terms/">Warunki</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>Ta strona używa plików cookie, aby poprawić Twoje wrażenia.</p>
-            <a href="/sk/privacy/" class="text-sm">Dowiedz się więcej</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Odrzuć</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Akceptuj</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/sk/privacy/">Prywatność</a></li><li><a href="/sk/terms/">Warunki</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Ta strona używa plików cookie, aby poprawić Twoje wrażenia.</p><a href="/sk/privacy/" class="text-sm">Dowiedz się więcej</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Odrzuć</button><button id="cookie-accept" class="btn btn-primary btn-small">Akceptuj</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

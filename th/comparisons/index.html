@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="th" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Swim Analytics เทียบกับ Strava, TrainingPeaks, Final Surge</title>
-  <meta name="description" content="เปรียบเทียบ Swim Analytics กับแอป Strava, TrainingPeaks, Final Surge สำหรับว่ายน้ำ การเปรียบเทียบโดยละเอียดของการทดสอบ CSS การคำนวณ sTSS ฟีเจอร์ PMC ราคา">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="Swim Analytics เทียบกับ Strava, Swim Analytics เทียบกับ TrainingPeaks, แอปว่ายน้ำที่ดีที่สุด, เปรียบเทียบการวิเคราะห์การว่ายน้ำ, เปรียบเทียบแอปติดตามว่ายน้ำ">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/th/comparisons/">
-
-  
-  
-  <meta property="article:published_time" content="2025-10-08T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-14T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/th/comparisons/">
-  <meta property="og:title" content="Swim Analytics เทียบกับ Strava, TrainingPeaks, Final Surge">
-  <meta property="og:description" content="เปรียบเทียบ Swim Analytics กับแอป Strava, TrainingPeaks, Final Surge สำหรับว่ายน้ำ การเปรียบเทียบโดยละเอียดของการทดสอบ CSS การคำนวณ sTSS ฟีเจอร์ PMC ราคา">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="th_TH">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/th/comparisons/">
-  <meta name="twitter:title" content="Swim Analytics เทียบกับ Strava, TrainingPeaks, Final Surge">
-  <meta name="twitter:description" content="เปรียบเทียบ Swim Analytics กับแอป Strava, TrainingPeaks, Final Surge สำหรับว่ายน้ำ การเปรียบเทียบโดยละเอียดของการทดสอบ CSS การคำนวณ sTSS ฟีเจอร์ PMC ราคา">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/comparisons/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/comparisons/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/comparisons/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/comparisons/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/comparisons/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/comparisons/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/comparisons/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/comparisons/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/comparisons/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/comparisons/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/comparisons/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/comparisons/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/comparisons/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/comparisons/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/comparisons/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/comparisons/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/comparisons/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/comparisons/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/comparisons/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/comparisons/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/comparisons/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/comparisons/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/comparisons/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/comparisons/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/comparisons/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/comparisons/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/comparisons/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/comparisons/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/comparisons/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/comparisons/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/comparisons/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/comparisons/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/comparisons/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/comparisons/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/comparisons/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/comparisons/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/comparisons/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/comparisons/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/comparisons/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/comparisons/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/comparisons/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/comparisons/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/comparisons/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/comparisons/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/comparisons/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/comparisons/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/comparisons/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/comparisons/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/comparisons/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/comparisons/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/comparisons/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/comparisons/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/comparisons/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/comparisons/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/comparisons/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/comparisons/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="th" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Swim Analytics เทียบกับ Strava, TrainingPeaks, Final Surge</title><meta name="description" content="เปรียบเทียบการวิเคราะห์การว่ายน้ำกับแอปว่ายน้ำ Strava, TrainingPeaks, Final Surge การเปรียบเทียบโดยละเอียดของการทดสอบ CSS, การคำนวณ sTSS, คุณสมบัติ PMC, ราคา..."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="Swim Analytics เทียบกับ Strava, Swim Analytics เทียบกับ TrainingPeaks, แอปว่ายน้ำที่ดีที่สุด, เปรียบเทียบการวิเคราะห์การว่ายน้ำ, เปรียบเทียบแอปติดตามว่ายน้ำ"><link rel="canonical" href="https://swim.analyticszone.app/th/comparisons/"><meta property="article:published_time" content="2025-10-08T10:00:00Z"><meta property="article:modified_time" content="2026-01-14T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/th/comparisons/"><meta property="og:title" content="Swim Analytics เทียบกับ Strava, TrainingPeaks, Final Surge"><meta property="og:description" content="เปรียบเทียบการวิเคราะห์การว่ายน้ำกับแอปว่ายน้ำ Strava, TrainingPeaks, Final Surge การเปรียบเทียบโดยละเอียดของการทดสอบ CSS, การคำนวณ sTSS, คุณสมบัติ PMC, ราคา..."><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="th_TH"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/th/comparisons/"><meta name="twitter:title" content="Swim Analytics เทียบกับ Strava, TrainingPeaks, Final Surge"><meta name="twitter:description" content="เปรียบเทียบการวิเคราะห์การว่ายน้ำกับแอปว่ายน้ำ Strava, TrainingPeaks, Final Surge การเปรียบเทียบโดยละเอียดของการทดสอบ CSS, การคำนวณ sTSS, คุณสมบัติ PMC, ราคา..."><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/comparisons/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/comparisons/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/comparisons/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/comparisons/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/comparisons/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/comparisons/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/comparisons/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/comparisons/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/comparisons/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/comparisons/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/comparisons/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/comparisons/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/comparisons/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/comparisons/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/comparisons/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/comparisons/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/comparisons/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/comparisons/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/comparisons/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/comparisons/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/comparisons/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/comparisons/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/comparisons/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/comparisons/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/comparisons/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/comparisons/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/comparisons/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/comparisons/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/comparisons/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/comparisons/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/comparisons/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/comparisons/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/comparisons/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/comparisons/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/comparisons/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/comparisons/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/comparisons/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/comparisons/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/comparisons/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/comparisons/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/comparisons/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/comparisons/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/comparisons/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/comparisons/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/comparisons/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/comparisons/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/comparisons/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/comparisons/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/comparisons/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/comparisons/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/comparisons/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/comparisons/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/comparisons/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/comparisons/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/comparisons/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/comparisons/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "th"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,31 +373,20 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Swim Analytics เทียบกับ Strava, TrainingPeaks, Final Surge",
-  "description": "เปรียบเทียบ Swim Analytics กับแอป Strava, TrainingPeaks, Final Surge สำหรับว่ายน้ำ การเปรียบเทียบโดยละเอียดของการทดสอบ CSS การคำนวณ sTSS ฟีเจอร์ PMC ราคา",
+  "description": "เปรียบเทียบการวิเคราะห์การว่ายน้ำกับแอปว่ายน้ำ Strava, TrainingPeaks, Final Surge การเปรียบเทียบโดยละเอียดของการทดสอบ CSS, การคำนวณ sTSS, คุณสมบัติ PMC, ราคา...",
   "url": "https://swim.analyticszone.app/th/comparisons/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Swim Analytics เทียบกับ Strava, TrainingPeaks, Final Surge",
-  "description": "เปรียบเทียบ Swim Analytics กับแอป Strava, TrainingPeaks, Final Surge สำหรับว่ายน้ำ การเปรียบเทียบโดยละเอียดของการทดสอบ CSS การคำนวณ sTSS ฟีเจอร์ PMC ราคา",
+  "description": "เปรียบเทียบการวิเคราะห์การว่ายน้ำกับแอปว่ายน้ำ Strava, TrainingPeaks, Final Surge การเปรียบเทียบโดยละเอียดของการทดสอบ CSS, การคำนวณ sTSS, คุณสมบัติ PMC, ราคา...",
   "author": {
     "@type": "Person",
     "name": "AnalyticsZone Team"
@@ -622,17 +406,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/th/comparisons/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -646,1305 +420,337 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">ข้ามไปยังเนื้อหา</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/th/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/th/" 
+  </script></head><body><a href="#main-content" class="skip-link">ข้ามไปยังเนื้อหา</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/th/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/th/" 
                                 aria-current="">
                                 หน้าแรก
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/th/getting-started/" class="nav-label">เรียนรู้</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/th/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/th/getting-started/" class="nav-label">เรียนรู้</a><ul class="submenu"><li><a href="/th/getting-started/" 
                                         aria-current="">
                                         เริ่มต้น
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/css/" 
+                                    </a></li><li><a href="/th/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/training-zones/" 
+                                    </a></li><li><a href="/th/training-zones/" 
                                         aria-current="">
                                         โซนการฝึก
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/training-load/" 
+                                    </a></li><li><a href="/th/training-load/" 
                                         aria-current="">
                                         ภาระการฝึก
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/stss-calculator/" 
+                                    </a></li><li><a href="/th/stss-calculator/" 
                                         aria-current="">
                                         เครื่องคำนวณ sTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/th/research/" class="nav-label">วิทยาศาสตร์</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/th/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/th/research/" class="nav-label">วิทยาศาสตร์</a><ul class="submenu"><li><a href="/th/research/" 
                                         aria-current="">
                                         การวิจัย
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/formulas/" 
+                                    </a></li><li><a href="/th/formulas/" 
                                         aria-current="">
                                         สูตร
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/efficiency/" 
+                                    </a></li><li><a href="/th/efficiency/" 
                                         aria-current="">
                                         ประสิทธิภาพ
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/stroke-mechanics/" 
+                                    </a></li><li><a href="/th/stroke-mechanics/" 
                                         aria-current="">
                                         กลศาสตร์การว่าย
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/bibliography/" 
+                                    </a></li><li><a href="/th/bibliography/" 
                                         aria-current="">
                                         บรรณานุกรม
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/th/contact/" 
+                                    </a></li></ul></li><li><a href="/th/contact/" 
                                 aria-current="">
                                 ติดต่อ
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="เลือกภาษา">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="เลือกภาษา"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" selected>
+                        </option><option value="th" selected>
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="สลับเมนู"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>Swim Analytics เปรียบเทียบกับแอปว่ายน้ำอื่นๆ - การเปรียบเทียบฟีเจอร์</h1>
-        <p class="lead">เปรียบเทียบ Swim Analytics กับ Strava, TrainingPeaks, Final Surge และแพลตฟอร์มติดตามการว่ายน้ำอื่นๆ</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>ทำไมการว่ายน้ำจึงต้องมีการวิเคราะห์เฉพาะทาง</h2>
-            <p>แอปออกกำลังกายทั่วไปอย่าง Strava และ TrainingPeaks นั้นยอดเยี่ยมสำหรับการสร้างสถิติการปั่นจักรยานและวิ่ง แต่ <strong>การว่ายน้ำต้องการตัวชี้วัดที่แตกต่างออกไป</strong> เช่น ความเร็วขีดจำกัด (CSS), โซนการซ้อมตามความเร็ว และชีวกลศาสตร์ของสโตรก ซึ่งมักไม่ได้รับการรองรับอย่างเหมาะสมในแพลตฟอร์มแบบรวมหลายประเภทกีฬา Swim Analytics สร้างขึ้นมาเพื่อการว่ายน้ำโดยเฉพาะ พร้อมด้วยตัวชี้วัดที่ออกแบบมาสำหรับนักกีฬาในสระและน้ำเปิด</p>
-        </div>
-
-        <h2>ภาพรวมการเปรียบเทียบเบื้องต้น</h2>
-
-        <div class="comparison-table-container">
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>ฟีเจอร์</th>
-                        <th>Swim Analytics</th>
-                        <th>Strava</th>
-                        <th>TrainingPeaks</th>
-                        <th>Final Surge</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>การทดสอบ CSS และโซน</strong></td>
-                        <td class="highlight">✅ รองรับในตัวแอป</td>
-                        <td>❌ ไม่มี</td>
-                        <td>⚠️ ต้องตั้งค่าเอง</td>
-                        <td>⚠️ ต้องตั้งค่าเอง</td>
-                    </tr>
-                    <tr>
-                        <td><strong>การคำนวณ sTSS สำหรับว่ายน้ำ</strong></td>
-                        <td class="highlight">✅ อัตโนมัติ</td>
-                        <td>❌ ไม่มี swimming TSS</td>
-                        <td>✅ มี (ต้องใช้พรีเมียม)</td>
-                        <td>✅ มี</td>
-                    </tr>
-                    <tr>
-                        <td><strong>PMC (CTL/ATL/TSB)</strong></td>
-                        <td class="highlight">✅ รวมให้ฟรี</td>
-                        <td>❌ ไม่มี</td>
-                        <td>✅ เฉพาะพรีเมียม ($20/ด.)</td>
-                        <td>✅ เฉพาะพรีเมียม ($10/ด.)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>โซนการซ้อมตามความเร็ว</strong></td>
-                        <td class="highlight">✅ 7 โซน อิงตาม CSS</td>
-                        <td>❌ โซนแบบทั่วไป</td>
-                        <td>⚠️ ต้องตั้งค่าเอง</td>
-                        <td>⚠️ ต้องตั้งค่าเอง</td>
-                    </tr>
-                    <tr>
-                        <td><strong>การเชื่อมต่อ Apple Watch</strong></td>
-                        <td class="highlight">✅ ผ่าน Apple Health</td>
-                        <td>✅ มีในตัว</td>
-                        <td>✅ ผ่าน Garmin/Wahoo</td>
-                        <td>✅ ผ่านการนำเข้าข้อมูล</td>
-                    </tr>
-                    <tr>
-                        <td><strong>การวิเคราะห์ชีวกลศาสตร์สโตรก</strong></td>
-                        <td class="highlight">✅ DPS, SR, SI</td>
-                        <td>⚠️ พื้นฐาน</td>
-                        <td>⚠️ พื้นฐาน</td>
-                        <td>⚠️ พื้นฐาน</td>
-                    </tr>
-                    <tr>
-                        <td><strong>ฟีเจอร์เวอร์ชันฟรี</strong></td>
-                        <td class="highlight">ทดลองใช้ 7 วัน จากนั้น $3.99/ด.</td>
-                        <td>✅ ฟรี (การวิเคราะห์จำกัด)</td>
-                        <td>⚠️ จำกัดมาก</td>
-                        <td>⚠️ ทดลองใช้ 14 วัน</td>
-                    </tr>
-                    <tr>
-                        <td><strong>การรองรับกีฬาหลายประเภท</strong></td>
-                        <td>❌ เฉพาะว่ายน้ำเท่านั้น</td>
-                        <td class="highlight">✅ ทุกประเภทกีฬา</td>
-                        <td class="highlight">✅ ทุกประเภทกีฬา</td>
-                        <td class="highlight">✅ ทุกประเภทกีฬา</td>
-                    </tr>
-                    <tr>
-                        <td><strong>ฟีเจอร์ด้านโซเชียล</strong></td>
-                        <td>❌ ไม่มี</td>
-                        <td class="highlight">✅ ครบถ้วนมาก</td>
-                        <td>⚠️ เฉพาะโค้ช-นักกีฬา</td>
-                        <td>⚠️ จำกัด</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="mb-xl text-center">Swim Analytics vs Strava</h2>
-
-        <div class="grid grid-2">
-            <div class="card">
-                <h3 class="card-title">สิ่งที่ Strava ทำได้ดี</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>ฟีเจอร์ด้านโซเชียล:</strong> คลับ, เซกเมนต์ (Segments), การให้ Kudos, ฟีดกิจกรรม</li>
-                        <li><strong>ติดตามกีฬาหลายประเภท:</strong> วิ่ง, ปั่นจักรยาน, ว่ายน้ำ, เดินป่า และอื่นๆ</li>
-                        <li><strong>เวอร์ชันฟรี:</strong> ฟีเจอร์ฟรีที่เพียงพอสำหรับนักกีฬาทั่วไป</li>
-                        <li><strong>ฐานผู้ใช้งานมหาศาล:</strong> เชื่อมต่อกับนักกีฬาหลายล้านคนทั่วโลก</li>
-                        <li><strong>การเชื่อมต่อ Apple Watch:</strong> ซิงค์ข้อมูลโดยตรงจากการออกกำลังกาย</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">สิ่งที่ Swim Analytics ทำได้ดีกว่า</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>ตัวชี้วัดเฉพาะการว่ายน้ำ:</strong> ค่า CSS, sTSS, โซนความเร็วที่ออกแบบมาเพื่อการว่ายน้ำในสระ</li>
-                        <li><strong>การวิเคราะห์ภาระการฝึกซ้อม:</strong> มีค่า CTL/ATL/TSB ให้ (Strava ไม่มีส่วนนี้)</li>
-                        <li><strong>คำนวณ sTSS อัตโนมัติ:</strong> ไม่ต้องกรอกข้อมูลเอง คำนวณจากค่า CSS และความเร็ว</li>
-                        <li><strong>ชีวกลศาสตร์สโตรก:</strong> ติดตามค่า DPS, ความถี่สโตรก (Stroke Rate) และดัชนีสโตรก (Stroke Index)</li>
-                        <li><strong>โซนการซ้อม:</strong> มี 7 โซนส่วนบุคคลที่ปรับตามสรีรวิทยาของคุณ</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout mt-xl">
-            <h3>บทสรุป: Swim Analytics vs Strava</h3>
-            <p><strong>ใช้ Strava หาก:</strong> คุณต้องการฟีเจอร์ด้านโซเชียล, ติดตามกีฬาหลายประเภท หรือต้องการการติดตามแบบพื้นฐานฟรี Strava เหมาะอย่างยิ่งสำหรับการบันทึกการออกกำลังกายและเชื่อมต่อกับเพื่อนๆ</p>
-            <p><strong>ใช้ Swim Analytics หาก:</strong> คุณจริงจังกับการพัฒนาสมรรถภาพการว่ายน้ำ และต้องการโซนการซ้อมตามค่า CSS, การคำนวณ sTSS อัตโนมัติ และการบริหารจัดการภาระการฝึกซ้อม (CTL/ATL/TSB) เนื่องจาก Strava ไม่มีการคำนวณ TSS สำหรับการว่ายน้ำหรือมีกราฟ PMC ให้</p>
-            <p class="mb-0"><strong>แนะนำให้ใช้ทั้งคู่:</strong> นักว่ายน้ำหลายคนใช้ Strava เพื่อแชร์กิจกรรมทางโซเชียล และใช้ Swim Analytics เพื่อการติดตามสมรรถภาพเชิงลึก ซึ่งทั้งสองแอปส่งเสริมกันได้เป็นอย่างดี</p>
-        </div>
-    </div>
-</section>
-<section class="section">
-    <div class="container">
-        <h2 class="mb-xl text-center">Swim Analytics vs TrainingPeaks</h2>
-
-        <div class="grid grid-2">
-            <div class="card">
-                <h3 class="card-title">สิ่งที่ TrainingPeaks ทำได้ดี</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>กราฟ PMC ที่ครอบคลุม:</strong> การบันทึกค่า CTL/ATL/TSB ที่เป็นมาตรฐานอุตสาหกรรม</li>
-                        <li><strong>คลังโปรแกรมการฝึก:</strong> มีโปรแกรมการฝึกแบบมีโครงสร้างหลายพันรายการ</li>
-                        <li><strong>การทำงานร่วมกับโค้ช:</strong> เป็นแพลตฟอร์มระดับมืออาชีพสำหรับโค้ชและนักกีฬา</li>
-                        <li><strong>การฝึกกีฬาหลายประเภท:</strong> เน้นการฝึกไตรกีฬาพร้อมครอบคลุมทั้งสามประเภทกีฬา</li>
-                        <li><strong>การวิเคราะห์ขั้นสูง:</strong> โซนพลังงาน (Power) และอัตราการเต้นของหัวใจสำหรับการปั่นจักรยานและวิ่ง</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">สิ่งที่ Swim Analytics ทำได้ดีกว่า</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>ทดสอบ CSS อัตโนมัติ:</strong> มีเครื่องคำนวณ CSS ในตัวพร้อมสร้างโซนการซ้อมทันที</li>
-                        <li><strong>รวมกราฟ PMC สำหรับว่ายน้ำ:</strong> TrainingPeaks ต้องจ่ายพรีเมียม $20/ด. เพื่อใช้ PMC</li>
-                        <li><strong>อินเทอร์เฟซที่ใช้งานง่าย:</strong> Swim Analytics เน้นที่การว่ายน้ำ ทำให้ไม่ซับซ้อนจนเกินไป</li>
-                        <li><strong>ทำงานร่วมกับ Apple Watch ได้โดยตรง:</strong> ซิงค์ผ่าน Apple Health ได้ทันที (ไม่ต้องใช้ Garmin)</li>
-                        <li><strong>ราคาประหยัดกว่า:</strong> $3.99/ด. เทียบกับ $20/ด. สำหรับ TrainingPeaks Premium</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout mt-xl">
-            <h3>บทสรุป: Swim Analytics vs TrainingPeaks</h3>
-            <p><strong>ใช้ TrainingPeaks หาก:</strong> คุณเป็นนักไตรกีฬาที่ฝึกฝนเพื่อการแข่งขันหลายประเภทกีฬา, มีโค้ชที่ใช้งาน TrainingPeaks หรือต้องการโปรแกรมการฝึกซ้อมที่มีโครงสร้างสำหรับการปั่นจักรยานและวิ่ง TrainingPeaks ยอดเยี่ยมสำหรับการฝึกไตรกีฬาแบบครบวงจร</p>
-            <p><strong>ใช้ Swim Analytics หาก:</strong> คุณเป็นนักว่ายน้ำ (ไม่ใช่นักไตรกีฬา) หรือต้องการตัวชี้วัดเฉพาะการว่ายน้ำโดยไม่ต้องจ่ายเงินถึง $20/ด. Swim Analytics มีค่า CTL/ATL/TSB และการคำนวณ sTSS ให้ในราคาที่ถูกกว่า TrainingPeaks Premium ถึง 80%</p>
-            <p class="mb-0"><strong>ความแตกต่างสำคัญ:</strong> TrainingPeaks รองรับกีฬาหลายประเภทพร้อมฟีเจอร์สำหรับโค้ช ส่วน Swim Analytics เน้นการว่ายน้ำโดยเฉพาะ พร้อมรองรับค่า CSS ในตัวและการเข้าถึง PMC ในราคาที่จับต้องได้</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="mb-xl text-center">Swim Analytics vs Final Surge</h2>
-
-        <div class="grid grid-2">
-            <div class="card">
-                <h3 class="card-title">สิ่งที่ Final Surge ทำได้ดี</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>แพลตฟอร์มสำหรับโค้ช:</strong> ออกแบบมาเพื่อความสัมพันธ์ระหว่างโค้ชและนักกีฬา</li>
-                        <li><strong>การรองรับค่า TSS:</strong> มีการคำนวณ TSS สำหรับการว่ายน้ำ</li>
-                        <li><strong>กีฬาหลายประเภท:</strong> ครอบคลุมทั้งว่ายน้ำ, วิ่ง, ปั่นจักรยาน, กระชับกล้ามเนื้อ</li>
-                        <li><strong>การวางแผนการฝึก:</strong> มีตารางฝึกซ้อมแบบปฏิทิน</li>
-                        <li><strong>เครื่องมือสื่อสาร:</strong> มีระบบส่งข้อความหาโค้ชภายในแอป</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">สิ่งที่ Swim Analytics ทำได้ดีกว่า</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>การทดสอบ CSS ในตัว:</strong> มีเครื่องคำนวณในตัว ไม่ต้องกรอกค่าเอง</li>
-                        <li><strong>ค่า sTSS อัตโนมัติ:</strong> คำนวณจากข้อมูล Apple Watch โดยตรง ไม่ต้องบันทึกเอง</li>
-                        <li><strong>เน้นนักกีฬาเฉพาะบุคคล:</strong> ออกแบบมาสำหรับนักว่ายน้ำที่ฝึกซ้อมด้วยตัวเอง</li>
-                        <li><strong>การเชื่อมต่อกับ Apple Watch:</strong> ซิงค์กับแอป Health ได้อย่างไร้รอยต่อ</li>
-                        <li><strong>เน้นเฉพาะการว่ายน้ำ:</strong> ไม่ถูกลดทอนประสิทธิภาพด้วยฟีเจอร์ของกีฬาประเภทอื่น</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout mt-xl">
-            <h3>บทสรุป: Swim Analytics vs Final Surge</h3>
-            <p><strong>ใช้ Final Surge หาก:</strong> คุณมีโค้ชที่ใช้ Final Surge หรือคุณเป็นโค้ชที่ดูแลนักกีฬา Final Surge คือแพลตฟอร์มสำหรับโค้ชเป็นอันดับแรก และเป็นแอปสำหรับนักกีฬาเป็นอันดับรอง</p>
-            <p><strong>ใช้ Swim Analytics หาก:</strong> คุณฝึกซ้อมด้วยตัวเองและต้องการการวิเคราะห์แบบอัตโนมัติ Swim Analytics ไม่ต้องการการบันทึกข้อมูลด้วยมือ ทุกอย่างซิงค์จาก Apple Watch โดยอัตโนมัติ</p>
-            <p class="mb-0"><strong>ความแตกต่างสำคัญ:</strong> Final Surge ยึดโค้ชเป็นศูนย์กลาง ส่วน Swim Analytics ยึดนักกีฬาเป็นศูนย์กลางพร้อมความโดดเด่นด้านระบบอัตโนมัติ</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>สิ่งที่ทำให้ Swim Analytics โดดเด่นไม่เหมือนใคร</h2>
-
-        <div class="unique-features">
-            <div class="feature-item">
-                <h3>1. การรองรับ CSS ระดับชั้นนำ</h3>
-                <p>Swim Analytics เป็น <strong>แอปเดียว</strong> ที่มีเครื่องคำนวณการทดสอบ CSS ในตัว เพียงกรอกเวลา 400 เมตร และ 200 เมตร ของคุณ แล้วรับข้อมูลเหล่านี้ทันที:</p>
-                <ul>
-                    <li>ความเร็ว CSS (เช่น 1:49/100ม.)</li>
-                    <li>7 โซนการซ้อมส่วนบุคคล</li>
-                    <li>การคำนวณ sTSS อัตโนมัติสำหรับทุกการฝึกซ้อม</li>
-                    <li>การวิเคราะห์การฝึกซ้อมตามโซน</li>
-                </ul>
-                <p class="mt-sm"><strong>คู่แข่ง:</strong> มักต้องการให้ตั้งค่าโซนเองหรืออาจไม่รองรับโซนการว่ายน้ำเลย</p>
-            </div>
-
-            <div class="feature-item">
-                <h3>2. ค่า sTSS อัตโนมัติสำหรับการว่ายน้ำ</h3>
-                <p>แอปส่วนใหญ่มักต้องการให้กรอกค่า TSS เองหรือไม่มีการคำนวณ TSS สำหรับการว่ายน้ำเลย แต่ Swim Analytics:</p>
-                <ul>
-                    <li>คำนวณค่า sTSS โดยอัตโนมัติจากทุกการออกกำลังกายด้วย Apple Watch</li>
-                    <li>ใช้ค่า CSS และความเร็วในการซ้อมเพื่อกำหนดค่า Intensity Factor</li>
-                    <li>ไม่ต้องบันทึกข้อมูลด้วยมือ—ตั้งค่า CSS ครั้งเดียวแล้วใช้งานได้ยาวๆ</li>
-                </ul>
-                <p class="mt-sm"><strong>Strava:</strong> ไม่คำนวณ TSS สำหรับว่ายน้ำ <strong>TrainingPeaks:</strong> ต้องจ่ายพรีเมียม $20/ด. <strong>Final Surge:</strong> ต้องกรอกข้อมูลเอง</p>
-            </div>
-
-            <div class="feature-item">
-                <h3>3. การเข้าถึง PMC ในราคาที่จับต้องได้</h3>
-                <p>กราฟบริหารจัดการสมรรถภาพ (CTL/ATL/TSB) เป็น <strong>สิ่งจำเป็นสำหรับการบริหารภาระการฝึกซ้อม</strong> แต่ในแพลตฟอร์มอื่นมักมีราคาสูง:</p>
-                <ul>
-                    <li><strong>Swim Analytics:</strong> รวมให้ในราคา $3.99/ด.</li>
-                    <li><strong>TrainingPeaks:</strong> ต้องใช้พรีเมียม $20/ด. ($240/ปี)</li>
-                    <li><strong>Strava:</strong> ไม่มีให้บริการไม่ว่าจะจ่ายราคาเท่าใด</li>
-                    <li><strong>Final Surge:</strong> พรีเมียม $10/ด. ($120/ปี)</li>
-                </ul>
-                <p class="mt-sm">Swim Analytics ให้บริการค่า CTL/ATL/TSB ใน <strong>ราคาที่ถูกกว่าถึง 80%</strong> เมื่อเทียบกับ TrainingPeaks</p>
-            </div>
-
-            <div class="feature-item">
-                <h3>4. ทำงานร่วมกับ Apple Watch ได้อย่างสมบูรณ์</h3>
-                <p>Swim Analytics ซิงค์ข้อมูลกับ Apple Health โดยตรง ไม่ต้องมีนาฬิกา Garmin:</p>
-                <ul>
-                    <li>ทำงานร่วมกับ Apple Watch ทุกรุ่น (Series 2 ขึ้นไป)</li>
-                    <li>นำเข้าข้อมูลการออกกำลังกายจากแอป Health โดยอัตโนมัติ</li>
-                    <li>แสดงความเร็วแบบรอบต่อรอบ จำนวนสโตรก และค่า SWOLF</li>
-                    <li>ไม่ต้องซื้ออุปกรณ์เสริมใดๆ เพิ่มเติม</li>
-                </ul>
-                <p class="mt-sm"><strong>TrainingPeaks:</strong> มักต้องใช้อุปกรณ์ของ Garmin/Wahoo ($200-800) <strong>Strava:</strong> ทำงานกับ Apple Watch ได้แต่ขาดการวิเคราะห์การว่ายน้ำเชิงลึก</p>
-            </div>
-
-            <div class="feature-item">
-                <h3>5. เน้นเฉพาะการว่ายน้ำเท่านั้น</h3>
-                <p>แอปที่รองรับหลายประเภทกีฬามักพยายามทำทุกอย่างจนบางครั้งทำฟีเจอร์ว่ายน้ำได้ไม่ดีพอ แต่ Swim Analytics <strong>สร้างขึ้นเพื่อการว่ายน้ำโดยเฉพาะ</strong>:</p>
-                <ul>
-                    <li>อินเทอร์เฟซออกแบบตามความต้องการของการซ้อมในสระ</li>
-                    <li>ตัวชี้วัดที่เกี่ยวข้องกับนักว่ายน้ำ (CSS, sTSS, ชีวกลศาสตร์สโตรก)</li>
-                    <li>ไม่มีฟีเจอร์ที่เกินความจำเป็นจากการติดตามการปั่น/วิ่ง/เดินป่า</li>
-                    <li>การอัปเดตเน้นไปที่การพัฒนาการว่ายน้ำโดยเฉพาะ</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>เปรียบเทียบราคา (ค่าใช้จ่ายรายปี)</h2>
-
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h3>Swim Analytics</h3>
-                <div class="price">$47.88/ปี</div>
-                <div class="price-note">($3.99/ด. หลังจบช่วงทดลองใช้ 7 วัน)</div>
-                <ul class="features-included">
-                    <li>✅ การทดสอบ CSS และโซน</li>
-                    <li>✅ การคำนวณ sTSS อัตโนมัติ</li>
-                    <li>✅ กราฟ PMC (CTL/ATL/TSB)</li>
-                    <li>✅ ชีวกลศาสตร์สโตรก (DPS, SR, SI)</li>
-                    <li>✅ การซิงค์ Apple Watch</li>
-                    <li>❌ กีฬาหลายประเภท</li>
-                    <li>❌ ฟีเจอร์ด้านโซเชียล</li>
-                </ul>
-            </div>
-
-            <div class="pricing-card">
-                <h3>Strava</h3>
-                <div class="price">$0 - $80/ปี</div>
-                <div class="price-note">(ฟรี หรือ $8/ด. สำหรับ Summit)</div>
-                <ul class="features-included">
-                    <li>✅ การติดตามการออกกำลังกายพื้นฐาน</li>
-                    <li>✅ ฟีเจอร์ด้านโซเชียล (คลับ, Kudos)</li>
-                    <li>✅ รองรับกีฬาหลายประเภท</li>
-                    <li>❌ ไม่รองรับค่า CSS</li>
-                    <li>❌ ไม่มีค่า TSS สำหรับว่ายน้ำ</li>
-                    <li>❌ ไม่มีกราฟ PMC</li>
-                    <li>❌ ไม่มีระบบวิเคราะห์การว่ายน้ำเชิงลึก</li>
-                </ul>
-            </div>
-
-            <div class="pricing-card">
-                <h3>TrainingPeaks</h3>
-                <div class="price">$240/ปี</div>
-                <div class="price-note">($20/ด. สำหรับพรีเมียม)</div>
-                <ul class="features-included">
-                    <li>✅ กราฟ PMC (CTL/ATL/TSB)</li>
-                    <li>✅ การคำนวณค่า TSS</li>
-                    <li>✅ การวิเคราะห์กีฬาหลายประเภท</li>
-                    <li>✅ แพลตฟอร์มสำหรับโค้ช</li>
-                    <li>⚠️ ไม่มีการทดสอบ CSS ในตัว</li>
-                    <li>⚠️ ต้องตั้งค่าโซนเอง</li>
-                    <li>💰 ราคาสูงกว่า Swim Analytics 5 เท่า</li>
-                </ul>
-            </div>
-
-            <div class="pricing-card">
-                <h3>Final Surge</h3>
-                <div class="price">$120/ปี</div>
-                <div class="price-note">($10/ด. สำหรับพรีเมียม)</div>
-                <ul class="features-included">
-                    <li>✅ การติดตามค่า TSS</li>
-                    <li>✅ เครื่องมือสำหรับโค้ชและนักกีฬา</li>
-                    <li>✅ กีฬาหลายประเภท</li>
-                    <li>⚠️ ต้องกรอกค่า sTSS เอง</li>
-                    <li>⚠️ ไม่มีการทดสอบ CSS ในตัว</li>
-                    <li>💰 ราคาสูงกว่า Swim Analytics 2.5 เท่า</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>💡 การวิเคราะห์ความคุ้มค่า</h3>
-            <p><strong>หากคุณเป็นนักกีฬาที่เน้นว่ายน้ำเท่านั้น:</strong> Swim Analytics มีค่า PMC + sTSS + โซน CSS ให้ในราคาเพียง $48/ปี ในขณะที่ TrainingPeaks คิดราคา $240/ปี สำหรับฟีเจอร์ที่ใกล้เคียงกัน (แพงกว่า 5 เท่า)</p>
-            <p class="mb-0"><strong>หากคุณเป็นนักไตรกีฬา:</strong> แนะนำให้ใช้ TrainingPeaks หรือ Final Surge เพื่อรองรับการติดตามกีฬาหลายประเภท เนื่องจาก Swim Analytics เน้นเฉพาะการว่ายน้ำเท่านั้นและจะไม่ติดตามการปั่นหรือการวิ่ง</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>ใครควรใช้ Swim Analytics?</h2>
-
-        <div class="use-cases">
-            <div class="use-case">
-                <h3>✅ เหมาะอย่างยิ่งสำหรับ:</h3>
-                <ul>
-                    <li><strong>นักว่ายน้ำระดับแข่งขัน:</strong> นักกีฬามาสเตอร์, กลุ่มอายุ (Age-group), นักศึกษามหาวิทยาลัย ที่เน้นสมรรถภาพการว่ายน้ำ</li>
-                    <li><strong>นักกีฬาที่ฝึกซ้อมด้วยตัวเอง:</strong> นักว่ายน้ำที่บริหารจัดการการซ้อมเองโดยไม่มีโค้ช</li>
-                    <li><strong>ผู้ที่เน้นข้อมูลในการฝึก:</strong> นักกีฬาที่ต้องการโซน CSS, ค่า sTSS และตัวชี้วัด PMC</li>
-                    <li><strong>ผู้ใช้งาน Apple Watch:</strong> นักว่ายน้ำที่ใช้ Apple Watch เพื่อติดตามการซ้อมในสระอยู่แล้ว</li>
-                    <li><strong>นักกีฬาที่เน้นความคุ้มค่า:</strong> ผู้ที่ต้องการฟีเจอร์ PMC โดยไม่ต้องจ่ายค่าพรีเมียมเดือนละ $20</li>
-                </ul>
-            </div>
-
-            <div class="use-case">
-                <h3>⚠️ อาจไม่เหมาะสำหรับ:</h3>
-                <ul>
-                    <li><strong>นักไตรกีฬา:</strong> ที่ต้องการติดตามกีฬาหลายประเภทพร้อมกัน (ควรใช้ TrainingPeaks หรือ Final Surge)</li>
-                    <li><strong>นักกีฬาที่เน้นโซเชียล:</strong> ที่ต้องการคลับ, Kudos หรือฟีดกิจกรรม (ควรใช้ Strava)</li>
-                    <li><strong>นักกีฬาที่มีโค้ช:</strong> หากโค้ชใช้งานแพลตฟอร์ม TrainingPeaks หรือ Final Surge อยู่แล้ว</li>
-                    <li><strong>นักว่ายน้ำทั่วไป:</strong> ที่ไม่ได้สนใจค่า CSS, sTSS หรือการวิเคราะห์ภาระการฝึกซ้อม</li>
-                    <li><strong>ผู้ใช้งาน Garmin เท่านั้น:</strong> ที่ไม่มี Apple Watch (Swim Analytics ต้องการระบบ iOS)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>คำถามที่พบบ่อย</h2>
-
-        <div class="faq-item">
-            <h3>ฉันสามารถใช้ Swim Analytics ร่วมกับ Strava หรือ TrainingPeaks ได้หรือไม่?</h3>
-            <p><strong>ได้—นักว่ายน้ำหลายคนใช้ทั้งสองอย่าง</strong> โดยใช้ Swim Analytics เพื่อการวิเคราะห์สมรรถภาพเชิงลึก (CSS, sTSS, PMC) และใช้ Strava เพื่อการแชร์บนโซเชียลหรือบันทึกกีฬาหลายประเภท ทั้งสองแอปทำงานส่งเสริมกันได้เป็นอย่างดี</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Swim Analytics ทำงานร่วมกับนาฬิกา Garmin ได้หรือไม่?</h3>
-            <p><strong>ไม่ได้</strong> Swim Analytics ซิงค์ข้อมูลผ่าน Apple Health ซึ่งต้องใช้ Apple Watch หากคุณใช้ Garmin แนะนำให้พิจารณา TrainingPeaks หรือ Final Surge แทน</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>ทำไม Swim Analytics จึงราคาถูกกว่า TrainingPeaks มาก?</h3>
-            <p>เพราะ Swim Analytics <strong>เน้นที่การว่ายน้ำเพียงอย่างเดียว</strong> ไม่ใช่แอปสำหรับกีฬาหลายประเภท การมุ่งเน้นเฉพาะการว่ายน้ำทำให้เราลดความซับซ้อนและต้นทุนโครงสร้างพื้นฐานในการรองรับอุปกรณ์วัดพลังงานจักรยาน, รูปแบบการวิ่ง, แพลตฟอร์มสำหรับโค้ช และอื่นๆ ทำให้เราสามารถมอบคุณค่าของ PMC + sTSS ได้ในราคาที่ถูกกว่าถึง 80%</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>ถ้าฉันเป็นนักไตรกีฬา ควรใช้ Swim Analytics หรือไม่?</h3>
-            <p><strong>อาจจะไม่ใช่แอปหลักของคุณ</strong> นักไตรกีฬาจะได้รับประโยชน์จากแพลตฟอร์มอย่าง TrainingPeaks ที่ติดตามการปั่น การวิ่ง และการว่ายน้ำไปพร้อมๆ กัน อย่างไรก็ตาม นักไตรกีฬาบางคนเลือกใช้ Swim Analytics เพื่อการวิเคราะห์เฉพาะการว่ายน้ำ (โซน CSS) และใช้ TrainingPeaks เพื่อดูภาระการซ้อมโดยรวม</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Swim Analytics มีเวอร์ชันฟรีหรือไม่?</h3>
-            <p>Swim Analytics มี <strong>ช่วงทดลองใช้ฟรี 7 วัน</strong> พร้อมฟีเจอร์ครบทุกอย่าง (การทดสอบ CSS, sTSS, PMC) หลังจากหมดช่วงทดลองใช้ ค่าบริการจะอยู่ที่ $3.99/ด. โดยไม่มีข้อผูกมัดระยะยาว เราไม่มีเวอร์ชันฟรีถาวร เพราะเราเชื่อว่านักกีฬาควรได้รับการวิเคราะห์ที่ครบถ้วนโดยไม่มีการล็อกฟีเจอร์ไว้</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="mt-xl text-center">
-            <h2>พร้อมที่จะลองใช้ Swim Analytics หรือยัง?</h2>
-            <p class="lead mb-lg">สัมผัสประสบการณ์โซนการซ้อมตามค่า CSS, การคำนวณ sTSS อัตโนมัติ และตัวชี้วัด PMC ในราคาที่จับต้องได้ ออกแบบมาเพื่อนักว่ายน้ำโดยเฉพาะ</p>
-            <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">เริ่มทดลองใช้ฟรี 7 วัน</a>
-            <p class="mt-md text-secondary">ไม่ต้องใช้บัตรเครดิต • ยกเลิกได้ทุกเมื่อ • สำหรับ iOS 16+</p>
-
-            <div class="comparison-links mt-xl">
-                <p class="mb-sm"><strong>เรียนรู้เพิ่มเติม:</strong></p>
-                <a href="/th/css/" class="btn btn-secondary btn-small mr-sm">เครื่องคำนวณ CSS →</a>
-                <a href="/th/training-zones/" class="btn btn-secondary btn-small mr-sm">โซนการซ้อม →</a>
-                <a href="/th/getting-started/" class="btn btn-secondary btn-small">การเริ่มต้นใช้งาน →</a>
-            </div>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="สลับเมนู"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Swim Analytics เปรียบเทียบกับแอปว่ายน้ำอื่นๆ - การเปรียบเทียบฟีเจอร์</h1><p class="lead">เปรียบเทียบ Swim Analytics กับ Strava, TrainingPeaks, Final Surge และแพลตฟอร์มติดตามการว่ายน้ำอื่นๆ</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-info mb-xl"><h2>ทำไมการว่ายน้ำจึงต้องมีการวิเคราะห์เฉพาะทาง</h2><p>แอปออกกำลังกายทั่วไปอย่าง Strava และ TrainingPeaks นั้นยอดเยี่ยมสำหรับการสร้างสถิติการปั่นจักรยานและวิ่ง แต่ <strong>การว่ายน้ำต้องการตัวชี้วัดที่แตกต่างออกไป</strong> เช่น ความเร็วขีดจำกัด (CSS), โซนการซ้อมตามความเร็ว และชีวกลศาสตร์ของสโตรก ซึ่งมักไม่ได้รับการรองรับอย่างเหมาะสมในแพลตฟอร์มแบบรวมหลายประเภทกีฬา Swim Analytics สร้างขึ้นมาเพื่อการว่ายน้ำโดยเฉพาะ พร้อมด้วยตัวชี้วัดที่ออกแบบมาสำหรับนักกีฬาในสระและน้ำเปิด</p></div><h2>ภาพรวมการเปรียบเทียบเบื้องต้น</h2><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>ฟีเจอร์</th><th>Swim Analytics</th><th>Strava</th><th>TrainingPeaks</th><th>Final Surge</th></tr></thead><tbody><tr><td><strong>การทดสอบ CSS และโซน</strong></td><td class="highlight">✅ รองรับในตัวแอป</td><td>❌ ไม่มี</td><td>⚠️ ต้องตั้งค่าเอง</td><td>⚠️ ต้องตั้งค่าเอง</td></tr><tr><td><strong>การคำนวณ sTSS สำหรับว่ายน้ำ</strong></td><td class="highlight">✅ อัตโนมัติ</td><td>❌ ไม่มี swimming TSS</td><td>✅ มี (ต้องใช้พรีเมียม)</td><td>✅ มี</td></tr><tr><td><strong>PMC (CTL/ATL/TSB)</strong></td><td class="highlight">✅ รวมให้ฟรี</td><td>❌ ไม่มี</td><td>✅ เฉพาะพรีเมียม ($20/ด.)</td><td>✅ เฉพาะพรีเมียม ($10/ด.)</td></tr><tr><td><strong>โซนการซ้อมตามความเร็ว</strong></td><td class="highlight">✅ 7 โซน อิงตาม CSS</td><td>❌ โซนแบบทั่วไป</td><td>⚠️ ต้องตั้งค่าเอง</td><td>⚠️ ต้องตั้งค่าเอง</td></tr><tr><td><strong>การเชื่อมต่อ Apple Watch</strong></td><td class="highlight">✅ ผ่าน Apple Health</td><td>✅ มีในตัว</td><td>✅ ผ่าน Garmin/Wahoo</td><td>✅ ผ่านการนำเข้าข้อมูล</td></tr><tr><td><strong>การวิเคราะห์ชีวกลศาสตร์สโตรก</strong></td><td class="highlight">✅ DPS, SR, SI</td><td>⚠️ พื้นฐาน</td><td>⚠️ พื้นฐาน</td><td>⚠️ พื้นฐาน</td></tr><tr><td><strong>ฟีเจอร์เวอร์ชันฟรี</strong></td><td class="highlight">ทดลองใช้ 7 วัน จากนั้น $3.99/ด.</td><td>✅ ฟรี (การวิเคราะห์จำกัด)</td><td>⚠️ จำกัดมาก</td><td>⚠️ ทดลองใช้ 14 วัน</td></tr><tr><td><strong>การรองรับกีฬาหลายประเภท</strong></td><td>❌ เฉพาะว่ายน้ำเท่านั้น</td><td class="highlight">✅ ทุกประเภทกีฬา</td><td class="highlight">✅ ทุกประเภทกีฬา</td><td class="highlight">✅ ทุกประเภทกีฬา</td></tr><tr><td><strong>ฟีเจอร์ด้านโซเชียล</strong></td><td>❌ ไม่มี</td><td class="highlight">✅ ครบถ้วนมาก</td><td>⚠️ เฉพาะโค้ช-นักกีฬา</td><td>⚠️ จำกัด</td></tr></tbody></table></div></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">Swim Analytics vs Strava</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">สิ่งที่ Strava ทำได้ดี</h3><div class="card-content"><ul><li><strong>ฟีเจอร์ด้านโซเชียล:</strong> คลับ, เซกเมนต์ (Segments), การให้ Kudos, ฟีดกิจกรรม</li><li><strong>ติดตามกีฬาหลายประเภท:</strong> วิ่ง, ปั่นจักรยาน, ว่ายน้ำ, เดินป่า และอื่นๆ</li><li><strong>เวอร์ชันฟรี:</strong> ฟีเจอร์ฟรีที่เพียงพอสำหรับนักกีฬาทั่วไป</li><li><strong>ฐานผู้ใช้งานมหาศาล:</strong> เชื่อมต่อกับนักกีฬาหลายล้านคนทั่วโลก</li><li><strong>การเชื่อมต่อ Apple Watch:</strong> ซิงค์ข้อมูลโดยตรงจากการออกกำลังกาย</li></ul></div></div><div class="card"><h3 class="card-title">สิ่งที่ Swim Analytics ทำได้ดีกว่า</h3><div class="card-content"><ul><li><strong>ตัวชี้วัดเฉพาะการว่ายน้ำ:</strong> ค่า CSS, sTSS, โซนความเร็วที่ออกแบบมาเพื่อการว่ายน้ำในสระ</li><li><strong>การวิเคราะห์ภาระการฝึกซ้อม:</strong> มีค่า CTL/ATL/TSB ให้ (Strava ไม่มีส่วนนี้)</li><li><strong>คำนวณ sTSS อัตโนมัติ:</strong> ไม่ต้องกรอกข้อมูลเอง คำนวณจากค่า CSS และความเร็ว</li><li><strong>ชีวกลศาสตร์สโตรก:</strong> ติดตามค่า DPS, ความถี่สโตรก (Stroke Rate) และดัชนีสโตรก (Stroke Index)</li><li><strong>โซนการซ้อม:</strong> มี 7 โซนส่วนบุคคลที่ปรับตามสรีรวิทยาของคุณ</li></ul></div></div></div><div class="callout mt-xl"><h3>บทสรุป: Swim Analytics vs Strava</h3><p><strong>ใช้ Strava หาก:</strong> คุณต้องการฟีเจอร์ด้านโซเชียล, ติดตามกีฬาหลายประเภท หรือต้องการการติดตามแบบพื้นฐานฟรี Strava เหมาะอย่างยิ่งสำหรับการบันทึกการออกกำลังกายและเชื่อมต่อกับเพื่อนๆ</p><p><strong>ใช้ Swim Analytics หาก:</strong> คุณจริงจังกับการพัฒนาสมรรถภาพการว่ายน้ำ และต้องการโซนการซ้อมตามค่า CSS, การคำนวณ sTSS อัตโนมัติ และการบริหารจัดการภาระการฝึกซ้อม (CTL/ATL/TSB) เนื่องจาก Strava ไม่มีการคำนวณ TSS สำหรับการว่ายน้ำหรือมีกราฟ PMC ให้</p><p class="mb-0"><strong>แนะนำให้ใช้ทั้งคู่:</strong> นักว่ายน้ำหลายคนใช้ Strava เพื่อแชร์กิจกรรมทางโซเชียล และใช้ Swim Analytics เพื่อการติดตามสมรรถภาพเชิงลึก ซึ่งทั้งสองแอปส่งเสริมกันได้เป็นอย่างดี</p></div></div></section><section class="section"><div class="container"><h2 class="mb-xl text-center">Swim Analytics vs TrainingPeaks</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">สิ่งที่ TrainingPeaks ทำได้ดี</h3><div class="card-content"><ul><li><strong>กราฟ PMC ที่ครอบคลุม:</strong> การบันทึกค่า CTL/ATL/TSB ที่เป็นมาตรฐานอุตสาหกรรม</li><li><strong>คลังโปรแกรมการฝึก:</strong> มีโปรแกรมการฝึกแบบมีโครงสร้างหลายพันรายการ</li><li><strong>การทำงานร่วมกับโค้ช:</strong> เป็นแพลตฟอร์มระดับมืออาชีพสำหรับโค้ชและนักกีฬา</li><li><strong>การฝึกกีฬาหลายประเภท:</strong> เน้นการฝึกไตรกีฬาพร้อมครอบคลุมทั้งสามประเภทกีฬา</li><li><strong>การวิเคราะห์ขั้นสูง:</strong> โซนพลังงาน (Power) และอัตราการเต้นของหัวใจสำหรับการปั่นจักรยานและวิ่ง</li></ul></div></div><div class="card"><h3 class="card-title">สิ่งที่ Swim Analytics ทำได้ดีกว่า</h3><div class="card-content"><ul><li><strong>ทดสอบ CSS อัตโนมัติ:</strong> มีเครื่องคำนวณ CSS ในตัวพร้อมสร้างโซนการซ้อมทันที</li><li><strong>รวมกราฟ PMC สำหรับว่ายน้ำ:</strong> TrainingPeaks ต้องจ่ายพรีเมียม $20/ด. เพื่อใช้ PMC</li><li><strong>อินเทอร์เฟซที่ใช้งานง่าย:</strong> Swim Analytics เน้นที่การว่ายน้ำ ทำให้ไม่ซับซ้อนจนเกินไป</li><li><strong>ทำงานร่วมกับ Apple Watch ได้โดยตรง:</strong> ซิงค์ผ่าน Apple Health ได้ทันที (ไม่ต้องใช้ Garmin)</li><li><strong>ราคาประหยัดกว่า:</strong> $3.99/ด. เทียบกับ $20/ด. สำหรับ TrainingPeaks Premium</li></ul></div></div></div><div class="callout mt-xl"><h3>บทสรุป: Swim Analytics vs TrainingPeaks</h3><p><strong>ใช้ TrainingPeaks หาก:</strong> คุณเป็นนักไตรกีฬาที่ฝึกฝนเพื่อการแข่งขันหลายประเภทกีฬา, มีโค้ชที่ใช้งาน TrainingPeaks หรือต้องการโปรแกรมการฝึกซ้อมที่มีโครงสร้างสำหรับการปั่นจักรยานและวิ่ง TrainingPeaks ยอดเยี่ยมสำหรับการฝึกไตรกีฬาแบบครบวงจร</p><p><strong>ใช้ Swim Analytics หาก:</strong> คุณเป็นนักว่ายน้ำ (ไม่ใช่นักไตรกีฬา) หรือต้องการตัวชี้วัดเฉพาะการว่ายน้ำโดยไม่ต้องจ่ายเงินถึง $20/ด. Swim Analytics มีค่า CTL/ATL/TSB และการคำนวณ sTSS ให้ในราคาที่ถูกกว่า TrainingPeaks Premium ถึง 80%</p><p class="mb-0"><strong>ความแตกต่างสำคัญ:</strong> TrainingPeaks รองรับกีฬาหลายประเภทพร้อมฟีเจอร์สำหรับโค้ช ส่วน Swim Analytics เน้นการว่ายน้ำโดยเฉพาะ พร้อมรองรับค่า CSS ในตัวและการเข้าถึง PMC ในราคาที่จับต้องได้</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">Swim Analytics vs Final Surge</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">สิ่งที่ Final Surge ทำได้ดี</h3><div class="card-content"><ul><li><strong>แพลตฟอร์มสำหรับโค้ช:</strong> ออกแบบมาเพื่อความสัมพันธ์ระหว่างโค้ชและนักกีฬา</li><li><strong>การรองรับค่า TSS:</strong> มีการคำนวณ TSS สำหรับการว่ายน้ำ</li><li><strong>กีฬาหลายประเภท:</strong> ครอบคลุมทั้งว่ายน้ำ, วิ่ง, ปั่นจักรยาน, กระชับกล้ามเนื้อ</li><li><strong>การวางแผนการฝึก:</strong> มีตารางฝึกซ้อมแบบปฏิทิน</li><li><strong>เครื่องมือสื่อสาร:</strong> มีระบบส่งข้อความหาโค้ชภายในแอป</li></ul></div></div><div class="card"><h3 class="card-title">สิ่งที่ Swim Analytics ทำได้ดีกว่า</h3><div class="card-content"><ul><li><strong>การทดสอบ CSS ในตัว:</strong> มีเครื่องคำนวณในตัว ไม่ต้องกรอกค่าเอง</li><li><strong>ค่า sTSS อัตโนมัติ:</strong> คำนวณจากข้อมูล Apple Watch โดยตรง ไม่ต้องบันทึกเอง</li><li><strong>เน้นนักกีฬาเฉพาะบุคคล:</strong> ออกแบบมาสำหรับนักว่ายน้ำที่ฝึกซ้อมด้วยตัวเอง</li><li><strong>การเชื่อมต่อกับ Apple Watch:</strong> ซิงค์กับแอป Health ได้อย่างไร้รอยต่อ</li><li><strong>เน้นเฉพาะการว่ายน้ำ:</strong> ไม่ถูกลดทอนประสิทธิภาพด้วยฟีเจอร์ของกีฬาประเภทอื่น</li></ul></div></div></div><div class="callout mt-xl"><h3>บทสรุป: Swim Analytics vs Final Surge</h3><p><strong>ใช้ Final Surge หาก:</strong> คุณมีโค้ชที่ใช้ Final Surge หรือคุณเป็นโค้ชที่ดูแลนักกีฬา Final Surge คือแพลตฟอร์มสำหรับโค้ชเป็นอันดับแรก และเป็นแอปสำหรับนักกีฬาเป็นอันดับรอง</p><p><strong>ใช้ Swim Analytics หาก:</strong> คุณฝึกซ้อมด้วยตัวเองและต้องการการวิเคราะห์แบบอัตโนมัติ Swim Analytics ไม่ต้องการการบันทึกข้อมูลด้วยมือ ทุกอย่างซิงค์จาก Apple Watch โดยอัตโนมัติ</p><p class="mb-0"><strong>ความแตกต่างสำคัญ:</strong> Final Surge ยึดโค้ชเป็นศูนย์กลาง ส่วน Swim Analytics ยึดนักกีฬาเป็นศูนย์กลางพร้อมความโดดเด่นด้านระบบอัตโนมัติ</p></div></div></section><section class="section"><div class="container container-narrow"><h2>สิ่งที่ทำให้ Swim Analytics โดดเด่นไม่เหมือนใคร</h2><div class="unique-features"><div class="feature-item"><h3>1. การรองรับ CSS ระดับชั้นนำ</h3><p>Swim Analytics เป็น <strong>แอปเดียว</strong> ที่มีเครื่องคำนวณการทดสอบ CSS ในตัว เพียงกรอกเวลา 400 เมตร และ 200 เมตร ของคุณ แล้วรับข้อมูลเหล่านี้ทันที:</p><ul><li>ความเร็ว CSS (เช่น 1:49/100ม.)</li><li>7 โซนการซ้อมส่วนบุคคล</li><li>การคำนวณ sTSS อัตโนมัติสำหรับทุกการฝึกซ้อม</li><li>การวิเคราะห์การฝึกซ้อมตามโซน</li></ul><p class="mt-sm"><strong>คู่แข่ง:</strong> มักต้องการให้ตั้งค่าโซนเองหรืออาจไม่รองรับโซนการว่ายน้ำเลย</p></div><div class="feature-item"><h3>2. ค่า sTSS อัตโนมัติสำหรับการว่ายน้ำ</h3><p>แอปส่วนใหญ่มักต้องการให้กรอกค่า TSS เองหรือไม่มีการคำนวณ TSS สำหรับการว่ายน้ำเลย แต่ Swim Analytics:</p><ul><li>คำนวณค่า sTSS โดยอัตโนมัติจากทุกการออกกำลังกายด้วย Apple Watch</li><li>ใช้ค่า CSS และความเร็วในการซ้อมเพื่อกำหนดค่า Intensity Factor</li><li>ไม่ต้องบันทึกข้อมูลด้วยมือ—ตั้งค่า CSS ครั้งเดียวแล้วใช้งานได้ยาวๆ</li></ul><p class="mt-sm"><strong>Strava:</strong> ไม่คำนวณ TSS สำหรับว่ายน้ำ <strong>TrainingPeaks:</strong> ต้องจ่ายพรีเมียม $20/ด. <strong>Final Surge:</strong> ต้องกรอกข้อมูลเอง</p></div><div class="feature-item"><h3>3. การเข้าถึง PMC ในราคาที่จับต้องได้</h3><p>กราฟบริหารจัดการสมรรถภาพ (CTL/ATL/TSB) เป็น <strong>สิ่งจำเป็นสำหรับการบริหารภาระการฝึกซ้อม</strong> แต่ในแพลตฟอร์มอื่นมักมีราคาสูง:</p><ul><li><strong>Swim Analytics:</strong> รวมให้ในราคา $3.99/ด.</li><li><strong>TrainingPeaks:</strong> ต้องใช้พรีเมียม $20/ด. ($240/ปี)</li><li><strong>Strava:</strong> ไม่มีให้บริการไม่ว่าจะจ่ายราคาเท่าใด</li><li><strong>Final Surge:</strong> พรีเมียม $10/ด. ($120/ปี)</li></ul><p class="mt-sm">Swim Analytics ให้บริการค่า CTL/ATL/TSB ใน <strong>ราคาที่ถูกกว่าถึง 80%</strong> เมื่อเทียบกับ TrainingPeaks</p></div><div class="feature-item"><h3>4. ทำงานร่วมกับ Apple Watch ได้อย่างสมบูรณ์</h3><p>Swim Analytics ซิงค์ข้อมูลกับ Apple Health โดยตรง ไม่ต้องมีนาฬิกา Garmin:</p><ul><li>ทำงานร่วมกับ Apple Watch ทุกรุ่น (Series 2 ขึ้นไป)</li><li>นำเข้าข้อมูลการออกกำลังกายจากแอป Health โดยอัตโนมัติ</li><li>แสดงความเร็วแบบรอบต่อรอบ จำนวนสโตรก และค่า SWOLF</li><li>ไม่ต้องซื้ออุปกรณ์เสริมใดๆ เพิ่มเติม</li></ul><p class="mt-sm"><strong>TrainingPeaks:</strong> มักต้องใช้อุปกรณ์ของ Garmin/Wahoo ($200-800) <strong>Strava:</strong> ทำงานกับ Apple Watch ได้แต่ขาดการวิเคราะห์การว่ายน้ำเชิงลึก</p></div><div class="feature-item"><h3>5. เน้นเฉพาะการว่ายน้ำเท่านั้น</h3><p>แอปที่รองรับหลายประเภทกีฬามักพยายามทำทุกอย่างจนบางครั้งทำฟีเจอร์ว่ายน้ำได้ไม่ดีพอ แต่ Swim Analytics <strong>สร้างขึ้นเพื่อการว่ายน้ำโดยเฉพาะ</strong>:</p><ul><li>อินเทอร์เฟซออกแบบตามความต้องการของการซ้อมในสระ</li><li>ตัวชี้วัดที่เกี่ยวข้องกับนักว่ายน้ำ (CSS, sTSS, ชีวกลศาสตร์สโตรก)</li><li>ไม่มีฟีเจอร์ที่เกินความจำเป็นจากการติดตามการปั่น/วิ่ง/เดินป่า</li><li>การอัปเดตเน้นไปที่การพัฒนาการว่ายน้ำโดยเฉพาะ</li></ul></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>เปรียบเทียบราคา (ค่าใช้จ่ายรายปี)</h2><div class="pricing-grid"><div class="pricing-card"><h3>Swim Analytics</h3><div class="price">$47.88/ปี</div><div class="price-note">($3.99/ด. หลังจบช่วงทดลองใช้ 7 วัน)</div><ul class="features-included"><li>✅ การทดสอบ CSS และโซน</li><li>✅ การคำนวณ sTSS อัตโนมัติ</li><li>✅ กราฟ PMC (CTL/ATL/TSB)</li><li>✅ ชีวกลศาสตร์สโตรก (DPS, SR, SI)</li><li>✅ การซิงค์ Apple Watch</li><li>❌ กีฬาหลายประเภท</li><li>❌ ฟีเจอร์ด้านโซเชียล</li></ul></div><div class="pricing-card"><h3>Strava</h3><div class="price">$0 - $80/ปี</div><div class="price-note">(ฟรี หรือ $8/ด. สำหรับ Summit)</div><ul class="features-included"><li>✅ การติดตามการออกกำลังกายพื้นฐาน</li><li>✅ ฟีเจอร์ด้านโซเชียล (คลับ, Kudos)</li><li>✅ รองรับกีฬาหลายประเภท</li><li>❌ ไม่รองรับค่า CSS</li><li>❌ ไม่มีค่า TSS สำหรับว่ายน้ำ</li><li>❌ ไม่มีกราฟ PMC</li><li>❌ ไม่มีระบบวิเคราะห์การว่ายน้ำเชิงลึก</li></ul></div><div class="pricing-card"><h3>TrainingPeaks</h3><div class="price">$240/ปี</div><div class="price-note">($20/ด. สำหรับพรีเมียม)</div><ul class="features-included"><li>✅ กราฟ PMC (CTL/ATL/TSB)</li><li>✅ การคำนวณค่า TSS</li><li>✅ การวิเคราะห์กีฬาหลายประเภท</li><li>✅ แพลตฟอร์มสำหรับโค้ช</li><li>⚠️ ไม่มีการทดสอบ CSS ในตัว</li><li>⚠️ ต้องตั้งค่าโซนเอง</li><li>💰 ราคาสูงกว่า Swim Analytics 5 เท่า</li></ul></div><div class="pricing-card"><h3>Final Surge</h3><div class="price">$120/ปี</div><div class="price-note">($10/ด. สำหรับพรีเมียม)</div><ul class="features-included"><li>✅ การติดตามค่า TSS</li><li>✅ เครื่องมือสำหรับโค้ชและนักกีฬา</li><li>✅ กีฬาหลายประเภท</li><li>⚠️ ต้องกรอกค่า sTSS เอง</li><li>⚠️ ไม่มีการทดสอบ CSS ในตัว</li><li>💰 ราคาสูงกว่า Swim Analytics 2.5 เท่า</li></ul></div></div><div class="callout callout-tip mt-xl"><h3>💡 การวิเคราะห์ความคุ้มค่า</h3><p><strong>หากคุณเป็นนักกีฬาที่เน้นว่ายน้ำเท่านั้น:</strong> Swim Analytics มีค่า PMC + sTSS + โซน CSS ให้ในราคาเพียง $48/ปี ในขณะที่ TrainingPeaks คิดราคา $240/ปี สำหรับฟีเจอร์ที่ใกล้เคียงกัน (แพงกว่า 5 เท่า)</p><p class="mb-0"><strong>หากคุณเป็นนักไตรกีฬา:</strong> แนะนำให้ใช้ TrainingPeaks หรือ Final Surge เพื่อรองรับการติดตามกีฬาหลายประเภท เนื่องจาก Swim Analytics เน้นเฉพาะการว่ายน้ำเท่านั้นและจะไม่ติดตามการปั่นหรือการวิ่ง</p></div></div></section><section class="section"><div class="container container-narrow"><h2>ใครควรใช้ Swim Analytics?</h2><div class="use-cases"><div class="use-case"><h3>✅ เหมาะอย่างยิ่งสำหรับ:</h3><ul><li><strong>นักว่ายน้ำระดับแข่งขัน:</strong> นักกีฬามาสเตอร์, กลุ่มอายุ (Age-group), นักศึกษามหาวิทยาลัย ที่เน้นสมรรถภาพการว่ายน้ำ</li><li><strong>นักกีฬาที่ฝึกซ้อมด้วยตัวเอง:</strong> นักว่ายน้ำที่บริหารจัดการการซ้อมเองโดยไม่มีโค้ช</li><li><strong>ผู้ที่เน้นข้อมูลในการฝึก:</strong> นักกีฬาที่ต้องการโซน CSS, ค่า sTSS และตัวชี้วัด PMC</li><li><strong>ผู้ใช้งาน Apple Watch:</strong> นักว่ายน้ำที่ใช้ Apple Watch เพื่อติดตามการซ้อมในสระอยู่แล้ว</li><li><strong>นักกีฬาที่เน้นความคุ้มค่า:</strong> ผู้ที่ต้องการฟีเจอร์ PMC โดยไม่ต้องจ่ายค่าพรีเมียมเดือนละ $20</li></ul></div><div class="use-case"><h3>⚠️ อาจไม่เหมาะสำหรับ:</h3><ul><li><strong>นักไตรกีฬา:</strong> ที่ต้องการติดตามกีฬาหลายประเภทพร้อมกัน (ควรใช้ TrainingPeaks หรือ Final Surge)</li><li><strong>นักกีฬาที่เน้นโซเชียล:</strong> ที่ต้องการคลับ, Kudos หรือฟีดกิจกรรม (ควรใช้ Strava)</li><li><strong>นักกีฬาที่มีโค้ช:</strong> หากโค้ชใช้งานแพลตฟอร์ม TrainingPeaks หรือ Final Surge อยู่แล้ว</li><li><strong>นักว่ายน้ำทั่วไป:</strong> ที่ไม่ได้สนใจค่า CSS, sTSS หรือการวิเคราะห์ภาระการฝึกซ้อม</li><li><strong>ผู้ใช้งาน Garmin เท่านั้น:</strong> ที่ไม่มี Apple Watch (Swim Analytics ต้องการระบบ iOS)</li></ul></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>คำถามที่พบบ่อย</h2><div class="faq-item"><h3>ฉันสามารถใช้ Swim Analytics ร่วมกับ Strava หรือ TrainingPeaks ได้หรือไม่?</h3><p><strong>ได้—นักว่ายน้ำหลายคนใช้ทั้งสองอย่าง</strong> โดยใช้ Swim Analytics เพื่อการวิเคราะห์สมรรถภาพเชิงลึก (CSS, sTSS, PMC) และใช้ Strava เพื่อการแชร์บนโซเชียลหรือบันทึกกีฬาหลายประเภท ทั้งสองแอปทำงานส่งเสริมกันได้เป็นอย่างดี</p></div><div class="faq-item"><h3>Swim Analytics ทำงานร่วมกับนาฬิกา Garmin ได้หรือไม่?</h3><p><strong>ไม่ได้</strong> Swim Analytics ซิงค์ข้อมูลผ่าน Apple Health ซึ่งต้องใช้ Apple Watch หากคุณใช้ Garmin แนะนำให้พิจารณา TrainingPeaks หรือ Final Surge แทน</p></div><div class="faq-item"><h3>ทำไม Swim Analytics จึงราคาถูกกว่า TrainingPeaks มาก?</h3><p>เพราะ Swim Analytics <strong>เน้นที่การว่ายน้ำเพียงอย่างเดียว</strong> ไม่ใช่แอปสำหรับกีฬาหลายประเภท การมุ่งเน้นเฉพาะการว่ายน้ำทำให้เราลดความซับซ้อนและต้นทุนโครงสร้างพื้นฐานในการรองรับอุปกรณ์วัดพลังงานจักรยาน, รูปแบบการวิ่ง, แพลตฟอร์มสำหรับโค้ช และอื่นๆ ทำให้เราสามารถมอบคุณค่าของ PMC + sTSS ได้ในราคาที่ถูกกว่าถึง 80%</p></div><div class="faq-item"><h3>ถ้าฉันเป็นนักไตรกีฬา ควรใช้ Swim Analytics หรือไม่?</h3><p><strong>อาจจะไม่ใช่แอปหลักของคุณ</strong> นักไตรกีฬาจะได้รับประโยชน์จากแพลตฟอร์มอย่าง TrainingPeaks ที่ติดตามการปั่น การวิ่ง และการว่ายน้ำไปพร้อมๆ กัน อย่างไรก็ตาม นักไตรกีฬาบางคนเลือกใช้ Swim Analytics เพื่อการวิเคราะห์เฉพาะการว่ายน้ำ (โซน CSS) และใช้ TrainingPeaks เพื่อดูภาระการซ้อมโดยรวม</p></div><div class="faq-item"><h3>Swim Analytics มีเวอร์ชันฟรีหรือไม่?</h3><p>Swim Analytics มี <strong>ช่วงทดลองใช้ฟรี 7 วัน</strong> พร้อมฟีเจอร์ครบทุกอย่าง (การทดสอบ CSS, sTSS, PMC) หลังจากหมดช่วงทดลองใช้ ค่าบริการจะอยู่ที่ $3.99/ด. โดยไม่มีข้อผูกมัดระยะยาว เราไม่มีเวอร์ชันฟรีถาวร เพราะเราเชื่อว่านักกีฬาควรได้รับการวิเคราะห์ที่ครบถ้วนโดยไม่มีการล็อกฟีเจอร์ไว้</p></div></div></section><section class="section"><div class="container container-narrow"><div class="mt-xl text-center"><h2>พร้อมที่จะลองใช้ Swim Analytics หรือยัง?</h2><p class="lead mb-lg">สัมผัสประสบการณ์โซนการซ้อมตามค่า CSS, การคำนวณ sTSS อัตโนมัติ และตัวชี้วัด PMC ในราคาที่จับต้องได้ ออกแบบมาเพื่อนักว่ายน้ำโดยเฉพาะ</p><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">เริ่มทดลองใช้ฟรี 7 วัน</a><p class="mt-md text-secondary">ไม่ต้องใช้บัตรเครดิต • ยกเลิกได้ทุกเมื่อ • สำหรับ iOS 16+</p><div class="comparison-links mt-xl"><p class="mb-sm"><strong>เรียนรู้เพิ่มเติม:</strong></p><a href="/th/css/" class="btn btn-secondary btn-small mr-sm">เครื่องคำนวณ CSS →</a><a href="/th/training-zones/" class="btn btn-secondary btn-small mr-sm">โซนการซ้อม →</a><a href="/th/getting-started/" class="btn btn-secondary btn-small">การเริ่มต้นใช้งาน →</a></div></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link active"
+                </a><a href="/th/" class="lang-link active"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. สงวนลิขสิทธิ์
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
-                <li><a href="/th/terms/">เงื่อนไข</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>เว็บไซต์นี้ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ</p>
-            <a href="/th/privacy/" class="text-sm">เรียนรู้เพิ่มเติม</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">ปฏิเสธ</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">ยอมรับ</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li><li><a href="/th/terms/">เงื่อนไข</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>เว็บไซต์นี้ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ</p><a href="/th/privacy/" class="text-sm">เรียนรู้เพิ่มเติม</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">ปฏิเสธ</button><button id="cookie-accept" class="btn btn-primary btn-small">ยอมรับ</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

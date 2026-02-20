@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="el" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Υπολογιστής Critical Swim Speed (CSS) - Δωρεάν Τεστ και Ζώνες</title>
-  <meta name="description" content="Δωρεάν υπολογιστής CSS για κολυμβητές. Υπολογίστε την Κρίσιμη Ταχύτητα Κολύμβησης από χρόνους τεστ 400μ και 200μ. Λάβετε εξατομικευμένες ζώνες προπόνησης, ρυθμό">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="critical swim speed, υπολογιστής CSS, ζώνες προπόνησης κολύμβησης, τεστ CSS, ρυθμός κατωφλίου">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/el/css/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/el/css/">
-  <meta property="og:title" content="Υπολογιστής Critical Swim Speed (CSS) - Δωρεάν Τεστ και Ζώνες">
-  <meta property="og:description" content="Δωρεάν υπολογιστής CSS για κολυμβητές. Υπολογίστε την Κρίσιμη Ταχύτητα Κολύμβησης από χρόνους τεστ 400μ και 200μ. Λάβετε εξατομικευμένες ζώνες προπόνησης, ρυθμό">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="el_GR">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/el/css/">
-  <meta name="twitter:title" content="Υπολογιστής Critical Swim Speed (CSS) - Δωρεάν Τεστ και Ζώνες">
-  <meta name="twitter:description" content="Δωρεάν υπολογιστής CSS για κολυμβητές. Υπολογίστε την Κρίσιμη Ταχύτητα Κολύμβησης από χρόνους τεστ 400μ και 200μ. Λάβετε εξατομικευμένες ζώνες προπόνησης, ρυθμό">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/css/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/css/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/css/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/css/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/css/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/css/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/css/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/css/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/css/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/css/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/css/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/css/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/css/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/css/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/css/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/css/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/css/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/css/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/css/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/css/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/css/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/css/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/css/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/css/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/css/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/css/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/css/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/css/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/css/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/css/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/css/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/css/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/css/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/css/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/css/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/css/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/css/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/css/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/css/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/css/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/css/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/css/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/css/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/css/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/css/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/css/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/css/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/css/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/css/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/css/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/css/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/css/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/css/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/css/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/css/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/css/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="el" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Υπολογιστής Critical Swim Speed (CSS) - Δωρεάν Τεστ και Ζώνες</title><meta name="description" content="Δωρεάν υπολογιστής CSS για κολυμβητές. Υπολογίστε την Κρίσιμη Ταχύτητα Κολύμβησης από χρόνους τεστ 400μ και 200μ. Λάβετε εξατομικευμένες ζώνες προπόνησης, ρυθμό"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="critical swim speed, υπολογιστής CSS, ζώνες προπόνησης κολύμβησης, τεστ CSS, ρυθμός κατωφλίου"><link rel="canonical" href="https://swim.analyticszone.app/el/css/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-02-20T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/el/css/"><meta property="og:title" content="Υπολογιστής Critical Swim Speed (CSS) - Δωρεάν Τεστ και Ζώνες"><meta property="og:description" content="Δωρεάν υπολογιστής CSS για κολυμβητές. Υπολογίστε την Κρίσιμη Ταχύτητα Κολύμβησης από χρόνους τεστ 400μ και 200μ. Λάβετε εξατομικευμένες ζώνες προπόνησης, ρυθμό"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="el_GR"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/el/css/"><meta name="twitter:title" content="Υπολογιστής Critical Swim Speed (CSS) - Δωρεάν Τεστ και Ζώνες"><meta name="twitter:description" content="Δωρεάν υπολογιστής CSS για κολυμβητές. Υπολογίστε την Κρίσιμη Ταχύτητα Κολύμβησης από χρόνους τεστ 400μ και 200μ. Λάβετε εξατομικευμένες ζώνες προπόνησης, ρυθμό"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/css/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/css/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/css/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/css/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/css/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/css/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/css/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/css/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/css/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/css/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/css/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/css/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/css/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/css/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/css/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/css/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/css/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/css/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/css/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/css/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/css/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/css/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/css/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/css/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/css/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/css/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/css/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/css/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/css/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/css/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/css/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/css/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/css/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/css/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/css/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/css/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/css/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/css/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/css/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/css/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/css/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/css/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/css/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/css/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/css/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/css/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/css/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/css/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/css/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/css/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/css/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/css/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/css/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/css/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/css/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/css/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "el"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "Δωρεάν υπολογιστής CSS για κολυμβητές. Υπολογίστε την Κρίσιμη Ταχύτητα Κολύμβησης από χρόνους τεστ 400μ και 200μ. Λάβετε εξατομικευμένες ζώνες προπόνησης, ρυθμό",
   "url": "https://swim.analyticszone.app/el/css/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -647,23 +429,13 @@ img[width][height] {
     }
   },
   "datePublished": "2025-01-15",
-  "dateModified": "2026-01-04",
+  "dateModified": "2026-02-20",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://swim.analyticszone.app/el/css/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1384 +449,353 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">Μετάβαση στο περιεχόμενο</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/el/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/el/" 
+  </script></head><body><a href="#main-content" class="skip-link">Μετάβαση στο περιεχόμενο</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/el/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/el/" 
                                 aria-current="">
                                 Αρχική
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/el/getting-started/" class="nav-label">Μάθετε</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/el/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/el/getting-started/" class="nav-label">Μάθετε</a><ul class="submenu"><li><a href="/el/getting-started/" 
                                         aria-current="">
                                         Ξεκινώντας
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/el/css/" class="active" 
+                                    </a></li><li><a href="/el/css/" class="active" 
                                         aria-current="page">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/el/training-zones/" 
+                                    </a></li><li><a href="/el/training-zones/" 
                                         aria-current="">
                                         Ζώνες Εκπαίδευσης
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/el/training-load/" 
+                                    </a></li><li><a href="/el/training-load/" 
                                         aria-current="">
                                         Φορτίο Εκπαίδευσης
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/el/stss-calculator/" 
+                                    </a></li><li><a href="/el/stss-calculator/" 
                                         aria-current="">
                                         Αριθμομηχανή sTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/el/research/" class="nav-label">Επιστήμη</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/el/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/el/research/" class="nav-label">Επιστήμη</a><ul class="submenu"><li><a href="/el/research/" 
                                         aria-current="">
                                         Έρευνα
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/el/formulas/" 
+                                    </a></li><li><a href="/el/formulas/" 
                                         aria-current="">
                                         Τύποι
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/el/efficiency/" 
+                                    </a></li><li><a href="/el/efficiency/" 
                                         aria-current="">
                                         Αποδοτικότητα
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/el/stroke-mechanics/" 
+                                    </a></li><li><a href="/el/stroke-mechanics/" 
                                         aria-current="">
                                         Μηχανική Κολύμβησης
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/el/bibliography/" 
+                                    </a></li><li><a href="/el/bibliography/" 
                                         aria-current="">
                                         Βιβλιογραφία
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/el/contact/" 
+                                    </a></li></ul></li><li><a href="/el/contact/" 
                                 aria-current="">
                                 Επικοινωνία
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Επιλέξτε γλώσσα">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Επιλέξτε γλώσσα"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" selected>
+                        </option><option value="el" selected>
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Εναλλαγή μενού"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/el/">Αρχική</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/el/getting-started/">Μάθετε</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">CSS</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>Κρίσιμη ταχύτητα κολύμβησης (CSS)</h1>
-        <p class="lead">The Foundation of Data-Driven Swim Training</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>Τι είναι η κρίσιμη ταχύτητα κολύμβησης (CSS);</h2>
-            <p><strong>Κρίσιμη ταχύτητα κολύμβησης (CSS)</strong>είναι η θεωρητική μέγιστη ταχύτητα κολύμβησης που μπορείτε να διατηρήσετε χωρίς να εξαντλήσετε τον εαυτό σας. Αντιπροσωπεύει τον αερόβιο ρυθμό κατωφλίου σας, που αντιστοιχεί συνήθως σε 4 mmol/L γαλακτικού αίματος και διατηρείται για περίπου 30 λεπτά. Το CSS υπολογίζεται χρησιμοποιώντας μια χρονομέτρηση 400m και 200m για τον προσδιορισμό εξατομικευμένων ζωνών προπόνησης.</p>
-        </div>
-
-        <p class="lead">Η κρίσιμη ταχύτητα κολύμβησης (CSS) αντιπροσωπεύει τη θεωρητική μέγιστη ταχύτητα κολύμβησης που μπορείτε να διατηρείτε συνεχώς χωρίς να εξαντλείτε τον εαυτό σας. Είναι το αερόβιο όριο του νερού σας—η ένταση όπου η παραγωγή γαλακτικού ισοδυναμεί με την αποβολή γαλακτικού.</p>
-
-        <div class="callout callout-info">
-            <h3>🎯 Φυσιολογική σημασία</h3>
-            <p>Το CSS αντιστοιχεί στενά με:</p>
-            <ul>
-                <li><strong>Κατώφλι γαλακτικού οξέος 2 (LT2)</strong>- Δεύτερο κατώφλι αερισμού</li>
-                <li><strong>Μέγιστη Σταθερή Κατάσταση Γαλακτικού (MLSS)</strong>- Υψηλότερο βιώσιμο επίπεδο γαλακτικού οξέος</li>
-                <li><strong>Λειτουργικός ρυθμός κατωφλίου (FTP)</strong>- Κολύμβηση ισοδύναμη με το ποδήλατο FTP</li>
-                <li><strong>~4 mmol/L γαλακτικού αίματος</strong>- Παραδοσιακός δείκτης OBLA</li>
-            </ul>
-        </div>
-
-        <h3>Γιατί το CSS έχει σημασία</h3>
-        <p>Το CSS είναι το<strong>θεμελιώδης μέτρηση</strong>που ξεκλειδώνει όλη την προηγμένη ανάλυση φορτίου προπόνησης:</p>
-        <ul>
-            <li><strong>Περιοχές Εκπαίδευσης:</strong>Προσαρμόστε τις ζώνες έντασης σύμφωνα με τη φυσιολογία σας</li>
-            <li><strong>Υπολογισμός sTSS:</strong>Επιτρέπει την ακριβή ποσοτικοποίηση του Δείκτη Προπονητικού Στρες</li>
-            <li><strong>CTL/ATL/TSB:</strong>Απαιτείται για μετρήσεις γραφήματος διαχείρισης απόδοσης</li>
-            <li><strong>Παρακολούθηση προόδου:</strong>Αντικειμενικό μέτρο βελτίωσης της αερόβιας φυσικής κατάστασης</li>
-        </ul>
-
-        <div class="warning-box">
-            <strong>⚠️ Κρίσιμη εξάρτηση:</strong> Sin una prueba de CSS válida, las métricas avanzadas de carga de entrenamiento (sTSS, CTL, ATL, TSB) no se pueden calcular. Un CSS inexacto corromperá todo el análisis de entrenamiento posterior.
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">Πρωτόκολλο δοκιμής CSS</h2>
-        <div class="grid grid-2">
-            <div class="protocol-card">
-                <h3>📋 Τυπικό πρωτόκολλο</h3>
-                <ol class="protocol-steps">
-                    <li>
-                        <strong>Θέρμανση</strong>
-                        <p>300-800 μέτρα εύκολης κολύμβησης, τεχνικές ασκήσεις και προοδευτικές επιταχύνσεις για προετοιμασία για μέγιστη προσπάθεια.</p>
-                    </li>
-                    <li>
-                        <strong>Χρονομέτρηση 400μ</strong>
-                        <p>Μέγιστη συνεχόμενη προσπάθεια από την έξοδο τοίχου (χωρίς κάρφωμα). Καταγράφει χρόνο στο δεύτερο. Στόχος: τα πιο γρήγορα 400 μέτρα που μπορείτε να διατηρήσετε.</p>
-                    </li>
-                    <li>
-                        <strong>Πλήρης Ανάκτηση</strong>
-                        <p><span class="highlight-text">5-10 λεπτά</span>απαλό κολύμπι ή πλήρη ανάπαυση. Αυτό είναι ΚΡΙΣΙΜΟ για ακριβή αποτελέσματα.</p>
-                    </li>
-                    <li>
-                        <strong>Χρονομέτρηση 200μ</strong>
-                        <p>Μέγιστη προσπάθεια από την έξοδο τοίχου. Καταγράφει το χρόνο με ακρίβεια. Αυτό θα πρέπει να είναι ταχύτερο ανά 100 μέτρα από 400 μέτρα.</p>
-                    </li>
-                </ol>
-            </div>
-
-            <div class="protocol-card">
-                <h3>⚠️ Συνήθη σφάλματα</h3>
-                <div class="mistake-list">
-                    <div class="mistake-item">
-                        <h4>Ανεπαρκής ανάκτηση</h4>
-                        <p><strong>Πρόβλημα:</strong>Η κόπωση επιβραδύνει τεχνητά το χρόνο 200μ</p>
-                        <p><strong>Αποτέλεσμα:</strong>Το υπολογισμένο CSS γίνεται<em>πιο γρήγορα από την πραγματικότητα</em>, οδηγώντας σε υπερεκπαιδευμένες περιοχές</p>
-                        <p><strong>Διάλυμα:</strong>Ξεκουραστείτε μέχρι το HR να πέσει κάτω από τις 120 bpm ή μέχρι να ανακτήσει πλήρως η αναπνοή</p>
-                    </div>
-
-                    <div class="mistake-item">
-                        <h4>Κακός ρυθμός στα 400μ</h4>
-                        <p><strong>Πρόβλημα:</strong>Η πολύ γρήγορη εκκίνηση προκαλεί δραματική επιβράδυνση</p>
-                        <p><strong>Αποτέλεσμα:</strong>Ο χρόνος των 400 μέτρων δεν αντικατοπτρίζει τον πραγματικό βιώσιμο ρυθμό</p>
-                        <p><strong>Διάλυμα:</strong>Επιδιώξτε ομοιόμορφα ή αρνητικά σπασίματα (δεύτερα 200 μέτρα ≤ πρώτα 200 μέτρα)</p>
-                    </div>
-
-                    <div class="mistake-item">
-                        <h4>Χρησιμοποιήστε τις εξόδους καρφώματος</h4>
-                        <p><strong>Πρόβλημα:</strong>Προσθέτει προβάδισμα ~0,5-1,5 δευτερολέπτων, παραμορφώνοντας τους υπολογισμούς</p>
-                        <p><strong>Διάλυμα:</strong>Χρησιμοποιείτε πάντα πρίζα τοίχου</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>🔄 Συχνότητα επαναξιολόγησης</h3>
-            <p>Επαναξιολογήστε το CSS κάθε<strong>6-8 εβδομάδες</strong>να ενημερώσετε τις ζώνες προπόνησης καθώς βελτιώνεται η φυσική κατάσταση. Οι ζώνες σας θα πρέπει να γίνονται προοδευτικά πιο γρήγορες καθώς προσαρμόζεστε στην προπόνηση.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Τύπος Υπολογισμού CSS</h2>
-
-        <div class="formula-box">
-            <h3>Τύπος</h3>
-            <div class="formula">
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Εναλλαγή μενού"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/el/">Αρχική</a></li><li><a href="/el/getting-started/">Μάθετε</a></li><li><span aria-current="page">CSS</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Κρίσιμη ταχύτητα κολύμβησης (CSS)</h1><p class="lead">The Foundation of Data-Driven Swim Training</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-info mb-xl"><h2>Τι είναι η κρίσιμη ταχύτητα κολύμβησης (CSS);</h2><p><strong>Κρίσιμη ταχύτητα κολύμβησης (CSS)</strong>είναι η θεωρητική μέγιστη ταχύτητα κολύμβησης που μπορείτε να διατηρήσετε χωρίς να εξαντλήσετε τον εαυτό σας. Αντιπροσωπεύει τον αερόβιο ρυθμό κατωφλίου σας, που αντιστοιχεί συνήθως σε 4 mmol/L γαλακτικού αίματος και διατηρείται για περίπου 30 λεπτά. Το CSS υπολογίζεται χρησιμοποιώντας μια χρονομέτρηση 400m και 200m για τον προσδιορισμό εξατομικευμένων ζωνών προπόνησης.</p></div><p class="lead">Η κρίσιμη ταχύτητα κολύμβησης (CSS) αντιπροσωπεύει τη θεωρητική μέγιστη ταχύτητα κολύμβησης που μπορείτε να διατηρείτε συνεχώς χωρίς να εξαντλείτε τον εαυτό σας. Είναι το αερόβιο όριο του νερού σας—η ένταση όπου η παραγωγή γαλακτικού ισοδυναμεί με την αποβολή γαλακτικού.</p><div class="callout callout-info"><h3>🎯 Φυσιολογική σημασία</h3><p>Το CSS αντιστοιχεί στενά με:</p><ul><li><strong>Κατώφλι γαλακτικού οξέος 2 (LT2)</strong>- Δεύτερο κατώφλι αερισμού</li><li><strong>Μέγιστη Σταθερή Κατάσταση Γαλακτικού (MLSS)</strong>- Υψηλότερο βιώσιμο επίπεδο γαλακτικού οξέος</li><li><strong>Λειτουργικός ρυθμός κατωφλίου (FTP)</strong>- Κολύμβηση ισοδύναμη με το ποδήλατο FTP</li><li><strong>~4 mmol/L γαλακτικού αίματος</strong>- Παραδοσιακός δείκτης OBLA</li></ul></div><h3>Γιατί το CSS έχει σημασία</h3><p>Το CSS είναι το<strong>θεμελιώδης μέτρηση</strong>που ξεκλειδώνει όλη την προηγμένη ανάλυση φορτίου προπόνησης:</p><ul><li><strong>Περιοχές Εκπαίδευσης:</strong>Προσαρμόστε τις ζώνες έντασης σύμφωνα με τη φυσιολογία σας</li><li><strong>Υπολογισμός sTSS:</strong>Επιτρέπει την ακριβή ποσοτικοποίηση του Δείκτη Προπονητικού Στρες</li><li><strong>CTL/ATL/TSB:</strong>Απαιτείται για μετρήσεις γραφήματος διαχείρισης απόδοσης</li><li><strong>Παρακολούθηση προόδου:</strong>Αντικειμενικό μέτρο βελτίωσης της αερόβιας φυσικής κατάστασης</li></ul><div class="warning-box"><strong>⚠️ Κρίσιμη εξάρτηση:</strong> Sin una prueba de CSS válida, las métricas avanzadas de carga de entrenamiento (sTSS, CTL, ATL, TSB) no se pueden calcular. Un CSS inexacto corromperá todo el análisis de entrenamiento posterior.
+        </div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Πώς να υπολογίσετε το CSS σε 4 εύκολα βήματα</h2><div class="grid grid-2"><div class="protocol-card"><h3>📋 Τυπικό πρωτόκολλο</h3><ol class="protocol-steps"><li><strong>Θέρμανση</strong><p>300-800 μέτρα εύκολης κολύμβησης, τεχνικές ασκήσεις και προοδευτικές επιταχύνσεις για προετοιμασία για μέγιστη προσπάθεια.</p></li><li><strong>Χρονομέτρηση 400μ</strong><p>Μέγιστη συνεχόμενη προσπάθεια από την έξοδο τοίχου (χωρίς κάρφωμα). Καταγράφει χρόνο στο δεύτερο. Στόχος: τα πιο γρήγορα 400 μέτρα που μπορείτε να διατηρήσετε.</p></li><li><strong>Πλήρης Ανάκτηση</strong><p><span class="highlight-text">5-10 λεπτά</span>απαλό κολύμπι ή πλήρη ανάπαυση. Αυτό είναι ΚΡΙΣΙΜΟ για ακριβή αποτελέσματα.</p></li><li><strong>Χρονομέτρηση 200μ</strong><p>Μέγιστη προσπάθεια από την έξοδο τοίχου. Καταγράφει το χρόνο με ακρίβεια. Αυτό θα πρέπει να είναι ταχύτερο ανά 100 μέτρα από 400 μέτρα.</p></li></ol></div><div class="protocol-card"><h3>⚠️ Συνήθη σφάλματα</h3><div class="mistake-list"><div class="mistake-item"><h4>Ανεπαρκής ανάκτηση</h4><p><strong>Πρόβλημα:</strong>Η κόπωση επιβραδύνει τεχνητά το χρόνο 200μ</p><p><strong>Αποτέλεσμα:</strong>Το υπολογισμένο CSS γίνεται<em>πιο γρήγορα από την πραγματικότητα</em>, οδηγώντας σε υπερεκπαιδευμένες περιοχές</p><p><strong>Διάλυμα:</strong>Ξεκουραστείτε μέχρι το HR να πέσει κάτω από τις 120 bpm ή μέχρι να ανακτήσει πλήρως η αναπνοή</p></div><div class="mistake-item"><h4>Κακός ρυθμός στα 400μ</h4><p><strong>Πρόβλημα:</strong>Η πολύ γρήγορη εκκίνηση προκαλεί δραματική επιβράδυνση</p><p><strong>Αποτέλεσμα:</strong>Ο χρόνος των 400 μέτρων δεν αντικατοπτρίζει τον πραγματικό βιώσιμο ρυθμό</p><p><strong>Διάλυμα:</strong>Επιδιώξτε ομοιόμορφα ή αρνητικά σπασίματα (δεύτερα 200 μέτρα ≤ πρώτα 200 μέτρα)</p></div><div class="mistake-item"><h4>Χρησιμοποιήστε τις εξόδους καρφώματος</h4><p><strong>Πρόβλημα:</strong>Προσθέτει προβάδισμα ~0,5-1,5 δευτερολέπτων, παραμορφώνοντας τους υπολογισμούς</p><p><strong>Διάλυμα:</strong>Χρησιμοποιείτε πάντα πρίζα τοίχου</p></div></div></div></div><div class="callout callout-tip mt-xl"><h3>🔄 Συχνότητα επαναξιολόγησης</h3><p>Επαναξιολογήστε το CSS κάθε<strong>6-8 εβδομάδες</strong>να ενημερώσετε τις ζώνες προπόνησης καθώς βελτιώνεται η φυσική κατάσταση. Οι ζώνες σας θα πρέπει να γίνονται προοδευτικά πιο γρήγορες καθώς προσαρμόζεστε στην προπόνηση.</p></div></div></section><section class="section"><div class="container container-narrow"><h2>Τύπος Υπολογισμού CSS</h2><div class="formula-box"><h3>Τύπος</h3><div class="formula">
                 CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
-            </div>
-            <div class="formula-explanation">
-                <p>Οπου:</p>
-                <ul>
-                    <li>D1 = 200 μέτρα</li>
-                    <li>D2 = 400 μέτρα</li>
-                    <li>T1 = Χρόνος για 200 μέτρα (σε δευτερόλεπτα)</li>
-                    <li>T2 = Χρόνος για 400 μέτρα (σε δευτερόλεπτα)</li>
-                </ul>
-            </div>
-
-            <h3 class="mt-lg">Απλοποιημένο για ρυθμό ανά 100μ</h3>
-            <div class="formula">
+            </div><div class="formula-explanation"><p>Οπου:</p><ul><li>D1 = 200 μέτρα</li><li>D2 = 400 μέτρα</li><li>T1 = Χρόνος για 200 μέτρα (σε δευτερόλεπτα)</li><li>T2 = Χρόνος για 400 μέτρα (σε δευτερόλεπτα)</li></ul></div><h3 class="mt-lg">Απλοποιημένο για ρυθμό ανά 100μ</h3><div class="formula">
                 Ritmo CSS/100m (segundos) = (T₄₀₀ - T₂₀₀) / 2
-            </div>
-        </div>
-
-        <h3>Δουλευμένο Παράδειγμα</h3>
-        <div class="example-box">
-            <h4>Αποτελέσματα δοκιμής:</h4>
-            <ul>
-                <li>Χρόνος 400μ:<strong>6:08</strong>(368 δευτερόλεπτα)</li>
-                <li>Χρόνος 200μ:<strong>2:30</strong>(150 δευτερόλεπτα)</li>
-            </ul>
-
-            <h4>Βήμα 1: Υπολογίστε το CSS σε m/s</h4>
-            <div class="calculation">
-                CSS = (400 - 200) / (368 - 150)<br>
-                CSS = 200 / 218<br>
-                CSS = <strong>0,917 m/s</strong>
-            </div>
-
-            <h4>Βήμα 2: Μετατροπή σε ρυθμό ανά 100 μέτρα</h4>
-            <div class="calculation">
-                Ritmo = 100 / 0.917<br>
-                Ritmo = 109 segundos<br>
-                Ritmo = <strong>1:49 ανά 100μ</strong>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">Δωρεάν CSS αριθμομηχανή</h2>
-        <p class="lead">Υπολογίστε την Κρίσιμη Ταχύτητα Κολύμβησης και τις εξατομικευμένες ζώνες προπόνησης αμέσως</p>
-
-        <div class="css-calculator">
-            <form id="cssCalculatorForm">
-                <div class="calculator-inputs">
-                    <div class="form-group">
-                        <label for="time400" class="form-label">Χρόνος 400m (mm:ss)</label>
-                        <input
-                            type="text"
-                            id="time400"
-                            class="form-input"
-                            placeholder="6:08"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="time400-help"
-                        />
-                        <small id="time400-help" class="form-help">Μορφή: λεπτά: δευτερόλεπτα (π.χ. 6:08)</small>
-                        <div class="form-error" id="time400-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="time200" class="form-label">Χρόνος 200m (mm:ss)</label>
-                        <input
-                            type="text"
-                            id="time200"
-                            class="form-input"
-                            placeholder="2:30"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="time200-help"
-                        />
-                        <small id="time200-help" class="form-help">Μορφή: λεπτά: δευτερόλεπτα (π.χ. 2:30)</small>
-                        <div class="form-error" id="time200-error"></div>
-                    </div>
-                    <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateBtn">Υπολογίστε το CSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetBtn">Καθαρός</button>
-                    </div>
-                </div>
-            </form>
-
-            <div class="calculator-results hidden" id="cssResults" aria-live="polite">
-                <h3>Τα αποτελέσματά σας</h3>
-                <div class="results-summary">
-                    <div class="result-item">
-                        <div class="result-label">Κρίσιμη ταχύτητα κολύμβησης</div>
-                        <div class="css-result-value" id="cssValue">--</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-label">Ρυθμός CSS ανά 100μ</div>
-                        <div class="css-result-value" id="cssPace">--</div>
-                    </div>
-                </div>
-
-                <div class="zones-result">
-                    <h4>Οι Εξατομικευμένες Εκπαιδευτικές Ζώνες σας</h4>
-                    <p class="mb-md text-secondary">
+            </div></div><h3>Δουλευμένο Παράδειγμα</h3><div class="example-box"><h4>Αποτελέσματα δοκιμής:</h4><ul><li>Χρόνος 400μ:<strong>6:08</strong>(368 δευτερόλεπτα)</li><li>Χρόνος 200μ:<strong>2:30</strong>(150 δευτερόλεπτα)</li></ul><h4>Βήμα 1: Υπολογίστε το CSS σε m/s</h4><div class="calculation">
+                CSS = (400 - 200) / (368 - 150)<br/>
+                CSS = 200 / 218<br/>
+                CSS = <strong>0,917 m/s</strong></div><h4>Βήμα 2: Μετατροπή σε ρυθμό ανά 100 μέτρα</h4><div class="calculation">
+                Ritmo = 100 / 0.917<br/>
+                Ritmo = 109 segundos<br/>
+                Ritmo = <strong>1:49 ανά 100μ</strong></div></div><h2 class="mt-3xl">Δωρεάν CSS αριθμομηχανή</h2><p class="lead">Υπολογίστε την Κρίσιμη Ταχύτητα Κολύμβησης και τις εξατομικευμένες ζώνες προπόνησης αμέσως</p><div class="css-calculator"><form id="cssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label class="form-label" for="time400">Χρόνος 400m (mm:ss)</label><input aria-describedby="time400-help" aria-required="true" class="form-input" id="time400" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="6:08" type="text"/><small class="form-help" id="time400-help">Μορφή: λεπτά: δευτερόλεπτα (π.χ. 6:08)</small><div class="form-error" id="time400-error"></div></div><div class="form-group"><label class="form-label" for="time200">Χρόνος 200m (mm:ss)</label><input aria-describedby="time200-help" aria-required="true" class="form-input" id="time200" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="2:30" type="text"/><small class="form-help" id="time200-help">Μορφή: λεπτά: δευτερόλεπτα (π.χ. 2:30)</small><div class="form-error" id="time200-error"></div></div><div class="calculator-buttons"><button class="btn btn-primary" id="calculateBtn" type="submit">Υπολογίστε το CSS</button><button class="btn btn-ghost" id="resetBtn" type="reset">Καθαρός</button></div></div></form><div aria-live="polite" class="calculator-results hidden" id="cssResults"><h3>Τα αποτελέσματά σας</h3><div class="results-summary"><div class="result-item"><div class="result-label">Κρίσιμη ταχύτητα κολύμβησης</div><div class="css-result-value" id="cssValue">--</div></div><div class="result-item"><div class="result-label">Ρυθμός CSS ανά 100μ</div><div class="css-result-value" id="cssPace">--</div></div></div><div class="zones-result"><h4>Οι Εξατομικευμένες Εκπαιδευτικές Ζώνες σας</h4><p class="mb-md text-secondary">
                         Basándote en tu CSS, aquí están tus zonas de entrenamiento en ritmo por 100m:
-                    </p>
-                    <div id="zonesTable"></div>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="mt-xl">Εναλλακτική μέθοδος (Απλοποιημένη):</h3>
-        <div class="example-box">
-            <div class="calculation">
-                Ritmo = (368 - 150) / 2<br>
-                Ritmo = 218 / 2<br>
-                Ritmo = 109 segundos = <strong>1:49 ανά 100μ</strong>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="mb-xl">Ζώνες εκπαίδευσης που βασίζονται σε CSS</h2>
-
-        <div class="callout callout-info">
-            <p><strong>Σημείωμα:</strong>Στην κολύμβηση ο ρυθμός μετριέται ως<em>χρόνος φορές απόσταση</em>. Επομένως, α<strong>υψηλότερο ποσοστό = πιο αργός ρυθμός</strong>, και α<strong>Χαμηλότερο ποσοστό = ταχύτερος ρυθμός</strong>. Αυτό είναι αντίστροφο από το ποδήλατο/τρέξιμο όπου υψηλότερο % = σκληρότερη προσπάθεια.</p>
-        </div>
-
-        <div class="zones-table-container">
-            <table class="zones-table">
-                <thead>
-                    <tr>
-                        <th>Εκταση</th>
-                        <th>Ονομα</th>
-                        <th>Ρυθμός CSS %</th>
-                        <th>Παράδειγμα για CSS 1:40/100μ</th>
-                        <th>RPE</th>
-                        <th>Φυσιολογικός Σκοπός</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="zone-1">
-                        <td><strong>1</strong></td>
-                        <td>Ανάκτηση</td>
-                        <td>>108%</td>
-                        <td>>1:48/100μ</td>
-                        <td>2-3/10</td>
-                        <td>Ενεργή ανάκτηση, τεχνική βελτίωση, προθέρμανση/ψύξη</td>
-                    </tr>
-                    <tr class="zone-2">
-                        <td><strong>2</strong></td>
-                        <td>Αερόβια βάση</td>
-                        <td>104-108%</td>
-                        <td>1:44-1:48/100μ</td>
-                        <td>4-5/10</td>
-                        <td>Δόμηση αερόβιας ικανότητας, μιτοχονδριακή πυκνότητα, οξείδωση λίπους</td>
-                    </tr>
-                    <tr class="zone-3">
-                        <td><strong>3</strong></td>
-                        <td>Τέμπο/Βέλτιστο σημείο</td>
-                        <td>99-103%</td>
-                        <td>1:39-1:43/100μ</td>
-                        <td>6-7/10</td>
-                        <td>Προσαρμογή στον αγωνιστικό ρυθμό, νευρομυϊκή αποτελεσματικότητα</td>
-                    </tr>
-                    <tr class="zone-4">
-                        <td><strong>4</strong></td>
-                        <td>Όριο (CSS)</td>
-                        <td>96-100%</td>
-                        <td>1:36-1:40/100μ</td>
-                        <td>7-8/10</td>
-                        <td>Βελτιωμένο κατώφλι γαλακτικού, διατηρούμενη υψηλή ένταση</td>
-                    </tr>
-                    <tr class="zone-5">
-                        <td><strong>5</strong></td>
-                        <td>VO2max/Αναερόβιο</td>
-                        <td><96%</td>
-                        <td><1:36/100μ</td>
-                        <td>9-10/10</td>
-                        <td>Ανάπτυξη VO2max, ισχύς, ανοχή στο γαλακτικό</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-lg">
-            <h3>🎯 Οφέλη της Zone Training</h3>
-            <p>Η χρήση ζωνών που βασίζονται σε CSS μετατρέπει την υποκειμενική εκπαίδευση «αίσθησης» σε αντικειμενική, επαναλαμβανόμενη εκπαίδευση. Κάθε ζώνη στοχεύει συγκεκριμένες φυσιολογικές προσαρμογές:</p>
-            <ul>
-                <li><strong>Ζώνη 2:</strong>Κατασκευή αερόβιας μηχανής (60-70% του εβδομαδιαίου όγκου)</li>
-                <li><strong>Ζώνη 3:</strong>Βελτιώστε την απόδοση σε ρυθμό αγώνα (15-20% του όγκου)</li>
-                <li><strong>Ζώνη 4:</strong>Αύξηση του ορίου γαλακτικού (10-15% του όγκου)</li>
-                <li><strong>Ζώνη 5:</strong>Ανάπτυξη μέγιστης ταχύτητας και ισχύος (5-10% του όγκου)</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Τυπικές τιμές CSS ανά επίπεδο</h2>
-
-        <div class="levels-comparison">
-            <div class="level-card">
-                <h3>🥇 Ελίτ κολυμβητές αποστάσεων</h3>
-                <div class="pace-value">1,5-1,8m/s</div>
-                <div class="pace-equivalent">0:56-1:07 ανά 100μ</div>
-                <p>Αντιπροσωπεύει το 80-85% της μέγιστης ταχύτητας στα 100μ. Αθλητές εθνικού/διεθνούς επιπέδου με χρόνια δομημένης προπόνησης.</p>
-            </div>
-
-            <div class="level-card">
-                <h3>🏊 Αγωνιστικοί Κολυμβητές</h3>
-                <div class="pace-value">1,2-1,5 m/s</div>
-                <div class="pace-equivalent">1:07-1:23 ανά 100μ</div>
-                <p>Αγωνιστικό επίπεδο γυμνασίου/κολεγίου, κολυμβητές συλλόγων, ανταγωνιστικοί κολυμβητές. Τακτική δομημένη προπόνηση 5-6 ημέρες/εβδομάδα.</p>
-            </div>
-
-            <div class="level-card">
-                <h3>🏃Τριαθλητές και κολυμβητές Fitness</h3>
-                <div class="pace-value">0.9-1.2 m/s</div>
-                <div class="pace-equivalent">1:23-1:51 ανά 100μ</div>
-                <p>Τακτική προπόνηση 3-4 ημέρες/εβδομάδα. Στερεά τεχνική. Συμπλήρωση 2000-4000μ ανά συνεδρία.</p>
-            </div>
-
-            <div class="level-card">
-                <h3>🌊 Ανάπτυξη Κολυμβητών</h3>
-                <div class="pace-value"><0,9 m/s</div>
-                <div class="pace-equivalent">>1:51 ανά 100μ</div>
-                <p>Κτίριο αερόβιας και τεχνικής βάσης. Λιγότερο από 1-2 χρόνια συνεχούς εκπαίδευσης.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Επιστημονική Επικύρωση</h2>
-
-        <div class="research-highlight">
-            <h3>Wakayoshi et al. (1992-1993) - Θεμελιώδης Έρευνα</h3>
-            <p>Οι θεμελιώδεις μελέτες του Kohji Wakayoshi στο Πανεπιστήμιο της Οσάκα καθιέρωσαν το CSS ως μια έγκυρη και πρακτική εναλλακτική λύση στις εργαστηριακές δοκιμές γαλακτικού οξέος:</p>
-
-            <ul class="research-findings">
-                <li><strong>Ισχυρή συσχέτιση με VO2 στο αναερόβιο κατώφλι</strong>(r = 0,818)</li>
-                <li><strong>Εξαιρετική συσχέτιση με την ταχύτητα στο OBLA</strong>(r = 0,949)</li>
-                <li><strong>Πρόβλεψη απόδοσης 400μ</strong>(r = 0,864)</li>
-                <li><strong>Αντιστοιχεί σε 4 mmol/L γαλακτικού στο αίμα</strong>- μέγιστη σταθερή γαλακτική κατάσταση</li>
-                <li><strong>Γραμμική σχέση απόστασης και χρόνου</strong>(r² > 0,998)</li>
-            </ul>
-
-            <div class="citation">
-                <p><strong>Βασικά άρθρα:</strong></p>
-                <ol>
-                    <li>Wakayoshi Κ, et αϊ. (1992). «Προσδιορισμός και εγκυρότητα κρίσιμης ταχύτητας ως δείκτης κολυμβητικής απόδοσης στον αγωνιστικό κολυμβητή».<em>European Journal of Applied Physiology</em>, 64(2), 153-157.</li>
-                    <li>Wakayoshi Κ, et αϊ. (1992). "Μια απλή μέθοδος για τον προσδιορισμό της κρίσιμης ταχύτητας ως κατώφλι κόπωσης στην κολύμβηση στην αγωνιστική κολύμβηση."<em>International Journal of Sports Medicine</em>, 13(5), 367-371.</li>
-                    <li>Wakayoshi Κ, et αϊ. (1993). "Η κρίσιμη ταχύτητα κολύμβησης αντιπροσωπεύει την ένταση της άσκησης στη μέγιστη σταθερή κατάσταση γαλακτικού;"<em>European Journal of Applied Physiology</em>, 66(1), 90-95.</li>
-                </ol>
-            </div>
-        </div>
-
-        <div class="callout callout-science">
-            <h3>🔬 Γιατί λειτουργεί το CSS</h3>
-            <p>Το CSS αντιπροσωπεύει το όριο μεταξύ του<strong>τομείς έντονης και έντονης άσκησης</strong>. Κάτω από το CSS, η παραγωγή γαλακτικού και η αποβολή παραμένουν ισορροπημένες — μπορείτε να κολυμπήσετε για μεγάλες περιόδους. Πάνω από το CSS, το γαλακτικό συσσωρεύεται προοδευτικά μέχρι εξάντλησης μέσα σε 20-40 λεπτά.</p>
-            <p>Αυτό κάνει το CSS την τέλεια ένταση για:</p>
-            <ul>
-                <li>Καθιερώστε βιώσιμους ρυθμούς αγώνων για αγώνες 800-1500μ</li>
-                <li>Συνταγογραφήστε διαλειμματική προπόνηση κατωφλίου</li>
-                <li>Παρακολουθήστε τις βελτιώσεις στην αερόβια φυσική κατάσταση</li>
-                <li>Υπολογίστε τον προπονητικό φόρτο και τις ανάγκες αποκατάστασης</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">        <h2 class="mt-3xl">Πώς να αξιολογήσετε το CSS σας</h2>
-
-        <div class="howto-section" itemscope itemtype="https://schema.org/HowTo">
-            <meta itemprop="name" content="Πώς να αξιολογήσετε το CSS σας">
-            <meta itemprop="description" content="Ακολουθήστε αυτό το πρωτόκολλο βήμα προς βήμα για να μετρήσετε με ακρίβεια την Κρίσιμη Ταχύτητα Κολύμβησης (CSS)">
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="1">
-                <h3 itemprop="name">Βήμα 1: Θερμάνετε σωστά</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Ολοκληρώστε 300-800 μέτρα εύκολης κολύμβησης, συμπεριλαμβανομένων τεχνικών ασκήσεων και προοδευτικών επιταχύνσεων. Αυτό προετοιμάζει το σώμα σας για μέγιστη προσπάθεια και αποτρέπει τους τραυματισμούς.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="2">
-                <h3 itemprop="name">Βήμα 2: Κάντε τη χρονομέτρηση 400 μέτρων</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Κολυμπήστε 400 μέτρα με μέγιστη συνεχή προσπάθεια από έξοδο τοίχου (χωρίς κατάδυση). Καταγράψτε το χρόνο σας στο δεύτερο. Επιδιώξτε ομοιόμορφα ή αρνητικά σπασίματα (δεύτερο 200m ίσο ή ταχύτερο από τα πρώτα 200m).</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="3">
-                <h3 itemprop="name">Βήμα 3: Πλήρης ανάκτηση</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Ξεκουραστείτε 5-10 λεπτά με απαλό κολύμπι ή πλήρη ξεκούραση. Αυτή η ανάκαμψη είναι κρίσιμη. Περιμένετε έως ότου ο καρδιακός σας ρυθμός πέσει κάτω από τους 120 bpm και η αναπνοή έχει αποκατασταθεί πλήρως πριν συνεχίσετε.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="4">
-                <h3 itemprop="name">Βήμα 4: Εκτελέστε τη χρονομέτρηση 200 μέτρων</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Κολυμπήστε 200 μέτρα με μέγιστη προσπάθεια από την έξοδο του τοίχου. Καταγράψτε το χρόνο σας με ακρίβεια. Αυτό θα πρέπει να είναι ταχύτερο ανά 100 μέτρα από τον ρυθμό σας στα 400 μέτρα.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="5">
-                <h3 itemprop="name">Βήμα 5: Υπολογίστε το CSS σας</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Χρησιμοποιήστε τον τύπο: CSS Pace/100m = (T400 - T200) / 2. Παράδειγμα: (368s - 150s) / 2 = 109s = 1:49/100m. Ή χρησιμοποιήστε την αριθμομηχανή σε αυτήν τη σελίδα για να λάβετε άμεσα αποτελέσματα με προσαρμοσμένες ζώνες προπόνησης.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <h2>Πρακτικές Εφαρμογές</h2>
-
-        <div class="application-grid">
-            <div class="application-item">
-                <h3>1️⃣ Ξεκλειδώστε τις μετρήσεις φόρτου εκπαίδευσης</h3>
-                <p>Το CSS είναι ο παρονομαστής στον υπολογισμό του Συντελεστή Έντασης για το sTSS. Χωρίς αυτό, δεν μπορείτε να ποσοτικοποιήσετε το άγχος της προπόνησης ή να παρακολουθήσετε τις τάσεις φυσικής κατάστασης/κόπωσης.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>2️⃣ Προσαρμόστε τις ζώνες εκπαίδευσης</h3>
-                <p>Τα γενικά διαγράμματα ρυθμού δεν λαμβάνουν υπόψη την ατομική φυσιολογία. Οι ζώνες που βασίζονται σε CSS διασφαλίζουν ότι κάθε κολυμβητής προπονείται στη βέλτιστη έντασή του.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>3️⃣ Παρακολούθηση της εξέλιξης της φυσικής κατάστασης</h3>
-                <p>Επαναξιολογήστε κάθε 6-8 εβδομάδες. Η βελτίωση του CSS (γρηγορότερος ρυθμός) υποδηλώνει επιτυχημένη αερόβια προσαρμογή. Ένα στάσιμο CSS υποδηλώνει ότι η εκπαίδευση χρειάζεται προσαρμογές.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>4️⃣ Προβλέψτε την απόδοση του αγώνα</h3>
-                <p>Ο ρυθμός CSS προσεγγίζει τον βιώσιμο ρυθμό τρεξίματος 30 λεπτών. Χρησιμοποιήστε το για να θέσετε ρεαλιστικούς στόχους για εκδηλώσεις 800μ, 1500μ και ανοιχτής θάλασσας.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>5️⃣ Προπονήσεις κατωφλίου σχεδίασης</h3>
-                <p>Κλασική σειρά CSS: 8×100 @ CSS ρυθμός (15 δευτερόλεπτα ανάπαυσης), 5×200 @ 101% CSS (20 δευτερόλεπτα ανάπαυσης), 3×400 @ 103% CSS (ανάπαυση 30 δευτερολέπτων). Δημιουργία ικανότητας αποβολής γαλακτικού.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>6️⃣ Βελτιστοποιήστε τη στρατηγική λήψης</h3>
-                <p>Ακολουθήστε το CSS πριν και μετά τη λήψη. Μια επιτυχημένη εκφόρτωση διατηρεί ή βελτιώνει ελαφρώς το CSS ενώ μειώνει την κόπωση (αυξημένο TSB).</p>
-            </div>
-        </div>
-
-        <div class="callout mt-2xl">
-            <h3>Εφαρμόστε τις γνώσεις σας στο CSS</h3>
-            <p>Τώρα που καταλαβαίνετε την Κρίσιμη Ταχύτητα Κολύμβησης, ακολουθήστε τα παρακάτω βήματα για να βελτιστοποιήσετε την προπόνησή σας:</p>
-            <ul>
-                <li><a href="/es/training-load/">Υπολογίστε τον Δείκτη Προπονητικού Στρες (TSS)</a>με βάση το CSS σας για να ποσοτικοποιήσετε την ένταση της προπόνησης</li>
-                <li><a href="/es/training-zones/">Εξερευνήστε τις 7 ζώνες προπόνησης</a>και μάθετε πώς να δομείτε τις προπονήσεις για συγκεκριμένες προσαρμογές</li>
-                <li><a href="/es/formulas/">Δείτε όλους τους τύπους</a>χρησιμοποιείται στο Swim Analytics για πλήρη διαφάνεια</li>
-                <li><a href="/es/">Κατεβάστε το Swim Analytics</a>για αυτόματη παρακολούθηση των τάσεων CSS, TSS και απόδοσης</li>
-            </ul>
-        </div>
-
-        <div class="mt-xl text-center">
-            <a href="/es/training-load/" class="btn btn-primary">Μάθετε για τον Υπολογισμό του sTSS →</a>
-            <a href="/es/formulas/" class="btn btn-secondary">Δείτε όλους τους τύπους →</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                    </p><div id="zonesTable"></div></div></div></div><h3 class="mt-xl">Εναλλακτική μέθοδος (Απλοποιημένη):</h3><div class="example-box"><div class="calculation">
+                Ritmo = (368 - 150) / 2<br/>
+                Ritmo = 218 / 2<br/>
+                Ritmo = 109 segundos = <strong>1:49 ανά 100μ</strong></div></div></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl">Ζώνες εκπαίδευσης που βασίζονται σε CSS</h2><div class="callout callout-info"><p><strong>Σημείωμα:</strong>Στην κολύμβηση ο ρυθμός μετριέται ως<em>χρόνος φορές απόσταση</em>. Επομένως, α<strong>υψηλότερο ποσοστό = πιο αργός ρυθμός</strong>, και α<strong>Χαμηλότερο ποσοστό = ταχύτερος ρυθμός</strong>. Αυτό είναι αντίστροφο από το ποδήλατο/τρέξιμο όπου υψηλότερο % = σκληρότερη προσπάθεια.</p></div><div class="zones-table-container"><table class="zones-table"><thead><tr><th>Εκταση</th><th>Ονομα</th><th>Ρυθμός CSS %</th><th>Παράδειγμα για CSS 1:40/100μ</th><th>RPE</th><th>Φυσιολογικός Σκοπός</th></tr></thead><tbody><tr class="zone-1"><td><strong>1</strong></td><td>Ανάκτηση</td><td>&gt;108%</td><td>&gt;1:48/100μ</td><td>2-3/10</td><td>Ενεργή ανάκτηση, τεχνική βελτίωση, προθέρμανση/ψύξη</td></tr><tr class="zone-2"><td><strong>2</strong></td><td>Αερόβια βάση</td><td>104-108%</td><td>1:44-1:48/100μ</td><td>4-5/10</td><td>Δόμηση αερόβιας ικανότητας, μιτοχονδριακή πυκνότητα, οξείδωση λίπους</td></tr><tr class="zone-3"><td><strong>3</strong></td><td>Τέμπο/Βέλτιστο σημείο</td><td>99-103%</td><td>1:39-1:43/100μ</td><td>6-7/10</td><td>Προσαρμογή στον αγωνιστικό ρυθμό, νευρομυϊκή αποτελεσματικότητα</td></tr><tr class="zone-4"><td><strong>4</strong></td><td>Όριο (CSS)</td><td>96-100%</td><td>1:36-1:40/100μ</td><td>7-8/10</td><td>Βελτιωμένο κατώφλι γαλακτικού, διατηρούμενη υψηλή ένταση</td></tr><tr class="zone-5"><td><strong>5</strong></td><td>VO2max/Αναερόβιο</td><td>&lt;96%</td><td>&lt;1:36/100μ</td><td>9-10/10</td><td>Ανάπτυξη VO2max, ισχύς, ανοχή στο γαλακτικό</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>🎯 Οφέλη της Zone Training</h3><p>Η χρήση ζωνών που βασίζονται σε CSS μετατρέπει την υποκειμενική εκπαίδευση «αίσθησης» σε αντικειμενική, επαναλαμβανόμενη εκπαίδευση. Κάθε ζώνη στοχεύει συγκεκριμένες φυσιολογικές προσαρμογές:</p><ul><li><strong>Ζώνη 2:</strong>Κατασκευή αερόβιας μηχανής (60-70% του εβδομαδιαίου όγκου)</li><li><strong>Ζώνη 3:</strong>Βελτιώστε την απόδοση σε ρυθμό αγώνα (15-20% του όγκου)</li><li><strong>Ζώνη 4:</strong>Αύξηση του ορίου γαλακτικού (10-15% του όγκου)</li><li><strong>Ζώνη 5:</strong>Ανάπτυξη μέγιστης ταχύτητας και ισχύος (5-10% του όγκου)</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Τυπικές τιμές CSS ανά επίπεδο</h2><div class="levels-comparison"><div class="level-card"><h3>🥇 Ελίτ κολυμβητές αποστάσεων</h3><div class="pace-value">1,5-1,8m/s</div><div class="pace-equivalent">0:56-1:07 ανά 100μ</div><p>Αντιπροσωπεύει το 80-85% της μέγιστης ταχύτητας στα 100μ. Αθλητές εθνικού/διεθνούς επιπέδου με χρόνια δομημένης προπόνησης.</p></div><div class="level-card"><h3>🏊 Αγωνιστικοί Κολυμβητές</h3><div class="pace-value">1,2-1,5 m/s</div><div class="pace-equivalent">1:07-1:23 ανά 100μ</div><p>Αγωνιστικό επίπεδο γυμνασίου/κολεγίου, κολυμβητές συλλόγων, ανταγωνιστικοί κολυμβητές. Τακτική δομημένη προπόνηση 5-6 ημέρες/εβδομάδα.</p></div><div class="level-card"><h3>🏃Τριαθλητές και κολυμβητές Fitness</h3><div class="pace-value">0.9-1.2 m/s</div><div class="pace-equivalent">1:23-1:51 ανά 100μ</div><p>Τακτική προπόνηση 3-4 ημέρες/εβδομάδα. Στερεά τεχνική. Συμπλήρωση 2000-4000μ ανά συνεδρία.</p></div><div class="level-card"><h3>🌊 Ανάπτυξη Κολυμβητών</h3><div class="pace-value">&lt;0,9 m/s</div><div class="pace-equivalent">&gt;1:51 ανά 100μ</div><p>Κτίριο αερόβιας και τεχνικής βάσης. Λιγότερο από 1-2 χρόνια συνεχούς εκπαίδευσης.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Επιστημονική Επικύρωση</h2><div class="research-highlight"><h3>Wakayoshi et al. (1992-1993) - Θεμελιώδης Έρευνα</h3><p>Οι θεμελιώδεις μελέτες του Kohji Wakayoshi στο Πανεπιστήμιο της Οσάκα καθιέρωσαν το CSS ως μια έγκυρη και πρακτική εναλλακτική λύση στις εργαστηριακές δοκιμές γαλακτικού οξέος:</p><ul class="research-findings"><li><strong>Ισχυρή συσχέτιση με VO2 στο αναερόβιο κατώφλι</strong>(r = 0,818)</li><li><strong>Εξαιρετική συσχέτιση με την ταχύτητα στο OBLA</strong>(r = 0,949)</li><li><strong>Πρόβλεψη απόδοσης 400μ</strong>(r = 0,864)</li><li><strong>Αντιστοιχεί σε 4 mmol/L γαλακτικού στο αίμα</strong>- μέγιστη σταθερή γαλακτική κατάσταση</li><li><strong>Γραμμική σχέση απόστασης και χρόνου</strong>(r² &gt; 0,998)</li></ul><div class="citation"><p><strong>Βασικά άρθρα:</strong></p><ol><li>Wakayoshi Κ, et αϊ. (1992). «Προσδιορισμός και εγκυρότητα κρίσιμης ταχύτητας ως δείκτης κολυμβητικής απόδοσης στον αγωνιστικό κολυμβητή».<em>European Journal of Applied Physiology</em>, 64(2), 153-157.</li><li>Wakayoshi Κ, et αϊ. (1992). "Μια απλή μέθοδος για τον προσδιορισμό της κρίσιμης ταχύτητας ως κατώφλι κόπωσης στην κολύμβηση στην αγωνιστική κολύμβηση."<em>International Journal of Sports Medicine</em>, 13(5), 367-371.</li><li>Wakayoshi Κ, et αϊ. (1993). "Η κρίσιμη ταχύτητα κολύμβησης αντιπροσωπεύει την ένταση της άσκησης στη μέγιστη σταθερή κατάσταση γαλακτικού;"<em>European Journal of Applied Physiology</em>, 66(1), 90-95.</li></ol></div></div><div class="callout callout-science"><h3>🔬 Γιατί λειτουργεί το CSS</h3><p>Το CSS αντιπροσωπεύει το όριο μεταξύ του<strong>τομείς έντονης και έντονης άσκησης</strong>. Κάτω από το CSS, η παραγωγή γαλακτικού και η αποβολή παραμένουν ισορροπημένες — μπορείτε να κολυμπήσετε για μεγάλες περιόδους. Πάνω από το CSS, το γαλακτικό συσσωρεύεται προοδευτικά μέχρι εξάντλησης μέσα σε 20-40 λεπτά.</p><p>Αυτό κάνει το CSS την τέλεια ένταση για:</p><ul><li>Καθιερώστε βιώσιμους ρυθμούς αγώνων για αγώνες 800-1500μ</li><li>Συνταγογραφήστε διαλειμματική προπόνηση κατωφλίου</li><li>Παρακολουθήστε τις βελτιώσεις στην αερόβια φυσική κατάσταση</li><li>Υπολογίστε τον προπονητικό φόρτο και τις ανάγκες αποκατάστασης</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-3xl">Πώς να αξιολογήσετε το CSS σας</h2><div class="howto-section" itemscope="" itemtype="https://schema.org/HowTo"><meta content="Πώς να αξιολογήσετε το CSS σας" itemprop="name"/><meta content="Ακολουθήστε αυτό το πρωτόκολλο βήμα προς βήμα για να μετρήσετε με ακρίβεια την Κρίσιμη Ταχύτητα Κολύμβησης (CSS)" itemprop="description"/><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="1" itemprop="position"/><h3 itemprop="name">Βήμα 1: Θερμάνετε σωστά</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Ολοκληρώστε 300-800 μέτρα εύκολης κολύμβησης, συμπεριλαμβανομένων τεχνικών ασκήσεων και προοδευτικών επιταχύνσεων. Αυτό προετοιμάζει το σώμα σας για μέγιστη προσπάθεια και αποτρέπει τους τραυματισμούς.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="2" itemprop="position"/><h3 itemprop="name">Βήμα 2: Κάντε τη χρονομέτρηση 400 μέτρων</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Κολυμπήστε 400 μέτρα με μέγιστη συνεχή προσπάθεια από έξοδο τοίχου (χωρίς κατάδυση). Καταγράψτε το χρόνο σας στο δεύτερο. Επιδιώξτε ομοιόμορφα ή αρνητικά σπασίματα (δεύτερο 200m ίσο ή ταχύτερο από τα πρώτα 200m).</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="3" itemprop="position"/><h3 itemprop="name">Βήμα 3: Πλήρης ανάκτηση</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Ξεκουραστείτε 5-10 λεπτά με απαλό κολύμπι ή πλήρη ξεκούραση. Αυτή η ανάκαμψη είναι κρίσιμη. Περιμένετε έως ότου ο καρδιακός σας ρυθμός πέσει κάτω από τους 120 bpm και η αναπνοή έχει αποκατασταθεί πλήρως πριν συνεχίσετε.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="4" itemprop="position"/><h3 itemprop="name">Βήμα 4: Εκτελέστε τη χρονομέτρηση 200 μέτρων</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Κολυμπήστε 200 μέτρα με μέγιστη προσπάθεια από την έξοδο του τοίχου. Καταγράψτε το χρόνο σας με ακρίβεια. Αυτό θα πρέπει να είναι ταχύτερο ανά 100 μέτρα από τον ρυθμό σας στα 400 μέτρα.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="5" itemprop="position"/><h3 itemprop="name">Βήμα 5: Υπολογίστε το CSS σας</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Χρησιμοποιήστε τον τύπο: CSS Pace/100m = (T400 - T200) / 2. Παράδειγμα: (368s - 150s) / 2 = 109s = 1:49/100m. Ή χρησιμοποιήστε την αριθμομηχανή σε αυτήν τη σελίδα για να λάβετε άμεσα αποτελέσματα με προσαρμοσμένες ζώνες προπόνησης.</p></div></div></div></div><h2>Πρακτικές Εφαρμογές</h2><div class="application-grid"><div class="application-item"><h3>1️⃣ Ξεκλειδώστε τις μετρήσεις φόρτου εκπαίδευσης</h3><p>Το CSS είναι ο παρονομαστής στον υπολογισμό του Συντελεστή Έντασης για το sTSS. Χωρίς αυτό, δεν μπορείτε να ποσοτικοποιήσετε το άγχος της προπόνησης ή να παρακολουθήσετε τις τάσεις φυσικής κατάστασης/κόπωσης.</p></div><div class="application-item"><h3>2️⃣ Προσαρμόστε τις ζώνες εκπαίδευσης</h3><p>Τα γενικά διαγράμματα ρυθμού δεν λαμβάνουν υπόψη την ατομική φυσιολογία. Οι ζώνες που βασίζονται σε CSS διασφαλίζουν ότι κάθε κολυμβητής προπονείται στη βέλτιστη έντασή του.</p></div><div class="application-item"><h3>3️⃣ Παρακολούθηση της εξέλιξης της φυσικής κατάστασης</h3><p>Επαναξιολογήστε κάθε 6-8 εβδομάδες. Η βελτίωση του CSS (γρηγορότερος ρυθμός) υποδηλώνει επιτυχημένη αερόβια προσαρμογή. Ένα στάσιμο CSS υποδηλώνει ότι η εκπαίδευση χρειάζεται προσαρμογές.</p></div><div class="application-item"><h3>4️⃣ Προβλέψτε την απόδοση του αγώνα</h3><p>Ο ρυθμός CSS προσεγγίζει τον βιώσιμο ρυθμό τρεξίματος 30 λεπτών. Χρησιμοποιήστε το για να θέσετε ρεαλιστικούς στόχους για εκδηλώσεις 800μ, 1500μ και ανοιχτής θάλασσας.</p></div><div class="application-item"><h3>5️⃣ Προπονήσεις κατωφλίου σχεδίασης</h3><p>Κλασική σειρά CSS: 8×100 @ CSS ρυθμός (15 δευτερόλεπτα ανάπαυσης), 5×200 @ 101% CSS (20 δευτερόλεπτα ανάπαυσης), 3×400 @ 103% CSS (ανάπαυση 30 δευτερολέπτων). Δημιουργία ικανότητας αποβολής γαλακτικού.</p></div><div class="application-item"><h3>6️⃣ Βελτιστοποιήστε τη στρατηγική λήψης</h3><p>Ακολουθήστε το CSS πριν και μετά τη λήψη. Μια επιτυχημένη εκφόρτωση διατηρεί ή βελτιώνει ελαφρώς το CSS ενώ μειώνει την κόπωση (αυξημένο TSB).</p></div></div><div class="callout mt-2xl"><h3>Εφαρμόστε τις γνώσεις σας στο CSS</h3><p>Τώρα που καταλαβαίνετε την Κρίσιμη Ταχύτητα Κολύμβησης, ακολουθήστε τα παρακάτω βήματα για να βελτιστοποιήσετε την προπόνησή σας:</p><ul><li><a href="/es/training-load/">Υπολογίστε τον Δείκτη Προπονητικού Στρες (TSS)</a>με βάση το CSS σας για να ποσοτικοποιήσετε την ένταση της προπόνησης</li><li><a href="/es/training-zones/">Εξερευνήστε τις 7 ζώνες προπόνησης</a>και μάθετε πώς να δομείτε τις προπονήσεις για συγκεκριμένες προσαρμογές</li><li><a href="/es/formulas/">Δείτε όλους τους τύπους</a>χρησιμοποιείται στο Swim Analytics για πλήρη διαφάνεια</li><li><a href="/es/">Κατεβάστε το Swim Analytics</a>για αυτόματη παρακολούθηση των τάσεων CSS, TSS και απόδοσης</li></ul></div><div class="mt-xl text-center"><a class="btn btn-primary" href="/es/training-load/">Μάθετε για τον Υπολογισμό του sTSS →</a><a class="btn btn-secondary" href="/es/formulas/">Δείτε όλους τους τύπους →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link active"
+                </a><a href="/el/" class="lang-link active"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. Όλα τα δικαιώματα διατηρούνται
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/el/privacy/">Ιδιωτικότητα</a></li>
-                <li><a href="/el/terms/">Όροι</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>Αυτός ο ιστότοπος χρησιμοποιεί cookies για να βελτιώσει την εμπειρία σας.</p>
-            <a href="/el/privacy/" class="text-sm">Μάθετε περισσότερα</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Απόρριψη</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Αποδοχή</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/el/privacy/">Ιδιωτικότητα</a></li><li><a href="/el/terms/">Όροι</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Αυτός ο ιστότοπος χρησιμοποιεί cookies για να βελτιώσει την εμπειρία σας.</p><a href="/el/privacy/" class="text-sm">Μάθετε περισσότερα</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Απόρριψη</button><button id="cookie-accept" class="btn btn-primary btn-small">Αποδοχή</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

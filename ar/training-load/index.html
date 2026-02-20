@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>حاسبة TSS للسباحة: حمل التدريب و PMC (CTL/ATL/TSB)</title>
-  <meta name="description" content="تعلم حساب نقاط إجهاد التدريب للسباحة (sTSS) ومقاييس مخطط إدارة الأداء (CTL، ATL، TSB). تتبع اللياقة والإرهاق علمياً. يتضمن أمثلة محلولة، أهداف TSS الأسبوعية،">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="TSS السباحة, حاسبة sTSS, نقاط إجهاد التدريب, CTL ATL TSB, PMC السباحة">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/ar/training-load/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/ar/training-load/">
-  <meta property="og:title" content="حاسبة TSS للسباحة: حمل التدريب و PMC (CTL/ATL/TSB)">
-  <meta property="og:description" content="تعلم حساب نقاط إجهاد التدريب للسباحة (sTSS) ومقاييس مخطط إدارة الأداء (CTL، ATL، TSB). تتبع اللياقة والإرهاق علمياً. يتضمن أمثلة محلولة، أهداف TSS الأسبوعية،">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="ar_SA">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/ar/training-load/">
-  <meta name="twitter:title" content="حاسبة TSS للسباحة: حمل التدريب و PMC (CTL/ATL/TSB)">
-  <meta name="twitter:description" content="تعلم حساب نقاط إجهاد التدريب للسباحة (sTSS) ومقاييس مخطط إدارة الأداء (CTL، ATL، TSB). تتبع اللياقة والإرهاق علمياً. يتضمن أمثلة محلولة، أهداف TSS الأسبوعية،">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/training-load/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/training-load/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/training-load/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/training-load/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/training-load/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/training-load/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/training-load/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/training-load/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/training-load/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/training-load/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/training-load/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/training-load/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/training-load/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/training-load/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/training-load/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/training-load/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/training-load/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/training-load/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/training-load/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/training-load/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/training-load/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/training-load/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/training-load/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/training-load/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/training-load/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/training-load/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/training-load/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/training-load/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/training-load/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/training-load/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/training-load/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/training-load/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/training-load/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/training-load/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/training-load/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/training-load/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/training-load/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/training-load/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/training-load/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/training-load/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/training-load/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/training-load/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/training-load/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/training-load/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/training-load/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/training-load/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/training-load/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/training-load/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/training-load/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/training-load/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/training-load/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/training-load/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/training-load/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/training-load/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/training-load/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/training-load/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>حاسبة TSS للسباحة: حمل التدريب و PMC (CTL/ATL/TSB)</title><meta name="description" content="تعلم حساب نقاط إجهاد التدريب للسباحة (sTSS) ومقاييس مخطط إدارة الأداء (CTL، ATL، TSB). تتبع اللياقة والإرهاق علمياً. يتضمن أمثلة محلولة، أهداف TSS الأسبوعية،"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="TSS السباحة, حاسبة sTSS, نقاط إجهاد التدريب, CTL ATL TSB, PMC السباحة"><link rel="canonical" href="https://swim.analyticszone.app/ar/training-load/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-04T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/ar/training-load/"><meta property="og:title" content="حاسبة TSS للسباحة: حمل التدريب و PMC (CTL/ATL/TSB)"><meta property="og:description" content="تعلم حساب نقاط إجهاد التدريب للسباحة (sTSS) ومقاييس مخطط إدارة الأداء (CTL، ATL، TSB). تتبع اللياقة والإرهاق علمياً. يتضمن أمثلة محلولة، أهداف TSS الأسبوعية،"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="ar_SA"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/ar/training-load/"><meta name="twitter:title" content="حاسبة TSS للسباحة: حمل التدريب و PMC (CTL/ATL/TSB)"><meta name="twitter:description" content="تعلم حساب نقاط إجهاد التدريب للسباحة (sTSS) ومقاييس مخطط إدارة الأداء (CTL، ATL، TSB). تتبع اللياقة والإرهاق علمياً. يتضمن أمثلة محلولة، أهداف TSS الأسبوعية،"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/training-load/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/training-load/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/training-load/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/training-load/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/training-load/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/training-load/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/training-load/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/training-load/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/training-load/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/training-load/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/training-load/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/training-load/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/training-load/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/training-load/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/training-load/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/training-load/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/training-load/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/training-load/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/training-load/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/training-load/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/training-load/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/training-load/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/training-load/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/training-load/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/training-load/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/training-load/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/training-load/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/training-load/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/training-load/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/training-load/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/training-load/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/training-load/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/training-load/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/training-load/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/training-load/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/training-load/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/training-load/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/training-load/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/training-load/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/training-load/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/training-load/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/training-load/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/training-load/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/training-load/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/training-load/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/training-load/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/training-load/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/training-load/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/training-load/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/training-load/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/training-load/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/training-load/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/training-load/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/training-load/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/training-load/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/training-load/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "ar"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "تعلم حساب نقاط إجهاد التدريب للسباحة (sTSS) ومقاييس مخطط إدارة الأداء (CTL، ATL، TSB). تتبع اللياقة والإرهاق علمياً. يتضمن أمثلة محلولة، أهداف TSS الأسبوعية،",
   "url": "https://swim.analyticszone.app/ar/training-load/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/ar/training-load/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1384 +449,361 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">الانتقال إلى المحتوى</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/ar/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/ar/" 
+  </script></head><body><a href="#main-content" class="skip-link">الانتقال إلى المحتوى</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/ar/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/ar/" 
                                 aria-current="">
                                 الرئيسية
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/ar/getting-started/" class="nav-label">تعلم</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/ar/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/ar/getting-started/" class="nav-label">تعلم</a><ul class="submenu"><li><a href="/ar/getting-started/" 
                                         aria-current="">
                                         البدء
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ar/css/" 
+                                    </a></li><li><a href="/ar/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ar/training-zones/" 
+                                    </a></li><li><a href="/ar/training-zones/" 
                                         aria-current="">
                                         مناطق التدريب
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ar/training-load/" class="active" 
+                                    </a></li><li><a href="/ar/training-load/" class="active" 
                                         aria-current="page">
                                         حمل التدريب
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ar/stss-calculator/" 
+                                    </a></li><li><a href="/ar/stss-calculator/" 
                                         aria-current="">
                                         حاسبة sTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/ar/research/" class="nav-label">العلم</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/ar/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/ar/research/" class="nav-label">العلم</a><ul class="submenu"><li><a href="/ar/research/" 
                                         aria-current="">
                                         البحث
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ar/formulas/" 
+                                    </a></li><li><a href="/ar/formulas/" 
                                         aria-current="">
                                         الصيغ
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ar/efficiency/" 
+                                    </a></li><li><a href="/ar/efficiency/" 
                                         aria-current="">
                                         الكفاءة
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ar/stroke-mechanics/" 
+                                    </a></li><li><a href="/ar/stroke-mechanics/" 
                                         aria-current="">
                                         ميكانيكا السباحة
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ar/bibliography/" 
+                                    </a></li><li><a href="/ar/bibliography/" 
                                         aria-current="">
                                         المراجع
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/ar/contact/" 
+                                    </a></li></ul></li><li><a href="/ar/contact/" 
                                 aria-current="">
                                 اتصل
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="اختر اللغة">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="اختر اللغة"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" selected>
+                        </option><option value="ar" selected>
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="تبديل القائمة"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/ar/">الرئيسية</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/ar/getting-started/">تعلم</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">حمل التدريب</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>حمل التدريب وإدارة الأداء</h1>
-        <p class="lead">قياس الإجهاد، مراقبة اللياقة، تحسين الأداء</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>فهم حمل التدريب</h2>
-        <p class="lead">تحديد كمية حمل التدريب يجيب على السؤال الحاسم: <strong>ما مدى صعوبة هذا التدريب؟</strong> ليس فقط المسافة أو الوقت، بل الإجهاد الفيزيولوجي الحقيقي المفروض على جسمك.</p>
-
-        <p>نظام Training Stress Score (TSS)، الذي طوره الدكتور أندرو كوغان، يوفر طريقة موحدة لقياس شدة ومدة التدريب في رقم واحد. للسباحة، نستخدم <strong>Swim Training Stress Score (sTSS)</strong> مع تعديل حاسم يأخذ في الاعتبار خصائص مقاومة الماء الفريدة.</p>
-
-        <div class="callout callout-info">
-            <h3>معيار TSS</h3>
-            <p>ساعة واحدة بسرعة عتبة الوظيفة الخاصة بك (CSS) = <strong>100 TSS</strong></p>
-            <p>يسمح هذا التوحيد بمقارنة الجلسات التدريبية والأسابيع ودورات التدريب. سباحة 30 دقيقة عند العتبة = ~50 TSS. سباحة ساعتين عند العتبة = ~200 TSS.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">درجة إجهاد التدريب للسباحة (sTSS)</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>الصيغة</h3>
-                <div class="formula-box">
-                    <div class="formula">
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="تبديل القائمة"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/ar/">الرئيسية</a></li><li><a href="/ar/getting-started/">تعلم</a></li><li><span aria-current="page">حمل التدريب</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>حمل التدريب وإدارة الأداء</h1><p class="lead">قياس الإجهاد، مراقبة اللياقة، تحسين الأداء</p></div></section><section class="section"><div class="container container-narrow"><h2>فهم حمل التدريب</h2><p class="lead">تحديد كمية حمل التدريب يجيب على السؤال الحاسم: <strong>ما مدى صعوبة هذا التدريب؟</strong> ليس فقط المسافة أو الوقت، بل الإجهاد الفيزيولوجي الحقيقي المفروض على جسمك.</p><p>نظام Training Stress Score (TSS)، الذي طوره الدكتور أندرو كوغان، يوفر طريقة موحدة لقياس شدة ومدة التدريب في رقم واحد. للسباحة، نستخدم <strong>Swim Training Stress Score (sTSS)</strong> مع تعديل حاسم يأخذ في الاعتبار خصائص مقاومة الماء الفريدة.</p><div class="callout callout-info"><h3>معيار TSS</h3><p>ساعة واحدة بسرعة عتبة الوظيفة الخاصة بك (CSS) = <strong>100 TSS</strong></p><p>يسمح هذا التوحيد بمقارنة الجلسات التدريبية والأسابيع ودورات التدريب. سباحة 30 دقيقة عند العتبة = ~50 TSS. سباحة ساعتين عند العتبة = ~200 TSS.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">درجة إجهاد التدريب للسباحة (sTSS)</h2><div class="grid grid-2"><div><h3>الصيغة</h3><div class="formula-box"><div class="formula">
                         sTSS = (IF³) × المدة (ساعات) × 100
-                    </div>
-                    <div class="formula-explanation">
-                        <p>حيث عامل الشدة (IF) هو:</p>
-                        <div class="formula">
+                    </div><div class="formula-explanation"><p>حيث عامل الشدة (IF) هو:</p><div class="formula">
                             IF = NSS / FTP
-                        </div>
-                        <p>وسرعة السباحة المعيارية (NSS) هي:</p>
-                        <div class="formula">
+                        </div><p>وسرعة السباحة المعيارية (NSS) هي:</p><div class="formula">
                             NSS = المسافة الكلية / الوقت الكلي (م/دقيقة)
-                        </div>
-                    </div>
-                </div>
-
-                <div class="callout callout-warning mt-md">
-                    <h4>⚡ العامل التكعيبي (IF³)</h4>
-                    <p><strong>ابتكار رئيسي:</strong> تستخدم السباحة IF³ بينما يستخدم ركوب الدراجات/الجري IF². هذا يعكس فيزياء الماء - المقاومة تزداد <em>أُسياً</em> مع السرعة.</p>
-                    <p>الذهاب أسرع بنسبة 10٪ في الماء يتطلب ~33٪ طاقة أكثر. العامل التكعيبي يزن بدقة هذه الزيادة في التكلفة الفيزيولوجية.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>مثال عملي</h3>
-                <div class="example-box">
-                    <h4>ملف السباح:</h4>
-                    <ul>
-                        <li>CSS: 1:33/100م = 93 ثانية/100م</li>
-                        <li>FTP: 64.5 م/دقيقة (100م / 1.55دقيقة)</li>
-                    </ul>
-
-                    <h4>بيانات التدريب:</h4>
-                    <ul>
-                        <li>المسافة الكلية: 3000م</li>
-                        <li>وقت الحركة: 55:00 (3300 ثانية)</li>
-                        <li>وقت الراحة: 10:00 (غير محسوب)</li>
-                    </ul>
-
-                    <h4>الخطوة 1: حساب NSS</h4>
-                    <div class="calculation">
+                        </div></div></div><div class="callout callout-warning mt-md"><h4>⚡ العامل التكعيبي (IF³)</h4><p><strong>ابتكار رئيسي:</strong> تستخدم السباحة IF³ بينما يستخدم ركوب الدراجات/الجري IF². هذا يعكس فيزياء الماء - المقاومة تزداد <em>أُسياً</em> مع السرعة.</p><p>الذهاب أسرع بنسبة 10٪ في الماء يتطلب ~33٪ طاقة أكثر. العامل التكعيبي يزن بدقة هذه الزيادة في التكلفة الفيزيولوجية.</p></div></div><div><h3>مثال عملي</h3><div class="example-box"><h4>ملف السباح:</h4><ul><li>CSS: 1:33/100م = 93 ثانية/100م</li><li>FTP: 64.5 م/دقيقة (100م / 1.55دقيقة)</li></ul><h4>بيانات التدريب:</h4><ul><li>المسافة الكلية: 3000م</li><li>وقت الحركة: 55:00 (3300 ثانية)</li><li>وقت الراحة: 10:00 (غير محسوب)</li></ul><h4>الخطوة 1: حساب NSS</h4><div class="calculation">
                         NSS = 3000م / 55دقيقة<br>
-                        NSS = <strong>54.5 م/دقيقة</strong>
-                    </div>
-
-                    <h4>الخطوة 2: حساب IF</h4>
-                    <div class="calculation">
+                        NSS = <strong>54.5 م/دقيقة</strong></div><h4>الخطوة 2: حساب IF</h4><div class="calculation">
                         IF = 54.5 / 64.5<br>
-                        IF = <strong>0.845</strong>
-                    </div>
-
-                    <h4>الخطوة 3: حساب sTSS</h4>
-                    <div class="calculation">
+                        IF = <strong>0.845</strong></div><h4>الخطوة 3: حساب sTSS</h4><div class="calculation">
                         sTSS = (0.845³) × (55/60) × 100<br>
                         sTSS = 0.603 × 0.917 × 100<br>
-                        sTSS = <strong>55.3</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="intensity-guide mt-xl">
-            <h3>دليل شدة sTSS</h3>
-            <table class="intensity-table">
-                <thead>
-                    <tr>
-                        <th>نطاق sTSS</th>
-                        <th>مستوى الشدة</th>
-                        <th>الوصف</th>
-                        <th>أمثلة على التدريبات</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt; 50</td>
-                        <td>استشفاء سهل</td>
-                        <td>سباحة خفيفة، تركيز تقني، راحة نشطة</td>
-                        <td>30-45 دقيقة سباحة استشفاء، مجموعات تقنية</td>
-                    </tr>
-                    <tr>
-                        <td>50-100</td>
-                        <td>تدريب معتدل</td>
-                        <td>حجم التدريب اليومي النموذجي</td>
-                        <td>60-90 دقيقة تحمل هوائي، مناطق مختلطة</td>
-                    </tr>
-                    <tr>
-                        <td>100-200</td>
-                        <td>تدريب صعب</td>
-                        <td>جلسات ذات جودة مع عمل عتبة/VO₂</td>
-                        <td>90-120 دقيقة مع فترات CSS، مجموعات بسرعة السباق</td>
-                    </tr>
-                    <tr>
-                        <td>200-300</td>
-                        <td>صعب جداً</td>
-                        <td>محاكاة سباق، كتل شدة عالية جداً</td>
-                        <td>جلسات 2-3 ساعات، اختبارات زمنية، مجموعات بجهد أقصى</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; 300</td>
-                        <td>شديد</td>
-                        <td>يوم السباق، أحداث المسافات الفائقة</td>
-                        <td>منافسة، سباحات آيرونمان، سباحة ماراثون</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-lg">
-            <h3>📊 أهداف TSS الأسبوعية حسب المستوى</h3>
-            <ul>
-                <li><strong>مبتدئون:</strong> 200-400 TSS/أسبوع</li>
-                <li><strong>متوسطون:</strong> 400-700 TSS/أسبوع</li>
-                <li><strong>متقدمون/نخبة:</strong> 700-1000+ TSS/أسبوع</li>
-            </ul>
-            <p>هذه تتراكم نحو حمل التدريب المزمن (CTL) الخاص بك.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2 class="text-center mb-xl">مخطط إدارة الأداء (PMC)</h2>
-        <p class="text-center lead">يُصور PMC ثلاثة مقاييس مترابطة تحكي القصة الكاملة لتدريبك: اللياقة، الإرهاق، وحالة الشكل.</p>
-
-        <div class="pmc-overview">
-            <div class="grid grid-3">
-                <div class="pmc-metric">
-                    <div class="metric-icon">📈</div>
-                    <h3>CTL - حمل التدريب المزمن</h3>
-                    <div class="metric-value-label">لياقتك</div>
-                    <p>متوسط مرجح أسياً لـ 42 يوماً من TSS اليومي. يمثل اللياقة الهوائية طويلة الأمد والتكيف مع التدريب.</p>
-                    <div class="formula-small">
+                        sTSS = <strong>55.3</strong></div></div></div></div><div class="intensity-guide mt-xl"><h3>دليل شدة sTSS</h3><table class="intensity-table"><thead><tr><th>نطاق sTSS</th><th>مستوى الشدة</th><th>الوصف</th><th>أمثلة على التدريبات</th></tr></thead><tbody><tr><td>&lt; 50</td><td>استشفاء سهل</td><td>سباحة خفيفة، تركيز تقني، راحة نشطة</td><td>30-45 دقيقة سباحة استشفاء، مجموعات تقنية</td></tr><tr><td>50-100</td><td>تدريب معتدل</td><td>حجم التدريب اليومي النموذجي</td><td>60-90 دقيقة تحمل هوائي، مناطق مختلطة</td></tr><tr><td>100-200</td><td>تدريب صعب</td><td>جلسات ذات جودة مع عمل عتبة/VO₂</td><td>90-120 دقيقة مع فترات CSS، مجموعات بسرعة السباق</td></tr><tr><td>200-300</td><td>صعب جداً</td><td>محاكاة سباق، كتل شدة عالية جداً</td><td>جلسات 2-3 ساعات، اختبارات زمنية، مجموعات بجهد أقصى</td></tr><tr><td>&gt; 300</td><td>شديد</td><td>يوم السباق، أحداث المسافات الفائقة</td><td>منافسة، سباحات آيرونمان، سباحة ماراثون</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>📊 أهداف TSS الأسبوعية حسب المستوى</h3><ul><li><strong>مبتدئون:</strong> 200-400 TSS/أسبوع</li><li><strong>متوسطون:</strong> 400-700 TSS/أسبوع</li><li><strong>متقدمون/نخبة:</strong> 700-1000+ TSS/أسبوع</li></ul><p>هذه تتراكم نحو حمل التدريب المزمن (CTL) الخاص بك.</p></div></div></section><section class="section"><div class="container"><h2 class="text-center mb-xl">مخطط إدارة الأداء (PMC)</h2><p class="text-center lead">يُصور PMC ثلاثة مقاييس مترابطة تحكي القصة الكاملة لتدريبك: اللياقة، الإرهاق، وحالة الشكل.</p><div class="pmc-overview"><div class="grid grid-3"><div class="pmc-metric"><div class="metric-icon">📈</div><h3>CTL - حمل التدريب المزمن</h3><div class="metric-value-label">لياقتك</div><p>متوسط مرجح أسياً لـ 42 يوماً من TSS اليومي. يمثل اللياقة الهوائية طويلة الأمد والتكيف مع التدريب.</p><div class="formula-small">
                         CTL اليوم = CTL الأمس + (TSS اليوم - CTL الأمس) × (1/42)
-                    </div>
-                </div>
-
-                <div class="pmc-metric">
-                    <div class="metric-icon">⚡</div>
-                    <h3>ATL - حمل التدريب الحاد</h3>
-                    <div class="metric-value-label">إرهاقك</div>
-                    <p>متوسط مرجح أسياً لـ 7 أيام من TSS اليومي. يلتقط إجهاد التدريب الأخير والإرهاق المتراكم.</p>
-                    <div class="formula-small">
+                    </div></div><div class="pmc-metric"><div class="metric-icon">⚡</div><h3>ATL - حمل التدريب الحاد</h3><div class="metric-value-label">إرهاقك</div><p>متوسط مرجح أسياً لـ 7 أيام من TSS اليومي. يلتقط إجهاد التدريب الأخير والإرهاق المتراكم.</p><div class="formula-small">
                         ATL اليوم = ATL الأمس + (TSS اليوم - ATL الأمس) × (1/7)
-                    </div>
-                </div>
-
-                <div class="pmc-metric">
-                    <div class="metric-icon">🎯</div>
-                    <h3>TSB - توازن إجهاد التدريب</h3>
-                    <div class="metric-value-label">حالة شكلك</div>
-                    <p>الفرق بين لياقة الأمس وإرهاق الأمس. يشير إلى الجاهزية للأداء أو الحاجة للراحة.</p>
-                    <div class="formula-small">
+                    </div></div><div class="pmc-metric"><div class="metric-icon">🎯</div><h3>TSB - توازن إجهاد التدريب</h3><div class="metric-value-label">حالة شكلك</div><p>الفرق بين لياقة الأمس وإرهاق الأمس. يشير إلى الجاهزية للأداء أو الحاجة للراحة.</p><div class="formula-small">
                         TSB = CTL الأمس - ATL الأمس
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2>فهم CTL: مقياس لياقتك</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>ما يمثله CTL</h3>
-                <p>يحدد CTL كمياً حمل التدريب الذي <em>تكيف</em> معه جسمك خلال الأسابيع الستة الماضية. CTL أعلى يعني:</p>
-                <ul>
-                    <li>قدرة هوائية وتحمل أكبر</li>
-                    <li>القدرة على التعامل مع حجم تدريب أكبر</li>
-                    <li>تحسينات في التكيفات العضلية والأيضية</li>
-                    <li>أداء مستدام أكبر</li>
-                </ul>
-
-                <div class="callout callout-info">
-                    <h4>ثابت الزمن: 42 يوماً</h4>
-                    <p>CTL له عمر نصف ~14.7 يوماً. بعد 42 يوماً، يبقى حوالي 36.8٪ (1/e) من تأثير جلسة تدريب واحدة.</p>
-                    <p>هذا التدهور البطيء يعني أن اللياقة تُبنى تدريجياً ولكنها تتلاشى ببطء أيضاً - مما يحمي من فقدان التدريب خلال فترات الراحة القصيرة.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>قيم CTL النموذجية</h3>
-                <div class="levels-comparison">
-                    <div class="level-card-compact">
-                        <strong>مبتدئون:</strong>
-                        <div class="value">20-40 CTL</div>
-                        <p>بناء القاعدة البدنية، 3-4 سباحات/أسبوع</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>متوسطون:</strong>
-                        <div class="value">40-70 CTL</div>
-                        <p>تدريب متسق، 4-5 سباحات/أسبوع</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>متقدمون:</strong>
-                        <div class="value">70-100 CTL</div>
-                        <p>حجم عالٍ، 5-6 سباحات/أسبوع، مزدوجة</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>نخبة:</strong>
-                        <div class="value">100-150+ CTL</div>
-                        <p>حمل تدريب محترف، 8-12 جلسة/أسبوع</p>
-                    </div>
-                </div>
-
-                <div class="warning-box mt-md">
-                    <strong>⚠️ حدود معدل زيادة CTL</strong>
-                    <ul>
-                        <li><strong>مبتدئون:</strong> +3-5 CTL أسبوعياً</li>
-                        <li><strong>متوسطون:</strong> +5-7 CTL أسبوعياً</li>
-                        <li><strong>متقدمون:</strong> +7-10 CTL أسبوعياً</li>
-                    </ul>
-                    <p>تجاوز هذه المعدلات يزيد بشكل كبير من خطر الإصابة والإرهاق.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>فهم ATL: مقياس إرهاقك</h2>
-
-        <div class="content-split">
-            <div>
-                <p>يتتبع ATL إجهاد التدريب قصير الأمد - الإرهاق المتراكم في الأسبوع الماضي. يزداد بسرعة بعد التدريبات الصعبة وينخفض بسرعة خلال الراحة.</p>
-
-                <h3>ديناميكيات ATL</h3>
-                <ul>
-                    <li><strong>استجابة سريعة:</strong> ثابت زمن 7 أيام (عمر نصف ~2.4 يوم)</li>
-                    <li><strong>نمط قمم:</strong> يقفز بعد الجلسات الصعبة، ينخفض خلال الاستشفاء</li>
-                    <li><strong>مؤشر الاستشفاء:</strong> انخفاض ATL = تبدد الإرهاق</li>
-                    <li><strong>تحذير الإفراط في التدريب:</strong> ATL مرتفع مزمناً يشير إلى استشفاء غير كافٍ</li>
-                </ul>
-
-                <div class="callout callout-science">
-                    <h4>🔬 نموذج اللياقة-الإرهاق</h4>
-                    <p>كل جلسة تدريب تنتج تأثيرين:</p>
-                    <ol>
-                        <li><strong>حافز لياقة</strong> (بناء بطيء، مدة طويلة)</li>
-                        <li><strong>إرهاق</strong> (بناء سريع، تبدد سريع)</li>
-                    </ol>
-                    <p>الأداء = اللياقة - الإرهاق. يُصور PMC هذا النموذج، مما يسمح بدورية علمية للتدريب.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>في حالة مستقرة</h3>
-                <p>عندما يكون حمل التدريب متسقاً أسبوعاً بعد أسبوع، يتقارب CTL وATL:</p>
-                <div class="example-box">
-                    <h4>مثال: 500 TSS/أسبوع باستمرار</h4>
-                    <div class="calculation">
+                    </div></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>فهم CTL: مقياس لياقتك</h2><div class="grid grid-2"><div><h3>ما يمثله CTL</h3><p>يحدد CTL كمياً حمل التدريب الذي <em>تكيف</em> معه جسمك خلال الأسابيع الستة الماضية. CTL أعلى يعني:</p><ul><li>قدرة هوائية وتحمل أكبر</li><li>القدرة على التعامل مع حجم تدريب أكبر</li><li>تحسينات في التكيفات العضلية والأيضية</li><li>أداء مستدام أكبر</li></ul><div class="callout callout-info"><h4>ثابت الزمن: 42 يوماً</h4><p>CTL له عمر نصف ~14.7 يوماً. بعد 42 يوماً، يبقى حوالي 36.8٪ (1/e) من تأثير جلسة تدريب واحدة.</p><p>هذا التدهور البطيء يعني أن اللياقة تُبنى تدريجياً ولكنها تتلاشى ببطء أيضاً - مما يحمي من فقدان التدريب خلال فترات الراحة القصيرة.</p></div></div><div><h3>قيم CTL النموذجية</h3><div class="levels-comparison"><div class="level-card-compact"><strong>مبتدئون:</strong><div class="value">20-40 CTL</div><p>بناء القاعدة البدنية، 3-4 سباحات/أسبوع</p></div><div class="level-card-compact"><strong>متوسطون:</strong><div class="value">40-70 CTL</div><p>تدريب متسق، 4-5 سباحات/أسبوع</p></div><div class="level-card-compact"><strong>متقدمون:</strong><div class="value">70-100 CTL</div><p>حجم عالٍ، 5-6 سباحات/أسبوع، مزدوجة</p></div><div class="level-card-compact"><strong>نخبة:</strong><div class="value">100-150+ CTL</div><p>حمل تدريب محترف، 8-12 جلسة/أسبوع</p></div></div><div class="warning-box mt-md"><strong>⚠️ حدود معدل زيادة CTL</strong><ul><li><strong>مبتدئون:</strong> +3-5 CTL أسبوعياً</li><li><strong>متوسطون:</strong> +5-7 CTL أسبوعياً</li><li><strong>متقدمون:</strong> +7-10 CTL أسبوعياً</li></ul><p>تجاوز هذه المعدلات يزيد بشكل كبير من خطر الإصابة والإرهاق.</p></div></div></div></div></section><section class="section"><div class="container"><h2>فهم ATL: مقياس إرهاقك</h2><div class="content-split"><div><p>يتتبع ATL إجهاد التدريب قصير الأمد - الإرهاق المتراكم في الأسبوع الماضي. يزداد بسرعة بعد التدريبات الصعبة وينخفض بسرعة خلال الراحة.</p><h3>ديناميكيات ATL</h3><ul><li><strong>استجابة سريعة:</strong> ثابت زمن 7 أيام (عمر نصف ~2.4 يوم)</li><li><strong>نمط قمم:</strong> يقفز بعد الجلسات الصعبة، ينخفض خلال الاستشفاء</li><li><strong>مؤشر الاستشفاء:</strong> انخفاض ATL = تبدد الإرهاق</li><li><strong>تحذير الإفراط في التدريب:</strong> ATL مرتفع مزمناً يشير إلى استشفاء غير كافٍ</li></ul><div class="callout callout-science"><h4>🔬 نموذج اللياقة-الإرهاق</h4><p>كل جلسة تدريب تنتج تأثيرين:</p><ol><li><strong>حافز لياقة</strong> (بناء بطيء، مدة طويلة)</li><li><strong>إرهاق</strong> (بناء سريع، تبدد سريع)</li></ol><p>الأداء = اللياقة - الإرهاق. يُصور PMC هذا النموذج، مما يسمح بدورية علمية للتدريب.</p></div></div><div><h3>في حالة مستقرة</h3><p>عندما يكون حمل التدريب متسقاً أسبوعاً بعد أسبوع، يتقارب CTL وATL:</p><div class="example-box"><h4>مثال: 500 TSS/أسبوع باستمرار</h4><div class="calculation">
                         TSS يومي ≈ 71<br>
                         CTL يقترب من ~71<br>
                         ATL يقترب من ~71<br>
                         TSB يقترب من 0
-                    </div>
-                    <p><strong>التفسير:</strong> اللياقة والإرهاق متوازنان. لا يوجد عجز أو فائض تراكمي.</p>
-                </div>
-
-                <h3>خلال مراحل البناء</h3>
-                <p>عندما تزيد حمل التدريب:</p>
-                <div class="example-box">
-                    <p>يزداد ATL <em>أسرع</em> من CTL بسبب ثابت الزمن الأقصر. يصبح TSB سالباً (إرهاق > لياقة). هذا طبيعي ومنتج - أنت تطبق حملاً زائداً لتحفيز التكيف.</p>
-                </div>
-
-                <h3>خلال المرحلة التناقصية</h3>
-                <p>عندما تخفض حمل التدريب:</p>
-                <div class="example-box">
-                    <p>ينخفض ATL <em>أسرع</em> من CTL. يصبح TSB إيجابياً (لياقة > إرهاق). هذا هو الهدف - الوصول ليوم السباق منتعشاً مع الاحتفاظ باللياقة.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2>فهم TSB: مقياس حالة الشكل/الجاهزية</h2>
-
-        <p class="lead">TSB هو الفرق بين لياقة الأمس (CTL) وإرهاق الأمس (ATL). يشير إلى ما إذا كنت منتعشاً أو متعباً، جاهزاً للمنافسة أو تحتاج للاستشفاء.</p>
-
-        <div class="tsb-zones-container">
-            <h3>دليل تفسير TSB</h3>
-            <table class="tsb-zones-table">
-                <thead>
-                    <tr>
-                        <th>نطاق TSB</th>
-                        <th>الحالة</th>
-                        <th>التفسير</th>
-                        <th>الإجراء الموصى به</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tsb-critical">
-                        <td>&lt; -30</td>
-                        <td><strong>خطر الحمل الزائد</strong></td>
-                        <td>إرهاق شديد. احتمال الإفراط في التدريب.</td>
-                        <td>استشفاء فوري ضروري. تقليل الحجم 50%+.</td>
-                    </tr>
-                    <tr class="tsb-training">
-                        <td>-20 إلى -30</td>
-                        <td><strong>كتلة التدريب الأمثل</strong></td>
-                        <td>حمل زائد منتج. بناء اللياقة.</td>
-                        <td>متابعة الخطة. مراقبة علامات الإرهاق المفرط.</td>
-                    </tr>
-                    <tr class="tsb-moderate">
-                        <td>-10 إلى -20</td>
-                        <td><strong>حمل معتدل</strong></td>
-                        <td>تراكم تدريب قياسي.</td>
-                        <td>تدريب عادي. يمكن التعامل مع جلسات ذات جودة.</td>
-                    </tr>
-                    <tr class="tsb-neutral">
-                        <td>-10 إلى +15</td>
-                        <td><strong>انتقالي/صيانة</strong></td>
-                        <td>حالة متوازنة. إرهاق خفيف أو انتعاش.</td>
-                        <td>جيد لسباقات B/C، اختبارات، أو أسابيع استشفاء.</td>
-                    </tr>
-                    <tr class="tsb-fresh">
-                        <td>+15 إلى +25</td>
-                        <td><strong>شكل السباق الأمثل</strong></td>
-                        <td>منتعش ولائق. نافذة الأداء الأمثل.</td>
-                        <td>سباقات A ذات أولوية. أداء ذروة متوقع.</td>
-                    </tr>
-                    <tr class="tsb-very-fresh">
-                        <td>+25 إلى +35</td>
-                        <td><strong>منتعش جداً</strong></td>
-                        <td>مستريح للغاية. جيد للعدو السريع.</td>
-                        <td>سباقات قصيرة، اختبارات زمنية، حالة شديدة الراحة.</td>
-                    </tr>
-                    <tr class="tsb-detraining">
-                        <td>&gt; +35</td>
-                        <td><strong>فقدان التدريب</strong></td>
-                        <td>فقدان اللياقة بسبب عدم النشاط.</td>
-                        <td>استئناف التدريب. اللياقة تتراجع بسبب الراحة الطويلة.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>🎯 TSB المستهدف حسب مسافة السباق</h3>
-            <ul>
-                <li><strong>عدو سريع/ترياثلون أولمبي:</strong> TSB +15 إلى +25 (مرحلة تناقصية 7-10 أيام)</li>
-                <li><strong>نصف آيرونمان (70.3):</strong> TSB +20 إلى +30 (مرحلة تناقصية 10-14 يوم)</li>
-                <li><strong>آيرونمان كامل:</strong> TSB +15 إلى +25 (مرحلة تناقصية 14-21 يوم)</li>
-                <li><strong>أحداث سباحة المسبح:</strong> TSB +15 إلى +25 (مرحلة تناقصية 7-14 يوم حسب الحدث)</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>مثال PMC: كتلة التدريب → المرحلة التناقصية → السباق</h2>
-
-        <div class="example-box">
-            <h3>دورة تدريب 8 أسابيع</h3>
-
-            <h4>الأسابيع 1-5: مرحلة البناء</h4>
-            <ul>
-                <li>TSS أسبوعي: 400 → 450 → 500 → 550 → 550</li>
-                <li>CTL: يزداد تدريجياً من 50 → 65</li>
-                <li>ATL: يتبع الحمل الأسبوعي، يتقلب 55-80</li>
-                <li>TSB: سالب (-15 إلى -25)، يشير إلى إجهاد تدريب منتج</li>
-            </ul>
-
-            <h4>الأسبوع 6: أسبوع استشفاء</h4>
-            <ul>
-                <li>TSS أسبوعي: 300 (تخفيض 40٪)</li>
-                <li>CTL: انخفاض طفيف إلى ~63 (اللياقة محتفظ بها)</li>
-                <li>ATL: ينخفض إلى ~50 (الإرهاق يتبدد)</li>
-                <li>TSB: يرتفع إلى +5 (انتعاش جزئي)</li>
-            </ul>
-
-            <h4>الأسبوع 7: البناء الأخير</h4>
-            <ul>
-                <li>TSS أسبوعي: 500</li>
-                <li>CTL: يرتفع إلى ~65</li>
-                <li>ATL: يقفز إلى ~75</li>
-                <li>TSB: يعود إلى -20 (تدريب ذو جودة ممتص)</li>
-            </ul>
-
-            <h4>الأسبوع 8: المرحلة التناقصية + السباق</h4>
-            <ul>
-                <li>الأيام 1-9: حجم مخفض، حافظ على الشدة (200 TSS إجمالي)</li>
-                <li>CTL: انخفاض تدريجي إلى ~62 (خسارة لياقة قليلة)</li>
-                <li>ATL: هبوط سريع إلى ~40 (إرهاق مُزال)</li>
-                <li>TSB: ذروة <strong>+20 يوم السباق</strong></li>
-                <li><strong>النتيجة:</strong> منتعش، لائق، جاهز للأداء</li>
-            </ul>
-        </div>
-
-        <div class="callout callout-success">
-            <h3>✅ لماذا تعمل المرحلة التناقصية</h3>
-            <p>ثوابت الزمن المختلفة (42 يوماً لـ CTL، 7 أيام لـ ATL) تخلق تأثير المرحلة التناقصية:</p>
-            <ul>
-                <li>ATL يستجيب بسرعة → الإرهاق يختفي في 7-10 أيام</li>
-                <li>CTL يستجيب ببطء → اللياقة تستمر لأسابيع</li>
-                <li>النتيجة: اللياقة تبقى بينما الإرهاق يختفي = أداء ذروة</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>إرشادات التطبيق العملي</h2>
-
-        <div class="guidelines-grid">
-            <div class="guideline-item">
-                <h3>1️⃣ سجل sTSS يومياً</h3>
-                <p>الاتساق هو المفتاح. سجل sTSS لكل جلسة تدريب لبناء اتجاهات CTL/ATL/TSB دقيقة. البيانات المفقودة تخلق فجوات في منحنى اللياقة.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>2️⃣ راقب معدل زيادة CTL</h3>
-                <p>زد CTL تدريجياً. زيادة أسبوعية 5-7 نقاط مستدامة لمعظم السباحين. القفز 15-20 نقطة يدعو للإصابات.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>3️⃣ خطط لأسابيع الاستشفاء</h3>
-                <p>كل 3-4 أسابيع، قلل الحجم 30-50٪ لمدة أسبوع. دع TSB يرتفع إلى -5 إلى +10. هذا يعزز اللياقة ويمنع الإفراط في التدريب.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>4️⃣ وقت المرحلة التناقصية</h3>
-                <p>استهدف TSB +15 إلى +25 يوم السباق. ابدأ المرحلة التناقصية 7-14 يوم قبل حسب مسافة الحدث وTSB الحالي.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>5️⃣ لا تخف من TSB السالب</h3>
-                <p>TSB من -20 إلى -30 خلال مراحل البناء طبيعي ومنتج. يعني أنك تطبق حافزاً للتكيف.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>6️⃣ احترم تدهور CTL</h3>
-                <p>بعد توقف التدريب، لا تحاول استئناف CTL السابق فوراً. أعد البناء تدريجياً لتجنب الإصابات.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow text-center">
-        <h2>أتقن حمل التدريب الخاص بك</h2>
-        <p class="lead">يحول PMC التدريب الذاتي إلى بيانات موضوعية. من خلال مراقبة sTSS وCTL وATL وTSB، تحصل على تحكم دقيق في تطور اللياقة، وإدارة الإرهاق، وتوقيت الأداء الذروة.</p>
-
-        <div class="mt-xl">
-            <a href="/ar/css/" class="btn btn-secondary">← أساسيات CSS</a>
-            <a href="/ar/efficiency/" class="btn btn-primary">مقاييس الكفاءة →</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                    </div><p><strong>التفسير:</strong> اللياقة والإرهاق متوازنان. لا يوجد عجز أو فائض تراكمي.</p></div><h3>خلال مراحل البناء</h3><p>عندما تزيد حمل التدريب:</p><div class="example-box"><p>يزداد ATL <em>أسرع</em> من CTL بسبب ثابت الزمن الأقصر. يصبح TSB سالباً (إرهاق > لياقة). هذا طبيعي ومنتج - أنت تطبق حملاً زائداً لتحفيز التكيف.</p></div><h3>خلال المرحلة التناقصية</h3><p>عندما تخفض حمل التدريب:</p><div class="example-box"><p>ينخفض ATL <em>أسرع</em> من CTL. يصبح TSB إيجابياً (لياقة > إرهاق). هذا هو الهدف - الوصول ليوم السباق منتعشاً مع الاحتفاظ باللياقة.</p></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>فهم TSB: مقياس حالة الشكل/الجاهزية</h2><p class="lead">TSB هو الفرق بين لياقة الأمس (CTL) وإرهاق الأمس (ATL). يشير إلى ما إذا كنت منتعشاً أو متعباً، جاهزاً للمنافسة أو تحتاج للاستشفاء.</p><div class="tsb-zones-container"><h3>دليل تفسير TSB</h3><table class="tsb-zones-table"><thead><tr><th>نطاق TSB</th><th>الحالة</th><th>التفسير</th><th>الإجراء الموصى به</th></tr></thead><tbody><tr class="tsb-critical"><td>&lt; -30</td><td><strong>خطر الحمل الزائد</strong></td><td>إرهاق شديد. احتمال الإفراط في التدريب.</td><td>استشفاء فوري ضروري. تقليل الحجم 50%+.</td></tr><tr class="tsb-training"><td>-20 إلى -30</td><td><strong>كتلة التدريب الأمثل</strong></td><td>حمل زائد منتج. بناء اللياقة.</td><td>متابعة الخطة. مراقبة علامات الإرهاق المفرط.</td></tr><tr class="tsb-moderate"><td>-10 إلى -20</td><td><strong>حمل معتدل</strong></td><td>تراكم تدريب قياسي.</td><td>تدريب عادي. يمكن التعامل مع جلسات ذات جودة.</td></tr><tr class="tsb-neutral"><td>-10 إلى +15</td><td><strong>انتقالي/صيانة</strong></td><td>حالة متوازنة. إرهاق خفيف أو انتعاش.</td><td>جيد لسباقات B/C، اختبارات، أو أسابيع استشفاء.</td></tr><tr class="tsb-fresh"><td>+15 إلى +25</td><td><strong>شكل السباق الأمثل</strong></td><td>منتعش ولائق. نافذة الأداء الأمثل.</td><td>سباقات A ذات أولوية. أداء ذروة متوقع.</td></tr><tr class="tsb-very-fresh"><td>+25 إلى +35</td><td><strong>منتعش جداً</strong></td><td>مستريح للغاية. جيد للعدو السريع.</td><td>سباقات قصيرة، اختبارات زمنية، حالة شديدة الراحة.</td></tr><tr class="tsb-detraining"><td>&gt; +35</td><td><strong>فقدان التدريب</strong></td><td>فقدان اللياقة بسبب عدم النشاط.</td><td>استئناف التدريب. اللياقة تتراجع بسبب الراحة الطويلة.</td></tr></tbody></table></div><div class="callout callout-tip mt-xl"><h3>🎯 TSB المستهدف حسب مسافة السباق</h3><ul><li><strong>عدو سريع/ترياثلون أولمبي:</strong> TSB +15 إلى +25 (مرحلة تناقصية 7-10 أيام)</li><li><strong>نصف آيرونمان (70.3):</strong> TSB +20 إلى +30 (مرحلة تناقصية 10-14 يوم)</li><li><strong>آيرونمان كامل:</strong> TSB +15 إلى +25 (مرحلة تناقصية 14-21 يوم)</li><li><strong>أحداث سباحة المسبح:</strong> TSB +15 إلى +25 (مرحلة تناقصية 7-14 يوم حسب الحدث)</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>مثال PMC: كتلة التدريب → المرحلة التناقصية → السباق</h2><div class="example-box"><h3>دورة تدريب 8 أسابيع</h3><h4>الأسابيع 1-5: مرحلة البناء</h4><ul><li>TSS أسبوعي: 400 → 450 → 500 → 550 → 550</li><li>CTL: يزداد تدريجياً من 50 → 65</li><li>ATL: يتبع الحمل الأسبوعي، يتقلب 55-80</li><li>TSB: سالب (-15 إلى -25)، يشير إلى إجهاد تدريب منتج</li></ul><h4>الأسبوع 6: أسبوع استشفاء</h4><ul><li>TSS أسبوعي: 300 (تخفيض 40٪)</li><li>CTL: انخفاض طفيف إلى ~63 (اللياقة محتفظ بها)</li><li>ATL: ينخفض إلى ~50 (الإرهاق يتبدد)</li><li>TSB: يرتفع إلى +5 (انتعاش جزئي)</li></ul><h4>الأسبوع 7: البناء الأخير</h4><ul><li>TSS أسبوعي: 500</li><li>CTL: يرتفع إلى ~65</li><li>ATL: يقفز إلى ~75</li><li>TSB: يعود إلى -20 (تدريب ذو جودة ممتص)</li></ul><h4>الأسبوع 8: المرحلة التناقصية + السباق</h4><ul><li>الأيام 1-9: حجم مخفض، حافظ على الشدة (200 TSS إجمالي)</li><li>CTL: انخفاض تدريجي إلى ~62 (خسارة لياقة قليلة)</li><li>ATL: هبوط سريع إلى ~40 (إرهاق مُزال)</li><li>TSB: ذروة <strong>+20 يوم السباق</strong></li><li><strong>النتيجة:</strong> منتعش، لائق، جاهز للأداء</li></ul></div><div class="callout callout-success"><h3>✅ لماذا تعمل المرحلة التناقصية</h3><p>ثوابت الزمن المختلفة (42 يوماً لـ CTL، 7 أيام لـ ATL) تخلق تأثير المرحلة التناقصية:</p><ul><li>ATL يستجيب بسرعة → الإرهاق يختفي في 7-10 أيام</li><li>CTL يستجيب ببطء → اللياقة تستمر لأسابيع</li><li>النتيجة: اللياقة تبقى بينما الإرهاق يختفي = أداء ذروة</li></ul></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>إرشادات التطبيق العملي</h2><div class="guidelines-grid"><div class="guideline-item"><h3>1️⃣ سجل sTSS يومياً</h3><p>الاتساق هو المفتاح. سجل sTSS لكل جلسة تدريب لبناء اتجاهات CTL/ATL/TSB دقيقة. البيانات المفقودة تخلق فجوات في منحنى اللياقة.</p></div><div class="guideline-item"><h3>2️⃣ راقب معدل زيادة CTL</h3><p>زد CTL تدريجياً. زيادة أسبوعية 5-7 نقاط مستدامة لمعظم السباحين. القفز 15-20 نقطة يدعو للإصابات.</p></div><div class="guideline-item"><h3>3️⃣ خطط لأسابيع الاستشفاء</h3><p>كل 3-4 أسابيع، قلل الحجم 30-50٪ لمدة أسبوع. دع TSB يرتفع إلى -5 إلى +10. هذا يعزز اللياقة ويمنع الإفراط في التدريب.</p></div><div class="guideline-item"><h3>4️⃣ وقت المرحلة التناقصية</h3><p>استهدف TSB +15 إلى +25 يوم السباق. ابدأ المرحلة التناقصية 7-14 يوم قبل حسب مسافة الحدث وTSB الحالي.</p></div><div class="guideline-item"><h3>5️⃣ لا تخف من TSB السالب</h3><p>TSB من -20 إلى -30 خلال مراحل البناء طبيعي ومنتج. يعني أنك تطبق حافزاً للتكيف.</p></div><div class="guideline-item"><h3>6️⃣ احترم تدهور CTL</h3><p>بعد توقف التدريب، لا تحاول استئناف CTL السابق فوراً. أعد البناء تدريجياً لتجنب الإصابات.</p></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>أتقن حمل التدريب الخاص بك</h2><p class="lead">يحول PMC التدريب الذاتي إلى بيانات موضوعية. من خلال مراقبة sTSS وCTL وATL وTSB، تحصل على تحكم دقيق في تطور اللياقة، وإدارة الإرهاق، وتوقيت الأداء الذروة.</p><div class="mt-xl"><a href="/ar/css/" class="btn btn-secondary">← أساسيات CSS</a><a href="/ar/efficiency/" class="btn btn-primary">مقاييس الكفاءة →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link active"
+                </a><a href="/ar/" class="lang-link active"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. جميع الحقوق محفوظة
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/ar/privacy/">الخصوصية</a></li>
-                <li><a href="/ar/terms/">الشروط</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>يستخدم هذا الموقع ملفات تعريف الارتباط لتحسين تجربتك.</p>
-            <a href="/ar/privacy/" class="text-sm">معرفة المزيد</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">رفض</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">قبول</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/ar/privacy/">الخصوصية</a></li><li><a href="/ar/terms/">الشروط</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>يستخدم هذا الموقع ملفات تعريف الارتباط لتحسين تجربتك.</p><a href="/ar/privacy/" class="text-sm">معرفة المزيد</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">رفض</button><button id="cookie-accept" class="btn btn-primary btn-small">قبول</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

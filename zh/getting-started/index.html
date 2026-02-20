@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="zh" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Swim Analytics入门 - 完整设置指南 | CSS测试教程</title>
-  <meta name="description" content="Swim Analytics完整设置指南。学习如何进行CSS测试、输入结果、跟踪训练并理解sTSS、CTL/ATL/TSB指标。为初学者提供分步教程和故障排除。7天免费试用。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="Swim Analytics指南, CSS测试教程, 游泳应用教程, 如何使用Swim Analytics, 游泳分析指南">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/zh/getting-started/">
-
-  
-  
-  <meta property="article:published_time" content="2025-10-08T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/zh/getting-started/">
-  <meta property="og:title" content="Swim Analytics入门 - 完整设置指南 | CSS测试教程">
-  <meta property="og:description" content="Swim Analytics完整设置指南。学习如何进行CSS测试、输入结果、跟踪训练并理解sTSS、CTL/ATL/TSB指标。为初学者提供分步教程和故障排除。7天免费试用。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="zh_CN">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/zh/getting-started/">
-  <meta name="twitter:title" content="Swim Analytics入门 - 完整设置指南 | CSS测试教程">
-  <meta name="twitter:description" content="Swim Analytics完整设置指南。学习如何进行CSS测试、输入结果、跟踪训练并理解sTSS、CTL/ATL/TSB指标。为初学者提供分步教程和故障排除。7天免费试用。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/getting-started/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/getting-started/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/getting-started/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/getting-started/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/getting-started/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/getting-started/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/getting-started/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/getting-started/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/getting-started/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/getting-started/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/getting-started/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/getting-started/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/getting-started/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/getting-started/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/getting-started/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/getting-started/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/getting-started/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/getting-started/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/getting-started/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/getting-started/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/getting-started/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/getting-started/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/getting-started/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/getting-started/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/getting-started/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/getting-started/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/getting-started/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/getting-started/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/getting-started/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/getting-started/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/getting-started/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/getting-started/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/getting-started/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/getting-started/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/getting-started/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/getting-started/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/getting-started/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/getting-started/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/getting-started/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/getting-started/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/getting-started/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/getting-started/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/getting-started/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/getting-started/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/getting-started/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/getting-started/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/getting-started/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/getting-started/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/getting-started/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/getting-started/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/getting-started/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/getting-started/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/getting-started/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/getting-started/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/getting-started/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/getting-started/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="zh" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Swim Analytics入门 - 完整设置指南 | CSS测试教程</title><meta name="description" content="Swim Analytics完整设置指南。学习如何进行CSS测试、输入结果、跟踪训练并理解sTSS、CTL/ATL/TSB指标。为初学者提供分步教程和故障排除。7天免费试用。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="Swim Analytics指南, CSS测试教程, 游泳应用教程, 如何使用Swim Analytics, 游泳分析指南"><link rel="canonical" href="https://swim.analyticszone.app/zh/getting-started/"><meta property="article:published_time" content="2025-10-08T10:00:00Z"><meta property="article:modified_time" content="2026-01-04T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/zh/getting-started/"><meta property="og:title" content="Swim Analytics入门 - 完整设置指南 | CSS测试教程"><meta property="og:description" content="Swim Analytics完整设置指南。学习如何进行CSS测试、输入结果、跟踪训练并理解sTSS、CTL/ATL/TSB指标。为初学者提供分步教程和故障排除。7天免费试用。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/zh/getting-started/"><meta name="twitter:title" content="Swim Analytics入门 - 完整设置指南 | CSS测试教程"><meta name="twitter:description" content="Swim Analytics完整设置指南。学习如何进行CSS测试、输入结果、跟踪训练并理解sTSS、CTL/ATL/TSB指标。为初学者提供分步教程和故障排除。7天免费试用。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/getting-started/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/getting-started/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/getting-started/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/getting-started/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/getting-started/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/getting-started/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/getting-started/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/getting-started/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/getting-started/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/getting-started/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/getting-started/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/getting-started/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/getting-started/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/getting-started/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/getting-started/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/getting-started/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/getting-started/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/getting-started/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/getting-started/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/getting-started/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/getting-started/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/getting-started/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/getting-started/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/getting-started/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/getting-started/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/getting-started/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/getting-started/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/getting-started/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/getting-started/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/getting-started/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/getting-started/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/getting-started/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/getting-started/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/getting-started/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/getting-started/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/getting-started/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/getting-started/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/getting-started/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/getting-started/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/getting-started/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/getting-started/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/getting-started/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/getting-started/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/getting-started/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/getting-started/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/getting-started/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/getting-started/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/getting-started/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/getting-started/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/getting-started/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/getting-started/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/getting-started/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/getting-started/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/getting-started/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/getting-started/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/getting-started/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "zh"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "Swim Analytics完整设置指南。学习如何进行CSS测试、输入结果、跟踪训练并理解sTSS、CTL/ATL/TSB指标。为初学者提供分步教程和故障排除。7天免费试用。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。",
   "url": "https://swim.analyticszone.app/zh/getting-started/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/zh/getting-started/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1301 +449,339 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">跳到内容</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/zh/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/zh/" 
+  </script></head><body><a href="#main-content" class="skip-link">跳到内容</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/zh/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/zh/" 
                                 aria-current="">
                                 首页
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/zh/getting-started/" class="nav-label">学习</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/zh/getting-started/" class="active" 
+                            </a></li><li class="has-submenu" ><a href="/zh/getting-started/" class="nav-label">学习</a><ul class="submenu"><li><a href="/zh/getting-started/" class="active" 
                                         aria-current="page">
                                         开始
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/css/" 
+                                    </a></li><li><a href="/zh/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/training-zones/" 
+                                    </a></li><li><a href="/zh/training-zones/" 
                                         aria-current="">
                                         训练区间
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/training-load/" 
+                                    </a></li><li><a href="/zh/training-load/" 
                                         aria-current="">
                                         训练负荷
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/stss-calculator/" 
+                                    </a></li><li><a href="/zh/stss-calculator/" 
                                         aria-current="">
                                         sTSS计算器
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/zh/research/" class="nav-label">科学</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/zh/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/zh/research/" class="nav-label">科学</a><ul class="submenu"><li><a href="/zh/research/" 
                                         aria-current="">
                                         研究
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/formulas/" 
+                                    </a></li><li><a href="/zh/formulas/" 
                                         aria-current="">
                                         公式
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/efficiency/" 
+                                    </a></li><li><a href="/zh/efficiency/" 
                                         aria-current="">
                                         效率
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/stroke-mechanics/" 
+                                    </a></li><li><a href="/zh/stroke-mechanics/" 
                                         aria-current="">
                                         划水技术
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/bibliography/" 
+                                    </a></li><li><a href="/zh/bibliography/" 
                                         aria-current="">
                                         参考文献
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/zh/contact/" 
+                                    </a></li></ul></li><li><a href="/zh/contact/" 
                                 aria-current="">
                                 联系
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="选择语言">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="选择语言"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" selected>
+                        </option><option value="zh" selected>
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="切换菜单"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/zh/">首页</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/zh/getting-started/">学习</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">开始</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>Swim Analytics 入门指南</h1>
-        <p class="lead">追踪游泳表现、CSS 测试和训练负荷分析的完整指南</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>欢迎来到数据驱动的游泳</h2>
-            <p>Swim Analytics 使用<strong>临界游泳速度（CSS）</strong>、<strong>训练压力评分（sTSS）</strong>和<strong>表现管理图表（PMC）</strong>指标，将您的游泳训练转化为可操作的见解。本指南将通过 4 个简单步骤，带您从首次设置到高级训练负荷分析。</p>
-        </div>
-
-        <h2>快速入门（5 分钟）</h2>
-
-        <div class="steps-container">
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <h3>下载并安装</h3>
-                    <p>从 App Store 下载 Swim Analytics 并授予访问 Apple Health 的权限。应用程序会自动同步游泳训练——无需手动记录。</p>
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">下载应用 →</a>
-                </div>
-            </div>
-
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h3>进行 CSS 测试</h3>
-                    <p>完成 400 米和 200 米计时测试以确定您的临界游泳速度。这是所有指标的基础——没有 CSS，无法计算 sTSS 和训练区间。</p>
-                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">CSS 测试协议 ↓</a>
-                </div>
-            </div>
-
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h3>输入 CSS 结果</h3>
-                    <p>在应用中输入您的 400 米和 200 米时间。Swim Analytics 会计算 CSS、配速区间，并根据您的生理特征个性化所有指标。随着体能提高，每 6-8 周更新一次。</p>
-                </div>
-            </div>
-
-            <div class="step-card">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <h3>开始追踪训练</h3>
-                    <p>使用 Apple Watch 和健康应用游泳。Swim Analytics 会自动导入训练、计算 sTSS、更新 CTL/ATL/TSB 并追踪进度。无需手动输入数据。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt" id="css-test-guide">
-    <div class="container">
-        <h2 class="mb-xl text-center">完整的 CSS 测试协议</h2>
-
-        <div class="grid grid-2">
-            <div class="card">
-                <h3 class="card-title">📋 您需要什么</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>泳池使用权：</strong>25 米或 50 米泳池（25 码可接受）</li>
-                        <li><strong>计时：</strong>秒表、配速钟或 Apple Watch</li>
-                        <li><strong>热身时间：</strong>测试前 15-20 分钟</li>
-                        <li><strong>恢复：</strong>两次测试之间 5-10 分钟</li>
-                        <li><strong>努力程度：</strong>最大可持续配速（不是全力冲刺）</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">⏱️ 测试日条件</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>充分休息：</strong>测试前 24-48 小时无高强度训练</li>
-                        <li><strong>充分补水：</strong>水分充足，正常饮食</li>
-                        <li><strong>泳池温度：</strong>26-28°C（79-82°F）理想 - 过冷或过热的水会影响表现并扭曲结果</li>
-                        <li><strong>一天中的时间：</strong>您通常训练最佳的时间</li>
-                        <li><strong>装备：</strong>与训练相同（泳镜、泳帽、泳衣）</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="mt-3xl">CSS 测试分步指南</h3>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-marker">热身</div>
-                <div class="timeline-content">
-                    <h4>15-20 分钟</h4>
-                    <p>400-800 米轻松游泳、技术练习和渐进式加速。包括 2-3×50 米逐渐加速（60%、75%、85% 努力）。测试前休息 2-3 分钟。</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">测试 1</div>
-                <div class="timeline-content">
-                    <h4>400 米最大努力</h4>
-                    <p><strong>蹬壁出发</strong>（不跳水）。以您能在全程保持的最快配速游 400 米。这不是冲刺：为整个距离配速。以 <strong>mm:ss</strong> 格式记录时间（例如，6:08）。</p>
-                    <div class="tip-box mt-sm">
-                        <strong>配速提示：</strong>目标是均匀的 100 米分段。第二个 200 米应该 ≤ 第一个 200 米（负分段理想）。
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">恢复</div>
-                <div class="timeline-content">
-                    <h4>5-10 分钟</h4>
-                    <p><strong>关键阶段：</strong>轻松游泳或完全休息。等到心率降至 120 bpm 以下且呼吸完全恢复。目标：可以交谈的呼吸并感觉准备好进行另一次最大努力。恢复不足 = CSS 不准确。</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">测试 2</div>
-                <div class="timeline-content">
-                    <h4>200 米最大努力</h4>
-                    <p><strong>蹬壁出发</strong>（不跳水）。200 米最大可持续努力。每 100 米应该比 400 米感觉更难。以 <strong>mm:ss</strong> 格式记录时间（例如，2:30）。</p>
-                    <div class="tip-box mt-sm">
-                        <strong>验证检查：</strong>200 米配速/100 米应该比 400 米配速/100 米快 3-6 秒。如果不是，则恢复不足或配速不当。
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">放松</div>
-                <div class="timeline-content">
-                    <h4>10-15 分钟</h4>
-                    <p>300-500 米轻松游泳、拉伸。立即记录您的时间——不要相信记忆。</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-warning mt-xl">
-            <h3>⚠️ 常见的 CSS 测试错误</h3>
-            <ul>
-                <li><strong>400 米出发太快：</strong>导致崩溃，CSS 不准确。使用均匀配速。</li>
-                <li><strong>两次测试之间恢复不足：</strong>疲劳减慢 200 米，使 CSS 人为加快 → 过度训练的区间。</li>
-                <li><strong>使用跳水出发：</strong>增加 0.5-1.5 秒优势，扭曲计算。始终从壁蹬出。</li>
-                <li><strong>疲劳时测试：</strong>测试前 24-48 小时的大训练量 = 结果低迷。在新鲜时测试。</li>
-                <li><strong>不立即记录：</strong>记忆不可靠。在放松前写下时间。</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>在 Swim Analytics 中输入 CSS 结果</h2>
-
-        <div class="screenshot-guide">
-            <div class="step-item">
-                <h3>步骤 1：打开 CSS 设置</h3>
-                <p>在 Swim Analytics 应用中，转到<strong>设置 → 临界游泳速度</strong>。点击"进行 CSS 测试"或"更新 CSS"。</p>
-            </div>
-
-            <div class="step-item">
-                <h3>步骤 2：输入时间</h3>
-                <p>输入您的 400 米时间（例如，<code>6:08</code>）和 200 米时间（例如，<code>2:30</code>）。使用显示的确切格式。点击"计算"。</p>
-            </div>
-
-            <div class="step-item">
-                <h3>步骤 3：查看结果</h3>
-                <p>应用显示：</p>
-                <ul>
-                    <li><strong>CSS 速度：</strong>0.917 米/秒</li>
-                    <li><strong>CSS 配速：</strong>1:49/100 米</li>
-                    <li><strong>训练区间：</strong>7 个个性化区间（区间 1-7）</li>
-                    <li><strong>sTSS 基线：</strong>现在为所有训练启用</li>
-                </ul>
-            </div>
-
-            <div class="step-item">
-                <h3>步骤 4：保存并同步</h3>
-                <p>点击"保存 CSS"。应用立即：</p>
-                <ul>
-                    <li>重新计算训练区间</li>
-                    <li>追溯更新过去 90 天的 sTSS</li>
-                    <li>调整 CTL/ATL/TSB 计算</li>
-                    <li>启用基于区间的训练分析</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>💡 专业提示：历史 CSS 测试</h3>
-            <p>如果您已经从以前的测试中知道您的 CSS，您可以直接输入这些时间。但是，为了获得最准确的结果，每 6-8 周进行一次新测试。随着训练的进展，您的 CSS 应该会提高（变快）。</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="mb-xl text-center">了解您的指标</h2>
-
-        <div class="grid grid-2">
-            <div class="card">
-                <h3 class="card-title">临界游泳速度（CSS）</h3>
-                <div class="card-content">
-                    <p><strong>它是什么：</strong>您的有氧阈值配速——您可以在约 30 分钟内保持而不会力竭的最快速度。</p>
-                    <p><strong>它意味着什么：</strong>CSS = 1:49/100 米意味着您可以在持续的阈值努力中保持 1:49 配速。</p>
-                    <p><strong>如何使用：</strong>所有训练区间和 sTSS 计算的基础。每 6-8 周更新一次。</p>
-                    <a href="/zh/css/" class="btn btn-secondary btn-small mt-md">了解 CSS →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">训练区间</h3>
-                <div class="card-content">
-                    <p><strong>它们是什么：</strong>基于您的 CSS 的 7 个强度范围，从恢复（区间 1）到冲刺（区间 7）。</p>
-                    <p><strong>它们意味着什么：</strong>每个区间针对特定的生理适应（有氧基础、阈值、VO₂max）。</p>
-                    <p><strong>如何使用：</strong>遵循区间规定进行结构化训练。应用显示每次训练的区间时间。</p>
-                    <a href="/zh/training-zones/" class="btn btn-secondary btn-small mt-md">训练区间 →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">游泳训练压力评分（sTSS）</h3>
-                <div class="card-content">
-                    <p><strong>它是什么：</strong>结合强度和持续时间的量化训练压力。在 CSS 配速下 1 小时 = 100 sTSS。</p>
-                    <p><strong>它意味着什么：</strong>sTSS 50 = 轻松恢复，sTSS 100 = 中等，sTSS 200+ = 非常艰苦的训练。</p>
-                    <p><strong>如何使用：</strong>追踪每日/每周 sTSS 以管理训练负荷。目标是每周最多增加 5-10 sTSS。</p>
-                    <a href="/zh/training-load/" class="btn btn-secondary btn-small mt-md">sTSS 指南 →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">CTL / ATL / TSB</h3>
-                <div class="card-content">
-                    <p><strong>它们是什么：</strong></p>
-                    <ul>
-                        <li><strong>CTL：</strong>慢性训练负荷（体能）- 42 天平均 sTSS</li>
-                        <li><strong>ATL：</strong>急性训练负荷（疲劳）- 7 天平均 sTSS</li>
-                        <li><strong>TSB：</strong>训练压力平衡（状态）= CTL - ATL</li>
-                    </ul>
-                    <p><strong>如何使用：</strong>正 TSB = 新鲜/减量，负 TSB = 疲劳。当 TSB = +5 到 +25 时比赛。</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout mt-xl">
-            <h3>📊 您的第一周目标</h3>
-            <p>输入 CSS 并完成 3-5 次训练后：</p>
-            <ul>
-                <li><strong>检查 sTSS 值：</strong>确认它们与努力感知匹配（轻松 ~50，中等 ~100，艰苦 ~150+）</li>
-                <li><strong>查看区间分布：</strong>您是否在区间 2（有氧基础）中花费 60-70% 的时间？</li>
-                <li><strong>建立基线 CTL：</strong>您第一周的平均 sTSS 成为初始体能基线</li>
-                <li><strong>识别模式：</strong>哪些训练产生最高的 sTSS？您是否充分恢复？</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>典型用户旅程（前 8 周）</h2>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                <h3>第 1-2 周：建立基线</h3>
-                <ul>
-                    <li>进行 CSS 测试并输入结果</li>
-                    <li>完成 3-5 次正常训练</li>
-                    <li>观察 sTSS 值和区间分布</li>
-                    <li>建立初始 CTL（体能水平）</li>
-                    <li><strong>目标：</strong>了解指标，暂不做改变</li>
-                </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                <h3>第 3-4 周：应用区间</h3>
-                <ul>
-                    <li>在训练计划中使用 CSS 区间</li>
-                    <li>有意识地在有氧组中游区间 2</li>
-                    <li>追踪每周 sTSS 总数（目标是一致性）</li>
-                    <li>监测 TSB（应该略微为负 = 训练中）</li>
-                    <li><strong>目标：</strong>按区间训练，而不是感觉</li>
-                </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                <h3>第 5-6 周：渐进超负荷</h3>
-                <ul>
-                    <li>从基线增加每周 sTSS 5-10%</li>
-                    <li>每周增加 1 次阈值（区间 4）训练</li>
-                    <li>CTL 应该逐渐上升（体能提高）</li>
-                    <li>ATL 可能在艰苦周飙升（正常）</li>
-                    <li><strong>目标：</strong>受控的体能进步</li>
-                </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                <h3>第 7-8 周：重新测试并调整</h3>
-                <ul>
-                    <li>进行第二次 CSS 测试（应该更快）</li>
-                    <li>在应用中更新区间（配速提高）</li>
-                    <li>比较第 1 周与第 8 周的 CTL（应该 +10-20）</li>
-                    <li>查看进度：时间是否下降？感觉更轻松？</li>
-                    <li><strong>目标：</strong>验证训练有效性</li>
-                </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-success mt-xl">
-            <h3>✅ 成功指标</h3>
-            <p>经过 8 周使用 Swim Analytics 的结构化训练后，您应该看到：</p>
-            <ul>
-                <li><strong>CSS 提高：</strong>CSS 配速快 1-3%（例如，1:49 → 1:47）</li>
-                <li><strong>CTL 增加：</strong>+15-25 分（例如，30 → 50 CTL）</li>
-                <li><strong>一致的 sTSS：</strong>每周总数在 10-15% 的变化范围内</li>
-                <li><strong>更好的配速：</strong>更均匀的分段，更好的努力校准</li>
-                <li><strong>改善的恢复：</strong>TSB 可预测地循环（-10 到 +5）</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>故障排除和常见问题</h2>
-
-        <div class="faq-item">
-            <h3>我的 sTSS 对于训练努力来说似乎太高/太低</h3>
-            <p><strong>原因：</strong>CSS 过时或不准确。</p>
-            <p><strong>解决方案：</strong>重新测试 CSS。如果您在疲劳时测试或配速不当，CSS 将是错误的。正确的 CSS 测试对所有下游指标至关重要。</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>应用显示"未配置 CSS"</h3>
-            <p><strong>原因：</strong>CSS 测试未完成或未保存。</p>
-            <p><strong>解决方案：</strong>转到设置 → 临界游泳速度 → 进行测试。输入 400 米和 200 米时间，然后点击保存。</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>训练未从 Apple Watch 同步</h3>
-            <p><strong>原因：</strong>未授予健康应用权限或训练未分类为"游泳"。</p>
-            <p><strong>解决方案：</strong>检查设置 → 隐私 → 健康 → Swim Analytics → 允许读取训练。确保 Apple Watch 训练类型为"泳池游泳"或"开放水域游泳"。</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>尽管训练一致，CTL 仍未增加</h3>
-            <p><strong>原因：</strong>sTSS 总数太低或频率不一致。</p>
-            <p><strong>解决方案：</strong>CTL 是 42 天指数加权平均。它上升缓慢。将每周 sTSS 增加 5-10%，并保持每周 4 次以上训练以实现一致的 CTL 增长。</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>我应该多久重新测试一次 CSS？</h3>
-            <p><strong>建议：</strong>在基础/建立阶段每 6-8 周一次，在高峰赛季每 4-6 周一次。在生病、受伤、长时间休息后或当区间感觉始终太容易/太难时重新测试。避免在大训练周或比赛前 10 天内测试。</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>我可以将 Swim Analytics 用于其他泳姿吗？</h3>
-            <p><strong>可以，但有限制：</strong>CSS 通常在自由泳中测试。对于混合泳/仰泳/蛙泳训练，sTSS 基于自由泳 CSS 计算。考虑进行特定泳姿的 CSS 测试以获得更高的准确性。</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>下一步</h2>
-
-        <div class="grid grid-3">
-            <div class="card">
-                <h3 class="card-title">学习训练区间</h3>
-                <div class="card-content">
-                    <p>了解如何在区间 2（有氧基础）、区间 4（阈值）和区间 5（VO₂max）中训练以实现特定适应。</p>
-                    <a href="/zh/training-zones/" class="btn btn-secondary btn-small mt-md">训练区间 →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">计算 sTSS</h3>
-                <div class="card-content">
-                    <p>使用我们的免费 sTSS 计算器在进行训练前了解训练负荷。</p>
-                    <a href="/zh/stss-calculator/" class="btn btn-secondary btn-small mt-md">sTSS 计算器 →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">深入了解指标</h3>
-                <div class="card-content">
-                    <p>通过同行评审的研究参考探索 CSS、sTSS、CTL/ATL/TSB 背后的科学。</p>
-                    <a href="/zh/research/" class="btn btn-secondary btn-small mt-md">研究 →</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-xl text-center">
-            <p class="mb-md"><strong>准备好开始追踪了吗？</strong></p>
-            <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">免费下载 Swim Analytics</a>
-            <p class="mt-sm text-secondary">7 天免费试用 • 无需信用卡 • iOS 16+</p>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="切换菜单"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/zh/">首页</a></li><li><a href="/zh/getting-started/">学习</a></li><li><span aria-current="page">开始</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Swim Analytics 入门指南</h1><p class="lead">追踪游泳表现、CSS 测试和训练负荷分析的完整指南</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-info mb-xl"><h2>欢迎来到数据驱动的游泳</h2><p>Swim Analytics 使用<strong>临界游泳速度（CSS）</strong>、<strong>训练压力评分（sTSS）</strong>和<strong>表现管理图表（PMC）</strong>指标，将您的游泳训练转化为可操作的见解。本指南将通过 4 个简单步骤，带您从首次设置到高级训练负荷分析。</p></div><h2>快速入门（5 分钟）</h2><div class="steps-container"><div class="step-card"><div class="step-number">1</div><div class="step-content"><h3>下载并安装</h3><p>从 App Store 下载 Swim Analytics 并授予访问 Apple Health 的权限。应用程序会自动同步游泳训练——无需手动记录。</p><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">下载应用 →</a></div></div><div class="step-card"><div class="step-number">2</div><div class="step-content"><h3>进行 CSS 测试</h3><p>完成 400 米和 200 米计时测试以确定您的临界游泳速度。这是所有指标的基础——没有 CSS，无法计算 sTSS 和训练区间。</p><a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">CSS 测试协议 ↓</a></div></div><div class="step-card"><div class="step-number">3</div><div class="step-content"><h3>输入 CSS 结果</h3><p>在应用中输入您的 400 米和 200 米时间。Swim Analytics 会计算 CSS、配速区间，并根据您的生理特征个性化所有指标。随着体能提高，每 6-8 周更新一次。</p></div></div><div class="step-card"><div class="step-number">4</div><div class="step-content"><h3>开始追踪训练</h3><p>使用 Apple Watch 和健康应用游泳。Swim Analytics 会自动导入训练、计算 sTSS、更新 CTL/ATL/TSB 并追踪进度。无需手动输入数据。</p></div></div></div></div></section><section class="section section-alt" id="css-test-guide"><div class="container"><h2 class="mb-xl text-center">完整的 CSS 测试协议</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">📋 您需要什么</h3><div class="card-content"><ul><li><strong>泳池使用权：</strong>25 米或 50 米泳池（25 码可接受）</li><li><strong>计时：</strong>秒表、配速钟或 Apple Watch</li><li><strong>热身时间：</strong>测试前 15-20 分钟</li><li><strong>恢复：</strong>两次测试之间 5-10 分钟</li><li><strong>努力程度：</strong>最大可持续配速（不是全力冲刺）</li></ul></div></div><div class="card"><h3 class="card-title">⏱️ 测试日条件</h3><div class="card-content"><ul><li><strong>充分休息：</strong>测试前 24-48 小时无高强度训练</li><li><strong>充分补水：</strong>水分充足，正常饮食</li><li><strong>泳池温度：</strong>26-28°C（79-82°F）理想 - 过冷或过热的水会影响表现并扭曲结果</li><li><strong>一天中的时间：</strong>您通常训练最佳的时间</li><li><strong>装备：</strong>与训练相同（泳镜、泳帽、泳衣）</li></ul></div></div></div><h3 class="mt-3xl">CSS 测试分步指南</h3><div class="timeline"><div class="timeline-item"><div class="timeline-marker">热身</div><div class="timeline-content"><h4>15-20 分钟</h4><p>400-800 米轻松游泳、技术练习和渐进式加速。包括 2-3×50 米逐渐加速（60%、75%、85% 努力）。测试前休息 2-3 分钟。</p></div></div><div class="timeline-item"><div class="timeline-marker">测试 1</div><div class="timeline-content"><h4>400 米最大努力</h4><p><strong>蹬壁出发</strong>（不跳水）。以您能在全程保持的最快配速游 400 米。这不是冲刺：为整个距离配速。以 <strong>mm:ss</strong> 格式记录时间（例如，6:08）。</p><div class="tip-box mt-sm"><strong>配速提示：</strong>目标是均匀的 100 米分段。第二个 200 米应该 ≤ 第一个 200 米（负分段理想）。
+                    </div></div></div><div class="timeline-item"><div class="timeline-marker">恢复</div><div class="timeline-content"><h4>5-10 分钟</h4><p><strong>关键阶段：</strong>轻松游泳或完全休息。等到心率降至 120 bpm 以下且呼吸完全恢复。目标：可以交谈的呼吸并感觉准备好进行另一次最大努力。恢复不足 = CSS 不准确。</p></div></div><div class="timeline-item"><div class="timeline-marker">测试 2</div><div class="timeline-content"><h4>200 米最大努力</h4><p><strong>蹬壁出发</strong>（不跳水）。200 米最大可持续努力。每 100 米应该比 400 米感觉更难。以 <strong>mm:ss</strong> 格式记录时间（例如，2:30）。</p><div class="tip-box mt-sm"><strong>验证检查：</strong>200 米配速/100 米应该比 400 米配速/100 米快 3-6 秒。如果不是，则恢复不足或配速不当。
+                    </div></div></div><div class="timeline-item"><div class="timeline-marker">放松</div><div class="timeline-content"><h4>10-15 分钟</h4><p>300-500 米轻松游泳、拉伸。立即记录您的时间——不要相信记忆。</p></div></div></div><div class="callout callout-warning mt-xl"><h3>⚠️ 常见的 CSS 测试错误</h3><ul><li><strong>400 米出发太快：</strong>导致崩溃，CSS 不准确。使用均匀配速。</li><li><strong>两次测试之间恢复不足：</strong>疲劳减慢 200 米，使 CSS 人为加快 → 过度训练的区间。</li><li><strong>使用跳水出发：</strong>增加 0.5-1.5 秒优势，扭曲计算。始终从壁蹬出。</li><li><strong>疲劳时测试：</strong>测试前 24-48 小时的大训练量 = 结果低迷。在新鲜时测试。</li><li><strong>不立即记录：</strong>记忆不可靠。在放松前写下时间。</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>在 Swim Analytics 中输入 CSS 结果</h2><div class="screenshot-guide"><div class="step-item"><h3>步骤 1：打开 CSS 设置</h3><p>在 Swim Analytics 应用中，转到<strong>设置 → 临界游泳速度</strong>。点击"进行 CSS 测试"或"更新 CSS"。</p></div><div class="step-item"><h3>步骤 2：输入时间</h3><p>输入您的 400 米时间（例如，<code>6:08</code>）和 200 米时间（例如，<code>2:30</code>）。使用显示的确切格式。点击"计算"。</p></div><div class="step-item"><h3>步骤 3：查看结果</h3><p>应用显示：</p><ul><li><strong>CSS 速度：</strong>0.917 米/秒</li><li><strong>CSS 配速：</strong>1:49/100 米</li><li><strong>训练区间：</strong>7 个个性化区间（区间 1-7）</li><li><strong>sTSS 基线：</strong>现在为所有训练启用</li></ul></div><div class="step-item"><h3>步骤 4：保存并同步</h3><p>点击"保存 CSS"。应用立即：</p><ul><li>重新计算训练区间</li><li>追溯更新过去 90 天的 sTSS</li><li>调整 CTL/ATL/TSB 计算</li><li>启用基于区间的训练分析</li></ul></div></div><div class="callout callout-tip mt-xl"><h3>💡 专业提示：历史 CSS 测试</h3><p>如果您已经从以前的测试中知道您的 CSS，您可以直接输入这些时间。但是，为了获得最准确的结果，每 6-8 周进行一次新测试。随着训练的进展，您的 CSS 应该会提高（变快）。</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">了解您的指标</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">临界游泳速度（CSS）</h3><div class="card-content"><p><strong>它是什么：</strong>您的有氧阈值配速——您可以在约 30 分钟内保持而不会力竭的最快速度。</p><p><strong>它意味着什么：</strong>CSS = 1:49/100 米意味着您可以在持续的阈值努力中保持 1:49 配速。</p><p><strong>如何使用：</strong>所有训练区间和 sTSS 计算的基础。每 6-8 周更新一次。</p><a href="/zh/css/" class="btn btn-secondary btn-small mt-md">了解 CSS →</a></div></div><div class="card"><h3 class="card-title">训练区间</h3><div class="card-content"><p><strong>它们是什么：</strong>基于您的 CSS 的 7 个强度范围，从恢复（区间 1）到冲刺（区间 7）。</p><p><strong>它们意味着什么：</strong>每个区间针对特定的生理适应（有氧基础、阈值、VO₂max）。</p><p><strong>如何使用：</strong>遵循区间规定进行结构化训练。应用显示每次训练的区间时间。</p><a href="/zh/training-zones/" class="btn btn-secondary btn-small mt-md">训练区间 →</a></div></div><div class="card"><h3 class="card-title">游泳训练压力评分（sTSS）</h3><div class="card-content"><p><strong>它是什么：</strong>结合强度和持续时间的量化训练压力。在 CSS 配速下 1 小时 = 100 sTSS。</p><p><strong>它意味着什么：</strong>sTSS 50 = 轻松恢复，sTSS 100 = 中等，sTSS 200+ = 非常艰苦的训练。</p><p><strong>如何使用：</strong>追踪每日/每周 sTSS 以管理训练负荷。目标是每周最多增加 5-10 sTSS。</p><a href="/zh/training-load/" class="btn btn-secondary btn-small mt-md">sTSS 指南 →</a></div></div><div class="card"><h3 class="card-title">CTL / ATL / TSB</h3><div class="card-content"><p><strong>它们是什么：</strong></p><ul><li><strong>CTL：</strong>慢性训练负荷（体能）- 42 天平均 sTSS</li><li><strong>ATL：</strong>急性训练负荷（疲劳）- 7 天平均 sTSS</li><li><strong>TSB：</strong>训练压力平衡（状态）= CTL - ATL</li></ul><p><strong>如何使用：</strong>正 TSB = 新鲜/减量，负 TSB = 疲劳。当 TSB = +5 到 +25 时比赛。</p></div></div></div><div class="callout mt-xl"><h3>📊 您的第一周目标</h3><p>输入 CSS 并完成 3-5 次训练后：</p><ul><li><strong>检查 sTSS 值：</strong>确认它们与努力感知匹配（轻松 ~50，中等 ~100，艰苦 ~150+）</li><li><strong>查看区间分布：</strong>您是否在区间 2（有氧基础）中花费 60-70% 的时间？</li><li><strong>建立基线 CTL：</strong>您第一周的平均 sTSS 成为初始体能基线</li><li><strong>识别模式：</strong>哪些训练产生最高的 sTSS？您是否充分恢复？</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>典型用户旅程（前 8 周）</h2><div class="timeline"><div class="timeline-item"><div class="timeline-content"><h3>第 1-2 周：建立基线</h3><ul><li>进行 CSS 测试并输入结果</li><li>完成 3-5 次正常训练</li><li>观察 sTSS 值和区间分布</li><li>建立初始 CTL（体能水平）</li><li><strong>目标：</strong>了解指标，暂不做改变</li></ul></div></div><div class="timeline-item"><div class="timeline-content"><h3>第 3-4 周：应用区间</h3><ul><li>在训练计划中使用 CSS 区间</li><li>有意识地在有氧组中游区间 2</li><li>追踪每周 sTSS 总数（目标是一致性）</li><li>监测 TSB（应该略微为负 = 训练中）</li><li><strong>目标：</strong>按区间训练，而不是感觉</li></ul></div></div><div class="timeline-item"><div class="timeline-content"><h3>第 5-6 周：渐进超负荷</h3><ul><li>从基线增加每周 sTSS 5-10%</li><li>每周增加 1 次阈值（区间 4）训练</li><li>CTL 应该逐渐上升（体能提高）</li><li>ATL 可能在艰苦周飙升（正常）</li><li><strong>目标：</strong>受控的体能进步</li></ul></div></div><div class="timeline-item"><div class="timeline-content"><h3>第 7-8 周：重新测试并调整</h3><ul><li>进行第二次 CSS 测试（应该更快）</li><li>在应用中更新区间（配速提高）</li><li>比较第 1 周与第 8 周的 CTL（应该 +10-20）</li><li>查看进度：时间是否下降？感觉更轻松？</li><li><strong>目标：</strong>验证训练有效性</li></ul></div></div></div><div class="callout callout-success mt-xl"><h3>✅ 成功指标</h3><p>经过 8 周使用 Swim Analytics 的结构化训练后，您应该看到：</p><ul><li><strong>CSS 提高：</strong>CSS 配速快 1-3%（例如，1:49 → 1:47）</li><li><strong>CTL 增加：</strong>+15-25 分（例如，30 → 50 CTL）</li><li><strong>一致的 sTSS：</strong>每周总数在 10-15% 的变化范围内</li><li><strong>更好的配速：</strong>更均匀的分段，更好的努力校准</li><li><strong>改善的恢复：</strong>TSB 可预测地循环（-10 到 +5）</li></ul></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>故障排除和常见问题</h2><div class="faq-item"><h3>我的 sTSS 对于训练努力来说似乎太高/太低</h3><p><strong>原因：</strong>CSS 过时或不准确。</p><p><strong>解决方案：</strong>重新测试 CSS。如果您在疲劳时测试或配速不当，CSS 将是错误的。正确的 CSS 测试对所有下游指标至关重要。</p></div><div class="faq-item"><h3>应用显示"未配置 CSS"</h3><p><strong>原因：</strong>CSS 测试未完成或未保存。</p><p><strong>解决方案：</strong>转到设置 → 临界游泳速度 → 进行测试。输入 400 米和 200 米时间，然后点击保存。</p></div><div class="faq-item"><h3>训练未从 Apple Watch 同步</h3><p><strong>原因：</strong>未授予健康应用权限或训练未分类为"游泳"。</p><p><strong>解决方案：</strong>检查设置 → 隐私 → 健康 → Swim Analytics → 允许读取训练。确保 Apple Watch 训练类型为"泳池游泳"或"开放水域游泳"。</p></div><div class="faq-item"><h3>尽管训练一致，CTL 仍未增加</h3><p><strong>原因：</strong>sTSS 总数太低或频率不一致。</p><p><strong>解决方案：</strong>CTL 是 42 天指数加权平均。它上升缓慢。将每周 sTSS 增加 5-10%，并保持每周 4 次以上训练以实现一致的 CTL 增长。</p></div><div class="faq-item"><h3>我应该多久重新测试一次 CSS？</h3><p><strong>建议：</strong>在基础/建立阶段每 6-8 周一次，在高峰赛季每 4-6 周一次。在生病、受伤、长时间休息后或当区间感觉始终太容易/太难时重新测试。避免在大训练周或比赛前 10 天内测试。</p></div><div class="faq-item"><h3>我可以将 Swim Analytics 用于其他泳姿吗？</h3><p><strong>可以，但有限制：</strong>CSS 通常在自由泳中测试。对于混合泳/仰泳/蛙泳训练，sTSS 基于自由泳 CSS 计算。考虑进行特定泳姿的 CSS 测试以获得更高的准确性。</p></div></div></section><section class="section"><div class="container container-narrow"><h2>下一步</h2><div class="grid grid-3"><div class="card"><h3 class="card-title">学习训练区间</h3><div class="card-content"><p>了解如何在区间 2（有氧基础）、区间 4（阈值）和区间 5（VO₂max）中训练以实现特定适应。</p><a href="/zh/training-zones/" class="btn btn-secondary btn-small mt-md">训练区间 →</a></div></div><div class="card"><h3 class="card-title">计算 sTSS</h3><div class="card-content"><p>使用我们的免费 sTSS 计算器在进行训练前了解训练负荷。</p><a href="/zh/stss-calculator/" class="btn btn-secondary btn-small mt-md">sTSS 计算器 →</a></div></div><div class="card"><h3 class="card-title">深入了解指标</h3><div class="card-content"><p>通过同行评审的研究参考探索 CSS、sTSS、CTL/ATL/TSB 背后的科学。</p><a href="/zh/research/" class="btn btn-secondary btn-small mt-md">研究 →</a></div></div></div><div class="mt-xl text-center"><p class="mb-md"><strong>准备好开始追踪了吗？</strong></p><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">免费下载 Swim Analytics</a><p class="mt-sm text-secondary">7 天免费试用 • 无需信用卡 • iOS 16+</p></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link active"
+                </a><a href="/zh/" class="lang-link active"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. 版权所有
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/zh/privacy/">隐私</a></li>
-                <li><a href="/zh/terms/">条款</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>本网站使用cookies改善您的体验。</p>
-            <a href="/zh/privacy/" class="text-sm">了解更多</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">拒绝</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">接受</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/zh/privacy/">隐私</a></li><li><a href="/zh/terms/">条款</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>本网站使用cookies改善您的体验。</p><a href="/zh/privacy/" class="text-sm">了解更多</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">拒绝</button><button id="cookie-accept" class="btn btn-primary btn-small">接受</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="zh" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>临界游泳速度(CSS)计算器 - 免费测试和训练区间 | Swim Analytics</title>
-  <meta name="description" content="为游泳运动员提供的免费CSS计算器。根据400米和200米测试时间计算临界游泳速度。获取个性化训练区间、阈值配速和比赛预测。基于Wakayoshi研究。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="临界游泳速度, CSS计算器, 游泳训练区间, CSS测试, 阈值配速">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/zh/css/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/zh/css/">
-  <meta property="og:title" content="临界游泳速度(CSS)计算器 - 免费测试和训练区间 | Swim Analytics">
-  <meta property="og:description" content="为游泳运动员提供的免费CSS计算器。根据400米和200米测试时间计算临界游泳速度。获取个性化训练区间、阈值配速和比赛预测。基于Wakayoshi研究。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="zh_CN">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/zh/css/">
-  <meta name="twitter:title" content="临界游泳速度(CSS)计算器 - 免费测试和训练区间 | Swim Analytics">
-  <meta name="twitter:description" content="为游泳运动员提供的免费CSS计算器。根据400米和200米测试时间计算临界游泳速度。获取个性化训练区间、阈值配速和比赛预测。基于Wakayoshi研究。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/css/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/css/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/css/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/css/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/css/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/css/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/css/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/css/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/css/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/css/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/css/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/css/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/css/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/css/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/css/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/css/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/css/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/css/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/css/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/css/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/css/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/css/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/css/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/css/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/css/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/css/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/css/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/css/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/css/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/css/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/css/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/css/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/css/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/css/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/css/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/css/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/css/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/css/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/css/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/css/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/css/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/css/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/css/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/css/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/css/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/css/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/css/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/css/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/css/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/css/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/css/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/css/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/css/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/css/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/css/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/css/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="zh" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>临界游泳速度(CSS)计算器 - 免费测试和训练区间 | Swim Analytics</title><meta name="description" content="为游泳运动员提供的免费CSS计算器。根据400米和200米测试时间计算临界游泳速度。获取个性化训练区间、阈值配速和比赛预测。基于Wakayoshi研究。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="临界游泳速度, CSS计算器, 游泳训练区间, CSS测试, 阈值配速"><link rel="canonical" href="https://swim.analyticszone.app/zh/css/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-04T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/zh/css/"><meta property="og:title" content="临界游泳速度(CSS)计算器 - 免费测试和训练区间 | Swim Analytics"><meta property="og:description" content="为游泳运动员提供的免费CSS计算器。根据400米和200米测试时间计算临界游泳速度。获取个性化训练区间、阈值配速和比赛预测。基于Wakayoshi研究。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/zh/css/"><meta name="twitter:title" content="临界游泳速度(CSS)计算器 - 免费测试和训练区间 | Swim Analytics"><meta name="twitter:description" content="为游泳运动员提供的免费CSS计算器。根据400米和200米测试时间计算临界游泳速度。获取个性化训练区间、阈值配速和比赛预测。基于Wakayoshi研究。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/css/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/css/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/css/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/css/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/css/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/css/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/css/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/css/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/css/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/css/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/css/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/css/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/css/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/css/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/css/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/css/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/css/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/css/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/css/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/css/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/css/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/css/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/css/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/css/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/css/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/css/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/css/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/css/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/css/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/css/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/css/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/css/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/css/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/css/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/css/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/css/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/css/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/css/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/css/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/css/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/css/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/css/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/css/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/css/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/css/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/css/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/css/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/css/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/css/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/css/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/css/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/css/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/css/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/css/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/css/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/css/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "zh"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "为游泳运动员提供的免费CSS计算器。根据400米和200米测试时间计算临界游泳速度。获取个性化训练区间、阈值配速和比赛预测。基于Wakayoshi研究。 Swim Analytics 是一款注重隐私的 Apple Watch 游泳分析应用。",
   "url": "https://swim.analyticszone.app/zh/css/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/zh/css/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1381 +449,365 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">跳到内容</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/zh/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/zh/" 
+  </script></head><body><a href="#main-content" class="skip-link">跳到内容</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/zh/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/zh/" 
                                 aria-current="">
                                 首页
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/zh/getting-started/" class="nav-label">学习</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/zh/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/zh/getting-started/" class="nav-label">学习</a><ul class="submenu"><li><a href="/zh/getting-started/" 
                                         aria-current="">
                                         开始
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/css/" class="active" 
+                                    </a></li><li><a href="/zh/css/" class="active" 
                                         aria-current="page">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/training-zones/" 
+                                    </a></li><li><a href="/zh/training-zones/" 
                                         aria-current="">
                                         训练区间
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/training-load/" 
+                                    </a></li><li><a href="/zh/training-load/" 
                                         aria-current="">
                                         训练负荷
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/stss-calculator/" 
+                                    </a></li><li><a href="/zh/stss-calculator/" 
                                         aria-current="">
                                         sTSS计算器
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/zh/research/" class="nav-label">科学</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/zh/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/zh/research/" class="nav-label">科学</a><ul class="submenu"><li><a href="/zh/research/" 
                                         aria-current="">
                                         研究
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/formulas/" 
+                                    </a></li><li><a href="/zh/formulas/" 
                                         aria-current="">
                                         公式
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/efficiency/" 
+                                    </a></li><li><a href="/zh/efficiency/" 
                                         aria-current="">
                                         效率
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/stroke-mechanics/" 
+                                    </a></li><li><a href="/zh/stroke-mechanics/" 
                                         aria-current="">
                                         划水技术
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/zh/bibliography/" 
+                                    </a></li><li><a href="/zh/bibliography/" 
                                         aria-current="">
                                         参考文献
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/zh/contact/" 
+                                    </a></li></ul></li><li><a href="/zh/contact/" 
                                 aria-current="">
                                 联系
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="选择语言">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="选择语言"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" selected>
+                        </option><option value="zh" selected>
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="切换菜单"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/zh/">首页</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/zh/getting-started/">学习</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">CSS</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>临界游泳速度（CSS）</h1>
-        <p class="lead">数据驱动游泳训练的基础</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>什么是临界游泳速度（CSS）？</h2>
-            <p><strong>临界游泳速度（CSS）</strong>是您可以在不力竭的情况下保持的理论最大游泳速度。它代表您的有氧阈值配速，通常对应于 4 mmol/L 血乳酸，可持续约 30 分钟。CSS 使用 400
-                米和 200 米计时测试来确定个性化的训练区间。</p>
-        </div>
-
-        <p class="lead">临界游泳速度（CSS）代表您可以持续保持而不会力竭的理论最大游泳速度。这是您在水中的有氧阈值——乳酸产生等于乳酸清除的强度。</p>
-
-        <div class="callout callout-info">
-            <h3>🎯 生理意义</h3>
-            <p>CSS 密切对应于：</p>
-            <ul>
-                <li><strong>乳酸阈值 2（LT2）</strong> - 第二通气阈值</li>
-                <li><strong>最大乳酸稳态（MLSS）</strong> - 最高可持续乳酸水平</li>
-                <li><strong>功能阈值配速（FTP）</strong> - 游泳相当于自行车 FTP</li>
-                <li><strong>~4 mmol/L 血乳酸</strong> - 传统 OBLA 标记</li>
-            </ul>
-        </div>
-
-        <h3>为什么 CSS 很重要</h3>
-        <p>CSS 是解锁所有高级训练负荷分析的<strong>基础指标</strong>：</p>
-        <ul>
-            <li><strong>训练区间：</strong>根据您的生理特征个性化强度区间</li>
-            <li><strong>sTSS 计算：</strong>实现准确的训练压力评分量化</li>
-            <li><strong>CTL/ATL/TSB：</strong>表现管理图表指标所需</li>
-            <li><strong>进度追踪：</strong>有氧体能改善的客观衡量</li>
-        </ul>
-
-        <div class="warning-box">
-            <strong>⚠️ 关键依赖：</strong>没有有效的 CSS 测试，无法计算高级训练负荷指标（sTSS、CTL、ATL、TSB）。不准确的 CSS 将破坏所有后续的训练分析。
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">CSS 测试协议</h2>
-        <div class="grid grid-2">
-            <div class="protocol-card">
-                <h3>📋 标准协议</h3>
-                <ol class="protocol-steps">
-                    <li>
-                        <strong>热身</strong>
-                        <p>300-800 米轻松游泳、技术练习和渐进式加速，为最大努力做准备。</p>
-                    </li>
-                    <li>
-                        <strong>400 米计时测试</strong>
-                        <p>从蹬壁出发（不跳水）的最大持续努力。精确记录时间。目标：最快的可持续 400 米。</p>
-                    </li>
-                    <li>
-                        <strong>完全恢复</strong>
-                        <p><span class="highlight-text">5-10 分钟</span>的轻松游泳或完全休息。这对准确结果至关重要。</p>
-                    </li>
-                    <li>
-                        <strong>200 米计时测试</strong>
-                        <p>从蹬壁出发的最大努力。精确记录时间。每 100 米应该比 400 米更快。</p>
-                    </li>
-                </ol>
-            </div>
-
-            <div class="protocol-card">
-                <h3>⚠️ 常见错误</h3>
-                <div class="mistake-list">
-                    <div class="mistake-item">
-                        <h4>恢复不足</h4>
-                        <p><strong>问题：</strong>疲劳人为地减慢 200 米时间</p>
-                        <p><strong>结果：</strong>计算的 CSS 变得<em>比实际更快</em>，导致过度训练的区间</p>
-                        <p><strong>解决方案：</strong>休息直到心率降至 120 bpm 以下或呼吸完全恢复</p>
-                    </div>
-
-                    <div class="mistake-item">
-                        <h4>400 米配速不当</h4>
-                        <p><strong>问题：</strong>起步太快导致后程大幅减速</p>
-                        <p><strong>结果：</strong>400 米时间不能反映真实的可持续配速</p>
-                        <p><strong>解决方案：</strong>目标是匀速或负分段（后 200 米 ≤ 前 200 米）</p>
-                    </div>
-
-                    <div class="mistake-item">
-                        <h4>使用跳水出发</h4>
-                        <p><strong>问题：</strong>增加约 0.5-1.5 秒的优势，使计算产生偏差</p>
-                        <p><strong>解决方案：</strong>始终使用蹬壁出发</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>🔄 重测频率</h3>
-            <p>每 <strong>6-8 周</strong>重测一次 CSS，以随着体能提高更新训练区间。随着您适应训练，您的区间应逐渐变快。</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>CSS 计算公式</h2>
-
-        <div class="formula-box">
-            <h3>公式</h3>
-            <div class="formula">
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="切换菜单"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/zh/">首页</a></li><li><a href="/zh/getting-started/">学习</a></li><li><span aria-current="page">CSS</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>临界游泳速度（CSS）</h1><p class="lead">数据驱动游泳训练的基础</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-info mb-xl"><h2>什么是临界游泳速度（CSS）？</h2><p><strong>临界游泳速度（CSS）</strong>是您可以在不力竭的情况下保持的理论最大游泳速度。它代表您的有氧阈值配速，通常对应于 4 mmol/L 血乳酸，可持续约 30 分钟。CSS 使用 400
+                米和 200 米计时测试来确定个性化的训练区间。</p></div><p class="lead">临界游泳速度（CSS）代表您可以持续保持而不会力竭的理论最大游泳速度。这是您在水中的有氧阈值——乳酸产生等于乳酸清除的强度。</p><div class="callout callout-info"><h3>🎯 生理意义</h3><p>CSS 密切对应于：</p><ul><li><strong>乳酸阈值 2（LT2）</strong> - 第二通气阈值</li><li><strong>最大乳酸稳态（MLSS）</strong> - 最高可持续乳酸水平</li><li><strong>功能阈值配速（FTP）</strong> - 游泳相当于自行车 FTP</li><li><strong>~4 mmol/L 血乳酸</strong> - 传统 OBLA 标记</li></ul></div><h3>为什么 CSS 很重要</h3><p>CSS 是解锁所有高级训练负荷分析的<strong>基础指标</strong>：</p><ul><li><strong>训练区间：</strong>根据您的生理特征个性化强度区间</li><li><strong>sTSS 计算：</strong>实现准确的训练压力评分量化</li><li><strong>CTL/ATL/TSB：</strong>表现管理图表指标所需</li><li><strong>进度追踪：</strong>有氧体能改善的客观衡量</li></ul><div class="warning-box"><strong>⚠️ 关键依赖：</strong>没有有效的 CSS 测试，无法计算高级训练负荷指标（sTSS、CTL、ATL、TSB）。不准确的 CSS 将破坏所有后续的训练分析。
+        </div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">CSS 测试协议</h2><div class="grid grid-2"><div class="protocol-card"><h3>📋 标准协议</h3><ol class="protocol-steps"><li><strong>热身</strong><p>300-800 米轻松游泳、技术练习和渐进式加速，为最大努力做准备。</p></li><li><strong>400 米计时测试</strong><p>从蹬壁出发（不跳水）的最大持续努力。精确记录时间。目标：最快的可持续 400 米。</p></li><li><strong>完全恢复</strong><p><span class="highlight-text">5-10 分钟</span>的轻松游泳或完全休息。这对准确结果至关重要。</p></li><li><strong>200 米计时测试</strong><p>从蹬壁出发的最大努力。精确记录时间。每 100 米应该比 400 米更快。</p></li></ol></div><div class="protocol-card"><h3>⚠️ 常见错误</h3><div class="mistake-list"><div class="mistake-item"><h4>恢复不足</h4><p><strong>问题：</strong>疲劳人为地减慢 200 米时间</p><p><strong>结果：</strong>计算的 CSS 变得<em>比实际更快</em>，导致过度训练的区间</p><p><strong>解决方案：</strong>休息直到心率降至 120 bpm 以下或呼吸完全恢复</p></div><div class="mistake-item"><h4>400 米配速不当</h4><p><strong>问题：</strong>起步太快导致后程大幅减速</p><p><strong>结果：</strong>400 米时间不能反映真实的可持续配速</p><p><strong>解决方案：</strong>目标是匀速或负分段（后 200 米 ≤ 前 200 米）</p></div><div class="mistake-item"><h4>使用跳水出发</h4><p><strong>问题：</strong>增加约 0.5-1.5 秒的优势，使计算产生偏差</p><p><strong>解决方案：</strong>始终使用蹬壁出发</p></div></div></div></div><div class="callout callout-tip mt-xl"><h3>🔄 重测频率</h3><p>每 <strong>6-8 周</strong>重测一次 CSS，以随着体能提高更新训练区间。随着您适应训练，您的区间应逐渐变快。</p></div></div></section><section class="section"><div class="container container-narrow"><h2>CSS 计算公式</h2><div class="formula-box"><h3>公式</h3><div class="formula">
                 CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
-            </div>
-            <div class="formula-explanation">
-                <p>其中：</p>
-                <ul>
-                    <li>D₁ = 200 米</li>
-                    <li>D₂ = 400 米</li>
-                    <li>T₁ = 200 米时间（秒）</li>
-                    <li>T₂ = 400 米时间（秒）</li>
-                </ul>
-            </div>
-
-            <h3 class="mt-lg">简化为每 100 米配速</h3>
-            <div class="formula">
+            </div><div class="formula-explanation"><p>其中：</p><ul><li>D₁ = 200 米</li><li>D₂ = 400 米</li><li>T₁ = 200 米时间（秒）</li><li>T₂ = 400 米时间（秒）</li></ul></div><h3 class="mt-lg">简化为每 100 米配速</h3><div class="formula">
                 CSS 配速/100m (秒) = (T₄₀₀ - T₂₀₀) / 2
-            </div>
-        </div>
-
-        <h3>计算示例</h3>
-        <div class="example-box">
-            <h4>测试结果：</h4>
-            <ul>
-                <li>400 米时间：<strong>6:08</strong> (368 秒)</li>
-                <li>200 米时间：<strong>2:30</strong> (150 秒)</li>
-            </ul>
-
-            <h4>第一步：计算 CSS (m/s)</h4>
-            <div class="calculation">
+            </div></div><h3>计算示例</h3><div class="example-box"><h4>测试结果：</h4><ul><li>400 米时间：<strong>6:08</strong> (368 秒)</li><li>200 米时间：<strong>2:30</strong> (150 秒)</li></ul><h4>第一步：计算 CSS (m/s)</h4><div class="calculation">
                 CSS = (400 - 200) / (368 - 150)<br>
                 CSS = 200 / 218<br>
-                CSS = <strong>0.917 m/s</strong>
-            </div>
-
-            <h4>第二步：转换为每 100 米配速</h4>
-            <div class="calculation">
+                CSS = <strong>0.917 m/s</strong></div><h4>第二步：转换为每 100 米配速</h4><div class="calculation">
                 配速 = 100 / 0.917<br>
                 配速 = 109 秒<br>
-                配速 = <strong>1:49 / 100m</strong>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">免费 CSS 计算器</h2>
-        <p class="lead">立即计算您的临界游泳速度和个性化训练区间</p>
-
-        <div class="css-calculator">
-            <form id="cssCalculatorForm">
-                <div class="calculator-inputs">
-                    <div class="form-group">
-                        <label for="time400" class="form-label">400 米时间 (分:秒)</label>
-                        <input type="text" id="time400" class="form-input" placeholder="6:08"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="time400-help" />
-                        <small id="time400-help" class="form-help">格式：分:秒 (例如 6:08)</small>
-                        <div class="form-error" id="time400-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="time200" class="form-label">200 米时间 (分:秒)</label>
-                        <input type="text" id="time200" class="form-input" placeholder="2:30"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="time200-help" />
-                        <small id="time200-help" class="form-help">格式：分:秒 (例如 2:30)</small>
-                        <div class="form-error" id="time200-error"></div>
-                    </div>
-                    <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateBtn">计算 CSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetBtn">清除</button>
-                    </div>
-                </div>
-            </form>
-
-            <div class="calculator-results hidden" id="cssResults" aria-live="polite">
-                <h3>您的结果</h3>
-                <div class="results-summary">
-                    <div class="result-item">
-                        <div class="result-label">临界游泳速度 (CSS)</div>
-                        <div class="css-result-value" id="cssValue">--</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-label">CSS 配速 / 100m</div>
-                        <div class="css-result-value" id="cssPace">--</div>
-                    </div>
-                </div>
-
-                <div class="zones-result">
-                    <h4>您的个性化训练区间</h4>
-                    <p class="mb-md text-secondary">
+                配速 = <strong>1:49 / 100m</strong></div></div><h2 class="mt-3xl">免费 CSS 计算器</h2><p class="lead">立即计算您的临界游泳速度和个性化训练区间</p><div class="css-calculator"><form id="cssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label for="time400" class="form-label">400 米时间 (分:秒)</label><input type="text" id="time400" class="form-input" placeholder="6:08"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="time400-help" /><small id="time400-help" class="form-help">格式：分:秒 (例如 6:08)</small><div class="form-error" id="time400-error"></div></div><div class="form-group"><label for="time200" class="form-label">200 米时间 (分:秒)</label><input type="text" id="time200" class="form-input" placeholder="2:30"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="time200-help" /><small id="time200-help" class="form-help">格式：分:秒 (例如 2:30)</small><div class="form-error" id="time200-error"></div></div><div class="calculator-buttons"><button type="submit" class="btn btn-primary" id="calculateBtn">计算 CSS</button><button type="reset" class="btn btn-ghost" id="resetBtn">清除</button></div></div></form><div class="calculator-results hidden" id="cssResults" aria-live="polite"><h3>您的结果</h3><div class="results-summary"><div class="result-item"><div class="result-label">临界游泳速度 (CSS)</div><div class="css-result-value" id="cssValue">--</div></div><div class="result-item"><div class="result-label">CSS 配速 / 100m</div><div class="css-result-value" id="cssPace">--</div></div></div><div class="zones-result"><h4>您的个性化训练区间</h4><p class="mb-md text-secondary">
                         基于您的 CSS，以下是您的每 100 米配速训练区间：
-                    </p>
-                    <div id="zonesTable"></div>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="mt-xl">替代方法（简化版）：</h3>
-        <div class="example-box">
-            <div class="calculation">
+                    </p><div id="zonesTable"></div></div></div></div><h3 class="mt-xl">替代方法（简化版）：</h3><div class="example-box"><div class="calculation">
                 配速 = (368 - 150) / 2<br>
                 配速 = 218 / 2<br>
-                配速 = 109 秒 = <strong>1:49 / 100m</strong>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="mb-xl">基于 CSS 的训练区间</h2>
-
-        <div class="callout callout-info">
-            <p><strong>注意：</strong>在游泳中，配速以<em>每距离时间</em>测量。因此，<strong>更高的百分比 = 更慢的配速</strong>，而<strong>更低的百分比 =
-                    更快的配速</strong>。这与自行车/跑步<em>相反</em>，在那里更高的百分比 = 更难的努力。</p>
-        </div>
-
-        <div class="zones-table-container">
-            <table class="zones-table">
-                <thead>
-                    <tr>
-                        <th>区间</th>
-                        <th>名称</th>
-                        <th>CSS 配速百分比</th>
-                        <th>CSS 1:40/100m 示例</th>
-                        <th>RPE</th>
-                        <th>生理目的</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="zone-1">
-                        <td><strong>1</strong></td>
-                        <td>恢复</td>
-                        <td>&gt;108%</td>
-                        <td>&gt;1:48/100m</td>
-                        <td>2-3/10</td>
-                        <td>主动恢复、技术精进、热身/放松</td>
-                    </tr>
-                    <tr class="zone-2">
-                        <td><strong>2</strong></td>
-                        <td>有氧基础</td>
-                        <td>104-108%</td>
-                        <td>1:44-1:48/100m</td>
-                        <td>4-5/10</td>
-                        <td>建立有氧能力、线粒体密度、脂肪氧化</td>
-                    </tr>
-                    <tr class="zone-3">
-                        <td><strong>3</strong></td>
-                        <td>节奏/甜蜜点</td>
-                        <td>99-103%</td>
-                        <td>1:39-1:43/100m</td>
-                        <td>6-7/10</td>
-                        <td>比赛配速适应、神经肌肉效率</td>
-                    </tr>
-                    <tr class="zone-4">
-                        <td><strong>4</strong></td>
-                        <td>阈值 (CSS)</td>
-                        <td>96-100%</td>
-                        <td>1:36-1:40/100m</td>
-                        <td>7-8/10</td>
-                        <td>乳酸阈值提升、持续高强度</td>
-                    </tr>
-                    <tr class="zone-5">
-                        <td><strong>5</strong></td>
-                        <td>VO₂max/无氧</td>
-                        <td>&lt;96%</td>
-                        <td>&lt;1:36/100m</td>
-                        <td>9-10/10</td>
-                        <td>VO₂max 发展、力量、乳酸耐受</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-lg">
-            <h3>🎯 区域训练的好处</h3>
-            <p>使用基于 CSS 的区间将主观的“感觉”训练转化为客观、可重复的训练。每个区间针对特定的生理适应：</p>
-            <ul>
-                <li><strong>区间 2：</strong>建立有氧引擎（每周训练量的 60-70%）</li>
-                <li><strong>区间 3：</strong>提高比赛配速效率（训练量的 15-20%）</li>
-                <li><strong>区间 4：</strong>推高乳酸阈值（训练量的 10-15%）</li>
-                <li><strong>区间 5：</strong>发展最高速度和力量（训练量的 5-10%）</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>不同水平的典型 CSS 值</h2>
-
-        <div class="levels-comparison">
-            <div class="level-card">
-                <h3>🥇 精英长距离游泳者</h3>
-                <div class="pace-value">1.5-1.8 m/s</div>
-                <div class="pace-equivalent">0:56-1:07 / 100m</div>
-                <p>代表最大 100 米速度的 80-85%。经过多年系统训练的国家/国际级运动员。</p>
-            </div>
-
-            <div class="level-card">
-                <h3>🏊 竞技分龄组</h3>
-                <div class="pace-value">1.2-1.5 m/s</div>
-                <div class="pace-equivalent">1:07-1:23 / 100m</div>
-                <p>高中校队、大学游泳者、竞技大师级选手。每周 5-6 天的规律系统训练。</p>
-            </div>
-
-            <div class="level-card">
-                <h3>🏃 铁人三项与健身游泳者</h3>
-                <div class="pace-value">0.9-1.2 m/s</div>
-                <div class="pace-equivalent">1:23-1:51 / 100m</div>
-                <p>每周 3-4 天的规律训练。技术扎实。每次训练完成 2000-4000 米。</p>
-            </div>
-
-            <div class="level-card">
-                <h3>🌊 发展中游泳者</h3>
-                <div class="pace-value">&lt;0.9 m/s</div>
-                <div class="pace-equivalent">&gt;1:51 / 100m</div>
-                <p>正在建立有氧基础和技术。少于 1-2 年的持续训练。</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>科学验证</h2>
-
-        <div class="research-highlight">
-            <h3>Wakayoshi 等 (1992-1993) - 基础研究</h3>
-            <p>Kohji Wakayoshi 在大阪大学的开创性研究确立了 CSS 作为实验室乳酸测试的有效、实用替代方案：</p>
-
-            <ul class="research-findings">
-                <li><strong>与无氧阈值时的 VO₂ 强相关</strong> (r = 0.818)</li>
-                <li><strong>与 OBLA 速度极佳相关</strong> (r = 0.949)</li>
-                <li><strong>预测 400 米表现</strong> (r = 0.864)</li>
-                <li><strong>对应于 4 mmol/L 血乳酸</strong> - 最大乳酸稳态</li>
-                <li><strong>距离与时间之间的线性关系</strong> (r² &gt; 0.998)</li>
-            </ul>
-
-            <div class="citation">
-                <p><strong>关键论文：</strong></p>
-                <ol>
-                    <li>Wakayoshi K, et al. (1992). "Determination and validity of critical velocity as an index of
+                配速 = 109 秒 = <strong>1:49 / 100m</strong></div></div></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl">基于 CSS 的训练区间</h2><div class="callout callout-info"><p><strong>注意：</strong>在游泳中，配速以<em>每距离时间</em>测量。因此，<strong>更高的百分比 = 更慢的配速</strong>，而<strong>更低的百分比 =
+                    更快的配速</strong>。这与自行车/跑步<em>相反</em>，在那里更高的百分比 = 更难的努力。</p></div><div class="zones-table-container"><table class="zones-table"><thead><tr><th>区间</th><th>名称</th><th>CSS 配速百分比</th><th>CSS 1:40/100m 示例</th><th>RPE</th><th>生理目的</th></tr></thead><tbody><tr class="zone-1"><td><strong>1</strong></td><td>恢复</td><td>&gt;108%</td><td>&gt;1:48/100m</td><td>2-3/10</td><td>主动恢复、技术精进、热身/放松</td></tr><tr class="zone-2"><td><strong>2</strong></td><td>有氧基础</td><td>104-108%</td><td>1:44-1:48/100m</td><td>4-5/10</td><td>建立有氧能力、线粒体密度、脂肪氧化</td></tr><tr class="zone-3"><td><strong>3</strong></td><td>节奏/甜蜜点</td><td>99-103%</td><td>1:39-1:43/100m</td><td>6-7/10</td><td>比赛配速适应、神经肌肉效率</td></tr><tr class="zone-4"><td><strong>4</strong></td><td>阈值 (CSS)</td><td>96-100%</td><td>1:36-1:40/100m</td><td>7-8/10</td><td>乳酸阈值提升、持续高强度</td></tr><tr class="zone-5"><td><strong>5</strong></td><td>VO₂max/无氧</td><td>&lt;96%</td><td>&lt;1:36/100m</td><td>9-10/10</td><td>VO₂max 发展、力量、乳酸耐受</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>🎯 区域训练的好处</h3><p>使用基于 CSS 的区间将主观的“感觉”训练转化为客观、可重复的训练。每个区间针对特定的生理适应：</p><ul><li><strong>区间 2：</strong>建立有氧引擎（每周训练量的 60-70%）</li><li><strong>区间 3：</strong>提高比赛配速效率（训练量的 15-20%）</li><li><strong>区间 4：</strong>推高乳酸阈值（训练量的 10-15%）</li><li><strong>区间 5：</strong>发展最高速度和力量（训练量的 5-10%）</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>不同水平的典型 CSS 值</h2><div class="levels-comparison"><div class="level-card"><h3>🥇 精英长距离游泳者</h3><div class="pace-value">1.5-1.8 m/s</div><div class="pace-equivalent">0:56-1:07 / 100m</div><p>代表最大 100 米速度的 80-85%。经过多年系统训练的国家/国际级运动员。</p></div><div class="level-card"><h3>🏊 竞技分龄组</h3><div class="pace-value">1.2-1.5 m/s</div><div class="pace-equivalent">1:07-1:23 / 100m</div><p>高中校队、大学游泳者、竞技大师级选手。每周 5-6 天的规律系统训练。</p></div><div class="level-card"><h3>🏃 铁人三项与健身游泳者</h3><div class="pace-value">0.9-1.2 m/s</div><div class="pace-equivalent">1:23-1:51 / 100m</div><p>每周 3-4 天的规律训练。技术扎实。每次训练完成 2000-4000 米。</p></div><div class="level-card"><h3>🌊 发展中游泳者</h3><div class="pace-value">&lt;0.9 m/s</div><div class="pace-equivalent">&gt;1:51 / 100m</div><p>正在建立有氧基础和技术。少于 1-2 年的持续训练。</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>科学验证</h2><div class="research-highlight"><h3>Wakayoshi 等 (1992-1993) - 基础研究</h3><p>Kohji Wakayoshi 在大阪大学的开创性研究确立了 CSS 作为实验室乳酸测试的有效、实用替代方案：</p><ul class="research-findings"><li><strong>与无氧阈值时的 VO₂ 强相关</strong> (r = 0.818)</li><li><strong>与 OBLA 速度极佳相关</strong> (r = 0.949)</li><li><strong>预测 400 米表现</strong> (r = 0.864)</li><li><strong>对应于 4 mmol/L 血乳酸</strong> - 最大乳酸稳态</li><li><strong>距离与时间之间的线性关系</strong> (r² &gt; 0.998)</li></ul><div class="citation"><p><strong>关键论文：</strong></p><ol><li>Wakayoshi K, et al. (1992). "Determination and validity of critical velocity as an index of
                         swimming performance in the competitive swimmer." <em>European Journal of Applied
-                            Physiology</em>, 64(2), 153-157.</li>
-                    <li>Wakayoshi K, et al. (1992). "A simple method for determining critical speed as swimming fatigue
+                            Physiology</em>, 64(2), 153-157.</li><li>Wakayoshi K, et al. (1992). "A simple method for determining critical speed as swimming fatigue
                         threshold in competitive swimming." <em>International Journal of Sports Medicine</em>, 13(5),
-                        367-371.</li>
-                    <li>Wakayoshi K, et al. (1993). "Does critical swimming velocity represent exercise intensity at
+                        367-371.</li><li>Wakayoshi K, et al. (1993). "Does critical swimming velocity represent exercise intensity at
                         maximal lactate steady state?" <em>European Journal of Applied Physiology</em>, 66(1), 90-95.
-                    </li>
-                </ol>
-            </div>
-        </div>
-
-        <div class="callout callout-science">
-            <h3>🔬 为什么 CSS 有效</h3>
-            <p>CSS 代表了<strong>重度运动和极重度运动领域</strong>之间的界限。在 CSS 以下，乳酸产生和清除保持平衡——您可以长时间游泳。在 CSS 以上，乳酸会逐渐积累，直到在 20-40
-                分钟内力竭。</p>
-            <p>这使得 CSS 成为以下方面的完美强度：</p>
-            <ul>
-                <li>设定 800 米-1500 米项目的可持续比赛配速</li>
-                <li>制定阈值间歇训练</li>
-                <li>监测有氧体能的改善</li>
-                <li>计算训练负荷和恢复需求</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2 class="mt-3xl">如何测试您的 CSS</h2>
-
-        <div class="howto-section" itemscope itemtype="https://schema.org/HowTo">
-            <meta itemprop="name" content="如何测试您的 CSS">
-            <meta itemprop="description" content="遵循此分步协议以准确测量您的临界游泳速度 (CSS)">
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="1">
-                <h3 itemprop="name">第一步：充分热身</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>完成 300-800 米的轻松游泳，包括技术练习和渐进式加速。这为最大努力做好身体准备并防止受伤。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="2">
-                <h3 itemprop="name">第二步：进行 400 米计时测试</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>从蹬壁出发（不跳水）以最大持续努力游 400 米。精确记录到秒。目标是匀速或负分段（后 200 米等于或快于前 200 米）。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="3">
-                <h3 itemprop="name">第三步：完全恢复</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>进行 5-10 分钟的轻松游泳或完全休息。这种恢复至关重要。等到心率降至 120 bpm 以下且呼吸完全恢复后再继续。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="4">
-                <h3 itemprop="name">第四步：进行 200 米计时测试</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>从蹬壁出发以最大努力游 200 米。精确记录时间。这应该比您的 400 米配速每 100 米更快。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="5">
-                <h3 itemprop="name">第五步：计算您的 CSS</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>使用公式：CSS 配速/100m = (T400 - T200) / 2。例如：(368s - 150s) / 2 = 109s =
-                            1:49/100m。或者使用本页面的计算器立即获得带有个性化训练区间的结果。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <h2>实际应用</h2>
-
-        <div class="application-grid">
-            <div class="application-item">
-                <h3>1️⃣ 解锁训练负荷指标</h3>
-                <p>CSS 是 sTSS 强度系数计算的分母。没有它，您无法量化训练压力或追踪体能/疲劳趋势。</p>
-            </div>
-
-            <div class="application-item">
-                <h3>2️⃣ 个性化训练区间</h3>
-                <p>通用配速表不考虑个人生理差异。基于 CSS 的区间确保每位游泳者都在其最佳强度下训练。</p>
-            </div>
-
-            <div class="application-item">
-                <h3>3️⃣ 监测体能进展</h3>
-                <p>每 6-8 周重测一次。CSS 提高（配速变快）表明有氧适应成功。CSS 停滞表明训练需要调整。</p>
-            </div>
-
-            <div class="application-item">
-                <h3>4️⃣ 预测比赛表现</h3>
-                <p>CSS 配速近似于您可持续的 30 分钟比赛配速。用它来为 800 米、1500 米和公开水域项目设定现实目标。</p>
-            </div>
-
-            <div class="application-item">
-                <h3>5️⃣ 设计阈值训练</h3>
-                <p>经典 CSS 组：8×100 @ CSS 配速（休息 15 秒），5×200 @ 101% CSS（休息 20 秒），3×400 @ 103% CSS（休息 30 秒）。建立乳酸清除能力。</p>
-            </div>
-
-            <div class="application-item">
-                <h3>6️⃣ 优化减量策略</h3>
-                <p>在减量前后追踪 CSS。成功的减量应维持或略微提高 CSS，同时减少疲劳（提高 TSB）。</p>
-            </div>
-        </div>
-
-        <div class="callout mt-2xl">
-            <h3>应用您的 CSS 知识</h3>
-            <p>现在您了解了临界游泳速度，请采取下一步措施优化您的训练：</p>
-            <ul>
-                <li><a href="/zh/training-load/">计算训练压力评分 (TSS)</a> 基于您的 CSS 量化训练强度</li>
-                <li><a href="/zh/training-zones/">探索 7 个训练区间</a> 并学习如何为特定适应构建训练</li>
-                <li><a href="/zh/formulas/">查看所有公式</a> Swim Analytics 使用的公式完全透明</li>
-                <li><a href="/zh/">下载 Swim Analytics</a> 自动追踪 CSS、TSS 和表现趋势</li>
-            </ul>
-        </div>
-
-        <div class="mt-xl text-center">
-            <a href="/zh/training-load/" class="btn btn-primary">了解 sTSS 计算 →</a>
-            <a href="/zh/formulas/" class="btn btn-secondary">查看所有公式 →</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                    </li></ol></div></div><div class="callout callout-science"><h3>🔬 为什么 CSS 有效</h3><p>CSS 代表了<strong>重度运动和极重度运动领域</strong>之间的界限。在 CSS 以下，乳酸产生和清除保持平衡——您可以长时间游泳。在 CSS 以上，乳酸会逐渐积累，直到在 20-40
+                分钟内力竭。</p><p>这使得 CSS 成为以下方面的完美强度：</p><ul><li>设定 800 米-1500 米项目的可持续比赛配速</li><li>制定阈值间歇训练</li><li>监测有氧体能的改善</li><li>计算训练负荷和恢复需求</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-3xl">如何测试您的 CSS</h2><div class="howto-section" itemscope itemtype="https://schema.org/HowTo"><meta itemprop="name" content="如何测试您的 CSS"><meta itemprop="description" content="遵循此分步协议以准确测量您的临界游泳速度 (CSS)"><div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep"><meta itemprop="position" content="1"><h3 itemprop="name">第一步：充分热身</h3><div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>完成 300-800 米的轻松游泳，包括技术练习和渐进式加速。这为最大努力做好身体准备并防止受伤。</p></div></div></div><div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep"><meta itemprop="position" content="2"><h3 itemprop="name">第二步：进行 400 米计时测试</h3><div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>从蹬壁出发（不跳水）以最大持续努力游 400 米。精确记录到秒。目标是匀速或负分段（后 200 米等于或快于前 200 米）。</p></div></div></div><div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep"><meta itemprop="position" content="3"><h3 itemprop="name">第三步：完全恢复</h3><div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>进行 5-10 分钟的轻松游泳或完全休息。这种恢复至关重要。等到心率降至 120 bpm 以下且呼吸完全恢复后再继续。</p></div></div></div><div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep"><meta itemprop="position" content="4"><h3 itemprop="name">第四步：进行 200 米计时测试</h3><div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>从蹬壁出发以最大努力游 200 米。精确记录时间。这应该比您的 400 米配速每 100 米更快。</p></div></div></div><div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep"><meta itemprop="position" content="5"><h3 itemprop="name">第五步：计算您的 CSS</h3><div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>使用公式：CSS 配速/100m = (T400 - T200) / 2。例如：(368s - 150s) / 2 = 109s =
+                            1:49/100m。或者使用本页面的计算器立即获得带有个性化训练区间的结果。</p></div></div></div></div><h2>实际应用</h2><div class="application-grid"><div class="application-item"><h3>1️⃣ 解锁训练负荷指标</h3><p>CSS 是 sTSS 强度系数计算的分母。没有它，您无法量化训练压力或追踪体能/疲劳趋势。</p></div><div class="application-item"><h3>2️⃣ 个性化训练区间</h3><p>通用配速表不考虑个人生理差异。基于 CSS 的区间确保每位游泳者都在其最佳强度下训练。</p></div><div class="application-item"><h3>3️⃣ 监测体能进展</h3><p>每 6-8 周重测一次。CSS 提高（配速变快）表明有氧适应成功。CSS 停滞表明训练需要调整。</p></div><div class="application-item"><h3>4️⃣ 预测比赛表现</h3><p>CSS 配速近似于您可持续的 30 分钟比赛配速。用它来为 800 米、1500 米和公开水域项目设定现实目标。</p></div><div class="application-item"><h3>5️⃣ 设计阈值训练</h3><p>经典 CSS 组：8×100 @ CSS 配速（休息 15 秒），5×200 @ 101% CSS（休息 20 秒），3×400 @ 103% CSS（休息 30 秒）。建立乳酸清除能力。</p></div><div class="application-item"><h3>6️⃣ 优化减量策略</h3><p>在减量前后追踪 CSS。成功的减量应维持或略微提高 CSS，同时减少疲劳（提高 TSB）。</p></div></div><div class="callout mt-2xl"><h3>应用您的 CSS 知识</h3><p>现在您了解了临界游泳速度，请采取下一步措施优化您的训练：</p><ul><li><a href="/zh/training-load/">计算训练压力评分 (TSS)</a> 基于您的 CSS 量化训练强度</li><li><a href="/zh/training-zones/">探索 7 个训练区间</a> 并学习如何为特定适应构建训练</li><li><a href="/zh/formulas/">查看所有公式</a> Swim Analytics 使用的公式完全透明</li><li><a href="/zh/">下载 Swim Analytics</a> 自动追踪 CSS、TSS 和表现趋势</li></ul></div><div class="mt-xl text-center"><a href="/zh/training-load/" class="btn btn-primary">了解 sTSS 计算 →</a><a href="/zh/formulas/" class="btn btn-secondary">查看所有公式 →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link active"
+                </a><a href="/zh/" class="lang-link active"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. 版权所有
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/zh/privacy/">隐私</a></li>
-                <li><a href="/zh/terms/">条款</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>本网站使用cookies改善您的体验。</p>
-            <a href="/zh/privacy/" class="text-sm">了解更多</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">拒绝</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">接受</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/zh/privacy/">隐私</a></li><li><a href="/zh/terms/">条款</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>本网站使用cookies改善您的体验。</p><a href="/zh/privacy/" class="text-sm">了解更多</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">拒绝</button><button id="cookie-accept" class="btn btn-primary btn-small">接受</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

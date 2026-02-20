@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="tl" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Swim TSS Calculator: Training Load at PMC (CTL/ATL/TSB)</title>
-  <meta name="description" content="Alamin ang kalkulasyon ng Training Stress Score (sTSS) sa paglangoy at mga metrik ng Performance Management Chart (CTL, ATL, TSB). I-track ang fitness at fatigue sa...">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="swim TSS, sTSS calculator, training stress score, CTL ATL TSB, swim PMC">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/tl/training-load/">
-
-  
-  
-  <meta property="article:published_time" content="2025-10-12T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-20T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/tl/training-load/">
-  <meta property="og:title" content="Swim TSS Calculator: Training Load at PMC (CTL/ATL/TSB)">
-  <meta property="og:description" content="Alamin ang kalkulasyon ng Training Stress Score (sTSS) sa paglangoy at mga metrik ng Performance Management Chart (CTL, ATL, TSB). I-track ang fitness at fatigue sa...">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="tl_PH">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/tl/training-load/">
-  <meta name="twitter:title" content="Swim TSS Calculator: Training Load at PMC (CTL/ATL/TSB)">
-  <meta name="twitter:description" content="Alamin ang kalkulasyon ng Training Stress Score (sTSS) sa paglangoy at mga metrik ng Performance Management Chart (CTL, ATL, TSB). I-track ang fitness at fatigue sa...">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/training-load/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/training-load/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/training-load/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/training-load/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/training-load/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/training-load/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/training-load/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/training-load/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/training-load/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/training-load/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/training-load/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/training-load/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/training-load/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/training-load/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/training-load/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/training-load/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/training-load/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/training-load/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/training-load/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/training-load/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/training-load/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/training-load/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/training-load/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/training-load/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/training-load/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/training-load/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/training-load/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/training-load/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/training-load/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/training-load/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/training-load/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/training-load/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/training-load/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/training-load/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/training-load/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/training-load/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/training-load/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/training-load/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/training-load/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/training-load/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/training-load/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/training-load/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/training-load/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/training-load/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/training-load/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/training-load/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/training-load/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/training-load/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/training-load/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/training-load/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/training-load/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/training-load/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/training-load/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/training-load/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/training-load/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/training-load/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="tl" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Swim TSS Calculator: Training Load at PMC (CTL/ATL/TSB)</title><meta name="description" content="Alamin ang kalkulasyon ng Training Stress Score (sTSS) sa paglangoy at mga metrik ng Performance Management Chart (CTL, ATL, TSB). I-track ang fitness at fatigue sa..."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="swim TSS, sTSS calculator, training stress score, CTL ATL TSB, swim PMC"><link rel="canonical" href="https://swim.analyticszone.app/tl/training-load/"><meta property="article:published_time" content="2025-10-12T10:00:00Z"><meta property="article:modified_time" content="2026-01-20T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/tl/training-load/"><meta property="og:title" content="Swim TSS Calculator: Training Load at PMC (CTL/ATL/TSB)"><meta property="og:description" content="Alamin ang kalkulasyon ng Training Stress Score (sTSS) sa paglangoy at mga metrik ng Performance Management Chart (CTL, ATL, TSB). I-track ang fitness at fatigue sa..."><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="tl_PH"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/tl/training-load/"><meta name="twitter:title" content="Swim TSS Calculator: Training Load at PMC (CTL/ATL/TSB)"><meta name="twitter:description" content="Alamin ang kalkulasyon ng Training Stress Score (sTSS) sa paglangoy at mga metrik ng Performance Management Chart (CTL, ATL, TSB). I-track ang fitness at fatigue sa..."><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/training-load/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/training-load/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/training-load/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/training-load/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/training-load/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/training-load/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/training-load/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/training-load/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/training-load/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/training-load/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/training-load/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/training-load/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/training-load/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/training-load/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/training-load/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/training-load/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/training-load/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/training-load/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/training-load/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/training-load/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/training-load/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/training-load/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/training-load/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/training-load/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/training-load/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/training-load/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/training-load/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/training-load/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/training-load/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/training-load/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/training-load/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/training-load/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/training-load/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/training-load/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/training-load/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/training-load/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/training-load/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/training-load/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/training-load/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/training-load/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/training-load/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/training-load/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/training-load/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/training-load/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/training-load/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/training-load/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/training-load/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/training-load/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/training-load/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/training-load/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/training-load/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/training-load/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/training-load/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/training-load/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/training-load/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/training-load/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "tl"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "Alamin ang kalkulasyon ng Training Stress Score (sTSS) sa paglangoy at mga metrik ng Performance Management Chart (CTL, ATL, TSB). I-track ang fitness at fatigue sa...",
   "url": "https://swim.analyticszone.app/tl/training-load/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/tl/training-load/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1424 +449,401 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">Lumaktaw sa nilalaman</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/tl/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/tl/" 
+  </script></head><body><a href="#main-content" class="skip-link">Lumaktaw sa nilalaman</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/tl/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/tl/" 
                                 aria-current="">
                                 Home
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/tl/getting-started/" class="nav-label">Matuto</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/tl/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/tl/getting-started/" class="nav-label">Matuto</a><ul class="submenu"><li><a href="/tl/getting-started/" 
                                         aria-current="">
                                         Pagsisimula
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tl/css/" 
+                                    </a></li><li><a href="/tl/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tl/training-zones/" 
+                                    </a></li><li><a href="/tl/training-zones/" 
                                         aria-current="">
                                         Mga Training Zone
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tl/training-load/" class="active" 
+                                    </a></li><li><a href="/tl/training-load/" class="active" 
                                         aria-current="page">
                                         Training Load
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tl/stss-calculator/" 
+                                    </a></li><li><a href="/tl/stss-calculator/" 
                                         aria-current="">
                                         sTSS Calculator
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/tl/research/" class="nav-label">Agham</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/tl/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/tl/research/" class="nav-label">Agham</a><ul class="submenu"><li><a href="/tl/research/" 
                                         aria-current="">
                                         Pananaliksik
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tl/formulas/" 
+                                    </a></li><li><a href="/tl/formulas/" 
                                         aria-current="">
                                         Mga Formula
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tl/efficiency/" 
+                                    </a></li><li><a href="/tl/efficiency/" 
                                         aria-current="">
                                         Efficiency
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tl/stroke-mechanics/" 
+                                    </a></li><li><a href="/tl/stroke-mechanics/" 
                                         aria-current="">
                                         Mekanika ng Stroke
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tl/bibliography/" 
+                                    </a></li><li><a href="/tl/bibliography/" 
                                         aria-current="">
                                         Bibliograpiya
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/tl/contact/" 
+                                    </a></li></ul></li><li><a href="/tl/contact/" 
                                 aria-current="">
                                 Kontak
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Pumili ng wika">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Pumili ng wika"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" selected>
+                        </option><option value="tl" selected>
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="I-toggle ang menu"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/tl/">Home</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/tl/getting-started/">Matuto</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">Training Load</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>Training Load at Pamamahala ng Pagganap</h1>
-        <p class="lead">Pag-quantify ng Stress, Pagsubaybay sa Fitness, Pag-optimize ng Pagganap</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Pag-unawa sa Training Load</h2>
-        <p class="lead">Ang pag-quantify ng training load ay sumasagot sa kritikal na tanong: <strong>Gaano kahirap ang
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="I-toggle ang menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/tl/">Home</a></li><li><a href="/tl/getting-started/">Matuto</a></li><li><span aria-current="page">Training Load</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Training Load at Pamamahala ng Pagganap</h1><p class="lead">Pag-quantify ng Stress, Pagsubaybay sa Fitness, Pag-optimize ng Pagganap</p></div></section><section class="section"><div class="container container-narrow"><h2>Pag-unawa sa Training Load</h2><p class="lead">Ang pag-quantify ng training load ay sumasagot sa kritikal na tanong: <strong>Gaano kahirap ang
                 workout na iyon?</strong> Hindi lamang distansya o oras, kundi ang tunay na physiological na stress na
-            naibibigay sa iyong katawan.</p>
-
-        <p>Ang sistemang Training Stress Score (TSS), na binuo ni Dr. Andrew Coggan, ay nagbibigay ng isang standardized
+            naibibigay sa iyong katawan.</p><p>Ang sistemang Training Stress Score (TSS), na binuo ni Dr. Andrew Coggan, ay nagbibigay ng isang standardized
             na paraan upang i-quantify ang intensidad at tagal ng workout tungo sa isang iisang numero. Para sa
             paglangoy, gumagamit kami ng <strong>Swim Training Stress Score (sTSS)</strong> na may isang krusyal na
-            modipikasyon na isinasaalang-alang ang mga natatanging katangian ng resistensya ng tubig.</p>
-
-        <div class="callout callout-info">
-            <h3>Ang TSS Standard</h3>
-            <p>Isang oras sa iyong functional threshold pace (CSS) = <strong>100 TSS</strong></p>
-            <p>Ang standardization na ito ay nagbibigay-daan sa paghahambing sa iba't ibang mga workout, linggo, at
+            modipikasyon na isinasaalang-alang ang mga natatanging katangian ng resistensya ng tubig.</p><div class="callout callout-info"><h3>Ang TSS Standard</h3><p>Isang oras sa iyong functional threshold pace (CSS) = <strong>100 TSS</strong></p><p>Ang standardization na ito ay nagbibigay-daan sa paghahambing sa iba't ibang mga workout, linggo, at
                 training cycle. Ang isang 30-minutong threshold na langoy = ~50 TSS. Ang isang 2-oras na threshold na
-                langoy = ~200 TSS.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">Swim Training Stress Score (sTSS)</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>Ang Formula</h3>
-                <div class="formula-box">
-                    <div class="formula">
+                langoy = ~200 TSS.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Swim Training Stress Score (sTSS)</h2><div class="grid grid-2"><div><h3>Ang Formula</h3><div class="formula-box"><div class="formula">
                         sTSS = (IF³) × Tagal (oras) × 100
-                    </div>
-                    <div class="formula-explanation">
-                        <p>Kung saan ang Intensity Factor (IF) ay:</p>
-                        <div class="formula">
+                    </div><div class="formula-explanation"><p>Kung saan ang Intensity Factor (IF) ay:</p><div class="formula">
                             IF = NSS / FTP
-                        </div>
-                        <p>At ang Normalized Swim Speed (NSS) ay:</p>
-                        <div class="formula">
+                        </div><p>At ang Normalized Swim Speed (NSS) ay:</p><div class="formula">
                             NSS = Kabuuang Distansya / Kabuuang Oras (m/min)
-                        </div>
-                    </div>
-                </div>
-
-                <div class="callout callout-warning mt-md">
-                    <h4>⚡ Ang Cubic Factor (IF³)</h4>
-                    <p><strong>Pangunahing Inobasyon:</strong> Ang paglangoy ay gumagamit ng IF³ habang ang
+                        </div></div></div><div class="callout callout-warning mt-md"><h4>⚡ Ang Cubic Factor (IF³)</h4><p><strong>Pangunahing Inobasyon:</strong> Ang paglangoy ay gumagamit ng IF³ habang ang
                         pagbibisikleta/pagtakbo ay gumagamit ng IF². Sinasalamin nito ang physics ng tubig—ang
-                        resistensya ay tumataas nang <em>exponential</em> kasabay ng bilis.</p>
-                    <p>Ang pagpunta ng 10% na mas mabilis sa tubig ay nangangailangan ng ~33% na mas mataas na power.
+                        resistensya ay tumataas nang <em>exponential</em> kasabay ng bilis.</p><p>Ang pagpunta ng 10% na mas mabilis sa tubig ay nangangailangan ng ~33% na mas mataas na power.
                         Ang cubic factor ay tumpak na nagbibigay ng timbang sa tumaas na physiological na gastos na ito.
-                    </p>
-                </div>
-            </div>
-
-            <div>
-                <h3>Halimbawa ng Kalkulasyon</h3>
-                <div class="example-box">
-                    <h4>Profile ng Swimmer:</h4>
-                    <ul>
-                        <li>CSS: 1:33/100m = 93 segundo/100m</li>
-                        <li>FTP: 64.5 m/min (100m / 1.55min)</li>
-                    </ul>
-
-                    <h4>Data ng Workout:</h4>
-                    <ul>
-                        <li>Kabuuang Distansya: 3000m</li>
-                        <li>Oras ng Paggalaw: 55:00 (3300 segundo)</li>
-                        <li>Oras ng Pahinga: 10:00 (hindi kasama)</li>
-                    </ul>
-
-                    <h4>Hakbang 1: Kalkulahin ang NSS</h4>
-                    <div class="calculation">
+                    </p></div></div><div><h3>Halimbawa ng Kalkulasyon</h3><div class="example-box"><h4>Profile ng Swimmer:</h4><ul><li>CSS: 1:33/100m = 93 segundo/100m</li><li>FTP: 64.5 m/min (100m / 1.55min)</li></ul><h4>Data ng Workout:</h4><ul><li>Kabuuang Distansya: 3000m</li><li>Oras ng Paggalaw: 55:00 (3300 segundo)</li><li>Oras ng Pahinga: 10:00 (hindi kasama)</li></ul><h4>Hakbang 1: Kalkulahin ang NSS</h4><div class="calculation">
                         NSS = 3000m / 55min<br>
-                        NSS = <strong>54.5 m/min</strong>
-                    </div>
-
-                    <h4>Hakbang 2: Kalkulahin ang IF</h4>
-                    <div class="calculation">
+                        NSS = <strong>54.5 m/min</strong></div><h4>Hakbang 2: Kalkulahin ang IF</h4><div class="calculation">
                         IF = 54.5 / 64.5<br>
-                        IF = <strong>0.845</strong>
-                    </div>
-
-                    <h4>Hakbang 3: Kalkulahin ang sTSS</h4>
-                    <div class="calculation">
+                        IF = <strong>0.845</strong></div><h4>Hakbang 3: Kalkulahin ang sTSS</h4><div class="calculation">
                         sTSS = (0.845³) × (55/60) × 100<br>
                         sTSS = 0.603 × 0.917 × 100<br>
-                        sTSS = <strong>55.3</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="intensity-guide mt-xl">
-            <h3>Mga Alituntunin sa Intensidad ng sTSS</h3>
-            <table class="intensity-table">
-                <thead>
-                    <tr>
-                        <th>Saklaw ng sTSS</th>
-                        <th>Antas ng Intensidad</th>
-                        <th>Paglalarawan</th>
-                        <th>Halimbawa ng mga Workout</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt; 50</td>
-                        <td>Madaling Pagbawi</td>
-                        <td>Magaan na paglangoy, focus sa teknik, aktibong pahinga</td>
-                        <td>30-45min recovery swim, drill sets</td>
-                    </tr>
-                    <tr>
-                        <td>50-100</td>
-                        <td>Moderate na Pagsasanay</td>
-                        <td>Karaniwang volume ng pang-araw-araw na pagsasanay</td>
-                        <td>60-90min aerobic endurance, halo-halong zone</td>
-                    </tr>
-                    <tr>
-                        <td>100-200</td>
-                        <td>Matinding Pagsasanay</td>
-                        <td>Mga quality session na may threshold/VO₂ work</td>
-                        <td>90-120min na may mga CSS interval, race pace sets</td>
-                    </tr>
-                    <tr>
-                        <td>200-300</td>
-                        <td>Napaka-matindi</td>
-                        <td>Race simulation, napakataas na intensity block</td>
-                        <td>2-3hr session, time trial, max effort sets</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; 300</td>
-                        <td>Extreme</td>
-                        <td>Araw ng race, mga ultra-distance na event</td>
-                        <td>Kompetisyon, Ironman swims, marathon swimming</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-lg">
-            <h3>📊 Mga Target na Lingguhang TSS ayon sa Antas</h3>
-            <ul>
-                <li><strong>Mga Beginner:</strong> 200-400 TSS/linggo</li>
-                <li><strong>Intermediate:</strong> 400-700 TSS/linggo</li>
-                <li><strong>Advanced/Elite:</strong> 700-1000+ TSS/linggo</li>
-            </ul>
-            <p>Naiipon ang mga ito tungo sa iyong Chronic Training Load (CTL).</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2 class="text-center mb-xl">Performance Management Chart (PMC)</h2>
-        <p class="text-center lead">Ipinapakita ng PMC ang tatlong magkakaugnay na sukatan na nagsasabi sa buong kuwento
-            ng iyong pagsasanay: fitness, pagkapagod, at form.</p>
-
-        <div class="pmc-overview">
-            <div class="grid grid-3">
-                <div class="pmc-metric">
-                    <div class="metric-icon">📈</div>
-                    <h3>CTL - Chronic Training Load</h3>
-                    <div class="metric-value-label">Ang Iyong FITNESS</div>
-                    <p>42-araw na exponentially weighted average ng araw-araw na TSS. Kumakatawan sa pangmatagalang
-                        aerobic fitness at training adaptation.</p>
-                    <div class="formula-small">
+                        sTSS = <strong>55.3</strong></div></div></div></div><div class="intensity-guide mt-xl"><h3>Mga Alituntunin sa Intensidad ng sTSS</h3><table class="intensity-table"><thead><tr><th>Saklaw ng sTSS</th><th>Antas ng Intensidad</th><th>Paglalarawan</th><th>Halimbawa ng mga Workout</th></tr></thead><tbody><tr><td>&lt; 50</td><td>Madaling Pagbawi</td><td>Magaan na paglangoy, focus sa teknik, aktibong pahinga</td><td>30-45min recovery swim, drill sets</td></tr><tr><td>50-100</td><td>Moderate na Pagsasanay</td><td>Karaniwang volume ng pang-araw-araw na pagsasanay</td><td>60-90min aerobic endurance, halo-halong zone</td></tr><tr><td>100-200</td><td>Matinding Pagsasanay</td><td>Mga quality session na may threshold/VO₂ work</td><td>90-120min na may mga CSS interval, race pace sets</td></tr><tr><td>200-300</td><td>Napaka-matindi</td><td>Race simulation, napakataas na intensity block</td><td>2-3hr session, time trial, max effort sets</td></tr><tr><td>&gt; 300</td><td>Extreme</td><td>Araw ng race, mga ultra-distance na event</td><td>Kompetisyon, Ironman swims, marathon swimming</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>📊 Mga Target na Lingguhang TSS ayon sa Antas</h3><ul><li><strong>Mga Beginner:</strong> 200-400 TSS/linggo</li><li><strong>Intermediate:</strong> 400-700 TSS/linggo</li><li><strong>Advanced/Elite:</strong> 700-1000+ TSS/linggo</li></ul><p>Naiipon ang mga ito tungo sa iyong Chronic Training Load (CTL).</p></div></div></section><section class="section"><div class="container"><h2 class="text-center mb-xl">Performance Management Chart (PMC)</h2><p class="text-center lead">Ipinapakita ng PMC ang tatlong magkakaugnay na sukatan na nagsasabi sa buong kuwento
+            ng iyong pagsasanay: fitness, pagkapagod, at form.</p><div class="pmc-overview"><div class="grid grid-3"><div class="pmc-metric"><div class="metric-icon">📈</div><h3>CTL - Chronic Training Load</h3><div class="metric-value-label">Ang Iyong FITNESS</div><p>42-araw na exponentially weighted average ng araw-araw na TSS. Kumakatawan sa pangmatagalang
+                        aerobic fitness at training adaptation.</p><div class="formula-small">
                         CTL ngayon = CTL kahapon + (TSS ngayon - CTL kahapon) × (1/42)
-                    </div>
-                </div>
-
-                <div class="pmc-metric">
-                    <div class="metric-icon">⚡</div>
-                    <h3>ATL - Acute Training Load</h3>
-                    <div class="metric-value-label">Ang Iyong PAGKAPAGOD</div>
-                    <p>7-araw na exponentially weighted average ng araw-araw na TSS. Kinukuha ang kamakailang training
-                        stress at naipong pagkapagod.</p>
-                    <div class="formula-small">
+                    </div></div><div class="pmc-metric"><div class="metric-icon">⚡</div><h3>ATL - Acute Training Load</h3><div class="metric-value-label">Ang Iyong PAGKAPAGOD</div><p>7-araw na exponentially weighted average ng araw-araw na TSS. Kinukuha ang kamakailang training
+                        stress at naipong pagkapagod.</p><div class="formula-small">
                         ATL ngayon = ATL kahapon + (TSS ngayon - ATL kahapon) × (1/7)
-                    </div>
-                </div>
-
-                <div class="pmc-metric">
-                    <div class="metric-icon">🎯</div>
-                    <h3>TSB - Training Stress Balance</h3>
-                    <div class="metric-value-label">Ang Iyong FORM</div>
-                    <p>Pagkakaiba sa pagitan ng fitness at pagkapagod kahapon. Nagpapahiwatig ng kahandaang gumanap o
-                        pangangailangang magpahinga.</p>
-                    <div class="formula-small">
+                    </div></div><div class="pmc-metric"><div class="metric-icon">🎯</div><h3>TSB - Training Stress Balance</h3><div class="metric-value-label">Ang Iyong FORM</div><p>Pagkakaiba sa pagitan ng fitness at pagkapagod kahapon. Nagpapahiwatig ng kahandaang gumanap o
+                        pangangailangang magpahinga.</p><div class="formula-small">
                         TSB = CTL kahapon - ATL kahapon
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2>Pag-unawa sa CTL: Ang Iyong Sukatan ng Fitness</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>Ano ang Kinakatawan ng CTL</h3>
-                <p>Nino-quantify ng CTL ang training workload na <em>kinasanayan na</em> ng iyong katawan sa loob ng
-                    nakaraang 6 na linggo. Ang mas mataas na CTL ay nangangahulugan ng:</p>
-                <ul>
-                    <li>Mas mataas na aerobic capacity at endurance</li>
-                    <li>Kakayahang humawak ng mas mataas na training volume</li>
-                    <li>Pinahusay na musculoskeletal at metabolic na adaptasyon</li>
-                    <li>Mas mataas na mapapanatiling pagganap</li>
-                </ul>
-
-                <div class="callout callout-info">
-                    <h4>Time Constant: 42 Araw</h4>
-                    <p>Ang CTL ay may half-life na ~14.7 araw. Pagkatapos ng 42 araw, humigit-kumulang 36.8% (1/e) ng
-                        epekto ng isang workout ang nananatili.</p>
-                    <p>Ang mabagal na paghina na ito ay nangangahulugan na ang fitness ay dahan-dahang nabubuo ngunit
+                    </div></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>Pag-unawa sa CTL: Ang Iyong Sukatan ng Fitness</h2><div class="grid grid-2"><div><h3>Ano ang Kinakatawan ng CTL</h3><p>Nino-quantify ng CTL ang training workload na <em>kinasanayan na</em> ng iyong katawan sa loob ng
+                    nakaraang 6 na linggo. Ang mas mataas na CTL ay nangangahulugan ng:</p><ul><li>Mas mataas na aerobic capacity at endurance</li><li>Kakayahang humawak ng mas mataas na training volume</li><li>Pinahusay na musculoskeletal at metabolic na adaptasyon</li><li>Mas mataas na mapapanatiling pagganap</li></ul><div class="callout callout-info"><h4>Time Constant: 42 Araw</h4><p>Ang CTL ay may half-life na ~14.7 araw. Pagkatapos ng 42 araw, humigit-kumulang 36.8% (1/e) ng
+                        epekto ng isang workout ang nananatili.</p><p>Ang mabagal na paghina na ito ay nangangahulugan na ang fitness ay dahan-dahang nabubuo ngunit
                         dahan-dahan ding nawawala—na nagpoprotekta laban sa detraining sa panahon ng maikling mga break.
-                    </p>
-                </div>
-            </div>
-
-            <div>
-                <h3>Mga Karaniwang Halaga ng CTL</h3>
-                <div class="levels-comparison">
-                    <div class="level-card-compact">
-                        <strong>Mga Beginner:</strong>
-                        <div class="value">20-40 CTL</div>
-                        <p>Pagbuo ng base fitness, 3-4 na langoy/linggo</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>Intermediate:</strong>
-                        <div class="value">40-70 CTL</div>
-                        <p>Pare-parehong pagsasanay, 4-5 na langoy/linggo</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>Advanced:</strong>
-                        <div class="value">70-100 CTL</div>
-                        <p>Mataas na volume, 5-6 na langoy/linggo, doubles</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>Elite:</strong>
-                        <div class="value">100-150+ CTL</div>
-                        <p>Propesyonal na training load, 8-12 session/linggo</p>
-                    </div>
-                </div>
-
-                <div class="warning-box mt-md">
-                    <strong>⚠️ Mga Limitasyon sa CTL Ramp Rate</strong>
-                    <ul>
-                        <li><strong>Mga Beginner:</strong> +3-5 CTL bawat linggo</li>
-                        <li><strong>Intermediate:</strong> +5-7 CTL bawat linggo</li>
-                        <li><strong>Advanced:</strong> +7-10 CTL bawat linggo</li>
-                    </ul>
-                    <p>Ang paglampas sa mga rate na ito ay makabuluhang nagpapataas ng panganib ng pinsala at burnout.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>Pag-unawa sa ATL: Ang Iyong Sukatan ng Pagkapagod</h2>
-
-        <div class="content-split">
-            <div>
-                <p>Sinusubaybayan ng ATL ang panandaliang training stress—ang pagkapagod na naipon sa nakaraang linggo.
+                    </p></div></div><div><h3>Mga Karaniwang Halaga ng CTL</h3><div class="levels-comparison"><div class="level-card-compact"><strong>Mga Beginner:</strong><div class="value">20-40 CTL</div><p>Pagbuo ng base fitness, 3-4 na langoy/linggo</p></div><div class="level-card-compact"><strong>Intermediate:</strong><div class="value">40-70 CTL</div><p>Pare-parehong pagsasanay, 4-5 na langoy/linggo</p></div><div class="level-card-compact"><strong>Advanced:</strong><div class="value">70-100 CTL</div><p>Mataas na volume, 5-6 na langoy/linggo, doubles</p></div><div class="level-card-compact"><strong>Elite:</strong><div class="value">100-150+ CTL</div><p>Propesyonal na training load, 8-12 session/linggo</p></div></div><div class="warning-box mt-md"><strong>⚠️ Mga Limitasyon sa CTL Ramp Rate</strong><ul><li><strong>Mga Beginner:</strong> +3-5 CTL bawat linggo</li><li><strong>Intermediate:</strong> +5-7 CTL bawat linggo</li><li><strong>Advanced:</strong> +7-10 CTL bawat linggo</li></ul><p>Ang paglampas sa mga rate na ito ay makabuluhang nagpapataas ng panganib ng pinsala at burnout.
+                    </p></div></div></div></div></section><section class="section"><div class="container"><h2>Pag-unawa sa ATL: Ang Iyong Sukatan ng Pagkapagod</h2><div class="content-split"><div><p>Sinusubaybayan ng ATL ang panandaliang training stress—ang pagkapagod na naipon sa nakaraang linggo.
                     Mabilis itong tumataas pagkatapos ng matinding pagsasanay at mabilis ding bumababa sa panahon ng
-                    pahinga.</p>
-
-                <h3>Mga Dynamics ng ATL</h3>
-                <ul>
-                    <li><strong>Mabilis na Tugon:</strong> 7-araw na time constant (half-life ~2.4 araw)</li>
-                    <li><strong>Spiky na Pattern:</strong> Tumatalon pagkatapos ng mahihirap na session, bumababa sa
-                        panahon ng pagbawi</li>
-                    <li><strong>Indicator ng Pagbawi:</strong> Bumababang ATL = nawawalang pagkapagod</li>
-                    <li><strong>Babala sa Overtraining:</strong> Ang palagiang mataas na ATL ay nagpapahiwatig ng hindi
-                        sapat na pagbawi</li>
-                </ul>
-
-                <div class="callout callout-science">
-                    <h4>🔬 Ang Modelong Fitness-Fatigue</h4>
-                    <p>Ang bawat training session ay gumagawa ng dalawang epekto:</p>
-                    <ol>
-                        <li><strong>Stimulus ng fitness</strong> (mabagal na nabubuo, matagal ang epekto)</li>
-                        <li><strong>Pagkapagod</strong> (mabilis na nabubuo, mabilis na nawawala)</li>
-                    </ol>
-                    <p>Pagganap = Fitness - Pagkapagod. Ang PMC ay nagbibigay ng visual sa modelong ito, na
-                        nagbibigay-daan sa siyentipikong training periodization.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>Sa Steady State</h3>
-                <p>Kapag ang training load ay pare-pareho linggu-linggo, ang CTL at ATL ay nagtatagpo (converge):</p>
-                <div class="example-box">
-                    <h4>Halimbawa: 500 TSS/linggo nang pare-pareho</h4>
-                    <div class="calculation">
+                    pahinga.</p><h3>Mga Dynamics ng ATL</h3><ul><li><strong>Mabilis na Tugon:</strong> 7-araw na time constant (half-life ~2.4 araw)</li><li><strong>Spiky na Pattern:</strong> Tumatalon pagkatapos ng mahihirap na session, bumababa sa
+                        panahon ng pagbawi</li><li><strong>Indicator ng Pagbawi:</strong> Bumababang ATL = nawawalang pagkapagod</li><li><strong>Babala sa Overtraining:</strong> Ang palagiang mataas na ATL ay nagpapahiwatig ng hindi
+                        sapat na pagbawi</li></ul><div class="callout callout-science"><h4>🔬 Ang Modelong Fitness-Fatigue</h4><p>Ang bawat training session ay gumagawa ng dalawang epekto:</p><ol><li><strong>Stimulus ng fitness</strong> (mabagal na nabubuo, matagal ang epekto)</li><li><strong>Pagkapagod</strong> (mabilis na nabubuo, mabilis na nawawala)</li></ol><p>Pagganap = Fitness - Pagkapagod. Ang PMC ay nagbibigay ng visual sa modelong ito, na
+                        nagbibigay-daan sa siyentipikong training periodization.</p></div></div><div><h3>Sa Steady State</h3><p>Kapag ang training load ay pare-pareho linggu-linggo, ang CTL at ATL ay nagtatagpo (converge):</p><div class="example-box"><h4>Halimbawa: 500 TSS/linggo nang pare-pareho</h4><div class="calculation">
                         Araw-araw na TSS ≈ 71<br>
                         Papalapit ang CTL sa ~71<br>
                         Papalapit ang ATL sa ~71<br>
                         Papalapit ang TSB sa 0
-                    </div>
-                    <p><strong>Interpretasyon:</strong> Ang fitness at pagkapagod ay balanse. Walang naiipong deficit o
-                        surplus.</p>
-                </div>
-
-                <h3>Sa mga Build Phase</h3>
-                <p>Kapag pinapataas ang training load:</p>
-                <div class="example-box">
-                    <p>Tumataas ang ATL nang <em>mas mabilis</em> kaysa sa CTL dahil sa mas maikling time constant. Ang
+                    </div><p><strong>Interpretasyon:</strong> Ang fitness at pagkapagod ay balanse. Walang naiipong deficit o
+                        surplus.</p></div><h3>Sa mga Build Phase</h3><p>Kapag pinapataas ang training load:</p><div class="example-box"><p>Tumataas ang ATL nang <em>mas mabilis</em> kaysa sa CTL dahil sa mas maikling time constant. Ang
                         TSB ay nagiging negatibo (pagkapagod > fitness). Ito ay normal at produktibo—gumagamit ka ng
-                        overload upang i-stimulate ang adaptasyon.</p>
-                </div>
-
-                <h3>Sa Panahon ng Taper</h3>
-                <p>Kapag binabawasan ang training load:</p>
-                <div class="example-box">
-                    <p>Bumababa ang ATL nang <em>mas mabilis</em> kaysa sa CTL. Ang TSB ay nagiging positibo (fitness >
+                        overload upang i-stimulate ang adaptasyon.</p></div><h3>Sa Panahon ng Taper</h3><p>Kapag binabawasan ang training load:</p><div class="example-box"><p>Bumababa ang ATL nang <em>mas mabilis</em> kaysa sa CTL. Ang TSB ay nagiging positibo (fitness >
                         pagkapagod). Ito ang layunin—ang makarating sa araw ng race nang presko habang pinapanatili ang
-                        fitness.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2>Pag-unawa sa TSB: Ang Iyong Sukatan ng Form/Kahandaan</h2>
-
-        <p class="lead">Ang TSB ay ang pagkakaiba sa pagitan ng fitness (CTL) kahapon at pagkapagod (ATL) kahapon.
-            Nagpapahiwatig ito kung ikaw ay presko o pagod, handang mag-race o kailangang magpahinga.</p>
-
-        <div class="tsb-zones-container">
-            <h3>Gabay sa Interpretasyon ng TSB</h3>
-            <table class="tsb-zones-table">
-                <thead>
-                    <tr>
-                        <th>Saklaw ng TSB</th>
-                        <th>Status</th>
-                        <th>Interpretasyon</th>
-                        <th>Inirerekomendang Aksyon</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tsb-critical">
-                        <td>&lt; -30</td>
-                        <td><strong>Panganib sa Overload</strong></td>
-                        <td>Sukdulang pagkapagod. Potensyal na overtraining.</td>
-                        <td>Kailangan ng agarang pagbawi. Bawasan ang volume nang 50%+.</td>
-                    </tr>
-                    <tr class="tsb-training">
-                        <td>-20 hanggang -30</td>
-                        <td><strong>Optimal na Training Block</strong></td>
-                        <td>Produktibong overload. Pagbuo ng fitness.</td>
-                        <td>Ipagpatuloy ang plano. Bantayan ang mga senyales ng labis na pagkapagod.</td>
-                    </tr>
-                    <tr class="tsb-moderate">
-                        <td>-10 hanggang -20</td>
-                        <td><strong>Moderate na Load</strong></td>
-                        <td>Standard na akumulasyon ng pagsasanay.</td>
-                        <td>Normal na pagsasanay. Kayang humawak ng mga quality session.</td>
-                    </tr>
-                    <tr class="tsb-neutral">
-                        <td>-10 hanggang +15</td>
-                        <td><strong>Transition/Maintenance</strong></td>
-                        <td>Balanse na kalagayan. Bahagyang pagkapagod o pagkakapresko.</td>
-                        <td>Mabuti para sa mga B/C race, testing, o mga recovery week.</td>
-                    </tr>
-                    <tr class="tsb-fresh">
-                        <td>+15 hanggang +25</td>
-                        <td><strong>Peak Race Form</strong></td>
-                        <td>Presko at fit. Pinakamahusay na window para sa pagganap.</td>
-                        <td>Mga A-priority na race. Inaasahang peak performance.</td>
-                    </tr>
-                    <tr class="tsb-very-fresh">
-                        <td>+25 hanggang +35</td>
-                        <td><strong>Napakapresko</strong></td>
-                        <td>Napakabuti ng pahinga. Mabuti para sa mga sprint.</td>
-                        <td>Maikling race, time trial, kalagayang napakabuti ng pahinga.</td>
-                    </tr>
-                    <tr class="tsb-detraining">
-                        <td>&gt; +35</td>
-                        <td><strong>Detraining</strong></td>
-                        <td>Nawawala ang fitness dahil sa kawalan ng aktibidad.</td>
-                        <td>Ipagpatuloy ang pagsasanay. Bumababa ang fitness mula sa matagal na pahinga.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>🎯 Target na TSB ayon sa Distansya ng Race</h3>
-            <ul>
-                <li><strong>Sprint/Olympic Triathlon:</strong> TSB +15 hanggang +25 (7-10 araw na taper)</li>
-                <li><strong>Half Ironman (70.3):</strong> TSB +20 hanggang +30 (10-14 araw na taper)</li>
-                <li><strong>Full Ironman:</strong> TSB +15 hanggang +25 (14-21 araw na taper)</li>
-                <li><strong>Mga Event sa Pool Swimming:</strong> TSB +15 hanggang +25 (7-14 araw na taper depende sa
-                    event)</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Halimbawa ng PMC: Training Block → Taper → Race</h2>
-
-        <div class="example-box">
-            <h3>8-Linggong Training Cycle</h3>
-
-            <h4>Mga Linggo 1-5: Build Phase</h4>
-            <ul>
-                <li>Lingguhang TSS: 400 → 450 → 500 → 550 → 550</li>
-                <li>CTL: Dahan-dahang tumataas mula sa 50 → 65</li>
-                <li>ATL: Sinusubaybayan ang lingguhang load, nagbabago sa 55-80</li>
-                <li>TSB: Negatibo (-15 hanggang -25), nagpapahiwatig ng produktibong training stress</li>
-            </ul>
-
-            <h4>Linggo 6: Recovery Week</h4>
-            <ul>
-                <li>Lingguhang TSS: 300 (40% pagbabawas)</li>
-                <li>CTL: Bahagyang pagbaba sa ~63 (fitness na nanatili)</li>
-                <li>ATL: Bumababa sa ~50 (nawawalang pagkapagod)</li>
-                <li>TSB: Tumataas sa +5 (bahagyang pagkakapresko)</li>
-            </ul>
-
-            <h4>Linggo 7: Final Build</h4>
-            <ul>
-                <li>Lingguhang TSS: 500</li>
-                <li>CTL: Umaakyat sa ~65</li>
-                <li>ATL: Tumatalon sa ~75</li>
-                <li>TSB: Bumabalik sa -20 (quality training na nakuha)</li>
-            </ul>
-
-            <h4>Linggo 8: Taper + Race</h4>
-            <ul>
-                <li>Mga Araw 1-9: Binawasang volume, pinapanatili ang intensidad (200 TSS kabuuan)</li>
-                <li>CTL: Marahang pagbaba sa ~62 (minimal na pagkawala ng fitness)</li>
-                <li>ATL: Mabilis na pagbaba sa ~40 (nawala ang pagkapagod)</li>
-                <li>TSB: Umaabot sa peak na <strong>+20 sa araw ng race</strong></li>
-                <li><strong>Resulta:</strong> Presko, fit, handang gumanap</li>
-            </ul>
-        </div>
-
-        <div class="callout callout-success">
-            <h3>✅ Bakit Gumagana ang Taper</h3>
-            <p>Ang iba't ibang time constant (42 araw para sa CTL, 7 araw para sa ATL) ang lumikha sa taper effect:</p>
-            <ul>
-                <li>Mabilis na tumutugon ang ATL → Nawawala ang pagkapagod sa loob ng 7-10 araw</li>
-                <li>Mabagal na tumutugon ang CTL → Nanatili ang fitness nang ilang linggo</li>
-                <li>Resulta: Nananatili ang fitness habang nawawala ang pagkapagod = peak performance</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Mga Gabay sa Praktikal na Implementasyon</h2>
-
-        <div class="guidelines-grid">
-            <div class="guideline-item">
-                <h3>1️⃣ Subaybayan ang Araw-araw na sTSS</h3>
-                <p>Consistency ang susi. Itala ang sTSS ng bawat workout upang bumuo ng tumpak na mga trend sa
-                    CTL/ATL/TSB. Ang nawawalang data ay lumilikha ng mga puwang sa fitness curve.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>2️⃣ Bantayan ang CTL Ramp Rate</h3>
-                <p>Dagdagan ang CTL nang dahan-dahan. Ang 5-7 point na lingguhang pagtaas ay mapapanatili para sa
-                    karamihan ng mga swimmer. Ang pagtalon ng 15-20 puntos ay nauuwi sa pinsala.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>3️⃣ Magplano ng mga Recovery Week</h3>
-                <p>Tuwing 3-4 na linggo, bawasan ang volume nang 30-50% sa loob ng isang linggo. Hayaang tumaas ang TSB
-                    sa -5 hanggang +10. Pinapatatag nito ang fitness at pinipigilan ang overtraining.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>4️⃣ I-time ang Iyong Taper</h3>
-                <p>Targetin ang TSB na +15 hanggang +25 sa araw ng race. Simulan ang taper 7-14 araw bago ang race
-                    depende sa distansya ng event at kasalukuyang TSB.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>5️⃣ Huwag Mag-panic sa Negatibong TSB</h3>
-                <p>Ang TSB na -20 hanggang -30 sa mga build phase ay normal at produktibo. Nangangahulugan ito na
-                    nagbibigay ka ng stimulus para sa adaptasyon.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>6️⃣ Irespeto ang CTL Decay</h3>
-                <p>Pagkatapos ng break mula sa pagsasanay, huwag subukang bumalik agad sa dating CTL. Muling bumuo nang
-                    dahan-dahan upang maiwasan ang pinsala.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow text-center">
-        <h2>Kabisaduhin ang Iyong Training Load</h2>
-        <p class="lead">Binabago ng PMC ang subjective na pagsasanay tungo sa objective na data. Sa pamamagitan ng
+                        fitness.</p></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>Pag-unawa sa TSB: Ang Iyong Sukatan ng Form/Kahandaan</h2><p class="lead">Ang TSB ay ang pagkakaiba sa pagitan ng fitness (CTL) kahapon at pagkapagod (ATL) kahapon.
+            Nagpapahiwatig ito kung ikaw ay presko o pagod, handang mag-race o kailangang magpahinga.</p><div class="tsb-zones-container"><h3>Gabay sa Interpretasyon ng TSB</h3><table class="tsb-zones-table"><thead><tr><th>Saklaw ng TSB</th><th>Status</th><th>Interpretasyon</th><th>Inirerekomendang Aksyon</th></tr></thead><tbody><tr class="tsb-critical"><td>&lt; -30</td><td><strong>Panganib sa Overload</strong></td><td>Sukdulang pagkapagod. Potensyal na overtraining.</td><td>Kailangan ng agarang pagbawi. Bawasan ang volume nang 50%+.</td></tr><tr class="tsb-training"><td>-20 hanggang -30</td><td><strong>Optimal na Training Block</strong></td><td>Produktibong overload. Pagbuo ng fitness.</td><td>Ipagpatuloy ang plano. Bantayan ang mga senyales ng labis na pagkapagod.</td></tr><tr class="tsb-moderate"><td>-10 hanggang -20</td><td><strong>Moderate na Load</strong></td><td>Standard na akumulasyon ng pagsasanay.</td><td>Normal na pagsasanay. Kayang humawak ng mga quality session.</td></tr><tr class="tsb-neutral"><td>-10 hanggang +15</td><td><strong>Transition/Maintenance</strong></td><td>Balanse na kalagayan. Bahagyang pagkapagod o pagkakapresko.</td><td>Mabuti para sa mga B/C race, testing, o mga recovery week.</td></tr><tr class="tsb-fresh"><td>+15 hanggang +25</td><td><strong>Peak Race Form</strong></td><td>Presko at fit. Pinakamahusay na window para sa pagganap.</td><td>Mga A-priority na race. Inaasahang peak performance.</td></tr><tr class="tsb-very-fresh"><td>+25 hanggang +35</td><td><strong>Napakapresko</strong></td><td>Napakabuti ng pahinga. Mabuti para sa mga sprint.</td><td>Maikling race, time trial, kalagayang napakabuti ng pahinga.</td></tr><tr class="tsb-detraining"><td>&gt; +35</td><td><strong>Detraining</strong></td><td>Nawawala ang fitness dahil sa kawalan ng aktibidad.</td><td>Ipagpatuloy ang pagsasanay. Bumababa ang fitness mula sa matagal na pahinga.</td></tr></tbody></table></div><div class="callout callout-tip mt-xl"><h3>🎯 Target na TSB ayon sa Distansya ng Race</h3><ul><li><strong>Sprint/Olympic Triathlon:</strong> TSB +15 hanggang +25 (7-10 araw na taper)</li><li><strong>Half Ironman (70.3):</strong> TSB +20 hanggang +30 (10-14 araw na taper)</li><li><strong>Full Ironman:</strong> TSB +15 hanggang +25 (14-21 araw na taper)</li><li><strong>Mga Event sa Pool Swimming:</strong> TSB +15 hanggang +25 (7-14 araw na taper depende sa
+                    event)</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Halimbawa ng PMC: Training Block → Taper → Race</h2><div class="example-box"><h3>8-Linggong Training Cycle</h3><h4>Mga Linggo 1-5: Build Phase</h4><ul><li>Lingguhang TSS: 400 → 450 → 500 → 550 → 550</li><li>CTL: Dahan-dahang tumataas mula sa 50 → 65</li><li>ATL: Sinusubaybayan ang lingguhang load, nagbabago sa 55-80</li><li>TSB: Negatibo (-15 hanggang -25), nagpapahiwatig ng produktibong training stress</li></ul><h4>Linggo 6: Recovery Week</h4><ul><li>Lingguhang TSS: 300 (40% pagbabawas)</li><li>CTL: Bahagyang pagbaba sa ~63 (fitness na nanatili)</li><li>ATL: Bumababa sa ~50 (nawawalang pagkapagod)</li><li>TSB: Tumataas sa +5 (bahagyang pagkakapresko)</li></ul><h4>Linggo 7: Final Build</h4><ul><li>Lingguhang TSS: 500</li><li>CTL: Umaakyat sa ~65</li><li>ATL: Tumatalon sa ~75</li><li>TSB: Bumabalik sa -20 (quality training na nakuha)</li></ul><h4>Linggo 8: Taper + Race</h4><ul><li>Mga Araw 1-9: Binawasang volume, pinapanatili ang intensidad (200 TSS kabuuan)</li><li>CTL: Marahang pagbaba sa ~62 (minimal na pagkawala ng fitness)</li><li>ATL: Mabilis na pagbaba sa ~40 (nawala ang pagkapagod)</li><li>TSB: Umaabot sa peak na <strong>+20 sa araw ng race</strong></li><li><strong>Resulta:</strong> Presko, fit, handang gumanap</li></ul></div><div class="callout callout-success"><h3>✅ Bakit Gumagana ang Taper</h3><p>Ang iba't ibang time constant (42 araw para sa CTL, 7 araw para sa ATL) ang lumikha sa taper effect:</p><ul><li>Mabilis na tumutugon ang ATL → Nawawala ang pagkapagod sa loob ng 7-10 araw</li><li>Mabagal na tumutugon ang CTL → Nanatili ang fitness nang ilang linggo</li><li>Resulta: Nananatili ang fitness habang nawawala ang pagkapagod = peak performance</li></ul></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Mga Gabay sa Praktikal na Implementasyon</h2><div class="guidelines-grid"><div class="guideline-item"><h3>1️⃣ Subaybayan ang Araw-araw na sTSS</h3><p>Consistency ang susi. Itala ang sTSS ng bawat workout upang bumuo ng tumpak na mga trend sa
+                    CTL/ATL/TSB. Ang nawawalang data ay lumilikha ng mga puwang sa fitness curve.</p></div><div class="guideline-item"><h3>2️⃣ Bantayan ang CTL Ramp Rate</h3><p>Dagdagan ang CTL nang dahan-dahan. Ang 5-7 point na lingguhang pagtaas ay mapapanatili para sa
+                    karamihan ng mga swimmer. Ang pagtalon ng 15-20 puntos ay nauuwi sa pinsala.</p></div><div class="guideline-item"><h3>3️⃣ Magplano ng mga Recovery Week</h3><p>Tuwing 3-4 na linggo, bawasan ang volume nang 30-50% sa loob ng isang linggo. Hayaang tumaas ang TSB
+                    sa -5 hanggang +10. Pinapatatag nito ang fitness at pinipigilan ang overtraining.</p></div><div class="guideline-item"><h3>4️⃣ I-time ang Iyong Taper</h3><p>Targetin ang TSB na +15 hanggang +25 sa araw ng race. Simulan ang taper 7-14 araw bago ang race
+                    depende sa distansya ng event at kasalukuyang TSB.</p></div><div class="guideline-item"><h3>5️⃣ Huwag Mag-panic sa Negatibong TSB</h3><p>Ang TSB na -20 hanggang -30 sa mga build phase ay normal at produktibo. Nangangahulugan ito na
+                    nagbibigay ka ng stimulus para sa adaptasyon.</p></div><div class="guideline-item"><h3>6️⃣ Irespeto ang CTL Decay</h3><p>Pagkatapos ng break mula sa pagsasanay, huwag subukang bumalik agad sa dating CTL. Muling bumuo nang
+                    dahan-dahan upang maiwasan ang pinsala.</p></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>Kabisaduhin ang Iyong Training Load</h2><p class="lead">Binabago ng PMC ang subjective na pagsasanay tungo sa objective na data. Sa pamamagitan ng
             pagbabantay sa sTSS, CTL, ATL, at TSB, makakakuha ka ng tumpak na kontrol sa pagbuo ng fitness, pamamahala
-            sa pagkapagod, at timing ng peak performance.</p>
-
-        <div class="mt-xl">
-            <a href="/tl/css/" class="btn btn-secondary">← Batayan sa CSS</a>
-            <a href="/tl/efficiency/" class="btn btn-primary">Mga Sukatan sa Kahusayan →</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+            sa pagkapagod, at timing ng peak performance.</p><div class="mt-xl"><a href="/tl/css/" class="btn btn-secondary">← Batayan sa CSS</a><a href="/tl/efficiency/" class="btn btn-primary">Mga Sukatan sa Kahusayan →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link active"
+                </a><a href="/tl/" class="lang-link active"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. Lahat ng karapatan ay nakalaan
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/tl/privacy/">Privacy</a></li>
-                <li><a href="/tl/terms/">Mga Tuntunin</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>Ang website na ito ay gumagamit ng cookies upang mapabuti ang iyong karanasan.</p>
-            <a href="/tl/privacy/" class="text-sm">Alamin pa</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Tanggihan</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Tanggapin</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/tl/privacy/">Privacy</a></li><li><a href="/tl/terms/">Mga Tuntunin</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Ang website na ito ay gumagamit ng cookies upang mapabuti ang iyong karanasan.</p><a href="/tl/privacy/" class="text-sm">Alamin pa</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Tanggihan</button><button id="cookie-accept" class="btn btn-primary btn-small">Tanggapin</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

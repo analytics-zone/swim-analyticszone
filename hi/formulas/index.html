@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="hi" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>स्विमिंग परफॉर्मेंस फॉर्मूला: CSS, TSS, CTL/ATL कैलकुलेशन</title>
-  <meta name="description" content="स्विम एनालिटिक्स के लिए पूर्ण गणितीय फॉर्मूला। CSS, sTSS, CTL, ATL, TSB को मैन्युअली कैसे कैलकुलेट करें सीखें। वर्क किए गए उदाहरण, डेरिवेशन और व्यावहारिक एप्लिकेशन की">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="स्विमिंग फॉर्मूला, CSS कैलकुलेशन, TSS फॉर्मूला, ट्रेनिंग गणित, परफॉर्मेंस कैलकुलेशन">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/hi/formulas/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/hi/formulas/">
-  <meta property="og:title" content="स्विमिंग परफॉर्मेंस फॉर्मूला: CSS, TSS, CTL/ATL कैलकुलेशन">
-  <meta property="og:description" content="स्विम एनालिटिक्स के लिए पूर्ण गणितीय फॉर्मूला। CSS, sTSS, CTL, ATL, TSB को मैन्युअली कैसे कैलकुलेट करें सीखें। वर्क किए गए उदाहरण, डेरिवेशन और व्यावहारिक एप्लिकेशन की">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="hi_IN">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/hi/formulas/">
-  <meta name="twitter:title" content="स्विमिंग परफॉर्मेंस फॉर्मूला: CSS, TSS, CTL/ATL कैलकुलेशन">
-  <meta name="twitter:description" content="स्विम एनालिटिक्स के लिए पूर्ण गणितीय फॉर्मूला। CSS, sTSS, CTL, ATL, TSB को मैन्युअली कैसे कैलकुलेट करें सीखें। वर्क किए गए उदाहरण, डेरिवेशन और व्यावहारिक एप्लिकेशन की">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/formulas/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/formulas/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/formulas/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/formulas/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/formulas/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/formulas/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/formulas/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/formulas/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/formulas/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/formulas/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/formulas/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/formulas/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/formulas/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/formulas/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/formulas/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/formulas/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/formulas/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/formulas/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/formulas/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/formulas/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/formulas/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/formulas/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/formulas/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/formulas/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/formulas/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/formulas/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/formulas/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/formulas/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/formulas/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/formulas/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/formulas/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/formulas/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/formulas/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/formulas/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/formulas/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/formulas/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/formulas/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/formulas/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/formulas/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/formulas/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/formulas/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/formulas/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/formulas/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/formulas/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/formulas/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/formulas/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/formulas/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/formulas/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/formulas/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/formulas/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/formulas/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/formulas/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/formulas/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/formulas/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/formulas/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/formulas/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="hi" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>स्विमिंग परफॉर्मेंस फॉर्मूला: CSS, TSS, CTL/ATL कैलकुलेशन</title><meta name="description" content="जावास्क्रिप्ट कोड उदाहरणों के साथ पूर्ण तैराकी प्रदर्शन सूत्र। सीएसएस, एसटीएसएस, सीटीएल/एटीएल/टीएसबी, एसडब्ल्यूओएलएफ, स्ट्रोक दर की गणना करें। डेवलपर्स और प्रशिक्षकों..."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="स्विमिंग फॉर्मूला, CSS कैलकुलेशन, TSS फॉर्मूला, ट्रेनिंग गणित, परफॉर्मेंस कैलकुलेशन"><link rel="canonical" href="https://swim.analyticszone.app/hi/formulas/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-02-20T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/hi/formulas/"><meta property="og:title" content="स्विमिंग परफॉर्मेंस फॉर्मूला: CSS, TSS, CTL/ATL कैलकुलेशन"><meta property="og:description" content="जावास्क्रिप्ट कोड उदाहरणों के साथ पूर्ण तैराकी प्रदर्शन सूत्र। सीएसएस, एसटीएसएस, सीटीएल/एटीएल/टीएसबी, एसडब्ल्यूओएलएफ, स्ट्रोक दर की गणना करें। डेवलपर्स और प्रशिक्षकों..."><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="hi_IN"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/hi/formulas/"><meta name="twitter:title" content="स्विमिंग परफॉर्मेंस फॉर्मूला: CSS, TSS, CTL/ATL कैलकुलेशन"><meta name="twitter:description" content="जावास्क्रिप्ट कोड उदाहरणों के साथ पूर्ण तैराकी प्रदर्शन सूत्र। सीएसएस, एसटीएसएस, सीटीएल/एटीएल/टीएसबी, एसडब्ल्यूओएलएफ, स्ट्रोक दर की गणना करें। डेवलपर्स और प्रशिक्षकों..."><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/formulas/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/formulas/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/formulas/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/formulas/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/formulas/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/formulas/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/formulas/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/formulas/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/formulas/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/formulas/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/formulas/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/formulas/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/formulas/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/formulas/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/formulas/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/formulas/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/formulas/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/formulas/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/formulas/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/formulas/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/formulas/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/formulas/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/formulas/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/formulas/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/formulas/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/formulas/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/formulas/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/formulas/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/formulas/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/formulas/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/formulas/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/formulas/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/formulas/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/formulas/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/formulas/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/formulas/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/formulas/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/formulas/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/formulas/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/formulas/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/formulas/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/formulas/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/formulas/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/formulas/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/formulas/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/formulas/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/formulas/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/formulas/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/formulas/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/formulas/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/formulas/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/formulas/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/formulas/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/formulas/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/formulas/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/formulas/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "hi"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,28 +402,20 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "स्विमिंग परफॉर्मेंस फॉर्मूला: CSS, TSS, CTL/ATL कैलकुलेशन",
-  "description": "स्विम एनालिटिक्स के लिए पूर्ण गणितीय फॉर्मूला। CSS, sTSS, CTL, ATL, TSB को मैन्युअली कैसे कैलकुलेट करें सीखें। वर्क किए गए उदाहरण, डेरिवेशन और व्यावहारिक एप्लिकेशन की",
+  "description": "जावास्क्रिप्ट कोड उदाहरणों के साथ पूर्ण तैराकी प्रदर्शन सूत्र। सीएसएस, एसटीएसएस, सीटीएल/एटीएल/टीएसबी, एसडब्ल्यूओएलएफ, स्ट्रोक दर की गणना करें। डेवलपर्स और प्रशिक्षकों...",
   "url": "https://swim.analyticszone.app/hi/formulas/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "स्विमिंग परफॉर्मेंस फॉर्मूला: CSS, TSS, CTL/ATL कैलकुलेशन",
-  "description": "स्विम एनालिटिक्स के लिए पूर्ण गणितीय फॉर्मूला। CSS, sTSS, CTL, ATL, TSB को मैन्युअली कैसे कैलकुलेट करें सीखें। वर्क किए गए उदाहरण, डेरिवेशन और व्यावहारिक एप्लिकेशन की",
+  "description": "जावास्क्रिप्ट कोड उदाहरणों के साथ पूर्ण तैराकी प्रदर्शन सूत्र। सीएसएस, एसटीएसएस, सीटीएल/एटीएल/टीएसबी, एसडब्ल्यूओएलएफ, स्ट्रोक दर की गणना करें। डेवलपर्स और प्रशिक्षकों...",
   "author": {
     "@type": "Person",
     "name": "AnalyticsZone Team"
@@ -647,23 +429,13 @@ img[width][height] {
     }
   },
   "datePublished": "2025-01-15",
-  "dateModified": "2026-01-04",
+  "dateModified": "2026-02-20",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://swim.analyticszone.app/hi/formulas/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,611 +449,175 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">सामग्री पर जाएं</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/hi/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/hi/" 
+  </script></head><body><a href="#main-content" class="skip-link">सामग्री पर जाएं</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/hi/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/hi/" 
                                 aria-current="">
                                 होम
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/hi/getting-started/" class="nav-label">सीखें</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/hi/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/hi/getting-started/" class="nav-label">सीखें</a><ul class="submenu"><li><a href="/hi/getting-started/" 
                                         aria-current="">
                                         शुरू करें
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/css/" 
+                                    </a></li><li><a href="/hi/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/training-zones/" 
+                                    </a></li><li><a href="/hi/training-zones/" 
                                         aria-current="">
                                         प्रशिक्षण क्षेत्र
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/training-load/" 
+                                    </a></li><li><a href="/hi/training-load/" 
                                         aria-current="">
                                         प्रशिक्षण भार
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/stss-calculator/" 
+                                    </a></li><li><a href="/hi/stss-calculator/" 
                                         aria-current="">
                                         sTSS कैलकुलेटर
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/hi/research/" class="nav-label">विज्ञान</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/hi/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/hi/research/" class="nav-label">विज्ञान</a><ul class="submenu"><li><a href="/hi/research/" 
                                         aria-current="">
                                         अनुसंधान
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/formulas/" class="active" 
+                                    </a></li><li><a href="/hi/formulas/" class="active" 
                                         aria-current="page">
                                         सूत्र
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/efficiency/" 
+                                    </a></li><li><a href="/hi/efficiency/" 
                                         aria-current="">
                                         दक्षता
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/stroke-mechanics/" 
+                                    </a></li><li><a href="/hi/stroke-mechanics/" 
                                         aria-current="">
                                         स्ट्रोक मैकेनिक्स
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/bibliography/" 
+                                    </a></li><li><a href="/hi/bibliography/" 
                                         aria-current="">
                                         ग्रंथ सूची
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/hi/contact/" 
+                                    </a></li></ul></li><li><a href="/hi/contact/" 
                                 aria-current="">
                                 संपर्क
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="भाषा चुनें">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="भाषा चुनें"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" selected>
+                        </option><option value="hi" selected>
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="मेनू टॉगल करें"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/hi/">होम</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/hi/research/">विज्ञान</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">सूत्र</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-  <div class="container">
-    <h1>तकनीकी संदर्भ और सूत्र</h1>
-    <p class="lead">पूर्ण गणितीय कार्यान्वयन</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container container-narrow">
-    <h2>कार्यान्वयन गाइड</h2>
-    <p class="lead">इस पृष्ठ में सभी स्विम एनालिटिक्स मेट्रिक्स के लिए कॉपी-पेस्ट करने योग्य सूत्र और चरण-दर-चरण गणना
-      विधियां शामिल हैं। कस्टम कार्यान्वयन, सत्यापन, या गहरी समझ के लिए इनका उपयोग करें।</p>
-
-    <div class="callout callout-warning">
-      <h3>⚠️ कार्यान्वयन नोट्स</h3>
-      <ul>
-        <li>गणना के लिए सभी समय को सेकंड में परिवर्तित किया जाना चाहिए</li>
-        <li>तैराकी की गति उलटी है (उच्च % = धीमी गति)</li>
-        <li>हमेशा उचित सीमा के लिए इनपुट को मान्य करें</li>
-        <li>किनारे के मामलों को संभालें (शून्य से विभाजन, नकारात्मक मान)</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="container">
-    <h2>मुख्य प्रदर्शन मेट्रिक्स (Core Performance Metrics)</h2>
-
-    <div class="formula-card">
-      <h3>क्रांतिक तैराकी गति (CSS, Critical Swim Speed)</h3>
-      <div class="formula-content">
-        <h4>सूत्र:</h4>
-        <div class="formula-box-large">
-          <div class="formula">
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="मेनू टॉगल करें"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/hi/">होम</a></li><li><a href="/hi/research/">विज्ञान</a></li><li><span aria-current="page">सूत्र</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>तकनीकी संदर्भ और सूत्र</h1><p class="lead">पूर्ण गणितीय कार्यान्वयन</p></div></section><section class="section"><div class="container container-narrow"><h2>कार्यान्वयन गाइड</h2><p class="lead">इस पृष्ठ में सभी स्विम एनालिटिक्स मेट्रिक्स के लिए कॉपी-पेस्ट करने योग्य सूत्र और चरण-दर-चरण गणना
+      विधियां शामिल हैं। कस्टम कार्यान्वयन, सत्यापन, या गहरी समझ के लिए इनका उपयोग करें।</p><div class="callout callout-warning"><h3>⚠️ कार्यान्वयन नोट्स</h3><ul><li>गणना के लिए सभी समय को सेकंड में परिवर्तित किया जाना चाहिए</li><li>तैराकी की गति उलटी है (उच्च % = धीमी गति)</li><li>हमेशा उचित सीमा के लिए इनपुट को मान्य करें</li><li>किनारे के मामलों को संभालें (शून्य से विभाजन, नकारात्मक मान)</li></ul></div><p class="lead mt-xl">क्या आप मैन्युअल गणना से बचना चाहते हैं? हमारा पढ़ें<a href="/hi/training-load/">प्रशिक्षण भार गाइड</a>या निःशुल्क स्विम एनालिटिक्स ऐप का उपयोग करें।</p></div></section><section class="section section-alt"><div class="container"><h2>मुख्य प्रदर्शन मेट्रिक्स (Core Performance Metrics)</h2><div class="formula-card"><h3>क्रांतिक तैराकी गति (CSS, Critical Swim Speed)</h3><div class="formula-content"><h4>सूत्र:</h4><div class="formula-box-large"><div class="formula">
             CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
-          </div>
-          <div class="formula">
+          </div><div class="formula">
             CSS गति/100m (सेकंड) = (T₄₀₀ - T₂₀₀) / 2
-          </div>
-        </div>
-
-        <div class="callout callout-info mt-lg">
-          <h4>🧪 इंटरएक्टिव कैलकुलेटर - सूत्र का परीक्षण करें</h4>
-          <div class="calculator-grid">
-            <div class="input-group">
-              <label for="css-d1">दूरी 1 (मीटर):</label>
-              <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
-            </div>
-            <div class="input-group">
-              <label for="css-t1">समय 1 (mm:ss):</label>
-              <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
-            </div>
-            <div class="input-group">
-              <label for="css-d2">दूरी 2 (मीटर):</label>
-              <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
-            </div>
-            <div class="input-group">
-              <label for="css-t2">समय 2 (mm:ss):</label>
-              <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
-            </div>
-          </div>
-          <div class="calculator-result mt-md">
-            <div class="result-label">CSS गति (प्रति 100m):</div>
-            <div class="result-value" id="css-result">1:49</div>
-          </div>
-          <div class="calculation-breakdown mt-md">
-            <small>
-              <strong>गणना चरण:</strong><br>
-              <span id="css-steps">
-                CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
+          </div></div><div class="callout callout-info mt-lg"><h4>🧪 इंटरएक्टिव कैलकुलेटर - सूत्र का परीक्षण करें</h4><div class="calculator-grid"><div class="input-group"><label for="css-d1">दूरी 1 (मीटर):</label><input id="css-d1" max="1000" min="50" step="50" type="number" value="200"/></div><div class="input-group"><label for="css-t1">समय 1 (mm:ss):</label><input id="css-t1" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="2:30" type="text" value="2:30"/></div><div class="input-group"><label for="css-d2">दूरी 2 (मीटर):</label><input id="css-d2" max="2000" min="100" step="50" type="number" value="400"/></div><div class="input-group"><label for="css-t2">समय 2 (mm:ss):</label><input id="css-t2" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="6:08" type="text" value="6:08"/></div></div><div class="calculator-result mt-md"><div class="result-label">CSS गति (प्रति 100m):</div><div class="result-value" id="css-result">1:49</div></div><div class="calculation-breakdown mt-md"><small><strong>गणना चरण:</strong><br/><span id="css-steps">
+                CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br/>
                 गति/100m = 100 / 0.917 = 109 सेकंड = 1:49
-              </span>
-            </small>
-          </div>
-        </div>
-
-        <h4 class="mt-xl">जावास्क्रिप्ट कार्यान्वयन:</h4>
-        <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
+              </span></small></div></div><h4 class="mt-xl">जावास्क्रिप्ट कार्यान्वयन:</h4><pre><code>function calculateCSS(distance1, time1, distance2, time2) {
   // यदि आवश्यक हो तो समय को सेकंड में बदलें
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
   const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
@@ -1305,9 +641,7 @@ img[width][height] {
 
 // उपयोग उदाहरण:
 const result = calculateCSS(200, 150, 400, 368);
-// वापसी: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
-
-        <script>
+// वापसी: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre><script>
           function timeToSecondsCSS(timeString) {
             const parts = timeString.split(':');
             return parseInt(parts[0]) * 60 + parseInt(parts[1]);
@@ -1351,65 +685,18 @@ const result = calculateCSS(200, 150, 400, 368);
             document.getElementById('css-t2').addEventListener('input', updateCSSCalculator);
             updateCSSCalculator();
           });
-        </script>
-      </div>
-    </div>
-
-    <div class="formula-card">
-      <h3>स्विम ट्रेनिंग स्ट्रेस स्कोर (sTSS)</h3>
-      <div class="formula-content">
-        <h4>पूर्ण सूत्र:</h4>
-        <div class="formula-box-large">
-          <div class="formula">
+        </script></div></div><div class="formula-card"><h3>स्विम ट्रेनिंग स्ट्रेस स्कोर (sTSS)</h3><div class="formula-content"><h4>पूर्ण सूत्र:</h4><div class="formula-box-large"><div class="formula">
             sTSS = (IF³) × अवधि (घंटे) × 100
-          </div>
-          <div class="formula">
+          </div><div class="formula">
             IF = NSS / FTP
-          </div>
-          <div class="formula">
+          </div><div class="formula">
             NSS = कुल दूरी / कुल समय (m/min)
-          </div>
-        </div>
-
-        <div class="callout callout-info mt-lg">
-          <h4>🧪 इंटरएक्टिव कैलकुलेटर - सूत्र का परीक्षण करें</h4>
-          <div class="calculator-grid">
-            <div class="input-group">
-              <label for="stss-distance">दूरी (मीटर):</label>
-              <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
-            </div>
-            <div class="input-group">
-              <label for="stss-duration">अवधि (मिनट):</label>
-              <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
-            </div>
-            <div class="input-group">
-              <label for="stss-css">CSS गति (mm:ss प्रति 100m):</label>
-              <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
-            </div>
-            <div class="input-group">
-              <label>FTP (परिकलित):</label>
-              <input type="text" id="stss-ftp" readonly value="64.5 m/min">
-            </div>
-          </div>
-          <div class="calculator-result mt-md">
-            <div class="result-label">परिकलित sTSS:</div>
-            <div class="result-value" id="stss-result">55</div>
-          </div>
-          <div class="calculation-breakdown mt-md">
-            <small>
-              <strong>गणना चरण:</strong><br>
-              <span id="stss-steps">
-                NSS = 3000m / 55min = 54.5 m/min<br>
-                FTP = 100 / (93/60) = 64.5 m/min<br>
-                IF = 54.5 / 64.5 = 0.845<br>
+          </div></div><div class="callout callout-info mt-lg"><h4>🧪 इंटरएक्टिव कैलकुलेटर - सूत्र का परीक्षण करें</h4><div class="calculator-grid"><div class="input-group"><label for="stss-distance">दूरी (मीटर):</label><input id="stss-distance" max="10000" min="100" step="50" type="number" value="3000"/></div><div class="input-group"><label for="stss-duration">अवधि (मिनट):</label><input id="stss-duration" max="300" min="1" step="1" type="number" value="55"/></div><div class="input-group"><label for="stss-css">CSS गति (mm:ss प्रति 100m):</label><input id="stss-css" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="1:33" type="text" value="1:33"/></div><div class="input-group"><label>FTP (परिकलित):</label><input id="stss-ftp" readonly="" type="text" value="64.5 m/min"/></div></div><div class="calculator-result mt-md"><div class="result-label">परिकलित sTSS:</div><div class="result-value" id="stss-result">55</div></div><div class="calculation-breakdown mt-md"><small><strong>गणना चरण:</strong><br/><span id="stss-steps">
+                NSS = 3000m / 55min = 54.5 m/min<br/>
+                FTP = 100 / (93/60) = 64.5 m/min<br/>
+                IF = 54.5 / 64.5 = 0.845<br/>
                 sTSS = 0.845³ × (55/60) × 100 = 55
-              </span>
-            </small>
-          </div>
-        </div>
-
-        <h4 class="mt-xl">जावास्क्रिप्ट कार्यान्वयन:</h4>
-        <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+              </span></small></div></div><h4 class="mt-xl">जावास्क्रिप्ट कार्यान्वयन:</h4><pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
   // सामान्यीकृत तैरने की गति (NSS) की गणना करें
   const nss = distance / timeMinutes;
 
@@ -1436,9 +723,7 @@ function cssToFTP(cssPacePer100mSeconds) {
 }
 
 // उदाहरण: CSS 1:33 (93 सेकंड)
-const ftp = cssToFTP(93); // वापसी: 64.5 m/min</code></pre>
-
-        <script>
+const ftp = cssToFTP(93); // वापसी: 64.5 m/min</code></pre><script>
           // समय रूपांतरण सहायक
           function timeToSeconds(timeString) {
             const parts = timeString.split(':');
@@ -1509,58 +794,13 @@ const ftp = cssToFTP(93); // वापसी: 64.5 m/min</code></pre>
             // प्रारंभिक गणना
             updateSTSSCalculator();
           });
-        </script>
-      </div>
-    </div>
-
-    <div class="formula-card">
-      <h3>SWOLF</h3>
-      <div class="formula-content">
-        <h4>सूत्र:</h4>
-        <div class="formula-box-large">
-          <div class="formula">
+        </script></div></div><div class="formula-card"><h3>SWOLF</h3><div class="formula-content"><h4>सूत्र:</h4><div class="formula-box-large"><div class="formula">
             SWOLF = लैप समय (सेकंड) + स्ट्रोक गिनती
-          </div>
-          <div class="formula">
+          </div><div class="formula">
             SWOLF₂₅ = (समय × 25/पूल लंबाई) + (स्ट्रोक × 25/पूल लंबाई)
-          </div>
-        </div>
-
-        <div class="callout callout-info mt-lg">
-          <h4>🧪 इंटरएक्टिव कैलकुलेटर - सूत्र का परीक्षण करें</h4>
-          <div class="calculator-grid">
-            <div class="input-group">
-              <label for="swolf-time">लैप समय (सेकंड):</label>
-              <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
-            </div>
-            <div class="input-group">
-              <label for="swolf-strokes">स्ट्रोक गिनती:</label>
-              <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
-            </div>
-            <div class="input-group">
-              <label for="swolf-pool">पूल लंबाई (m):</label>
-              <select id="swolf-pool">
-                <option value="25" selected>25m</option>
-                <option value="50">50m</option>
-              </select>
-            </div>
-          </div>
-          <div class="calculator-result mt-md">
-            <div class="result-label">SWOLF स्कोर:</div>
-            <div class="result-value" id="swolf-result">35</div>
-          </div>
-          <div class="calculation-breakdown mt-md">
-            <small>
-              <strong>गणना:</strong><br>
-              <span id="swolf-steps">
+          </div></div><div class="callout callout-info mt-lg"><h4>🧪 इंटरएक्टिव कैलकुलेटर - सूत्र का परीक्षण करें</h4><div class="calculator-grid"><div class="input-group"><label for="swolf-time">लैप समय (सेकंड):</label><input id="swolf-time" max="120" min="10" step="1" type="number" value="20"/></div><div class="input-group"><label for="swolf-strokes">स्ट्रोक गिनती:</label><input id="swolf-strokes" max="50" min="5" step="1" type="number" value="15"/></div><div class="input-group"><label for="swolf-pool">पूल लंबाई (m):</label><select id="swolf-pool"><option selected="" value="25">25m</option><option value="50">50m</option></select></div></div><div class="calculator-result mt-md"><div class="result-label">SWOLF स्कोर:</div><div class="result-value" id="swolf-result">35</div></div><div class="calculation-breakdown mt-md"><small><strong>गणना:</strong><br/><span id="swolf-steps">
                 SWOLF = 20s + 15 स्ट्रोक = 35
-              </span>
-            </small>
-          </div>
-        </div>
-
-        <h4 class="mt-xl">जावास्क्रिप्ट कार्यान्वयन:</h4>
-        <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
+              </span></small></div></div><h4 class="mt-xl">जावास्क्रिप्ट कार्यान्वयन:</h4><pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
   return timeSeconds + strokeCount;
 }
 
@@ -1575,9 +815,7 @@ const swolf = calculateSWOLF(20, 15);
 // वापसी: 35
 
 const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
-// वापसी: 35 (25m तक सामान्यीकृत)</code></pre>
-
-        <script>
+// वापसी: 35 (25m तक सामान्यीकृत)</code></pre><script>
           function updateSWOLFCalculator() {
             try {
               const time = parseFloat(document.getElementById('swolf-time').value);
@@ -1612,65 +850,19 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
             document.getElementById('swolf-pool').addEventListener('change', updateSWOLFCalculator);
             updateSWOLFCalculator();
           });
-        </script>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2>स्ट्रोक यांत्रिकी (Stroke Mechanics)</h2>
-
-    <div class="formula-card">
-      <h3>स्ट्रोक दर (SR, Stroke Rate)</h3>
-      <div class="formula-content">
-        <h4>सूत्र:</h4>
-        <div class="formula-box-large">
-          <div class="formula">
+        </script></div></div></div></section><section class="section"><div class="container"><h2>स्ट्रोक यांत्रिकी (Stroke Mechanics)</h2><div class="formula-card"><h3>स्ट्रोक दर (SR, Stroke Rate)</h3><div class="formula-content"><h4>सूत्र:</h4><div class="formula-box-large"><div class="formula">
             SR = 60 / साइकिल समय (सेकंड)
-          </div>
-          <div class="formula">
+          </div><div class="formula">
             SR = (स्ट्रोक गिनती / समय सेकंड में) × 60
-          </div>
-        </div>
-
-        <div class="callout callout-info mt-lg">
-          <h4>🧪 इंटरएक्टिव कैलकुलेटर - सूत्र का परीक्षण करें</h4>
-          <div class="calculator-grid">
-            <div class="input-group">
-              <label for="sr-strokes">स्ट्रोक गिनती:</label>
-              <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
-            </div>
-            <div class="input-group">
-              <label for="sr-time">समय (सेकंड):</label>
-              <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
-            </div>
-          </div>
-          <div class="calculator-result mt-md">
-            <div class="result-label">स्ट्रोक दर (SPM):</div>
-            <div class="result-value" id="sr-result">72</div>
-          </div>
-          <div class="calculation-breakdown mt-md">
-            <small>
-              <strong>गणना:</strong><br>
-              <span id="sr-steps">
+          </div></div><div class="callout callout-info mt-lg"><h4>🧪 इंटरएक्टिव कैलकुलेटर - सूत्र का परीक्षण करें</h4><div class="calculator-grid"><div class="input-group"><label for="sr-strokes">स्ट्रोक गिनती:</label><input id="sr-strokes" max="100" min="1" step="1" type="number" value="30"/></div><div class="input-group"><label for="sr-time">समय (सेकंड):</label><input id="sr-time" max="180" min="1" step="1" type="number" value="25"/></div></div><div class="calculator-result mt-md"><div class="result-label">स्ट्रोक दर (SPM):</div><div class="result-value" id="sr-result">72</div></div><div class="calculation-breakdown mt-md"><small><strong>गणना:</strong><br/><span id="sr-steps">
                 SR = (30 / 25) × 60 = 72 SPM
-              </span>
-            </small>
-          </div>
-        </div>
-
-        <h4 class="mt-xl">जावास्क्रिप्ट कार्यान्वयन:</h4>
-        <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
+              </span></small></div></div><h4 class="mt-xl">जावास्क्रिप्ट कार्यान्वयन:</h4><pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
   return (strokeCount / timeSeconds) * 60;
 }
 
 // उदाहरण:
 const sr = calculateStrokeRate(30, 25);
-// वापसी: 72 SPM</code></pre>
-
-        <script>
+// वापसी: 72 SPM</code></pre><script>
           function updateSRCalculator() {
             try {
               const strokes = parseFloat(document.getElementById('sr-strokes').value);
@@ -1693,25 +885,11 @@ const sr = calculateStrokeRate(30, 25);
             document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
             updateSRCalculator();
           });
-        </script>
-      </div>
-    </div>
-
-    <div class="formula-card">
-      <h3>प्रति स्ट्रोक दूरी (DPS, Distance Per Stroke)</h3>
-      <div class="formula-content">
-        <h4>सूत्र:</h4>
-        <div class="formula-box-large">
-          <div class="formula">
+        </script></div></div><div class="formula-card"><h3>प्रति स्ट्रोक दूरी (DPS, Distance Per Stroke)</h3><div class="formula-content"><h4>सूत्र:</h4><div class="formula-box-large"><div class="formula">
             DPS = दूरी / स्ट्रोक गिनती
-          </div>
-          <div class="formula">
+          </div><div class="formula">
             DPS = दूरी / (SR / 60)
-          </div>
-        </div>
-
-        <h4>जावास्क्रिप्ट कार्यान्वयन:</h4>
-        <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
+          </div></div><h4>जावास्क्रिप्ट कार्यान्वयन:</h4><pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance;
   return effectiveDistance / strokeCount;
 }
@@ -1722,76 +900,29 @@ const dps = calculateDPS(25, 12, 5);
 
 // कई लैप के लिए:
 const dps100m = calculateDPS(100, 48, 4 * 5);
-// वापसी: 1.67 m/स्ट्रोक (4 लैप × 5m पुश-ऑफ)</code></pre>
-      </div>
-    </div>
-
-    <div class="formula-card">
-      <h3>SR और DPS से वेग</h3>
-      <div class="formula-content">
-        <h4>सूत्र:</h4>
-        <div class="formula-box-large">
-          <div class="formula">
+// वापसी: 1.67 m/स्ट्रोक (4 लैप × 5m पुश-ऑफ)</code></pre></div></div><div class="formula-card"><h3>SR और DPS से वेग</h3><div class="formula-content"><h4>सूत्र:</h4><div class="formula-box-large"><div class="formula">
             वेग (m/s) = (SR / 60) × DPS
-          </div>
-        </div>
-
-        <h4>जावास्क्रिप्ट कार्यान्वयन:</h4>
-        <pre><code>function calculateVelocity(strokeRate, dps) {
+          </div></div><h4>जावास्क्रिप्ट कार्यान्वयन:</h4><pre><code>function calculateVelocity(strokeRate, dps) {
   return (strokeRate / 60) * dps;
 }
 
 // उदाहरण:
 const velocity = calculateVelocity(70, 1.6);
-// वापसी: 1.87 m/s</code></pre>
-      </div>
-    </div>
-
-    <div class="formula-card">
-      <h3>स्ट्रोक इंडेक्स (SI, Stroke Index)</h3>
-      <div class="formula-content">
-        <h4>सूत्र:</h4>
-        <div class="formula-box-large">
-          <div class="formula">
+// वापसी: 1.87 m/s</code></pre></div></div><div class="formula-card"><h3>स्ट्रोक इंडेक्स (SI, Stroke Index)</h3><div class="formula-content"><h4>सूत्र:</h4><div class="formula-box-large"><div class="formula">
             SI = वेग (m/s) × DPS (m/स्ट्रोक)
-          </div>
-        </div>
-
-        <h4>जावास्क्रिप्ट कार्यान्वयन:</h4>
-        <pre><code>function calculateStrokeIndex(velocity, dps) {
+          </div></div><h4>जावास्क्रिप्ट कार्यान्वयन:</h4><pre><code>function calculateStrokeIndex(velocity, dps) {
   return velocity * dps;
 }
 
 // उदाहरण:
 const si = calculateStrokeIndex(1.5, 1.7);
-// वापसी: 2.55</code></pre>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="container">
-    <h2>प्रदर्शन प्रबंधन चार्ट (PMC)</h2>
-
-    <div class="formula-card">
-      <h3>CTL, ATL, TSB गणना</h3>
-      <div class="formula-content">
-        <h4>सूत्र:</h4>
-        <div class="formula-box-large">
-          <div class="formula">
+// वापसी: 2.55</code></pre></div></div></div></section><section class="section section-alt"><div class="container"><h2>प्रदर्शन प्रबंधन चार्ट (PMC)</h2><div class="formula-card"><h3>CTL, ATL, TSB गणना</h3><div class="formula-content"><h4>सूत्र:</h4><div class="formula-box-large"><div class="formula">
             CTL आज = CTL कल + (TSS आज - CTL कल) × (1/42)
-          </div>
-          <div class="formula">
+          </div><div class="formula">
             ATL आज = ATL कल + (TSS आज - ATL कल) × (1/7)
-          </div>
-          <div class="formula">
+          </div><div class="formula">
             TSB = CTL कल - ATL कल
-          </div>
-        </div>
-
-        <h4>जावास्क्रिप्ट कार्यान्वयन:</h4>
-        <pre><code>function updateCTL(previousCTL, todayTSS) {
+          </div></div><h4>जावास्क्रिप्ट कार्यान्वयन:</h4><pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
 
@@ -1808,7 +939,7 @@ function calculatePMC(workouts) {
   let ctl = 0, atl = 0;
   const results = [];
 
-  workouts.forEach(workout => {
+  workouts.forEach(workout =&gt; {
     ctl = updateCTL(ctl, workout.tss);
     atl = updateATL(atl, workout.tss);
     const tsb = calculateTSB(ctl, atl);
@@ -1834,27 +965,13 @@ const workouts = [
 ];
 
 const pmc = calculatePMC(workouts);
-// वापसी: प्रत्येक दिन के लिए CTL, ATL, TSB के साथ सरणी</code></pre>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2>उन्नत गणना</h2>
-
-    <div class="formula-card">
-      <h3>कई दूरियों से CSS (रिग्रेशन विधि)</h3>
-      <div class="formula-content">
-        <h4>जावास्क्रिप्ट कार्यान्वयन:</h4>
-        <pre><code>function calculateCSSRegression(distances, times) {
+// वापसी: प्रत्येक दिन के लिए CTL, ATL, TSB के साथ सरणी</code></pre></div></div></div></section><section class="section"><div class="container"><h2>उन्नत गणना</h2><div class="formula-card"><h3>कई दूरियों से CSS (रिग्रेशन विधि)</h3><div class="formula-content"><h4>जावास्क्रिप्ट कार्यान्वयन:</h4><pre><code>function calculateCSSRegression(distances, times) {
   // रैखिक प्रतिगमन: दूरी = a + b*समय
   const n = distances.length;
-  const sumX = times.reduce((a, b) => a + b, 0);
-  const sumY = distances.reduce((a, b) => a + b, 0);
-  const sumXY = times.reduce((sum, x, i) => sum + x * distances[i], 0);
-  const sumXX = times.reduce((sum, x) => sum + x * x, 0);
+  const sumX = times.reduce((a, b) =&gt; a + b, 0);
+  const sumY = distances.reduce((a, b) =&gt; a + b, 0);
+  const sumXY = times.reduce((sum, x, i) =&gt; sum + x * distances[i], 0);
+  const sumXX = times.reduce((sum, x) =&gt; sum + x * x, 0);
 
   const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
   const intercept = (sumY - slope * sumX) / n;
@@ -1869,15 +986,7 @@ const pmc = calculatePMC(workouts);
 const distances = [100, 200, 400, 800];
 const times = [65, 150, 340, 720]; // सेकंड में
 const result = calculateCSSRegression(distances, times);
-// वापसी: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
-      </div>
-    </div>
-
-    <div class="formula-card">
-      <h3>गति से तीव्रता कारक</h3>
-      <div class="formula-content">
-        <h4>जावास्क्रिप्ट कार्यान्वयन:</h4>
-        <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
+// वापसी: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre></div></div><div class="formula-card"><h3>गति से तीव्रता कारक</h3><div class="formula-content"><h4>जावास्क्रिप्ट कार्यान्वयन:</h4><pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
   // गति को वेग (m/s) में बदलें
   const actualSpeed = 100 / actualPace100m;
   const thresholdSpeed = 100 / thresholdPace100m;
@@ -1886,19 +995,11 @@ const result = calculateCSSRegression(distances, times);
 
 // उदाहरण:
 const if_value = calculateIntensityFactor(110, 93);
-// वापसी: 0.845 (सीमा के 84.5% पर तैरना)</code></pre>
-      </div>
-    </div>
+// वापसी: 0.845 (सीमा के 84.5% पर तैरना)</code></pre></div></div><div class="formula-card"><h3>गति स्थिरता विश्लेषण</h3><div class="formula-content"><h4>जावास्क्रिप्ट कार्यान्वयन:</h4><pre><code>function analyzePaceConsistency(laps) {
+  const paces = laps.map(lap =&gt; lap.distance / lap.time);
+  const avgPace = paces.reduce((a, b) =&gt; a + b) / paces.length;
 
-    <div class="formula-card">
-      <h3>गति स्थिरता विश्लेषण</h3>
-      <div class="formula-content">
-        <h4>जावास्क्रिप्ट कार्यान्वयन:</h4>
-        <pre><code>function analyzePaceConsistency(laps) {
-  const paces = laps.map(lap => lap.distance / lap.time);
-  const avgPace = paces.reduce((a, b) => a + b) / paces.length;
-
-  const variance = paces.reduce((sum, pace) =>
+  const variance = paces.reduce((sum, pace) =&gt;
     sum + Math.pow(pace - avgPace, 2), 0) / paces.length;
   const stdDev = Math.sqrt(variance);
   const coefficientOfVariation = (stdDev / avgPace) * 100;
@@ -1907,9 +1008,9 @@ const if_value = calculateIntensityFactor(110, 93);
     avgPace,
     stdDev,
     coefficientOfVariation,
-    consistency: coefficientOfVariation < 5 ? "उत्कृष्ट" :
-                 coefficientOfVariation < 10 ? "अच्छा" :
-                 coefficientOfVariation < 15 ? "मध्यम" : "परिवर्तनशील"
+    consistency: coefficientOfVariation &lt; 5 ? "उत्कृष्ट" :
+                 coefficientOfVariation &lt; 10 ? "अच्छा" :
+                 coefficientOfVariation &lt; 15 ? "मध्यम" : "परिवर्तनशील"
   };
 }
 
@@ -1921,21 +1022,13 @@ const laps = [
   // ...
 ];
 const analysis = analyzePaceConsistency(laps);
-// वापसी: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "उत्कृष्ट" }</code></pre>
-      </div>
-    </div>
-
-    <div class="formula-card">
-      <h3>स्ट्रोक गणना से थकान का पता लगाना</h3>
-      <div class="formula-content">
-        <h4>जावास्क्रिप्ट कार्यान्वयन:</h4>
-        <pre><code>function detectFatigue(laps) {
+// वापसी: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "उत्कृष्ट" }</code></pre></div></div><div class="formula-card"><h3>स्ट्रोक गणना से थकान का पता लगाना</h3><div class="formula-content"><h4>जावास्क्रिप्ट कार्यान्वयन:</h4><pre><code>function detectFatigue(laps) {
   const firstThird = laps.slice(0, Math.floor(laps.length/3));
   const lastThird = laps.slice(-Math.floor(laps.length/3));
 
-  const firstThirdAvg = firstThird.reduce((sum, lap) =>
+  const firstThirdAvg = firstThird.reduce((sum, lap) =&gt;
     sum + lap.strokeCount, 0) / firstThird.length;
-  const lastThirdAvg = lastThird.reduce((sum, lap) =>
+  const lastThirdAvg = lastThird.reduce((sum, lap) =&gt;
     sum + lap.strokeCount, 0) / lastThird.length;
 
   const strokeCountIncrease = ((lastThirdAvg - firstThirdAvg) / firstThirdAvg) * 100;
@@ -1944,9 +1037,9 @@ const analysis = analyzePaceConsistency(laps);
     firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
     lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
     percentIncrease: Math.round(strokeCountIncrease * 10) / 10,
-    fatigueLevel: strokeCountIncrease < 5 ? "न्यूनतम" :
-                  strokeCountIncrease < 10 ? "मध्यम" :
-                  strokeCountIncrease < 20 ? "महत्वपूर्ण" : "गंभीर"
+    fatigueLevel: strokeCountIncrease &lt; 5 ? "न्यूनतम" :
+                  strokeCountIncrease &lt; 10 ? "मध्यम" :
+                  strokeCountIncrease &lt; 20 ? "महत्वपूर्ण" : "गंभीर"
   };
 }
 
@@ -1957,47 +1050,33 @@ const laps = [
   { strokeCount: 17 }, { strokeCount: 18 }, { strokeCount: 18 }
 ];
 const fatigue = detectFatigue(laps);
-// वापसी: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "गंभीर" }</code></pre>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="container">
-    <h2>डेटा सत्यापन</h2>
-
-    <div class="formula-card">
-      <h3>वर्कआउट डेटा गुणवत्ता जांच</h3>
-      <div class="formula-content">
-        <h4>जावास्क्रिप्ट कार्यान्वयन:</h4>
-        <pre><code>function validateWorkoutData(workout) {
+// वापसी: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "गंभीर" }</code></pre></div></div></div></section><section class="section section-alt"><div class="container"><h2>डेटा सत्यापन</h2><div class="formula-card"><h3>वर्कआउट डेटा गुणवत्ता जांच</h3><div class="formula-content"><h4>जावास्क्रिप्ट कार्यान्वयन:</h4><pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
   // उचित गति सीमा की जांच करें (1:00-5:00 प्रति 100m)
   const avgPace = (workout.totalTime / workout.totalDistance) * 100;
-  if (avgPace < 60 || avgPace > 300) {
+  if (avgPace &lt; 60 || avgPace &gt; 300) {
     issues.push(`असामान्य औसत गति: ${Math.round(avgPace)}s प्रति 100m`);
   }
 
   // उचित स्ट्रोक गिनती की जांच करें (10-50 प्रति 25m)
   const avgStrokesPer25m = (workout.totalStrokes / workout.totalDistance) * 25;
-  if (avgStrokesPer25m < 10 || avgStrokesPer25m > 50) {
+  if (avgStrokesPer25m &lt; 10 || avgStrokesPer25m &gt; 50) {
     issues.push(`असामान्य स्ट्रोक गिनती: ${Math.round(avgStrokesPer25m)} प्रति 25m`);
   }
 
   // उचित स्ट्रोक दर की जांच करें (30-150 SPM)
   const avgSR = calculateStrokeRate(workout.totalStrokes, workout.totalTime);
-  if (avgSR < 30 || avgSR > 150) {
+  if (avgSR &lt; 30 || avgSR &gt; 150) {
     issues.push(`असामान्य स्ट्रोक दर: ${Math.round(avgSR)} SPM`);
   }
 
   // लापता लैप्स की जांच करें (समय अंतराल)
-  if (workout.laps && workout.laps.length > 1) {
-    for (let i = 1; i < workout.laps.length; i++) {
+  if (workout.laps &amp;&amp; workout.laps.length &gt; 1) {
+    for (let i = 1; i &lt; workout.laps.length; i++) {
       const gap = workout.laps[i].startTime -
                   (workout.laps[i-1].startTime + workout.laps[i-1].duration);
-      if (gap > 300) { // 5 मिनट का अंतराल
+      if (gap &gt; 300) { // 5 मिनट का अंतराल
         issues.push(`लैप ${i} और ${i+1} के बीच बड़ा अंतराल पाया गया`);
       }
     }
@@ -2007,375 +1086,177 @@ const fatigue = detectFatigue(laps);
     isValid: issues.length === 0,
     issues: issues
   };
-}</code></pre>
-      </div>
-    </div>
-  </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+}</code></pre></div></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link active"
+                </a><a href="/hi/" class="lang-link active"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. सर्वाधिकार सुरक्षित
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/hi/privacy/">गोपनीयता</a></li>
-                <li><a href="/hi/terms/">शर्तें</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>यह वेबसाइट आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग करती है।</p>
-            <a href="/hi/privacy/" class="text-sm">और जानें</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">अस्वीकार करें</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">स्वीकार करें</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/hi/privacy/">गोपनीयता</a></li><li><a href="/hi/terms/">शर्तें</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>यह वेबसाइट आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग करती है।</p><a href="/hi/privacy/" class="text-sm">और जानें</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">अस्वीकार करें</button><button id="cookie-accept" class="btn btn-primary btn-small">स्वीकार करें</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

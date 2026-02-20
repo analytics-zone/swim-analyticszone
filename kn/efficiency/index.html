@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="kn" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>SWOLF ಕ್ಯಾಲ್ಕುಲೇಟರ್: ಈಜು ದಕ್ಷತೆ ಅಳೆಯಿರಿ | ಕಡಿಮೆ ಉತ್ತಮ</title>
-  <meta name="description" content="ಈಜು ದಕ್ಷತೆಗಾಗಿ SWOLF ಕ್ಯಾಲ್ಕುಲೇಟರ್. ನಿಮ್ಮ ಸ್ಕೋರ್ ಲೆಕ್ಕಾಚಾರ ಮಾಡಿ, ಮಾನದಂಡಗಳೊಂದಿಗೆ ಹೋಲಿಸಿ, ಪ್ರಗತಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ.">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="SWOLF, ಈಜು ದಕ್ಷತೆ, ಸ್ಟ್ರೋಕ್ ದಕ್ಷತೆ, SWOLF ಸ್ಕೋರ್, ದಕ್ಷತೆ ಕ್ಯಾಲ್ಕುಲೇಟರ್">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/kn/efficiency/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/kn/efficiency/">
-  <meta property="og:title" content="SWOLF ಕ್ಯಾಲ್ಕುಲೇಟರ್: ಈಜು ದಕ್ಷತೆ ಅಳೆಯಿರಿ | ಕಡಿಮೆ ಉತ್ತಮ">
-  <meta property="og:description" content="ಈಜು ದಕ್ಷತೆಗಾಗಿ SWOLF ಕ್ಯಾಲ್ಕುಲೇಟರ್. ನಿಮ್ಮ ಸ್ಕೋರ್ ಲೆಕ್ಕಾಚಾರ ಮಾಡಿ, ಮಾನದಂಡಗಳೊಂದಿಗೆ ಹೋಲಿಸಿ, ಪ್ರಗತಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ.">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="kn_IN">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/kn/efficiency/">
-  <meta name="twitter:title" content="SWOLF ಕ್ಯಾಲ್ಕುಲೇಟರ್: ಈಜು ದಕ್ಷತೆ ಅಳೆಯಿರಿ | ಕಡಿಮೆ ಉತ್ತಮ">
-  <meta name="twitter:description" content="ಈಜು ದಕ್ಷತೆಗಾಗಿ SWOLF ಕ್ಯಾಲ್ಕುಲೇಟರ್. ನಿಮ್ಮ ಸ್ಕೋರ್ ಲೆಕ್ಕಾಚಾರ ಮಾಡಿ, ಮಾನದಂಡಗಳೊಂದಿಗೆ ಹೋಲಿಸಿ, ಪ್ರಗತಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ.">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/efficiency/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/efficiency/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/efficiency/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/efficiency/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/efficiency/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/efficiency/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/efficiency/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/efficiency/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/efficiency/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/efficiency/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/efficiency/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/efficiency/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/efficiency/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/efficiency/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/efficiency/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/efficiency/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/efficiency/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/efficiency/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/efficiency/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/efficiency/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/efficiency/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/efficiency/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/efficiency/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/efficiency/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/efficiency/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/efficiency/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/efficiency/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/efficiency/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/efficiency/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/efficiency/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/efficiency/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/efficiency/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/efficiency/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/efficiency/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/efficiency/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/efficiency/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/efficiency/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/efficiency/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/efficiency/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/efficiency/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/efficiency/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/efficiency/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/efficiency/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/efficiency/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/efficiency/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/efficiency/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/efficiency/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/efficiency/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/efficiency/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/efficiency/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/efficiency/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/efficiency/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/efficiency/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/efficiency/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/efficiency/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/efficiency/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="kn" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>SWOLF ಕ್ಯಾಲ್ಕುಲೇಟರ್: ಈಜು ದಕ್ಷತೆ ಅಳೆಯಿರಿ | ಕಡಿಮೆ ಉತ್ತಮ</title><meta name="description" content="ಈಜು ದಕ್ಷತೆಗಾಗಿ SWOLF ಕ್ಯಾಲ್ಕುಲೇಟರ್. ನಿಮ್ಮ ಸ್ಕೋರ್ ಲೆಕ್ಕಾಚಾರ ಮಾಡಿ, ಮಾನದಂಡಗಳೊಂದಿಗೆ ಹೋಲಿಸಿ, ಪ್ರಗತಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="SWOLF, ಈಜು ದಕ್ಷತೆ, ಸ್ಟ್ರೋಕ್ ದಕ್ಷತೆ, SWOLF ಸ್ಕೋರ್, ದಕ್ಷತೆ ಕ್ಯಾಲ್ಕುಲೇಟರ್"><link rel="canonical" href="https://swim.analyticszone.app/kn/efficiency/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-04T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/kn/efficiency/"><meta property="og:title" content="SWOLF ಕ್ಯಾಲ್ಕುಲೇಟರ್: ಈಜು ದಕ್ಷತೆ ಅಳೆಯಿರಿ | ಕಡಿಮೆ ಉತ್ತಮ"><meta property="og:description" content="ಈಜು ದಕ್ಷತೆಗಾಗಿ SWOLF ಕ್ಯಾಲ್ಕುಲೇಟರ್. ನಿಮ್ಮ ಸ್ಕೋರ್ ಲೆಕ್ಕಾಚಾರ ಮಾಡಿ, ಮಾನದಂಡಗಳೊಂದಿಗೆ ಹೋಲಿಸಿ, ಪ್ರಗತಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ."><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="kn_IN"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/kn/efficiency/"><meta name="twitter:title" content="SWOLF ಕ್ಯಾಲ್ಕುಲೇಟರ್: ಈಜು ದಕ್ಷತೆ ಅಳೆಯಿರಿ | ಕಡಿಮೆ ಉತ್ತಮ"><meta name="twitter:description" content="ಈಜು ದಕ್ಷತೆಗಾಗಿ SWOLF ಕ್ಯಾಲ್ಕುಲೇಟರ್. ನಿಮ್ಮ ಸ್ಕೋರ್ ಲೆಕ್ಕಾಚಾರ ಮಾಡಿ, ಮಾನದಂಡಗಳೊಂದಿಗೆ ಹೋಲಿಸಿ, ಪ್ರಗತಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ."><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/efficiency/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/efficiency/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/efficiency/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/efficiency/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/efficiency/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/efficiency/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/efficiency/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/efficiency/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/efficiency/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/efficiency/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/efficiency/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/efficiency/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/efficiency/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/efficiency/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/efficiency/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/efficiency/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/efficiency/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/efficiency/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/efficiency/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/efficiency/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/efficiency/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/efficiency/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/efficiency/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/efficiency/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/efficiency/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/efficiency/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/efficiency/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/efficiency/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/efficiency/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/efficiency/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/efficiency/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/efficiency/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/efficiency/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/efficiency/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/efficiency/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/efficiency/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/efficiency/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/efficiency/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/efficiency/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/efficiency/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/efficiency/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/efficiency/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/efficiency/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/efficiency/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/efficiency/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/efficiency/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/efficiency/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/efficiency/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/efficiency/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/efficiency/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/efficiency/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/efficiency/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/efficiency/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/efficiency/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/efficiency/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/efficiency/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "kn"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "ಈಜು ದಕ್ಷತೆಗಾಗಿ SWOLF ಕ್ಯಾಲ್ಕುಲೇಟರ್. ನಿಮ್ಮ ಸ್ಕೋರ್ ಲೆಕ್ಕಾಚಾರ ಮಾಡಿ, ಮಾನದಂಡಗಳೊಂದಿಗೆ ಹೋಲಿಸಿ, ಪ್ರಗತಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ.",
   "url": "https://swim.analyticszone.app/kn/efficiency/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/kn/efficiency/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1231 +449,344 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">ವಿಷಯಕ್ಕೆ ಹೋಗಿ</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/kn/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/kn/" 
+  </script></head><body><a href="#main-content" class="skip-link">ವಿಷಯಕ್ಕೆ ಹೋಗಿ</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/kn/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/kn/" 
                                 aria-current="">
                                 ಮುಖಪುಟ
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/kn/getting-started/" class="nav-label">ಕಲಿಯಿರಿ</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/kn/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/kn/getting-started/" class="nav-label">ಕಲಿಯಿರಿ</a><ul class="submenu"><li><a href="/kn/getting-started/" 
                                         aria-current="">
                                         ಪ್ರಾರಂಭಿಸಿ
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/kn/css/" 
+                                    </a></li><li><a href="/kn/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/kn/training-zones/" 
+                                    </a></li><li><a href="/kn/training-zones/" 
                                         aria-current="">
                                         ತರಬೇತಿ ವಲಯಗಳು
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/kn/training-load/" 
+                                    </a></li><li><a href="/kn/training-load/" 
                                         aria-current="">
                                         ತರಬೇತಿ ಹೊರೆ
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/kn/stss-calculator/" 
+                                    </a></li><li><a href="/kn/stss-calculator/" 
                                         aria-current="">
                                         sTSS ಕ್ಯಾಲ್ಕುಲೇಟರ್
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/kn/research/" class="nav-label">ವಿಜ್ಞಾನ</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/kn/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/kn/research/" class="nav-label">ವಿಜ್ಞಾನ</a><ul class="submenu"><li><a href="/kn/research/" 
                                         aria-current="">
                                         ಸಂಶೋಧನೆ
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/kn/formulas/" 
+                                    </a></li><li><a href="/kn/formulas/" 
                                         aria-current="">
                                         ಸೂತ್ರಗಳು
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/kn/efficiency/" class="active" 
+                                    </a></li><li><a href="/kn/efficiency/" class="active" 
                                         aria-current="page">
                                         ದಕ್ಷತೆ
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/kn/stroke-mechanics/" 
+                                    </a></li><li><a href="/kn/stroke-mechanics/" 
                                         aria-current="">
                                         ಸ್ಟ್ರೋಕ್ ಯಂತ್ರಶಾಸ್ತ್ರ
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/kn/bibliography/" 
+                                    </a></li><li><a href="/kn/bibliography/" 
                                         aria-current="">
                                         ಗ್ರಂಥಸೂಚಿ
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/kn/contact/" 
+                                    </a></li></ul></li><li><a href="/kn/contact/" 
                                 aria-current="">
                                 ಸಂಪರ್ಕ
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="ಭಾಷೆ ಆಯ್ಕೆಮಾಡಿ">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="ಭಾಷೆ ಆಯ್ಕೆಮಾಡಿ"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" selected>
+                        </option><option value="kn" selected>
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="ಮೆನು ಟಾಗಲ್"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/kn/">ಮುಖಪುಟ</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/kn/research/">ವಿಜ್ಞಾನ</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">ದಕ್ಷತೆ</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>ಈಜು ದಕ್ಷತೆ: SWOLF</h1>
-        <p class="lead">ನಿಮ್ಮ ಸ್ಟ್ರೋಕ್ ಎಕಾನಮಿ ಸ್ಕೋರ್ - ಕಡಿಮೆ ಉತ್ತಮ</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>SWOLF ಎಂದರೇನು?</h2>
-        <p class="lead">SWOLF (Swim + Golf) ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ ಮತ್ತು ಸಮಯವನ್ನು ಒಂದೇ ಸಂಖ್ಯೆಯಲ್ಲಿ ಸಂಯೋಜಿಸುವ ಸಂಯುಕ್ತ ದಕ್ಷತೆ ಮೆಟ್ರಿಕ್ ಆಗಿದೆ. ಗಾಲ್ಫ್‌ನಂತೆ, ಗುರಿ ನಿಮ್ಮ ಸ್ಕೋರ್ ಅನ್ನು ಕಡಿಮೆ ಮಾಡುವುದು.</p>
-
-        <div class="formula-box">
-            <h3>ಸೂತ್ರ</h3>
-            <div class="formula">
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="ಮೆನು ಟಾಗಲ್"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/kn/">ಮುಖಪುಟ</a></li><li><a href="/kn/research/">ವಿಜ್ಞಾನ</a></li><li><span aria-current="page">ದಕ್ಷತೆ</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>ಈಜು ದಕ್ಷತೆ: SWOLF</h1><p class="lead">ನಿಮ್ಮ ಸ್ಟ್ರೋಕ್ ಎಕಾನಮಿ ಸ್ಕೋರ್ - ಕಡಿಮೆ ಉತ್ತಮ</p></div></section><section class="section"><div class="container container-narrow"><h2>SWOLF ಎಂದರೇನು?</h2><p class="lead">SWOLF (Swim + Golf) ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ ಮತ್ತು ಸಮಯವನ್ನು ಒಂದೇ ಸಂಖ್ಯೆಯಲ್ಲಿ ಸಂಯೋಜಿಸುವ ಸಂಯುಕ್ತ ದಕ್ಷತೆ ಮೆಟ್ರಿಕ್ ಆಗಿದೆ. ಗಾಲ್ಫ್‌ನಂತೆ, ಗುರಿ ನಿಮ್ಮ ಸ್ಕೋರ್ ಅನ್ನು ಕಡಿಮೆ ಮಾಡುವುದು.</p><div class="formula-box"><h3>ಸೂತ್ರ</h3><div class="formula">
                 SWOLF = ಲ್ಯಾಪ್ ಸಮಯ (ಸೆಕೆಂಡುಗಳು) + ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ
-            </div>
-            <div class="formula-explanation">
-                <p><strong>ಉದಾಹರಣೆ:</strong> ನೀವು 25m ಅನ್ನು 20 ಸೆಕೆಂಡುಗಳಲ್ಲಿ 15 ಸ್ಟ್ರೋಕ್‌ಗಳೊಂದಿಗೆ ಈಜಿದರೆ:</p>
-                <div class="calculation">
-                    SWOLF = 20 + 15 = <strong>35</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-info">
-            <h3>ಪೂಲ್ ಹೋಲಿಕೆಗಾಗಿ ಸಾಮಾನ್ಯೀಕೃತ SWOLF</h3>
-            <p>ವಿವಿಧ ಪೂಲ್ ಉದ್ದಗಳಲ್ಲಿ ಸ್ಕೋರ್‌ಗಳನ್ನು ಹೋಲಿಸಲು:</p>
-            <div class="formula">
+            </div><div class="formula-explanation"><p><strong>ಉದಾಹರಣೆ:</strong> ನೀವು 25m ಅನ್ನು 20 ಸೆಕೆಂಡುಗಳಲ್ಲಿ 15 ಸ್ಟ್ರೋಕ್‌ಗಳೊಂದಿಗೆ ಈಜಿದರೆ:</p><div class="calculation">
+                    SWOLF = 20 + 15 = <strong>35</strong></div></div></div><div class="callout callout-info"><h3>ಪೂಲ್ ಹೋಲಿಕೆಗಾಗಿ ಸಾಮಾನ್ಯೀಕೃತ SWOLF</h3><p>ವಿವಿಧ ಪೂಲ್ ಉದ್ದಗಳಲ್ಲಿ ಸ್ಕೋರ್‌ಗಳನ್ನು ಹೋಲಿಸಲು:</p><div class="formula">
                 SWOLF₂₅ = (ಸಮಯ × 25/ಪೂಲ್ ಉದ್ದ) + (ಸ್ಟ್ರೋಕ್‌ಗಳು × 25/ಪೂಲ್ ಉದ್ದ)
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">SWOLF ಮಾನದಂಡಗಳು</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>ಫ್ರೀಸ್ಟೈಲ್ - 25m ಪೂಲ್</h3>
-                <div class="levels-comparison">
-                    <div class="level-card-compact">
-                        <strong>ಎಲೈಟ್ ಈಜುಗಾರರು</strong>
-                        <div class="value">30-35</div>
-                        <p>ರಾಷ್ಟ್ರೀಯ/ಅಂತರರಾಷ್ಟ್ರೀಯ ಮಟ್ಟ, ಅಸಾಧಾರಣ ದಕ್ಷತೆ</p>
-                    </div>
-                    <div class="level-card-compact">
-                        <strong>ಸ್ಪರ್ಧಾತ್ಮಕ</strong>
-                        <div class="value">35-45</div>
-                        <p>ಹೈಸ್ಕೂಲ್ ವಾರ್ಸಿಟಿ, ಕಾಲೇಜು, ಮಾಸ್ಟರ್ಸ್ ಸ್ಪರ್ಧಾತ್ಮಕ</p>
-                    </div>
-                    <div class="level-card-compact">
-                        <strong>ಫಿಟ್‌ನೆಸ್ ಈಜುಗಾರರು</strong>
-                        <div class="value">45-60</div>
-                        <p>ನಿಯಮಿತ ತರಬೇತಿ, ಘನ ತಂತ್ರ</p>
-                    </div>
-                    <div class="level-card-compact">
-                        <strong>ಆರಂಭಿಕರು</strong>
-                        <div class="value">60+</div>
-                        <p>ತಂತ್ರ ಮತ್ತು ಕಂಡೀಷನಿಂಗ್ ಅಭಿವೃದ್ಧಿ</p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h3>ಇತರ ಸ್ಟ್ರೋಕ್‌ಗಳು - 25m ಪೂಲ್</h3>
-                <div class="stroke-benchmarks">
-                    <div class="benchmark-item">
-                        <h4>ಬ್ಯಾಕ್‌ಸ್ಟ್ರೋಕ್</h4>
-                        <p>ಸಾಮಾನ್ಯವಾಗಿ ಫ್ರೀಸ್ಟೈಲ್‌ಗಿಂತ <strong>5-10 ಪಾಯಿಂಟ್‌ಗಳು ಹೆಚ್ಚು</strong></p>
-                        <div class="value-small">ಉತ್ತಮ: 40-50</div>
-                    </div>
-
-                    <div class="benchmark-item">
-                        <h4>ಬ್ರೆಸ್ಟ್‌ಸ್ಟ್ರೋಕ್</h4>
-                        <p>ಗ್ಲೈಡ್ ತಂತ್ರದಿಂದಾಗಿ ವಿಶಾಲ ವ್ಯತ್ಯಾಸ</p>
-                        <div class="value-small">ಶ್ರೇಣಿ: 40-60</div>
-                    </div>
-
-                    <div class="benchmark-item">
-                        <h4>ಬಟರ್‌ಫ್ಲೈ</h4>
-                        <p>ನುರಿತ ಈಜುಗಾರರಿಗೆ ಫ್ರೀಸ್ಟೈಲ್‌ಗೆ ಸಮಾನ</p>
-                        <div class="value-small">ಉತ್ತಮ: 38-55</div>
-                    </div>
-                </div>
-
-                <div class="callout callout-warning">
-                    <h4>⚠️ ವೈಯಕ್ತಿಕ ವ್ಯತ್ಯಾಸ</h4>
-                    <p>SWOLF ಎತ್ತರ ಮತ್ತು ತೋಳಿನ ವ್ಯಾಪ್ತಿಯಿಂದ ಪ್ರಭಾವಿತವಾಗಿದೆ. ಎತ್ತರದ ಈಜುಗಾರರು ಸ್ವಾಭಾವಿಕವಾಗಿ ಕಡಿಮೆ ಸ್ಟ್ರೋಕ್‌ಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳುತ್ತಾರೆ. ಇತರರೊಂದಿಗೆ ಹೋಲಿಸುವ ಬದಲು <em>ನಿಮ್ಮ ಸ್ವಂತ ಪ್ರಗತಿಯನ್ನು</em> ಟ್ರ್ಯಾಕ್ ಮಾಡಲು SWOLF ಬಳಸಿ.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>SWOLF ಮಾದರಿಗಳನ್ನು ಅರ್ಥೈಸುವುದು</h2>
-
-        <div class="pattern-analysis">
-            <div class="pattern-item">
-                <h3>📉 ಕಡಿಮೆಯಾಗುತ್ತಿರುವ SWOLF = ಸುಧಾರಿಸುತ್ತಿರುವ ದಕ್ಷತೆ</h3>
-                <p>ನಿಮ್ಮ ತಂತ್ರ ಉತ್ತಮವಾಗುತ್ತಿದೆ, ಅಥವಾ ನೀವು ನಿರ್ದಿಷ್ಟ ವೇಗದಲ್ಲಿ ಹೆಚ್ಚು ಆರ್ಥಿಕವಾಗುತ್ತಿದ್ದೀರಿ. ವಾರಗಳು ಮತ್ತು ತಿಂಗಳುಗಳ ತರಬೇತಿಯಲ್ಲಿ ಇದು ಗುರಿ.</p>
-                <div class="example-box">
-                    <strong>ಉದಾಹರಣೆ:</strong> 8 ವಾರಗಳ ಕೇಂದ್ರೀಕೃತ ತಂತ್ರ ಕೆಲಸದಲ್ಲಿ SWOLF 48 → 45 → 42 ಗೆ ಇಳಿಯುತ್ತದೆ.
-                </div>
-            </div>
-
-            <div class="pattern-item">
-                <h3>📈 ಹೆಚ್ಚುತ್ತಿರುವ SWOLF = ಕುಸಿಯುತ್ತಿರುವ ದಕ್ಷತೆ</h3>
-                <p>ಆಯಾಸ ಸೆಟ್ ಆಗುತ್ತಿದೆ, ತಂತ್ರ ಕುಸಿಯುತ್ತಿದೆ, ಅಥವಾ ನಿಮ್ಮ ದಕ್ಷತೆ ಅನುಮತಿಸುವುದಕ್ಕಿಂತ ವೇಗವಾಗಿ ಈಜುತ್ತಿದ್ದೀರಿ.</p>
-                <div class="example-box">
-                    <strong>ಉದಾಹರಣೆ:</strong> 1000m ಸೆಟ್‌ನ ಕೊನೆಯ 200m ನಲ್ಲಿ SWOLF 42 → 48 ಗೆ ಏರುತ್ತದೆ, ಆಯಾಸವನ್ನು ಸೂಚಿಸುತ್ತದೆ.
-                </div>
-            </div>
-
-            <div class="pattern-item">
-                <h3>📊 ಒಂದೇ SWOLF ನಲ್ಲಿ ವಿಭಿನ್ನ ಸಂಯೋಜನೆಗಳು</h3>
-                <p>45 ರ SWOLF ಬಹು ಸ್ಟ್ರೋಕ್/ಸಮಯ ಸಂಯೋಜನೆಗಳಿಂದ ಉಂಟಾಗಬಹುದು:</p>
-                <ul>
-                    <li><strong>20 ಸೆಕೆಂಡುಗಳು + 25 ಸ್ಟ್ರೋಕ್‌ಗಳು</strong> = ಹೆಚ್ಚಿನ ಆವರ್ತನ, ಕಡಿಮೆ ಸ್ಟ್ರೋಕ್‌ಗಳು</li>
-                    <li><strong>25 ಸೆಕೆಂಡುಗಳು + 20 ಸ್ಟ್ರೋಕ್‌ಗಳು</strong> = ಕಡಿಮೆ ಆವರ್ತನ, ಉದ್ದ ಸ್ಟ್ರೋಕ್‌ಗಳು</li>
-                </ul>
-                <p><strong>ಯಾವಾಗಲೂ ಘಟಕಗಳನ್ನು ವಿಶ್ಲೇಷಿಸಿ</strong> (ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ ಮತ್ತು ಸಮಯ) ನಿಮ್ಮ ಈಜು ತಂತ್ರವನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು.</p>
-            </div>
-        </div>
-
-        <div class="callout callout-tip">
-            <h3>🎯 SWOLF ತರಬೇತಿ ಅನ್ವಯಗಳು</h3>
-            <ul>
-                <li><strong>ತಂತ್ರ ಅಧಿವೇಶನಗಳು:</strong> ಉತ್ತಮ ಕ್ಯಾಚ್, ಸ್ಟ್ರೀಮ್‌ಲೈನ್, ಮತ್ತು ದೇಹದ ಸ್ಥಾನದ ಮೂಲಕ SWOLF ಕಡಿಮೆ ಮಾಡಲು ಗುರಿಯಾಗಿರಿ</li>
-                <li><strong>ಆಯಾಸ ಮೇಲ್ವಿಚಾರಣೆ:</strong> ಏರುತ್ತಿರುವ SWOLF ತಂತ್ರ ಕುಸಿತವನ್ನು ಸೂಚಿಸುತ್ತದೆ—ವಿರಾಮದ ಸಮಯ</li>
-                <li><strong>ವೇಗ-ದಕ್ಷತೆ ಸಮತೋಲನ:</strong> SWOLF ಸ್ಪೈಕ್ ಆಗದೆ ನೀವು ಹಿಡಿದಿಡಬಹುದಾದ ವೇಗವಾದ ವೇಗವನ್ನು ಹುಡುಕಿ</li>
-                <li><strong>ಡ್ರಿಲ್ ಪರಿಣಾಮಕಾರಿತ್ವ:</strong> ತಂತ್ರ ವರ್ಗಾವಣೆಯನ್ನು ಅಳೆಯಲು ಡ್ರಿಲ್ ಸೆಟ್‌ಗಳ ಮೊದಲು/ನಂತರ SWOLF ಟ್ರ್ಯಾಕ್ ಮಾಡಿ</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>ಅಳತೆ ಉತ್ತಮ ಅಭ್ಯಾಸಗಳು</h2>
-
-        <div class="measurement-guidelines">
-            <div class="guideline-box">
-                <h3>📏 ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ</h3>
-                <ul>
-                    <li>ಪ್ರತಿ ಕೈ ಪ್ರವೇಶವನ್ನು ಎಣಿಸಿ (ಎರಡೂ ತೋಳುಗಳು ಸಂಯೋಜಿತ)</li>
-                    <li>ಪುಶ್-ಆಫ್ ನಂತರ ಮೊದಲ ಸ್ಟ್ರೋಕ್‌ನಿಂದ ಎಣಿಕೆ ಪ್ರಾರಂಭಿಸಿ</li>
-                    <li>ಗೋಡೆ ಸ್ಪರ್ಶದವರೆಗೆ ಎಣಿಸಿ</li>
-                    <li>ಸ್ಥಿರ ಪುಶ್-ಆಫ್ ದೂರವನ್ನು ಕಾಯ್ದುಕೊಳ್ಳಿ (~ಫ್ಲ್ಯಾಗ್‌ಗಳಿಂದ 5m)</li>
-                </ul>
-            </div>
-
-            <div class="guideline-box">
-                <h3>⏱️ ಸಮಯ</h3>
-                <ul>
-                    <li>ಮೊದಲ ಸ್ಟ್ರೋಕ್‌ನಿಂದ ಗೋಡೆ ಸ್ಪರ್ಶದವರೆಗೆ ಅಳೆಯಿರಿ</li>
-                    <li>ಲ್ಯಾಪ್‌ಗಳಾದ್ಯಂತ ಸ್ಥಿರ ಪುಶ್-ಆಫ್ ತೀವ್ರತೆ ಬಳಸಿ</li>
-                    <li>ತಂತ್ರಜ್ಞಾನ (Garmin, Apple Watch, FORM) ಸ್ವಯಂ-ಲೆಕ್ಕಾಚಾರ ಮಾಡುತ್ತದೆ</li>
-                    <li>ಹಸ್ತಚಾಲಿತ ಸಮಯ: ಪೇಸ್ ಕ್ಲಾಕ್ ಅಥವಾ ಸ್ಟಾಪ್‌ವಾಚ್ ಬಳಸಿ</li>
-                </ul>
-            </div>
-
-            <div class="guideline-box">
-                <h3>🔄 ಸ್ಥಿರತೆ</h3>
-                <ul>
-                    <li>ಹೋಲಿಕೆಗಾಗಿ ಸಮಾನ ವೇಗಗಳಲ್ಲಿ SWOLF ಅಳೆಯಿರಿ</li>
-                    <li>ಮುಖ್ಯ ಸೆಟ್‌ಗಳಲ್ಲಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ, ವಾರ್ಮ್-ಅಪ್/ಕೂಲ್-ಡೌನ್ ಅಲ್ಲ</li>
-                    <li>ಯಾವ ಸ್ಟ್ರೋಕ್ ಪ್ರಕಾರ ಎಂದು ಗಮನಿಸಿ (ಫ್ರೀಸ್ಟೈಲ್, ಬ್ಯಾಕ್, ಇತ್ಯಾದಿ)</li>
-                    <li>ಒಂದೇ ಪೂಲ್ ಉದ್ದವನ್ನು ಹೋಲಿಸಿ (25m vs 25m, 25m vs 50m ಅಲ್ಲ)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>SWOLF ಮಿತಿಗಳು</h2>
-
-        <div class="limitations-list">
-            <div class="limitation-item">
-                <h3>🚫 ಕ್ರೀಡಾಪಟುಗಳ ನಡುವೆ ಹೋಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ</h3>
-                <p>ಎತ್ತರ, ತೋಳಿನ ಉದ್ದ, ಮತ್ತು ನಮ್ಯತೆ ಸ್ವಾಭಾವಿಕ ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ ವ್ಯತ್ಯಾಸಗಳನ್ನು ಸೃಷ್ಟಿಸುತ್ತವೆ. 6'2" ಈಜುಗಾರ ಒಂದೇ ಫಿಟ್‌ನೆಸ್ ಮಟ್ಟದಲ್ಲಿ 5'6" ಈಜುಗಾರನಿಗಿಂತ ಕಡಿಮೆ SWOLF ಹೊಂದಿರುತ್ತಾರೆ.</p>
-                <p><strong>ಪರಿಹಾರ:</strong> ವೈಯಕ್ತಿಕ ಪ್ರಗತಿ ಟ್ರ್ಯಾಕಿಂಗ್‌ಗೆ ಮಾತ್ರ SWOLF ಬಳಸಿ.</p>
-            </div>
-
-            <div class="limitation-item">
-                <h3>🚫 ಸಂಯುಕ್ತ ಸ್ಕೋರ್ ವಿವರಗಳನ್ನು ಮರೆಮಾಡುತ್ತದೆ</h3>
-                <p>SWOLF ಎರಡು ಅಸ್ಥಿರಗಳನ್ನು ಸಂಯೋಜಿಸುತ್ತದೆ. ನೀವು ಒಂದನ್ನು ಸುಧಾರಿಸಬಹುದು ಇನ್ನೊಂದನ್ನು ಕೆಡಿಸುತ್ತಾ ಮತ್ತು ಇನ್ನೂ ಅದೇ ಸ್ಕೋರ್ ಹೊಂದಬಹುದು.</p>
-                <p><strong>ಪರಿಹಾರ:</strong> ಯಾವಾಗಲೂ ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ ಮತ್ತು ಸಮಯವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರೀಕ್ಷಿಸಿ.</p>
-            </div>
-
-            <div class="limitation-item">
-                <h3>🚫 ವೇಗ-ಸಾಮಾನ್ಯೀಕೃತವಲ್ಲ</h3>
-                <p>ನೀವು ವೇಗವಾಗಿ ಈಜಿದಂತೆ SWOLF ಸ್ವಾಭಾವಿಕವಾಗಿ ಹೆಚ್ಚಾಗುತ್ತದೆ (ಹೆಚ್ಚು ಸ್ಟ್ರೋಕ್‌ಗಳು, ಕಡಿಮೆ ಸಮಯ, ಆದರೆ ಹೆಚ್ಚಿನ ಒಟ್ಟು). ಇದು ಅದಕ್ಷತೆಯಲ್ಲ—ಇದು ಭೌತಶಾಸ್ತ್ರ.</p>
-                <p><strong>ಪರಿಹಾರ:</strong> ನಿರ್ದಿಷ್ಟ ಗುರಿ ವೇಗಗಳಲ್ಲಿ SWOLF ಟ್ರ್ಯಾಕ್ ಮಾಡಿ (ಉದಾ., "CSS ವೇಗದಲ್ಲಿ SWOLF" vs "ಸುಲಭ ವೇಗದಲ್ಲಿ SWOLF").</p>
-            </div>
-        </div>
-
-        <div class="callout callout-science">
-            <h3>🔬 ಈಜು ಆರ್ಥಿಕತೆಯ ಹಿಂದಿನ ವಿಜ್ಞಾನ</h3>
-            <p>Costill et al. (1985) ಸಂಶೋಧನೆ <strong>ಈಜು ಆರ್ಥಿಕತೆ</strong> (ಪ್ರತಿ ಯೂನಿಟ್ ದೂರಕ್ಕೆ ಶಕ್ತಿ ವೆಚ್ಚ) ಮಧ್ಯಮ-ದೂರ ಕಾರ್ಯಕ್ಷಮತೆಗೆ VO₂max ಗಿಂತ ಹೆಚ್ಚು ಮುಖ್ಯ ಎಂದು ಸ್ಥಾಪಿಸಿತು.</p>
-            <p>SWOLF ಆರ್ಥಿಕತೆಗೆ ಪ್ರಾಕ್ಸಿಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ—ಕಡಿಮೆ SWOLF ಸಾಮಾನ್ಯವಾಗಿ ನಿರ್ದಿಷ್ಟ ವೇಗದಲ್ಲಿ ಕಡಿಮೆ ಶಕ್ತಿ ವೆಚ್ಚದೊಂದಿಗೆ ಸಂಬಂಧಿಸುತ್ತದೆ, ಅದೇ ಪ್ರಯತ್ನದೊಂದಿಗೆ ವೇಗವಾಗಿ ಅಥವಾ ದೀರ್ಘಕಾಲ ಈಜಲು ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>SWOLF ತರಬೇತಿ ಡ್ರಿಲ್‌ಗಳು</h2>
-
-        <div class="drill-set">
-            <h3>🎯 SWOLF ಕಡಿತ ಸೆಟ್</h3>
-            <div class="workout-box">
-                <h4>8 × 50m (30 ಸೆಕೆಂಡುಗಳ ವಿಶ್ರಾಂತಿ)</h4>
-                <ol>
-                    <li><strong>50 #1-2:</strong> ಆರಾಮದಾಯಕ ವೇಗದಲ್ಲಿ ಈಜಿ, ಬೇಸ್‌ಲೈನ್ SWOLF ದಾಖಲಿಸಿ</li>
-                    <li><strong>50 #3-4:</strong> ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆಯನ್ನು 2 ರಿಂದ ಕಡಿಮೆ ಮಾಡಿ, ಅದೇ ಸಮಯ ಕಾಯ್ದುಕೊಳ್ಳಿ → ಪ್ರತಿ ಸ್ಟ್ರೋಕ್‌ಗೆ ಉದ್ದದ ಮೇಲೆ ಗಮನ</li>
-                    <li><strong>50 #5-6:</strong> ಸ್ಟ್ರೋಕ್ ದರವನ್ನು ಸ್ವಲ್ಪ ಹೆಚ್ಚಿಸಿ, ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ ಅದೇ ಇಡಿ → ಟರ್ನ್‌ಓವರ್ ಮೇಲೆ ಗಮನ</li>
-                    <li><strong>50 #7-8:</strong> ಅತ್ಯುತ್ತಮ ಸಮತೋಲನ ಹುಡುಕಿ—ಕಡಿಮೆ SWOLF ಗುರಿಯಾಗಿರಿ</li>
-                </ol>
-                <p><strong>ಗುರಿ:</strong> ನಿಮ್ಮ ಅತ್ಯಂತ ದಕ್ಷ ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ/ದರ ಸಂಯೋಜನೆಯನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ.</p>
-            </div>
-        </div>
-
-        <div class="drill-set">
-            <h3>⚡ SWOLF ಸ್ಥಿರತೆ ಪರೀಕ್ಷೆ</h3>
-            <div class="workout-box">
-                <h4>10 × 100m @ CSS ವೇಗ (20 ಸೆಕೆಂಡುಗಳ ವಿಶ್ರಾಂತಿ)</h4>
-                <p>ಪ್ರತಿ 100m ಗೆ SWOLF ದಾಖಲಿಸಿ. ವಿಶ್ಲೇಷಿಸಿ:</p>
-                <ul>
-                    <li>ಯಾವ 100m ಕಡಿಮೆ SWOLF ಹೊಂದಿತ್ತು? (ನೀವು ಅತ್ಯಂತ ದಕ್ಷರಾಗಿದ್ದಿರಿ)</li>
-                    <li>SWOLF ಎಲ್ಲಿ ಸ್ಪೈಕ್ ಆಯಿತು? (ತಂತ್ರ ಕುಸಿತ ಅಥವಾ ಆಯಾಸ)</li>
-                    <li>ಮೊದಲ ಮತ್ತು ಕೊನೆಯ 100m ನಡುವೆ SWOLF ಎಷ್ಟು ಬದಲಾಯಿತು?</li>
-                </ul>
-                <p><strong>ಗುರಿ:</strong> ಎಲ್ಲಾ ರೆಪ್‌ಗಳಲ್ಲಿ SWOLF ±2 ಪಾಯಿಂಟ್‌ಗಳನ್ನು ಕಾಯ್ದುಕೊಳ್ಳಿ. ಸ್ಥಿರತೆ ಆಯಾಸದಲ್ಲಿ ಬಲವಾದ ತಂತ್ರವನ್ನು ಸೂಚಿಸುತ್ತದೆ.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು</h2>
-
-        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">SWOLF ಎಂದರೇನು?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>SWOLF (Swim + Golf) ನಿಮ್ಮ ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆಯನ್ನು ಒಂದು ಉದ್ದಕ್ಕೆ ನಿಮ್ಮ ಸಮಯಕ್ಕೆ ಸೇರಿಸುವ ಸಂಯುಕ್ತ ದಕ್ಷತೆ ಮೆಟ್ರಿಕ್ ಆಗಿದೆ. ಗಾಲ್ಫ್‌ನಲ್ಲಿರುವಂತೆ, ಗುರಿ ನಿಮ್ಮ ಸ್ಕೋರ್ ಅನ್ನು ಕಡಿಮೆ ಮಾಡುವುದು. ಉದಾಹರಣೆಗೆ, 20 ಸೆಕೆಂಡುಗಳು + 15 ಸ್ಟ್ರೋಕ್‌ಗಳು = SWOLF 35.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ನನ್ನ SWOLF ಅನ್ನು ಹೇಗೆ ಲೆಕ್ಕಹಾಕುವುದು?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>ಒಂದು ಉದ್ದಕ್ಕೆ ಪ್ರತಿ ಸ್ಟ್ರೋಕ್ (ಪ್ರತಿ ಕೈ ಪ್ರವೇಶ) ಎಣಿಸಿ ಮತ್ತು ಸೆಕೆಂಡುಗಳಲ್ಲಿ ನಿಮ್ಮ ಸಮಯವನ್ನು ಸೇರಿಸಿ. SWOLF = ಸಮಯ (ಸೆಕೆಂಡುಗಳು) + ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ. ಕೆಲವು ವಾಚ್‌ಗಳು ಇದನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಲೆಕ್ಕಹಾಕುತ್ತವೆ.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ಉತ್ತಮ SWOLF ಸ್ಕೋರ್ ಎಷ್ಟು?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>25m ಫ್ರೀಸ್ಟೈಲ್‌ಗೆ: ಎಲೈಟ್ ಈಜುಗಾರರು 30-35 ಸ್ಕೋರ್ ಮಾಡುತ್ತಾರೆ, ಸ್ಪರ್ಧಾತ್ಮಕ ಈಜುಗಾರರು 35-45, ಫಿಟ್‌ನೆಸ್ ಈಜುಗಾರರು 45-60, ಆರಂಭಿಕರು 60+. ನಿಮ್ಮ ಎತ್ತರ ಮತ್ತು ತೋಳಿನ ವ್ಯಾಪ್ತಿ ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆಯ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರುತ್ತದೆ, ಆದ್ದರಿಂದ ಇತರರೊಂದಿಗೆ ಹೋಲಿಸುವ ಬದಲು ಕಾಲಾನಂತರದಲ್ಲಿ ನಿಮ್ಮ ಸ್ವಂತ ಸ್ಕೋರ್ ಸುಧಾರಿಸುವುದರ ಮೇಲೆ ಗಮನ ಕೇಂದ್ರೀಕರಿಸಿ.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ನನ್ನ SWOLF ಅನ್ನು ಇತರ ಈಜುಗಾರರೊಂದಿಗೆ ಹೋಲಿಸಬಹುದೇ?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>ಇಲ್ಲ. SWOLF ಹೆಚ್ಚು ವೈಯಕ್ತಿಕವಾಗಿದೆ ಏಕೆಂದರೆ ಎತ್ತರದ ಈಜುಗಾರರು ಸ್ವಾಭಾವಿಕವಾಗಿ ಕಡಿಮೆ ಸ್ಟ್ರೋಕ್‌ಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳುತ್ತಾರೆ. ಇತರರೊಂದಿಗೆ ಹೋಲಿಸಲು ಅಲ್ಲ, ನಿಮ್ಮ ಸ್ವಂತ ಪ್ರಗತಿಯನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಲು SWOLF ಬಳಸಿ.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ನನ್ನ SWOLF ಅನ್ನು ಹೇಗೆ ಸುಧಾರಿಸಬಹುದು?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>ತಂತ್ರದ ಮೇಲೆ ಗಮನ ಕೇಂದ್ರೀಕರಿಸಿ: ಉದ್ದ ಸ್ಟ್ರೋಕ್‌ಗಳು (ಉತ್ತಮ ಕ್ಯಾಚ್ ಮತ್ತು ಪುಲ್-ಥ್ರೂ), ಸುಧಾರಿತ ಸ್ಟ್ರೀಮ್‌ಲೈನ್ (ಗೋಡೆಗಳಿಂದ ಮತ್ತು ಸ್ಟ್ರೋಕ್ ಸಮಯದಲ್ಲಿ), ಉತ್ತಮ ದೇಹದ ಸ್ಥಾನ (ಡ್ರ್ಯಾಗ್ ಕಡಿಮೆ ಮಾಡಿ), ಮತ್ತು ಸ್ಥಿರ ತಿರುಗುವಿಕೆ. ಡ್ರಿಲ್‌ಗಳು ಮತ್ತು ವೀಡಿಯೊ ವಿಶ್ಲೇಷಣೆ ಸುಧಾರಣೆಗಾಗಿ ನಿರ್ದಿಷ್ಟ ಕ್ಷೇತ್ರಗಳನ್ನು ಗುರುತಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತವೆ. ನಮ್ಮ <a href="/kn/stroke-mechanics/">ಸ್ಟ್ರೋಕ್ ಮೆಕ್ಯಾನಿಕ್ಸ್ ಮಾರ್ಗದರ್ಶಿ</a>ಯಲ್ಲಿ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow text-center">
-        <h2 class="mt-3xl">ಸಂಬಂಧಿತ ಸಂಪನ್ಮೂಲಗಳು</h2>
-
-        <div class="related-articles">
-            <a href="/kn/css/" class="related-card">
-                <h3>ಕ್ರಿಟಿಕಲ್ ಸ್ವಿಮ್ ಸ್ಪೀಡ್ (CSS) ಪರೀಕ್ಷೆ</h3>
-                <p>CSS ಪ್ರೋಟೋಕಾಲ್‌ನೊಂದಿಗೆ ನಿಮ್ಮ ಈಜು ಥ್ರೆಶೋಲ್ಡ್ ವೇಗವನ್ನು ಹೇಗೆ ಅಳೆಯುವುದು ಎಂದು ತಿಳಿಯಿರಿ</p>
-            </a>
-
-            <a href="/kn/training-zones/" class="related-card">
-                <h3>ತರಬೇತಿ ವಲಯಗಳ ಮಾರ್ಗದರ್ಶಿ</h3>
-                <p>5 ತರಬೇತಿ ವಲಯಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಿ ಮತ್ತು ನಿರ್ದಿಷ್ಟ ಹೊಂದಾಣಿಕೆಗಳಿಗಾಗಿ ವ್ಯಾಯಾಮಗಳನ್ನು ಹೇಗೆ ರಚಿಸುವುದು</p>
-            </a>
-
-            <a href="/kn/stss-calculator/" class="related-card">
-                <h3>ಈಜು TSS ಕ್ಯಾಲ್ಕುಲೇಟರ್</h3>
-                <p>ನಿಮ್ಮ ತರಬೇತಿ ಲೋಡ್ ಅನ್ನು ಪ್ರಮಾಣೀಕರಿಸಿ ಮತ್ತು sTSS ಲೆಕ್ಕಾಚಾರಗಳೊಂದಿಗೆ ಫಿಟ್‌ನೆಸ್ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ</p>
-            </a>
-
-            <a href="/kn/getting-started/" class="related-card">
-                <h3>ಪ್ರಾರಂಭಿಸುವ ಮಾರ್ಗದರ್ಶಿ</h3>
-                <p>ಹೊಸ Swim Analytics ಬಳಕೆದಾರರಿಗೆ ಸಂಪೂರ್ಣ ಆನ್‌ಬೋರ್ಡಿಂಗ್ ಸಂಪನ್ಮೂಲ</p>
-            </a>
-        </div>
-
-        <h2>ದಕ್ಷತೆ ಪುನರಾವರ್ತನೆಯ ಮೂಲಕ ಗಳಿಸಲಾಗುತ್ತದೆ</h2>
-        <p class="lead">SWOLF ರಾತ್ರೋರಾತ್ರಿ ಸುಧಾರಿಸುವುದಿಲ್ಲ. ಇದು ಸಾವಿರಾರು ತಾಂತ್ರಿಕವಾಗಿ ಉತ್ತಮ ಸ್ಟ್ರೋಕ್‌ಗಳು, ಉದ್ದೇಶಪೂರ್ವಕ ಅಭ್ಯಾಸ, ಮತ್ತು ವೇಗಕ್ಕಿಂತ ದಕ್ಷತೆಗೆ ಗಮನಹರಿಸುವ ಸಂಚಿತ ಫಲಿತಾಂಶ.</p>
-
-        <p>ಸ್ಥಿರವಾಗಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ. ಕ್ರಮೇಣ ಸುಧಾರಿಸಿ. ನಿಮ್ಮ ಈಜು ರೂಪಾಂತರಗೊಳ್ಳುವುದನ್ನು ನೋಡಿ.</p>
-
-        <div class="mt-xl">
-            <a href="/kn/stroke-mechanics/" class="btn btn-primary">ಸ್ಟ್ರೋಕ್ ಮೆಕ್ಯಾನಿಕ್ಸ್ →</a>
-            <a href="/kn/formulas/" class="btn btn-secondary">ಎಲ್ಲಾ ಸೂತ್ರಗಳು</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+            </div></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">SWOLF ಮಾನದಂಡಗಳು</h2><div class="grid grid-2"><div><h3>ಫ್ರೀಸ್ಟೈಲ್ - 25m ಪೂಲ್</h3><div class="levels-comparison"><div class="level-card-compact"><strong>ಎಲೈಟ್ ಈಜುಗಾರರು</strong><div class="value">30-35</div><p>ರಾಷ್ಟ್ರೀಯ/ಅಂತರರಾಷ್ಟ್ರೀಯ ಮಟ್ಟ, ಅಸಾಧಾರಣ ದಕ್ಷತೆ</p></div><div class="level-card-compact"><strong>ಸ್ಪರ್ಧಾತ್ಮಕ</strong><div class="value">35-45</div><p>ಹೈಸ್ಕೂಲ್ ವಾರ್ಸಿಟಿ, ಕಾಲೇಜು, ಮಾಸ್ಟರ್ಸ್ ಸ್ಪರ್ಧಾತ್ಮಕ</p></div><div class="level-card-compact"><strong>ಫಿಟ್‌ನೆಸ್ ಈಜುಗಾರರು</strong><div class="value">45-60</div><p>ನಿಯಮಿತ ತರಬೇತಿ, ಘನ ತಂತ್ರ</p></div><div class="level-card-compact"><strong>ಆರಂಭಿಕರು</strong><div class="value">60+</div><p>ತಂತ್ರ ಮತ್ತು ಕಂಡೀಷನಿಂಗ್ ಅಭಿವೃದ್ಧಿ</p></div></div></div><div><h3>ಇತರ ಸ್ಟ್ರೋಕ್‌ಗಳು - 25m ಪೂಲ್</h3><div class="stroke-benchmarks"><div class="benchmark-item"><h4>ಬ್ಯಾಕ್‌ಸ್ಟ್ರೋಕ್</h4><p>ಸಾಮಾನ್ಯವಾಗಿ ಫ್ರೀಸ್ಟೈಲ್‌ಗಿಂತ <strong>5-10 ಪಾಯಿಂಟ್‌ಗಳು ಹೆಚ್ಚು</strong></p><div class="value-small">ಉತ್ತಮ: 40-50</div></div><div class="benchmark-item"><h4>ಬ್ರೆಸ್ಟ್‌ಸ್ಟ್ರೋಕ್</h4><p>ಗ್ಲೈಡ್ ತಂತ್ರದಿಂದಾಗಿ ವಿಶಾಲ ವ್ಯತ್ಯಾಸ</p><div class="value-small">ಶ್ರೇಣಿ: 40-60</div></div><div class="benchmark-item"><h4>ಬಟರ್‌ಫ್ಲೈ</h4><p>ನುರಿತ ಈಜುಗಾರರಿಗೆ ಫ್ರೀಸ್ಟೈಲ್‌ಗೆ ಸಮಾನ</p><div class="value-small">ಉತ್ತಮ: 38-55</div></div></div><div class="callout callout-warning"><h4>⚠️ ವೈಯಕ್ತಿಕ ವ್ಯತ್ಯಾಸ</h4><p>SWOLF ಎತ್ತರ ಮತ್ತು ತೋಳಿನ ವ್ಯಾಪ್ತಿಯಿಂದ ಪ್ರಭಾವಿತವಾಗಿದೆ. ಎತ್ತರದ ಈಜುಗಾರರು ಸ್ವಾಭಾವಿಕವಾಗಿ ಕಡಿಮೆ ಸ್ಟ್ರೋಕ್‌ಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳುತ್ತಾರೆ. ಇತರರೊಂದಿಗೆ ಹೋಲಿಸುವ ಬದಲು <em>ನಿಮ್ಮ ಸ್ವಂತ ಪ್ರಗತಿಯನ್ನು</em> ಟ್ರ್ಯಾಕ್ ಮಾಡಲು SWOLF ಬಳಸಿ.</p></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2>SWOLF ಮಾದರಿಗಳನ್ನು ಅರ್ಥೈಸುವುದು</h2><div class="pattern-analysis"><div class="pattern-item"><h3>📉 ಕಡಿಮೆಯಾಗುತ್ತಿರುವ SWOLF = ಸುಧಾರಿಸುತ್ತಿರುವ ದಕ್ಷತೆ</h3><p>ನಿಮ್ಮ ತಂತ್ರ ಉತ್ತಮವಾಗುತ್ತಿದೆ, ಅಥವಾ ನೀವು ನಿರ್ದಿಷ್ಟ ವೇಗದಲ್ಲಿ ಹೆಚ್ಚು ಆರ್ಥಿಕವಾಗುತ್ತಿದ್ದೀರಿ. ವಾರಗಳು ಮತ್ತು ತಿಂಗಳುಗಳ ತರಬೇತಿಯಲ್ಲಿ ಇದು ಗುರಿ.</p><div class="example-box"><strong>ಉದಾಹರಣೆ:</strong> 8 ವಾರಗಳ ಕೇಂದ್ರೀಕೃತ ತಂತ್ರ ಕೆಲಸದಲ್ಲಿ SWOLF 48 → 45 → 42 ಗೆ ಇಳಿಯುತ್ತದೆ.
+                </div></div><div class="pattern-item"><h3>📈 ಹೆಚ್ಚುತ್ತಿರುವ SWOLF = ಕುಸಿಯುತ್ತಿರುವ ದಕ್ಷತೆ</h3><p>ಆಯಾಸ ಸೆಟ್ ಆಗುತ್ತಿದೆ, ತಂತ್ರ ಕುಸಿಯುತ್ತಿದೆ, ಅಥವಾ ನಿಮ್ಮ ದಕ್ಷತೆ ಅನುಮತಿಸುವುದಕ್ಕಿಂತ ವೇಗವಾಗಿ ಈಜುತ್ತಿದ್ದೀರಿ.</p><div class="example-box"><strong>ಉದಾಹರಣೆ:</strong> 1000m ಸೆಟ್‌ನ ಕೊನೆಯ 200m ನಲ್ಲಿ SWOLF 42 → 48 ಗೆ ಏರುತ್ತದೆ, ಆಯಾಸವನ್ನು ಸೂಚಿಸುತ್ತದೆ.
+                </div></div><div class="pattern-item"><h3>📊 ಒಂದೇ SWOLF ನಲ್ಲಿ ವಿಭಿನ್ನ ಸಂಯೋಜನೆಗಳು</h3><p>45 ರ SWOLF ಬಹು ಸ್ಟ್ರೋಕ್/ಸಮಯ ಸಂಯೋಜನೆಗಳಿಂದ ಉಂಟಾಗಬಹುದು:</p><ul><li><strong>20 ಸೆಕೆಂಡುಗಳು + 25 ಸ್ಟ್ರೋಕ್‌ಗಳು</strong> = ಹೆಚ್ಚಿನ ಆವರ್ತನ, ಕಡಿಮೆ ಸ್ಟ್ರೋಕ್‌ಗಳು</li><li><strong>25 ಸೆಕೆಂಡುಗಳು + 20 ಸ್ಟ್ರೋಕ್‌ಗಳು</strong> = ಕಡಿಮೆ ಆವರ್ತನ, ಉದ್ದ ಸ್ಟ್ರೋಕ್‌ಗಳು</li></ul><p><strong>ಯಾವಾಗಲೂ ಘಟಕಗಳನ್ನು ವಿಶ್ಲೇಷಿಸಿ</strong> (ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ ಮತ್ತು ಸಮಯ) ನಿಮ್ಮ ಈಜು ತಂತ್ರವನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು.</p></div></div><div class="callout callout-tip"><h3>🎯 SWOLF ತರಬೇತಿ ಅನ್ವಯಗಳು</h3><ul><li><strong>ತಂತ್ರ ಅಧಿವೇಶನಗಳು:</strong> ಉತ್ತಮ ಕ್ಯಾಚ್, ಸ್ಟ್ರೀಮ್‌ಲೈನ್, ಮತ್ತು ದೇಹದ ಸ್ಥಾನದ ಮೂಲಕ SWOLF ಕಡಿಮೆ ಮಾಡಲು ಗುರಿಯಾಗಿರಿ</li><li><strong>ಆಯಾಸ ಮೇಲ್ವಿಚಾರಣೆ:</strong> ಏರುತ್ತಿರುವ SWOLF ತಂತ್ರ ಕುಸಿತವನ್ನು ಸೂಚಿಸುತ್ತದೆ—ವಿರಾಮದ ಸಮಯ</li><li><strong>ವೇಗ-ದಕ್ಷತೆ ಸಮತೋಲನ:</strong> SWOLF ಸ್ಪೈಕ್ ಆಗದೆ ನೀವು ಹಿಡಿದಿಡಬಹುದಾದ ವೇಗವಾದ ವೇಗವನ್ನು ಹುಡುಕಿ</li><li><strong>ಡ್ರಿಲ್ ಪರಿಣಾಮಕಾರಿತ್ವ:</strong> ತಂತ್ರ ವರ್ಗಾವಣೆಯನ್ನು ಅಳೆಯಲು ಡ್ರಿಲ್ ಸೆಟ್‌ಗಳ ಮೊದಲು/ನಂತರ SWOLF ಟ್ರ್ಯಾಕ್ ಮಾಡಿ</li></ul></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>ಅಳತೆ ಉತ್ತಮ ಅಭ್ಯಾಸಗಳು</h2><div class="measurement-guidelines"><div class="guideline-box"><h3>📏 ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ</h3><ul><li>ಪ್ರತಿ ಕೈ ಪ್ರವೇಶವನ್ನು ಎಣಿಸಿ (ಎರಡೂ ತೋಳುಗಳು ಸಂಯೋಜಿತ)</li><li>ಪುಶ್-ಆಫ್ ನಂತರ ಮೊದಲ ಸ್ಟ್ರೋಕ್‌ನಿಂದ ಎಣಿಕೆ ಪ್ರಾರಂಭಿಸಿ</li><li>ಗೋಡೆ ಸ್ಪರ್ಶದವರೆಗೆ ಎಣಿಸಿ</li><li>ಸ್ಥಿರ ಪುಶ್-ಆಫ್ ದೂರವನ್ನು ಕಾಯ್ದುಕೊಳ್ಳಿ (~ಫ್ಲ್ಯಾಗ್‌ಗಳಿಂದ 5m)</li></ul></div><div class="guideline-box"><h3>⏱️ ಸಮಯ</h3><ul><li>ಮೊದಲ ಸ್ಟ್ರೋಕ್‌ನಿಂದ ಗೋಡೆ ಸ್ಪರ್ಶದವರೆಗೆ ಅಳೆಯಿರಿ</li><li>ಲ್ಯಾಪ್‌ಗಳಾದ್ಯಂತ ಸ್ಥಿರ ಪುಶ್-ಆಫ್ ತೀವ್ರತೆ ಬಳಸಿ</li><li>ತಂತ್ರಜ್ಞಾನ (Garmin, Apple Watch, FORM) ಸ್ವಯಂ-ಲೆಕ್ಕಾಚಾರ ಮಾಡುತ್ತದೆ</li><li>ಹಸ್ತಚಾಲಿತ ಸಮಯ: ಪೇಸ್ ಕ್ಲಾಕ್ ಅಥವಾ ಸ್ಟಾಪ್‌ವಾಚ್ ಬಳಸಿ</li></ul></div><div class="guideline-box"><h3>🔄 ಸ್ಥಿರತೆ</h3><ul><li>ಹೋಲಿಕೆಗಾಗಿ ಸಮಾನ ವೇಗಗಳಲ್ಲಿ SWOLF ಅಳೆಯಿರಿ</li><li>ಮುಖ್ಯ ಸೆಟ್‌ಗಳಲ್ಲಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ, ವಾರ್ಮ್-ಅಪ್/ಕೂಲ್-ಡೌನ್ ಅಲ್ಲ</li><li>ಯಾವ ಸ್ಟ್ರೋಕ್ ಪ್ರಕಾರ ಎಂದು ಗಮನಿಸಿ (ಫ್ರೀಸ್ಟೈಲ್, ಬ್ಯಾಕ್, ಇತ್ಯಾದಿ)</li><li>ಒಂದೇ ಪೂಲ್ ಉದ್ದವನ್ನು ಹೋಲಿಸಿ (25m vs 25m, 25m vs 50m ಅಲ್ಲ)</li></ul></div></div></div></section><section class="section"><div class="container container-narrow"><h2>SWOLF ಮಿತಿಗಳು</h2><div class="limitations-list"><div class="limitation-item"><h3>🚫 ಕ್ರೀಡಾಪಟುಗಳ ನಡುವೆ ಹೋಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ</h3><p>ಎತ್ತರ, ತೋಳಿನ ಉದ್ದ, ಮತ್ತು ನಮ್ಯತೆ ಸ್ವಾಭಾವಿಕ ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ ವ್ಯತ್ಯಾಸಗಳನ್ನು ಸೃಷ್ಟಿಸುತ್ತವೆ. 6'2" ಈಜುಗಾರ ಒಂದೇ ಫಿಟ್‌ನೆಸ್ ಮಟ್ಟದಲ್ಲಿ 5'6" ಈಜುಗಾರನಿಗಿಂತ ಕಡಿಮೆ SWOLF ಹೊಂದಿರುತ್ತಾರೆ.</p><p><strong>ಪರಿಹಾರ:</strong> ವೈಯಕ್ತಿಕ ಪ್ರಗತಿ ಟ್ರ್ಯಾಕಿಂಗ್‌ಗೆ ಮಾತ್ರ SWOLF ಬಳಸಿ.</p></div><div class="limitation-item"><h3>🚫 ಸಂಯುಕ್ತ ಸ್ಕೋರ್ ವಿವರಗಳನ್ನು ಮರೆಮಾಡುತ್ತದೆ</h3><p>SWOLF ಎರಡು ಅಸ್ಥಿರಗಳನ್ನು ಸಂಯೋಜಿಸುತ್ತದೆ. ನೀವು ಒಂದನ್ನು ಸುಧಾರಿಸಬಹುದು ಇನ್ನೊಂದನ್ನು ಕೆಡಿಸುತ್ತಾ ಮತ್ತು ಇನ್ನೂ ಅದೇ ಸ್ಕೋರ್ ಹೊಂದಬಹುದು.</p><p><strong>ಪರಿಹಾರ:</strong> ಯಾವಾಗಲೂ ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ ಮತ್ತು ಸಮಯವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರೀಕ್ಷಿಸಿ.</p></div><div class="limitation-item"><h3>🚫 ವೇಗ-ಸಾಮಾನ್ಯೀಕೃತವಲ್ಲ</h3><p>ನೀವು ವೇಗವಾಗಿ ಈಜಿದಂತೆ SWOLF ಸ್ವಾಭಾವಿಕವಾಗಿ ಹೆಚ್ಚಾಗುತ್ತದೆ (ಹೆಚ್ಚು ಸ್ಟ್ರೋಕ್‌ಗಳು, ಕಡಿಮೆ ಸಮಯ, ಆದರೆ ಹೆಚ್ಚಿನ ಒಟ್ಟು). ಇದು ಅದಕ್ಷತೆಯಲ್ಲ—ಇದು ಭೌತಶಾಸ್ತ್ರ.</p><p><strong>ಪರಿಹಾರ:</strong> ನಿರ್ದಿಷ್ಟ ಗುರಿ ವೇಗಗಳಲ್ಲಿ SWOLF ಟ್ರ್ಯಾಕ್ ಮಾಡಿ (ಉದಾ., "CSS ವೇಗದಲ್ಲಿ SWOLF" vs "ಸುಲಭ ವೇಗದಲ್ಲಿ SWOLF").</p></div></div><div class="callout callout-science"><h3>🔬 ಈಜು ಆರ್ಥಿಕತೆಯ ಹಿಂದಿನ ವಿಜ್ಞಾನ</h3><p>Costill et al. (1985) ಸಂಶೋಧನೆ <strong>ಈಜು ಆರ್ಥಿಕತೆ</strong> (ಪ್ರತಿ ಯೂನಿಟ್ ದೂರಕ್ಕೆ ಶಕ್ತಿ ವೆಚ್ಚ) ಮಧ್ಯಮ-ದೂರ ಕಾರ್ಯಕ್ಷಮತೆಗೆ VO₂max ಗಿಂತ ಹೆಚ್ಚು ಮುಖ್ಯ ಎಂದು ಸ್ಥಾಪಿಸಿತು.</p><p>SWOLF ಆರ್ಥಿಕತೆಗೆ ಪ್ರಾಕ್ಸಿಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ—ಕಡಿಮೆ SWOLF ಸಾಮಾನ್ಯವಾಗಿ ನಿರ್ದಿಷ್ಟ ವೇಗದಲ್ಲಿ ಕಡಿಮೆ ಶಕ್ತಿ ವೆಚ್ಚದೊಂದಿಗೆ ಸಂಬಂಧಿಸುತ್ತದೆ, ಅದೇ ಪ್ರಯತ್ನದೊಂದಿಗೆ ವೇಗವಾಗಿ ಅಥವಾ ದೀರ್ಘಕಾಲ ಈಜಲು ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ.</p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>SWOLF ತರಬೇತಿ ಡ್ರಿಲ್‌ಗಳು</h2><div class="drill-set"><h3>🎯 SWOLF ಕಡಿತ ಸೆಟ್</h3><div class="workout-box"><h4>8 × 50m (30 ಸೆಕೆಂಡುಗಳ ವಿಶ್ರಾಂತಿ)</h4><ol><li><strong>50 #1-2:</strong> ಆರಾಮದಾಯಕ ವೇಗದಲ್ಲಿ ಈಜಿ, ಬೇಸ್‌ಲೈನ್ SWOLF ದಾಖಲಿಸಿ</li><li><strong>50 #3-4:</strong> ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆಯನ್ನು 2 ರಿಂದ ಕಡಿಮೆ ಮಾಡಿ, ಅದೇ ಸಮಯ ಕಾಯ್ದುಕೊಳ್ಳಿ → ಪ್ರತಿ ಸ್ಟ್ರೋಕ್‌ಗೆ ಉದ್ದದ ಮೇಲೆ ಗಮನ</li><li><strong>50 #5-6:</strong> ಸ್ಟ್ರೋಕ್ ದರವನ್ನು ಸ್ವಲ್ಪ ಹೆಚ್ಚಿಸಿ, ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ ಅದೇ ಇಡಿ → ಟರ್ನ್‌ಓವರ್ ಮೇಲೆ ಗಮನ</li><li><strong>50 #7-8:</strong> ಅತ್ಯುತ್ತಮ ಸಮತೋಲನ ಹುಡುಕಿ—ಕಡಿಮೆ SWOLF ಗುರಿಯಾಗಿರಿ</li></ol><p><strong>ಗುರಿ:</strong> ನಿಮ್ಮ ಅತ್ಯಂತ ದಕ್ಷ ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ/ದರ ಸಂಯೋಜನೆಯನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ.</p></div></div><div class="drill-set"><h3>⚡ SWOLF ಸ್ಥಿರತೆ ಪರೀಕ್ಷೆ</h3><div class="workout-box"><h4>10 × 100m @ CSS ವೇಗ (20 ಸೆಕೆಂಡುಗಳ ವಿಶ್ರಾಂತಿ)</h4><p>ಪ್ರತಿ 100m ಗೆ SWOLF ದಾಖಲಿಸಿ. ವಿಶ್ಲೇಷಿಸಿ:</p><ul><li>ಯಾವ 100m ಕಡಿಮೆ SWOLF ಹೊಂದಿತ್ತು? (ನೀವು ಅತ್ಯಂತ ದಕ್ಷರಾಗಿದ್ದಿರಿ)</li><li>SWOLF ಎಲ್ಲಿ ಸ್ಪೈಕ್ ಆಯಿತು? (ತಂತ್ರ ಕುಸಿತ ಅಥವಾ ಆಯಾಸ)</li><li>ಮೊದಲ ಮತ್ತು ಕೊನೆಯ 100m ನಡುವೆ SWOLF ಎಷ್ಟು ಬದಲಾಯಿತು?</li></ul><p><strong>ಗುರಿ:</strong> ಎಲ್ಲಾ ರೆಪ್‌ಗಳಲ್ಲಿ SWOLF ±2 ಪಾಯಿಂಟ್‌ಗಳನ್ನು ಕಾಯ್ದುಕೊಳ್ಳಿ. ಸ್ಥಿರತೆ ಆಯಾಸದಲ್ಲಿ ಬಲವಾದ ತಂತ್ರವನ್ನು ಸೂಚಿಸುತ್ತದೆ.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು</h2><div class="faq-section" itemscope itemtype="https://schema.org/FAQPage"><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">SWOLF ಎಂದರೇನು?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>SWOLF (Swim + Golf) ನಿಮ್ಮ ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆಯನ್ನು ಒಂದು ಉದ್ದಕ್ಕೆ ನಿಮ್ಮ ಸಮಯಕ್ಕೆ ಸೇರಿಸುವ ಸಂಯುಕ್ತ ದಕ್ಷತೆ ಮೆಟ್ರಿಕ್ ಆಗಿದೆ. ಗಾಲ್ಫ್‌ನಲ್ಲಿರುವಂತೆ, ಗುರಿ ನಿಮ್ಮ ಸ್ಕೋರ್ ಅನ್ನು ಕಡಿಮೆ ಮಾಡುವುದು. ಉದಾಹರಣೆಗೆ, 20 ಸೆಕೆಂಡುಗಳು + 15 ಸ್ಟ್ರೋಕ್‌ಗಳು = SWOLF 35.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ನನ್ನ SWOLF ಅನ್ನು ಹೇಗೆ ಲೆಕ್ಕಹಾಕುವುದು?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>ಒಂದು ಉದ್ದಕ್ಕೆ ಪ್ರತಿ ಸ್ಟ್ರೋಕ್ (ಪ್ರತಿ ಕೈ ಪ್ರವೇಶ) ಎಣಿಸಿ ಮತ್ತು ಸೆಕೆಂಡುಗಳಲ್ಲಿ ನಿಮ್ಮ ಸಮಯವನ್ನು ಸೇರಿಸಿ. SWOLF = ಸಮಯ (ಸೆಕೆಂಡುಗಳು) + ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆ. ಕೆಲವು ವಾಚ್‌ಗಳು ಇದನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಲೆಕ್ಕಹಾಕುತ್ತವೆ.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ಉತ್ತಮ SWOLF ಸ್ಕೋರ್ ಎಷ್ಟು?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>25m ಫ್ರೀಸ್ಟೈಲ್‌ಗೆ: ಎಲೈಟ್ ಈಜುಗಾರರು 30-35 ಸ್ಕೋರ್ ಮಾಡುತ್ತಾರೆ, ಸ್ಪರ್ಧಾತ್ಮಕ ಈಜುಗಾರರು 35-45, ಫಿಟ್‌ನೆಸ್ ಈಜುಗಾರರು 45-60, ಆರಂಭಿಕರು 60+. ನಿಮ್ಮ ಎತ್ತರ ಮತ್ತು ತೋಳಿನ ವ್ಯಾಪ್ತಿ ಸ್ಟ್ರೋಕ್ ಎಣಿಕೆಯ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರುತ್ತದೆ, ಆದ್ದರಿಂದ ಇತರರೊಂದಿಗೆ ಹೋಲಿಸುವ ಬದಲು ಕಾಲಾನಂತರದಲ್ಲಿ ನಿಮ್ಮ ಸ್ವಂತ ಸ್ಕೋರ್ ಸುಧಾರಿಸುವುದರ ಮೇಲೆ ಗಮನ ಕೇಂದ್ರೀಕರಿಸಿ.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ನನ್ನ SWOLF ಅನ್ನು ಇತರ ಈಜುಗಾರರೊಂದಿಗೆ ಹೋಲಿಸಬಹುದೇ?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>ಇಲ್ಲ. SWOLF ಹೆಚ್ಚು ವೈಯಕ್ತಿಕವಾಗಿದೆ ಏಕೆಂದರೆ ಎತ್ತರದ ಈಜುಗಾರರು ಸ್ವಾಭಾವಿಕವಾಗಿ ಕಡಿಮೆ ಸ್ಟ್ರೋಕ್‌ಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳುತ್ತಾರೆ. ಇತರರೊಂದಿಗೆ ಹೋಲಿಸಲು ಅಲ್ಲ, ನಿಮ್ಮ ಸ್ವಂತ ಪ್ರಗತಿಯನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಲು SWOLF ಬಳಸಿ.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ನನ್ನ SWOLF ಅನ್ನು ಹೇಗೆ ಸುಧಾರಿಸಬಹುದು?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>ತಂತ್ರದ ಮೇಲೆ ಗಮನ ಕೇಂದ್ರೀಕರಿಸಿ: ಉದ್ದ ಸ್ಟ್ರೋಕ್‌ಗಳು (ಉತ್ತಮ ಕ್ಯಾಚ್ ಮತ್ತು ಪುಲ್-ಥ್ರೂ), ಸುಧಾರಿತ ಸ್ಟ್ರೀಮ್‌ಲೈನ್ (ಗೋಡೆಗಳಿಂದ ಮತ್ತು ಸ್ಟ್ರೋಕ್ ಸಮಯದಲ್ಲಿ), ಉತ್ತಮ ದೇಹದ ಸ್ಥಾನ (ಡ್ರ್ಯಾಗ್ ಕಡಿಮೆ ಮಾಡಿ), ಮತ್ತು ಸ್ಥಿರ ತಿರುಗುವಿಕೆ. ಡ್ರಿಲ್‌ಗಳು ಮತ್ತು ವೀಡಿಯೊ ವಿಶ್ಲೇಷಣೆ ಸುಧಾರಣೆಗಾಗಿ ನಿರ್ದಿಷ್ಟ ಕ್ಷೇತ್ರಗಳನ್ನು ಗುರುತಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತವೆ. ನಮ್ಮ <a href="/kn/stroke-mechanics/">ಸ್ಟ್ರೋಕ್ ಮೆಕ್ಯಾನಿಕ್ಸ್ ಮಾರ್ಗದರ್ಶಿ</a>ಯಲ್ಲಿ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ.</p></div></div></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2 class="mt-3xl">ಸಂಬಂಧಿತ ಸಂಪನ್ಮೂಲಗಳು</h2><div class="related-articles"><a href="/kn/css/" class="related-card"><h3>ಕ್ರಿಟಿಕಲ್ ಸ್ವಿಮ್ ಸ್ಪೀಡ್ (CSS) ಪರೀಕ್ಷೆ</h3><p>CSS ಪ್ರೋಟೋಕಾಲ್‌ನೊಂದಿಗೆ ನಿಮ್ಮ ಈಜು ಥ್ರೆಶೋಲ್ಡ್ ವೇಗವನ್ನು ಹೇಗೆ ಅಳೆಯುವುದು ಎಂದು ತಿಳಿಯಿರಿ</p></a><a href="/kn/training-zones/" class="related-card"><h3>ತರಬೇತಿ ವಲಯಗಳ ಮಾರ್ಗದರ್ಶಿ</h3><p>5 ತರಬೇತಿ ವಲಯಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಿ ಮತ್ತು ನಿರ್ದಿಷ್ಟ ಹೊಂದಾಣಿಕೆಗಳಿಗಾಗಿ ವ್ಯಾಯಾಮಗಳನ್ನು ಹೇಗೆ ರಚಿಸುವುದು</p></a><a href="/kn/stss-calculator/" class="related-card"><h3>ಈಜು TSS ಕ್ಯಾಲ್ಕುಲೇಟರ್</h3><p>ನಿಮ್ಮ ತರಬೇತಿ ಲೋಡ್ ಅನ್ನು ಪ್ರಮಾಣೀಕರಿಸಿ ಮತ್ತು sTSS ಲೆಕ್ಕಾಚಾರಗಳೊಂದಿಗೆ ಫಿಟ್‌ನೆಸ್ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ</p></a><a href="/kn/getting-started/" class="related-card"><h3>ಪ್ರಾರಂಭಿಸುವ ಮಾರ್ಗದರ್ಶಿ</h3><p>ಹೊಸ Swim Analytics ಬಳಕೆದಾರರಿಗೆ ಸಂಪೂರ್ಣ ಆನ್‌ಬೋರ್ಡಿಂಗ್ ಸಂಪನ್ಮೂಲ</p></a></div><h2>ದಕ್ಷತೆ ಪುನರಾವರ್ತನೆಯ ಮೂಲಕ ಗಳಿಸಲಾಗುತ್ತದೆ</h2><p class="lead">SWOLF ರಾತ್ರೋರಾತ್ರಿ ಸುಧಾರಿಸುವುದಿಲ್ಲ. ಇದು ಸಾವಿರಾರು ತಾಂತ್ರಿಕವಾಗಿ ಉತ್ತಮ ಸ್ಟ್ರೋಕ್‌ಗಳು, ಉದ್ದೇಶಪೂರ್ವಕ ಅಭ್ಯಾಸ, ಮತ್ತು ವೇಗಕ್ಕಿಂತ ದಕ್ಷತೆಗೆ ಗಮನಹರಿಸುವ ಸಂಚಿತ ಫಲಿತಾಂಶ.</p><p>ಸ್ಥಿರವಾಗಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ. ಕ್ರಮೇಣ ಸುಧಾರಿಸಿ. ನಿಮ್ಮ ಈಜು ರೂಪಾಂತರಗೊಳ್ಳುವುದನ್ನು ನೋಡಿ.</p><div class="mt-xl"><a href="/kn/stroke-mechanics/" class="btn btn-primary">ಸ್ಟ್ರೋಕ್ ಮೆಕ್ಯಾನಿಕ್ಸ್ →</a><a href="/kn/formulas/" class="btn btn-secondary">ಎಲ್ಲಾ ಸೂತ್ರಗಳು</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link active"
+                </a><a href="/kn/" class="lang-link active"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/kn/privacy/">ಗೌಪ್ಯತೆ</a></li>
-                <li><a href="/kn/terms/">ನಿಯಮಗಳು</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>ಈ ವೆಬ್‌ಸೈಟ್ ನಿಮ್ಮ ಅನುಭವವನ್ನು ಸುಧಾರಿಸಲು ಕುಕೀಗಳನ್ನು ಬಳಸುತ್ತದೆ.</p>
-            <a href="/kn/privacy/" class="text-sm">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">ನಿರಾಕರಿಸಿ</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">ಒಪ್ಪಿಕೊಳ್ಳಿ</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/kn/privacy/">ಗೌಪ್ಯತೆ</a></li><li><a href="/kn/terms/">ನಿಯಮಗಳು</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>ಈ ವೆಬ್‌ಸೈಟ್ ನಿಮ್ಮ ಅನುಭವವನ್ನು ಸುಧಾರಿಸಲು ಕುಕೀಗಳನ್ನು ಬಳಸುತ್ತದೆ.</p><a href="/kn/privacy/" class="text-sm">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">ನಿರಾಕರಿಸಿ</button><button id="cookie-accept" class="btn btn-primary btn-small">ಒಪ್ಪಿಕೊಳ್ಳಿ</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

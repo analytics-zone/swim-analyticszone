@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="lt" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Pradžia su Swim Analytics - Išsamus nustatymo vadovas | CSS testo</title>
-  <meta name="description" content="Išsamus Swim Analytics nustatymo vadovas. Sužinokite, kaip atlikti CSS testą, įvesti rezultatus, stebėti treniruotes ir suprasti sTSS, CTL/ATL/TSB metriką. Žingsnis po">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="Swim Analytics vadovas, CSS testo pamoka, plaukimo programos pamoka, kaip naudoti Swim Analytics, plaukimo analitikos vadovas">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/lt/getting-started/">
-
-  
-  
-  <meta property="article:published_time" content="2025-10-12T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/lt/getting-started/">
-  <meta property="og:title" content="Pradžia su Swim Analytics - Išsamus nustatymo vadovas | CSS testo">
-  <meta property="og:description" content="Išsamus Swim Analytics nustatymo vadovas. Sužinokite, kaip atlikti CSS testą, įvesti rezultatus, stebėti treniruotes ir suprasti sTSS, CTL/ATL/TSB metriką. Žingsnis po">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="lt_LT">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/lt/getting-started/">
-  <meta name="twitter:title" content="Pradžia su Swim Analytics - Išsamus nustatymo vadovas | CSS testo">
-  <meta name="twitter:description" content="Išsamus Swim Analytics nustatymo vadovas. Sužinokite, kaip atlikti CSS testą, įvesti rezultatus, stebėti treniruotes ir suprasti sTSS, CTL/ATL/TSB metriką. Žingsnis po">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/getting-started/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/getting-started/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/getting-started/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/getting-started/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/getting-started/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/getting-started/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/getting-started/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/getting-started/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/getting-started/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/getting-started/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/getting-started/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/getting-started/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/getting-started/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/getting-started/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/getting-started/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/getting-started/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/getting-started/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/getting-started/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/getting-started/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/getting-started/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/getting-started/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/getting-started/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/getting-started/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/getting-started/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/getting-started/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/getting-started/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/getting-started/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/getting-started/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/getting-started/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/getting-started/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/getting-started/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/getting-started/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/getting-started/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/getting-started/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/getting-started/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/getting-started/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/getting-started/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/getting-started/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/getting-started/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/getting-started/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/getting-started/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/getting-started/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/getting-started/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/getting-started/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/getting-started/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/getting-started/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/getting-started/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/getting-started/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/getting-started/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/getting-started/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/getting-started/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/getting-started/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/getting-started/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/getting-started/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/getting-started/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/getting-started/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="lt" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Pradžia su Swim Analytics - Išsamus nustatymo vadovas | CSS testo</title><meta name="description" content="Išsamus Swim Analytics nustatymo vadovas. Sužinokite, kaip atlikti CSS testą, įvesti rezultatus, stebėti treniruotes ir suprasti sTSS, CTL/ATL/TSB metriką. Žingsnis po"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="Swim Analytics vadovas, CSS testo pamoka, plaukimo programos pamoka, kaip naudoti Swim Analytics, plaukimo analitikos vadovas"><link rel="canonical" href="https://swim.analyticszone.app/lt/getting-started/"><meta property="article:published_time" content="2025-10-12T10:00:00Z"><meta property="article:modified_time" content="2026-01-04T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/lt/getting-started/"><meta property="og:title" content="Pradžia su Swim Analytics - Išsamus nustatymo vadovas | CSS testo"><meta property="og:description" content="Išsamus Swim Analytics nustatymo vadovas. Sužinokite, kaip atlikti CSS testą, įvesti rezultatus, stebėti treniruotes ir suprasti sTSS, CTL/ATL/TSB metriką. Žingsnis po"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="lt_LT"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/lt/getting-started/"><meta name="twitter:title" content="Pradžia su Swim Analytics - Išsamus nustatymo vadovas | CSS testo"><meta name="twitter:description" content="Išsamus Swim Analytics nustatymo vadovas. Sužinokite, kaip atlikti CSS testą, įvesti rezultatus, stebėti treniruotes ir suprasti sTSS, CTL/ATL/TSB metriką. Žingsnis po"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/getting-started/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/getting-started/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/getting-started/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/getting-started/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/getting-started/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/getting-started/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/getting-started/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/getting-started/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/getting-started/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/getting-started/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/getting-started/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/getting-started/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/getting-started/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/getting-started/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/getting-started/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/getting-started/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/getting-started/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/getting-started/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/getting-started/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/getting-started/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/getting-started/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/getting-started/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/getting-started/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/getting-started/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/getting-started/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/getting-started/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/getting-started/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/getting-started/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/getting-started/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/getting-started/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/getting-started/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/getting-started/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/getting-started/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/getting-started/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/getting-started/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/getting-started/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/getting-started/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/getting-started/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/getting-started/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/getting-started/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/getting-started/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/getting-started/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/getting-started/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/getting-started/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/getting-started/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/getting-started/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/getting-started/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/getting-started/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/getting-started/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/getting-started/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/getting-started/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/getting-started/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/getting-started/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/getting-started/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/getting-started/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/getting-started/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "lt"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "Išsamus Swim Analytics nustatymo vadovas. Sužinokite, kaip atlikti CSS testą, įvesti rezultatus, stebėti treniruotes ir suprasti sTSS, CTL/ATL/TSB metriką. Žingsnis po",
   "url": "https://swim.analyticszone.app/lt/getting-started/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/lt/getting-started/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1368 +449,406 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">Praleisti iki turinio</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/lt/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/lt/" 
+  </script></head><body><a href="#main-content" class="skip-link">Praleisti iki turinio</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/lt/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/lt/" 
                                 aria-current="">
                                 Pradžia
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/lt/getting-started/" class="nav-label">Mokykitės</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/lt/getting-started/" class="active" 
+                            </a></li><li class="has-submenu" ><a href="/lt/getting-started/" class="nav-label">Mokykitės</a><ul class="submenu"><li><a href="/lt/getting-started/" class="active" 
                                         aria-current="page">
                                         Pradžia
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/lt/css/" 
+                                    </a></li><li><a href="/lt/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/lt/training-zones/" 
+                                    </a></li><li><a href="/lt/training-zones/" 
                                         aria-current="">
                                         Treniruočių zonos
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/lt/training-load/" 
+                                    </a></li><li><a href="/lt/training-load/" 
                                         aria-current="">
                                         Treniruočių krūvis
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/lt/stss-calculator/" 
+                                    </a></li><li><a href="/lt/stss-calculator/" 
                                         aria-current="">
                                         sTSS skaičiuoklė
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/lt/research/" class="nav-label">Mokslas</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/lt/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/lt/research/" class="nav-label">Mokslas</a><ul class="submenu"><li><a href="/lt/research/" 
                                         aria-current="">
                                         Tyrimai
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/lt/formulas/" 
+                                    </a></li><li><a href="/lt/formulas/" 
                                         aria-current="">
                                         Formulės
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/lt/efficiency/" 
+                                    </a></li><li><a href="/lt/efficiency/" 
                                         aria-current="">
                                         Efektyvumas
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/lt/stroke-mechanics/" 
+                                    </a></li><li><a href="/lt/stroke-mechanics/" 
                                         aria-current="">
                                         Gūsių mechanika
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/lt/bibliography/" 
+                                    </a></li><li><a href="/lt/bibliography/" 
                                         aria-current="">
                                         Bibliografija
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/lt/contact/" 
+                                    </a></li></ul></li><li><a href="/lt/contact/" 
                                 aria-current="">
                                 Kontaktai
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Pasirinkite kalbą">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Pasirinkite kalbą"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" selected>
+                        </option><option value="lt" selected>
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Perjungti meniu"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/lt/">Pradžia</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/lt/getting-started/">Mokykitės</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">Pradžia</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>Pradžia su „Swim Analytics“</h1>
-        <p class="lead">Išsamus vadovas plaukimo rezultatų stebėjimui, CSS testavimui ir treniruočių krūvio analizei</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>Sveiki atvykę į duomenimis pagrįstą plaukimą</h2>
-            <p>„Swim Analytics“ paverčia jūsų plaukimo treniruotes naudingomis įžvalgomis, naudodama <strong>kritinį
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Perjungti meniu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/lt/">Pradžia</a></li><li><a href="/lt/getting-started/">Mokykitės</a></li><li><span aria-current="page">Pradžia</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Pradžia su „Swim Analytics“</h1><p class="lead">Išsamus vadovas plaukimo rezultatų stebėjimui, CSS testavimui ir treniruočių krūvio analizei</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-info mb-xl"><h2>Sveiki atvykę į duomenimis pagrįstą plaukimą</h2><p>„Swim Analytics“ paverčia jūsų plaukimo treniruotes naudingomis įžvalgomis, naudodama <strong>kritinį
                     plaukimo greitį (CSS)</strong>, <strong>treniruočių streso balą (sTSS)</strong> ir <strong>rezultatų
                     valdymo grafiko (PMC)</strong> metrikas. Šis vadovas padės jums atlikti pirmuosius žingsnius – nuo
-                programėlės nustatymo iki pažangios treniruočių krūvio analizės – vos per 4 paprastus žingsnius.</p>
-        </div>
-
-        <h2>Greita pradžia (5 minutės)</h2>
-
-        <div class="steps-container">
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <h3>Atsisiųskite ir įdiekite</h3>
-                    <p>Atsisiųskite „Swim Analytics“ iš „App Store“ ir suteikite leidimą pasiekti „Apple Health“
+                programėlės nustatymo iki pažangios treniruočių krūvio analizės – vos per 4 paprastus žingsnius.</p></div><h2>Greita pradžia (5 minutės)</h2><div class="steps-container"><div class="step-card"><div class="step-number">1</div><div class="step-content"><h3>Atsisiųskite ir įdiekite</h3><p>Atsisiųskite „Swim Analytics“ iš „App Store“ ir suteikite leidimą pasiekti „Apple Health“
                         duomenis. Programėlė automatiškai sinchronizuoja plaukimo treniruotes – jokio rankinio duomenų
-                        vedimo.</p>
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-secondary btn-small mt-sm" target="_blank"
-                        rel="noopener">Atsisiųsti programėlę →</a>
-                </div>
-            </div>
-
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h3>Atlikite CSS testą</h3>
-                    <p>Plaukite 400 m ir 200 m kontrolinius plaukimus laikui, kad nustatytumėte savo kritinį plaukimo
-                        greitį. Tai visų metrikų pagrindas – be CSS negalima apskaičiuoti sTSS ir treniruočių zonų.</p>
-                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">CSS testo protokolas ↓</a>
-                </div>
-            </div>
-
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h3>Įveskite CSS rezultatus</h3>
-                    <p>Įveskite savo 400 m ir 200 m laikus programėlėje. „Swim Analytics“ apskaičiuos CSS, tempo zonas
+                        vedimo.</p><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-secondary btn-small mt-sm" target="_blank"
+                        rel="noopener">Atsisiųsti programėlę →</a></div></div><div class="step-card"><div class="step-number">2</div><div class="step-content"><h3>Atlikite CSS testą</h3><p>Plaukite 400 m ir 200 m kontrolinius plaukimus laikui, kad nustatytumėte savo kritinį plaukimo
+                        greitį. Tai visų metrikų pagrindas – be CSS negalima apskaičiuoti sTSS ir treniruočių zonų.</p><a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">CSS testo protokolas ↓</a></div></div><div class="step-card"><div class="step-number">3</div><div class="step-content"><h3>Įveskite CSS rezultatus</h3><p>Įveskite savo 400 m ir 200 m laikus programėlėje. „Swim Analytics“ apskaičiuos CSS, tempo zonas
                         ir pritaikys visas metrikas jūsų fiziologijai. Atnaujinkite rezultatus kas 6–8 savaites,
-                        gerėjant fizinei formai.</p>
-                </div>
-            </div>
-
-            <div class="step-card">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <h3>Pradėkite stebėti treniruotes</h3>
-                    <p>Plaukite su „Apple Watch“ ir „Health“ programėle. „Swim Analytics“ automatiškai importuoja
+                        gerėjant fizinei formai.</p></div></div><div class="step-card"><div class="step-number">4</div><div class="step-content"><h3>Pradėkite stebėti treniruotes</h3><p>Plaukite su „Apple Watch“ ir „Health“ programėle. „Swim Analytics“ automatiškai importuoja
                         treniruotes, skaičiuoja sTSS, atnaujina CTL/ATL/TSB rodiklius ir stebi pažangą. Jokių rankinių
-                        įrašų.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt" id="css-test-guide">
-    <div class="container">
-        <h2 class="mb-xl text-center">Išsamus CSS testo protokolas</h2>
-
-        <div class="grid grid-2">
-            <div class="card">
-                <h3 class="card-title">📋 Ko jums prireiks</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>Baseinas:</strong> 25 m arba 50 m baseinas (tinka ir plaukimas jardais)</li>
-                        <li><strong>Laiko matavimas:</strong> chronometras, baseino laikrodis arba „Apple Watch“</li>
-                        <li><strong>Apšilimas:</strong> 15–20 minučių prieš testą</li>
-                        <li><strong>Poilsis:</strong> 5–10 minučių tarp plaukimų</li>
-                        <li><strong>Pastangos:</strong> didžiausias pastovus tempas (ne sprintas „iki galo“)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">⏱️ Sąlygos testo dieną</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>Poilsis:</strong> jokių sunkių treniruočių 24–48 val. prieš testą</li>
-                        <li><strong>Hidratacija:</strong> gerkite pakankamai skysčių, maitinkitės įprastai</li>
-                        <li><strong>Vandens temp.:</strong> idealu 26–28 °C – per šaltas ar per šiltas vanduo gali
-                            paveikti rezultatus</li>
-                        <li><strong>Paros laikas:</strong> tada, kada paprastai treniruojatės geriausiai</li>
-                        <li><strong>Apranga:</strong> ta pati, kurią naudojate treniruotėse (akinukai, kepurėlė,
-                            kostiumas)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="mt-3xl">CSS testas žingsnis po žingsnio</h3>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-marker">Apšilimas</div>
-                <div class="timeline-content">
-                    <h4>15–20 minučių</h4>
-                    <p>400–800 m lengvo plaukimo, pratimų ir laipsniško tempo didinimo. Įtraukite 2–3 atkarpas po 50 m
-                        didėjančiu tempu (60 %, 75 %, 85 % pastangų). Pailsėkite 2–3 minutes prieš testą.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">1-as plaukimas</div>
-                <div class="timeline-content">
-                    <h4>400 m maksimaliomis pastangomis</h4>
-                    <p><strong>Startas nuo sienelės</strong> (ne šuolis). Plaukite 400 m greičiausiu tempu, kurį galite
+                        įrašų.</p></div></div></div></div></section><section class="section section-alt" id="css-test-guide"><div class="container"><h2 class="mb-xl text-center">Išsamus CSS testo protokolas</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">📋 Ko jums prireiks</h3><div class="card-content"><ul><li><strong>Baseinas:</strong> 25 m arba 50 m baseinas (tinka ir plaukimas jardais)</li><li><strong>Laiko matavimas:</strong> chronometras, baseino laikrodis arba „Apple Watch“</li><li><strong>Apšilimas:</strong> 15–20 minučių prieš testą</li><li><strong>Poilsis:</strong> 5–10 minučių tarp plaukimų</li><li><strong>Pastangos:</strong> didžiausias pastovus tempas (ne sprintas „iki galo“)</li></ul></div></div><div class="card"><h3 class="card-title">⏱️ Sąlygos testo dieną</h3><div class="card-content"><ul><li><strong>Poilsis:</strong> jokių sunkių treniruočių 24–48 val. prieš testą</li><li><strong>Hidratacija:</strong> gerkite pakankamai skysčių, maitinkitės įprastai</li><li><strong>Vandens temp.:</strong> idealu 26–28 °C – per šaltas ar per šiltas vanduo gali
+                            paveikti rezultatus</li><li><strong>Paros laikas:</strong> tada, kada paprastai treniruojatės geriausiai</li><li><strong>Apranga:</strong> ta pati, kurią naudojate treniruotėse (akinukai, kepurėlė,
+                            kostiumas)</li></ul></div></div></div><h3 class="mt-3xl">CSS testas žingsnis po žingsnio</h3><div class="timeline"><div class="timeline-item"><div class="timeline-marker">Apšilimas</div><div class="timeline-content"><h4>15–20 minučių</h4><p>400–800 m lengvo plaukimo, pratimų ir laipsniško tempo didinimo. Įtraukite 2–3 atkarpas po 50 m
+                        didėjančiu tempu (60 %, 75 %, 85 % pastangų). Pailsėkite 2–3 minutes prieš testą.</p></div></div><div class="timeline-item"><div class="timeline-marker">1-as plaukimas</div><div class="timeline-content"><h4>400 m maksimaliomis pastangomis</h4><p><strong>Startas nuo sienelės</strong> (ne šuolis). Plaukite 400 m greičiausiu tempu, kurį galite
                         išlaikyti visą atstumą. Tai NĖRA sprintas: paskirstykite jėgas visam nuotoliui. Užfiksuokite
-                        laiką <strong>mm:ss</strong> formatu (pvz., 6:08).</p>
-                    <div class="tip-box mt-sm">
-                        <strong>Tempo patarimas:</strong> stenkitės išlaikyti vienodą 100 m laiką. Antrieji 200 m turėtų
+                        laiką <strong>mm:ss</strong> formatu (pvz., 6:08).</p><div class="tip-box mt-sm"><strong>Tempo patarimas:</strong> stenkitės išlaikyti vienodą 100 m laiką. Antrieji 200 m turėtų
                         būti ne lėtesni už pirmuosius 200 m (idealus variantas – greitesnė antra pusė).
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">Atsigavimas</div>
-                <div class="timeline-content">
-                    <h4>5–10 minučių</h4>
-                    <p><strong>KRITINIS ETAPAS:</strong> Lengvas plaukimas arba visiškas poilsis. Palaukite, kol širdies
+                    </div></div></div><div class="timeline-item"><div class="timeline-marker">Atsigavimas</div><div class="timeline-content"><h4>5–10 minučių</h4><p><strong>KRITINIS ETAPAS:</strong> Lengvas plaukimas arba visiškas poilsis. Palaukite, kol širdies
                         ritmas nukris žemiau 120 k./min. ir kvėpavimas visiškai atsistatys. Tikslas: galėti laisvai
                         susikalbėti ir jaustis pasirengus kitam maksimaliam nuotoliui. Nepakankamas poilsis = netikslus
-                        CSS.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">2-as plaukimas</div>
-                <div class="timeline-content">
-                    <h4>200 m maksimaliomis pastangomis</h4>
-                    <p><strong>Startas nuo sienelės</strong> (ne šuolis). Didžiausios stabilios pastangos 200 m
+                        CSS.</p></div></div><div class="timeline-item"><div class="timeline-marker">2-as plaukimas</div><div class="timeline-content"><h4>200 m maksimaliomis pastangomis</h4><p><strong>Startas nuo sienelės</strong> (ne šuolis). Didžiausios stabilios pastangos 200 m
                         nuotoliui. Šis plaukimas turėtų jaustis sunkiau (greičiau) nei 400 m plaukimas. Užfiksuokite
-                        laiką <strong>mm:ss</strong> formatu (pvz., 2:30).</p>
-                    <div class="tip-box mt-sm">
-                        <strong>Patikra:</strong> 200 m vidutinis 100 metrų tempas turėtų būti 3–6 sekundėmis greitesnis
+                        laiką <strong>mm:ss</strong> formatu (pvz., 2:30).</p><div class="tip-box mt-sm"><strong>Patikra:</strong> 200 m vidutinis 100 metrų tempas turėtų būti 3–6 sekundėmis greitesnis
                         nei 400 m plaukimo. Jei skirtumas mažesnis, tikriausiai per mažai pailsėjote arba blogai
                         paskirstėte jėgas.
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker">Atvėsimas</div>
-                <div class="timeline-content">
-                    <h4>10–15 minučių</h4>
-                    <p>300–500 m lengvo plaukimo, tempimo pratimai. Užsirašykite savo laikus iš karto – nepasikliaukite
-                        atmintimi.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-warning mt-xl">
-            <h3>⚠️ Dažnos CSS testo klaidos</h3>
-            <ul>
-                <li><strong>Per greita pradžia 400 m nuotolyje:</strong> greitai pavargstama ir gaunamas netikslus CSS
-                    rezultatas. Išlaikykite tolygų tempą.</li>
-                <li><strong>Per trumpas poilsis tarp trialų:</strong> nuovargis sulėtina 200 m laiką, todėl CSS
-                    skaičiuojamas klaidingai greitesnis → per sunkios treniruočių zonos.</li>
-                <li><strong>Šuoliai startuojant:</strong> tai suteikia 0,5–1,5 s pranašumą ir iškraipo skaičiavimus.
-                    Visada startuokite atsispirdami nuo sienelės vandenyje.</li>
-                <li><strong>Testas jaučiant nuovargį:</strong> sunki treniruotė 24–48 val. prieš testą = prastesni
-                    rezultatai. Testuokitės pailsėję.</li>
-                <li><strong>Neužužraikyta laiko iškart:</strong> atmintis gali apgauti. Užsirašykite laikus prieš
-                    atvėsimą.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>CSS rezultatų įvedimas „Swim Analytics“</h2>
-
-        <div class="screenshot-guide">
-            <div class="step-item">
-                <h3>1 žingsnis: Atidarykite CSS nustatymus</h3>
-                <p>Programėlėje eikite į <strong>Settings → Critical Swim Speed</strong>. Bakstelėkite „Perform CSS
-                    Test“ arba „Update CSS“.</p>
-            </div>
-
-            <div class="step-item">
-                <h3>2 žingsnis: Įveskite laikus</h3>
-                <p>Įveskite 400 m laiką (pvz., <code>6:08</code>) ir 200 m laiką (pvz., <code>2:30</code>). Naudokite
-                    nurodytą formatą. Bakstelėkite „Calculate“.</p>
-            </div>
-
-            <div class="step-item">
-                <h3>3 žingsnis: Peržiūrėkite rezultatus</h3>
-                <p>Programėlė parodys:</p>
-                <ul>
-                    <li><strong>CSS greitį:</strong> 0,917 m/s</li>
-                    <li><strong>CSS tempą:</strong> 1:49/100m</li>
-                    <li><strong>Treniruočių zonas:</strong> 7 asmeniškai pritaikytas zonas (1–7 zonos)</li>
-                    <li><strong>sTSS bazę:</strong> dabar aktyvuota visoms treniruotėms</li>
-                </ul>
-            </div>
-
-            <div class="step-item">
-                <h3>4 žingsnis: Išsaugokite ir sinchronizuokite</h3>
-                <p>Bakstelėkite „Save CSS“. Programėlė nedelsdama:</p>
-                <ul>
-                    <li>Perskaičiuos treniruočių zonas</li>
-                    <li>Atnaujins sTSS už paskutines 90 dienų</li>
-                    <li>Pakoreguos CTL/ATL/TSB skaičiavimus</li>
-                    <li>Aktyvuos zonomis pagrįstą treniruočių analizę</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>💡 Patarimas: istoriniai CSS testai</h3>
-            <p>Jei jau žinote savo CSS iš ankstesnių testų, galite įvesti tuos laikus tiesiogiai. Tačiau tiksliausiems
+                    </div></div></div><div class="timeline-item"><div class="timeline-marker">Atvėsimas</div><div class="timeline-content"><h4>10–15 minučių</h4><p>300–500 m lengvo plaukimo, tempimo pratimai. Užsirašykite savo laikus iš karto – nepasikliaukite
+                        atmintimi.</p></div></div></div><div class="callout callout-warning mt-xl"><h3>⚠️ Dažnos CSS testo klaidos</h3><ul><li><strong>Per greita pradžia 400 m nuotolyje:</strong> greitai pavargstama ir gaunamas netikslus CSS
+                    rezultatas. Išlaikykite tolygų tempą.</li><li><strong>Per trumpas poilsis tarp trialų:</strong> nuovargis sulėtina 200 m laiką, todėl CSS
+                    skaičiuojamas klaidingai greitesnis → per sunkios treniruočių zonos.</li><li><strong>Šuoliai startuojant:</strong> tai suteikia 0,5–1,5 s pranašumą ir iškraipo skaičiavimus.
+                    Visada startuokite atsispirdami nuo sienelės vandenyje.</li><li><strong>Testas jaučiant nuovargį:</strong> sunki treniruotė 24–48 val. prieš testą = prastesni
+                    rezultatai. Testuokitės pailsėję.</li><li><strong>Neužužraikyta laiko iškart:</strong> atmintis gali apgauti. Užsirašykite laikus prieš
+                    atvėsimą.</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>CSS rezultatų įvedimas „Swim Analytics“</h2><div class="screenshot-guide"><div class="step-item"><h3>1 žingsnis: Atidarykite CSS nustatymus</h3><p>Programėlėje eikite į <strong>Settings → Critical Swim Speed</strong>. Bakstelėkite „Perform CSS
+                    Test“ arba „Update CSS“.</p></div><div class="step-item"><h3>2 žingsnis: Įveskite laikus</h3><p>Įveskite 400 m laiką (pvz., <code>6:08</code>) ir 200 m laiką (pvz., <code>2:30</code>). Naudokite
+                    nurodytą formatą. Bakstelėkite „Calculate“.</p></div><div class="step-item"><h3>3 žingsnis: Peržiūrėkite rezultatus</h3><p>Programėlė parodys:</p><ul><li><strong>CSS greitį:</strong> 0,917 m/s</li><li><strong>CSS tempą:</strong> 1:49/100m</li><li><strong>Treniruočių zonas:</strong> 7 asmeniškai pritaikytas zonas (1–7 zonos)</li><li><strong>sTSS bazę:</strong> dabar aktyvuota visoms treniruotėms</li></ul></div><div class="step-item"><h3>4 žingsnis: Išsaugokite ir sinchronizuokite</h3><p>Bakstelėkite „Save CSS“. Programėlė nedelsdama:</p><ul><li>Perskaičiuos treniruočių zonas</li><li>Atnaujins sTSS už paskutines 90 dienų</li><li>Pakoreguos CTL/ATL/TSB skaičiavimus</li><li>Aktyvuos zonomis pagrįstą treniruočių analizę</li></ul></div></div><div class="callout callout-tip mt-xl"><h3>💡 Patarimas: istoriniai CSS testai</h3><p>Jei jau žinote savo CSS iš ankstesnių testų, galite įvesti tuos laikus tiesiogiai. Tačiau tiksliausiems
                 rezultatams pasiekti rekomenduojame atlikti naują testą kas 6–8 savaites. Jūsų CSS turėtų gerėti
-                (greitėti) kartu su jūsų fizine forma.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="mb-xl text-center">Jūsų metrikų supratimas</h2>
-
-        <div class="grid grid-2">
-            <div class="card">
-                <h3 class="card-title">Kritinis plaukimo greitis (CSS)</h3>
-                <div class="card-content">
-                    <p><strong>Kas tai:</strong> jūsų aerobinio slenksčio tempas – didžiausias greitis, kurį galite
-                        išlaikyti apie 30 minučių be visiško išsekimo.</p>
-                    <p><strong>Ką tai reiškia:</strong> CSS = 1:49/100m reiškia, kad galite plaukti 1:49 tempu ilgose
-                        slenksčio atkarpose.</p>
-                    <p><strong>Kaip naudoti:</strong> visų treniruočių zonų ir sTSS skaičiavimo pagrindas. Atnaujinkite
-                        kas 6–8 savaites.</p>
-                    <a href="/lt/css/" class="btn btn-secondary btn-small mt-md">Daugiau apie CSS →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Treniruočių zonos</h3>
-                <div class="card-content">
-                    <p><strong>Kas tai:</strong> 7 intensyvumo diapazonai, pagrįsti jūsų CSS, nuo atsigavimo (1 zona)
-                        iki sprinto (7 zona).</p>
-                    <p><strong>Ką tai reiškia:</strong> kiekviena zona skirta konkrečiam fiziologiniam stiprinimui
-                        (aerobinė bazė, slenkstis, VO₂max).</p>
-                    <p><strong>Kaip naudoti:</strong> laikykitės zonų nurodymų struktūrizuotose treniruotėse. Programėlė
-                        rodo laiką kiekvienoje zonoje.</p>
-                    <a href="/lt/training-zones/" class="btn btn-secondary btn-small mt-md">Apie zonas →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Plaukimo treniruočių streso balas (sTSS)</h3>
-                <div class="card-content">
-                    <p><strong>Kas tai:</strong> įvertintas treniruotės krūvis, jungiantis intensyvumą ir trukmę. 1
-                        valanda CSS tempu = 100 sTSS.</p>
-                    <p><strong>Ką tai reiškia:</strong> sTSS 50 = lengvas atsigavimas, sTSS 100 = vidutinė treniruotė,
-                        sTSS 200+ = labai sunki sesija.</p>
-                    <p><strong>Kaip naudoti:</strong> stebėkite dienos/savaitės sTSS, kad valdytumėte krūvį. Stenkitės
-                        nedidinti savaitės sTSS daugiau nei 5–10 %.</p>
-                    <a href="/lt/training-load/" class="btn btn-secondary btn-small mt-md">sTSS vadovas →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">CTL / ATL / TSB</h3>
-                <div class="card-content">
-                    <p><strong>Kas tai:</strong></p>
-                    <ul>
-                        <li><strong>CTL:</strong> ilgalaikis treniruočių krūvis (fizinis pasirengimas) – 42 dienų sTSS
-                            vidurkis.</li>
-                        <li><strong>ATL:</strong> trumpalaikis treniruočių krūvis (nuovargis) – 7 dienų sTSS vidurkis.
-                        </li>
-                        <li><strong>TSB:</strong> treniruotumo balas (sportinė forma) = CTL - ATL.</li>
-                    </ul>
-                    <p><strong>Kaip naudoti:</strong> teigiamas TSB = esate pailsėjęs ir pasirengęs varžyboms, neigiamas
-                        TSB = jaučiate nuovargį. Geriausios varžybos būna, kai TSB yra nuo +5 iki +25.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout mt-xl">
-            <h3>📊 Pirmosios savaitės tikslai</h3>
-            <p>Įvedus CSS ir atlikus 3–5 treniruotes:</p>
-            <ul>
-                <li><strong>Patikrinkite sTSS reikšmes:</strong> įsitikinkite, kad jos atitinka suvokiamą nuovargį
-                    (lengva ~50, vidutinė ~100, sunki ~150+).</li>
-                <li><strong>Peržiūrėkite zonų paskirstymą:</strong> ar skiriate 60–70 % laiko 2 zonai (aerobinė bazė)?
-                </li>
-                <li><strong>Nustatykite pradinį CTL:</strong> jūsų pirmosios savaitės sTSS vidurkis taps pradiniu tašku.
-                </li>
-                <li><strong>Stebėkite modelius:</strong> kurios treniruotės generuoja didžiausią sTSS? Ar pailsite po jų
-                    pakankamai?</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Tipinė vartotojo patirtis (pirmos 8 savaitės)</h2>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                <h3>1–2 savaitė: pradinis lygis</h3>
-                <ul>
-                    <li>Atlikite CSS testą ir įveskite rezultatus</li>
-                    <li>Atlikite 3–5 įprastas treniruotes</li>
-                    <li>Stebėkite sTSS reikšmes ir zonų paskirstymą</li>
-                    <li>Nustatykite pradinį CTL (fizinio pasirengimo lygį)</li>
-                    <li><strong>Tikslas:</strong> suprasti metrikas, kol kas nieko nekeisti.</li>
-                </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                <h3>3–4 savaitė: zonų taikymas</h3>
-                <ul>
-                    <li>Naudokite CSS zonas planuodami treniruotes</li>
-                    <li>Sąmoningai plaukite 2 zonoje ištvermės atkarpas</li>
-                    <li>Stebėkite savaitės sTSS sumas (siekite nuoseklumo)</li>
-                    <li>Stebėkite TSB (turėtų būti šiek tiek neigiamas – tai treniruočių procesas)</li>
-                    <li><strong>Tikslas:</strong> treniruotis pagal zonas, o ne pagal savijautą.</li>
-                </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                <h3>5–6 savaitė: laipsniškas krūvio didinimas</h3>
-                <ul>
-                    <li>Padidinkite savaitės sTSS 5–10 % lyginant su pradžios sumomis</li>
-                    <li>Pridėkite 1 slenksčio (4 zona) sesiją per savaitę</li>
-                    <li>CTL turėtų pamažu kilti (forma gerėja)</li>
-                    <li>ATL gali pakilti sunkiomis savaitėmis (tai normalu)</li>
-                    <li><strong>Tikslas:</strong> kontroliuojamas sportinės formos gerinimas.</li>
-                </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                <h3>7–8 savaitė: persitestavimas ir koregavimas</h3>
-                <ul>
-                    <li>Atlikite antrą CSS testą (laikas turėtų būti geresnis)</li>
-                    <li>Atnaujinkite zonas programėlėje (greitėja tempas)</li>
-                    <li>Palyginkite 1-os ir 8-os savaitės CTL (turėtų būti +10–20)</li>
-                    <li>Įvertinkite pažangą: ar laikai baseine gerėja? Ar plaukti lengviau?</li>
-                    <li><strong>Tikslas:</strong> patvirtinti treniruočių efektyvumą.</li>
-                </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-success mt-xl">
-            <h3>✅ Sėkmės rodikliai</h3>
-            <p>Po 8 savaičių struktūrizuoto darbo su „Swim Analytics“ turėtumėte pastebėti:</p>
-            <ul>
-                <li><strong>CSS progresas:</strong> 1–3 % greitesnis CSS tempas (pvz., 1:49 → 1:47).</li>
-                <li><strong>CTL augimas:</strong> +15–25 taškai (pvz., nuo 30 iki 50 CTL).</li>
-                <li><strong>Nuoseklus sTSS:</strong> savaitės sumos kinta ne daugiau kaip 10–15 %.</li>
-                <li><strong>Geresnis tempo pojūtis:</strong> tolygesnės atkarpos, geresnis jėgų paskirstymas.</li>
-                <li><strong>Efektyvus atsigavimas:</strong> TSB svyruoja nuspėjamai (nuo -10 iki +5).</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Problemų sprendimas ir DUK</h2>
-
-        <div class="faq-item">
-            <h3>Mano sTSS atrodo per didelis/mažas lyginant su pastangomis</h3>
-            <p><strong>Priežastis:</strong> jūsų nustatytas CSS yra pasenęs arba netikslus.</p>
-            <p><strong>Sprendimas:</strong> persitestuokite CSS. Jei testavotės būdami pavargę arba blogai paskirstėte
-                jėgas, rezultatas bus klaidingas. Tikslus CSS testas yra būtinas visoms kitoms metrikomis.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Programėlė rodo „No CSS configured“</h3>
-            <p><strong>Priežastis:</strong> CSS testas neatliktas arba rezultatai neišsaugoti.</p>
-            <p><strong>Sprendimas:</strong> eikite į Settings → Critical Swim Speed → Perform Test. Įveskite 400 m ir
-                200 m laikus, tada bakstelėkite „Save“.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Treniruotės nesinchronizuojamos iš „Apple Watch“</h3>
-            <p><strong>Priežastis:</strong> nesuteikti „Health“ programėlės leidimai arba treniruotė nėra priskirta
-                plaukimui.</p>
-            <p><strong>Sprendimas:</strong> patikrinkite Settings → Privacy → Health → Swim Analytics → Allow Read for
-                Workouts. Įsitikinkite, kad „Apple Watch“ treniruotės tipas yra „Pool Swim“ arba „Open Water Swim“.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>CTL neauga nepaisant nuoseklių treniruočių</h3>
-            <p><strong>Priežastis:</strong> savaitės sTSS sumos yra per mažos arba treniruotės per retos.</p>
-            <p><strong>Sprendimas:</strong> CTL yra 42 dienų eksponentinis vidurkis. Jis auga lėtai. Padidinkite
+                (greitėti) kartu su jūsų fizine forma.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">Jūsų metrikų supratimas</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">Kritinis plaukimo greitis (CSS)</h3><div class="card-content"><p><strong>Kas tai:</strong> jūsų aerobinio slenksčio tempas – didžiausias greitis, kurį galite
+                        išlaikyti apie 30 minučių be visiško išsekimo.</p><p><strong>Ką tai reiškia:</strong> CSS = 1:49/100m reiškia, kad galite plaukti 1:49 tempu ilgose
+                        slenksčio atkarpose.</p><p><strong>Kaip naudoti:</strong> visų treniruočių zonų ir sTSS skaičiavimo pagrindas. Atnaujinkite
+                        kas 6–8 savaites.</p><a href="/lt/css/" class="btn btn-secondary btn-small mt-md">Daugiau apie CSS →</a></div></div><div class="card"><h3 class="card-title">Treniruočių zonos</h3><div class="card-content"><p><strong>Kas tai:</strong> 7 intensyvumo diapazonai, pagrįsti jūsų CSS, nuo atsigavimo (1 zona)
+                        iki sprinto (7 zona).</p><p><strong>Ką tai reiškia:</strong> kiekviena zona skirta konkrečiam fiziologiniam stiprinimui
+                        (aerobinė bazė, slenkstis, VO₂max).</p><p><strong>Kaip naudoti:</strong> laikykitės zonų nurodymų struktūrizuotose treniruotėse. Programėlė
+                        rodo laiką kiekvienoje zonoje.</p><a href="/lt/training-zones/" class="btn btn-secondary btn-small mt-md">Apie zonas →</a></div></div><div class="card"><h3 class="card-title">Plaukimo treniruočių streso balas (sTSS)</h3><div class="card-content"><p><strong>Kas tai:</strong> įvertintas treniruotės krūvis, jungiantis intensyvumą ir trukmę. 1
+                        valanda CSS tempu = 100 sTSS.</p><p><strong>Ką tai reiškia:</strong> sTSS 50 = lengvas atsigavimas, sTSS 100 = vidutinė treniruotė,
+                        sTSS 200+ = labai sunki sesija.</p><p><strong>Kaip naudoti:</strong> stebėkite dienos/savaitės sTSS, kad valdytumėte krūvį. Stenkitės
+                        nedidinti savaitės sTSS daugiau nei 5–10 %.</p><a href="/lt/training-load/" class="btn btn-secondary btn-small mt-md">sTSS vadovas →</a></div></div><div class="card"><h3 class="card-title">CTL / ATL / TSB</h3><div class="card-content"><p><strong>Kas tai:</strong></p><ul><li><strong>CTL:</strong> ilgalaikis treniruočių krūvis (fizinis pasirengimas) – 42 dienų sTSS
+                            vidurkis.</li><li><strong>ATL:</strong> trumpalaikis treniruočių krūvis (nuovargis) – 7 dienų sTSS vidurkis.
+                        </li><li><strong>TSB:</strong> treniruotumo balas (sportinė forma) = CTL - ATL.</li></ul><p><strong>Kaip naudoti:</strong> teigiamas TSB = esate pailsėjęs ir pasirengęs varžyboms, neigiamas
+                        TSB = jaučiate nuovargį. Geriausios varžybos būna, kai TSB yra nuo +5 iki +25.</p></div></div></div><div class="callout mt-xl"><h3>📊 Pirmosios savaitės tikslai</h3><p>Įvedus CSS ir atlikus 3–5 treniruotes:</p><ul><li><strong>Patikrinkite sTSS reikšmes:</strong> įsitikinkite, kad jos atitinka suvokiamą nuovargį
+                    (lengva ~50, vidutinė ~100, sunki ~150+).</li><li><strong>Peržiūrėkite zonų paskirstymą:</strong> ar skiriate 60–70 % laiko 2 zonai (aerobinė bazė)?
+                </li><li><strong>Nustatykite pradinį CTL:</strong> jūsų pirmosios savaitės sTSS vidurkis taps pradiniu tašku.
+                </li><li><strong>Stebėkite modelius:</strong> kurios treniruotės generuoja didžiausią sTSS? Ar pailsite po jų
+                    pakankamai?</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Tipinė vartotojo patirtis (pirmos 8 savaitės)</h2><div class="timeline"><div class="timeline-item"><div class="timeline-content"><h3>1–2 savaitė: pradinis lygis</h3><ul><li>Atlikite CSS testą ir įveskite rezultatus</li><li>Atlikite 3–5 įprastas treniruotes</li><li>Stebėkite sTSS reikšmes ir zonų paskirstymą</li><li>Nustatykite pradinį CTL (fizinio pasirengimo lygį)</li><li><strong>Tikslas:</strong> suprasti metrikas, kol kas nieko nekeisti.</li></ul></div></div><div class="timeline-item"><div class="timeline-content"><h3>3–4 savaitė: zonų taikymas</h3><ul><li>Naudokite CSS zonas planuodami treniruotes</li><li>Sąmoningai plaukite 2 zonoje ištvermės atkarpas</li><li>Stebėkite savaitės sTSS sumas (siekite nuoseklumo)</li><li>Stebėkite TSB (turėtų būti šiek tiek neigiamas – tai treniruočių procesas)</li><li><strong>Tikslas:</strong> treniruotis pagal zonas, o ne pagal savijautą.</li></ul></div></div><div class="timeline-item"><div class="timeline-content"><h3>5–6 savaitė: laipsniškas krūvio didinimas</h3><ul><li>Padidinkite savaitės sTSS 5–10 % lyginant su pradžios sumomis</li><li>Pridėkite 1 slenksčio (4 zona) sesiją per savaitę</li><li>CTL turėtų pamažu kilti (forma gerėja)</li><li>ATL gali pakilti sunkiomis savaitėmis (tai normalu)</li><li><strong>Tikslas:</strong> kontroliuojamas sportinės formos gerinimas.</li></ul></div></div><div class="timeline-item"><div class="timeline-content"><h3>7–8 savaitė: persitestavimas ir koregavimas</h3><ul><li>Atlikite antrą CSS testą (laikas turėtų būti geresnis)</li><li>Atnaujinkite zonas programėlėje (greitėja tempas)</li><li>Palyginkite 1-os ir 8-os savaitės CTL (turėtų būti +10–20)</li><li>Įvertinkite pažangą: ar laikai baseine gerėja? Ar plaukti lengviau?</li><li><strong>Tikslas:</strong> patvirtinti treniruočių efektyvumą.</li></ul></div></div></div><div class="callout callout-success mt-xl"><h3>✅ Sėkmės rodikliai</h3><p>Po 8 savaičių struktūrizuoto darbo su „Swim Analytics“ turėtumėte pastebėti:</p><ul><li><strong>CSS progresas:</strong> 1–3 % greitesnis CSS tempas (pvz., 1:49 → 1:47).</li><li><strong>CTL augimas:</strong> +15–25 taškai (pvz., nuo 30 iki 50 CTL).</li><li><strong>Nuoseklus sTSS:</strong> savaitės sumos kinta ne daugiau kaip 10–15 %.</li><li><strong>Geresnis tempo pojūtis:</strong> tolygesnės atkarpos, geresnis jėgų paskirstymas.</li><li><strong>Efektyvus atsigavimas:</strong> TSB svyruoja nuspėjamai (nuo -10 iki +5).</li></ul></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Problemų sprendimas ir DUK</h2><div class="faq-item"><h3>Mano sTSS atrodo per didelis/mažas lyginant su pastangomis</h3><p><strong>Priežastis:</strong> jūsų nustatytas CSS yra pasenęs arba netikslus.</p><p><strong>Sprendimas:</strong> persitestuokite CSS. Jei testavotės būdami pavargę arba blogai paskirstėte
+                jėgas, rezultatas bus klaidingas. Tikslus CSS testas yra būtinas visoms kitoms metrikomis.</p></div><div class="faq-item"><h3>Programėlė rodo „No CSS configured“</h3><p><strong>Priežastis:</strong> CSS testas neatliktas arba rezultatai neišsaugoti.</p><p><strong>Sprendimas:</strong> eikite į Settings → Critical Swim Speed → Perform Test. Įveskite 400 m ir
+                200 m laikus, tada bakstelėkite „Save“.</p></div><div class="faq-item"><h3>Treniruotės nesinchronizuojamos iš „Apple Watch“</h3><p><strong>Priežastis:</strong> nesuteikti „Health“ programėlės leidimai arba treniruotė nėra priskirta
+                plaukimui.</p><p><strong>Sprendimas:</strong> patikrinkite Settings → Privacy → Health → Swim Analytics → Allow Read for
+                Workouts. Įsitikinkite, kad „Apple Watch“ treniruotės tipas yra „Pool Swim“ arba „Open Water Swim“.</p></div><div class="faq-item"><h3>CTL neauga nepaisant nuoseklių treniruočių</h3><p><strong>Priežastis:</strong> savaitės sTSS sumos yra per mažos arba treniruotės per retos.</p><p><strong>Sprendimas:</strong> CTL yra 42 dienų eksponentinis vidurkis. Jis auga lėtai. Padidinkite
                 savaitės sTSS sumą 5–10 % ir stebėkite, ar treniruojatės bent 4 kartus per savaitę nuosekliam CTL
-                augimui.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Kaip dažnai turėčiau persitestuoti CSS?</h3>
-            <p><strong>Rekomendacija:</strong> kas 6–8 savaites bazinės/stiprinimo fazės metu, kas 4–6 savaites piko
+                augimui.</p></div><div class="faq-item"><h3>Kaip dažnai turėčiau persitestuoti CSS?</h3><p><strong>Rekomendacija:</strong> kas 6–8 savaites bazinės/stiprinimo fazės metu, kas 4–6 savaites piko
                 metu. Persitestuokite po ligos, traumos, ilgesnės pertraukos arba kai zonos atrodo consistently per
                 lengvos ar per sunkios. Venkite testuotis labai sunkiomis savaitėmis arba likus mažiau nei 10 dienų iki
-                varžybų.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Ar galiu naudoti „Swim Analytics“ plaukdamas kitais būdais?</h3>
-            <p><strong>Taip, bet su išlygomis:</strong> CSS paprastai testuojamas plaukiant laisvuoju stiliumi.
+                varžybų.</p></div><div class="faq-item"><h3>Ar galiu naudoti „Swim Analytics“ plaukdamas kitais būdais?</h3><p><strong>Taip, bet su išlygomis:</strong> CSS paprastai testuojamas plaukiant laisvuoju stiliumi.
                 Plaukiant kompleksiniu būdu ar kitais stiliais, sTSS bus skaičiuojamas pagal laisvojo stiliaus CSS.
-                Tikslesniems rezultatams galite atlikti specifinio stiliaus CSS testą.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Kiti žingsniai</h2>
-
-        <div class="grid grid-3">
-            <div class="card">
-                <h3 class="card-title">Apie treniruočių zonas</h3>
-                <div class="card-content">
-                    <p>Sužinokite, kaip treniruotis 2 zonoje (aerobinė bazė), 4 zonoje (slenkstis) ir 5 zonoje (VO₂max),
-                        siekiant specifinių rezultatų.</p>
-                    <a href="/lt/training-zones/" class="btn btn-secondary btn-small mt-md">Treniruočių zonos
-                        →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Skaičiuokite sTSS</h3>
-                <div class="card-content">
-                    <p>Naudokite mūsų nemokamą sTSS skaičiuoklę, kad suprastumėte planuojamos treniruotės krūvį dar
-                        prieš eidami į baseiną.</p>
-                    <a href="/lt/stss-calculator/" class="btn btn-secondary btn-small mt-md">sTSS skaičiuoklė
-                        →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Gilinkitės į mokslą</h3>
-                <div class="card-content">
-                    <p>Tyrinėkite CSS, sTSS, CTL/ATL/TSB mokslinį pagrindą kartu su nuorodomis į recenzuojamus tyrimus.
-                    </p>
-                    <a href="/lt/research/" class="btn btn-secondary btn-small mt-md">Tyrimai →</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Pasiruošę stebėti rezultatus?</strong></p>
-            <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank"
-                rel="noopener">Atsisiųsti „Swim Analytics“ nemokamai</a>
-            <p class="mt-sm text-secondary">7 dienų nemokamas bandymas • Nereikalauja kredito kortelės • iOS 16+</p>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                Tikslesniems rezultatams galite atlikti specifinio stiliaus CSS testą.</p></div></div></section><section class="section"><div class="container container-narrow"><h2>Kiti žingsniai</h2><div class="grid grid-3"><div class="card"><h3 class="card-title">Apie treniruočių zonas</h3><div class="card-content"><p>Sužinokite, kaip treniruotis 2 zonoje (aerobinė bazė), 4 zonoje (slenkstis) ir 5 zonoje (VO₂max),
+                        siekiant specifinių rezultatų.</p><a href="/lt/training-zones/" class="btn btn-secondary btn-small mt-md">Treniruočių zonos
+                        →</a></div></div><div class="card"><h3 class="card-title">Skaičiuokite sTSS</h3><div class="card-content"><p>Naudokite mūsų nemokamą sTSS skaičiuoklę, kad suprastumėte planuojamos treniruotės krūvį dar
+                        prieš eidami į baseiną.</p><a href="/lt/stss-calculator/" class="btn btn-secondary btn-small mt-md">sTSS skaičiuoklė
+                        →</a></div></div><div class="card"><h3 class="card-title">Gilinkitės į mokslą</h3><div class="card-content"><p>Tyrinėkite CSS, sTSS, CTL/ATL/TSB mokslinį pagrindą kartu su nuorodomis į recenzuojamus tyrimus.
+                    </p><a href="/lt/research/" class="btn btn-secondary btn-small mt-md">Tyrimai →</a></div></div></div><div class="mt-xl text-center"><p class="mb-md"><strong>Pasiruošę stebėti rezultatus?</strong></p><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank"
+                rel="noopener">Atsisiųsti „Swim Analytics“ nemokamai</a><p class="mt-sm text-secondary">7 dienų nemokamas bandymas • Nereikalauja kredito kortelės • iOS 16+</p></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link active"
+                </a><a href="/lt/" class="lang-link active"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. Visos teisės saugomos
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/lt/privacy/">Privatumas</a></li>
-                <li><a href="/lt/terms/">Sąlygos</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>Ši svetainė naudoja slapukus, kad pagerintų jūsų naršymo patirtį.</p>
-            <a href="/lt/privacy/" class="text-sm">Sužinoti daugiau</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Nepritariu</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Sutinku</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/lt/privacy/">Privatumas</a></li><li><a href="/lt/terms/">Sąlygos</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Ši svetainė naudoja slapukus, kad pagerintų jūsų naršymo patirtį.</p><a href="/lt/privacy/" class="text-sm">Sužinoti daugiau</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Nepritariu</button><button id="cookie-accept" class="btn btn-primary btn-small">Sutinku</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

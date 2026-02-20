@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="vi" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Máy Tính TSS Bơi lội: Tải Luyện tập và PMC (CTL/ATL/TSB)</title>
-  <meta name="description" content="Học cách tính Training Stress Score bơi lội (sTSS) và các chỉ số Performance Management Chart (CTL, ATL, TSB). Theo dõi thể lực và mệt mỏi một cách khoa học. Bao gồm ví">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="TSS bơi lội, máy tính sTSS, training stress score, CTL ATL TSB, PMC bơi lội">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/vi/training-load/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-13T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/vi/training-load/">
-  <meta property="og:title" content="Máy Tính TSS Bơi lội: Tải Luyện tập và PMC (CTL/ATL/TSB)">
-  <meta property="og:description" content="Học cách tính Training Stress Score bơi lội (sTSS) và các chỉ số Performance Management Chart (CTL, ATL, TSB). Theo dõi thể lực và mệt mỏi một cách khoa học. Bao gồm ví">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="vi_VN">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/vi/training-load/">
-  <meta name="twitter:title" content="Máy Tính TSS Bơi lội: Tải Luyện tập và PMC (CTL/ATL/TSB)">
-  <meta name="twitter:description" content="Học cách tính Training Stress Score bơi lội (sTSS) và các chỉ số Performance Management Chart (CTL, ATL, TSB). Theo dõi thể lực và mệt mỏi một cách khoa học. Bao gồm ví">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/training-load/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/training-load/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/training-load/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/training-load/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/training-load/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/training-load/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/training-load/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/training-load/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/training-load/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/training-load/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/training-load/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/training-load/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/training-load/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/training-load/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/training-load/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/training-load/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/training-load/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/training-load/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/training-load/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/training-load/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/training-load/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/training-load/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/training-load/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/training-load/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/training-load/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/training-load/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/training-load/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/training-load/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/training-load/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/training-load/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/training-load/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/training-load/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/training-load/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/training-load/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/training-load/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/training-load/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/training-load/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/training-load/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/training-load/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/training-load/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/training-load/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/training-load/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/training-load/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/training-load/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/training-load/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/training-load/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/training-load/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/training-load/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/training-load/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/training-load/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/training-load/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/training-load/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/training-load/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/training-load/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/training-load/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/training-load/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="vi" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Máy Tính TSS Bơi lội: Tải Luyện tập và PMC (CTL/ATL/TSB)</title><meta name="description" content="Học cách tính Training Stress Score bơi lội (sTSS) và các chỉ số Performance Management Chart (CTL, ATL, TSB). Theo dõi thể lực và mệt mỏi một cách khoa học. Bao gồm ví"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="TSS bơi lội, máy tính sTSS, training stress score, CTL ATL TSB, PMC bơi lội"><link rel="canonical" href="https://swim.analyticszone.app/vi/training-load/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-13T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/vi/training-load/"><meta property="og:title" content="Máy Tính TSS Bơi lội: Tải Luyện tập và PMC (CTL/ATL/TSB)"><meta property="og:description" content="Học cách tính Training Stress Score bơi lội (sTSS) và các chỉ số Performance Management Chart (CTL, ATL, TSB). Theo dõi thể lực và mệt mỏi một cách khoa học. Bao gồm ví"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="vi_VN"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/vi/training-load/"><meta name="twitter:title" content="Máy Tính TSS Bơi lội: Tải Luyện tập và PMC (CTL/ATL/TSB)"><meta name="twitter:description" content="Học cách tính Training Stress Score bơi lội (sTSS) và các chỉ số Performance Management Chart (CTL, ATL, TSB). Theo dõi thể lực và mệt mỏi một cách khoa học. Bao gồm ví"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/training-load/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/training-load/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/training-load/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/training-load/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/training-load/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/training-load/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/training-load/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/training-load/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/training-load/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/training-load/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/training-load/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/training-load/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/training-load/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/training-load/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/training-load/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/training-load/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/training-load/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/training-load/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/training-load/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/training-load/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/training-load/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/training-load/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/training-load/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/training-load/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/training-load/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/training-load/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/training-load/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/training-load/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/training-load/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/training-load/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/training-load/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/training-load/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/training-load/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/training-load/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/training-load/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/training-load/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/training-load/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/training-load/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/training-load/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/training-load/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/training-load/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/training-load/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/training-load/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/training-load/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/training-load/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/training-load/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/training-load/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/training-load/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/training-load/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/training-load/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/training-load/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/training-load/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/training-load/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/training-load/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/training-load/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/training-load/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "vi"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "Học cách tính Training Stress Score bơi lội (sTSS) và các chỉ số Performance Management Chart (CTL, ATL, TSB). Theo dõi thể lực và mệt mỏi một cách khoa học. Bao gồm ví",
   "url": "https://swim.analyticszone.app/vi/training-load/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/vi/training-load/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1413 +449,390 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">Đến nội dung</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/vi/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/vi/" 
+  </script></head><body><a href="#main-content" class="skip-link">Đến nội dung</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/vi/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/vi/" 
                                 aria-current="">
                                 Trang Chủ
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/vi/getting-started/" class="nav-label">Học Tập</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/vi/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/vi/getting-started/" class="nav-label">Học Tập</a><ul class="submenu"><li><a href="/vi/getting-started/" 
                                         aria-current="">
                                         Bắt Đầu
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/css/" 
+                                    </a></li><li><a href="/vi/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/training-zones/" 
+                                    </a></li><li><a href="/vi/training-zones/" 
                                         aria-current="">
                                         Vùng Tập Luyện
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/training-load/" class="active" 
+                                    </a></li><li><a href="/vi/training-load/" class="active" 
                                         aria-current="page">
                                         Tải Tập Luyện
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/stss-calculator/" 
+                                    </a></li><li><a href="/vi/stss-calculator/" 
                                         aria-current="">
                                         Máy Tính sTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/vi/research/" class="nav-label">Khoa Học</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/vi/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/vi/research/" class="nav-label">Khoa Học</a><ul class="submenu"><li><a href="/vi/research/" 
                                         aria-current="">
                                         Nghiên Cứu
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/formulas/" 
+                                    </a></li><li><a href="/vi/formulas/" 
                                         aria-current="">
                                         Công Thức
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/efficiency/" 
+                                    </a></li><li><a href="/vi/efficiency/" 
                                         aria-current="">
                                         Hiệu Quả
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/stroke-mechanics/" 
+                                    </a></li><li><a href="/vi/stroke-mechanics/" 
                                         aria-current="">
                                         Cơ Học Động Tác
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/bibliography/" 
+                                    </a></li><li><a href="/vi/bibliography/" 
                                         aria-current="">
                                         Thư Mục
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/vi/contact/" 
+                                    </a></li></ul></li><li><a href="/vi/contact/" 
                                 aria-current="">
                                 Liên Hệ
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Chọn ngôn ngữ">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Chọn ngôn ngữ"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" selected>
+                        </option><option value="vi" selected>
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Chuyển menu"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/vi/">Trang Chủ</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/vi/getting-started/">Học Tập</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">Tải Tập Luyện</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>Tải Lượng Tập Luyện & Quản Lý Hiệu Suất</h1>
-        <p class="lead">Định Lượng Sự Căng Thẳng, Theo Dõi Thể Lực, Tối Ưu Hóa Hiệu Suất</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Hiểu Về Tải Lượng Tập Luyện</h2>
-        <p class="lead">Định lượng tải lượng tập luyện trả lời câu hỏi quan trọng: <strong>Bài tập đó nặng đến mức
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Chuyển menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/vi/">Trang Chủ</a></li><li><a href="/vi/getting-started/">Học Tập</a></li><li><span aria-current="page">Tải Tập Luyện</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Tải Lượng Tập Luyện & Quản Lý Hiệu Suất</h1><p class="lead">Định Lượng Sự Căng Thẳng, Theo Dõi Thể Lực, Tối Ưu Hóa Hiệu Suất</p></div></section><section class="section"><div class="container container-narrow"><h2>Hiểu Về Tải Lượng Tập Luyện</h2><p class="lead">Định lượng tải lượng tập luyện trả lời câu hỏi quan trọng: <strong>Bài tập đó nặng đến mức
                 nào?</strong> Không chỉ là khoảng cách hay thời gian, mà là sự căng thẳng sinh lý thực sự áp đặt lên cơ
-            thể bạn.</p>
-
-        <p>Hệ thống Điểm Căng Thẳng Tập Luyện (TSS), được phát triển bởi Tiến sĩ Andrew Coggan, cung cấp một phương pháp
+            thể bạn.</p><p>Hệ thống Điểm Căng Thẳng Tập Luyện (TSS), được phát triển bởi Tiến sĩ Andrew Coggan, cung cấp một phương pháp
             tiêu chuẩn hóa để định lượng cường độ và thời lượng bài tập thành một con số duy nhất. Đối với bơi lội,
             chúng tôi sử dụng <strong>Điểm Căng Thẳng Tập Luyện Bơi Lội (sTSS)</strong> với một sửa đổi quan trọng tính
-            đến các đặc tính kháng lực độc đáo của nước.</p>
-
-        <div class="callout callout-info">
-            <h3>Tiêu Chuẩn TSS</h3>
-            <p>Một giờ ở pace ngưỡng chức năng (CSS) của bạn = <strong>100 TSS</strong></p>
-            <p>Sự tiêu chuẩn hóa này cho phép so sánh giữa các bài tập, các tuần và các chu kỳ tập luyện. Một bài tập
-                bơi ngưỡng 30 phút = ~50 TSS. Một bài tập bơi ngưỡng 2 giờ = ~200 TSS.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">Điểm Căng Thẳng Tập Luyện Bơi Lội (sTSS)</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>Công Thức</h3>
-                <div class="formula-box">
-                    <div class="formula">
+            đến các đặc tính kháng lực độc đáo của nước.</p><div class="callout callout-info"><h3>Tiêu Chuẩn TSS</h3><p>Một giờ ở pace ngưỡng chức năng (CSS) của bạn = <strong>100 TSS</strong></p><p>Sự tiêu chuẩn hóa này cho phép so sánh giữa các bài tập, các tuần và các chu kỳ tập luyện. Một bài tập
+                bơi ngưỡng 30 phút = ~50 TSS. Một bài tập bơi ngưỡng 2 giờ = ~200 TSS.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Điểm Căng Thẳng Tập Luyện Bơi Lội (sTSS)</h2><div class="grid grid-2"><div><h3>Công Thức</h3><div class="formula-box"><div class="formula">
                         sTSS = (IF³) × Thời lượng (giờ) × 100
-                    </div>
-                    <div class="formula-explanation">
-                        <p>Trong đó Hệ Số Cường Độ (IF) là:</p>
-                        <div class="formula">
+                    </div><div class="formula-explanation"><p>Trong đó Hệ Số Cường Độ (IF) là:</p><div class="formula">
                             IF = NSS / FTP
-                        </div>
-                        <p>Và Tốc Độ Bơi Chuẩn Hóa (NSS) là:</p>
-                        <div class="formula">
+                        </div><p>Và Tốc Độ Bơi Chuẩn Hóa (NSS) là:</p><div class="formula">
                             NSS = Tổng Khoảng Cách / Tổng Thời Gian (m/phút)
-                        </div>
-                    </div>
-                </div>
-
-                <div class="callout callout-warning mt-md">
-                    <h4>⚡ Hệ Số Lập Phương (IF³)</h4>
-                    <p><strong>Cải Tiến Chính:</strong> Bơi lội sử dụng IF³ trong khi đạp xe/chạy bộ sử dụng IF². Điều
-                        này phản ánh tính chất vật lý của nước—lực kháng tăng theo <em>hàm mũ</em> với tốc độ.</p>
-                    <p>Bơi nhanh hơn 10% trong nước đòi hỏi thêm ~33% năng lượng. Hệ số lập phương phản ánh chính xác
-                        chi phí sinh lý gia tăng này.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>Ví Dụ Cụ Thể</h3>
-                <div class="example-box">
-                    <h4>Hồ Sơ Người Bơi:</h4>
-                    <ul>
-                        <li>CSS: 1:33/100m = 93 giây/100m</li>
-                        <li>FTP: 64.5 m/phút (100m / 1.55phút)</li>
-                    </ul>
-
-                    <h4>Dữ Liệu Bài Tập:</h4>
-                    <ul>
-                        <li>Tổng Khoảng Cách: 3000m</li>
-                        <li>Thời Gian Di Chuyển: 55:00 (3300 giây)</li>
-                        <li>Thời Gian Nghỉ: 10:00 (không tính)</li>
-                    </ul>
-
-                    <h4>Bước 1: Tính NSS</h4>
-                    <div class="calculation">
+                        </div></div></div><div class="callout callout-warning mt-md"><h4>⚡ Hệ Số Lập Phương (IF³)</h4><p><strong>Cải Tiến Chính:</strong> Bơi lội sử dụng IF³ trong khi đạp xe/chạy bộ sử dụng IF². Điều
+                        này phản ánh tính chất vật lý của nước—lực kháng tăng theo <em>hàm mũ</em> với tốc độ.</p><p>Bơi nhanh hơn 10% trong nước đòi hỏi thêm ~33% năng lượng. Hệ số lập phương phản ánh chính xác
+                        chi phí sinh lý gia tăng này.</p></div></div><div><h3>Ví Dụ Cụ Thể</h3><div class="example-box"><h4>Hồ Sơ Người Bơi:</h4><ul><li>CSS: 1:33/100m = 93 giây/100m</li><li>FTP: 64.5 m/phút (100m / 1.55phút)</li></ul><h4>Dữ Liệu Bài Tập:</h4><ul><li>Tổng Khoảng Cách: 3000m</li><li>Thời Gian Di Chuyển: 55:00 (3300 giây)</li><li>Thời Gian Nghỉ: 10:00 (không tính)</li></ul><h4>Bước 1: Tính NSS</h4><div class="calculation">
                         NSS = 3000m / 55phút<br>
-                        NSS = <strong>54.5 m/phút</strong>
-                    </div>
-
-                    <h4>Bước 2: Tính IF</h4>
-                    <div class="calculation">
+                        NSS = <strong>54.5 m/phút</strong></div><h4>Bước 2: Tính IF</h4><div class="calculation">
                         IF = 54.5 / 64.5<br>
-                        IF = <strong>0.845</strong>
-                    </div>
-
-                    <h4>Bước 3: Tính sTSS</h4>
-                    <div class="calculation">
+                        IF = <strong>0.845</strong></div><h4>Bước 3: Tính sTSS</h4><div class="calculation">
                         sTSS = (0.845³) × (55/60) × 100<br>
                         sTSS = 0.603 × 0.917 × 100<br>
-                        sTSS = <strong>55.3</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="intensity-guide mt-xl">
-            <h3>Hướng Dẫn Cường Độ sTSS</h3>
-            <table class="intensity-table">
-                <thead>
-                    <tr>
-                        <th>Phạm Vi sTSS</th>
-                        <th>Mức Độ Cường Độ</th>
-                        <th>Mô Tả</th>
-                        <th>Ví Dụ Bài Tập</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt; 50</td>
-                        <td>Phục Hồi Dễ Dàng</td>
-                        <td>Bơi nhẹ, tập trung kỹ thuật, nghỉ ngơi tích cực</td>
-                        <td>30-45 phút bơi phục hồi, các set kỹ thuật</td>
-                    </tr>
-                    <tr>
-                        <td>50-100</td>
-                        <td>Tập Luyện Trung Bình</td>
-                        <td>Khối lượng tập luyện hàng ngày điển hình</td>
-                        <td>60-90 phút sức bền hiếu khí, các vùng hỗn hợp</td>
-                    </tr>
-                    <tr>
-                        <td>100-200</td>
-                        <td>Tập Luyện Nặng</td>
-                        <td>Các phiên chất lượng với công việc ngưỡng/VO₂</td>
-                        <td>90-120 phút với các khoảng CSS, các set pace thi đấu</td>
-                    </tr>
-                    <tr>
-                        <td>200-300</td>
-                        <td>Rất Nặng</td>
-                        <td>Mô phỏng thi đấu, các khối cường độ rất cao</td>
-                        <td>Phiên 2-3 giờ, thử nghiệm thời gian, các set nỗ lực tối đa</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; 300</td>
-                        <td>Cực Đoan</td>
-                        <td>Ngày thi đấu, các sự kiện siêu đường dài</td>
-                        <td>Thi đấu, bơi Ironman, bơi marathon</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-lg">
-            <h3>📊 Mục Tiêu TSS Hàng Tuần Theo Trình Độ</h3>
-            <ul>
-                <li><strong>Người Mới Bắt Đầu:</strong> 200-400 TSS/tuần</li>
-                <li><strong>Trung Cấp:</strong> 400-700 TSS/tuần</li>
-                <li><strong>Nâng Cao/Ưu Tú:</strong> 700-1000+ TSS/tuần</li>
-            </ul>
-            <p>Những con số này tích lũy vào Tải Lượng Tập Luyện Mãn Tính (CTL) của bạn.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2 class="text-center mb-xl">Biểu Đồ Quản Lý Hiệu Suất (PMC)</h2>
-        <p class="text-center lead">PMC trực quan hóa ba chỉ số liên kết với nhau, kể câu chuyện hoàn chỉnh về quá trình
-            tập luyện của bạn: thể lực, mệt mỏi và phong độ.</p>
-
-        <div class="pmc-overview">
-            <div class="grid grid-3">
-                <div class="pmc-metric">
-                    <div class="metric-icon">📈</div>
-                    <h3>CTL - Tải Lượng Tập Luyện Mãn Tính</h3>
-                    <div class="metric-value-label">THỂ LỰC Của Bạn</div>
-                    <p>Trung bình trọng số mũ 42 ngày của TSS hàng ngày. Đại diện cho thể lực hiếu khí dài hạn và sự
-                        thích ứng tập luyện.</p>
-                    <div class="formula-small">
+                        sTSS = <strong>55.3</strong></div></div></div></div><div class="intensity-guide mt-xl"><h3>Hướng Dẫn Cường Độ sTSS</h3><table class="intensity-table"><thead><tr><th>Phạm Vi sTSS</th><th>Mức Độ Cường Độ</th><th>Mô Tả</th><th>Ví Dụ Bài Tập</th></tr></thead><tbody><tr><td>&lt; 50</td><td>Phục Hồi Dễ Dàng</td><td>Bơi nhẹ, tập trung kỹ thuật, nghỉ ngơi tích cực</td><td>30-45 phút bơi phục hồi, các set kỹ thuật</td></tr><tr><td>50-100</td><td>Tập Luyện Trung Bình</td><td>Khối lượng tập luyện hàng ngày điển hình</td><td>60-90 phút sức bền hiếu khí, các vùng hỗn hợp</td></tr><tr><td>100-200</td><td>Tập Luyện Nặng</td><td>Các phiên chất lượng với công việc ngưỡng/VO₂</td><td>90-120 phút với các khoảng CSS, các set pace thi đấu</td></tr><tr><td>200-300</td><td>Rất Nặng</td><td>Mô phỏng thi đấu, các khối cường độ rất cao</td><td>Phiên 2-3 giờ, thử nghiệm thời gian, các set nỗ lực tối đa</td></tr><tr><td>&gt; 300</td><td>Cực Đoan</td><td>Ngày thi đấu, các sự kiện siêu đường dài</td><td>Thi đấu, bơi Ironman, bơi marathon</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>📊 Mục Tiêu TSS Hàng Tuần Theo Trình Độ</h3><ul><li><strong>Người Mới Bắt Đầu:</strong> 200-400 TSS/tuần</li><li><strong>Trung Cấp:</strong> 400-700 TSS/tuần</li><li><strong>Nâng Cao/Ưu Tú:</strong> 700-1000+ TSS/tuần</li></ul><p>Những con số này tích lũy vào Tải Lượng Tập Luyện Mãn Tính (CTL) của bạn.</p></div></div></section><section class="section"><div class="container"><h2 class="text-center mb-xl">Biểu Đồ Quản Lý Hiệu Suất (PMC)</h2><p class="text-center lead">PMC trực quan hóa ba chỉ số liên kết với nhau, kể câu chuyện hoàn chỉnh về quá trình
+            tập luyện của bạn: thể lực, mệt mỏi và phong độ.</p><div class="pmc-overview"><div class="grid grid-3"><div class="pmc-metric"><div class="metric-icon">📈</div><h3>CTL - Tải Lượng Tập Luyện Mãn Tính</h3><div class="metric-value-label">THỂ LỰC Của Bạn</div><p>Trung bình trọng số mũ 42 ngày của TSS hàng ngày. Đại diện cho thể lực hiếu khí dài hạn và sự
+                        thích ứng tập luyện.</p><div class="formula-small">
                         CTL hôm nay = CTL hôm qua + (TSS hôm nay - CTL hôm qua) × (1/42)
-                    </div>
-                </div>
-
-                <div class="pmc-metric">
-                    <div class="metric-icon">⚡</div>
-                    <h3>ATL - Tải Lượng Tập Luyện Cấp Tính</h3>
-                    <div class="metric-value-label">MỆT MỎI Của Bạn</div>
-                    <p>Trung bình trọng số mũ 7 ngày của TSS hàng ngày. Ghi lại sự căng thẳng tập luyện gần đây và mệt
-                        mỏi tích lũy.</p>
-                    <div class="formula-small">
+                    </div></div><div class="pmc-metric"><div class="metric-icon">⚡</div><h3>ATL - Tải Lượng Tập Luyện Cấp Tính</h3><div class="metric-value-label">MỆT MỎI Của Bạn</div><p>Trung bình trọng số mũ 7 ngày của TSS hàng ngày. Ghi lại sự căng thẳng tập luyện gần đây và mệt
+                        mỏi tích lũy.</p><div class="formula-small">
                         ATL hôm nay = ATL hôm qua + (TSS hôm nay - ATL hôm qua) × (1/7)
-                    </div>
-                </div>
-
-                <div class="pmc-metric">
-                    <div class="metric-icon">🎯</div>
-                    <h3>TSB - Cân Bằng Căng Thẳng Tập Luyện</h3>
-                    <div class="metric-value-label">PHONG ĐỘ Của Bạn</div>
-                    <p>Sự khác biệt giữa thể lực và mệt mỏi của ngày hôm qua. Chỉ ra sự sẵn sàng thi đấu hoặc nhu cầu
-                        nghỉ ngơi.</p>
-                    <div class="formula-small">
+                    </div></div><div class="pmc-metric"><div class="metric-icon">🎯</div><h3>TSB - Cân Bằng Căng Thẳng Tập Luyện</h3><div class="metric-value-label">PHONG ĐỘ Của Bạn</div><p>Sự khác biệt giữa thể lực và mệt mỏi của ngày hôm qua. Chỉ ra sự sẵn sàng thi đấu hoặc nhu cầu
+                        nghỉ ngơi.</p><div class="formula-small">
                         TSB = CTL hôm qua - ATL hôm qua
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2>Hiểu Về CTL: Chỉ Số Thể Lực Của Bạn</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>CTL Đại Diện Cho Điều Gì</h3>
-                <p>CTL định lượng khối lượng công việc tập luyện mà cơ thể bạn đã <em>thích ứng</em> trong 6 tuần qua.
-                    Một CTL cao hơn có nghĩa là:</p>
-                <ul>
-                    <li>Năng lực hiếu khí và sức bền lớn hơn</li>
-                    <li>Khả năng xử lý khối lượng tập luyện nhiều hơn</li>
-                    <li>Cải thiện thích ứng cơ bắp và trao đổi chất</li>
-                    <li>Hiệu suất bền vững cao hơn</li>
-                </ul>
-
-                <div class="callout callout-info">
-                    <h4>Hằng Số Thời Gian: 42 Ngày</h4>
-                    <p>CTL có chu kỳ bán rã ~14.7 ngày. Sau 42 ngày, khoảng 36.8% (1/e) tác động của một bài tập đơn lẻ
-                        vẫn còn lại.</p>
-                    <p>Sự suy giảm chậm này có nghĩa là thể lực xây dựng dần dần nhưng cũng mất đi chậm chạp—bảo vệ
-                        chống lại việc mất tập luyện trong các khoảng nghỉ ngắn.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>Giá Trị CTL Điển Hình</h3>
-                <div class="levels-comparison">
-                    <div class="level-card-compact">
-                        <strong>Người Mới Bắt Đầu:</strong>
-                        <div class="value">20-40 CTL</div>
-                        <p>Xây dựng thể lực nền tảng, 3-4 lần bơi/tuần</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>Trung Cấp:</strong>
-                        <div class="value">40-70 CTL</div>
-                        <p>Tập luyện nhất quán, 4-5 lần bơi/tuần</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>Nâng Cao:</strong>
-                        <div class="value">70-100 CTL</div>
-                        <p>Khối lượng cao, 5-6 lần bơi/tuần, tập hai buổi</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>Ưu Tú:</strong>
-                        <div class="value">100-150+ CTL</div>
-                        <p>Tải lượng tập luyện chuyên nghiệp, 8-12 phiên/tuần</p>
-                    </div>
-                </div>
-
-                <div class="warning-box mt-md">
-                    <strong>⚠️ Giới Hạn Tốc Độ Tăng CTL</strong>
-                    <ul>
-                        <li><strong>Người Mới Bắt Đầu:</strong> +3-5 CTL mỗi tuần</li>
-                        <li><strong>Trung Cấp:</strong> +5-7 CTL mỗi tuần</li>
-                        <li><strong>Nâng Cao:</strong> +7-10 CTL mỗi tuần</li>
-                    </ul>
-                    <p>Vượt quá các tỷ lệ này làm tăng đáng kể nguy cơ chấn thương và kiệt sức.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>Hiểu Về ATL: Chỉ Số Mệt Mỏi Của Bạn</h2>
-
-        <div class="content-split">
-            <div>
-                <p>ATL theo dõi sự căng thẳng tập luyện ngắn hạn—sự mệt mỏi tích lũy trong tuần qua. Nó tăng nhanh sau
-                    khi tập nặng và giảm nhanh khi nghỉ ngơi.</p>
-
-                <h3>Động Lực Học ATL</h3>
-                <ul>
-                    <li><strong>Phản Ứng Nhanh:</strong> Hằng số thời gian 7 ngày (chu kỳ bán rã ~2.4 ngày)</li>
-                    <li><strong>Mô Hình Gai Nhọn:</strong> Tăng vọt sau các phiên nặng, giảm khi phục hồi</li>
-                    <li><strong>Chỉ Báo Phục Hồi:</strong> ATL giảm = mệt mỏi tan biến</li>
-                    <li><strong>Cảnh Báo Tập Quá Sức:</strong> ATL tăng cao mãn tính gợi ý phục hồi không đầy đủ</li>
-                </ul>
-
-                <div class="callout callout-science">
-                    <h4>🔬 Mô Hình Thể Lực-Mệt Mỏi</h4>
-                    <p>Mỗi phiên tập luyện tạo ra hai hiệu ứng:</p>
-                    <ol>
-                        <li><strong>Kích thích thể lực</strong> (xây dựng chậm, kéo dài lâu)</li>
-                        <li><strong>Mệt mỏi</strong> (xây dựng nhanh, tan biến nhanh)</li>
-                    </ol>
-                    <p>Hiệu suất = Thể Lực - Mệt Mỏi. PMC trực quan hóa mô hình này, cho phép phân kỳ tập luyện khoa
-                        học.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>Ở Trạng Thái Ổn Định</h3>
-                <p>Khi tải lượng tập luyện nhất quán qua từng tuần, CTL và ATL hội tụ:</p>
-                <div class="example-box">
-                    <h4>Ví dụ: 500 TSS/tuần nhất quán</h4>
-                    <div class="calculation">
+                    </div></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>Hiểu Về CTL: Chỉ Số Thể Lực Của Bạn</h2><div class="grid grid-2"><div><h3>CTL Đại Diện Cho Điều Gì</h3><p>CTL định lượng khối lượng công việc tập luyện mà cơ thể bạn đã <em>thích ứng</em> trong 6 tuần qua.
+                    Một CTL cao hơn có nghĩa là:</p><ul><li>Năng lực hiếu khí và sức bền lớn hơn</li><li>Khả năng xử lý khối lượng tập luyện nhiều hơn</li><li>Cải thiện thích ứng cơ bắp và trao đổi chất</li><li>Hiệu suất bền vững cao hơn</li></ul><div class="callout callout-info"><h4>Hằng Số Thời Gian: 42 Ngày</h4><p>CTL có chu kỳ bán rã ~14.7 ngày. Sau 42 ngày, khoảng 36.8% (1/e) tác động của một bài tập đơn lẻ
+                        vẫn còn lại.</p><p>Sự suy giảm chậm này có nghĩa là thể lực xây dựng dần dần nhưng cũng mất đi chậm chạp—bảo vệ
+                        chống lại việc mất tập luyện trong các khoảng nghỉ ngắn.</p></div></div><div><h3>Giá Trị CTL Điển Hình</h3><div class="levels-comparison"><div class="level-card-compact"><strong>Người Mới Bắt Đầu:</strong><div class="value">20-40 CTL</div><p>Xây dựng thể lực nền tảng, 3-4 lần bơi/tuần</p></div><div class="level-card-compact"><strong>Trung Cấp:</strong><div class="value">40-70 CTL</div><p>Tập luyện nhất quán, 4-5 lần bơi/tuần</p></div><div class="level-card-compact"><strong>Nâng Cao:</strong><div class="value">70-100 CTL</div><p>Khối lượng cao, 5-6 lần bơi/tuần, tập hai buổi</p></div><div class="level-card-compact"><strong>Ưu Tú:</strong><div class="value">100-150+ CTL</div><p>Tải lượng tập luyện chuyên nghiệp, 8-12 phiên/tuần</p></div></div><div class="warning-box mt-md"><strong>⚠️ Giới Hạn Tốc Độ Tăng CTL</strong><ul><li><strong>Người Mới Bắt Đầu:</strong> +3-5 CTL mỗi tuần</li><li><strong>Trung Cấp:</strong> +5-7 CTL mỗi tuần</li><li><strong>Nâng Cao:</strong> +7-10 CTL mỗi tuần</li></ul><p>Vượt quá các tỷ lệ này làm tăng đáng kể nguy cơ chấn thương và kiệt sức.</p></div></div></div></div></section><section class="section"><div class="container"><h2>Hiểu Về ATL: Chỉ Số Mệt Mỏi Của Bạn</h2><div class="content-split"><div><p>ATL theo dõi sự căng thẳng tập luyện ngắn hạn—sự mệt mỏi tích lũy trong tuần qua. Nó tăng nhanh sau
+                    khi tập nặng và giảm nhanh khi nghỉ ngơi.</p><h3>Động Lực Học ATL</h3><ul><li><strong>Phản Ứng Nhanh:</strong> Hằng số thời gian 7 ngày (chu kỳ bán rã ~2.4 ngày)</li><li><strong>Mô Hình Gai Nhọn:</strong> Tăng vọt sau các phiên nặng, giảm khi phục hồi</li><li><strong>Chỉ Báo Phục Hồi:</strong> ATL giảm = mệt mỏi tan biến</li><li><strong>Cảnh Báo Tập Quá Sức:</strong> ATL tăng cao mãn tính gợi ý phục hồi không đầy đủ</li></ul><div class="callout callout-science"><h4>🔬 Mô Hình Thể Lực-Mệt Mỏi</h4><p>Mỗi phiên tập luyện tạo ra hai hiệu ứng:</p><ol><li><strong>Kích thích thể lực</strong> (xây dựng chậm, kéo dài lâu)</li><li><strong>Mệt mỏi</strong> (xây dựng nhanh, tan biến nhanh)</li></ol><p>Hiệu suất = Thể Lực - Mệt Mỏi. PMC trực quan hóa mô hình này, cho phép phân kỳ tập luyện khoa
+                        học.</p></div></div><div><h3>Ở Trạng Thái Ổn Định</h3><p>Khi tải lượng tập luyện nhất quán qua từng tuần, CTL và ATL hội tụ:</p><div class="example-box"><h4>Ví dụ: 500 TSS/tuần nhất quán</h4><div class="calculation">
                         TSS Hàng Ngày ≈ 71<br>
                         CTL tiếp cận ~71<br>
                         ATL tiếp cận ~71<br>
                         TSB tiếp cận 0
-                    </div>
-                    <p><strong>Giải thích:</strong> Thể lực và mệt mỏi cân bằng. Không có thâm hụt hay thặng dư tích
-                        lũy.</p>
-                </div>
-
-                <h3>Trong Các Giai Đoạn Xây Dựng (Build)</h3>
-                <p>Khi tăng tải lượng tập luyện:</p>
-                <div class="example-box">
-                    <p>ATL tăng <em>nhanh hơn</em> CTL do hằng số thời gian ngắn hơn. TSB trở nên âm (mệt mỏi > thể
-                        lực). Điều này là bình thường và hiệu quả—bạn đang áp dụng quá tải để kích thích thích ứng.</p>
-                </div>
-
-                <h3>Trong Giai Đoạn Taper</h3>
-                <p>Khi giảm tải lượng tập luyện:</p>
-                <div class="example-box">
-                    <p>ATL giảm <em>nhanh hơn</em> CTL. TSB trở nên dương (thể lực > mệt mỏi). Đây là mục tiêu—đến ngày
-                        thi đấu tươi mới trong khi vẫn giữ được thể lực.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2>Hiểu Về TSB: Chỉ Số Phong Độ/Sẵn Sàng Của Bạn</h2>
-
-        <p class="lead">TSB là sự khác biệt giữa thể lực hôm qua (CTL) và mệt mỏi hôm qua (ATL). Nó chỉ ra liệu bạn đang
-            tươi mới hay mệt mỏi, sẵn sàng đua hay cần phục hồi.</p>
-
-        <div class="tsb-zones-container">
-            <h3>Hướng Dẫn Giải Thích TSB</h3>
-            <table class="tsb-zones-table">
-                <thead>
-                    <tr>
-                        <th>Phạm Vi TSB</th>
-                        <th>Trạng Thái</th>
-                        <th>Giải Thích</th>
-                        <th>Hành Động Khuyên Dùng</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tsb-critical">
-                        <td>&lt; -30</td>
-                        <td><strong>Nguy Cơ Quá Tải</strong></td>
-                        <td>Mệt mỏi cực độ. Tiềm năng tập quá sức.</td>
-                        <td>Cần phục hồi ngay lập tức. Giảm khối lượng 50%+.</td>
-                    </tr>
-                    <tr class="tsb-training">
-                        <td>-20 đến -30</td>
-                        <td><strong>Khối Tập Luyện Tối Ưu</strong></td>
-                        <td>Quá tải hiệu quả. Xây dựng thể lực.</td>
-                        <td>Tiếp tục kế hoạch. Theo dõi các dấu hiệu mệt mỏi quá mức.</td>
-                    </tr>
-                    <tr class="tsb-moderate">
-                        <td>-10 đến -20</td>
-                        <td><strong>Tải Trung Bình</strong></td>
-                        <td>Tích lũy tập luyện tiêu chuẩn.</td>
-                        <td>Tập luyện bình thường. Có thể xử lý các phiên chất lượng.</td>
-                    </tr>
-                    <tr class="tsb-neutral">
-                        <td>-10 đến +15</td>
-                        <td><strong>Chuyển Tiếp/Duy Trì</strong></td>
-                        <td>Trạng thái cân bằng. Mệt mỏi nhẹ hoặc tươi mới.</td>
-                        <td>Tốt cho các cuộc đua B/C, kiểm tra, hoặc tuần phục hồi.</td>
-                    </tr>
-                    <tr class="tsb-fresh">
-                        <td>+15 đến +25</td>
-                        <td><strong>Phong Độ Đua Đỉnh Cao</strong></td>
-                        <td>Tươi mới và khỏe mạnh. Cửa sổ hiệu suất tối ưu.</td>
-                        <td>Các cuộc đua ưu tiên A. Hiệu suất đỉnh cao dự kiến.</td>
-                    </tr>
-                    <tr class="tsb-very-fresh">
-                        <td>+25 đến +35</td>
-                        <td><strong>Rất Tươi Mới</strong></td>
-                        <td>Rất được nghỉ ngơi. Tốt cho chạy nước rút.</td>
-                        <td>Các cuộc đua ngắn, thử nghiệm thời gian, trạng thái rất nghỉ ngơi.</td>
-                    </tr>
-                    <tr class="tsb-detraining">
-                        <td>&gt; +35</td>
-                        <td><strong>Mất Tập Luyện</strong></td>
-                        <td>Mất thể lực do không hoạt động.</td>
-                        <td>Tiếp tục tập luyện. Thể lực suy giảm do nghỉ ngơi kéo dài.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>🎯 TSB Mục Tiêu Theo Khoảng Cách Cuộc Đua</h3>
-            <ul>
-                <li><strong>Ba Môn Phối Hợp Sprint/Olympic:</strong> TSB +15 đến +25 (taper 7-10 ngày)</li>
-                <li><strong>Half Ironman (70.3):</strong> TSB +20 đến +30 (taper 10-14 ngày)</li>
-                <li><strong>Full Ironman:</strong> TSB +15 đến +25 (taper 14-21 ngày)</li>
-                <li><strong>Sự Kiện Bơi Hồ:</strong> TSB +15 đến +25 (taper 7-14 ngày tùy thuộc vào sự kiện)</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Ví Dụ PMC: Khối Tập Luyện → Taper → Đua</h2>
-
-        <div class="example-box">
-            <h3>Chu Kỳ Tập Luyện 8 Tuần</h3>
-
-            <h4>Tuần 1-5: Giai Đoạn Xây Dựng</h4>
-            <ul>
-                <li>TSS Hàng Tuần: 400 → 450 → 500 → 550 → 550</li>
-                <li>CTL: Tăng dần từ 50 → 65</li>
-                <li>ATL: Theo dõi tải lượng hàng tuần, dao động 55-80</li>
-                <li>TSB: Âm (-15 đến -25), chỉ ra sự căng thẳng tập luyện hiệu quả</li>
-            </ul>
-
-            <h4>Tuần 6: Tuần Phục Hồi</h4>
-            <ul>
-                <li>TSS Hàng Tuần: 300 (giảm 40%)</li>
-                <li>CTL: Giảm nhẹ xuống ~63 (thể lực được giữ lại)</li>
-                <li>ATL: Giảm xuống ~50 (mệt mỏi tan biến)</li>
-                <li>TSB: Tăng lên +5 (tươi mới một phần)</li>
-            </ul>
-
-            <h4>Tuần 7: Xây Dựng Cuối Cùng</h4>
-            <ul>
-                <li>TSS Hàng Tuần: 500</li>
-                <li>CTL: Leo lên ~65</li>
-                <li>ATL: Nhảy lên ~75</li>
-                <li>TSB: Quay lại -20 (tập luyện chất lượng được hấp thụ)</li>
-            </ul>
-
-            <h4>Tuần 8: Taper + Đua</h4>
-            <ul>
-                <li>Ngày 1-9: Giảm khối lượng, duy trì cường độ (tổng 200 TSS)</li>
-                <li>CTL: Giảm nhẹ xuống ~62 (mất thể lực tối thiểu)</li>
-                <li>ATL: Giảm nhanh xuống ~40 (mệt mỏi bị loại bỏ)</li>
-                <li>TSB: Đạt đỉnh tại <strong>+20 vào ngày đua</strong></li>
-                <li><strong>Kết Quả:</strong> Tươi mới, khỏe mạnh, sẵn sàng thi đấu</li>
-            </ul>
-        </div>
-
-        <div class="callout callout-success">
-            <h3>✅ Tại Sao Taper Hiệu Quả</h3>
-            <p>Các hằng số thời gian khác nhau (42 ngày cho CTL, 7 ngày cho ATL) tạo ra hiệu ứng taper:</p>
-            <ul>
-                <li>ATL phản ứng nhanh → Mệt mỏi biến mất trong vòng 7-10 ngày</li>
-                <li>CTL phản ứng chậm → Thể lực tồn tại trong nhiều tuần</li>
-                <li>Kết quả: Thể lực duy trì trong khi mệt mỏi biến mất = hiệu suất đỉnh cao</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Hướng Dẫn Ứng Dụng Thực Tế</h2>
-
-        <div class="guidelines-grid">
-            <div class="guideline-item">
-                <h3>1️⃣ Theo Dõi sTSS Hàng Ngày</h3>
-                <p>Sự nhất quán là chìa khóa. Ghi lại sTSS của mỗi bài tập để xây dựng xu hướng CTL/ATL/TSB chính xác.
-                    Thiếu dữ liệu tạo ra khoảng trống trong đường cong thể lực.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>2️⃣ Theo Dõi Tốc Độ Tăng CTL</h3>
-                <p>Tăng CTL dần dần. Mức tăng 5-7 điểm mỗi tuần là bền vững cho hầu hết người bơi. Nhảy vọt 15-20 điểm
-                    mời gọi chấn thương.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>3️⃣ Lên Kế Hoạch Tuần Phục Hồi</h3>
-                <p>Mỗi 3-4 tuần, giảm khối lượng 30-50% trong một tuần. Để TSB tăng lên -5 đến +10. Điều này củng cố thể
-                    lực và ngăn ngừa tập quá sức.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>4️⃣ Căn Thời Gian Taper</h3>
-                <p>Nhắm mục tiêu TSB +15 đến +25 vào ngày đua. Bắt đầu taper 7-14 ngày trước đó tùy thuộc vào khoảng
-                    cách sự kiện và TSB hiện tại.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>5️⃣ Đừng Hoảng Loạn Với TSB Âm</h3>
-                <p>TSB -20 đến -30 trong các giai đoạn xây dựng là bình thường và hiệu quả. Nó có nghĩa là bạn đang áp
-                    dụng kích thích để thích ứng.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>6️⃣ Tôn Trọng Sự Suy Giảm CTL</h3>
-                <p>Sau khi nghỉ tập, đừng cố gắng tiếp tục ở mức CTL trước đó ngay lập tức. Xây dựng lại dần dần để
-                    tránh chấn thương.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow text-center">
-        <h2>Làm Chủ Tải Lượng Tập Luyện Của Bạn</h2>
-        <p class="lead">PMC biến việc tập luyện chủ quan thành dữ liệu khách quan. Bằng cách theo dõi sTSS, CTL, ATL, và
+                    </div><p><strong>Giải thích:</strong> Thể lực và mệt mỏi cân bằng. Không có thâm hụt hay thặng dư tích
+                        lũy.</p></div><h3>Trong Các Giai Đoạn Xây Dựng (Build)</h3><p>Khi tăng tải lượng tập luyện:</p><div class="example-box"><p>ATL tăng <em>nhanh hơn</em> CTL do hằng số thời gian ngắn hơn. TSB trở nên âm (mệt mỏi > thể
+                        lực). Điều này là bình thường và hiệu quả—bạn đang áp dụng quá tải để kích thích thích ứng.</p></div><h3>Trong Giai Đoạn Taper</h3><p>Khi giảm tải lượng tập luyện:</p><div class="example-box"><p>ATL giảm <em>nhanh hơn</em> CTL. TSB trở nên dương (thể lực > mệt mỏi). Đây là mục tiêu—đến ngày
+                        thi đấu tươi mới trong khi vẫn giữ được thể lực.</p></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>Hiểu Về TSB: Chỉ Số Phong Độ/Sẵn Sàng Của Bạn</h2><p class="lead">TSB là sự khác biệt giữa thể lực hôm qua (CTL) và mệt mỏi hôm qua (ATL). Nó chỉ ra liệu bạn đang
+            tươi mới hay mệt mỏi, sẵn sàng đua hay cần phục hồi.</p><div class="tsb-zones-container"><h3>Hướng Dẫn Giải Thích TSB</h3><table class="tsb-zones-table"><thead><tr><th>Phạm Vi TSB</th><th>Trạng Thái</th><th>Giải Thích</th><th>Hành Động Khuyên Dùng</th></tr></thead><tbody><tr class="tsb-critical"><td>&lt; -30</td><td><strong>Nguy Cơ Quá Tải</strong></td><td>Mệt mỏi cực độ. Tiềm năng tập quá sức.</td><td>Cần phục hồi ngay lập tức. Giảm khối lượng 50%+.</td></tr><tr class="tsb-training"><td>-20 đến -30</td><td><strong>Khối Tập Luyện Tối Ưu</strong></td><td>Quá tải hiệu quả. Xây dựng thể lực.</td><td>Tiếp tục kế hoạch. Theo dõi các dấu hiệu mệt mỏi quá mức.</td></tr><tr class="tsb-moderate"><td>-10 đến -20</td><td><strong>Tải Trung Bình</strong></td><td>Tích lũy tập luyện tiêu chuẩn.</td><td>Tập luyện bình thường. Có thể xử lý các phiên chất lượng.</td></tr><tr class="tsb-neutral"><td>-10 đến +15</td><td><strong>Chuyển Tiếp/Duy Trì</strong></td><td>Trạng thái cân bằng. Mệt mỏi nhẹ hoặc tươi mới.</td><td>Tốt cho các cuộc đua B/C, kiểm tra, hoặc tuần phục hồi.</td></tr><tr class="tsb-fresh"><td>+15 đến +25</td><td><strong>Phong Độ Đua Đỉnh Cao</strong></td><td>Tươi mới và khỏe mạnh. Cửa sổ hiệu suất tối ưu.</td><td>Các cuộc đua ưu tiên A. Hiệu suất đỉnh cao dự kiến.</td></tr><tr class="tsb-very-fresh"><td>+25 đến +35</td><td><strong>Rất Tươi Mới</strong></td><td>Rất được nghỉ ngơi. Tốt cho chạy nước rút.</td><td>Các cuộc đua ngắn, thử nghiệm thời gian, trạng thái rất nghỉ ngơi.</td></tr><tr class="tsb-detraining"><td>&gt; +35</td><td><strong>Mất Tập Luyện</strong></td><td>Mất thể lực do không hoạt động.</td><td>Tiếp tục tập luyện. Thể lực suy giảm do nghỉ ngơi kéo dài.</td></tr></tbody></table></div><div class="callout callout-tip mt-xl"><h3>🎯 TSB Mục Tiêu Theo Khoảng Cách Cuộc Đua</h3><ul><li><strong>Ba Môn Phối Hợp Sprint/Olympic:</strong> TSB +15 đến +25 (taper 7-10 ngày)</li><li><strong>Half Ironman (70.3):</strong> TSB +20 đến +30 (taper 10-14 ngày)</li><li><strong>Full Ironman:</strong> TSB +15 đến +25 (taper 14-21 ngày)</li><li><strong>Sự Kiện Bơi Hồ:</strong> TSB +15 đến +25 (taper 7-14 ngày tùy thuộc vào sự kiện)</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Ví Dụ PMC: Khối Tập Luyện → Taper → Đua</h2><div class="example-box"><h3>Chu Kỳ Tập Luyện 8 Tuần</h3><h4>Tuần 1-5: Giai Đoạn Xây Dựng</h4><ul><li>TSS Hàng Tuần: 400 → 450 → 500 → 550 → 550</li><li>CTL: Tăng dần từ 50 → 65</li><li>ATL: Theo dõi tải lượng hàng tuần, dao động 55-80</li><li>TSB: Âm (-15 đến -25), chỉ ra sự căng thẳng tập luyện hiệu quả</li></ul><h4>Tuần 6: Tuần Phục Hồi</h4><ul><li>TSS Hàng Tuần: 300 (giảm 40%)</li><li>CTL: Giảm nhẹ xuống ~63 (thể lực được giữ lại)</li><li>ATL: Giảm xuống ~50 (mệt mỏi tan biến)</li><li>TSB: Tăng lên +5 (tươi mới một phần)</li></ul><h4>Tuần 7: Xây Dựng Cuối Cùng</h4><ul><li>TSS Hàng Tuần: 500</li><li>CTL: Leo lên ~65</li><li>ATL: Nhảy lên ~75</li><li>TSB: Quay lại -20 (tập luyện chất lượng được hấp thụ)</li></ul><h4>Tuần 8: Taper + Đua</h4><ul><li>Ngày 1-9: Giảm khối lượng, duy trì cường độ (tổng 200 TSS)</li><li>CTL: Giảm nhẹ xuống ~62 (mất thể lực tối thiểu)</li><li>ATL: Giảm nhanh xuống ~40 (mệt mỏi bị loại bỏ)</li><li>TSB: Đạt đỉnh tại <strong>+20 vào ngày đua</strong></li><li><strong>Kết Quả:</strong> Tươi mới, khỏe mạnh, sẵn sàng thi đấu</li></ul></div><div class="callout callout-success"><h3>✅ Tại Sao Taper Hiệu Quả</h3><p>Các hằng số thời gian khác nhau (42 ngày cho CTL, 7 ngày cho ATL) tạo ra hiệu ứng taper:</p><ul><li>ATL phản ứng nhanh → Mệt mỏi biến mất trong vòng 7-10 ngày</li><li>CTL phản ứng chậm → Thể lực tồn tại trong nhiều tuần</li><li>Kết quả: Thể lực duy trì trong khi mệt mỏi biến mất = hiệu suất đỉnh cao</li></ul></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Hướng Dẫn Ứng Dụng Thực Tế</h2><div class="guidelines-grid"><div class="guideline-item"><h3>1️⃣ Theo Dõi sTSS Hàng Ngày</h3><p>Sự nhất quán là chìa khóa. Ghi lại sTSS của mỗi bài tập để xây dựng xu hướng CTL/ATL/TSB chính xác.
+                    Thiếu dữ liệu tạo ra khoảng trống trong đường cong thể lực.</p></div><div class="guideline-item"><h3>2️⃣ Theo Dõi Tốc Độ Tăng CTL</h3><p>Tăng CTL dần dần. Mức tăng 5-7 điểm mỗi tuần là bền vững cho hầu hết người bơi. Nhảy vọt 15-20 điểm
+                    mời gọi chấn thương.</p></div><div class="guideline-item"><h3>3️⃣ Lên Kế Hoạch Tuần Phục Hồi</h3><p>Mỗi 3-4 tuần, giảm khối lượng 30-50% trong một tuần. Để TSB tăng lên -5 đến +10. Điều này củng cố thể
+                    lực và ngăn ngừa tập quá sức.</p></div><div class="guideline-item"><h3>4️⃣ Căn Thời Gian Taper</h3><p>Nhắm mục tiêu TSB +15 đến +25 vào ngày đua. Bắt đầu taper 7-14 ngày trước đó tùy thuộc vào khoảng
+                    cách sự kiện và TSB hiện tại.</p></div><div class="guideline-item"><h3>5️⃣ Đừng Hoảng Loạn Với TSB Âm</h3><p>TSB -20 đến -30 trong các giai đoạn xây dựng là bình thường và hiệu quả. Nó có nghĩa là bạn đang áp
+                    dụng kích thích để thích ứng.</p></div><div class="guideline-item"><h3>6️⃣ Tôn Trọng Sự Suy Giảm CTL</h3><p>Sau khi nghỉ tập, đừng cố gắng tiếp tục ở mức CTL trước đó ngay lập tức. Xây dựng lại dần dần để
+                    tránh chấn thương.</p></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>Làm Chủ Tải Lượng Tập Luyện Của Bạn</h2><p class="lead">PMC biến việc tập luyện chủ quan thành dữ liệu khách quan. Bằng cách theo dõi sTSS, CTL, ATL, và
             TSB, bạn có được sự kiểm soát chính xác đối với sự tiến bộ thể lực, quản lý mệt mỏi và thời điểm đạt hiệu
-            suất đỉnh cao.</p>
-
-        <div class="mt-xl">
-            <a href="/vi/css/" class="btn btn-secondary">← Nền Tảng CSS</a>
-            <a href="/vi/efficiency/" class="btn btn-primary">Chỉ Số Hiệu Quả →</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+            suất đỉnh cao.</p><div class="mt-xl"><a href="/vi/css/" class="btn btn-secondary">← Nền Tảng CSS</a><a href="/vi/efficiency/" class="btn btn-primary">Chỉ Số Hiệu Quả →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link active"
+                </a><a href="/vi/" class="lang-link active"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. Bảo lưu mọi quyền
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/vi/privacy/">Quyền Riêng Tư</a></li>
-                <li><a href="/vi/terms/">Điều Khoản</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>Trang web này sử dụng cookie để cải thiện trải nghiệm của bạn.</p>
-            <a href="/vi/privacy/" class="text-sm">Tìm hiểu thêm</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Từ Chối</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Chấp Nhận</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/vi/privacy/">Quyền Riêng Tư</a></li><li><a href="/vi/terms/">Điều Khoản</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Trang web này sử dụng cookie để cải thiện trải nghiệm của bạn.</p><a href="/vi/privacy/" class="text-sm">Tìm hiểu thêm</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Từ Chối</button><button id="cookie-accept" class="btn btn-primary btn-small">Chấp Nhận</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="sw" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Swim Analytics dhidi ya Strava, TrainingPeaks, Final Surge</title>
-  <meta name="description" content="Linganisha Swim Analytics na programu za kuogelea za Strava, TrainingPeaks, Final Surge. Ulinganisho wa kina wa jaribio la CSS, kokotoaji la sTSS, vipengele vya PMC">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="Swim Analytics dhidi ya Strava, Swim Analytics dhidi ya TrainingPeaks, programu bora ya kuogelea, ulinganisho wa uchambuzi wa kuogelea, ulinganisho wa programu ya kufuatilia kuogelea">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/sw/comparisons/">
-
-  
-  
-  <meta property="article:published_time" content="2025-10-12T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/sw/comparisons/">
-  <meta property="og:title" content="Swim Analytics dhidi ya Strava, TrainingPeaks, Final Surge">
-  <meta property="og:description" content="Linganisha Swim Analytics na programu za kuogelea za Strava, TrainingPeaks, Final Surge. Ulinganisho wa kina wa jaribio la CSS, kokotoaji la sTSS, vipengele vya PMC">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="sw_KE">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/sw/comparisons/">
-  <meta name="twitter:title" content="Swim Analytics dhidi ya Strava, TrainingPeaks, Final Surge">
-  <meta name="twitter:description" content="Linganisha Swim Analytics na programu za kuogelea za Strava, TrainingPeaks, Final Surge. Ulinganisho wa kina wa jaribio la CSS, kokotoaji la sTSS, vipengele vya PMC">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/comparisons/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/comparisons/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/comparisons/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/comparisons/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/comparisons/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/comparisons/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/comparisons/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/comparisons/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/comparisons/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/comparisons/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/comparisons/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/comparisons/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/comparisons/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/comparisons/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/comparisons/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/comparisons/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/comparisons/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/comparisons/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/comparisons/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/comparisons/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/comparisons/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/comparisons/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/comparisons/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/comparisons/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/comparisons/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/comparisons/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/comparisons/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/comparisons/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/comparisons/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/comparisons/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/comparisons/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/comparisons/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/comparisons/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/comparisons/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/comparisons/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/comparisons/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/comparisons/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/comparisons/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/comparisons/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/comparisons/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/comparisons/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/comparisons/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/comparisons/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/comparisons/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/comparisons/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/comparisons/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/comparisons/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/comparisons/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/comparisons/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/comparisons/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/comparisons/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/comparisons/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/comparisons/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/comparisons/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/comparisons/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/comparisons/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="sw" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Swim Analytics dhidi ya Strava, TrainingPeaks, Final Surge</title><meta name="description" content="Linganisha Takwimu za Kuogelea na Strava, TrainingPeaks, programu za kuogelea za mwisho za Surge. Ulinganisho wa kina wa majaribio ya CSS, hesabu ya sTSS, vipengele..."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="Swim Analytics dhidi ya Strava, Swim Analytics dhidi ya TrainingPeaks, programu bora ya kuogelea, ulinganisho wa uchambuzi wa kuogelea, ulinganisho wa programu ya kufuatilia kuogelea"><link rel="canonical" href="https://swim.analyticszone.app/sw/comparisons/"><meta property="article:published_time" content="2025-10-12T10:00:00Z"><meta property="article:modified_time" content="2026-01-04T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/sw/comparisons/"><meta property="og:title" content="Swim Analytics dhidi ya Strava, TrainingPeaks, Final Surge"><meta property="og:description" content="Linganisha Takwimu za Kuogelea na Strava, TrainingPeaks, programu za kuogelea za mwisho za Surge. Ulinganisho wa kina wa majaribio ya CSS, hesabu ya sTSS, vipengele..."><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="sw_KE"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/sw/comparisons/"><meta name="twitter:title" content="Swim Analytics dhidi ya Strava, TrainingPeaks, Final Surge"><meta name="twitter:description" content="Linganisha Takwimu za Kuogelea na Strava, TrainingPeaks, programu za kuogelea za mwisho za Surge. Ulinganisho wa kina wa majaribio ya CSS, hesabu ya sTSS, vipengele..."><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/comparisons/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/comparisons/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/comparisons/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/comparisons/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/comparisons/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/comparisons/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/comparisons/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/comparisons/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/comparisons/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/comparisons/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/comparisons/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/comparisons/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/comparisons/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/comparisons/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/comparisons/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/comparisons/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/comparisons/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/comparisons/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/comparisons/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/comparisons/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/comparisons/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/comparisons/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/comparisons/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/comparisons/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/comparisons/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/comparisons/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/comparisons/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/comparisons/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/comparisons/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/comparisons/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/comparisons/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/comparisons/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/comparisons/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/comparisons/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/comparisons/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/comparisons/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/comparisons/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/comparisons/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/comparisons/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/comparisons/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/comparisons/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/comparisons/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/comparisons/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/comparisons/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/comparisons/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/comparisons/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/comparisons/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/comparisons/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/comparisons/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/comparisons/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/comparisons/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/comparisons/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/comparisons/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/comparisons/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/comparisons/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/comparisons/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=540c31aabebc">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=3d8a14d801fb"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "sw"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,31 +373,20 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Swim Analytics dhidi ya Strava, TrainingPeaks, Final Surge",
-  "description": "Linganisha Swim Analytics na programu za kuogelea za Strava, TrainingPeaks, Final Surge. Ulinganisho wa kina wa jaribio la CSS, kokotoaji la sTSS, vipengele vya PMC",
+  "description": "Linganisha Takwimu za Kuogelea na Strava, TrainingPeaks, programu za kuogelea za mwisho za Surge. Ulinganisho wa kina wa majaribio ya CSS, hesabu ya sTSS, vipengele...",
   "url": "https://swim.analyticszone.app/sw/comparisons/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Swim Analytics dhidi ya Strava, TrainingPeaks, Final Surge",
-  "description": "Linganisha Swim Analytics na programu za kuogelea za Strava, TrainingPeaks, Final Surge. Ulinganisho wa kina wa jaribio la CSS, kokotoaji la sTSS, vipengele vya PMC",
+  "description": "Linganisha Takwimu za Kuogelea na Strava, TrainingPeaks, programu za kuogelea za mwisho za Surge. Ulinganisho wa kina wa majaribio ya CSS, hesabu ya sTSS, vipengele...",
   "author": {
     "@type": "Person",
     "name": "AnalyticsZone Team"
@@ -622,17 +406,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/sw/comparisons/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -646,1307 +420,337 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">Ruka kwenye maudhui</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/sw/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/sw/" 
+  </script></head><body><a href="#main-content" class="skip-link">Ruka kwenye maudhui</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/sw/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/sw/" 
                                 aria-current="">
                                 Nyumbani
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/sw/getting-started/" class="nav-label">Jifunze</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/sw/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/sw/getting-started/" class="nav-label">Jifunze</a><ul class="submenu"><li><a href="/sw/getting-started/" 
                                         aria-current="">
                                         Kuanza
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sw/css/" 
+                                    </a></li><li><a href="/sw/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sw/training-zones/" 
+                                    </a></li><li><a href="/sw/training-zones/" 
                                         aria-current="">
                                         Mikoa ya Mafunzo
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sw/training-load/" 
+                                    </a></li><li><a href="/sw/training-load/" 
                                         aria-current="">
                                         Mzigo wa Mafunzo
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sw/stss-calculator/" 
+                                    </a></li><li><a href="/sw/stss-calculator/" 
                                         aria-current="">
                                         Kikokotoo cha sTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/sw/research/" class="nav-label">Sayansi</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/sw/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/sw/research/" class="nav-label">Sayansi</a><ul class="submenu"><li><a href="/sw/research/" 
                                         aria-current="">
                                         Utafiti
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sw/formulas/" 
+                                    </a></li><li><a href="/sw/formulas/" 
                                         aria-current="">
                                         Mifumo
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sw/efficiency/" 
+                                    </a></li><li><a href="/sw/efficiency/" 
                                         aria-current="">
                                         Ufanisi
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sw/stroke-mechanics/" 
+                                    </a></li><li><a href="/sw/stroke-mechanics/" 
                                         aria-current="">
                                         Mechanics ya Stroke
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sw/bibliography/" 
+                                    </a></li><li><a href="/sw/bibliography/" 
                                         aria-current="">
                                         Bibliografia
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/sw/contact/" 
+                                    </a></li></ul></li><li><a href="/sw/contact/" 
                                 aria-current="">
                                 Wasiliana
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Chagua lugha">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Chagua lugha"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" selected>
+                        </option><option value="sw" selected>
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Geuza menyu"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>Swim Analytics dhidi ya Programu Nyingine za Kuogelea - Mlinganisho wa Vipengele</h1>
-        <p class="lead">Jinsi Swim Analytics inavyolinganishwa na Strava, TrainingPeaks, Final Surge, na majukwaa mengine ya kufuatilia kuogelea</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>Kwa Nini Kuogelea Kunahitaji Uchanganuzi Maalum</h2>
-            <p>Programu za jumla za fitness kama Strava na TrainingPeaks zinafanya vizuri kwa baiskeli na kukimbia, lakini <strong>kuogelea kunahitaji vipimo tofauti</strong>. Critical Swim Speed (CSS), maeneo ya mafunzo yanayotegemea kasi, na mekanika ya mvuto havipatikani vizuri katika majukwaa ya michezo mingi. Swim Analytics imeundwa maalum kwa kuogelea, na vipimo vilivyoundwa kwa wanariadha wa bwawa na maji ya wazi.</p>
-        </div>
-
-        <h2>Muhtasari wa Haraka wa Mlinganisho</h2>
-
-        <div class="comparison-table-container">
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Kipengele</th>
-                        <th>Swim Analytics</th>
-                        <th>Strava</th>
-                        <th>TrainingPeaks</th>
-                        <th>Final Surge</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Upimaji wa CSS na Zones</strong></td>
-                        <td class="highlight">✅ Msaada wa asili</td>
-                        <td>❌ Hapana</td>
-                        <td>⚠️ Mwongozo tu</td>
-                        <td>⚠️ Mwongozo tu</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Mahesabu ya sTSS ya Kuogelea</strong></td>
-                        <td class="highlight">✅ Kiotomatiki</td>
-                        <td>❌ Hakuna TSS ya kuogelea</td>
-                        <td>✅ Ndiyo (inahitaji premium)</td>
-                        <td>✅ Ndiyo</td>
-                    </tr>
-                    <tr>
-                        <td><strong>PMC (CTL/ATL/TSB)</strong></td>
-                        <td class="highlight">✅ Imejumuishwa bure</td>
-                        <td>❌ Hapana</td>
-                        <td>✅ Premium tu ($20/mwezi)</td>
-                        <td>✅ Premium ($10/mwezi)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Maeneo ya Mafunzo Yanayotegemea Kasi</strong></td>
-                        <td class="highlight">✅ Maeneo 7, yanayotegemea CSS</td>
-                        <td>❌ Maeneo ya jumla</td>
-                        <td>⚠️ Usanidi wa mwongozo</td>
-                        <td>⚠️ Usanidi wa mwongozo</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Ujumuishaji wa Apple Watch</strong></td>
-                        <td class="highlight">✅ kupitia Apple Health</td>
-                        <td>✅ Asili</td>
-                        <td>✅ kupitia Garmin/Wahoo</td>
-                        <td>✅ kupitia kuingiza</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Uchanganuzi wa Mekanika ya Mvuto</strong></td>
-                        <td class="highlight">✅ DPS, SR, SI</td>
-                        <td>⚠️ Msingi</td>
-                        <td>⚠️ Msingi</td>
-                        <td>⚠️ Msingi</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Vipengele vya Tier ya Bure</strong></td>
-                        <td class="highlight">Majaribio ya siku 7, kisha $3.99/mwezi</td>
-                        <td>✅ Bure (uchanganuzi mdogo)</td>
-                        <td>⚠️ Imehadhiwa sana</td>
-                        <td>⚠️ Majaribio ya siku 14</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Msaada wa Michezo Mingi</strong></td>
-                        <td>❌ Kuogelea tu</td>
-                        <td class="highlight">✅ Michezo yote</td>
-                        <td class="highlight">✅ Michezo yote</td>
-                        <td class="highlight">✅ Michezo yote</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Vipengele vya Kijamii</strong></td>
-                        <td>❌ Hapana</td>
-                        <td class="highlight">✅ Zaidi</td>
-                        <td>⚠️ Kocha-mwanachama tu</td>
-                        <td>⚠️ Mdogo</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="mb-xl text-center">Swim Analytics dhidi ya Strava</h2>
-
-        <div class="grid grid-2">
-            <div class="card">
-                <h3 class="card-title">Kile Strava Inachofanya Vizuri</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>Vipengele vya kijamii:</strong> Vilabu, sehemu, kudos, mlolongo wa shughuli</li>
-                        <li><strong>Ufuatiliaji wa michezo mingi:</strong> Kukimbia, baiskeli, kuogelea, kupanda milima, n.k.</li>
-                        <li><strong>Tier ya bure:</strong> Vipengele vya bure vya ukarimu kwa wanariadha wa kawaida</li>
-                        <li><strong>Watu wengi sana:</strong> Unganisha na mamilioni ya wanariadha ulimwenguni</li>
-                        <li><strong>Ujumuishaji wa Apple Watch:</strong> Sync ya moja kwa moja kutoka mazoezi</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Kile Swim Analytics Inachofanya Vizuri Zaidi</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>Vipimo maalum vya kuogelea:</strong> CSS, sTSS, maeneo ya kasi yaliyoundwa kwa mabwawa</li>
-                        <li><strong>Uchanganuzi wa mzigo wa mafunzo:</strong> CTL/ATL/TSB imejumuishwa (Strava haina hii)</li>
-                        <li><strong>sTSS kiotomatiki:</strong> Hakuna uingizaji wa data wa mwongozo, inakokotolewa kutoka CSS + kasi</li>
-                        <li><strong>Mekanika ya mvuto:</strong> Ufuatiliaji wa DPS, kiwango cha mvuto, faharasa ya mvuto</li>
-                        <li><strong>Maeneo ya mafunzo:</strong> Maeneo 7 ya kibinafsi ya kasi yanayotegemea physiology yako</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout mt-xl">
-            <h3>Uamuzi: Swim Analytics dhidi ya Strava</h3>
-            <p><strong>Tumia Strava ikiwa:</strong> Unataka vipengele vya kijamii, ufuatiliaji wa michezo mingi, au ufuatiliaji wa bure wa kawaida. Strava ni bora kwa kuandika mazoezi na kuunganisha na marafiki.</p>
-            <p><strong>Tumia Swim Analytics ikiwa:</strong> Una uzoefu juu ya utendaji wa kuogelea na unataka maeneo yanayotegemea CSS, sTSS kiotomatiki, na usimamizi wa mzigo wa mafunzo (CTL/ATL/TSB). Strava haikokotoi TSS ya kuogelea au kutoa vipimo vya PMC.</p>
-            <p class="mb-0"><strong>Tumia zote mbili:</strong> Waogeleaji wengi hutumia Strava kwa kushiriki kijamii na Swim Analytics kwa ufuatiliaji wa utendaji. Zinajumuisha kila mmoja vizuri.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2 class="mb-xl text-center">Swim Analytics dhidi ya TrainingPeaks</h2>
-
-        <div class="grid grid-2">
-            <div class="card">
-                <h3 class="card-title">Kile TrainingPeaks Inachofanya Vizuri</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>PMC kamili:</strong> Chati za kiwango cha viwango cha CTL/ATL/TSB</li>
-                        <li><strong>Maktaba ya mazoezi:</strong> Maelfu ya mazoezi yaliyopangwa</li>
-                        <li><strong>Ujumuishaji wa kocha:</strong> Jukwaa la kitaalamu la kocha-mwanachama</li>
-                        <li><strong>Mafunzo ya michezo mingi:</strong> Inazingatia triathlon na michezo yote mitatu</li>
-                        <li><strong>Uchanganuzi wa juu:</strong> Nguvu, maeneo ya kiwango cha moyo kwa baiskeli/kukimbia</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Kile Swim Analytics Inachofanya Vizuri Zaidi</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>Upimaji wa CSS kiotomatiki:</strong> Kikokotoo cha CSS kilichojengwa ndani na uzalishaji wa eneo</li>
-                        <li><strong>PMC iliyojumuishwa kwa kuogelea:</strong> TrainingPeaks inahitaji $20/mwezi Premium kwa PMC</li>
-                        <li><strong>Interface iliyorahisishwa:</strong> Swim Analytics inazingatia kuogelea, si kutia hofu</li>
-                        <li><strong>Apple Watch asili:</strong> Sync ya moja kwa moja kupitia Apple Health (hakuna Garmin inayohitajika)</li>
-                        <li><strong>Gharama ya chini:</strong> $3.99/mwezi dhidi ya $20/mwezi kwa TrainingPeaks Premium</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout mt-xl">
-            <h3>Uamuzi: Swim Analytics dhidi ya TrainingPeaks</h3>
-            <p><strong>Tumia TrainingPeaks ikiwa:</strong> Wewe ni triathlete unayeelekeza kwa matukio ya michezo mingi, una kocha anayetumia TrainingPeaks, au unahitaji mazoezi yaliyopangwa ya baiskeli/kukimbia. TrainingPeaks inafanya vizuri kwa mafunzo kamili ya triathlon.</p>
-            <p><strong>Tumia Swim Analytics ikiwa:</strong> Wewe ni mwogeleaji (si triathlete) au unataka vipimo maalum vya kuogelea bila kulipa $20/mwezi. Swim Analytics inatoa CTL/ATL/TSB na mahesabu ya sTSS kwa gharama ya chini ya asilimia 80 kuliko TrainingPeaks Premium.</p>
-            <p class="mb-0"><strong>Tofauti kuu:</strong> TrainingPeaks ni michezo mingi na vipengele vya kukocha; Swim Analytics ni kuogelea tu na msaada wa asili wa CSS na ufikiaji wa bei nafuu wa PMC.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="mb-xl text-center">Swim Analytics dhidi ya Final Surge</h2>
-
-        <div class="grid grid-2">
-            <div class="card">
-                <h3 class="card-title">Kile Final Surge Inachofanya Vizuri</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>Jukwaa la kocha:</strong> Imeundwa kwa mahusiano ya kocha-mwanachama</li>
-                        <li><strong>Msaada wa TSS:</strong> Mahesabu ya TSS ya kuogelea yanapatikana</li>
-                        <li><strong>Michezo mingi:</strong> Kuogelea, kukimbia, baiskeli, nguvu</li>
-                        <li><strong>Kupanga mazoezi:</strong> Mipango ya mafunzo yanayotegemea kalenda</li>
-                        <li><strong>Zana za mawasiliano:</strong> Ujumbe wa kocha ndani ya programu</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Kile Swim Analytics Inachofanya Vizuri Zaidi</h3>
-                <div class="card-content">
-                    <ul>
-                        <li><strong>Upimaji wa asili wa CSS:</strong> Kikokotoo kilichojengwa ndani, si uingizaji wa mwongozo</li>
-                        <li><strong>sTSS kiotomatiki:</strong> Inakokotolewa kutoka data ya Apple Watch, hakuna uandikaji</li>
-                        <li><strong>Kuzingatia mwanachama mmoja mmoja:</strong> Imeundwa kwa waogeleaji wanaojikocha</li>
-                        <li><strong>Ujumuishaji wa Apple Watch:</strong> Sync laini ya programu ya Health</li>
-                        <li><strong>Kuogelea maalum:</strong> Haijapunguzwa na vipengele vya michezo mingi</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout mt-xl">
-            <h3>Uamuzi: Swim Analytics dhidi ya Final Surge</h3>
-            <p><strong>Tumia Final Surge ikiwa:</strong> Una kocha anayetumia Final Surge, au unakocha wanariadha. Final Surge ni jukwaa la kukocha kwanza, programu ya mwanachama pili.</p>
-            <p><strong>Tumia Swim Analytics ikiwa:</strong> Unajikocha mwenyewe na unataka uchanganuzi uliojiendesha. Swim Analytics inahitaji uandikaji wa mwongozo wa sifuri—kila kitu kinaendana na Apple Watch kiotomatiki.</p>
-            <p class="mb-0"><strong>Tofauti kuu:</strong> Final Surge inazingatia kocha; Swim Analytics inazingatia mwanachama na kuzingatia automation.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Kile Kinachofanya Swim Analytics Kuwa ya Kipekee</h2>
-
-        <div class="unique-features">
-            <div class="feature-item">
-                <h3>1. Msaada wa Daraja la Kwanza wa CSS</h3>
-                <p>Swim Analytics ni <strong>programu pekee</strong> yenye kikokotoo cha kupima CSS cha asili. Ingiza nyakati zako za 400m na 200m, upate mara moja:</p>
-                <ul>
-                    <li>Kasi ya CSS (k.m., 1:49/100m)</li>
-                    <li>Maeneo 7 ya kibinafsi ya mafunzo</li>
-                    <li>Mahesabu kiotomatiki ya sTSS kwa mazoezi yote</li>
-                    <li>Uchanganuzi wa mazoezi yanayotegemea eneo</li>
-                </ul>
-                <p class="mt-sm"><strong>Washindani:</strong> Wanahitaji usanidi wa mwongozo wa eneo au hawapatikani maeneo ya kuogelea kabisa.</p>
-            </div>
-
-            <div class="feature-item">
-                <h3>2. sTSS Kiotomatiki kwa Kuogelea</h3>
-                <p>Programu nyingi zinahitaji uingizaji wa mwongozo wa TSS au hazikokotoi TSS ya kuogelea kabisa. Swim Analytics:</p>
-                <ul>
-                    <li>Inakokotoa kiotomatiki sTSS kutoka kila zoezi la Apple Watch</li>
-                    <li>Inatumia CSS + kasi ya zoezi kuamua Intensity Factor</li>
-                    <li>Hakuna uandikaji wa mwongozo unaohitajika—weka CSS mara moja, usahau juu yake</li>
-                </ul>
-                <p class="mt-sm"><strong>Strava:</strong> Haikokotoi TSS ya kuogelea. <strong>TrainingPeaks:</strong> Inahitaji $20/mwezi Premium. <strong>Final Surge:</strong> Inahitaji uingizaji wa mwongozo.</p>
-            </div>
-
-            <div class="feature-item">
-                <h3>3. Ufikiaji wa Bei Nafuu wa PMC</h3>
-                <p>Performance Management Chart (CTL/ATL/TSB) ni <strong>muhimu kwa usimamizi wa mzigo wa mafunzo</strong>, lakini ghali katika majukwaa mengine:</p>
-                <ul>
-                    <li><strong>Swim Analytics:</strong> Imejumuishwa kwa $3.99/mwezi</li>
-                    <li><strong>TrainingPeaks:</strong> Inahitaji $20/mwezi Premium ($240/mwaka)</li>
-                    <li><strong>Strava:</strong> Haipatikani kwa bei yoyote</li>
-                    <li><strong>Final Surge:</strong> $10/mwezi premium ($120/mwaka)</li>
-                </ul>
-                <p class="mt-sm">Swim Analytics inatoa CTL/ATL/TSB kwa <strong>gharama ya chini ya asilimia 80</strong> kuliko TrainingPeaks.</p>
-            </div>
-
-            <div class="feature-item">
-                <h3>4. Asili ya Apple Watch</h3>
-                <p>Swim Analytics inaendana moja kwa moja na Apple Health—hakuna saa ya Garmin inayohitajika:</p>
-                <ul>
-                    <li>Inafanya kazi na Apple Watch yoyote (Series 2+)</li>
-                    <li>Uagizaji kiotomatiki wa mazoezi kutoka programu ya Health</li>
-                    <li>Kasi ya lap kwa lap, hesabu ya mvuto, SWOLF</li>
-                    <li>Hakuna vifaa vya ziada vinavyohitajika</li>
-                </ul>
-                <p class="mt-sm"><strong>TrainingPeaks:</strong> Inahitaji kifaa cha Garmin/Wahoo ($200-800). <strong>Strava:</strong> Inafanya kazi na Apple Watch lakini haina uchanganuzi wa kuogelea.</p>
-            </div>
-
-            <div class="feature-item">
-                <h3>5. Kuzingatia Kuogelea Tu</h3>
-                <p>Programu za michezo mingi zinajaribu kufanya kila kitu, mara nyingi zinafanya kuogelea vibaya. Swim Analytics <strong>imeundwa pekee kwa kuogelea</strong>:</p>
-                <ul>
-                    <li>Interface iliyoundwa kuzunguka mtiririko wa mafunzo ya bwawa</li>
-                    <li>Vipimo muhimu kwa waogeleaji (CSS, sTSS, mekanika ya mvuto)</li>
-                    <li>Hakuna kuvimba kwa kipengele kutoka ufuatiliaji wa baiskeli/kukimbia/kupanda</li>
-                    <li>Masasisho yanayozingatia maboresho ya kuogelea</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Mlinganisho wa Bei (Gharama ya Kila Mwaka)</h2>
-
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h3>Swim Analytics</h3>
-                <div class="price">$47.88/mwaka</div>
-                <div class="price-note">($3.99/mwezi baada ya majaribio ya siku 7)</div>
-                <ul class="features-included">
-                    <li>✅ Upimaji wa CSS na maeneo</li>
-                    <li>✅ Mahesabu kiotomatiki ya sTSS</li>
-                    <li>✅ PMC (CTL/ATL/TSB)</li>
-                    <li>✅ Mekanika ya mvuto (DPS, SR, SI)</li>
-                    <li>✅ Sync ya Apple Watch</li>
-                    <li>❌ Michezo mingi</li>
-                    <li>❌ Vipengele vya kijamii</li>
-                </ul>
-            </div>
-
-            <div class="pricing-card">
-                <h3>Strava</h3>
-                <div class="price">$0 - $80/mwaka</div>
-                <div class="price-note">(Bure au $8/mwezi Summit)</div>
-                <ul class="features-included">
-                    <li>✅ Ufuatiliaji wa msingi wa mazoezi</li>
-                    <li>✅ Vipengele vya kijamii (vilabu, kudos)</li>
-                    <li>✅ Msaada wa michezo mingi</li>
-                    <li>❌ Hakuna msaada wa CSS</li>
-                    <li>❌ Hakuna TSS ya kuogelea</li>
-                    <li>❌ Hakuna PMC</li>
-                    <li>❌ Hakuna uchanganuzi wa kuogelea</li>
-                </ul>
-            </div>
-
-            <div class="pricing-card">
-                <h3>TrainingPeaks</h3>
-                <div class="price">$240/mwaka</div>
-                <div class="price-note">($20/mwezi Premium)</div>
-                <ul class="features-included">
-                    <li>✅ PMC (CTL/ATL/TSB)</li>
-                    <li>✅ Mahesabu ya TSS</li>
-                    <li>✅ Uchanganuzi wa michezo mingi</li>
-                    <li>✅ Jukwaa la kocha</li>
-                    <li>⚠️ Hakuna upimaji wa asili wa CSS</li>
-                    <li>⚠️ Usanidi wa mwongozo wa eneo</li>
-                    <li>💰 Gharama ya mara 5 ya Swim Analytics</li>
-                </ul>
-            </div>
-
-            <div class="pricing-card">
-                <h3>Final Surge</h3>
-                <div class="price">$120/mwaka</div>
-                <div class="price-note">($10/mwezi Premium)</div>
-                <ul class="features-included">
-                    <li>✅ Ufuatiliaji wa TSS</li>
-                    <li>✅ Zana za kocha-mwanachama</li>
-                    <li>✅ Michezo mingi</li>
-                    <li>⚠️ Uingizaji wa mwongozo wa sTSS</li>
-                    <li>⚠️ Hakuna upimaji wa asili wa CSS</li>
-                    <li>💰 Gharama ya mara 2.5 ya Swim Analytics</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="callout mt-xl">
-            <h3>💡 Uchanganuzi wa Gharama-Faida</h3>
-            <p><strong>Ikiwa wewe ni mwanachama wa kuogelea tu:</strong> Swim Analytics inatoa PMC + sTSS + maeneo ya CSS kwa $48/mwaka. TrainingPeaks inatoza $240/mwaka kwa vipengele sawa (ghali zaidi mara 5).</p>
-            <p class="mb-0"><strong>Ikiwa wewe ni triathlete:</strong> Fikiria TrainingPeaks au Final Surge kwa msaada wa michezo mingi. Swim Analytics ni kuogelea tu na haitafuatilia mafunzo ya baiskeli/kukimbia.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Nani Anapaswa Kutumia Swim Analytics?</h2>
-
-        <div class="use-cases">
-            <div class="use-case">
-                <h3>✅ Kamili Kwa:</h3>
-                <ul>
-                    <li><strong>Waogeleaji washindani:</strong> Masters, kikundi cha umri, wanariadha wa chuo kikuu wanaozingatia utendaji wa kuogelea</li>
-                    <li><strong>Wanariadha wanaojikocha:</strong> Waogeleaji wanaosimamia mafunzo yao wenyewe bila kocha</li>
-                    <li><strong>Wafanyaji wa mafunzo wanaotegemea data:</strong> Wanariadha wanaotaka maeneo ya CSS, sTSS, na vipimo vya PMC</li>
-                    <li><strong>Watumiaji wa Apple Watch:</strong> Waogeleaji wanayotumia tayari Apple Watch kwa ufuatiliaji wa bwawa</li>
-                    <li><strong>Wanariadha wenye ufahamu wa bajeti:</strong> Wanataka vipengele vya PMC bila ada za premium za $20/mwezi</li>
-                </ul>
-            </div>
-
-            <div class="use-case">
-                <h3>⚠️ Si Bora Kwa:</h3>
-                <ul>
-                    <li><strong>Triathlete:</strong> Wanahitaji ufuatiliaji wa michezo mingi (tumia TrainingPeaks au Final Surge)</li>
-                    <li><strong>Wanariadha wa kijamii:</strong> Wanataka vilabu, kudos, mlolongo wa shughuli (tumia Strava)</li>
-                    <li><strong>Wanariadha wanaokochwa:</strong> Kocha tayari anatumia jukwaa la TrainingPeaks au Final Surge</li>
-                    <li><strong>Waogeleaji wa kawaida:</strong> Hawana nia ya CSS, sTSS, au uchanganuzi wa mzigo wa mafunzo</li>
-                    <li><strong>Watumiaji wa Garmin tu:</strong> Hawana Apple Watch (Swim Analytics inahitaji iOS)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Maswali Yanayoulizwa Mara kwa Mara</h2>
-
-        <div class="faq-item">
-            <h3>Je, ninaweza kutumia Swim Analytics NA Strava/TrainingPeaks?</h3>
-            <p><strong>Ndiyo—waogeleaji wengi hutumia zote mbili.</strong> Tumia Swim Analytics kwa uchanganuzi wa utendaji (CSS, sTSS, PMC) na Strava kwa kushiriki kijamii na uandikaji wa michezo mingi. Zinajumuisha kila mmoja vizuri.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Je, Swim Analytics inafanya kazi na saa za Garmin?</h3>
-            <p><strong>Hapana.</strong> Swim Analytics inaendana kupitia Apple Health, ambayo inahitaji Apple Watch. Ikiwa unatumia Garmin, fikiria TrainingPeaks au Final Surge badala yake.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Kwa nini Swim Analytics ni bei nafuu sana kuliko TrainingPeaks?</h3>
-            <p>Swim Analytics ni <strong>kuogelea tu</strong>, si michezo mingi. Kwa kuzingatia pekee kuogelea, tunaepuka ugumu na gharama za miundombinu ya kusaidia vipimo vya nguvu ya baiskeli, dynamics ya kukimbia, majukwaa ya kocha, n.k. Hii inaruhusu kutoa PMC + sTSS kwa gharama ya chini ya asilimia 80.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Je, ikiwa mimi ni triathlete—ninapaswa kutumia Swim Analytics?</h3>
-            <p><strong>Labda si kama programu yako kuu.</strong> Triathlete wanafaidika na majukwaa ya michezo mingi kama TrainingPeaks ambayo yanafuatilia baiskeli, kukimbia, na kuogelea pamoja. Hata hivyo, baadhi ya triathlete hutumia Swim Analytics kwa uchanganuzi maalum wa kuogelea (maeneo ya CSS) na TrainingPeaks kwa mzigo wa jumla wa mafunzo.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Je, Swim Analytics ina tier ya bure?</h3>
-            <p>Swim Analytics inatoa <strong>majaribio ya bure ya siku 7</strong> na vipengele kamili (upimaji wa CSS, sTSS, PMC). Baada ya majaribio, ni $3.99/mwezi bila kujitolea kwa muda mrefu. Hakuna tier ya bure—tunaamini wanariadha wanastahili uchanganuzi kamili bila kufunguliwa kwa kipengele cha hiari.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="mt-xl text-center">
-            <h2>Tayari Kujaribu Swim Analytics?</h2>
-            <p class="lead mb-lg">Uzoefu wa maeneo ya mafunzo yanayotegemea CSS, sTSS kiotomatiki, na vipimo vya bei nafuu vya PMC vilivyoundwa maalum kwa waogeleaji.</p>
-            <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Anza Majaribio ya Bure ya Siku 7</a>
-            <p class="mt-md text-secondary">Hakuna kadi ya mkopo inayohitajika • Futa wakati wowote • iOS 16+</p>
-
-            <div class="comparison-links mt-xl">
-                <p class="mb-sm"><strong>Jifunze zaidi:</strong></p>
-                <a href="/sw/css/" class="btn btn-secondary btn-small mr-sm">Kikokotoo cha CSS →</a>
-                <a href="/sw/training-zones/" class="btn btn-secondary btn-small mr-sm">Maeneo ya Mafunzo →</a>
-                <a href="/sw/getting-started/" class="btn btn-secondary btn-small">Kuanza →</a>
-            </div>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Geuza menyu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Swim Analytics dhidi ya Programu Nyingine za Kuogelea - Mlinganisho wa Vipengele</h1><p class="lead">Jinsi Swim Analytics inavyolinganishwa na Strava, TrainingPeaks, Final Surge, na majukwaa mengine ya kufuatilia kuogelea</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-info mb-xl"><h2>Kwa Nini Kuogelea Kunahitaji Uchanganuzi Maalum</h2><p>Programu za jumla za fitness kama Strava na TrainingPeaks zinafanya vizuri kwa baiskeli na kukimbia, lakini <strong>kuogelea kunahitaji vipimo tofauti</strong>. Critical Swim Speed (CSS), maeneo ya mafunzo yanayotegemea kasi, na mekanika ya mvuto havipatikani vizuri katika majukwaa ya michezo mingi. Swim Analytics imeundwa maalum kwa kuogelea, na vipimo vilivyoundwa kwa wanariadha wa bwawa na maji ya wazi.</p></div><h2>Muhtasari wa Haraka wa Mlinganisho</h2><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>Kipengele</th><th>Swim Analytics</th><th>Strava</th><th>TrainingPeaks</th><th>Final Surge</th></tr></thead><tbody><tr><td><strong>Upimaji wa CSS na Zones</strong></td><td class="highlight">✅ Msaada wa asili</td><td>❌ Hapana</td><td>⚠️ Mwongozo tu</td><td>⚠️ Mwongozo tu</td></tr><tr><td><strong>Mahesabu ya sTSS ya Kuogelea</strong></td><td class="highlight">✅ Kiotomatiki</td><td>❌ Hakuna TSS ya kuogelea</td><td>✅ Ndiyo (inahitaji premium)</td><td>✅ Ndiyo</td></tr><tr><td><strong>PMC (CTL/ATL/TSB)</strong></td><td class="highlight">✅ Imejumuishwa bure</td><td>❌ Hapana</td><td>✅ Premium tu ($20/mwezi)</td><td>✅ Premium ($10/mwezi)</td></tr><tr><td><strong>Maeneo ya Mafunzo Yanayotegemea Kasi</strong></td><td class="highlight">✅ Maeneo 7, yanayotegemea CSS</td><td>❌ Maeneo ya jumla</td><td>⚠️ Usanidi wa mwongozo</td><td>⚠️ Usanidi wa mwongozo</td></tr><tr><td><strong>Ujumuishaji wa Apple Watch</strong></td><td class="highlight">✅ kupitia Apple Health</td><td>✅ Asili</td><td>✅ kupitia Garmin/Wahoo</td><td>✅ kupitia kuingiza</td></tr><tr><td><strong>Uchanganuzi wa Mekanika ya Mvuto</strong></td><td class="highlight">✅ DPS, SR, SI</td><td>⚠️ Msingi</td><td>⚠️ Msingi</td><td>⚠️ Msingi</td></tr><tr><td><strong>Vipengele vya Tier ya Bure</strong></td><td class="highlight">Majaribio ya siku 7, kisha $3.99/mwezi</td><td>✅ Bure (uchanganuzi mdogo)</td><td>⚠️ Imehadhiwa sana</td><td>⚠️ Majaribio ya siku 14</td></tr><tr><td><strong>Msaada wa Michezo Mingi</strong></td><td>❌ Kuogelea tu</td><td class="highlight">✅ Michezo yote</td><td class="highlight">✅ Michezo yote</td><td class="highlight">✅ Michezo yote</td></tr><tr><td><strong>Vipengele vya Kijamii</strong></td><td>❌ Hapana</td><td class="highlight">✅ Zaidi</td><td>⚠️ Kocha-mwanachama tu</td><td>⚠️ Mdogo</td></tr></tbody></table></div></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">Swim Analytics dhidi ya Strava</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">Kile Strava Inachofanya Vizuri</h3><div class="card-content"><ul><li><strong>Vipengele vya kijamii:</strong> Vilabu, sehemu, kudos, mlolongo wa shughuli</li><li><strong>Ufuatiliaji wa michezo mingi:</strong> Kukimbia, baiskeli, kuogelea, kupanda milima, n.k.</li><li><strong>Tier ya bure:</strong> Vipengele vya bure vya ukarimu kwa wanariadha wa kawaida</li><li><strong>Watu wengi sana:</strong> Unganisha na mamilioni ya wanariadha ulimwenguni</li><li><strong>Ujumuishaji wa Apple Watch:</strong> Sync ya moja kwa moja kutoka mazoezi</li></ul></div></div><div class="card"><h3 class="card-title">Kile Swim Analytics Inachofanya Vizuri Zaidi</h3><div class="card-content"><ul><li><strong>Vipimo maalum vya kuogelea:</strong> CSS, sTSS, maeneo ya kasi yaliyoundwa kwa mabwawa</li><li><strong>Uchanganuzi wa mzigo wa mafunzo:</strong> CTL/ATL/TSB imejumuishwa (Strava haina hii)</li><li><strong>sTSS kiotomatiki:</strong> Hakuna uingizaji wa data wa mwongozo, inakokotolewa kutoka CSS + kasi</li><li><strong>Mekanika ya mvuto:</strong> Ufuatiliaji wa DPS, kiwango cha mvuto, faharasa ya mvuto</li><li><strong>Maeneo ya mafunzo:</strong> Maeneo 7 ya kibinafsi ya kasi yanayotegemea physiology yako</li></ul></div></div></div><div class="callout mt-xl"><h3>Uamuzi: Swim Analytics dhidi ya Strava</h3><p><strong>Tumia Strava ikiwa:</strong> Unataka vipengele vya kijamii, ufuatiliaji wa michezo mingi, au ufuatiliaji wa bure wa kawaida. Strava ni bora kwa kuandika mazoezi na kuunganisha na marafiki.</p><p><strong>Tumia Swim Analytics ikiwa:</strong> Una uzoefu juu ya utendaji wa kuogelea na unataka maeneo yanayotegemea CSS, sTSS kiotomatiki, na usimamizi wa mzigo wa mafunzo (CTL/ATL/TSB). Strava haikokotoi TSS ya kuogelea au kutoa vipimo vya PMC.</p><p class="mb-0"><strong>Tumia zote mbili:</strong> Waogeleaji wengi hutumia Strava kwa kushiriki kijamii na Swim Analytics kwa ufuatiliaji wa utendaji. Zinajumuisha kila mmoja vizuri.</p></div></div></section><section class="section"><div class="container"><h2 class="mb-xl text-center">Swim Analytics dhidi ya TrainingPeaks</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">Kile TrainingPeaks Inachofanya Vizuri</h3><div class="card-content"><ul><li><strong>PMC kamili:</strong> Chati za kiwango cha viwango cha CTL/ATL/TSB</li><li><strong>Maktaba ya mazoezi:</strong> Maelfu ya mazoezi yaliyopangwa</li><li><strong>Ujumuishaji wa kocha:</strong> Jukwaa la kitaalamu la kocha-mwanachama</li><li><strong>Mafunzo ya michezo mingi:</strong> Inazingatia triathlon na michezo yote mitatu</li><li><strong>Uchanganuzi wa juu:</strong> Nguvu, maeneo ya kiwango cha moyo kwa baiskeli/kukimbia</li></ul></div></div><div class="card"><h3 class="card-title">Kile Swim Analytics Inachofanya Vizuri Zaidi</h3><div class="card-content"><ul><li><strong>Upimaji wa CSS kiotomatiki:</strong> Kikokotoo cha CSS kilichojengwa ndani na uzalishaji wa eneo</li><li><strong>PMC iliyojumuishwa kwa kuogelea:</strong> TrainingPeaks inahitaji $20/mwezi Premium kwa PMC</li><li><strong>Interface iliyorahisishwa:</strong> Swim Analytics inazingatia kuogelea, si kutia hofu</li><li><strong>Apple Watch asili:</strong> Sync ya moja kwa moja kupitia Apple Health (hakuna Garmin inayohitajika)</li><li><strong>Gharama ya chini:</strong> $3.99/mwezi dhidi ya $20/mwezi kwa TrainingPeaks Premium</li></ul></div></div></div><div class="callout mt-xl"><h3>Uamuzi: Swim Analytics dhidi ya TrainingPeaks</h3><p><strong>Tumia TrainingPeaks ikiwa:</strong> Wewe ni triathlete unayeelekeza kwa matukio ya michezo mingi, una kocha anayetumia TrainingPeaks, au unahitaji mazoezi yaliyopangwa ya baiskeli/kukimbia. TrainingPeaks inafanya vizuri kwa mafunzo kamili ya triathlon.</p><p><strong>Tumia Swim Analytics ikiwa:</strong> Wewe ni mwogeleaji (si triathlete) au unataka vipimo maalum vya kuogelea bila kulipa $20/mwezi. Swim Analytics inatoa CTL/ATL/TSB na mahesabu ya sTSS kwa gharama ya chini ya asilimia 80 kuliko TrainingPeaks Premium.</p><p class="mb-0"><strong>Tofauti kuu:</strong> TrainingPeaks ni michezo mingi na vipengele vya kukocha; Swim Analytics ni kuogelea tu na msaada wa asili wa CSS na ufikiaji wa bei nafuu wa PMC.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">Swim Analytics dhidi ya Final Surge</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">Kile Final Surge Inachofanya Vizuri</h3><div class="card-content"><ul><li><strong>Jukwaa la kocha:</strong> Imeundwa kwa mahusiano ya kocha-mwanachama</li><li><strong>Msaada wa TSS:</strong> Mahesabu ya TSS ya kuogelea yanapatikana</li><li><strong>Michezo mingi:</strong> Kuogelea, kukimbia, baiskeli, nguvu</li><li><strong>Kupanga mazoezi:</strong> Mipango ya mafunzo yanayotegemea kalenda</li><li><strong>Zana za mawasiliano:</strong> Ujumbe wa kocha ndani ya programu</li></ul></div></div><div class="card"><h3 class="card-title">Kile Swim Analytics Inachofanya Vizuri Zaidi</h3><div class="card-content"><ul><li><strong>Upimaji wa asili wa CSS:</strong> Kikokotoo kilichojengwa ndani, si uingizaji wa mwongozo</li><li><strong>sTSS kiotomatiki:</strong> Inakokotolewa kutoka data ya Apple Watch, hakuna uandikaji</li><li><strong>Kuzingatia mwanachama mmoja mmoja:</strong> Imeundwa kwa waogeleaji wanaojikocha</li><li><strong>Ujumuishaji wa Apple Watch:</strong> Sync laini ya programu ya Health</li><li><strong>Kuogelea maalum:</strong> Haijapunguzwa na vipengele vya michezo mingi</li></ul></div></div></div><div class="callout mt-xl"><h3>Uamuzi: Swim Analytics dhidi ya Final Surge</h3><p><strong>Tumia Final Surge ikiwa:</strong> Una kocha anayetumia Final Surge, au unakocha wanariadha. Final Surge ni jukwaa la kukocha kwanza, programu ya mwanachama pili.</p><p><strong>Tumia Swim Analytics ikiwa:</strong> Unajikocha mwenyewe na unataka uchanganuzi uliojiendesha. Swim Analytics inahitaji uandikaji wa mwongozo wa sifuri—kila kitu kinaendana na Apple Watch kiotomatiki.</p><p class="mb-0"><strong>Tofauti kuu:</strong> Final Surge inazingatia kocha; Swim Analytics inazingatia mwanachama na kuzingatia automation.</p></div></div></section><section class="section"><div class="container container-narrow"><h2>Kile Kinachofanya Swim Analytics Kuwa ya Kipekee</h2><div class="unique-features"><div class="feature-item"><h3>1. Msaada wa Daraja la Kwanza wa CSS</h3><p>Swim Analytics ni <strong>programu pekee</strong> yenye kikokotoo cha kupima CSS cha asili. Ingiza nyakati zako za 400m na 200m, upate mara moja:</p><ul><li>Kasi ya CSS (k.m., 1:49/100m)</li><li>Maeneo 7 ya kibinafsi ya mafunzo</li><li>Mahesabu kiotomatiki ya sTSS kwa mazoezi yote</li><li>Uchanganuzi wa mazoezi yanayotegemea eneo</li></ul><p class="mt-sm"><strong>Washindani:</strong> Wanahitaji usanidi wa mwongozo wa eneo au hawapatikani maeneo ya kuogelea kabisa.</p></div><div class="feature-item"><h3>2. sTSS Kiotomatiki kwa Kuogelea</h3><p>Programu nyingi zinahitaji uingizaji wa mwongozo wa TSS au hazikokotoi TSS ya kuogelea kabisa. Swim Analytics:</p><ul><li>Inakokotoa kiotomatiki sTSS kutoka kila zoezi la Apple Watch</li><li>Inatumia CSS + kasi ya zoezi kuamua Intensity Factor</li><li>Hakuna uandikaji wa mwongozo unaohitajika—weka CSS mara moja, usahau juu yake</li></ul><p class="mt-sm"><strong>Strava:</strong> Haikokotoi TSS ya kuogelea. <strong>TrainingPeaks:</strong> Inahitaji $20/mwezi Premium. <strong>Final Surge:</strong> Inahitaji uingizaji wa mwongozo.</p></div><div class="feature-item"><h3>3. Ufikiaji wa Bei Nafuu wa PMC</h3><p>Performance Management Chart (CTL/ATL/TSB) ni <strong>muhimu kwa usimamizi wa mzigo wa mafunzo</strong>, lakini ghali katika majukwaa mengine:</p><ul><li><strong>Swim Analytics:</strong> Imejumuishwa kwa $3.99/mwezi</li><li><strong>TrainingPeaks:</strong> Inahitaji $20/mwezi Premium ($240/mwaka)</li><li><strong>Strava:</strong> Haipatikani kwa bei yoyote</li><li><strong>Final Surge:</strong> $10/mwezi premium ($120/mwaka)</li></ul><p class="mt-sm">Swim Analytics inatoa CTL/ATL/TSB kwa <strong>gharama ya chini ya asilimia 80</strong> kuliko TrainingPeaks.</p></div><div class="feature-item"><h3>4. Asili ya Apple Watch</h3><p>Swim Analytics inaendana moja kwa moja na Apple Health—hakuna saa ya Garmin inayohitajika:</p><ul><li>Inafanya kazi na Apple Watch yoyote (Series 2+)</li><li>Uagizaji kiotomatiki wa mazoezi kutoka programu ya Health</li><li>Kasi ya lap kwa lap, hesabu ya mvuto, SWOLF</li><li>Hakuna vifaa vya ziada vinavyohitajika</li></ul><p class="mt-sm"><strong>TrainingPeaks:</strong> Inahitaji kifaa cha Garmin/Wahoo ($200-800). <strong>Strava:</strong> Inafanya kazi na Apple Watch lakini haina uchanganuzi wa kuogelea.</p></div><div class="feature-item"><h3>5. Kuzingatia Kuogelea Tu</h3><p>Programu za michezo mingi zinajaribu kufanya kila kitu, mara nyingi zinafanya kuogelea vibaya. Swim Analytics <strong>imeundwa pekee kwa kuogelea</strong>:</p><ul><li>Interface iliyoundwa kuzunguka mtiririko wa mafunzo ya bwawa</li><li>Vipimo muhimu kwa waogeleaji (CSS, sTSS, mekanika ya mvuto)</li><li>Hakuna kuvimba kwa kipengele kutoka ufuatiliaji wa baiskeli/kukimbia/kupanda</li><li>Masasisho yanayozingatia maboresho ya kuogelea</li></ul></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Mlinganisho wa Bei (Gharama ya Kila Mwaka)</h2><div class="pricing-grid"><div class="pricing-card"><h3>Swim Analytics</h3><div class="price">$47.88/mwaka</div><div class="price-note">($3.99/mwezi baada ya majaribio ya siku 7)</div><ul class="features-included"><li>✅ Upimaji wa CSS na maeneo</li><li>✅ Mahesabu kiotomatiki ya sTSS</li><li>✅ PMC (CTL/ATL/TSB)</li><li>✅ Mekanika ya mvuto (DPS, SR, SI)</li><li>✅ Sync ya Apple Watch</li><li>❌ Michezo mingi</li><li>❌ Vipengele vya kijamii</li></ul></div><div class="pricing-card"><h3>Strava</h3><div class="price">$0 - $80/mwaka</div><div class="price-note">(Bure au $8/mwezi Summit)</div><ul class="features-included"><li>✅ Ufuatiliaji wa msingi wa mazoezi</li><li>✅ Vipengele vya kijamii (vilabu, kudos)</li><li>✅ Msaada wa michezo mingi</li><li>❌ Hakuna msaada wa CSS</li><li>❌ Hakuna TSS ya kuogelea</li><li>❌ Hakuna PMC</li><li>❌ Hakuna uchanganuzi wa kuogelea</li></ul></div><div class="pricing-card"><h3>TrainingPeaks</h3><div class="price">$240/mwaka</div><div class="price-note">($20/mwezi Premium)</div><ul class="features-included"><li>✅ PMC (CTL/ATL/TSB)</li><li>✅ Mahesabu ya TSS</li><li>✅ Uchanganuzi wa michezo mingi</li><li>✅ Jukwaa la kocha</li><li>⚠️ Hakuna upimaji wa asili wa CSS</li><li>⚠️ Usanidi wa mwongozo wa eneo</li><li>💰 Gharama ya mara 5 ya Swim Analytics</li></ul></div><div class="pricing-card"><h3>Final Surge</h3><div class="price">$120/mwaka</div><div class="price-note">($10/mwezi Premium)</div><ul class="features-included"><li>✅ Ufuatiliaji wa TSS</li><li>✅ Zana za kocha-mwanachama</li><li>✅ Michezo mingi</li><li>⚠️ Uingizaji wa mwongozo wa sTSS</li><li>⚠️ Hakuna upimaji wa asili wa CSS</li><li>💰 Gharama ya mara 2.5 ya Swim Analytics</li></ul></div></div><div class="callout mt-xl"><h3>💡 Uchanganuzi wa Gharama-Faida</h3><p><strong>Ikiwa wewe ni mwanachama wa kuogelea tu:</strong> Swim Analytics inatoa PMC + sTSS + maeneo ya CSS kwa $48/mwaka. TrainingPeaks inatoza $240/mwaka kwa vipengele sawa (ghali zaidi mara 5).</p><p class="mb-0"><strong>Ikiwa wewe ni triathlete:</strong> Fikiria TrainingPeaks au Final Surge kwa msaada wa michezo mingi. Swim Analytics ni kuogelea tu na haitafuatilia mafunzo ya baiskeli/kukimbia.</p></div></div></section><section class="section"><div class="container container-narrow"><h2>Nani Anapaswa Kutumia Swim Analytics?</h2><div class="use-cases"><div class="use-case"><h3>✅ Kamili Kwa:</h3><ul><li><strong>Waogeleaji washindani:</strong> Masters, kikundi cha umri, wanariadha wa chuo kikuu wanaozingatia utendaji wa kuogelea</li><li><strong>Wanariadha wanaojikocha:</strong> Waogeleaji wanaosimamia mafunzo yao wenyewe bila kocha</li><li><strong>Wafanyaji wa mafunzo wanaotegemea data:</strong> Wanariadha wanaotaka maeneo ya CSS, sTSS, na vipimo vya PMC</li><li><strong>Watumiaji wa Apple Watch:</strong> Waogeleaji wanayotumia tayari Apple Watch kwa ufuatiliaji wa bwawa</li><li><strong>Wanariadha wenye ufahamu wa bajeti:</strong> Wanataka vipengele vya PMC bila ada za premium za $20/mwezi</li></ul></div><div class="use-case"><h3>⚠️ Si Bora Kwa:</h3><ul><li><strong>Triathlete:</strong> Wanahitaji ufuatiliaji wa michezo mingi (tumia TrainingPeaks au Final Surge)</li><li><strong>Wanariadha wa kijamii:</strong> Wanataka vilabu, kudos, mlolongo wa shughuli (tumia Strava)</li><li><strong>Wanariadha wanaokochwa:</strong> Kocha tayari anatumia jukwaa la TrainingPeaks au Final Surge</li><li><strong>Waogeleaji wa kawaida:</strong> Hawana nia ya CSS, sTSS, au uchanganuzi wa mzigo wa mafunzo</li><li><strong>Watumiaji wa Garmin tu:</strong> Hawana Apple Watch (Swim Analytics inahitaji iOS)</li></ul></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Maswali Yanayoulizwa Mara kwa Mara</h2><div class="faq-item"><h3>Je, ninaweza kutumia Swim Analytics NA Strava/TrainingPeaks?</h3><p><strong>Ndiyo—waogeleaji wengi hutumia zote mbili.</strong> Tumia Swim Analytics kwa uchanganuzi wa utendaji (CSS, sTSS, PMC) na Strava kwa kushiriki kijamii na uandikaji wa michezo mingi. Zinajumuisha kila mmoja vizuri.</p></div><div class="faq-item"><h3>Je, Swim Analytics inafanya kazi na saa za Garmin?</h3><p><strong>Hapana.</strong> Swim Analytics inaendana kupitia Apple Health, ambayo inahitaji Apple Watch. Ikiwa unatumia Garmin, fikiria TrainingPeaks au Final Surge badala yake.</p></div><div class="faq-item"><h3>Kwa nini Swim Analytics ni bei nafuu sana kuliko TrainingPeaks?</h3><p>Swim Analytics ni <strong>kuogelea tu</strong>, si michezo mingi. Kwa kuzingatia pekee kuogelea, tunaepuka ugumu na gharama za miundombinu ya kusaidia vipimo vya nguvu ya baiskeli, dynamics ya kukimbia, majukwaa ya kocha, n.k. Hii inaruhusu kutoa PMC + sTSS kwa gharama ya chini ya asilimia 80.</p></div><div class="faq-item"><h3>Je, ikiwa mimi ni triathlete—ninapaswa kutumia Swim Analytics?</h3><p><strong>Labda si kama programu yako kuu.</strong> Triathlete wanafaidika na majukwaa ya michezo mingi kama TrainingPeaks ambayo yanafuatilia baiskeli, kukimbia, na kuogelea pamoja. Hata hivyo, baadhi ya triathlete hutumia Swim Analytics kwa uchanganuzi maalum wa kuogelea (maeneo ya CSS) na TrainingPeaks kwa mzigo wa jumla wa mafunzo.</p></div><div class="faq-item"><h3>Je, Swim Analytics ina tier ya bure?</h3><p>Swim Analytics inatoa <strong>majaribio ya bure ya siku 7</strong> na vipengele kamili (upimaji wa CSS, sTSS, PMC). Baada ya majaribio, ni $3.99/mwezi bila kujitolea kwa muda mrefu. Hakuna tier ya bure—tunaamini wanariadha wanastahili uchanganuzi kamili bila kufunguliwa kwa kipengele cha hiari.</p></div></div></section><section class="section"><div class="container container-narrow"><div class="mt-xl text-center"><h2>Tayari Kujaribu Swim Analytics?</h2><p class="lead mb-lg">Uzoefu wa maeneo ya mafunzo yanayotegemea CSS, sTSS kiotomatiki, na vipimo vya bei nafuu vya PMC vilivyoundwa maalum kwa waogeleaji.</p><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Anza Majaribio ya Bure ya Siku 7</a><p class="mt-md text-secondary">Hakuna kadi ya mkopo inayohitajika • Futa wakati wowote • iOS 16+</p><div class="comparison-links mt-xl"><p class="mb-sm"><strong>Jifunze zaidi:</strong></p><a href="/sw/css/" class="btn btn-secondary btn-small mr-sm">Kikokotoo cha CSS →</a><a href="/sw/training-zones/" class="btn btn-secondary btn-small mr-sm">Maeneo ya Mafunzo →</a><a href="/sw/getting-started/" class="btn btn-secondary btn-small">Kuanza →</a></div></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link active"
+                </a><a href="/sw/" class="lang-link active"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. Haki zote zimehifadhiwa
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/sw/privacy/">Faragha</a></li>
-                <li><a href="/sw/terms/">Masharti</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>Tovuti hii hutumia vidakuzi kuboresha uzoefu wako.</p>
-            <a href="/sw/privacy/" class="text-sm">Jifunze zaidi</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Kataa</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Kubali</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=540c31aabebc" defer></script>
-  <script src="../../assets/js/search.min.js?v=540c31aabebc" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/sw/privacy/">Faragha</a></li><li><a href="/sw/terms/">Masharti</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Tovuti hii hutumia vidakuzi kuboresha uzoefu wako.</p><a href="/sw/privacy/" class="text-sm">Jifunze zaidi</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Kataa</button><button id="cookie-accept" class="btn btn-primary btn-small">Kubali</button></div></div></div><script src="../../assets/js/core.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/search.min.js?v=3d8a14d801fb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>
