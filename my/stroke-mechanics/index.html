@@ -1,61 +1,251 @@
-<!DOCTYPE html><html lang="my" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
-    rel="stylesheet"><title>กลศาสตร์จังหวะว่ายน้ำ: DPS, อัตราจังหวะและดัชนีจังหวะ</title><meta name="description" content="ทำความเข้าใจกลศาสตร์จังหวะว่ายน้ำ: Distance Per Stroke (DPS), Stroke Rate (SR) และ Stroke Index (SI) เรียนรู้วิธีปรับปรุงประสิทธิภาพและความเร็วผ่านการวิเคราะห์ทางเทคนิค"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="กลศาสตร์ว่ายน้ำ, လေဖြတ်နှုန်းအကွာအဝေး, อัตราจังหวะ, ดัชนีจังหวะ, เทคนิคว่ายน้ำ"><link rel="canonical" href="https://swim.analyticszone.app/my/stroke-mechanics/"><meta property="article:published_time" content="2025-10-12T10:00:00Z"><meta property="article:modified_time" content="2026-01-04T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/my/stroke-mechanics/"><meta property="og:title" content="กลศาสตร์จังหวะว่ายน้ำ: DPS, อัตราจังหวะและดัชนีจังหวะ"><meta property="og:description" content="ทำความเข้าใจกลศาสตร์จังหวะว่ายน้ำ: Distance Per Stroke (DPS), Stroke Rate (SR) และ Stroke Index (SI) เรียนรู้วิธีปรับปรุงประสิทธิภาพและความเร็วผ่านการวิเคราะห์ทางเทคนิค"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="my_MM"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/my/stroke-mechanics/"><meta name="twitter:title" content="กลศาสตร์จังหวะว่ายน้ำ: DPS, อัตราจังหวะและดัชนีจังหวะ"><meta name="twitter:description" content="ทำความเข้าใจกลศาสตร์จังหวะว่ายน้ำ: Distance Per Stroke (DPS), Stroke Rate (SR) และ Stroke Index (SI) เรียนรู้วิธีปรับปรุงประสิทธิภาพและความเร็วผ่านการวิเคราะห์ทางเทคนิค"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/stroke-mechanics/"><link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/stroke-mechanics/"><link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/stroke-mechanics/"><link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/stroke-mechanics/"><link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/stroke-mechanics/"><link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/stroke-mechanics/"><link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/stroke-mechanics/"><link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/stroke-mechanics/"><link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/stroke-mechanics/"><link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/stroke-mechanics/"><link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/stroke-mechanics/"><link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/stroke-mechanics/"><link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/stroke-mechanics/"><link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/stroke-mechanics/"><link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/stroke-mechanics/"><link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/stroke-mechanics/"><link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/stroke-mechanics/"><link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/stroke-mechanics/"><link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/stroke-mechanics/"><link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/stroke-mechanics/"><link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/stroke-mechanics/"><link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/stroke-mechanics/"><link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/stroke-mechanics/"><link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/stroke-mechanics/"><link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/stroke-mechanics/"><link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/stroke-mechanics/"><link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/stroke-mechanics/"><link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/stroke-mechanics/"><link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/stroke-mechanics/"><link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/stroke-mechanics/"><link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/stroke-mechanics/"><link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/stroke-mechanics/"><link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/stroke-mechanics/"><link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/stroke-mechanics/"><link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/stroke-mechanics/"><link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/stroke-mechanics/"><link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/stroke-mechanics/"><link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/stroke-mechanics/"><link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/stroke-mechanics/"><link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/stroke-mechanics/"><link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/stroke-mechanics/"><link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/stroke-mechanics/"><link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/stroke-mechanics/"><link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/stroke-mechanics/"><link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/stroke-mechanics/"><link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/stroke-mechanics/"><link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/stroke-mechanics/"><link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/stroke-mechanics/"><link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/stroke-mechanics/"><link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/stroke-mechanics/"><link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/stroke-mechanics/"><link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/stroke-mechanics/"><link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/stroke-mechanics/"><link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/stroke-mechanics/"><link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/stroke-mechanics/"><link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/stroke-mechanics/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
+<!DOCTYPE html>
+<html lang="my" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+    rel="stylesheet">
+
+  
+  <title>กลศาสตร์จังหวะว่ายน้ำ: DPS, อัตราจังหวะและดัชนีจังหวะ</title>
+  <meta name="description" content="ทำความเข้าใจกลศาสตร์จังหวะว่ายน้ำ: Distance Per Stroke (DPS), Stroke Rate (SR) และ Stroke Index (SI) เรียนรู้วิธีปรับปรุงประสิทธิภาพและความเร็วผ่านการวิเคราะห์ทางเทคนิค">
+  <meta name="author" content="AnalyticsZone Team">
+
+  
+  
+  <meta name="keywords" content="กลศาสตร์ว่ายน้ำ, လေဖြတ်နှုန်းအကွာအဝေး, อัตราจังหวะ, ดัชนีจังหวะ, เทคนิคว่ายน้ำ">
+  
+
+  
+  <link rel="canonical" href="https://swim.analyticszone.app/my/stroke-mechanics/">
+
+  
+  
+  <meta property="article:published_time" content="2025-10-12T10:00:00Z">
+  <meta property="article:modified_time" content="2026-03-24T14:30:00Z">
+  <meta property="article:author" content="AnalyticsZone Team">
+  
+
+  
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://swim.analyticszone.app/my/stroke-mechanics/">
+  <meta property="og:title" content="กลศาสตร์จังหวะว่ายน้ำ: DPS, อัตราจังหวะและดัชนีจังหวะ">
+  <meta property="og:description" content="ทำความเข้าใจกลศาสตร์จังหวะว่ายน้ำ: Distance Per Stroke (DPS), Stroke Rate (SR) และ Stroke Index (SI) เรียนรู้วิธีปรับปรุงประสิทธิภาพและความเร็วผ่านการวิเคราะห์ทางเทคนิค">
+  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
+  <meta property="og:locale" content="my_MM">
+  <meta property="og:site_name" content="Swim Analytics">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://swim.analyticszone.app/my/stroke-mechanics/">
+  <meta name="twitter:title" content="กลศาสตร์จังหวะว่ายน้ำ: DPS, อัตราจังหวะและดัชนีจังหวะ">
+  <meta name="twitter:description" content="ทำความเข้าใจกลศาสตร์จังหวะว่ายน้ำ: Distance Per Stroke (DPS), Stroke Rate (SR) และ Stroke Index (SI) เรียนรู้วิธีปรับปรุงประสิทธิภาพและความเร็วผ่านการวิเคราะห์ทางเทคนิค">
+  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
+  
+  <meta name="twitter:site" content="@swimanalytics">
+  <meta name="twitter:creator" content="@swimanalytics">
+  
+
+  
+  
+  <link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/stroke-mechanics/">
+  
+  <link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/stroke-mechanics/">
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.json">
+  <meta name="theme-color" content="#2563EB">
+  
+  
+  
+  
+  <meta name="robots" content="index, follow">
+  
+
+  
+  
+  
+  <meta name="apple-itunes-app" content="app-id=6753306284">
+  
+
+  
+  <style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -314,7 +504,20 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=635348535bde"><script type="application/ld+json">
+</style>
+
+  
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  
+  <link rel="stylesheet" href="../../assets/css/main.min.css?v=19fdca55b3da">
+
+  
+  
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -349,7 +552,10 @@ img[width][height] {
     
   ]
 }
-</script><script type="application/ld+json">
+</script>
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -358,7 +564,11 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "my"
 }
-</script><script type="application/ld+json">
+</script>
+
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -373,7 +583,12 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script><script type="application/ld+json">
+</script>
+
+
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -402,7 +617,11 @@ img[width][height] {
     
   ]
 }
-</script><script type="application/ld+json">
+</script>
+
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -416,7 +635,7 @@ img[width][height] {
     "url": "https://swim.analyticszone.app"
   },
   "datePublished": "2025-10-12",
-  "dateModified": "2026-01-04",
+  "dateModified": "2026-03-24",
   "keywords": ["กลศาสตร์ว่ายน้ำ", "လေဖြတ်နှုန်းအကွာအဝေး", "อัตราจังหวะ", "ดัชนีจังหวะ", "เทคนิคว่ายน้ำ"],
   "about": [
     {
@@ -445,7 +664,14 @@ img[width][height] {
     }
   ]
 }
-</script><script type="application/ld+json">
+</script>
+
+
+
+
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -464,13 +690,23 @@ img[width][height] {
     }
   },
   "datePublished": "2025-10-12",
-  "dateModified": "2026-01-04",
+  "dateModified": "2026-03-24",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://swim.analyticszone.app/my/stroke-mechanics/"
   }
 }
-</script><script>
+</script>
+
+
+
+
+
+  
+  
+
+  
+  <script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -484,337 +720,1341 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script></head><body><a href="#main-content" class="skip-link">ข้ามไปยังเนื้อหา</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/my/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/my/" 
+  </script>
+</head>
+
+<body>
+  
+  <a href="#main-content" class="skip-link">ข้ามไปยังเนื้อหา</a>
+
+  
+  <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/my/" class="site-logo">
+                <picture>
+                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)">
+                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
+                </picture>
+                <span class="logo-text">Swim Analytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <div class="nav-group-left">
+                    <ul>
+                        
+                        <li>
+                            
+                            <a href="/my/" 
                                 aria-current="">
                                 หน้าแรก
-                            </a></li><li class="has-submenu" ><a href="/my/getting-started/" class="nav-label">เรียนรู้</a><ul class="submenu"><li><a href="/my/getting-started/" 
+                            </a>
+                            
+                            </li>
+                            
+                        <li class="has-submenu" >
+                            
+                            
+                            <a href="/my/getting-started/" class="nav-label">เรียนรู้</a>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/my/getting-started/" 
                                         aria-current="">
                                         เริ่มต้น
-                                    </a></li><li><a href="/my/css/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/my/css/" 
                                         aria-current="">
                                         CSS
-                                    </a></li><li><a href="/my/training-zones/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/my/training-zones/" 
                                         aria-current="">
                                         โซนการฝึก
-                                    </a></li><li><a href="/my/training-load/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/my/training-load/" 
                                         aria-current="">
                                         ภาระการฝึก
-                                    </a></li><li><a href="/my/stss-calculator/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/my/stss-calculator/" 
                                         aria-current="">
                                         เครื่องคำนวณ sTSS
-                                    </a></li></ul></li><li class="has-submenu" ><a href="/my/research/" class="nav-label">วิทยาศาสตร์</a><ul class="submenu"><li><a href="/my/research/" 
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            
+                            </li>
+                            
+                        <li class="has-submenu" >
+                            
+                            
+                            <a href="/my/research/" class="nav-label">วิทยาศาสตร์</a>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/my/research/" 
                                         aria-current="">
                                         การวิจัย
-                                    </a></li><li><a href="/my/formulas/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/my/formulas/" 
                                         aria-current="">
                                         สูตร
-                                    </a></li><li><a href="/my/efficiency/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/my/efficiency/" 
                                         aria-current="">
                                         ประสิทธิภาพ
-                                    </a></li><li><a href="/my/stroke-mechanics/" class="active" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/my/stroke-mechanics/" class="active" 
                                         aria-current="page">
                                         กลศาสตร์การว่าย
-                                    </a></li><li><a href="/my/bibliography/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/my/bibliography/" 
                                         aria-current="">
                                         บรรณานุกรม
-                                    </a></li></ul></li><li><a href="/my/contact/" 
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            
+                            </li>
+                            
+                        <li>
+                            
+                            <a href="/my/contact/" 
                                 aria-current="">
                                 ติดต่อ
-                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a>
+                            
+                            </li>
+                            
+                    </ul>
+
+                    
+                    <div class="search-container">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="เลือกภาษา"><option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                    </div>
+
+                    
+                    <select class="language-selector" id="language-select" aria-label="เลือกภาษา">
+                        
+                        <option value="af" >
                             Afrikaans
-                        </option><option value="am" >
+                        </option>
+                        
+                        <option value="am" >
                             አማርኛ
-                        </option><option value="ar" >
+                        </option>
+                        
+                        <option value="ar" >
                             العربية
-                        </option><option value="bg" >
+                        </option>
+                        
+                        <option value="bg" >
                             Български
-                        </option><option value="bn" >
+                        </option>
+                        
+                        <option value="bn" >
                             বাংলা
-                        </option><option value="ca" >
+                        </option>
+                        
+                        <option value="ca" >
                             Català
-                        </option><option value="cs" >
+                        </option>
+                        
+                        <option value="cs" >
                             Čeština
-                        </option><option value="da" >
+                        </option>
+                        
+                        <option value="da" >
                             Dansk
-                        </option><option value="de" >
+                        </option>
+                        
+                        <option value="de" >
                             Deutsch
-                        </option><option value="el" >
+                        </option>
+                        
+                        <option value="el" >
                             Ελληνικά
-                        </option><option value="en" >
+                        </option>
+                        
+                        <option value="en" >
                             English
-                        </option><option value="es" >
+                        </option>
+                        
+                        <option value="es" >
                             Español
-                        </option><option value="et" >
+                        </option>
+                        
+                        <option value="et" >
                             Eesti
-                        </option><option value="fa" >
+                        </option>
+                        
+                        <option value="fa" >
                             فارسی
-                        </option><option value="fi" >
+                        </option>
+                        
+                        <option value="fi" >
                             Suomi
-                        </option><option value="fr" >
+                        </option>
+                        
+                        <option value="fr" >
                             Français
-                        </option><option value="gu" >
+                        </option>
+                        
+                        <option value="gu" >
                             ગુજરાતી
-                        </option><option value="ha" >
+                        </option>
+                        
+                        <option value="ha" >
                             Hausa
-                        </option><option value="he" >
+                        </option>
+                        
+                        <option value="he" >
                             עברית
-                        </option><option value="hi" >
+                        </option>
+                        
+                        <option value="hi" >
                             हिन्दी
-                        </option><option value="hr" >
+                        </option>
+                        
+                        <option value="hr" >
                             Hrvatski
-                        </option><option value="hu" >
+                        </option>
+                        
+                        <option value="hu" >
                             Magyar
-                        </option><option value="id" >
+                        </option>
+                        
+                        <option value="id" >
                             Bahasa Indonesia
-                        </option><option value="is" >
+                        </option>
+                        
+                        <option value="is" >
                             Íslenska
-                        </option><option value="it" >
+                        </option>
+                        
+                        <option value="it" >
                             Italiano
-                        </option><option value="ja" >
+                        </option>
+                        
+                        <option value="ja" >
                             日本語
-                        </option><option value="km" >
+                        </option>
+                        
+                        <option value="km" >
                             ភាសាខ្មែរ
-                        </option><option value="kn" >
+                        </option>
+                        
+                        <option value="kn" >
                             ಕನ್ನಡ
-                        </option><option value="ko" >
+                        </option>
+                        
+                        <option value="ko" >
                             Korean
-                        </option><option value="lt" >
+                        </option>
+                        
+                        <option value="lt" >
                             Lietuvių
-                        </option><option value="lv" >
+                        </option>
+                        
+                        <option value="lv" >
                             Latviešu
-                        </option><option value="ms" >
+                        </option>
+                        
+                        <option value="ms" >
                             Bahasa Melayu
-                        </option><option value="my" selected>
+                        </option>
+                        
+                        <option value="my" selected>
                             မြန်မာဘာသာ
-                        </option><option value="nb" >
+                        </option>
+                        
+                        <option value="nb" >
                             Norsk Bokmål
-                        </option><option value="nl" >
+                        </option>
+                        
+                        <option value="nl" >
                             Nederlands
-                        </option><option value="pl" >
+                        </option>
+                        
+                        <option value="pl" >
                             Polski
-                        </option><option value="pt" >
+                        </option>
+                        
+                        <option value="pt" >
                             Português
-                        </option><option value="pt-br" >
+                        </option>
+                        
+                        <option value="pt-br" >
                             Português (Brasil)
-                        </option><option value="ro" >
+                        </option>
+                        
+                        <option value="ro" >
                             Română
-                        </option><option value="ru" >
+                        </option>
+                        
+                        <option value="ru" >
                             Русский
-                        </option><option value="sk" >
+                        </option>
+                        
+                        <option value="sk" >
                             Slovenčina
-                        </option><option value="sl" >
+                        </option>
+                        
+                        <option value="sl" >
                             Slovenščina
-                        </option><option value="sr" >
+                        </option>
+                        
+                        <option value="sr" >
                             Српски
-                        </option><option value="sv" >
+                        </option>
+                        
+                        <option value="sv" >
                             Svenska
-                        </option><option value="sw" >
+                        </option>
+                        
+                        <option value="sw" >
                             Kiswahili
-                        </option><option value="ta" >
+                        </option>
+                        
+                        <option value="ta" >
                             தமிழ்
-                        </option><option value="te" >
+                        </option>
+                        
+                        <option value="te" >
                             తెలుగు
-                        </option><option value="th" >
+                        </option>
+                        
+                        <option value="th" >
                             ไทย
-                        </option><option value="tl" >
+                        </option>
+                        
+                        <option value="tl" >
                             Tagalog
-                        </option><option value="tr" >
+                        </option>
+                        
+                        <option value="tr" >
                             Türkçe
-                        </option><option value="uk" >
+                        </option>
+                        
+                        <option value="uk" >
                             Українська
-                        </option><option value="ur" >
+                        </option>
+                        
+                        <option value="ur" >
                             اردو
-                        </option><option value="vi" >
+                        </option>
+                        
+                        <option value="vi" >
                             Tiếng Việt
-                        </option><option value="yo" >
+                        </option>
+                        
+                        <option value="yo" >
                             Yorùbá
-                        </option><option value="zh" >
+                        </option>
+                        
+                        <option value="zh" >
                             Chinese
-                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor"><path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor"><path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option>
+                        
+                    </select>
+                </div>
+
+                <div class="nav-group-right">
+                    
+
+
+                    
+                    <div class="header-app-buttons">
+                        
+                        
+                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                            </svg>
+                        </a>
+                        
+
+                        
+                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
+                            </svg>
+                        </a>
+                        
+                        
+                    </div>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="suite-menu-container">
+                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="สลับเมนู"
-                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/my/">หน้าแรก</a></li><li><a href="/my/research/">วิทยาศาสตร์</a></li><li><span aria-current="page">กลศาสตร์การว่าย</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>လေဖြတ်မက္ကင်းနစ်</h1><p class="lead">ရေကူးအမြန်နှုန်း၏ဇီဝမက္ကင်းနစ်</p></div></section><section class="section"><div class="container container-narrow"><h2>ရေကူးအမြန်နှုန်း၏အခြေခံညီမျှခြင်း</h2><div class="formula-box formula-highlight"><h3>အလျင် ညီမျှခြင်း</h3><div class="formula formula-large">အလျင် = Stroke Rate (SR) × Distance Per Stroke (DPS)</div><p class="formula-explanation"><strong>ဘာသာပြန်-</strong>သင်ဘယ်လောက်မြန်မြန်ကူးနိုင်သလဲဆိုတဲ့အပေါ်မှာ မူတည်ပါတယ်။<em>မကြာခဏ</em>you stroke (SR) ဘယ်လောက်နဲ့ မြှောက်လဲ။<em>အဝေး</em>သင်သည် လေဖြတ်ခြင်း (DPS) နှုန်းဖြင့် ခရီးသွားသည်။</p></div><p class="lead">ဤလိမ်လည်လှည့်ဖြားသောရိုးရှင်းသောညီမျှခြင်းသည် ရေကူးခြင်းစွမ်းဆောင်ရည်အားလုံးကို အုပ်ချုပ်သည်။ ပိုမိုမြန်ဆန်စေရန်၊ သင်သည်-</p><ul class="lead-list"><li><strong>လေဖြတ်နှုန်းကို မြှင့်တင်ပါ။</strong>DPS ကိုထိန်းသိမ်းထားစဉ် (အလှည့်အပြောင်းပိုမြန်သည်)</li><li><strong>လေဖြတ်ခြင်းအတွက် အကွာအဝေးကို တိုးပေးပါ။</strong>(လေဖြတ်လျှင် ခရီးပိုဝေးသွားသည်) SR ကို ထိန်းသိမ်းထားစဉ်</li><li><strong>နှစ်ခုစလုံးကို အကောင်းဆုံးဖြစ်အောင်လုပ်ပါ။</strong>(စံပြချဉ်းကပ်မှု)</li></ul><div class="callout callout-warning"><h3>⚖️ အပေးအယူလုပ်ခြင်း။</h3><p>SR နှင့် DPS သည် ယေဘူယျအားဖြင့်ဖြစ်သည်။<strong>ပြောင်းပြန်ဆက်စပ်နေသည်။</strong>. တစ်ခုတိုးလာသည်နှင့်အမျှ အခြားတစ်ခုသည် လျော့နည်းလာတတ်သည်။ ရေကူးခြင်းအနုပညာသည် သင့်ဖြစ်ရပ်၊ ခန္ဓာကိုယ်အမျိုးအစားနှင့် လက်ရှိကြံ့ခိုင်မှုအဆင့်အတွက် အကောင်းဆုံးဟန်ချက်ညီမှုကို ရှာဖွေခြင်းဖြစ်သည်။</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">လေဖြတ်နှုန်း (SR)</h2><div class="grid grid-2"><div><h3>Stroke Rate ဆိုတာဘာလဲ။</h3><p><strong>လေဖြတ်နှုန်း (SR)</strong>ဟုလည်း ခေါ်သည်။<em>cadence</em>သို့မဟုတ်<em>tempo</em>တစ်မိနစ်လျှင် သင်လုပ်ဆောင်သည့် လေဖြတ်ခြင်း စက်ဝန်း မည်မျှရှိသည်ကို တိုင်းတာသည်။<strong>တစ်မိနစ်လျှင် လေဖြတ်ခြင်း (SPM)</strong>.</p><div class="formula-box"><h4>ဖော်မြူလာ</h4><div class="formula">SR = 60 / Cycle Time</div><p>သို့မဟုတ်</p><div class="formula">SR = (Number of Strokes / Time in seconds) × 60</div><div class="example-box mt-md"><h4>ဥပမာ-</h4><p>သင့်လေဖြတ်ခြင်းသံသရာသည် 1 စက္ကန့်ကြာလျှင်၊</p><div class="calculation">SR=60/1=<strong>60 SPM</strong></div><p>25 စက္ကန့်အတွင်း လေဖြတ်ခြင်း 30 ပြီးပါက</p><div class="calculation">SR = (30/25)×60=<strong>72 SPM</strong></div></div></div><div class="callout callout-info"><h4>📝 လေဖြတ်ခြင်း ရေတွက်ခြင်း မှတ်ချက်</h4><p>အဘို့<strong>အလွတ်စတိုင်/နောက်ပြန်ဆွဲ-</strong>လက်မောင်းတစ်ခုချင်းစီကို ထည့်သွင်းရေတွက်ပါ (ဘယ် + ညာ = 2 ကြိမ်)</p><p>အဘို့<strong>ဖားကူး/လိပ်ပြာ-</strong>လက်နှစ်ဖက်ကို တပြိုင်တည်း လှုပ်ရှားခြင်း (တစ်ချက်ဆွဲ = ၁ ကြိမ်)</p></div></div><div><h3>ဖြစ်ရပ်အလိုက် ပုံမှန်လေဖြတ်နှုန်းများ</h3><div class="sr-benchmarks"><h4>Freestyle Sprint (50m)</h4><div class="benchmark-row"><span class="label">အထက်တန်းစား-</span><span class="value">120-150 SPM</span></div><div class="benchmark-row"><span class="label">အသက်-အုပ်စု-</span><span class="value">100-120 SPM</span></div><h4>အလွတ် 100 မီတာ</h4><div class="benchmark-row"><span class="label">အထက်တန်းစား-</span><span class="value">95-110 SPM</span></div><div class="benchmark-row"><span class="label">အသက်-အုပ်စု-</span><span class="value">85-100 SPM</span></div><h4>အလယ်အကွာအဝေး (200-800m)</h4><div class="benchmark-row"><span class="label">အထက်တန်းစား-</span><span class="value">70-100 SPM</span></div><div class="benchmark-row"><span class="label">အသက်-အုပ်စု-</span><span class="value">60-85 SPM</span></div><h4>အကွာအဝေး (1500m+ / Open Water)</h4><div class="benchmark-row"><span class="label">အထက်တန်းစား-</span><span class="value">60-100 SPM</span></div><div class="benchmark-row"><span class="label">အသက်-အုပ်စု-</span><span class="value">50-75 SPM</span></div></div><div class="callout callout-tip"><h4>🎯 လိင်ကွဲပြားမှုများ</h4><p>အထက်တန်းစား အမျိုးသား 50m အခမဲ့- ~65-70 SPM<br/>အထက်တန်းစား အမျိုးသမီး 50 မီတာ အခမဲ့- ~60-64 SPM<br/>အထက်တန်းစား အမျိုးသား 100m အခမဲ့- ~50-54 SPM<br/>အထက်တန်းစား အမျိုးသမီး 100m အခမဲ့- ~53-56 SPM</p></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2>လေဖြတ်နှုန်းကို ဘာသာပြန်ခြင်း။</h2><div class="interpretation-grid"><div class="interpretation-item interpretation-low"><h3>🐢 SR အရမ်းနည်းတယ်။</h3><p><strong>လက္ခဏာများ-</strong></p><ul><li>လေဖြတ်ခြင်းကြားတွင် ရှည်လျားသောအဆင့်များ လျှောကျသွားသည်။</li><li>အရှိန်လျော့ခြင်းနှင့် အရှိန်ကျခြင်း။</li><li>အလျင် သိသိသာသာ ကျဆင်းသွားသည့် “သေကွက်များ”</li></ul><p><strong>ရလဒ်-</strong>ထိရောက်မှုမရှိသော စွမ်းအင်အသုံးပြုမှု—သင်သည် လျှော့ချထားသော အမြန်နှုန်းမှ အဆက်မပြတ် ပြန်လည်အရှိန်မြှင့်နေပါသည်။</p><p><strong>ပြင်ဆင်ပါ</strong>လျှောကျချိန်ကို လျှော့ချပါ၊ စောစောဖမ်းပါ၊ စဉ်ဆက်မပြတ် တွန်းကန်အားကို ထိန်းသိမ်းပါ။</p></div><div class="interpretation-item interpretation-high"><h3>🏃 SR အရမ်းမြင့်တယ်။</h3><p><strong>လက္ခဏာများ-</strong></p><ul><li>တိုတို၊ ဂယက်ထသော လေဖြတ်ခြင်း ("လှည့်ဘီးများ")</li><li>ညံ့ဖျင်းသော ဖမ်းစက်—လက်သည် ရေလွန်သွားသည်</li><li>အနည်းငယ်မျှသာ တွန်းကန်အားအတွက် အလွန်အကျွံ စွမ်းအင်သုံးစွဲမှု</li></ul><p><strong>ရလဒ်-</strong>မြင့်မားသောအားထုတ်မှု၊ စွမ်းဆောင်ရည်နိမ့်။ အလုပ်များသော်လည်း မမြန်ဟု ခံစားရသည်။</p><p><strong>ပြင်ဆင်ပါ</strong>လေဖြတ်ခြင်းကို ရှည်စေခြင်း၊ ဖမ်းခြင်းကို ပိုမိုကောင်းမွန်စေခြင်း၊ တိုးချဲ့ခြင်းနှင့် တွန်းခြင်းအား အပြည့်အဝသေချာစေရန်။</p></div><div class="interpretation-item interpretation-optimal"><h3>⚡ အကောင်းဆုံး SR</h3><p><strong>လက္ခဏာများ-</strong></p><ul><li>ဟန်ချက်ညီသော ရစ်သမ်—အဆက်မပြတ်သော်လည်း မတုန်လှုပ်</li><li>လေဖြတ်ခြင်းကြားတွင် အရှိန်အနည်းဆုံး</li><li>ဖမ်းအားကောင်းပြီး တိုးချဲ့မှုအပြည့်</li><li>ပြိုင်ဆိုင်မှုအရှိန်အဟုန်တွင် ရေရှည်တည်တံ့သည်။</li></ul><p><strong>ရလဒ်-</strong>အနည်းဆုံး အလဟသ စွမ်းအင်ဖြင့် အများဆုံး အလျင်။</p><p><strong>ရှာနည်း-</strong>အရှိန်ထိန်းနေစဉ် ±5 SPM ချိန်ညှိမှုများဖြင့် စမ်းသပ်ပါ။ အနိမ့်ဆုံး RPE = အကောင်းဆုံး SR။</p></div></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">လေဖြတ်ခြင်းအတွက် အကွာအဝေး (DPS)</h2><div class="grid grid-2"><div><h3>Distance Per Stroke ဆိုတာဘာလဲ။</h3><p><strong>လေဖြတ်ခြင်းအတွက် အကွာအဝေး (DPS)</strong>ဟုလည်း ခေါ်သည်။<em>လေဖြတ်ခြင်း အရှည်</em>ပြီးပြည့်စုံသော လေဖြတ်ခြင်းစက်ဝန်းတစ်ခုစီဖြင့် သင်ခရီးသွားသည့်အကွာအဝေးကို တိုင်းတာသည်။ ၎င်းသည် လေဖြတ်ခြင်း၏ ထိရောက်မှု၏ အဓိက ညွှန်ပြချက်ဖြစ်ပြီး "ရေကို ခံစားပါ။"</p><div class="formula-box"><h4>ဖော်မြူလာ</h4><div class="formula">DPS (m/stroke) = အကွာအဝေး/ လေဖြတ်ခြင်းအရေအတွက်</div><p>သို့မဟုတ်</p><div class="formula">DPS = အလျင် / (SR / 60)</div><div class="example-box mt-md"><h4>ဥပမာ (25m ရေကူးကန်၊ 5m push-off):</h4><p>၁၂ ကြိမ်ဖြင့် မီတာ ၂၀ ရေကူးပါ</p><div class="calculation">DPS = 20 / 12 =<strong>1.67 m/stroke</strong></div><h4 class="mt-sm">48 ကြိမ် (4 × 5 မီတာ အကွာအဝေး) ဖြင့် မီတာ 100 အတွက်</h4><div class="calculation">ထိရောက်သောအကွာအဝေး = 100 - (4 × 5) = 80m<br/>DPS = 80 / 48 =<strong>1.67 m/stroke</strong></div></div></div></div><div><h3>ပုံမှန် DPS တန်ဖိုးများ (25m Pool Freestyle)</h3><div class="dps-benchmarks"><h4>Elite ရေကူးသမားများ</h4><div class="benchmark-row"><span class="label">DPS-</span><span class="value">1.8-2.2 m/stroke</span></div><div class="benchmark-row"><span class="label">SPL-</span><span class="value">11-14 ကြိမ်/အရှည်</span></div><h4>အပြိုင်အဆိုင် ရေကူးသမားများ</h4><div class="benchmark-row"><span class="label">DPS-</span><span class="value">1.5-1.8 m/stroke</span></div><div class="benchmark-row"><span class="label">SPL-</span><span class="value">၁၄-၁၇ ကြိမ်/အရှည်</span></div><h4>ကြံ့ခိုင်ရေး ရေကူးသမားများ</h4><div class="benchmark-row"><span class="label">DPS-</span><span class="value">1.2-1.5 မီတာ/လေဖြတ်ခြင်း။</span></div><div class="benchmark-row"><span class="label">SPL-</span><span class="value">၁၇-၂၁ ကြိမ်/အရှည်</span></div><h4>အရင်ကဆိုရင်</h4><div class="benchmark-row"><span class="label">DPS-</span><span class="value">&lt;1.2 m/stroke</span></div><div class="benchmark-row"><span class="label">SPL-</span><span class="value">21+ ကြိမ်/အရှည်</span></div></div><div class="callout callout-info"><h4>📏 အမြင့် ချိန်ညှိခြင်း။</h4><p><strong>6'0" (183cm)</strong>ပစ်မှတ် ~ 12 ကြိမ် / 25 မီတာ<br/><strong>5'6" (168cm)</strong>ပစ်မှတ် ~ 13 ကြိမ် / 25 မီတာ<br/><strong>5'0" (152cm)။</strong>ပစ်မှတ် ~ 14 ကြိမ် / 25 မီတာ</p><p>အရပ်ရှည်သော ရေကူးသမားများသည် လက်အလျားနှင့် ခန္ဓာကိုယ်အရွယ်အစားကြောင့် သဘာဝအတိုင်း DPS ပိုရှည်သည်။</p></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2>DPS ကို ထိခိုက်စေသည့်အချက်များ</h2><div class="factors-list"><div class="factor-item"><h3>1️⃣ ဖမ်းအရည်အသွေး</h3><p>ဆွဲထုတ်သည့်အဆင့်တွင် သင့်လက်နှင့် လက်ဖျံတို့နှင့်အတူ ရေကို "ကိုင်" နိုင်စွမ်း။ ပြင်းပြင်းထန်ထန် ဖမ်းခြင်း = လေဖြတ်ခြင်းအတွက် တွန်းကန်အား ပိုများသည်။</p><p><strong>တူးခြင်း-</strong>အဖမ်းအဆီး၊ လက်သီးထိုးရေကူး၊ စကေးလေ့ကျင့်ခန်း။</p></div><div class="factor-item"><h3>2️⃣ လေဖြတ်ခြင်း ပြီးဆုံးခြင်း။</h3><p>တင်ပါးဆုံရိုး အပြည့်အထိ တောက်လျှောက် တွန်းနေသည်။ ရေကူးသမားတော်တော်များများက စောစောစီးစီး လွှတ်လိုက်ကြပြီး နောက်ဆုံး တွန်းကန်အားရဲ့ 20% ဆုံးရှုံးသွားပါတယ်။</p><p><strong>တူးခြင်း-</strong>လက်ချောင်းထိပ်များ ဆွဲတူးခြင်း၊ တိုးချဲ့မှု အာရုံစူးစိုက်မှုအစုံ။</p></div><div class="factor-item"><h3>3️⃣ ခန္ဓာကိုယ်အနေအထား၊</h3><p>လျှော့ဆွဲခြင်း = လေဖြတ်လျှင် ခရီးဝေး။ တင်ပါးမြင့်ခြင်း၊ အလျားလိုက်ကိုယ်ထည်၊ တင်းကျပ်သောအူတိုင်အားလုံးသည် ခံနိုင်ရည်အား အနည်းဆုံးဖြစ်စေသည်။</p><p><strong>တူးခြင်း-</strong>တစ်ဖက်မှ ကန်သွင်းခြင်း၊ တွန်းထုတ်ခြင်းများကို ချောမွေ့စေခြင်း၊ core တည်ငြိမ်မှု လုပ်ဆောင်ခြင်း။</p></div><div class="factor-item"><h3>4️⃣ ကန်သွင်းခြင်း ထိရောက်မှု</h3><p>ကန်ချက်သည် လက်မောင်းရိုက်ခြင်းကြား အမြန်နှုန်းကို ထိန်းသိမ်းပေးသည်။ ပျော့ကွက် = အရှိန်လျော့ခြင်း = ပိုတိုသော DPS ။</p><p><strong>တူးခြင်း-</strong>ဒေါင်လိုက်ကန်ခြင်း၊ ဘုတ်ဖြင့်ကန်ခြင်း၊ ဘေးမှကန်ခြင်း။</p></div><div class="factor-item"><h3>5️⃣ အသက်ရှုနည်း</h3><p>အသက်ရှုမကောင်းခြင်းသည် ခန္ဓာကိုယ်အနေအထားကို အနှောင့်အယှက်ဖြစ်စေပြီး ဆွဲငင်အားဖြစ်စေသည်။ ဦးခေါင်းလှုပ်ရှားမှုနှင့် လှည့်ခြင်းကို လျှော့ချပါ။</p><p><strong>တူးခြင်း-</strong>ဘေးထွက်အသက်ရှုလေ့ကျင့်ခန်း၊ အပြန်အလှန်အသက်ရှူခြင်း၊ 3/5 လေဖြတ်တိုင်း အသက်ရှူပါ။</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>SR × DPS လက်ကျန်ငွေ</h2><p class="lead">Elite ရေကူးသမားများတွင် SR မြင့်မားသော သို့မဟုတ် မြင့်မားသော DPS ရှိရုံမျှမက— ၎င်းတို့တွင် အကောင်းဆုံးဖြစ်သည်။<em>ပေါင်းစပ်</em>သူတို့ရဲ့ဖြစ်ရပ်အတွက်။</p><div class="example-box"><h3>လက်တွေ့ကမ္ဘာ ဥပမာ- Caeleb Dressel ၏ 50m အလွတ်ပုံစံ</h3><p><strong>ကမ္ဘာ့စံချိန်စံညွှန်းများ-</strong></p><ul><li>လေဖြတ်နှုန်း- 130 လေဖြတ်/မိနစ်</li><li>လေဖြတ်ခြင်းအတွက် အကွာအဝေး- ~0.92 ကိုက်/လေဖြတ်ခြင်း (~0.84 m/stroke)</li><li>အမြန်နှုန်း- ~ 2.3 m/s (ကမ္ဘာ့စံချိန်တင် အရှိန်)</li></ul><p><strong>သုံးသပ်ချက်-</strong>Dressel သည် ကောင်းမွန်သော DPS နှင့် အထူးမြင့်မားသော SR ကို ပေါင်းစပ်ထားသည်။ သူ၏ စွမ်းအားသည် အလွန်အမင်း လှည့်ပတ်နေသော်လည်း ကျိုးကြောင်းဆီလျော်သော လေဖြတ်သည့် အရှည်ကို ထိန်းသိမ်းနိုင်စေသည်။</p></div><div class="sr-dps-scenarios"><h3>ဇာတ်လမ်းခွဲခြမ်းစိတ်ဖြာခြင်း။</h3><div class="scenario"><h4>🔴 မြင့်မားသော DPS + အနိမ့် SR = "လွန်လွန်ကဲကဲ"</h4><p><strong>ဥပမာ-</strong>1.8 m/stroke × 50 SPM = 1.5 m/s</p><p><strong>ပြဿနာ-</strong>အလွန်အကျွံ လျှောကျခြင်းသည် အလျင်ကျသွားသည့် အသေအပျောက်များကို ဖန်တီးပေးသည်။ လေဖြတ်တာ အရှည်ကောင်းပေမဲ့ ထိရောက်မှု အားနည်းတယ်။</p></div><div class="scenario"><h4>🔴 အနိမ့် DPS + မြင့်မားသော SR = "လှည့်ပတ်သည့်ဘီးများ"</h4><p><strong>ဥပမာ-</strong>1.2 m/stroke × 90 SPM = 1.8 m/s</p><p><strong>ပြဿနာ-</strong>မြင့်မားသောစွမ်းအင်ကုန်ကျစရိတ်။ အလုပ်များသည်ဟု ခံစားရသော်လည်း လေဖြတ်တိုင်း တွန်းကန်အား နည်းပါးသည်။ ပစ်ခြင်း။</p></div><div class="scenario"><h4>🟢 Balanced DPS + SR = အကောင်းဆုံး</h4><p><strong>ဥပမာ-</strong>1.6 m/stroke × 70 SPM = 1.87 m/s</p><p><strong>ရလဒ်-</strong>ခိုင်မာသော တွန်းကန်အားဖြင့် လေဖြတ်ခြင်းအတွက် စဉ်ဆက်မပြတ် လှည့်ပတ်မှု။ ထိရောက်မြန်ဆန်။</p></div></div><div class="callout callout-success"><h3>✅ သင်၏အကောင်းဆုံးလက်ကျန်ကိုရှာဖွေပါ။</h3><p><strong>သတ်မှတ်သည်-</strong>6 × 100m @ CSS ခြေလှမ်း</p><ul><li><strong>100 #1-2-</strong>သဘာဝအတိုင်း ရေကူးပါ၊ SR နှင့် DPS မှတ်တမ်းတင်ပါ။</li><li><strong>100 #3-</strong>လေဖြတ်ခြင်းအရေအတွက်ကို 2-3 ဖြင့်လျှော့ချ (DPS တိုးရန်)၊ အရှိန်ကိုထိန်းထားရန်ကြိုးစားပါ။</li><li><strong>100 #4-</strong>SR ကို 5 SPM တိုး၍ အရှိန်ထိန်းရန် ကြိုးစားပါ။</li><li><strong>100 #5-</strong>အလယ်အလတ်အချက်— SR နှင့် DPS ချိန်ခွင်လျှာကို ရှာပါ။</li><li><strong>100 #6-</strong>အထိရောက်ဆုံးလို့ ခံစားရတဲ့အရာကို ပိတ်လိုက်ပါ။</li></ul><p>အရှိန်အဟုန်တွင် အလွယ်ဆုံးခံစားရသော ကိုယ်စားလှယ် = သင်၏ အကောင်းဆုံး SR/DPS ပေါင်းစပ်မှု။ ရေကူးသမားတိုင်းတွင် လေဖြတ်သည့်နှုန်းသည် ပြင်းထန်သော လေဖြတ်နှုန်း ရှိသည်—လေဖြတ်မှုကြာချိန် စတင်ပြိုကျသည့် အကြိမ်ရေ။ ဤအဆင့်ကိုရှာဖွေခြင်းသည် SR/DPS လက်ကျန်ငွေကို အကောင်းဆုံးဖြစ်အောင် ကူညီပေးသည်။</p></div></div></section><section class="section"><div class="container container-narrow"><h2>လေဖြတ်ခြင်း အညွှန်း- ပါဝါ-ထိရောက်မှု မက်ထရစ်</h2><div class="formula-box"><h3>ဖော်မြူလာ</h3><div class="formula">လေဖြတ်ခြင်းညွှန်းကိန်း (SI) = အလျင် (m/s) × DPS (m/stroke)</div><div class="formula-explanation"><p>Stroke Index သည် အမြန်နှုန်းနှင့် ထိရောက်မှုကို မက်ထရစ်တစ်ခုအဖြစ် ပေါင်းစပ်ထားသည်။ ပိုမိုမြင့်မားသော SI = ပိုမိုကောင်းမွန်သောစွမ်းဆောင်ရည်။</p></div></div><div class="example-box"><h4>ဥပမာ-</h4><p>ရေကူးသမား A- 1.5 m/s အလျင် × 1.7 m/stroke DPS =<strong>SI သည် 2.55 ဖြစ်သည်။</strong><br/>ရေကူးသမား B- 1.4 m/s အလျင် × 1.9 m/stroke DPS =<strong>SI သည် 2.66 ဖြစ်သည်။</strong></p><p><strong>သုံးသပ်ချက်-</strong>Swimmer B သည် အနည်းငယ်နှေးသော်လည်း ပိုထိရောက်သည်။ ပိုမိုကောင်းမွန်သော စွမ်းအားဖြင့် ၎င်းတို့သည် စွမ်းဆောင်ရည်မြင့်မားသော အလားအလာရှိသည်။</p></div><div class="callout callout-science"><h3>🔬 သုတေသနဖောင်ဒေးရှင်း</h3><p>Barbosa et al ။ (၂၀၁၀) က တွေ့တယ်။<strong>လေဖြတ်နှုန်းသည် လေဖြတ်နှုန်းထက် စွမ်းဆောင်ရည်ကို ပိုမိုအရေးပါသော ခန့်မှန်းချက်ဖြစ်သည်။</strong>အပြိုင်အဆိုင်ရေကူး။ သို့သော်၊ ဆက်ဆံရေးသည် တစ်ပြေးညီမဟုတ်ပါ- DPS တိုးလာခြင်း (SR လျှော့ချခြင်းဖြင့်) ဆုံးရှုံးသွားသောအရှိန်ကြောင့် တန်ပြန်အကျိုးဆက်ဖြစ်လာနိုင်သည့် ပိုမိုကောင်းမွန်သည့်အချက်တစ်ခု ရှိပါသည်။</p><p>အဓိကက<strong>ဇီဝစက်ပိုင်းဆိုင်ရာထိရောက်မှု</strong>: အရှိန်လျှော့ခြင်းကို ဟန့်တားသော ရစ်သမ်ကို ထိန်းသိမ်းထားစဉ် လေဖြတ်မှုနှုန်းကို အမြင့်ဆုံးမြှင့်တင်ပါ။</p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>လက်တွေ့သင်တန်းလျှောက်လွှာများ</h2><div class="application-workout"><h3>🎯 SR Control Set</h3><div class="workout-box"><h4>8×50m (20s ကျန်)</h4><p><strong>Tempo Trainer ကိုသုံးပါ သို့မဟုတ် ကြိမ်နှုန်း/အချိန်ကို ရေတွက်ပါ။</strong></p><ol><li>50 #1-2- အခြေခံ SR (သဘာဝကျကျ ရေကူးပါ)</li><li>50 #3-4- SR +10 SPM (အလှည့်ကျ ပိုမြန်သည်)</li><li>50 #5-6- SR -10 SPM (နှေး၊ ပိုရှည်)</li><li>50 #7-8- အထိရောက်ဆုံးခံစားရသည့် အခြေခံစာကြောင်းသို့ ပြန်သွားရန်</li></ol><p><strong>ပန်းတိုင်-</strong>SR အပြောင်းအလဲများသည် အရှိန်အဟုန်နှင့် ကြိုးစားအားထုတ်မှုအပေါ် သက်ရောက်မှုရှိပုံကို သတိပြုပါ။</p></div></div><div class="application-workout"><h3>🎯 DPS အမြင့်ဆုံးသတ်မှတ်မှု</h3><div class="workout-box"><h4>8×25m (15s ကျန်)</h4><p><strong>အလျားအလိုက် လေဖြတ်ခြင်းကို ရေတွက်ပါ။</strong></p><ol><li>25 #1- အခြေခံလေဖြတ်ခြင်းအရေအတွက်ကို သတ်မှတ်ပါ။</li><li>25 #2-4- ပေါင်တစ်ပေါင်လျှင် 1 ကြိမ် (အမြင့်ဆုံး DPS)</li><li>25 #5- အနည်းဆုံး လေဖြတ်ခြင်း အရေအတွက်ကို ထိန်းထားပါ၊ အရှိန်အနည်းငယ် တိုးပါ။</li><li>25 #6-8- ပစ်မှတ်အရှိန်တွင် ရေရှည်တည်တံ့သော လေဖြတ်ခြင်းအရေအတွက်ကို ရှာဖွေပါ။</li></ol><p><strong>ပန်းတိုင်-</strong>လေဖြတ်ခြင်းဆိုင်ရာ စွမ်းဆောင်ရည်ကို မြှင့်တင်ပါ—အရှိန်မလျှော့ဘဲ လေဖြတ်လိုက်လျှင် ပိုဝေးသော ခရီးကို သွားပါ။</p></div></div><div class="application-workout"><h3>🎯 ဂေါက်ရိုက်ခြင်း (SWOLF နည်းပါးအောင်)</h3><div class="workout-box"><h4>4×100m (30s ကျန်)</h4><p><strong>ပန်းတိုင်- CSS အရှိန်အဟုန်တွင် အနိမ့်ဆုံး SWOLF ရမှတ် (အချိန် + လေဖြတ်ခြင်း)</strong></p><p>မတူညီသော SR/DPS ပေါင်းစပ်မှုများဖြင့် စမ်းသပ်ပါ။ အနိမ့်ဆုံး SWOLF = အထိရောက်ဆုံး ကိုယ်စားလှယ်။</p><p>အစုအဖွဲ့များတစ်လျှောက် SWOLF မည်ကဲ့သို့ အပြောင်းအလဲများကို ခြေရာခံပါ—မြင့်တက်လာသော SWOLF သည် ပင်ပန်းနွမ်းနယ်မှုကို ဖြိုခွဲသည့်နည်းပညာကို ဖော်ပြသည်။</p></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>မက္ကင်းနစ်ကို ကျွမ်းကျင်တယ်၊ အရှိန်ကို ကျွမ်းကျင်တယ်။</h2><p class="lead">အလျင် = SR × DPS သည် ဖော်မြူလာတစ်ခုမျှသာ မဟုတ်ဘဲ၊ ၎င်းသည် သင်၏ ရေကူးနည်းပညာ၏ ရှုထောင့်တိုင်းကို နားလည်ရန်နှင့် တိုးတက်စေရန်အတွက် မူဘောင်တစ်ခုဖြစ်သည်။</p><p>ကိန်းရှင်နှစ်ခုလုံးကို ခြေရာခံပါ။ ချိန်ခွင်လျှာကို စမ်းသပ်ပါ။ သင်၏အကောင်းဆုံးပေါင်းစပ်မှုကိုရှာပါ။ အရှိန်က လိုက်လာလိမ့်မယ်။</p><div class="mt-xl"><a class="btn btn-secondary" href="/my/efficiency/">← SWOLF စွမ်းဆောင်ရည်</a><a class="btn btn-primary" href="/my/research/">သိပ္ပံနည်းကျ သုတေသန →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">ဒေါင်းလုဒ်လုပ်ပါ။</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="App Store တွင် ဒေါင်းလုဒ်လုပ်ပါ။"><img src="../../assets/images/badge-app-store.svg"
+                                stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                        </button>
+                        <div class="suite-dropdown hidden" id="suite-dropdown">
+                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
+                            <div class="suite-apps-grid">
+                                
+                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
+                                
+                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
+                                
+                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
+                                
+                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
+                                
+                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
+                                
+                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
+                                
+                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
+                                
+                                <a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a>
+                                
+                                <a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="สลับเมนู"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+  
+  
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+        <ol>
+            
+            <li>
+                
+                <a href="/my/">หน้าแรก</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/my/research/">วิทยาศาสตร์</a>
+                
+            </li>
+            
+            <li>
+                
+                <span aria-current="page">กลศาสตร์การว่าย</span>
+                
+            </li>
+            
+        </ol>
+    </div>
+</nav>
+
+
+  
+  <main id="main-content" class="main-content">
+    
+    <section class="page-hero">
+<div class="container">
+<h1>လေဖြတ်မက္ကင်းနစ်</h1>
+<p class="lead">ရေကူးအမြန်နှုန်း၏ဇီဝမက္ကင်းနစ်</p>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow">
+<h2>ရေကူးအမြန်နှုန်း၏အခြေခံညီမျှခြင်း</h2>
+<div class="formula-box formula-highlight">
+<h3>အလျင် ညီမျှခြင်း</h3>
+<div class="formula formula-large">အလျင် = Stroke Rate (SR) × Distance Per Stroke (DPS)</div>
+<p class="formula-explanation"><strong>ဘာသာပြန်-</strong>သင်ဘယ်လောက်မြန်မြန်ကူးနိုင်သလဲဆိုတဲ့အပေါ်မှာ မူတည်ပါတယ်။<em>မကြာခဏ</em>you stroke (SR) ဘယ်လောက်နဲ့ မြှောက်လဲ။<em>အဝေး</em>သင်သည် လေဖြတ်ခြင်း (DPS) နှုန်းဖြင့် ခရီးသွားသည်။</p>
+</div>
+<p class="lead">ဤလိမ်လည်လှည့်ဖြားသောရိုးရှင်းသောညီမျှခြင်းသည် ရေကူးခြင်းစွမ်းဆောင်ရည်အားလုံးကို အုပ်ချုပ်သည်။ ပိုမိုမြန်ဆန်စေရန်၊ သင်သည်-</p>
+<ul class="lead-list">
+<li><strong>လေဖြတ်နှုန်းကို မြှင့်တင်ပါ။</strong>DPS ကိုထိန်းသိမ်းထားစဉ် (အလှည့်အပြောင်းပိုမြန်သည်)</li>
+<li><strong>လေဖြတ်ခြင်းအတွက် အကွာအဝေးကို တိုးပေးပါ။</strong>(လေဖြတ်လျှင် ခရီးပိုဝေးသွားသည်) SR ကို ထိန်းသိမ်းထားစဉ်</li>
+<li><strong>နှစ်ခုစလုံးကို အကောင်းဆုံးဖြစ်အောင်လုပ်ပါ။</strong>(စံပြချဉ်းကပ်မှု)</li>
+</ul>
+<div class="callout callout-warning">
+<h3>⚖️ အပေးအယူလုပ်ခြင်း။</h3>
+<p>SR နှင့် DPS သည် ယေဘူယျအားဖြင့်ဖြစ်သည်။<strong>ပြောင်းပြန်ဆက်စပ်နေသည်။</strong>. တစ်ခုတိုးလာသည်နှင့်အမျှ အခြားတစ်ခုသည် လျော့နည်းလာတတ်သည်။ ရေကူးခြင်းအနုပညာသည် သင့်ဖြစ်ရပ်၊ ခန္ဓာကိုယ်အမျိုးအစားနှင့် လက်ရှိကြံ့ခိုင်မှုအဆင့်အတွက် အကောင်းဆုံးဟန်ချက်ညီမှုကို ရှာဖွေခြင်းဖြစ်သည်။</p>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container">
+<h2 class="text-center mb-xl">လေဖြတ်နှုန်း (SR)</h2>
+<div class="grid grid-2">
+<div>
+<h3>Stroke Rate ဆိုတာဘာလဲ။</h3>
+<p><strong>လေဖြတ်နှုန်း (SR)</strong>ဟုလည်း ခေါ်သည်။<em>cadence</em>သို့မဟုတ်<em>tempo</em>တစ်မိနစ်လျှင် သင်လုပ်ဆောင်သည့် လေဖြတ်ခြင်း စက်ဝန်း မည်မျှရှိသည်ကို တိုင်းတာသည်။<strong>တစ်မိနစ်လျှင် လေဖြတ်ခြင်း (SPM)</strong>.</p>
+<div class="formula-box">
+<h4>ဖော်မြူလာ</h4>
+<div class="formula">SR = 60 / Cycle Time</div>
+<p>သို့မဟုတ်</p>
+<div class="formula">SR = (Number of Strokes / Time in seconds) × 60</div>
+<div class="example-box mt-md">
+<h4>ဥပမာ-</h4>
+<p>သင့်လေဖြတ်ခြင်းသံသရာသည် 1 စက္ကန့်ကြာလျှင်၊</p>
+<div class="calculation">SR=60/1=<strong>60 SPM</strong>
+</div>
+<p>25 စက္ကန့်အတွင်း လေဖြတ်ခြင်း 30 ပြီးပါက</p>
+<div class="calculation">SR = (30/25)×60=<strong>72 SPM</strong>
+</div>
+</div>
+</div>
+<div class="callout callout-info">
+<h4>📝 လေဖြတ်ခြင်း ရေတွက်ခြင်း မှတ်ချက်</h4>
+<p>အဘို့<strong>အလွတ်စတိုင်/နောက်ပြန်ဆွဲ-</strong>လက်မောင်းတစ်ခုချင်းစီကို ထည့်သွင်းရေတွက်ပါ (ဘယ် + ညာ = 2 ကြိမ်)</p>
+<p>အဘို့<strong>ဖားကူး/လိပ်ပြာ-</strong>လက်နှစ်ဖက်ကို တပြိုင်တည်း လှုပ်ရှားခြင်း (တစ်ချက်ဆွဲ = ၁ ကြိမ်)</p>
+</div>
+</div>
+<div>
+<h3>ဖြစ်ရပ်အလိုက် ပုံမှန်လေဖြတ်နှုန်းများ</h3>
+<div class="sr-benchmarks">
+<h4>Freestyle Sprint (50m)</h4>
+<div class="benchmark-row">
+<span class="label">အထက်တန်းစား-</span>
+<span class="value">120-150 SPM</span>
+</div>
+<div class="benchmark-row">
+<span class="label">အသက်-အုပ်စု-</span>
+<span class="value">100-120 SPM</span>
+</div>
+<h4>အလွတ် 100 မီတာ</h4>
+<div class="benchmark-row">
+<span class="label">အထက်တန်းစား-</span>
+<span class="value">95-110 SPM</span>
+</div>
+<div class="benchmark-row">
+<span class="label">အသက်-အုပ်စု-</span>
+<span class="value">85-100 SPM</span>
+</div>
+<h4>အလယ်အကွာအဝေး (200-800m)</h4>
+<div class="benchmark-row">
+<span class="label">အထက်တန်းစား-</span>
+<span class="value">70-100 SPM</span>
+</div>
+<div class="benchmark-row">
+<span class="label">အသက်-အုပ်စု-</span>
+<span class="value">60-85 SPM</span>
+</div>
+<h4>အကွာအဝေး (1500m+ / Open Water)</h4>
+<div class="benchmark-row">
+<span class="label">အထက်တန်းစား-</span>
+<span class="value">60-100 SPM</span>
+</div>
+<div class="benchmark-row">
+<span class="label">အသက်-အုပ်စု-</span>
+<span class="value">50-75 SPM</span>
+</div>
+</div>
+<div class="callout callout-tip">
+<h4>🎯 လိင်ကွဲပြားမှုများ</h4>
+<p>အထက်တန်းစား အမျိုးသား 50m အခမဲ့- ~65-70 SPM<br/>အထက်တန်းစား အမျိုးသမီး 50 မီတာ အခမဲ့- ~60-64 SPM<br/>အထက်တန်းစား အမျိုးသား 100m အခမဲ့- ~50-54 SPM<br/>အထက်တန်းစား အမျိုးသမီး 100m အခမဲ့- ~53-56 SPM</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow">
+<h2>လေဖြတ်နှုန်းကို ဘာသာပြန်ခြင်း။</h2>
+<div class="interpretation-grid">
+<div class="interpretation-item interpretation-low">
+<h3>🐢 SR အရမ်းနည်းတယ်။</h3>
+<p><strong>လက္ခဏာများ-</strong></p>
+<ul>
+<li>လေဖြတ်ခြင်းကြားတွင် ရှည်လျားသောအဆင့်များ လျှောကျသွားသည်။</li>
+<li>အရှိန်လျော့ခြင်းနှင့် အရှိန်ကျခြင်း။</li>
+<li>အလျင် သိသိသာသာ ကျဆင်းသွားသည့် “သေကွက်များ”</li>
+</ul>
+<p><strong>ရလဒ်-</strong>ထိရောက်မှုမရှိသော စွမ်းအင်အသုံးပြုမှု—သင်သည် လျှော့ချထားသော အမြန်နှုန်းမှ အဆက်မပြတ် ပြန်လည်အရှိန်မြှင့်နေပါသည်။</p>
+<p><strong>ပြင်ဆင်ပါ</strong>လျှောကျချိန်ကို လျှော့ချပါ၊ စောစောဖမ်းပါ၊ စဉ်ဆက်မပြတ် တွန်းကန်အားကို ထိန်းသိမ်းပါ။</p>
+</div>
+<div class="interpretation-item interpretation-high">
+<h3>🏃 SR အရမ်းမြင့်တယ်။</h3>
+<p><strong>လက္ခဏာများ-</strong></p>
+<ul>
+<li>တိုတို၊ ဂယက်ထသော လေဖြတ်ခြင်း ("လှည့်ဘီးများ")</li>
+<li>ညံ့ဖျင်းသော ဖမ်းစက်—လက်သည် ရေလွန်သွားသည်</li>
+<li>အနည်းငယ်မျှသာ တွန်းကန်အားအတွက် အလွန်အကျွံ စွမ်းအင်သုံးစွဲမှု</li>
+</ul>
+<p><strong>ရလဒ်-</strong>မြင့်မားသောအားထုတ်မှု၊ စွမ်းဆောင်ရည်နိမ့်။ အလုပ်များသော်လည်း မမြန်ဟု ခံစားရသည်။</p>
+<p><strong>ပြင်ဆင်ပါ</strong>လေဖြတ်ခြင်းကို ရှည်စေခြင်း၊ ဖမ်းခြင်းကို ပိုမိုကောင်းမွန်စေခြင်း၊ တိုးချဲ့ခြင်းနှင့် တွန်းခြင်းအား အပြည့်အဝသေချာစေရန်။</p>
+</div>
+<div class="interpretation-item interpretation-optimal">
+<h3>⚡ အကောင်းဆုံး SR</h3>
+<p><strong>လက္ခဏာများ-</strong></p>
+<ul>
+<li>ဟန်ချက်ညီသော ရစ်သမ်—အဆက်မပြတ်သော်လည်း မတုန်လှုပ်</li>
+<li>လေဖြတ်ခြင်းကြားတွင် အရှိန်အနည်းဆုံး</li>
+<li>ဖမ်းအားကောင်းပြီး တိုးချဲ့မှုအပြည့်</li>
+<li>ပြိုင်ဆိုင်မှုအရှိန်အဟုန်တွင် ရေရှည်တည်တံ့သည်။</li>
+</ul>
+<p><strong>ရလဒ်-</strong>အနည်းဆုံး အလဟသ စွမ်းအင်ဖြင့် အများဆုံး အလျင်။</p>
+<p><strong>ရှာနည်း-</strong>အရှိန်ထိန်းနေစဉ် ±5 SPM ချိန်ညှိမှုများဖြင့် စမ်းသပ်ပါ။ အနိမ့်ဆုံး RPE = အကောင်းဆုံး SR။</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container">
+<h2 class="text-center mb-xl">လေဖြတ်ခြင်းအတွက် အကွာအဝေး (DPS)</h2>
+<div class="grid grid-2">
+<div>
+<h3>Distance Per Stroke ဆိုတာဘာလဲ။</h3>
+<p><strong>လေဖြတ်ခြင်းအတွက် အကွာအဝေး (DPS)</strong>ဟုလည်း ခေါ်သည်။<em>လေဖြတ်ခြင်း အရှည်</em>ပြီးပြည့်စုံသော လေဖြတ်ခြင်းစက်ဝန်းတစ်ခုစီဖြင့် သင်ခရီးသွားသည့်အကွာအဝေးကို တိုင်းတာသည်။ ၎င်းသည် လေဖြတ်ခြင်း၏ ထိရောက်မှု၏ အဓိက ညွှန်ပြချက်ဖြစ်ပြီး "ရေကို ခံစားပါ။"</p>
+<div class="formula-box">
+<h4>ဖော်မြူလာ</h4>
+<div class="formula">DPS (m/stroke) = အကွာအဝေး/ လေဖြတ်ခြင်းအရေအတွက်</div>
+<p>သို့မဟုတ်</p>
+<div class="formula">DPS = အလျင် / (SR / 60)</div>
+<div class="example-box mt-md">
+<h4>ဥပမာ (25m ရေကူးကန်၊ 5m push-off):</h4>
+<p>၁၂ ကြိမ်ဖြင့် မီတာ ၂၀ ရေကူးပါ</p>
+<div class="calculation">DPS = 20 / 12 =<strong>1.67 m/stroke</strong>
+</div>
+<h4 class="mt-sm">48 ကြိမ် (4 × 5 မီတာ အကွာအဝေး) ဖြင့် မီတာ 100 အတွက်</h4>
+<div class="calculation">ထိရောက်သောအကွာအဝေး = 100 - (4 × 5) = 80m<br/>DPS = 80 / 48 =<strong>1.67 m/stroke</strong>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3>ပုံမှန် DPS တန်ဖိုးများ (25m Pool Freestyle)</h3>
+<div class="dps-benchmarks">
+<h4>Elite ရေကူးသမားများ</h4>
+<div class="benchmark-row">
+<span class="label">DPS-</span>
+<span class="value">1.8-2.2 m/stroke</span>
+</div>
+<div class="benchmark-row">
+<span class="label">SPL-</span>
+<span class="value">11-14 ကြိမ်/အရှည်</span>
+</div>
+<h4>အပြိုင်အဆိုင် ရေကူးသမားများ</h4>
+<div class="benchmark-row">
+<span class="label">DPS-</span>
+<span class="value">1.5-1.8 m/stroke</span>
+</div>
+<div class="benchmark-row">
+<span class="label">SPL-</span>
+<span class="value">၁၄-၁၇ ကြိမ်/အရှည်</span>
+</div>
+<h4>ကြံ့ခိုင်ရေး ရေကူးသမားများ</h4>
+<div class="benchmark-row">
+<span class="label">DPS-</span>
+<span class="value">1.2-1.5 မီတာ/လေဖြတ်ခြင်း။</span>
+</div>
+<div class="benchmark-row">
+<span class="label">SPL-</span>
+<span class="value">၁၇-၂၁ ကြိမ်/အရှည်</span>
+</div>
+<h4>အရင်ကဆိုရင်</h4>
+<div class="benchmark-row">
+<span class="label">DPS-</span>
+<span class="value">&lt;1.2 m/stroke</span>
+</div>
+<div class="benchmark-row">
+<span class="label">SPL-</span>
+<span class="value">21+ ကြိမ်/အရှည်</span>
+</div>
+</div>
+<div class="callout callout-info">
+<h4>📏 အမြင့် ချိန်ညှိခြင်း။</h4>
+<p><strong>6'0" (183cm)</strong>ပစ်မှတ် ~ 12 ကြိမ် / 25 မီတာ<br/>
+<strong>5'6" (168cm)</strong>ပစ်မှတ် ~ 13 ကြိမ် / 25 မီတာ<br/>
+<strong>5'0" (152cm)။</strong>ပစ်မှတ် ~ 14 ကြိမ် / 25 မီတာ</p>
+<p>အရပ်ရှည်သော ရေကူးသမားများသည် လက်အလျားနှင့် ခန္ဓာကိုယ်အရွယ်အစားကြောင့် သဘာဝအတိုင်း DPS ပိုရှည်သည်။</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow">
+<h2>DPS ကို ထိခိုက်စေသည့်အချက်များ</h2>
+<div class="factors-list">
+<div class="factor-item">
+<h3>1️⃣ ဖမ်းအရည်အသွေး</h3>
+<p>ဆွဲထုတ်သည့်အဆင့်တွင် သင့်လက်နှင့် လက်ဖျံတို့နှင့်အတူ ရေကို "ကိုင်" နိုင်စွမ်း။ ပြင်းပြင်းထန်ထန် ဖမ်းခြင်း = လေဖြတ်ခြင်းအတွက် တွန်းကန်အား ပိုများသည်။</p>
+<p><strong>တူးခြင်း-</strong>အဖမ်းအဆီး၊ လက်သီးထိုးရေကူး၊ စကေးလေ့ကျင့်ခန်း။</p>
+</div>
+<div class="factor-item">
+<h3>2️⃣ လေဖြတ်ခြင်း ပြီးဆုံးခြင်း။</h3>
+<p>တင်ပါးဆုံရိုး အပြည့်အထိ တောက်လျှောက် တွန်းနေသည်။ ရေကူးသမားတော်တော်များများက စောစောစီးစီး လွှတ်လိုက်ကြပြီး နောက်ဆုံး တွန်းကန်အားရဲ့ 20% ဆုံးရှုံးသွားပါတယ်။</p>
+<p><strong>တူးခြင်း-</strong>လက်ချောင်းထိပ်များ ဆွဲတူးခြင်း၊ တိုးချဲ့မှု အာရုံစူးစိုက်မှုအစုံ။</p>
+</div>
+<div class="factor-item">
+<h3>3️⃣ ခန္ဓာကိုယ်အနေအထား၊</h3>
+<p>လျှော့ဆွဲခြင်း = လေဖြတ်လျှင် ခရီးဝေး။ တင်ပါးမြင့်ခြင်း၊ အလျားလိုက်ကိုယ်ထည်၊ တင်းကျပ်သောအူတိုင်အားလုံးသည် ခံနိုင်ရည်အား အနည်းဆုံးဖြစ်စေသည်။</p>
+<p><strong>တူးခြင်း-</strong>တစ်ဖက်မှ ကန်သွင်းခြင်း၊ တွန်းထုတ်ခြင်းများကို ချောမွေ့စေခြင်း၊ core တည်ငြိမ်မှု လုပ်ဆောင်ခြင်း။</p>
+</div>
+<div class="factor-item">
+<h3>4️⃣ ကန်သွင်းခြင်း ထိရောက်မှု</h3>
+<p>ကန်ချက်သည် လက်မောင်းရိုက်ခြင်းကြား အမြန်နှုန်းကို ထိန်းသိမ်းပေးသည်။ ပျော့ကွက် = အရှိန်လျော့ခြင်း = ပိုတိုသော DPS ။</p>
+<p><strong>တူးခြင်း-</strong>ဒေါင်လိုက်ကန်ခြင်း၊ ဘုတ်ဖြင့်ကန်ခြင်း၊ ဘေးမှကန်ခြင်း။</p>
+</div>
+<div class="factor-item">
+<h3>5️⃣ အသက်ရှုနည်း</h3>
+<p>အသက်ရှုမကောင်းခြင်းသည် ခန္ဓာကိုယ်အနေအထားကို အနှောင့်အယှက်ဖြစ်စေပြီး ဆွဲငင်အားဖြစ်စေသည်။ ဦးခေါင်းလှုပ်ရှားမှုနှင့် လှည့်ခြင်းကို လျှော့ချပါ။</p>
+<p><strong>တူးခြင်း-</strong>ဘေးထွက်အသက်ရှုလေ့ကျင့်ခန်း၊ အပြန်အလှန်အသက်ရှူခြင်း၊ 3/5 လေဖြတ်တိုင်း အသက်ရှူပါ။</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container container-narrow">
+<h2>SR × DPS လက်ကျန်ငွေ</h2>
+<p class="lead">Elite ရေကူးသမားများတွင် SR မြင့်မားသော သို့မဟုတ် မြင့်မားသော DPS ရှိရုံမျှမက— ၎င်းတို့တွင် အကောင်းဆုံးဖြစ်သည်။<em>ပေါင်းစပ်</em>သူတို့ရဲ့ဖြစ်ရပ်အတွက်။</p>
+<div class="example-box">
+<h3>လက်တွေ့ကမ္ဘာ ဥပမာ- Caeleb Dressel ၏ 50m အလွတ်ပုံစံ</h3>
+<p><strong>ကမ္ဘာ့စံချိန်စံညွှန်းများ-</strong></p>
+<ul>
+<li>လေဖြတ်နှုန်း- 130 လေဖြတ်/မိနစ်</li>
+<li>လေဖြတ်ခြင်းအတွက် အကွာအဝေး- ~0.92 ကိုက်/လေဖြတ်ခြင်း (~0.84 m/stroke)</li>
+<li>အမြန်နှုန်း- ~ 2.3 m/s (ကမ္ဘာ့စံချိန်တင် အရှိန်)</li>
+</ul>
+<p><strong>သုံးသပ်ချက်-</strong>Dressel သည် ကောင်းမွန်သော DPS နှင့် အထူးမြင့်မားသော SR ကို ပေါင်းစပ်ထားသည်။ သူ၏ စွမ်းအားသည် အလွန်အမင်း လှည့်ပတ်နေသော်လည်း ကျိုးကြောင်းဆီလျော်သော လေဖြတ်သည့် အရှည်ကို ထိန်းသိမ်းနိုင်စေသည်။</p>
+</div>
+<div class="sr-dps-scenarios">
+<h3>ဇာတ်လမ်းခွဲခြမ်းစိတ်ဖြာခြင်း။</h3>
+<div class="scenario">
+<h4>🔴 မြင့်မားသော DPS + အနိမ့် SR = "လွန်လွန်ကဲကဲ"</h4>
+<p><strong>ဥပမာ-</strong>1.8 m/stroke × 50 SPM = 1.5 m/s</p>
+<p><strong>ပြဿနာ-</strong>အလွန်အကျွံ လျှောကျခြင်းသည် အလျင်ကျသွားသည့် အသေအပျောက်များကို ဖန်တီးပေးသည်။ လေဖြတ်တာ အရှည်ကောင်းပေမဲ့ ထိရောက်မှု အားနည်းတယ်။</p>
+</div>
+<div class="scenario">
+<h4>🔴 အနိမ့် DPS + မြင့်မားသော SR = "လှည့်ပတ်သည့်ဘီးများ"</h4>
+<p><strong>ဥပမာ-</strong>1.2 m/stroke × 90 SPM = 1.8 m/s</p>
+<p><strong>ပြဿနာ-</strong>မြင့်မားသောစွမ်းအင်ကုန်ကျစရိတ်။ အလုပ်များသည်ဟု ခံစားရသော်လည်း လေဖြတ်တိုင်း တွန်းကန်အား နည်းပါးသည်။ ပစ်ခြင်း။</p>
+</div>
+<div class="scenario">
+<h4>🟢 Balanced DPS + SR = အကောင်းဆုံး</h4>
+<p><strong>ဥပမာ-</strong>1.6 m/stroke × 70 SPM = 1.87 m/s</p>
+<p><strong>ရလဒ်-</strong>ခိုင်မာသော တွန်းကန်အားဖြင့် လေဖြတ်ခြင်းအတွက် စဉ်ဆက်မပြတ် လှည့်ပတ်မှု။ ထိရောက်မြန်ဆန်။</p>
+</div>
+</div>
+<div class="callout callout-success">
+<h3>✅ သင်၏အကောင်းဆုံးလက်ကျန်ကိုရှာဖွေပါ။</h3>
+<p><strong>သတ်မှတ်သည်-</strong>6 × 100m @ CSS ခြေလှမ်း</p>
+<ul>
+<li><strong>100 #1-2-</strong>သဘာဝအတိုင်း ရေကူးပါ၊ SR နှင့် DPS မှတ်တမ်းတင်ပါ။</li>
+<li><strong>100 #3-</strong>လေဖြတ်ခြင်းအရေအတွက်ကို 2-3 ဖြင့်လျှော့ချ (DPS တိုးရန်)၊ အရှိန်ကိုထိန်းထားရန်ကြိုးစားပါ။</li>
+<li><strong>100 #4-</strong>SR ကို 5 SPM တိုး၍ အရှိန်ထိန်းရန် ကြိုးစားပါ။</li>
+<li><strong>100 #5-</strong>အလယ်အလတ်အချက်— SR နှင့် DPS ချိန်ခွင်လျှာကို ရှာပါ။</li>
+<li><strong>100 #6-</strong>အထိရောက်ဆုံးလို့ ခံစားရတဲ့အရာကို ပိတ်လိုက်ပါ။</li>
+</ul>
+<p>အရှိန်အဟုန်တွင် အလွယ်ဆုံးခံစားရသော ကိုယ်စားလှယ် = သင်၏ အကောင်းဆုံး SR/DPS ပေါင်းစပ်မှု။ ရေကူးသမားတိုင်းတွင် လေဖြတ်သည့်နှုန်းသည် ပြင်းထန်သော လေဖြတ်နှုန်း ရှိသည်—လေဖြတ်မှုကြာချိန် စတင်ပြိုကျသည့် အကြိမ်ရေ။ ဤအဆင့်ကိုရှာဖွေခြင်းသည် SR/DPS လက်ကျန်ငွေကို အကောင်းဆုံးဖြစ်အောင် ကူညီပေးသည်။</p>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow">
+<h2>လေဖြတ်ခြင်း အညွှန်း- ပါဝါ-ထိရောက်မှု မက်ထရစ်</h2>
+<div class="formula-box">
+<h3>ဖော်မြူလာ</h3>
+<div class="formula">လေဖြတ်ခြင်းညွှန်းကိန်း (SI) = အလျင် (m/s) × DPS (m/stroke)</div>
+<div class="formula-explanation">
+<p>Stroke Index သည် အမြန်နှုန်းနှင့် ထိရောက်မှုကို မက်ထရစ်တစ်ခုအဖြစ် ပေါင်းစပ်ထားသည်။ ပိုမိုမြင့်မားသော SI = ပိုမိုကောင်းမွန်သောစွမ်းဆောင်ရည်။</p>
+</div>
+</div>
+<div class="example-box">
+<h4>ဥပမာ-</h4>
+<p>ရေကူးသမား A- 1.5 m/s အလျင် × 1.7 m/stroke DPS =<strong>SI သည် 2.55 ဖြစ်သည်။</strong><br/>ရေကူးသမား B- 1.4 m/s အလျင် × 1.9 m/stroke DPS =<strong>SI သည် 2.66 ဖြစ်သည်။</strong></p>
+<p><strong>သုံးသပ်ချက်-</strong>Swimmer B သည် အနည်းငယ်နှေးသော်လည်း ပိုထိရောက်သည်။ ပိုမိုကောင်းမွန်သော စွမ်းအားဖြင့် ၎င်းတို့သည် စွမ်းဆောင်ရည်မြင့်မားသော အလားအလာရှိသည်။</p>
+</div>
+<div class="callout callout-science">
+<h3>🔬 သုတေသနဖောင်ဒေးရှင်း</h3>
+<p>Barbosa et al ။ (၂၀၁၀) က တွေ့တယ်။<strong>လေဖြတ်နှုန်းသည် လေဖြတ်နှုန်းထက် စွမ်းဆောင်ရည်ကို ပိုမိုအရေးပါသော ခန့်မှန်းချက်ဖြစ်သည်။</strong>အပြိုင်အဆိုင်ရေကူး။ သို့သော်၊ ဆက်ဆံရေးသည် တစ်ပြေးညီမဟုတ်ပါ- DPS တိုးလာခြင်း (SR လျှော့ချခြင်းဖြင့်) ဆုံးရှုံးသွားသောအရှိန်ကြောင့် တန်ပြန်အကျိုးဆက်ဖြစ်လာနိုင်သည့် ပိုမိုကောင်းမွန်သည့်အချက်တစ်ခု ရှိပါသည်။</p>
+<p>အဓိကက<strong>ဇီဝစက်ပိုင်းဆိုင်ရာထိရောက်မှု</strong>: အရှိန်လျှော့ခြင်းကို ဟန့်တားသော ရစ်သမ်ကို ထိန်းသိမ်းထားစဉ် လေဖြတ်မှုနှုန်းကို အမြင့်ဆုံးမြှင့်တင်ပါ။</p>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container container-narrow">
+<h2>လက်တွေ့သင်တန်းလျှောက်လွှာများ</h2>
+<div class="application-workout">
+<h3>🎯 SR Control Set</h3>
+<div class="workout-box">
+<h4>8×50m (20s ကျန်)</h4>
+<p><strong>Tempo Trainer ကိုသုံးပါ သို့မဟုတ် ကြိမ်နှုန်း/အချိန်ကို ရေတွက်ပါ။</strong></p>
+<ol>
+<li>50 #1-2- အခြေခံ SR (သဘာဝကျကျ ရေကူးပါ)</li>
+<li>50 #3-4- SR +10 SPM (အလှည့်ကျ ပိုမြန်သည်)</li>
+<li>50 #5-6- SR -10 SPM (နှေး၊ ပိုရှည်)</li>
+<li>50 #7-8- အထိရောက်ဆုံးခံစားရသည့် အခြေခံစာကြောင်းသို့ ပြန်သွားရန်</li>
+</ol>
+<p><strong>ပန်းတိုင်-</strong>SR အပြောင်းအလဲများသည် အရှိန်အဟုန်နှင့် ကြိုးစားအားထုတ်မှုအပေါ် သက်ရောက်မှုရှိပုံကို သတိပြုပါ။</p>
+</div>
+</div>
+<div class="application-workout">
+<h3>🎯 DPS အမြင့်ဆုံးသတ်မှတ်မှု</h3>
+<div class="workout-box">
+<h4>8×25m (15s ကျန်)</h4>
+<p><strong>အလျားအလိုက် လေဖြတ်ခြင်းကို ရေတွက်ပါ။</strong></p>
+<ol>
+<li>25 #1- အခြေခံလေဖြတ်ခြင်းအရေအတွက်ကို သတ်မှတ်ပါ။</li>
+<li>25 #2-4- ပေါင်တစ်ပေါင်လျှင် 1 ကြိမ် (အမြင့်ဆုံး DPS)</li>
+<li>25 #5- အနည်းဆုံး လေဖြတ်ခြင်း အရေအတွက်ကို ထိန်းထားပါ၊ အရှိန်အနည်းငယ် တိုးပါ။</li>
+<li>25 #6-8- ပစ်မှတ်အရှိန်တွင် ရေရှည်တည်တံ့သော လေဖြတ်ခြင်းအရေအတွက်ကို ရှာဖွေပါ။</li>
+</ol>
+<p><strong>ပန်းတိုင်-</strong>လေဖြတ်ခြင်းဆိုင်ရာ စွမ်းဆောင်ရည်ကို မြှင့်တင်ပါ—အရှိန်မလျှော့ဘဲ လေဖြတ်လိုက်လျှင် ပိုဝေးသော ခရီးကို သွားပါ။</p>
+</div>
+</div>
+<div class="application-workout">
+<h3>🎯 ဂေါက်ရိုက်ခြင်း (SWOLF နည်းပါးအောင်)</h3>
+<div class="workout-box">
+<h4>4×100m (30s ကျန်)</h4>
+<p><strong>ပန်းတိုင်- CSS အရှိန်အဟုန်တွင် အနိမ့်ဆုံး SWOLF ရမှတ် (အချိန် + လေဖြတ်ခြင်း)</strong></p>
+<p>မတူညီသော SR/DPS ပေါင်းစပ်မှုများဖြင့် စမ်းသပ်ပါ။ အနိမ့်ဆုံး SWOLF = အထိရောက်ဆုံး ကိုယ်စားလှယ်။</p>
+<p>အစုအဖွဲ့များတစ်လျှောက် SWOLF မည်ကဲ့သို့ အပြောင်းအလဲများကို ခြေရာခံပါ—မြင့်တက်လာသော SWOLF သည် ပင်ပန်းနွမ်းနယ်မှုကို ဖြိုခွဲသည့်နည်းပညာကို ဖော်ပြသည်။</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow text-center">
+<h2>မက္ကင်းနစ်ကို ကျွမ်းကျင်တယ်၊ အရှိန်ကို ကျွမ်းကျင်တယ်။</h2>
+<p class="lead">အလျင် = SR × DPS သည် ဖော်မြူလာတစ်ခုမျှသာ မဟုတ်ဘဲ၊ ၎င်းသည် သင်၏ ရေကူးနည်းပညာ၏ ရှုထောင့်တိုင်းကို နားလည်ရန်နှင့် တိုးတက်စေရန်အတွက် မူဘောင်တစ်ခုဖြစ်သည်။</p>
+<p>ကိန်းရှင်နှစ်ခုလုံးကို ခြေရာခံပါ။ ချိန်ခွင်လျှာကို စမ်းသပ်ပါ။ သင်၏အကောင်းဆုံးပေါင်းစပ်မှုကိုရှာပါ။ အရှိန်က လိုက်လာလိမ့်မယ်။</p>
+<div class="mt-xl">
+<a class="btn btn-secondary" href="/my/efficiency/">← SWOLF စွမ်းဆောင်ရည်</a>
+<a class="btn btn-primary" href="/my/research/">သိပ္ပံနည်းကျ သုတေသန →</a>
+</div>
+</div>
+</section>
+    
+
+    
+    
+<section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information">
+  <div class="container container-narrow">
+    <div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;">
+      <div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div>
+      <div class="eeat-details">
+        
+        
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">AnalyticsZone Team</span>
+          </span>
+        </h3>
+        <p style="margin: 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    
+<section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="stroke-mechanics">
+  <div class="container ai-citation-shell">
+    <h2 class="ai-citation-title">กลศาสตร์จังหวะว่ายน้ำ: DPS, อัตราจังหวะและดัชนีจังหวะ</h2>
+    <p class="ai-citation-answer">ทำความเข้าใจกลศาสตร์จังหวะว่ายน้ำ: Distance Per Stroke (DPS), Stroke Rate (SR) และ Stroke Index (SI) เรียนรู้วิธีปรับปรุงประสิทธิภาพและความเร็วผ่านการวิเคราะห์ทางเทคนิค</p>
+
+    <ul class="ai-citation-facts" role="list">
+      
+      <li class="ai-citation-fact">
+        <span class="ai-citation-icon" aria-hidden="true">📅</span>
+        <span>2026-03-24</span>
+      </li>
+      
+
+      
+      <li class="ai-citation-fact ai-citation-keywords">
+        <span class="ai-citation-icon" aria-hidden="true">🏷️</span>
+        <span>กลศาสตร์ว่ายน้ำ · လေဖြတ်နှုန်းအကွာအဝေး · อัตราจังหวะ · ดัชนีจังหวะ · เทคนิคว่ายน้ำ</span>
+      </li>
+      
+
+      
+      <li class="ai-citation-fact">
+        <span class="ai-citation-icon" aria-hidden="true">🔬</span>
+        <a href="../../my/bibliography/">
+          
+          บรรณานุกรม
+          
+        </a>
+      </li>
+      
+    </ul>
+
+    
+  </div>
+</section>
+
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container">
+        
+        <div class="footer-top">
+            <div class="footer-brand-section">
+                
+                <h2>Swim Analytics</h2>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+                
+            </div>
+
+            
+            <div class="footer-download">
+                <h3 class="footer-heading">ဒေါင်းလုဒ်လုပ်ပါ။</h3>
+                <div class="footer-badges">
+                    
+                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="App Store တွင် ဒေါင်းလုဒ်လုပ်ပါ။">
+                        <img src="../../assets/images/badge-app-store.svg"
                             alt="App Store တွင် ဒေါင်းလုဒ်လုပ်ပါ။" width="135"
-                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Google Play တွင် ရယူပါ။"><img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy">
+                    </a>
+                    
+                    
+                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Google Play တွင် ရယူပါ။">
+                        <img src="../../assets/images/badge-google-play.svg"
                             alt="Google Play တွင် ရယူပါ။" width="135"
-                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">တွင်ရရှိနိုင်ပါသည်။</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                            height="40" loading="lazy">
+                    </a>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+        
+        <div class="footer-languages">
+            <h3 class="footer-heading">တွင်ရရှိနိုင်ပါသည်။</h3>
+            <div class="lang-grid">
+                
+                <a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a><a href="/am/" class="lang-link"
+                </a>
+                
+                <a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a><a href="/ar/" class="lang-link"
+                </a>
+                
+                <a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a><a href="/bg/" class="lang-link"
+                </a>
+                
+                <a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a><a href="/bn/" class="lang-link"
+                </a>
+                
+                <a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a><a href="/ca/" class="lang-link"
+                </a>
+                
+                <a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a><a href="/cs/" class="lang-link"
+                </a>
+                
+                <a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a><a href="/da/" class="lang-link"
+                </a>
+                
+                <a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a><a href="/de/" class="lang-link"
+                </a>
+                
+                <a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a><a href="/el/" class="lang-link"
+                </a>
+                
+                <a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a><a href="/en/" class="lang-link"
+                </a>
+                
+                <a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a><a href="/es/" class="lang-link"
+                </a>
+                
+                <a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a><a href="/et/" class="lang-link"
+                </a>
+                
+                <a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a><a href="/fa/" class="lang-link"
+                </a>
+                
+                <a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a><a href="/fi/" class="lang-link"
+                </a>
+                
+                <a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a><a href="/fr/" class="lang-link"
+                </a>
+                
+                <a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a><a href="/gu/" class="lang-link"
+                </a>
+                
+                <a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a><a href="/ha/" class="lang-link"
+                </a>
+                
+                <a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a><a href="/he/" class="lang-link"
+                </a>
+                
+                <a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a><a href="/hi/" class="lang-link"
+                </a>
+                
+                <a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a><a href="/hr/" class="lang-link"
+                </a>
+                
+                <a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a><a href="/hu/" class="lang-link"
+                </a>
+                
+                <a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a><a href="/id/" class="lang-link"
+                </a>
+                
+                <a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a><a href="/is/" class="lang-link"
+                </a>
+                
+                <a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a><a href="/it/" class="lang-link"
+                </a>
+                
+                <a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a><a href="/ja/" class="lang-link"
+                </a>
+                
+                <a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a><a href="/km/" class="lang-link"
+                </a>
+                
+                <a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a><a href="/kn/" class="lang-link"
+                </a>
+                
+                <a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a><a href="/ko/" class="lang-link"
+                </a>
+                
+                <a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a><a href="/lt/" class="lang-link"
+                </a>
+                
+                <a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a><a href="/lv/" class="lang-link"
+                </a>
+                
+                <a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a><a href="/ms/" class="lang-link"
+                </a>
+                
+                <a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a><a href="/my/" class="lang-link active"
+                </a>
+                
+                <a href="/my/" class="lang-link active"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a><a href="/nb/" class="lang-link"
+                </a>
+                
+                <a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a><a href="/nl/" class="lang-link"
+                </a>
+                
+                <a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a><a href="/pl/" class="lang-link"
+                </a>
+                
+                <a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a><a href="/pt/" class="lang-link"
+                </a>
+                
+                <a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a><a href="/pt-br/" class="lang-link"
+                </a>
+                
+                <a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a><a href="/ro/" class="lang-link"
+                </a>
+                
+                <a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a><a href="/ru/" class="lang-link"
+                </a>
+                
+                <a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a><a href="/sk/" class="lang-link"
+                </a>
+                
+                <a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a><a href="/sl/" class="lang-link"
+                </a>
+                
+                <a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a><a href="/sr/" class="lang-link"
+                </a>
+                
+                <a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a><a href="/sv/" class="lang-link"
+                </a>
+                
+                <a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a><a href="/sw/" class="lang-link"
+                </a>
+                
+                <a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a><a href="/ta/" class="lang-link"
+                </a>
+                
+                <a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a><a href="/te/" class="lang-link"
+                </a>
+                
+                <a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a><a href="/th/" class="lang-link"
+                </a>
+                
+                <a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a><a href="/tl/" class="lang-link"
+                </a>
+                
+                <a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a><a href="/tr/" class="lang-link"
+                </a>
+                
+                <a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a><a href="/uk/" class="lang-link"
+                </a>
+                
+                <a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a><a href="/ur/" class="lang-link"
+                </a>
+                
+                <a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a><a href="/vi/" class="lang-link"
+                </a>
+                
+                <a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a><a href="/yo/" class="lang-link"
+                </a>
+                
+                <a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a><a href="/zh/" class="lang-link"
+                </a>
+                
+                <a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                </a>
+                
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        
+        <div class="footer-bottom">
+            <p class="copyright">
                 &copy; 2026 Swim Analytics. สงวนลิขสิทธิ์
-            </p><ul class="footer-legal"><li><a href="/my/privacy/">ความเป็นส่วนตัว</a></li><li><a href="/my/terms/">เงื่อนไข</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>เว็บไซต์นี้ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ</p><a href="/my/privacy/" class="text-sm">เรียนรู้เพิ่มเติม</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">ปฏิเสธ</button><button id="cookie-accept" class="btn btn-primary btn-small">ยอมรับ</button></div></div></div><script src="../../assets/js/core.min.js?v=635348535bde" defer></script><script src="../../assets/js/search.min.js?v=635348535bde" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>
+            </p>
+            <ul class="footer-legal">
+                <li><a href="/my/privacy/">ความเป็นส่วนตัว</a></li>
+                <li><a href="/my/terms/">เงื่อนไข</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+  
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>เว็บไซต์นี้ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ</p>
+            <a href="/my/privacy/" class="text-sm">เรียนรู้เพิ่มเติม</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">ปฏิเสธ</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">ยอมรับ</button>
+        </div>
+    </div>
+</div>
+
+  
+  <script src="../../assets/js/core.min.js?v=19fdca55b3da" defer></script>
+  <script src="../../assets/js/search.min.js?v=19fdca55b3da" defer></script>
+  
+
+  
+  
+  <script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script>
+  
+
+  
+  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
+</body>
+
+</html>
