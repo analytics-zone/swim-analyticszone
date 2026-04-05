@@ -1,473 +1,61 @@
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Swim Analytics: אפליקציית מעקב וניתוח ביצועי שחייה ל-iOS</title>
-  <meta name="description" content="עקוב אחר מדדי שחייה, חשב CSS ו-sTSS, נתח עומס אימונים עם אנליטיקה מקצועית. מחשבונים חינמיים לשחיינים תחרותיים וטריאתלונים. 7 ימי ניסיון חינם.">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="אפליקציית מעקב שחייה, אנליטיקת שחייה, מחשבון CSS, ביצועי שחייה, sTSS">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/he/">
-
-  
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://swim.analyticszone.app/he/">
-  <meta property="og:title" content="Swim Analytics: אפליקציית מעקב וניתוח ביצועי שחייה ל-iOS">
-  <meta property="og:description" content="עקוב אחר מדדי שחייה, חשב CSS ו-sTSS, נתח עומס אימונים עם אנליטיקה מקצועית. מחשבונים חינמיים לשחיינים תחרותיים וטריאתלונים. 7 ימי ניסיון חינם.">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="he_IL">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/he/">
-  <meta name="twitter:title" content="Swim Analytics: אפליקציית מעקב וניתוח ביצועי שחייה ל-iOS">
-  <meta name="twitter:description" content="עקוב אחר מדדי שחייה, חשב CSS ו-sTSS, נתח עומס אימונים עם אנליטיקה מקצועית. מחשבונים חינמיים לשחיינים תחרותיים וטריאתלונים. 7 ימי ניסיון חינם.">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/">
-  
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/">
-  
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  
-  
-  <meta name="robots" content="index, follow">
-  
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="he" dir="rtl"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+    rel="stylesheet"><title>Swim Analytics: אפליקציית מעקב וניתוח ביצועי שחייה ל-iOS</title><meta name="description" content="עקוב אחר מדדי שחייה, חשב CSS ו-sTSS, נתח עומס אימונים עם אנליטיקה מקצועית. מחשבונים חינמיים לשחיינים תחרותיים וטריאתלונים. 7 ימי ניסיון חינם."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="אפליקציית מעקב שחייה, אנליטיקת שחייה, מחשבון CSS, ביצועי שחייה, sTSS"><link rel="canonical" href="https://swim.analyticszone.app/he/"><meta property="og:type" content="website"><meta property="og:url" content="https://swim.analyticszone.app/he/"><meta property="og:title" content="Swim Analytics: אפליקציית מעקב וניתוח ביצועי שחייה ל-iOS"><meta property="og:description" content="עקוב אחר מדדי שחייה, חשב CSS ו-sTSS, נתח עומס אימונים עם אנליטיקה מקצועית. מחשבונים חינמיים לשחיינים תחרותיים וטריאתלונים. 7 ימי ניסיון חינם."><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="he_IL"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/he/"><meta name="twitter:title" content="Swim Analytics: אפליקציית מעקב וניתוח ביצועי שחייה ל-iOS"><meta name="twitter:description" content="עקוב אחר מדדי שחייה, חשב CSS ו-sTSS, נתח עומס אימונים עם אנליטיקה מקצועית. מחשבונים חינמיים לשחיינים תחרותיים וטריאתלונים. 7 ימי ניסיון חינם."><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/"><link rel="icon" type="image/png" sizes="32x32" href="../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -726,7 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../assets/css/main.min.css?v=2c227be8"><script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../assets/css/main.min.css?v=5f4a7b18ac56"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -761,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -773,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "he"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -792,14 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -842,22 +416,7 @@ img[width][height] {
     }
   ]
 }
-</script>
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -871,1314 +430,414 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">דלג לתוכן</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/he/" class="site-logo">
-                <picture>
-                    <source srcset="../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/he/" 
+  </script></head><body><a href="#main-content" class="skip-link">דלג לתוכן</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/he/" class="site-logo"><picture><source srcset="../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/he/" 
                                 aria-current="">
                                 בית
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/he/getting-started/" class="nav-label">למד</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/he/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/he/getting-started/" class="nav-label">למד</a><ul class="submenu"><li><a href="/he/getting-started/" 
                                         aria-current="">
                                         התחלה
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/he/css/" 
+                                    </a></li><li><a href="/he/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/he/training-zones/" 
+                                    </a></li><li><a href="/he/training-zones/" 
                                         aria-current="">
                                         אזורי אימון
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/he/training-load/" 
+                                    </a></li><li><a href="/he/training-load/" 
                                         aria-current="">
                                         עומס אימון
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/he/stss-calculator/" 
+                                    </a></li><li><a href="/he/stss-calculator/" 
                                         aria-current="">
                                         מחשבון sTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/he/research/" class="nav-label">מדע</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/he/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/he/research/" class="nav-label">מדע</a><ul class="submenu"><li><a href="/he/research/" 
                                         aria-current="">
                                         מחקר
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/he/formulas/" 
+                                    </a></li><li><a href="/he/formulas/" 
                                         aria-current="">
                                         נוסחאות
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/he/efficiency/" 
+                                    </a></li><li><a href="/he/efficiency/" 
                                         aria-current="">
                                         יעילות
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/he/stroke-mechanics/" 
+                                    </a></li><li><a href="/he/stroke-mechanics/" 
                                         aria-current="">
                                         מכניקת השחייה
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/he/bibliography/" 
+                                    </a></li><li><a href="/he/bibliography/" 
                                         aria-current="">
                                         ביבליוגרפיה
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/he/contact/" 
+                                    </a></li></ul></li><li><a href="/he/contact/" 
                                 aria-current="">
                                 צור קשר
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="בחר שפה">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="בחר שפה"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" selected>
+                        </option><option value="he" selected>
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                                <a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a>
-                                
-                                <a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="החלף תפריט"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-
-  
-  <main id="main-content" class="main-content">
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="החלף תפריט"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content">
     
     דף נחיתה של אפליקציית Swim Analytics - דף הבית
 מדור גיבורים עם מבוא לאפליקציה
-<section class="app-hero">
-<div class="container">
-<div class="app-hero-content">
-<div class="app-hero-text">
-<div class="app-hero-badge">
-<span><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="18"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path></svg></span>
-<span>ניתוח שחייה מקצועי</span>
-</div>
-<h1>הפוך את נתוני השחייה שלך לביצועים</h1>
-<p class="app-hero-subtitle">מדדים מדעיים, אזורי אימון מותאמים אישית ומעקב ביצועים מקיף.
-          הכל מעובד באופן מקומי ב-iPhone שלך עם פרטיות מלאה.</p>
-<div class="app-hero-cta store-badges">
-<a aria-label="Download on the App Store" class="store-badge" href="https://apps.apple.com/us/app/swim-analytics/id6753306284" rel="noopener" target="_blank">
-<img alt="הורד ב-App Store" height="47" src="../assets/images/badge-app-store.svg" width="140"/>
-</a>
-<a aria-label="Get it on Google Play" class="store-badge" href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" rel="noopener" target="_blank">
-<img alt="קבל אותו ב-Google Play" height="47" src="../assets/images/badge-google-play.svg" width="140"/>
-</a>
-</div>
-<div class="app-hero-secondary">
-<a class="btn btn-large btn-secondary" href="#features">חקור תכונות</a>
-</div>
-<p class="mt-6 text-sm-muted">✓ ניסיון חינם למשך 7 ימים    ✓ אין צורך בחשבון    ✓ 100% נתונים מקומיים</p>
-</div>
-<div class="app-hero-mockup">
-<div class="mockup-phone">
-<picture>
-<img alt="אפליקציית Swim Analytics iOS מציגה את לוח המחוונים של מהירות שחייה קריטית (CSS) וציון מתח אימון (TSS) ב-iPhone" height="auto" loading="eager" src="../assets/images/app-mockup-main.png" width="400"/>
-</picture>
-</div>
-</div>
-</div>
-</div>
-</section>
+<section class="app-hero"><div class="container"><div class="app-hero-content"><div class="app-hero-text"><div class="app-hero-badge"><span><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="18"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path></svg></span><span>ניתוח שחייה מקצועי</span></div><h1>הפוך את נתוני השחייה שלך לביצועים</h1><p class="app-hero-subtitle">מדדים מדעיים, אזורי אימון מותאמים אישית ומעקב ביצועים מקיף.
+          הכל מעובד באופן מקומי ב-iPhone שלך עם פרטיות מלאה.</p><div class="app-hero-cta store-badges"><a aria-label="Download on the App Store" class="store-badge" href="https://apps.apple.com/us/app/swim-analytics/id6753306284" rel="noopener" target="_blank"><img alt="הורד ב-App Store" height="47" src="../assets/images/badge-app-store.svg" width="140"/></a><a aria-label="Get it on Google Play" class="store-badge" href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" rel="noopener" target="_blank"><img alt="קבל אותו ב-Google Play" height="47" src="../assets/images/badge-google-play.svg" width="140"/></a></div><div class="app-hero-secondary"><a class="btn btn-large btn-secondary" href="#features">חקור תכונות</a></div><p class="mt-6 text-sm-muted">✓ ניסיון חינם למשך 7 ימים    ✓ אין צורך בחשבון    ✓ 100% נתונים מקומיים</p></div><div class="app-hero-mockup"><div class="mockup-phone"><picture><img alt="אפליקציית Swim Analytics iOS מציגה את לוח המחוונים של מהירות שחייה קריטית (CSS) וציון מתח אימון (TSS) ב-iPhone" height="auto" loading="eager" src="../assets/images/app-mockup-main.png" width="400"/></picture></div></div></div></div></section>
 סעיף תכונות עיקריות
-<section class="app-features" id="features">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">תכונות</div>
-<h2 class="section-title">כל מה שאתה צריך כדי לשפר</h2>
-<p class="section-subtitle">ניתוחים ברמה מקצועית המיועדים לשחיינים בכל רמה</p>
-</div>
-<div class="app-features-grid">
-<div class="feature-card">
-<div class="feature-icon">
-<svg aria-hidden="true" class="icon">
-<use href="../assets/images/icons-sprite.svg#icon-chart"></use>
-</svg>
-</div>
-<h3>מדדים מדעיים</h3>
-<p><a href="/he/css/">מהירות שחייה קריטית (CSS)</a>קובע את הסף האירובי שלך, מאפשר<a href="/he/training-load/">ציון מתח אימון (TSS)</a>חישוב ו<a href="/he/training-load/#pmc">מעקב אחר ביצועים CTL/ATL/TSB</a>מבוסס על מדע ספורט מוכח
-          מחקר. למידע נוסף על שלנו<a href="/en/formulas/">נוסחאות מתמטיות</a>ו<a href="/en/efficiency/">מדדי יעילות שחייה</a>.</p>
-</div>
-<div class="feature-card">
-<div class="feature-icon">
-<svg aria-hidden="true" class="icon">
-<use href="../assets/images/icons-sprite.svg#icon-zones"></use>
-</svg>
-</div>
-<h3>אזורי אימון</h3>
-<p>7 אזורי אימון מותאמים אישית מכוילים ל-CSS שלך. ייעול כל אימון להתאוששות, אירובי,
-          סף, או פיתוח VO₂max.</p>
-</div>
-<div class="feature-card">
-<div class="feature-icon">
-<svg aria-hidden="true" class="icon">
-<use href="../assets/images/icons-sprite.svg#icon-calendar"></use>
-</svg>
-</div>
-<h3>השוואות חכמות</h3>
-<p>השוואות תקופות שבועיות, חודשיות ושנתיות עם זיהוי מגמות אוטומטי ואחוז שינויים לכולם
-          מדדים.</p>
-</div>
-<div class="feature-card">
-<div class="feature-icon">
-<svg aria-hidden="true" class="icon">
-<use href="../assets/images/icons-sprite.svg#icon-shield"></use>
-</svg>
-</div>
-<h3>פרטיות מלאה</h3>
-<p>כל הנתונים מעובדים באופן מקומי במכשיר שלך. אין שרתים, אין ענן, אין מעקב. אתה הבעלים והשולט שלך
-          נתוני שחייה.</p>
-</div>
-<div class="feature-card">
-<div class="feature-icon">
-<svg aria-hidden="true" class="icon">
-<use href="../assets/images/icons-sprite.svg#icon-export"></use>
-</svg>
-</div>
-<h3>ייצא לכל מקום</h3>
-<p>ייצא אימונים וניתוחים בפורמטים JSON, CSV, HTML או PDF. תואם למאמנים, גיליונות אלקטרוניים ו
-          פלטפורמות הדרכה.</p>
-</div>
-<div class="feature-card">
-<div class="feature-icon">
-<svg aria-hidden="true" class="icon">
-<use href="../assets/images/icons-sprite.svg#icon-lightning"></use>
-</svg>
-</div>
-<h3>ביצועים מיידיים</h3>
-<p>השקת אפליקציה מתחת ל-0.35s עם ארכיטקטורה מקומית ראשונה. הצג את האימונים שלך באופן מיידי מבלי לחכות לסנכרון או
-          הורדות.</p>
-</div>
-</div>
-</div>
-</section>
+<section class="app-features" id="features"><div class="container"><div class="section-header"><div class="section-badge">תכונות</div><h2 class="section-title">כל מה שאתה צריך כדי לשפר</h2><p class="section-subtitle">ניתוחים ברמה מקצועית המיועדים לשחיינים בכל רמה</p></div><div class="app-features-grid"><div class="feature-card"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="../assets/images/icons-sprite.svg#icon-chart"></use></svg></div><h3>מדדים מדעיים</h3><p><a href="/he/css/">מהירות שחייה קריטית (CSS)</a>קובע את הסף האירובי שלך, מאפשר<a href="/he/training-load/">ציון מתח אימון (TSS)</a>חישוב ו<a href="/he/training-load/#pmc">מעקב אחר ביצועים CTL/ATL/TSB</a>מבוסס על מדע ספורט מוכח
+          מחקר. למידע נוסף על שלנו<a href="/en/formulas/">נוסחאות מתמטיות</a>ו<a href="/en/efficiency/">מדדי יעילות שחייה</a>.</p></div><div class="feature-card"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="../assets/images/icons-sprite.svg#icon-zones"></use></svg></div><h3>אזורי אימון</h3><p>7 אזורי אימון מותאמים אישית מכוילים ל-CSS שלך. ייעול כל אימון להתאוששות, אירובי,
+          סף, או פיתוח VO₂max.</p></div><div class="feature-card"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="../assets/images/icons-sprite.svg#icon-calendar"></use></svg></div><h3>השוואות חכמות</h3><p>השוואות תקופות שבועיות, חודשיות ושנתיות עם זיהוי מגמות אוטומטי ואחוז שינויים לכולם
+          מדדים.</p></div><div class="feature-card"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="../assets/images/icons-sprite.svg#icon-shield"></use></svg></div><h3>פרטיות מלאה</h3><p>כל הנתונים מעובדים באופן מקומי במכשיר שלך. אין שרתים, אין ענן, אין מעקב. אתה הבעלים והשולט שלך
+          נתוני שחייה.</p></div><div class="feature-card"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="../assets/images/icons-sprite.svg#icon-export"></use></svg></div><h3>ייצא לכל מקום</h3><p>ייצא אימונים וניתוחים בפורמטים JSON, CSV, HTML או PDF. תואם למאמנים, גיליונות אלקטרוניים ו
+          פלטפורמות הדרכה.</p></div><div class="feature-card"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="../assets/images/icons-sprite.svg#icon-lightning"></use></svg></div><h3>ביצועים מיידיים</h3><p>השקת אפליקציה מתחת ל-0.35s עם ארכיטקטורה מקומית ראשונה. הצג את האימונים שלך באופן מיידי מבלי לחכות לסנכרון או
+          הורדות.</p></div></div></div></section>
 קרוסלת צילומי מסך
-<section class="app-screenshots">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">צילומי מסך</div>
-<h2 class="section-title">ראה Swim Analytics בפעולה</h2>
-<p class="section-subtitle">ממשק יפה ואינטואיטיבי המיועד לשחיינים</p>
-</div>
-<div class="carousel-wrapper">
-<button aria-label="Previous screenshot" class="carousel-btn carousel-btn-prev">
-<svg aria-hidden="true">
-<use href="../assets/images/icons-sprite.svg#icon-arrow-left"></use>
-</svg>
-</button>
-<div class="screenshots-carousel" id="screenshotsCarousel">
-<div class="screenshot-item">
-<picture>
-<source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/workouts-list-400w.webp 400w,
+<section class="app-screenshots"><div class="container"><div class="section-header"><div class="section-badge">צילומי מסך</div><h2 class="section-title">ראה Swim Analytics בפעולה</h2><p class="section-subtitle">ממשק יפה ואינטואיטיבי המיועד לשחיינים</p></div><div class="carousel-wrapper"><button aria-label="Previous screenshot" class="carousel-btn carousel-btn-prev"><svg aria-hidden="true"><use href="../assets/images/icons-sprite.svg#icon-arrow-left"></use></svg></button><div class="screenshots-carousel" id="screenshotsCarousel"><div class="screenshot-item"><picture><source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/workouts-list-400w.webp 400w,
                                 ../assets/images/screenshots/workouts-list-800w.webp 800w,
-                                ../assets/images/screenshots/workouts-list.webp 1200w" type="image/webp"/>
-<source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/workouts-list-400w.png 400w,
+                                ../assets/images/screenshots/workouts-list.webp 1200w" type="image/webp"/><source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/workouts-list-400w.png 400w,
                                 ../assets/images/screenshots/workouts-list-800w.png 800w,
-                                ../assets/images/screenshots/workouts-list.png 1200w" type="image/png"/>
-<img alt="רשימת אימונים של Swim Analytics המציגה אימוני שחייה עם ציוני TSS ואזורי אימון" height="800" loading="lazy" src="../assets/images/screenshots/workouts-list.png" width="1200"/>
-</picture>
-<p class="screenshot-caption">סקירת אימונים</p>
-</div>
-<div class="screenshot-item">
-<picture>
-<source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/workout-detail-400w.webp 400w,
+                                ../assets/images/screenshots/workouts-list.png 1200w" type="image/png"/><img alt="רשימת אימונים של Swim Analytics המציגה אימוני שחייה עם ציוני TSS ואזורי אימון" height="800" loading="lazy" src="../assets/images/screenshots/workouts-list.png" width="1200"/></picture><p class="screenshot-caption">סקירת אימונים</p></div><div class="screenshot-item"><picture><source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/workout-detail-400w.webp 400w,
                                 /assets/images/screenshots/workout-detail-800w.webp 800w,
-                                /assets/images/screenshots/workout-detail.webp 1200w" type="image/webp"/>
-<source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/workout-detail-400w.png 400w,
+                                /assets/images/screenshots/workout-detail.webp 1200w" type="image/webp"/><source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/workout-detail-400w.png 400w,
                                 /assets/images/screenshots/workout-detail-800w.png 800w,
-                                /assets/images/screenshots/workout-detail.png 1200w" type="image/png"/>
-<img alt="ניתוח אימון שחייה מפורט עם קצב הקפה אחר הקפה, יעילות SWOLF ונתוני דופק" height="800" loading="lazy" src="../assets/images/screenshots/workout-detail.png" width="1200"/>
-</picture>
-<p class="screenshot-caption">ניתוח סיבוב אחר סיבוב</p>
-</div>
-<div class="screenshot-item">
-<picture>
-<source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/analytics-400w.webp 400w,
+                                /assets/images/screenshots/workout-detail.png 1200w" type="image/png"/><img alt="ניתוח אימון שחייה מפורט עם קצב הקפה אחר הקפה, יעילות SWOLF ונתוני דופק" height="800" loading="lazy" src="../assets/images/screenshots/workout-detail.png" width="1200"/></picture><p class="screenshot-caption">ניתוח סיבוב אחר סיבוב</p></div><div class="screenshot-item"><picture><source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/analytics-400w.webp 400w,
                                 /assets/images/screenshots/analytics-800w.webp 800w,
-                                /assets/images/screenshots/analytics.webp 1200w" type="image/webp"/>
-<source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/analytics-400w.png 400w,
+                                /assets/images/screenshots/analytics.webp 1200w" type="image/webp"/><source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/analytics-400w.png 400w,
                                 /assets/images/screenshots/analytics-800w.png 800w,
-                                /assets/images/screenshots/analytics.png 1200w" type="image/png"/>
-<img alt="לוח המחוונים Swim Analytics מציג מדדי ניהול תרשים CTL, ATL ו-TSB" height="800" loading="lazy" src="../assets/images/screenshots/analytics.png" width="1200"/>
-</picture>
-<p class="screenshot-caption">מדדים מתקדמים</p>
-</div>
-<div class="screenshot-item">
-<picture>
-<source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/performance-400w.webp 400w,
+                                /assets/images/screenshots/analytics.png 1200w" type="image/png"/><img alt="לוח המחוונים Swim Analytics מציג מדדי ניהול תרשים CTL, ATL ו-TSB" height="800" loading="lazy" src="../assets/images/screenshots/analytics.png" width="1200"/></picture><p class="screenshot-caption">מדדים מתקדמים</p></div><div class="screenshot-item"><picture><source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/performance-400w.webp 400w,
                                 /assets/images/screenshots/performance-800w.webp 800w,
-                                /assets/images/screenshots/performance.webp 1200w" type="image/webp"/>
-<source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/performance-400w.png 400w,
+                                /assets/images/screenshots/performance.webp 1200w" type="image/webp"/><source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/performance-400w.png 400w,
                                 /assets/images/screenshots/performance-800w.png 800w,
-                                /assets/images/screenshots/performance.png 1200w" type="image/png"/>
-<img alt="תרשים מגמות ביצועי שחייה המציג את התקדמות ה-CSS ועומס האימון לאורך זמן" height="800" loading="lazy" src="../assets/images/screenshots/performance.png" width="1200"/>
-</picture>
-<p class="screenshot-caption">מגמות ביצועים</p>
-</div>
-<div class="screenshot-item">
-<picture>
-<source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/training-zones-400w.webp 400w,
+                                /assets/images/screenshots/performance.png 1200w" type="image/png"/><img alt="תרשים מגמות ביצועי שחייה המציג את התקדמות ה-CSS ועומס האימון לאורך זמן" height="800" loading="lazy" src="../assets/images/screenshots/performance.png" width="1200"/></picture><p class="screenshot-caption">מגמות ביצועים</p></div><div class="screenshot-item"><picture><source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/training-zones-400w.webp 400w,
                                 /assets/images/screenshots/training-zones-800w.webp 800w,
-                                /assets/images/screenshots/training-zones.webp 1200w" type="image/webp"/>
-<source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/training-zones-400w.png 400w,
+                                /assets/images/screenshots/training-zones.webp 1200w" type="image/webp"/><source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/training-zones-400w.png 400w,
                                 /assets/images/screenshots/training-zones-800w.png 800w,
-                                /assets/images/screenshots/training-zones.png 1200w" type="image/png"/>
-<img alt="7 אזורי אימוני שחייה מותאמים אישית המבוססים על סף מהירות שחייה קריטי" height="800" loading="lazy" src="../assets/images/screenshots/training-zones.png" width="1200"/>
-</picture>
-<p class="screenshot-caption">אזורי אימון</p>
-</div>
-<div class="screenshot-item">
-<picture>
-<source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/export-options-400w.webp 400w,
+                                /assets/images/screenshots/training-zones.png 1200w" type="image/png"/><img alt="7 אזורי אימוני שחייה מותאמים אישית המבוססים על סף מהירות שחייה קריטי" height="800" loading="lazy" src="../assets/images/screenshots/training-zones.png" width="1200"/></picture><p class="screenshot-caption">אזורי אימון</p></div><div class="screenshot-item"><picture><source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/export-options-400w.webp 400w,
                                 /assets/images/screenshots/export-options-800w.webp 800w,
-                                /assets/images/screenshots/export-options.webp 1200w" type="image/webp"/>
-<source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/export-options-400w.png 400w,
+                                /assets/images/screenshots/export-options.webp 1200w" type="image/webp"/><source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px" srcset="../assets/images/screenshots/export-options-400w.png 400w,
                                 /assets/images/screenshots/export-options-800w.png 800w,
-                                /assets/images/screenshots/export-options.png 1200w" type="image/png"/>
-<img alt="ייצוא נתוני שחייה בפורמטים JSON, CSV, HTML ו-PDF עבור מאמנים וניתוח" height="800" loading="lazy" src="../assets/images/screenshots/export-options.png" width="1200"/>
-</picture>
-<p class="screenshot-caption">אפשרויות ייצוא</p>
-</div>
-</div>
-<button aria-label="Next screenshot" class="carousel-btn carousel-btn-next">
-<svg aria-hidden="true">
-<use href="../assets/images/icons-sprite.svg#icon-arrow-right"></use>
-</svg>
-</button>
-<div aria-label="Screenshot navigation" class="carousel-dots" id="carouselDots" role="tablist"></div>
-</div>
-</div>
-</section>
+                                /assets/images/screenshots/export-options.png 1200w" type="image/png"/><img alt="ייצוא נתוני שחייה בפורמטים JSON, CSV, HTML ו-PDF עבור מאמנים וניתוח" height="800" loading="lazy" src="../assets/images/screenshots/export-options.png" width="1200"/></picture><p class="screenshot-caption">אפשרויות ייצוא</p></div></div><button aria-label="Next screenshot" class="carousel-btn carousel-btn-next"><svg aria-hidden="true"><use href="../assets/images/icons-sprite.svg#icon-arrow-right"></use></svg></button><div aria-label="Screenshot navigation" class="carousel-dots" id="carouselDots" role="tablist"></div></div></div></section>
 מדור מדדים מדעיים
-<section class="app-metrics">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">מבוסס מדע</div>
-<h2 class="section-title text-white">מדדים מקצועיים שחשובים</h2>
-<p class="section-subtitle text-white-90">Swim Analytics הופך נתוני שחייה גולמיים לאינטליגנציה ניתנת לפעולה
-        באמצעות מדדים מאומתים על ידי מחקר מדעי הספורט</p>
-</div>
-<div class="metrics-grid">
-<div class="metric-card">
-<div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-target"></use></svg></div>
-<div class="metric-label">קצב סף</div>
-<h3 class="metric-name">CSS</h3>
-<p class="metric-description">מהירות שחייה קריטית - קצב הסף האירובי שלך</p>
-</div>
-<div class="metric-card">
-<div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-chart"></use></svg></div>
-<div class="metric-label">עומס אימון</div>
-<h3 class="metric-name">TSS</h3>
-<p class="metric-description">ציון מתח אימון מכמת את עוצמת האימון</p>
-</div>
-<div class="metric-card">
-<div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-watch"></use></svg></div>
-<div class="metric-label">כושר</div>
-<h3 class="metric-name">CTL</h3>
-<p class="metric-description">עומס אימון כרוני - ממוצע מתגלגל של 42 יום</p>
-</div>
-<div class="metric-card">
-<div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-calendar"></use></svg></div>
-<div class="metric-label">עייפות</div>
-<h3 class="metric-name">ATL</h3>
-<p class="metric-description">עומס אימון אקוטי - ממוצע מתגלגל של 7 ימים</p>
-</div>
-<div class="metric-card">
-<div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-zones"></use></svg></div>
-<div class="metric-label">טופס</div>
-<h3 class="metric-name">TSB</h3>
-<p class="metric-description">אימון איזון לחץ מעיד על מוכנות</p>
-</div>
-<div class="metric-card">
-<div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-lightning"></use></svg></div>
-<div class="metric-label">יעילות</div>
-<h3 class="metric-name">נפוח</h3>
-<p class="metric-description">ציון יעילות שבץ - נמוך יותר טוב יותר</p>
-</div>
-<div class="metric-card">
-<div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-zones"></use></svg></div>
-<div class="metric-label">אזורים</div>
-<h3 class="metric-name">7 אזורים</h3>
-<p class="metric-description">התאוששות לרמות עצימות ספרינט</p>
-</div>
-<div class="metric-card">
-<div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-target"></use></svg></div>
-<div class="metric-label">שיאים</div>
-<h3 class="metric-name">יחסי ציבור</h3>
-<p class="metric-description">מעקב אוטומטי אחר שיאים אישיים</p>
-</div>
-</div>
-</div>
-</section>
+<section class="app-metrics"><div class="container"><div class="section-header"><div class="section-badge">מבוסס מדע</div><h2 class="section-title text-white">מדדים מקצועיים שחשובים</h2><p class="section-subtitle text-white-90">Swim Analytics הופך נתוני שחייה גולמיים לאינטליגנציה ניתנת לפעולה
+        באמצעות מדדים מאומתים על ידי מחקר מדעי הספורט</p></div><div class="metrics-grid"><div class="metric-card"><div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-target"></use></svg></div><div class="metric-label">קצב סף</div><h3 class="metric-name">CSS</h3><p class="metric-description">מהירות שחייה קריטית - קצב הסף האירובי שלך</p></div><div class="metric-card"><div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-chart"></use></svg></div><div class="metric-label">עומס אימון</div><h3 class="metric-name">TSS</h3><p class="metric-description">ציון מתח אימון מכמת את עוצמת האימון</p></div><div class="metric-card"><div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-watch"></use></svg></div><div class="metric-label">כושר</div><h3 class="metric-name">CTL</h3><p class="metric-description">עומס אימון כרוני - ממוצע מתגלגל של 42 יום</p></div><div class="metric-card"><div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-calendar"></use></svg></div><div class="metric-label">עייפות</div><h3 class="metric-name">ATL</h3><p class="metric-description">עומס אימון אקוטי - ממוצע מתגלגל של 7 ימים</p></div><div class="metric-card"><div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-zones"></use></svg></div><div class="metric-label">טופס</div><h3 class="metric-name">TSB</h3><p class="metric-description">אימון איזון לחץ מעיד על מוכנות</p></div><div class="metric-card"><div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-lightning"></use></svg></div><div class="metric-label">יעילות</div><h3 class="metric-name">נפוח</h3><p class="metric-description">ציון יעילות שבץ - נמוך יותר טוב יותר</p></div><div class="metric-card"><div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-zones"></use></svg></div><div class="metric-label">אזורים</div><h3 class="metric-name">7 אזורים</h3><p class="metric-description">התאוששות לרמות עצימות ספרינט</p></div><div class="metric-card"><div class="metric-icon"><svg aria-hidden="true" class="icon" height="22" width="22"><use href="../assets/images/icons-sprite.svg#icon-target"></use></svg></div><div class="metric-label">שיאים</div><h3 class="metric-name">יחסי ציבור</h3><p class="metric-description">מעקב אוטומטי אחר שיאים אישיים</p></div></div></div></section>
 מדור תמחור
-<section class="app-pricing">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">תמחור</div>
-<h2 class="section-title">תמחור פשוט ושקוף</h2>
-<p class="section-subtitle">התחל עם ניסיון חינם של 7 ימים. בטל בכל עת.</p>
-</div>
-<div class="pricing-grid">
-<div class="pricing-card">
-<div class="pricing-header">
-<h3 class="pricing-name">חודשי</h3>
-<div class="pricing-price">
-<span class="pricing-currency">€</span>
-<span class="pricing-amount">3.99</span>
-<span class="pricing-period">/חודש</span>
-</div>
-<p class="pricing-trial">ניסיון חינם ל-7 ימים</p>
-</div>
-<ul class="pricing-features">
-<li>סנכרון אימון בלתי מוגבל</li>
-<li>כל המדדים המדעיים (CSS, TSS, CTL/ATL/TSB)</li>
-<li>7 אזורי אימונים מותאמים אישית</li>
-<li>השוואות שבועיות, חודשיות ושנתיות</li>
-<li>ייצוא ב-JSON, CSV, HTML ו-PDF</li>
-<li>100% פרטיות, נתונים מקומיים</li>
-<li>כל העדכונים העתידיים</li>
-</ul>
-</div>
-<div class="pricing-card featured">
-<span class="pricing-badge">מומלץ</span>
-<div class="pricing-header">
-<h3 class="pricing-name">שנתי</h3>
-<div class="pricing-price">
-<span class="pricing-currency">€</span>
-<span class="pricing-amount">39</span>
-<span class="pricing-period">/שנה</span>
-</div>
-<p class="pricing-trial">חיסכון של €8.88 לשנה (18% הנחה)</p>
-</div>
-<ul class="pricing-features">
-<li>סנכרון אימון בלתי מוגבל</li>
-<li>כל המדדים המדעיים (CSS, TSS, CTL/ATL/TSB)</li>
-<li>7 אזורי אימונים מותאמים אישית</li>
-<li>השוואות שבועיות, חודשיות ושנתיות</li>
-<li>ייצוא ב-JSON, CSV, HTML ו-PDF</li>
-<li>100% פרטיות, נתונים מקומיים</li>
-<li>כל העדכונים העתידיים</li>
-<li><strong>רק 3.25 אירו לחודש</strong></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
+<section class="app-pricing"><div class="container"><div class="section-header"><div class="section-badge">תמחור</div><h2 class="section-title">תמחור פשוט ושקוף</h2><p class="section-subtitle">התחל עם ניסיון חינם של 7 ימים. בטל בכל עת.</p></div><div class="pricing-grid"><div class="pricing-card"><div class="pricing-header"><h3 class="pricing-name">חודשי</h3><div class="pricing-price"><span class="pricing-currency">€</span><span class="pricing-amount">3.99</span><span class="pricing-period">/חודש</span></div><p class="pricing-trial">ניסיון חינם ל-7 ימים</p></div><ul class="pricing-features"><li>סנכרון אימון בלתי מוגבל</li><li>כל המדדים המדעיים (CSS, TSS, CTL/ATL/TSB)</li><li>7 אזורי אימונים מותאמים אישית</li><li>השוואות שבועיות, חודשיות ושנתיות</li><li>ייצוא ב-JSON, CSV, HTML ו-PDF</li><li>100% פרטיות, נתונים מקומיים</li><li>כל העדכונים העתידיים</li></ul></div><div class="pricing-card featured"><span class="pricing-badge">מומלץ</span><div class="pricing-header"><h3 class="pricing-name">שנתי</h3><div class="pricing-price"><span class="pricing-currency">€</span><span class="pricing-amount">39</span><span class="pricing-period">/שנה</span></div><p class="pricing-trial">חיסכון של €8.88 לשנה (18% הנחה)</p></div><ul class="pricing-features"><li>סנכרון אימון בלתי מוגבל</li><li>כל המדדים המדעיים (CSS, TSS, CTL/ATL/TSB)</li><li>7 אזורי אימונים מותאמים אישית</li><li>השוואות שבועיות, חודשיות ושנתיות</li><li>ייצוא ב-JSON, CSV, HTML ו-PDF</li><li>100% פרטיות, נתונים מקומיים</li><li>כל העדכונים העתידיים</li><li><strong>רק 3.25 אירו לחודש</strong></li></ul></div></div></div></section>
 מדור הטבות
-<section class="app-benefits">
-<div class="container">
-<div class="section-header">
-<div class="section-badge">למה Swim Analytics</div>
-<h2 class="section-title">נבנה עבור שחיינים רציניים</h2>
-<p class="section-subtitle">תכונות מקצועיות ללא המורכבות</p>
-</div>
-<div class="benefits-grid">
-<div class="benefit-item">
-<div class="benefit-icon"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="18"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path></svg></div>
-<div class="benefit-content">
-<h3>פרוטוקול בדיקת CSS</h3>
-<p>פרוטוקול בדיקה מובנה של 400 מ' + 200 מ' לקביעת מהירות השחייה הקריטית שלך.חזור כל 6-8 שבועות כדי לעקוב
-            להתקדם ולהתאים את אזורי האימון באופן אוטומטי.</p>
-</div>
-</div>
-<div class="benefit-item">
-<div class="benefit-icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><rect height="20" rx="2" ry="2" width="14" x="5" y="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg></div>
-<div class="benefit-content">
-<h3>חוויית iOS מקורית</h3>
-<p>נבנה עם SwiftUI לביצועים חלקים ושילוב iOS. סנכרון חלק של אפליקציית בריאות, תמיכה בווידג'טים,
-            ושפת עיצוב מוכרת של אפל.</p>
-</div>
-</div>
-<div class="benefit-item">
-<div class="benefit-icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M9 3h6m-4 0v8l-5 8h14l-5-8V3"></path></svg></div>
-<div class="benefit-content">
-<h3>מבוסס מחקר</h3>
-<p>כל המדדים מבוססים על מחקר מדעי הספורט שנבדק עמיתים. CSS מ-Wakayoshi וחב', TSS מותאם עבור
-            שחייה עם נוסחת IF³, דגמי CTL/ATL מוכחים.</p>
-</div>
-</div>
-<div class="benefit-item">
-<div class="benefit-icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
-<div class="benefit-content">
-<h3>ידידותי למאמן</h3>
-<p>ייצא דוחות מפורטים למאמנים. שתף סיכומי HTML בדוא"ל, CSV לניתוח גיליון אלקטרוני או PDF
-            עבור יומני אימון ורישומים.</p>
-</div>
-</div>
-<div class="benefit-item">
-<div class="benefit-icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
-<div class="benefit-content">
-<h3>עובד בכל מקום</h3>
-<p>בריכה או מים פתוחים, ספרינטים או מרחק. Swim Analytics מתאים לכל סוגי השחייה ובאופן אוטומטי
-            מזהה מאפייני אימון.</p>
-</div>
-</div>
-<div class="benefit-item">
-<div class="benefit-icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
-<div class="benefit-content">
-<h3>תמיד משתפר</h3>
-<p>עדכונים שוטפים עם תכונות חדשות המבוססות על משוב משתמשים. התוספות האחרונות כוללות השוואות שנתיות,
-            מעקב אחר רשומות אישיות ואפשרויות ייצוא משופרות.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+<section class="app-benefits"><div class="container"><div class="section-header"><div class="section-badge">למה Swim Analytics</div><h2 class="section-title">נבנה עבור שחיינים רציניים</h2><p class="section-subtitle">תכונות מקצועיות ללא המורכבות</p></div><div class="benefits-grid"><div class="benefit-item"><div class="benefit-icon"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="18"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path></svg></div><div class="benefit-content"><h3>פרוטוקול בדיקת CSS</h3><p>פרוטוקול בדיקה מובנה של 400 מ' + 200 מ' לקביעת מהירות השחייה הקריטית שלך.חזור כל 6-8 שבועות כדי לעקוב
+            להתקדם ולהתאים את אזורי האימון באופן אוטומטי.</p></div></div><div class="benefit-item"><div class="benefit-icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><rect height="20" rx="2" ry="2" width="14" x="5" y="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg></div><div class="benefit-content"><h3>חוויית iOS מקורית</h3><p>נבנה עם SwiftUI לביצועים חלקים ושילוב iOS. סנכרון חלק של אפליקציית בריאות, תמיכה בווידג'טים,
+            ושפת עיצוב מוכרת של אפל.</p></div></div><div class="benefit-item"><div class="benefit-icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M9 3h6m-4 0v8l-5 8h14l-5-8V3"></path></svg></div><div class="benefit-content"><h3>מבוסס מחקר</h3><p>כל המדדים מבוססים על מחקר מדעי הספורט שנבדק עמיתים. CSS מ-Wakayoshi וחב', TSS מותאם עבור
+            שחייה עם נוסחת IF³, דגמי CTL/ATL מוכחים.</p></div></div><div class="benefit-item"><div class="benefit-icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><div class="benefit-content"><h3>ידידותי למאמן</h3><p>ייצא דוחות מפורטים למאמנים. שתף סיכומי HTML בדוא"ל, CSV לניתוח גיליון אלקטרוני או PDF
+            עבור יומני אימון ורישומים.</p></div></div><div class="benefit-item"><div class="benefit-icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div><div class="benefit-content"><h3>עובד בכל מקום</h3><p>בריכה או מים פתוחים, ספרינטים או מרחק. Swim Analytics מתאים לכל סוגי השחייה ובאופן אוטומטי
+            מזהה מאפייני אימון.</p></div></div><div class="benefit-item"><div class="benefit-icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div><div class="benefit-content"><h3>תמיד משתפר</h3><p>עדכונים שוטפים עם תכונות חדשות המבוססות על משוב משתמשים. התוספות האחרונות כוללות השוואות שנתיות,
+            מעקב אחר רשומות אישיות ואפשרויות ייצוא משופרות.</p></div></div></div></div></section>
 מדור שאלות נפוצות
-<section class="section">
-<div class="container container-narrow">
-<div class="section-header">
-<div class="section-badge">שאלות נפוצות</div>
-<h2 class="section-title">שאלות נפוצות</h2>
-</div>
-<div class="feature-list">
-<div class="feature-item">
-<h3>כיצד Swim Analytics מקבל את נתוני השחייה שלי?</h3>
-<p>Swim Analytics מסתנכרן עם Apple Health כדי לייבא אימוני שחייה שהוקלטו על ידי כל מכשיר או אפליקציה תואמים.
+<section class="section"><div class="container container-narrow"><div class="section-header"><div class="section-badge">שאלות נפוצות</div><h2 class="section-title">שאלות נפוצות</h2></div><div class="feature-list"><div class="feature-item"><h3>כיצד Swim Analytics מקבל את נתוני השחייה שלי?</h3><p>Swim Analytics מסתנכרן עם Apple Health כדי לייבא אימוני שחייה שהוקלטו על ידי כל מכשיר או אפליקציה תואמים.
           זה כולל שעונים חכמים, מעקבי כושר וערכים ידניים. האפליקציה מעבדת נתונים אלה באופן מקומי ל
-          לחשב מדדים מתקדמים.</p>
-</div>
-<div class="feature-item">
-<h3>מהי בדיקת ה-CSS ואיך אני מבצע אותה?</h3>
-<p>CSS (מהירות שחייה קריטית) הוא פרוטוקול מדעי המשתמש ב-2 שחייה במאמץ מרבי: 400 מ' ו-200 מ' עם 10-20
+          לחשב מדדים מתקדמים.</p></div><div class="feature-item"><h3>מהי בדיקת ה-CSS ואיך אני מבצע אותה?</h3><p>CSS (מהירות שחייה קריטית) הוא פרוטוקול מדעי המשתמש ב-2 שחייה במאמץ מרבי: 400 מ' ו-200 מ' עם 10-20
           דקות מנוחה בין. האפליקציה מחשבת את הסף האירובי שלך מהזמנים האלה ומתאימה את כולם באופן אוטומטי
-          אזורי אימונים. חזור כל 6-8 שבועות כדי לעקוב אחר ההתקדמות.</p>
-</div>
-<div class="feature-item">
-<h3>האם הנתונים שלי מועלים לענן?</h3>
-<p>לא. Swim Analytics מעבד את כל הנתונים באופן מקומי ב-iPhone שלך. אין שרתים חיצוניים, אין ענן
+          אזורי אימונים. חזור כל 6-8 שבועות כדי לעקוב אחר ההתקדמות.</p></div><div class="feature-item"><h3>האם הנתונים שלי מועלים לענן?</h3><p>לא. Swim Analytics מעבד את כל הנתונים באופן מקומי ב-iPhone שלך. אין שרתים חיצוניים, אין ענן
           חשבונות, ללא העברות נתונים. אתה שולט בייצוא: צור קבצי JSON, CSV, HTML או PDF ושתף אותם
-          איך שאתה רוצה.</p>
-</div>
-<div class="feature-item">
-<h3>האם אוכל להשתמש ב-Swim Analytics לשחייה במים פתוחים?</h3>
-<p>כן. Swim Analytics עובד עם כל אימון שחייה ב-Apple Health, כולל מים פתוחים. האפליקציה מתאימה ל
-          מדדים זמינים בין אם אתה בבריכה או במים פתוחים, המספקים ניתוח רלוונטי עבור כל סביבה.</p>
-</div>
-<div class="feature-item">
-<h3>מה ההבדל בין תוכניות חודשיות לשנתיות?</h3>
-<p>שתי התוכניות מציעות תכונות זהות: כל המדדים, אזורים בלתי מוגבלים, השוואות זמניות, יצוא מרובה,
-          ועדכונים בחינם. ההבדל היחיד הוא המחיר: חיסכון שנתי של 18% (שווה ערך ל-3.25 אירו לחודש לעומת 3.99 אירו לחודש).</p>
-</div>
-<div class="feature-item">
-<h3>האם אוכל לבטל את המנוי שלי בכל עת?</h3>
-<p>כן. המנויים מנוהלים דרך ה-App Store, כך שתוכל לבטל בכל עת מהגדרות → [השם שלך] →
-          מנויים. אם תבטל, תשמור על הגישה עד תום תקופת החיוב הנוכחית שלך.</p>
-</div>
-</div>
-</div>
-</section>
+          איך שאתה רוצה.</p></div><div class="feature-item"><h3>האם אוכל להשתמש ב-Swim Analytics לשחייה במים פתוחים?</h3><p>כן. Swim Analytics עובד עם כל אימון שחייה ב-Apple Health, כולל מים פתוחים. האפליקציה מתאימה ל
+          מדדים זמינים בין אם אתה בבריכה או במים פתוחים, המספקים ניתוח רלוונטי עבור כל סביבה.</p></div><div class="feature-item"><h3>מה ההבדל בין תוכניות חודשיות לשנתיות?</h3><p>שתי התוכניות מציעות תכונות זהות: כל המדדים, אזורים בלתי מוגבלים, השוואות זמניות, יצוא מרובה,
+          ועדכונים בחינם. ההבדל היחיד הוא המחיר: חיסכון שנתי של 18% (שווה ערך ל-3.25 אירו לחודש לעומת 3.99 אירו לחודש).</p></div><div class="feature-item"><h3>האם אוכל לבטל את המנוי שלי בכל עת?</h3><p>כן. המנויים מנוהלים דרך ה-App Store, כך שתוכל לבטל בכל עת מהגדרות → [השם שלך] →
+          מנויים. אם תבטל, תשמור על הגישה עד תום תקופת החיוב הנוכחית שלך.</p></div></div></div></section>
 סעיף CTA סופי
-<section class="app-cta-final">
-<div class="container">
-<h2>מוכן לשנות את השחייה שלך?</h2>
-<p>הצטרפו לאלפי שחיינים שמשתמשים במדדים מדעיים כדי לשפר ביצועים. התחל את 7 ימי הניסיון בחינם שלך עוד היום.</p>
-<div class="store-badges">
-<a aria-label="Download on the App Store" class="store-badge" href="https://apps.apple.com/us/app/swim-analytics/id6753306284" rel="noopener" target="_blank">
-<img alt="הורד ב-App Store" height="47" src="../assets/images/badge-app-store.svg" width="140"/>
-</a>
-<a aria-label="Get it on Google Play" class="store-badge" href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" rel="noopener" target="_blank">
-<img alt="קבל אותו ב-Google Play" height="47" src="../assets/images/badge-google-play.svg" width="140"/>
-</a>
-</div>
-<p class="section-footer">אין צורך בחשבון • בטל בכל עת • הנתונים שלך נשארים במכשיר שלך</p>
-</div>
-</section>
+<section class="app-cta-final"><div class="container"><h2>מוכן לשנות את השחייה שלך?</h2><p>הצטרפו לאלפי שחיינים שמשתמשים במדדים מדעיים כדי לשפר ביצועים. התחל את 7 ימי הניסיון בחינם שלך עוד היום.</p><div class="store-badges"><a aria-label="Download on the App Store" class="store-badge" href="https://apps.apple.com/us/app/swim-analytics/id6753306284" rel="noopener" target="_blank"><img alt="הורד ב-App Store" height="47" src="../assets/images/badge-app-store.svg" width="140"/></a><a aria-label="Get it on Google Play" class="store-badge" href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" rel="noopener" target="_blank"><img alt="קבל אותו ב-Google Play" height="47" src="../assets/images/badge-google-play.svg" width="140"/></a></div><p class="section-footer">אין צורך בחשבון • בטל בכל עת • הנתונים שלך נשארים במכשיר שלך</p></div></section>
 קישורים למידע נוסף
 <section class="section"><div class="container"><div class="section-header"><h2 class="section-title">למידע נוסף על ניתוח שחייה</h2><p class="section-subtitle">צלול עמוק יותר לתוך המדע שמאחורי Swim Analytics</p></div><div class="grid grid-3"><div class="card"><h3 class="card-title">מהירות שחייה קריטית</h3><div class="card-content"><p>הבן כיצד CSS קובע את הסף האירובי שלך ומדוע הוא חיוני לאימון מובנה.</p><a class="btn btn-secondary btn-small mt-md" href="/he/css/">למד על CSS →</a></div></div><div class="card"><h3 class="card-title">הדרכה לניהול עומסים</h3><div class="card-content"><p>גלה כיצד TSS, CTL, ATL ו-TSB עוזרים לך לאזן בין מתח אימון להתאוששות.</p><a class="btn btn-secondary btn-small mt-md" href="/he/training-load/">גלה עומס אימונים ←</a></div></div><div class="card"><h3 class="card-title">אזורי אימון</h3><div class="card-content"><p>למד על 7 אזורי האימון וכיצד להשתמש בהם לתכנון אימון ממוקד.</p><a class="btn btn-secondary btn-small mt-md" href="/he/training-zones/">הצג אזורי אימון ←</a></div></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="index"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Swim Analytics: אפליקציית מעקב וניתוח ביצועי שחייה ל-iOS</h2><p class="ai-citation-answer">עקוב אחר מדדי שחייה, חשב CSS ו-sTSS, נתח עומס אימונים עם אנליטיקה מקצועית. מחשבונים חינמיים לשחיינים תחרותיים וטריאתלונים. 7 ימי ניסיון חינם.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-03-24</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>אפליקציית מעקב שחייה · אנליטיקת שחייה · מחשבון CSS · ביצועי שחייה · sTSS</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../he/bibliography/">
           
           ביבליוגרפיה
           
-        </a>
-      </li>
-      
-    </ul>
-
-    
-    <nav class="ai-citation-links" aria-label="Swim Analytics: אפליקציית מעקב וניתוח ביצועי שחייה ל-iOS">
-      
-      <a class="ai-related-link" href="../he/research/">
+        </a></li></ul><nav class="ai-citation-links" aria-label="Swim Analytics: אפליקציית מעקב וניתוח ביצועי שחייה ל-iOS"><a class="ai-related-link" href="../he/research/">
         מחקר
-      </a>
-      
-      <a class="ai-related-link" href="../he/getting-started/">
+      </a><a class="ai-related-link" href="../he/getting-started/">
         התחלה
-      </a>
-      
-      <a class="ai-related-link" href="../he/contact/">
+      </a><a class="ai-related-link" href="../he/contact/">
         צור קשר
-      </a>
-      
-    </nav>
-    
-  </div>
-</section>
-
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">הורד</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="הורד ב-App Store">
-                        <img src="../assets/images/badge-app-store.svg"
+      </a></nav></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">הורד</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="הורד ב-App Store"><img src="../assets/images/badge-app-store.svg"
                             alt="הורד ב-App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="קבל אותו ב-Google Play">
-                        <img src="../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="קבל אותו ב-Google Play"><img src="../assets/images/badge-google-play.svg"
                             alt="קבל אותו ב-Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">זמין ב</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">זמין ב</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link active"
+                </a><a href="/he/" class="lang-link active"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. כל הזכויות שמורות
-            </p><ul class="footer-legal"><li><a href="/he/privacy/">פרטיות</a></li><li><a href="/he/terms/">תנאים</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>אתר זה משתמש בעוגיות כדי לשפר את החוויה שלך.</p><a href="/he/privacy/" class="text-sm">למד עוד</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">דחה</button><button id="cookie-accept" class="btn btn-primary btn-small">קבל</button></div></div></div><script src="../assets/js/core.min.js?v=2c227be8" defer></script><script src="../assets/js/search.min.js?v=2c227be8" defer></script><script src="../assets/js/carousel.min.js?v=2c227be8" defer></script><script src="../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../sw.js') }</script></body></html>
+            </p><ul class="footer-legal"><li><a href="/he/privacy/">פרטיות</a></li><li><a href="/he/terms/">תנאים</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>אתר זה משתמש בעוגיות כדי לשפר את החוויה שלך.</p><a href="/he/privacy/" class="text-sm">למד עוד</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">דחה</button><button id="cookie-accept" class="btn btn-primary btn-small">קבל</button></div></div></div><script src="../assets/js/core.min.js?v=5f4a7b18ac56" defer></script><script src="../assets/js/search.min.js?v=5f4a7b18ac56" defer></script><script src="../assets/js/carousel.min.js?v=5f4a7b18ac56" defer></script><script src="../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../sw.js') }</script></body></html>

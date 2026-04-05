@@ -1,477 +1,61 @@
-<!DOCTYPE html>
-<html lang="vi" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Nghiên cứu Khoa học Đằng sau Phân tích Bơi lội | Swim Analytics</title>
-  <meta name="description" content="Khám phá nghiên cứu khoa học đằng sau Swim Analytics. Các nghiên cứu CSS từ Wakayoshi, mô hình TSS từ Coggan và lý thuyết PMC. Tài liệu tham khảo được đánh giá ngang">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="nghiên cứu bơi lội, khoa học thể thao, hiệu suất bơi lội, nghiên cứu CSS, sinh lý học tập luyện">
-  
-
-  
-  <link rel="canonical" href="https://swim.analyticszone.app/vi/research/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-13T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://swim.analyticszone.app/vi/research/">
-  <meta property="og:title" content="Nghiên cứu Khoa học Đằng sau Phân tích Bơi lội | Swim Analytics">
-  <meta property="og:description" content="Khám phá nghiên cứu khoa học đằng sau Swim Analytics. Các nghiên cứu CSS từ Wakayoshi, mô hình TSS từ Coggan và lý thuyết PMC. Tài liệu tham khảo được đánh giá ngang">
-  <meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="vi_VN">
-  <meta property="og:site_name" content="Swim Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://swim.analyticszone.app/vi/research/">
-  <meta name="twitter:title" content="Nghiên cứu Khoa học Đằng sau Phân tích Bơi lội | Swim Analytics">
-  <meta name="twitter:description" content="Khám phá nghiên cứu khoa học đằng sau Swim Analytics. Các nghiên cứu CSS từ Wakayoshi, mô hình TSS từ Coggan và lý thuyết PMC. Tài liệu tham khảo được đánh giá ngang">
-  <meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@swimanalytics">
-  <meta name="twitter:creator" content="@swimanalytics">
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://swim.analyticszone.app/af/research/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://swim.analyticszone.app/am/research/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://swim.analyticszone.app/ar/research/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://swim.analyticszone.app/bg/research/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://swim.analyticszone.app/bn/research/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://swim.analyticszone.app/ca/research/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://swim.analyticszone.app/cs/research/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://swim.analyticszone.app/da/research/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://swim.analyticszone.app/de/research/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://swim.analyticszone.app/el/research/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://swim.analyticszone.app/en/research/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://swim.analyticszone.app/es/research/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://swim.analyticszone.app/et/research/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://swim.analyticszone.app/fa/research/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://swim.analyticszone.app/fi/research/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://swim.analyticszone.app/fr/research/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://swim.analyticszone.app/gu/research/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://swim.analyticszone.app/ha/research/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://swim.analyticszone.app/he/research/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://swim.analyticszone.app/hi/research/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://swim.analyticszone.app/hr/research/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://swim.analyticszone.app/hu/research/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://swim.analyticszone.app/id/research/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://swim.analyticszone.app/is/research/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://swim.analyticszone.app/it/research/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://swim.analyticszone.app/ja/research/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://swim.analyticszone.app/km/research/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://swim.analyticszone.app/kn/research/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://swim.analyticszone.app/ko/research/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://swim.analyticszone.app/lt/research/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://swim.analyticszone.app/lv/research/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://swim.analyticszone.app/ms/research/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://swim.analyticszone.app/my/research/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://swim.analyticszone.app/nb/research/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://swim.analyticszone.app/nl/research/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://swim.analyticszone.app/pl/research/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://swim.analyticszone.app/pt/research/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://swim.analyticszone.app/pt-br/research/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://swim.analyticszone.app/ro/research/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://swim.analyticszone.app/ru/research/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://swim.analyticszone.app/sk/research/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://swim.analyticszone.app/sl/research/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://swim.analyticszone.app/sr/research/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://swim.analyticszone.app/sv/research/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://swim.analyticszone.app/sw/research/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://swim.analyticszone.app/ta/research/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://swim.analyticszone.app/te/research/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://swim.analyticszone.app/th/research/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://swim.analyticszone.app/tl/research/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://swim.analyticszone.app/tr/research/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://swim.analyticszone.app/uk/research/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://swim.analyticszone.app/ur/research/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://swim.analyticszone.app/vi/research/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://swim.analyticszone.app/yo/research/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://swim.analyticszone.app/zh/research/">
-  
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://swim.analyticszone.app/en/research/">
-  
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  
-  
-  <meta name="robots" content="index, follow">
-  
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6753306284">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="vi" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+    rel="stylesheet"><title>Nghiên cứu Khoa học Đằng sau Phân tích Bơi lội | Swim Analytics</title><meta name="description" content="Khám phá nghiên cứu khoa học đằng sau Swim Analytics. Các nghiên cứu CSS từ Wakayoshi, mô hình TSS từ Coggan và lý thuyết PMC. Tài liệu tham khảo được đánh giá ngang"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="nghiên cứu bơi lội, khoa học thể thao, hiệu suất bơi lội, nghiên cứu CSS, sinh lý học tập luyện"><link rel="canonical" href="https://swim.analyticszone.app/vi/research/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-13T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/vi/research/"><meta property="og:title" content="Nghiên cứu Khoa học Đằng sau Phân tích Bơi lội | Swim Analytics"><meta property="og:description" content="Khám phá nghiên cứu khoa học đằng sau Swim Analytics. Các nghiên cứu CSS từ Wakayoshi, mô hình TSS từ Coggan và lý thuyết PMC. Tài liệu tham khảo được đánh giá ngang"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="vi_VN"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/vi/research/"><meta name="twitter:title" content="Nghiên cứu Khoa học Đằng sau Phân tích Bơi lội | Swim Analytics"><meta name="twitter:description" content="Khám phá nghiên cứu khoa học đằng sau Swim Analytics. Các nghiên cứu CSS từ Wakayoshi, mô hình TSS từ Coggan và lý thuyết PMC. Tài liệu tham khảo được đánh giá ngang"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/research/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/research/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/research/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/research/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/research/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/research/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/research/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/research/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/research/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/research/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/research/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/research/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/research/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/research/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/research/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/research/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/research/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/research/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/research/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/research/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/research/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/research/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/research/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/research/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/research/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/research/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/research/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/research/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/research/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/research/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/research/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/research/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/research/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/research/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/research/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/research/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/research/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/research/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/research/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/research/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/research/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/research/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/research/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/research/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/research/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/research/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/research/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/research/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/research/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/research/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/research/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/research/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/research/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/research/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/research/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/research/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -730,7 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=2c227be8"><script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=5f4a7b18ac56"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -765,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -777,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "vi"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -796,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -830,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -877,14 +445,7 @@ img[width][height] {
     }
   ]
 }
-</script>
-
-
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -909,17 +470,7 @@ img[width][height] {
     "@id": "https://swim.analyticszone.app/vi/research/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -933,952 +484,214 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">Đến nội dung</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/vi/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Swim Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/vi/" 
+  </script></head><body><a href="#main-content" class="skip-link">Đến nội dung</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/vi/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/vi/" 
                                 aria-current="">
                                 Trang Chủ
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/vi/getting-started/" class="nav-label">Học Tập</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/vi/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/vi/getting-started/" class="nav-label">Học Tập</a><ul class="submenu"><li><a href="/vi/getting-started/" 
                                         aria-current="">
                                         Bắt Đầu
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/css/" 
+                                    </a></li><li><a href="/vi/css/" 
                                         aria-current="">
                                         CSS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/training-zones/" 
+                                    </a></li><li><a href="/vi/training-zones/" 
                                         aria-current="">
                                         Vùng Tập Luyện
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/training-load/" 
+                                    </a></li><li><a href="/vi/training-load/" 
                                         aria-current="">
                                         Tải Tập Luyện
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/stss-calculator/" 
+                                    </a></li><li><a href="/vi/stss-calculator/" 
                                         aria-current="">
                                         Máy Tính sTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/vi/research/" class="nav-label">Khoa Học</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/vi/research/" class="active" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/vi/research/" class="nav-label">Khoa Học</a><ul class="submenu"><li><a href="/vi/research/" class="active" 
                                         aria-current="page">
                                         Nghiên Cứu
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/formulas/" 
+                                    </a></li><li><a href="/vi/formulas/" 
                                         aria-current="">
                                         Công Thức
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/efficiency/" 
+                                    </a></li><li><a href="/vi/efficiency/" 
                                         aria-current="">
                                         Hiệu Quả
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/stroke-mechanics/" 
+                                    </a></li><li><a href="/vi/stroke-mechanics/" 
                                         aria-current="">
                                         Cơ Học Động Tác
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/bibliography/" 
+                                    </a></li><li><a href="/vi/bibliography/" 
                                         aria-current="">
                                         Thư Mục
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/vi/contact/" 
+                                    </a></li></ul></li><li><a href="/vi/contact/" 
                                 aria-current="">
                                 Liên Hệ
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Chọn ngôn ngữ">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Chọn ngôn ngữ"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             Korean
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာဘာသာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Српски
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" selected>
+                        </option><option value="vi" selected>
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             Chinese
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                                <a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a>
-                                
-                                <a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Chuyển menu"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/vi/">Trang Chủ</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/vi/research/">Khoa Học</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">Nghiên Cứu</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>Nền Tảng Nghiên Cứu Khoa Học</h1>
-        <p class="lead">Phân Tích Bơi Lội Dựa Trên Bằng Chứng</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Cách Tiếp Cận Dựa Trên Bằng Chứng</h2>
-        <p class="lead">Mọi chỉ số, công thức và tính toán trong Swim Analytics đều dựa trên nghiên cứu khoa học được
-            bình duyệt. Trang này ghi lại các nghiên cứu nền tảng xác nhận khuôn khổ phân tích của chúng tôi.</p>
-
-        <div class="callout callout-info">
-            <h3>🔬 Sự Nghiêm Ngặt Khoa Học</h3>
-            <p>Phân tích bơi lội đã phát triển từ việc đếm vòng cơ bản đến đo lường hiệu suất tinh vi được hỗ trợ bởi
-                nhiều thập kỷ nghiên cứu trong:</p>
-            <ul>
-                <li><strong>Sinh Lý Học Thể Dục</strong> - Ngưỡng hiếu khí/kỵ khí, VO₂max, động lực học lactate</li>
-                <li><strong>Cơ Sinh Học</strong> - Cơ học động tác bơi, lực đẩy, thủy động lực học</li>
-                <li><strong>Khoa Học Thể Thao</strong> - Định lượng tải lượng tập luyện, phân kỳ, mô hình hóa hiệu suất
-                </li>
-                <li><strong>Khoa Học Máy Tính</strong> - Học máy, tổng hợp cảm biến, công nghệ đeo được</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">Tốc Độ Bơi Tới Hạn (CSS) - Nghiên Cứu Nền Tảng</h2>
-
-        <div class="research-paper">
-            <h3>Wakayoshi và cộng sự (1992) - Xác Định Vận Tốc Tới Hạn</h3>
-            <div class="paper-meta">
-                <strong>Tạp chí:</strong> European Journal of Applied Physiology, 64(2), 153-157<br>
-                <strong>Nghiên cứu:</strong> 9 vận động viên bơi lội đại học đã qua đào tạo
-            </div>
-
-            <div class="findings">
-                <h4>Phát Hiện Chính:</h4>
-                <ul>
-                    <li><strong>Tương quan mạnh với VO₂ tại ngưỡng kỵ khí</strong> (r = 0.818)</li>
-                    <li><strong>Tương quan xuất sắc với vận tốc tại OBLA</strong> (r = 0.949)</li>
-                    <li><strong>Dự đoán hiệu suất 400m</strong> (r = 0.864)</li>
-                    <li>Vận tốc tới hạn (vcrit) đại diện cho vận tốc bơi lý thuyết có thể duy trì vô hạn định mà không
-                        kiệt sức</li>
-                </ul>
-            </div>
-
-            <div class="significance">
-                <h4>Ý Nghĩa:</h4>
-                <p>Thiết lập CSS như một đại diện hợp lệ, không xâm lấn cho xét nghiệm lactate trong phòng thí nghiệm.
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Chuyển menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/vi/">Trang Chủ</a></li><li><a href="/vi/research/">Khoa Học</a></li><li><span aria-current="page">Nghiên Cứu</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Nền Tảng Nghiên Cứu Khoa Học</h1><p class="lead">Phân Tích Bơi Lội Dựa Trên Bằng Chứng</p></div></section><section class="section"><div class="container container-narrow"><h2>Cách Tiếp Cận Dựa Trên Bằng Chứng</h2><p class="lead">Mọi chỉ số, công thức và tính toán trong Swim Analytics đều dựa trên nghiên cứu khoa học được
+            bình duyệt. Trang này ghi lại các nghiên cứu nền tảng xác nhận khuôn khổ phân tích của chúng tôi.</p><div class="callout callout-info"><h3>🔬 Sự Nghiêm Ngặt Khoa Học</h3><p>Phân tích bơi lội đã phát triển từ việc đếm vòng cơ bản đến đo lường hiệu suất tinh vi được hỗ trợ bởi
+                nhiều thập kỷ nghiên cứu trong:</p><ul><li><strong>Sinh Lý Học Thể Dục</strong> - Ngưỡng hiếu khí/kỵ khí, VO₂max, động lực học lactate</li><li><strong>Cơ Sinh Học</strong> - Cơ học động tác bơi, lực đẩy, thủy động lực học</li><li><strong>Khoa Học Thể Thao</strong> - Định lượng tải lượng tập luyện, phân kỳ, mô hình hóa hiệu suất
+                </li><li><strong>Khoa Học Máy Tính</strong> - Học máy, tổng hợp cảm biến, công nghệ đeo được</li></ul></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Tốc Độ Bơi Tới Hạn (CSS) - Nghiên Cứu Nền Tảng</h2><div class="research-paper"><h3>Wakayoshi và cộng sự (1992) - Xác Định Vận Tốc Tới Hạn</h3><div class="paper-meta"><strong>Tạp chí:</strong> European Journal of Applied Physiology, 64(2), 153-157<br><strong>Nghiên cứu:</strong> 9 vận động viên bơi lội đại học đã qua đào tạo
+            </div><div class="findings"><h4>Phát Hiện Chính:</h4><ul><li><strong>Tương quan mạnh với VO₂ tại ngưỡng kỵ khí</strong> (r = 0.818)</li><li><strong>Tương quan xuất sắc với vận tốc tại OBLA</strong> (r = 0.949)</li><li><strong>Dự đoán hiệu suất 400m</strong> (r = 0.864)</li><li>Vận tốc tới hạn (vcrit) đại diện cho vận tốc bơi lý thuyết có thể duy trì vô hạn định mà không
+                        kiệt sức</li></ul></div><div class="significance"><h4>Ý Nghĩa:</h4><p>Thiết lập CSS như một đại diện hợp lệ, không xâm lấn cho xét nghiệm lactate trong phòng thí nghiệm.
                     Chứng minh rằng các thử nghiệm thời gian đơn giản tại bể bơi có thể xác định chính xác ngưỡng hiếu
-                    khí.</p>
-            </div>
-        </div>
-
-        <div class="research-paper">
-            <h3>Wakayoshi và cộng sự (1992) - Phương Pháp Kiểm Tra Bể Bơi Thực Tế</h3>
-            <div class="paper-meta">
-                <strong>Tạp chí:</strong> International Journal of Sports Medicine, 13(5), 367-371
-            </div>
-
-            <div class="findings">
-                <h4>Phát Hiện Chính:</h4>
-                <ul>
-                    <li><strong>Mối quan hệ tuyến tính giữa khoảng cách và thời gian</strong> (r² > 0.998)</li>
-                    <li>Kiểm tra tại bể bơi mang lại kết quả tương đương với thiết bị dòng chảy đắt tiền</li>
-                    <li>Giao thức đơn giản 200m + 400m cung cấp phép đo vận tốc tới hạn chính xác</li>
-                    <li>Phương pháp có thể tiếp cận được với các huấn luyện viên trên toàn thế giới mà không cần cơ sở
-                        phòng thí nghiệm</li>
-                </ul>
-            </div>
-
-            <div class="significance">
-                <h4>Ý Nghĩa:</h4>
-                <p>Dân chủ hóa việc kiểm tra CSS. Biến nó từ một thủ tục chỉ có trong phòng thí nghiệm thành một công cụ
-                    thực tế mà bất kỳ huấn luyện viên nào cũng có thể thực hiện chỉ với đồng hồ bấm giờ và bể bơi.</p>
-            </div>
-        </div>
-
-        <div class="research-paper">
-            <h3>Wakayoshi và cộng sự (1993) - Xác Thực Trạng Thái Ổn Định Lactate</h3>
-            <div class="paper-meta">
-                <strong>Tạp chí:</strong> European Journal of Applied Physiology, 66(1), 90-95
-            </div>
-
-            <div class="findings">
-                <h4>Phát Hiện Chính:</h4>
-                <ul>
-                    <li>CSS tương ứng với <strong>cường độ trạng thái ổn định lactate tối đa</strong></li>
-                    <li>Tương quan đáng kể với vận tốc tại 4 mmol/L lactate máu</li>
-                    <li>Đại diện cho ranh giới giữa các miền tập luyện <em>nặng</em> và <em>nghiêm trọng</em></li>
-                    <li>Xác thực CSS là ngưỡng sinh lý có ý nghĩa cho việc kê đơn tập luyện</li>
-                </ul>
-            </div>
-
-            <div class="significance">
-                <h4>Ý Nghĩa:</h4>
-                <p>Xác nhận cơ sở sinh lý của CSS. Nó không chỉ là một cấu trúc toán học—nó đại diện cho ngưỡng chuyển
-                    hóa thực sự nơi sản xuất lactate bằng với mức giải phóng.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2 class="text-center mb-xl">Định Lượng Tải Lượng Tập Luyện</h2>
-
-        <div class="grid grid-2">
-            <div class="research-paper">
-                <h3>Schuller & Rodríguez (2015)</h3>
-                <div class="paper-meta">
-                    <strong>Tạp chí:</strong> European Journal of Sport Science, 15(4)<br>
-                    <strong>Nghiên cứu:</strong> 17 vận động viên bơi lội ưu tú, 328 buổi tập bể bơi trong 4 tuần
-                </div>
-
-                <div class="findings">
-                    <h4>Phát Hiện Chính:</h4>
-                    <ul>
-                        <li>Tính toán TRIMP sửa đổi (TRIMPc) cao hơn ~9% so với TRIMP truyền thống</li>
-                        <li>Cả hai phương pháp đều tương quan mạnh với RPE buổi tập (r=0.724 và 0.702)</li>
-                        <li>Sự khác biệt giữa các phương pháp lớn hơn ở cường độ khối lượng công việc cao hơn</li>
-                        <li>TRIMPc tính đến cả khoảng thời gian tập luyện và phục hồi trong tập luyện ngắt quãng</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="research-paper">
-                <h3>Wallace và cộng sự (2009)</h3>
-                <div class="paper-meta">
-                    <strong>Tạp chí:</strong> Journal of Strength and Conditioning Research<br>
-                    <strong>Trọng tâm:</strong> Xác thực RPE buổi tập
-                </div>
-
-                <div class="findings">
-                    <h4>Phát Hiện Chính:</h4>
-                    <ul>
-                        <li>RPE buổi tập (thang điểm CR-10 × thời lượng) được xác thực để định lượng tải lượng tập luyện
-                            bơi lội</li>
-                        <li>Triển khai đơn giản áp dụng thống nhất cho tất cả các loại hình tập luyện</li>
-                        <li>Hiệu quả cho công việc tại bể bơi, tập luyện trên cạn và các buổi kỹ thuật</li>
-                        <li>Hoạt động ngay cả khi nhịp tim không đại diện cho cường độ thực sự</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-science">
-            <h3>Nền Tảng Điểm Căng Thẳng Tập Luyện (TSS)</h3>
-            <p>Trong khi TSS được phát triển bởi Tiến sĩ Andrew Coggan cho đạp xe, sự thích nghi của nó với bơi lội
+                    khí.</p></div></div><div class="research-paper"><h3>Wakayoshi và cộng sự (1992) - Phương Pháp Kiểm Tra Bể Bơi Thực Tế</h3><div class="paper-meta"><strong>Tạp chí:</strong> International Journal of Sports Medicine, 13(5), 367-371
+            </div><div class="findings"><h4>Phát Hiện Chính:</h4><ul><li><strong>Mối quan hệ tuyến tính giữa khoảng cách và thời gian</strong> (r² > 0.998)</li><li>Kiểm tra tại bể bơi mang lại kết quả tương đương với thiết bị dòng chảy đắt tiền</li><li>Giao thức đơn giản 200m + 400m cung cấp phép đo vận tốc tới hạn chính xác</li><li>Phương pháp có thể tiếp cận được với các huấn luyện viên trên toàn thế giới mà không cần cơ sở
+                        phòng thí nghiệm</li></ul></div><div class="significance"><h4>Ý Nghĩa:</h4><p>Dân chủ hóa việc kiểm tra CSS. Biến nó từ một thủ tục chỉ có trong phòng thí nghiệm thành một công cụ
+                    thực tế mà bất kỳ huấn luyện viên nào cũng có thể thực hiện chỉ với đồng hồ bấm giờ và bể bơi.</p></div></div><div class="research-paper"><h3>Wakayoshi và cộng sự (1993) - Xác Thực Trạng Thái Ổn Định Lactate</h3><div class="paper-meta"><strong>Tạp chí:</strong> European Journal of Applied Physiology, 66(1), 90-95
+            </div><div class="findings"><h4>Phát Hiện Chính:</h4><ul><li>CSS tương ứng với <strong>cường độ trạng thái ổn định lactate tối đa</strong></li><li>Tương quan đáng kể với vận tốc tại 4 mmol/L lactate máu</li><li>Đại diện cho ranh giới giữa các miền tập luyện <em>nặng</em> và <em>nghiêm trọng</em></li><li>Xác thực CSS là ngưỡng sinh lý có ý nghĩa cho việc kê đơn tập luyện</li></ul></div><div class="significance"><h4>Ý Nghĩa:</h4><p>Xác nhận cơ sở sinh lý của CSS. Nó không chỉ là một cấu trúc toán học—nó đại diện cho ngưỡng chuyển
+                    hóa thực sự nơi sản xuất lactate bằng với mức giải phóng.</p></div></div></div></section><section class="section"><div class="container"><h2 class="text-center mb-xl">Định Lượng Tải Lượng Tập Luyện</h2><div class="grid grid-2"><div class="research-paper"><h3>Schuller & Rodríguez (2015)</h3><div class="paper-meta"><strong>Tạp chí:</strong> European Journal of Sport Science, 15(4)<br><strong>Nghiên cứu:</strong> 17 vận động viên bơi lội ưu tú, 328 buổi tập bể bơi trong 4 tuần
+                </div><div class="findings"><h4>Phát Hiện Chính:</h4><ul><li>Tính toán TRIMP sửa đổi (TRIMPc) cao hơn ~9% so với TRIMP truyền thống</li><li>Cả hai phương pháp đều tương quan mạnh với RPE buổi tập (r=0.724 và 0.702)</li><li>Sự khác biệt giữa các phương pháp lớn hơn ở cường độ khối lượng công việc cao hơn</li><li>TRIMPc tính đến cả khoảng thời gian tập luyện và phục hồi trong tập luyện ngắt quãng</li></ul></div></div><div class="research-paper"><h3>Wallace và cộng sự (2009)</h3><div class="paper-meta"><strong>Tạp chí:</strong> Journal of Strength and Conditioning Research<br><strong>Trọng tâm:</strong> Xác thực RPE buổi tập
+                </div><div class="findings"><h4>Phát Hiện Chính:</h4><ul><li>RPE buổi tập (thang điểm CR-10 × thời lượng) được xác thực để định lượng tải lượng tập luyện
+                            bơi lội</li><li>Triển khai đơn giản áp dụng thống nhất cho tất cả các loại hình tập luyện</li><li>Hiệu quả cho công việc tại bể bơi, tập luyện trên cạn và các buổi kỹ thuật</li><li>Hoạt động ngay cả khi nhịp tim không đại diện cho cường độ thực sự</li></ul></div></div></div><div class="callout callout-science"><h3>Nền Tảng Điểm Căng Thẳng Tập Luyện (TSS)</h3><p>Trong khi TSS được phát triển bởi Tiến sĩ Andrew Coggan cho đạp xe, sự thích nghi của nó với bơi lội
                 (sTSS) kết hợp hệ số cường độ bậc ba (IF³) để tính đến sức cản theo hàm mũ của nước. Sự sửa đổi này phản
                 ánh vật lý cơ bản: lực cản trong nước tăng theo bình phương vận tốc, làm cho yêu cầu công suất trở thành
-                bậc ba.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">Cơ Sinh Học & Phân Tích Sải Tay</h2>
-
-        <div class="research-paper">
-            <h3>Tiago M. Barbosa (2010) - Các Yếu Tố Quyết Định Hiệu Suất</h3>
-            <div class="paper-meta">
-                <strong>Tạp chí:</strong> Journal of Sports Science and Medicine, 9(1)<br>
-                <strong>Trọng tâm:</strong> Khuôn khổ toàn diện cho hiệu suất bơi lội
-            </div>
-
-            <div class="findings">
-                <h4>Phát Hiện Chính:</h4>
-                <ul>
-                    <li>Hiệu suất phụ thuộc vào <strong>tạo lực đẩy, giảm thiểu lực cản và tính kinh tế bơi lội</strong>
-                    </li>
-                    <li><strong>Chiều dài sải tay nổi lên là yếu tố dự báo quan trọng hơn tần số sải tay</strong></li>
-                    <li>Hiệu quả cơ sinh học rất quan trọng để phân biệt các cấp độ hiệu suất</li>
-                    <li>Tích hợp nhiều yếu tố quyết định thành công trong thi đấu</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="research-paper">
-            <h3>Huub M. Toussaint (1992) - Cơ Sinh Học Bơi Sải</h3>
-            <div class="paper-meta">
-                <strong>Tạp chí:</strong> Sports Medicine<br>
-                <strong>Trọng tâm:</strong> Đánh giá toàn diện về cơ học bơi sải
-            </div>
-
-            <div class="findings">
-                <h4>Phát Hiện Chính:</h4>
-                <ul>
-                    <li>Phân tích cơ chế đẩy và đo lường lực cản chủ động</li>
-                    <li>Định lượng mối quan hệ giữa tần số sải tay và chiều dài sải tay</li>
-                    <li>Thiết lập các nguyên tắc cơ sinh học của lực đẩy hiệu quả</li>
-                    <li>Cung cấp khuôn khổ cho tối ưu hóa kỹ thuật</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="research-paper">
-            <h3>Ludovic Seifert (2007) - Chỉ Số Phối Hợp</h3>
-            <div class="paper-meta">
-                <strong>Tạp chí:</strong> Human Movement Science<br>
-                <strong>Đổi mới:</strong> Chỉ số IdC cho thời gian sải tay
-            </div>
-
-            <div class="findings">
-                <h4>Phát Hiện Chính:</h4>
-                <ul>
-                    <li>Giới thiệu Chỉ số Phối hợp (IdC) để định lượng mối quan hệ thời gian giữa các sải tay</li>
-                    <li>Vận động viên bơi lội ưu tú điều chỉnh các mẫu phối hợp với thay đổi tốc độ trong khi duy trì
-                        hiệu quả</li>
-                    <li>Chiến lược phối hợp ảnh hưởng đến hiệu quả lực đẩy</li>
-                    <li>Kỹ thuật phải được đánh giá động, không chỉ ở một tốc độ duy nhất</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2 class="text-center mb-xl">Tính Kinh Tế Bơi Lội & Chi Phí Năng Lượng</h2>
-
-        <div class="grid grid-2">
-            <div class="research-paper">
-                <h3>Costill và cộng sự (1985)</h3>
-                <div class="paper-meta">
-                    <strong>Tạp chí:</strong> International Journal of Sports Medicine<br>
-                    <strong>Phát hiện mang tính bước ngoặt:</strong> Tính kinh tế > VO₂max
-                </div>
-
-                <div class="findings">
-                    <h4>Phát Hiện Chính:</h4>
-                    <ul>
-                        <li><strong>Tính kinh tế bơi lội quan trọng hơn VO₂max đối với hiệu suất cự ly trung
-                                bình</strong></li>
-                        <li>Những người bơi giỏi hơn thể hiện chi phí năng lượng thấp hơn ở các vận tốc nhất định</li>
-                        <li>Hiệu quả cơ học sải tay rất quan trọng để dự đoán hiệu suất</li>
-                        <li>Sự thành thạo kỹ thuật phân biệt người bơi ưu tú với người bơi giỏi</li>
-                    </ul>
-                </div>
-
-                <div class="significance">
-                    <h4>Ý Nghĩa:</h4>
-                    <p>Chuyển trọng tâm từ khả năng hiếu khí thuần túy sang hiệu quả. Nêu bật tầm quan trọng của việc
-                        tập kỹ thuật và tính kinh tế sải tay để đạt được hiệu suất cao hơn.</p>
-                </div>
-            </div>
-
-            <div class="research-paper">
-                <h3>Fernandes và cộng sự (2003)</h3>
-                <div class="paper-meta">
-                    <strong>Tạp chí:</strong> Journal of Human Kinetics<br>
-                    <strong>Trọng tâm:</strong> Giới hạn thời gian tại vận tốc VO₂max
-                </div>
-
-                <div class="findings">
-                    <h4>Phát Hiện Chính:</h4>
-                    <ul>
-                        <li>Phạm vi TLim-vVO₂max: 215-260 giây (ưu tú), 230-260 giây (trình độ cao), 310-325 giây (trình
-                            độ thấp)</li>
-                        <li>Tính kinh tế bơi lội liên quan trực tiếp đến TLim-vVO₂max</li>
-                        <li>Tính kinh tế tốt hơn = thời gian bền vững lâu hơn ở pace hiếu khí tối đa</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">Cảm Biến Đeo Được & Công Nghệ</h2>
-
-        <div class="research-paper">
-            <h3>Mooney và cộng sự (2016) - Đánh Giá Công Nghệ IMU</h3>
-            <div class="paper-meta">
-                <strong>Tạp chí:</strong> Sensors (Đánh giá hệ thống)<br>
-                <strong>Trọng tâm:</strong> Đơn vị đo lường quán tính trong bơi lội ưu tú
-            </div>
-
-            <div class="findings">
-                <h4>Phát Hiện Chính:</h4>
-                <ul>
-                    <li>IMU đo lường hiệu quả tần số sải tay, đếm sải tay, tốc độ bơi, xoay người, kiểu thở</li>
-                    <li>Sự đồng thuận tốt so với phân tích video (tiêu chuẩn vàng)</li>
-                    <li>Đại diện cho công nghệ mới nổi cho phản hồi thời gian thực</li>
-                    <li>Tiềm năng dân chủ hóa phân tích cơ sinh học trước đây đòi hỏi thiết bị phòng thí nghiệm đắt tiền
-                    </li>
-                </ul>
-            </div>
-
-            <div class="significance">
-                <h4>Ý Nghĩa:</h4>
-                <p>Xác thực công nghệ đeo được là nghiêm ngặt về mặt khoa học. Mở đường cho các thiết bị tiêu dùng
-                    (Garmin, Apple Watch, FORM) cung cấp các chỉ số chất lượng phòng thí nghiệm.</p>
-            </div>
-        </div>
-
-        <div class="research-paper">
-            <h3>Silva và cộng sự (2021) - Học Máy Cho Phát Hiện Sải Tay</h3>
-            <div class="paper-meta">
-                <strong>Tạp chí:</strong> Sensors<br>
-                <strong>Đổi mới:</strong> Phân loại Random Forest đạt độ chính xác 95.02%
-            </div>
-
-            <div class="findings">
-                <h4>Phát Hiện Chính:</h4>
-                <ul>
-                    <li><strong>Độ chính xác 95.02% trong việc phân loại sải tay</strong> từ cảm biến đeo được</li>
-                    <li>Nhận dạng trực tuyến kiểu bơi và quay đầu với phản hồi thời gian thực</li>
-                    <li>Được huấn luyện trên ~8,000 mẫu từ 10 vận động viên trong quá trình tập luyện thực tế</li>
-                    <li>Cung cấp tính toán đếm sải tay và tốc độ trung bình tự động</li>
-                </ul>
-            </div>
-
-            <div class="significance">
-                <h4>Ý Nghĩa:</h4>
-                <p>Chứng minh rằng học máy có thể đạt được độ chính xác phát hiện sải tay gần như hoàn hảo, cho phép
-                    phân tích bơi lội thông minh, tự động trong các thiết bị tiêu dùng.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Các Nhà Nghiên Cứu Hàng Đầu</h2>
-
-        <div class="researchers-grid">
-            <div class="researcher-card">
-                <h3>Tiago M. Barbosa</h3>
-                <p class="institution">Học viện Bách khoa Bragança, Bồ Đào Nha</p>
-                <p><strong>100+ ấn phẩm</strong> về cơ sinh học và mô hình hóa hiệu suất. Thiết lập các khuôn khổ toàn
-                    diện để hiểu các yếu tố quyết định hiệu suất bơi lội.</p>
-            </div>
-
-            <div class="researcher-card">
-                <h3>Ernest W. Maglischo</h3>
-                <p class="institution">Đại học bang Arizona</p>
-                <p>Tác giả của <em>"Swimming Fastest"</em>, văn bản dứt khoát về khoa học bơi lội. Đã giành 13 chức vô
-                    địch NCAA với tư cách là huấn luyện viên.</p>
-            </div>
-
-            <div class="researcher-card">
-                <h3>Kohji Wakayoshi</h3>
-                <p class="institution">Đại học Osaka</p>
-                <p>Phát triển khái niệm vận tốc bơi tới hạn. Ba bài báo mang tính bước ngoặt (1992-1993) đã thiết lập
-                    CSS làm tiêu chuẩn vàng cho kiểm tra ngưỡng.</p>
-            </div>
-
-            <div class="researcher-card">
-                <h3>Huub M. Toussaint</h3>
-                <p class="institution">Đại học Vrije Amsterdam</p>
-                <p>Chuyên gia về lực đẩy và đo lường lực cản. Tiên phong các phương pháp định lượng lực cản chủ động và
-                    hiệu quả sải tay.</p>
-            </div>
-
-            <div class="researcher-card">
-                <h3>Ricardo J. Fernandes</h3>
-                <p class="institution">Đại học Porto</p>
-                <p>Chuyên gia về động học VO₂ và năng lượng bơi lội. Nâng cao hiểu biết về các phản ứng trao đổi chất
-                    đối với tập luyện bơi lội.</p>
-            </div>
-
-            <div class="researcher-card">
-                <h3>Ludovic Seifert</h3>
-                <p class="institution">Đại học Rouen</p>
-                <p>Chuyên gia về kiểm soát vận động và phối hợp. Phát triển Chỉ số Phối hợp (IdC) và các phương pháp
-                    phân tích sải tay tiên tiến.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Triển Khai Nền Tảng Hiện Đại</h2>
-
-        <div class="platform-research">
-            <h3>Phân Tích Bơi Lội Apple Watch</h3>
-            <p>Các kỹ sư của Apple đã ghi lại <strong>700+ người bơi qua 1,500+ buổi tập</strong> bao gồm cả nhà vô địch
+                bậc ba.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Cơ Sinh Học & Phân Tích Sải Tay</h2><div class="research-paper"><h3>Tiago M. Barbosa (2010) - Các Yếu Tố Quyết Định Hiệu Suất</h3><div class="paper-meta"><strong>Tạp chí:</strong> Journal of Sports Science and Medicine, 9(1)<br><strong>Trọng tâm:</strong> Khuôn khổ toàn diện cho hiệu suất bơi lội
+            </div><div class="findings"><h4>Phát Hiện Chính:</h4><ul><li>Hiệu suất phụ thuộc vào <strong>tạo lực đẩy, giảm thiểu lực cản và tính kinh tế bơi lội</strong></li><li><strong>Chiều dài sải tay nổi lên là yếu tố dự báo quan trọng hơn tần số sải tay</strong></li><li>Hiệu quả cơ sinh học rất quan trọng để phân biệt các cấp độ hiệu suất</li><li>Tích hợp nhiều yếu tố quyết định thành công trong thi đấu</li></ul></div></div><div class="research-paper"><h3>Huub M. Toussaint (1992) - Cơ Sinh Học Bơi Sải</h3><div class="paper-meta"><strong>Tạp chí:</strong> Sports Medicine<br><strong>Trọng tâm:</strong> Đánh giá toàn diện về cơ học bơi sải
+            </div><div class="findings"><h4>Phát Hiện Chính:</h4><ul><li>Phân tích cơ chế đẩy và đo lường lực cản chủ động</li><li>Định lượng mối quan hệ giữa tần số sải tay và chiều dài sải tay</li><li>Thiết lập các nguyên tắc cơ sinh học của lực đẩy hiệu quả</li><li>Cung cấp khuôn khổ cho tối ưu hóa kỹ thuật</li></ul></div></div><div class="research-paper"><h3>Ludovic Seifert (2007) - Chỉ Số Phối Hợp</h3><div class="paper-meta"><strong>Tạp chí:</strong> Human Movement Science<br><strong>Đổi mới:</strong> Chỉ số IdC cho thời gian sải tay
+            </div><div class="findings"><h4>Phát Hiện Chính:</h4><ul><li>Giới thiệu Chỉ số Phối hợp (IdC) để định lượng mối quan hệ thời gian giữa các sải tay</li><li>Vận động viên bơi lội ưu tú điều chỉnh các mẫu phối hợp với thay đổi tốc độ trong khi duy trì
+                        hiệu quả</li><li>Chiến lược phối hợp ảnh hưởng đến hiệu quả lực đẩy</li><li>Kỹ thuật phải được đánh giá động, không chỉ ở một tốc độ duy nhất</li></ul></div></div></div></section><section class="section"><div class="container"><h2 class="text-center mb-xl">Tính Kinh Tế Bơi Lội & Chi Phí Năng Lượng</h2><div class="grid grid-2"><div class="research-paper"><h3>Costill và cộng sự (1985)</h3><div class="paper-meta"><strong>Tạp chí:</strong> International Journal of Sports Medicine<br><strong>Phát hiện mang tính bước ngoặt:</strong> Tính kinh tế > VO₂max
+                </div><div class="findings"><h4>Phát Hiện Chính:</h4><ul><li><strong>Tính kinh tế bơi lội quan trọng hơn VO₂max đối với hiệu suất cự ly trung
+                                bình</strong></li><li>Những người bơi giỏi hơn thể hiện chi phí năng lượng thấp hơn ở các vận tốc nhất định</li><li>Hiệu quả cơ học sải tay rất quan trọng để dự đoán hiệu suất</li><li>Sự thành thạo kỹ thuật phân biệt người bơi ưu tú với người bơi giỏi</li></ul></div><div class="significance"><h4>Ý Nghĩa:</h4><p>Chuyển trọng tâm từ khả năng hiếu khí thuần túy sang hiệu quả. Nêu bật tầm quan trọng của việc
+                        tập kỹ thuật và tính kinh tế sải tay để đạt được hiệu suất cao hơn.</p></div></div><div class="research-paper"><h3>Fernandes và cộng sự (2003)</h3><div class="paper-meta"><strong>Tạp chí:</strong> Journal of Human Kinetics<br><strong>Trọng tâm:</strong> Giới hạn thời gian tại vận tốc VO₂max
+                </div><div class="findings"><h4>Phát Hiện Chính:</h4><ul><li>Phạm vi TLim-vVO₂max: 215-260 giây (ưu tú), 230-260 giây (trình độ cao), 310-325 giây (trình
+                            độ thấp)</li><li>Tính kinh tế bơi lội liên quan trực tiếp đến TLim-vVO₂max</li><li>Tính kinh tế tốt hơn = thời gian bền vững lâu hơn ở pace hiếu khí tối đa</li></ul></div></div></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Cảm Biến Đeo Được & Công Nghệ</h2><div class="research-paper"><h3>Mooney và cộng sự (2016) - Đánh Giá Công Nghệ IMU</h3><div class="paper-meta"><strong>Tạp chí:</strong> Sensors (Đánh giá hệ thống)<br><strong>Trọng tâm:</strong> Đơn vị đo lường quán tính trong bơi lội ưu tú
+            </div><div class="findings"><h4>Phát Hiện Chính:</h4><ul><li>IMU đo lường hiệu quả tần số sải tay, đếm sải tay, tốc độ bơi, xoay người, kiểu thở</li><li>Sự đồng thuận tốt so với phân tích video (tiêu chuẩn vàng)</li><li>Đại diện cho công nghệ mới nổi cho phản hồi thời gian thực</li><li>Tiềm năng dân chủ hóa phân tích cơ sinh học trước đây đòi hỏi thiết bị phòng thí nghiệm đắt tiền
+                    </li></ul></div><div class="significance"><h4>Ý Nghĩa:</h4><p>Xác thực công nghệ đeo được là nghiêm ngặt về mặt khoa học. Mở đường cho các thiết bị tiêu dùng
+                    (Garmin, Apple Watch, FORM) cung cấp các chỉ số chất lượng phòng thí nghiệm.</p></div></div><div class="research-paper"><h3>Silva và cộng sự (2021) - Học Máy Cho Phát Hiện Sải Tay</h3><div class="paper-meta"><strong>Tạp chí:</strong> Sensors<br><strong>Đổi mới:</strong> Phân loại Random Forest đạt độ chính xác 95.02%
+            </div><div class="findings"><h4>Phát Hiện Chính:</h4><ul><li><strong>Độ chính xác 95.02% trong việc phân loại sải tay</strong> từ cảm biến đeo được</li><li>Nhận dạng trực tuyến kiểu bơi và quay đầu với phản hồi thời gian thực</li><li>Được huấn luyện trên ~8,000 mẫu từ 10 vận động viên trong quá trình tập luyện thực tế</li><li>Cung cấp tính toán đếm sải tay và tốc độ trung bình tự động</li></ul></div><div class="significance"><h4>Ý Nghĩa:</h4><p>Chứng minh rằng học máy có thể đạt được độ chính xác phát hiện sải tay gần như hoàn hảo, cho phép
+                    phân tích bơi lội thông minh, tự động trong các thiết bị tiêu dùng.</p></div></div></div></section><section class="section"><div class="container container-narrow"><h2>Các Nhà Nghiên Cứu Hàng Đầu</h2><div class="researchers-grid"><div class="researcher-card"><h3>Tiago M. Barbosa</h3><p class="institution">Học viện Bách khoa Bragança, Bồ Đào Nha</p><p><strong>100+ ấn phẩm</strong> về cơ sinh học và mô hình hóa hiệu suất. Thiết lập các khuôn khổ toàn
+                    diện để hiểu các yếu tố quyết định hiệu suất bơi lội.</p></div><div class="researcher-card"><h3>Ernest W. Maglischo</h3><p class="institution">Đại học bang Arizona</p><p>Tác giả của <em>"Swimming Fastest"</em>, văn bản dứt khoát về khoa học bơi lội. Đã giành 13 chức vô
+                    địch NCAA với tư cách là huấn luyện viên.</p></div><div class="researcher-card"><h3>Kohji Wakayoshi</h3><p class="institution">Đại học Osaka</p><p>Phát triển khái niệm vận tốc bơi tới hạn. Ba bài báo mang tính bước ngoặt (1992-1993) đã thiết lập
+                    CSS làm tiêu chuẩn vàng cho kiểm tra ngưỡng.</p></div><div class="researcher-card"><h3>Huub M. Toussaint</h3><p class="institution">Đại học Vrije Amsterdam</p><p>Chuyên gia về lực đẩy và đo lường lực cản. Tiên phong các phương pháp định lượng lực cản chủ động và
+                    hiệu quả sải tay.</p></div><div class="researcher-card"><h3>Ricardo J. Fernandes</h3><p class="institution">Đại học Porto</p><p>Chuyên gia về động học VO₂ và năng lượng bơi lội. Nâng cao hiểu biết về các phản ứng trao đổi chất
+                    đối với tập luyện bơi lội.</p></div><div class="researcher-card"><h3>Ludovic Seifert</h3><p class="institution">Đại học Rouen</p><p>Chuyên gia về kiểm soát vận động và phối hợp. Phát triển Chỉ số Phối hợp (IdC) và các phương pháp
+                    phân tích sải tay tiên tiến.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Triển Khai Nền Tảng Hiện Đại</h2><div class="platform-research"><h3>Phân Tích Bơi Lội Apple Watch</h3><p>Các kỹ sư của Apple đã ghi lại <strong>700+ người bơi qua 1,500+ buổi tập</strong> bao gồm cả nhà vô địch
                 Olympic Michael Phelps đến người mới bắt đầu. Tập dữ liệu đào tạo đa dạng này cho phép các thuật toán
                 phân tích quỹ đạo cổ tay sử dụng con quay hồi chuyển và gia tốc kế hoạt động song song, đạt được độ
-                chính xác cao ở mọi cấp độ kỹ năng.</p>
-
-            <h3>Học Máy Kính Bơi Thông Minh FORM</h3>
-            <p>IMU gắn trên đầu của FORM cung cấp khả năng phát hiện quay đầu vượt trội bằng cách nắm bắt chuyển động
+                chính xác cao ở mọi cấp độ kỹ năng.</p><h3>Học Máy Kính Bơi Thông Minh FORM</h3><p>IMU gắn trên đầu của FORM cung cấp khả năng phát hiện quay đầu vượt trội bằng cách nắm bắt chuyển động
                 xoay đầu chính xác hơn so với các thiết bị đeo ở cổ tay. Các mô hình ML được huấn luyện tùy chỉnh của họ
                 xử lý hàng trăm giờ video bơi được gắn nhãn phù hợp với dữ liệu cảm biến, cho phép <strong>dự đoán thời
-                    gian thực trong dưới 1 giây</strong> với độ chính xác ±2 giây.</p>
-
-            <h3>Đổi Mới GPS Đa Băng Tần Garmin</h3>
-            <p>Thu tín hiệu vệ tinh tần số kép (các băng tần L1 + L5) cung cấp <strong>cường độ tín hiệu lớn hơn gấp 10
+                    gian thực trong dưới 1 giây</strong> với độ chính xác ±2 giây.</p><h3>Đổi Mới GPS Đa Băng Tần Garmin</h3><p>Thu tín hiệu vệ tinh tần số kép (các băng tần L1 + L5) cung cấp <strong>cường độ tín hiệu lớn hơn gấp 10
                     lần</strong>, cải thiện đáng kể độ chính xác khi bơi nước mở. Các đánh giá ca ngợi các mẫu Garmin đa
                 băng tần là tạo ra khả năng theo dõi "chính xác đáng sợ" xung quanh phao, giải quyết thách thức lịch sử
-                về độ chính xác GPS cho bơi lội.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow text-center">
-        <h2>Khoa Học Thúc Đẩy Hiệu Suất</h2>
-        <p class="lead">Swim Analytics đứng trên vai của nhiều thập kỷ nghiên cứu khoa học nghiêm ngặt. Mọi công thức,
+                về độ chính xác GPS cho bơi lội.</p></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>Khoa Học Thúc Đẩy Hiệu Suất</h2><p class="lead">Swim Analytics đứng trên vai của nhiều thập kỷ nghiên cứu khoa học nghiêm ngặt. Mọi công thức,
             chỉ số và tính toán đều đã được xác thực thông qua các nghiên cứu được bình duyệt xuất bản trên các tạp chí
             khoa học thể thao hàng đầu.</p><p>Nền tảng dựa trên bằng chứng này đảm bảo rằng những hiểu biết bạn thu được không chỉ là những con số—chúng là
             những chỉ số có ý nghĩa khoa học về sự thích nghi sinh lý, hiệu quả cơ sinh học và sự tiến bộ hiệu suất.</p><div class="mt-xl"><a href="/vi/bibliography/" class="btn btn-primary btn-large">Xem Thư Mục Đầy Đủ →</a></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
@@ -1889,353 +702,181 @@ img[width][height] {
           
           Thư Mục
           
-        </a>
-      </li>
-      
-    </ul>
-
-    
-    <nav class="ai-citation-links" aria-label="Nghiên cứu Khoa học Đằng sau Phân tích Bơi lội | Swim Analytics">
-      
-      <a class="ai-related-link" href="../../vi/getting-started/">
+        </a></li></ul><nav class="ai-citation-links" aria-label="Nghiên cứu Khoa học Đằng sau Phân tích Bơi lội | Swim Analytics"><a class="ai-related-link" href="../../vi/getting-started/">
         Bắt Đầu
-      </a>
-      
-      <a class="ai-related-link" href="../../vi/contact/">
+      </a><a class="ai-related-link" href="../../vi/contact/">
         Liên Hệ
-      </a>
-      
-    </nav>
-    
-  </div>
-</section>
-
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Swim Analytics</h2>
-                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Tải xuống</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
-                        aria-label="Tải xuống trên App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+      </a></nav></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Tải xuống</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Tải xuống trên App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Tải xuống trên App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
-                        aria-label="Tải nó trên Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Tải nó trên Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Tải nó trên Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Có sẵn ở</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Có sẵn ở</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     Korean
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာဘာသာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Српски
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link active"
+                </a><a href="/vi/" class="lang-link active"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     Chinese
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Swim Analytics. Bảo lưu mọi quyền
-            </p><ul class="footer-legal"><li><a href="/vi/privacy/">Quyền Riêng Tư</a></li><li><a href="/vi/terms/">Điều Khoản</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Trang web này sử dụng cookie để cải thiện trải nghiệm của bạn.</p><a href="/vi/privacy/" class="text-sm">Tìm hiểu thêm</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Từ Chối</button><button id="cookie-accept" class="btn btn-primary btn-small">Chấp Nhận</button></div></div></div><script src="../../assets/js/core.min.js?v=2c227be8" defer></script><script src="../../assets/js/search.min.js?v=2c227be8" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>
+            </p><ul class="footer-legal"><li><a href="/vi/privacy/">Quyền Riêng Tư</a></li><li><a href="/vi/terms/">Điều Khoản</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Trang web này sử dụng cookie để cải thiện trải nghiệm của bạn.</p><a href="/vi/privacy/" class="text-sm">Tìm hiểu thêm</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Từ Chối</button><button id="cookie-accept" class="btn btn-primary btn-small">Chấp Nhận</button></div></div></div><script src="../../assets/js/core.min.js?v=5f4a7b18ac56" defer></script><script src="../../assets/js/search.min.js?v=5f4a7b18ac56" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>
