@@ -1,0 +1,860 @@
+<!DOCTYPE html><html lang="nl" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Kritieke zwemsnelheid (CSS): rekenmachine, test en zones</title><meta name="description" content="Leer hoe u de kritische zwemsnelheid (CSS) test, het tempo berekent uit de tijdritten van 400m en 200m, zwemtrainingszones instelt en CSS gebruikt voor sTSS en..."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="kritische zwemsnelheid, CSS rekenmachine, CSS testen, zwemtrainingszones, drempel zwemtempo, sTSS"><link rel="canonical" href="https://swim.analyticszone.app/nl/css/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-04-02T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/nl/css/"><meta property="og:title" content="Kritieke zwemsnelheid (CSS): rekenmachine, test en zones"><meta property="og:description" content="Leer hoe u de kritische zwemsnelheid (CSS) test, het tempo berekent uit de tijdritten van 400m en 200m, zwemtrainingszones instelt en CSS gebruikt voor sTSS en..."><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/nl/css/"><meta name="twitter:title" content="Kritieke zwemsnelheid (CSS): rekenmachine, test en zones"><meta name="twitter:description" content="Leer hoe u de kritische zwemsnelheid (CSS) test, het tempo berekent uit de tijdritten van 400m en 200m, zwemtrainingszones instelt en CSS gebruikt voor sTSS en..."><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/css/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/css/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/css/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/css/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/css/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/css/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/css/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/css/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/css/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/css/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/css/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/css/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/css/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/css/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/css/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/css/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/css/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/css/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/css/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/css/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/css/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/css/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/css/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/css/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/css/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/css/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/css/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/css/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/css/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/css/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/css/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/css/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/css/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/css/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/css/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/css/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/css/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/css/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/css/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/css/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/css/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/css/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/css/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/css/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/css/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/css/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/css/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/css/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/css/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/css/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/css/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/css/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/css/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/css/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/css/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/css/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=8ddce8bb"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "logo": "https://swim.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+swim@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/swimanalytics",
+    
+    "https://apps.apple.com/us/app/swim-analytics/id6753306284",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "nl"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Swim Analytics",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://swim.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Start",
+      "item": "https://swim.analyticszone.app/nl/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Leren",
+      "item": "https://swim.analyticszone.app/nl/getting-started/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "CSS",
+      "item": "https://swim.analyticszone.app/nl/css/"
+    }
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Kritieke zwemsnelheid (CSS): rekenmachine, test en zones",
+  "description": "Leer hoe u de kritische zwemsnelheid (CSS) test, het tempo berekent uit de tijdritten van 400m en 200m, zwemtrainingszones instelt en CSS gebruikt voor sTSS en...",
+  "url": "https://swim.analyticszone.app/nl/css/",
+  "inLanguage": "nl",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Swim Analytics",
+    "url": "https://swim.analyticszone.app"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-04-02",
+  "keywords": ["kritische zwemsnelheid", "CSS rekenmachine", "CSS testen", "zwemtrainingszones", "drempel zwemtempo", "sTSS"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "kritische zwemsnelheid"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CSS rekenmachine"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CSS testen"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "zwemtrainingszones"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "drempel zwemtempo"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "sTSS"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Kritieke zwemsnelheid (CSS): rekenmachine, test en zones",
+  "description": "Leer hoe u de kritische zwemsnelheid (CSS) test, het tempo berekent uit de tijdritten van 400m en 200m, zwemtrainingszones instelt en CSS gebruikt voor sTSS en...",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Swim Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://swim.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-04-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://swim.analyticszone.app/nl/css/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Kritieke zwemsnelheid (CSS): rekenmachine, test en zones",
+  "description": "Leer hoe u de kritische zwemsnelheid (CSS) test, het tempo berekent uit de tijdritten van 400m en 200m, zwemtrainingszones instelt en CSS gebruikt voor sTSS en...",
+  "url": "https://swim.analyticszone.app/nl/css/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "WebBrowser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Spring naar inhoud</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/nl/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/nl/" 
+                                aria-current="">
+                                Start
+                            </a></li><li class="has-submenu" ><a href="/nl/getting-started/" class="nav-label">Leren</a><ul class="submenu"><li><a href="/nl/getting-started/" 
+                                        aria-current="">
+                                        Aan de Slag
+                                    </a></li><li><a href="/nl/css/" class="active" 
+                                        aria-current="page">
+                                        CSS
+                                    </a></li><li><a href="/nl/training-zones/" 
+                                        aria-current="">
+                                        Trainingszones
+                                    </a></li><li><a href="/nl/training-load/" 
+                                        aria-current="">
+                                        Trainingsbelasting
+                                    </a></li><li><a href="/nl/stss-calculator/" 
+                                        aria-current="">
+                                        sTSS Rekenmachine
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/nl/research/" class="nav-label">Wetenschap</a><ul class="submenu"><li><a href="/nl/research/" 
+                                        aria-current="">
+                                        Onderzoek
+                                    </a></li><li><a href="/nl/formulas/" 
+                                        aria-current="">
+                                        Formules
+                                    </a></li><li><a href="/nl/efficiency/" 
+                                        aria-current="">
+                                        Efficiëntie
+                                    </a></li><li><a href="/nl/stroke-mechanics/" 
+                                        aria-current="">
+                                        Slagtechniek
+                                    </a></li><li><a href="/nl/bibliography/" 
+                                        aria-current="">
+                                        Bibliografie
+                                    </a></li></ul></li><li><a href="/nl/contact/" 
+                                aria-current="">
+                                Contact
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Selecteer taal"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            Korean
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာဘာသာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" selected>
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Српски
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            Chinese
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Menu openen/sluiten"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/nl/">Start</a></li><li><a href="/nl/getting-started/">Leren</a></li><li><span aria-current="page">CSS</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Kritische zwemsnelheid (CSS)</h1><p class="lead">De praktische tempobenchmark die zwemtrainingszones, drempelsets en analyse van de trainingsbelasting verankert</p></div></section><section class="section"><div class="container container-narrow"><div class="quick-answer" itemscope="" itemtype="https://schema.org/Answer"><h2>Snel antwoord</h2><div itemprop="text"><p><strong>Kritische zwemsnelheid (CSS)</strong> is een in de praktijk geteste schatting van uw duurzame drempelzwemtempo. De meeste zwemmers berekenen het uit a <strong>400m + 200m tijdrit</strong>en gebruik vervolgens het resultaat om in te stellen <a href="/nl/training-zones/">trainingszones</a>, tempodrempelsets en vermogen <a href="/nl/stss-calculator/">sTSS</a> en <a href="/nl/training-load/">trainingsbelasting</a> analyse.</p><ul><li><strong>Beste gebruik:</strong> drempeltraining, herhaalbare stimulatie en belastingregistratie</li><li><strong>Typische interpretatie:</strong> ongeveer het snelste tempo dat u aëroob kunt volhouden voor hard, gecontroleerd werk</li><li><strong>Gebruik het niet blindelings:</strong> Slecht tempo, onvolledig herstel, verschillende zwembadomstandigheden of sleephulpmiddelen kunnen het resultaat vertekenen</li><li><strong>Cadans opnieuw testen:</strong> elke 6-8 weken, of na een zinvol trainingsblok</li></ul></div></div><div class="callout callout-success mb-xl"><h2>Belangrijkste afhaalrestaurants</h2><ul class="key-points"><li><strong>Wat CSS is:</strong> een praktische schatting van het drempeltempo voor zwemmers, opgebouwd uit eenvoudige veldtesten</li><li><strong>Waarom het belangrijk is:</strong> CSS verandert zwemtraining van giswerk in herhaalbaar tempo en betere controle over de belasting</li><li><strong>Wat het ontgrendelt:</strong><a href="/nl/training-zones/">zones</a>, <a href="/nl/stss-calculator/">sTSS</a>, <a href="/nl/training-load/">prestatiebeheer</a>en duidelijkere voortgangscontroles</li><li><strong>Wat het niet doet:</strong> vervanging van techniekanalyse, context in open water, of <a href="/nl/efficiency/">efficiëntie interpretatie</a></li><li><strong>Beste volgende stap:</strong> test CSS goed en gebruik het vervolgens om uw drempel- en aerobe werk te structureren</li></ul></div><article itemscope="" itemtype="https://schema.org/Article"><p class="lead">Als u slechts één zwemstatistiek als tempo-anker gebruikt, behoudt u CSS. Het is niet perfect en het is geen volledige fysiologische laboratoriumtest, maar het is praktisch, herhaalbaar en direct bruikbaar. Die combinatie is de reden waarom CSS de ruggengraat blijft van datagestuurde zwemtraining.</p><p>Voor de meeste zwemmers is <strong>Kritieke zwemsnelheid</strong> is de brug tussen rauwe tijdritten en alledaagse trainingsbeslissingen. Het helpt bij het beantwoorden van vijf belangrijke vragen:</p><ul><li>Hoe snel moeten drempelwaarden eigenlijk zijn?</li><li>Welk tempobereik hoort bij elk <a href="/nl/training-zones/">zwem zone</a>?</li><li>Hoe moet ik de herhaling van 100s, 200s en 400s herhalen?</li><li>Hoe kwantificeer ik zwemstress met <a href="/nl/stss-calculator/">sTSS</a>?</li><li>Gaat mijn aërobe zwemfitness de goede kant op?</li></ul><h2>Wat CSS meet</h2><p><strong>CSS is een praktische schatting van het harde aërobe zwemtempo</strong>, meestal afgeleid van een tijdrit van 400 en 200 meter. In coachingtaal wordt het vaak gezien als je drempeltempo voor gestructureerde zwembadtraining: snel genoeg om er toe te doen, gecontroleerd genoeg om te herhalen en stabiel genoeg om zones omheen te bouwen.</p><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>Aspect</th><th>Praktisch antwoord</th></tr></thead><tbody><tr class="highlight-row"><td><strong>Wat CSS meet</strong></td><td>Uw in de praktijk geschatte drempelzwemsnelheid voor langdurig aërobisch werk</td></tr><tr><td><strong>Beste gebruik</strong></td><td>Trainingszones, drempelsets, tempodoelen instellen en <a href="/nl/training-load/">trainingsbelasting</a></td></tr><tr><td><strong>Veelgemaakte fout</strong></td><td>Eén slechte test als permanente waarheid behandelen, of CSS gebruiken zonder rekening te houden met de lengte van het zwembad, de rust en de kwaliteit van het tempo</td></tr><tr><td><strong>Gerelateerde statistieken</strong></td><td><a href="/nl/training-zones/">Trainingszones</a>, <a href="/nl/stss-calculator/">sTSS</a>, <a href="/nl/training-load/">CTL/ATL/TSB</a>, en <a href="/nl/efficiency/">SWOLF / efficiëntie</a></td></tr></tbody></table></div><div class="callout callout-info"><h3>🎯 Het bruikbare mentale model</h3><p>Beschouw CSS als uw <strong>benchmark voor bedrijfstempo</strong>, geen magisch getal. Het is de temporeferentie die de rest van uw zwemgegevens coherent maakt.</p></div><h2>Waarom CSS belangrijk is</h2><p>CSS is belangrijk omdat het fysiologie verbindt met uitvoering. Veel zwemmers weten dat ze een ‘harde set’ of een ‘temposessie’ hebben gedaan, maar kunnen niet zeggen of het tempo goed was. CSS lost dat probleem op door u een benchmark te geven die u sessie na sessie kunt gebruiken.</p><div class="application-grid"><div class="application-item"><h3>🏊 Trainingszones</h3><p>CSS geeft je een schoon anker voor <a href="/nl/training-zones/">zwemzones</a>, zodat eenvoudig werk gemakkelijk blijft en drempelwerk doelgericht blijft.</p></div><div class="application-item"><h3>📊 Trainingsbelasting</h3><p>Zonder een bruikbare CSS, <a href="/nl/stss-calculator/">sTSS</a> en <a href="/nl/training-load/">prestatiebeheerstatistieken</a> hun betekenis verliezen.</p></div><div class="application-item"><h3>⏱️ Herhaalbaar tempo</h3><p>Met CSS kunt u 100's, 200's en 400's met meer consistentie volgen, in plaats van alleen op gevoel te vertrouwen.</p></div><div class="application-item"><h3>📈 Voortgangscontroles</h3><p>Wanneer CSS verbetert, gaat uw drempeltempo sneller. Dat is een sterk signaal dat de aërobe zwemfitness ook verbetert.</p></div></div><div class="warning-box"><strong>⚠️ Kritieke afhankelijkheid:</strong> Als uw CSS verkeerd is, zullen uw zones, sTSS en prestatiebeheercijfers de verkeerde kant op gaan. Slechte input levert slechte analyses op.
+</div><h2>Waar CSS goed voor is en wat niet</h2><p><strong>CSS is uitstekend geschikt voor:</strong> drempelwaarden, aerobe kwaliteitswerk, zone-instelling en zwemspecifieke belastingregistratie.</p><p><strong>CSS is niet genoeg voor:</strong> sprintprofilering, diagnose van slagtechniek, uitvoering van races in open water onder variabele omstandigheden, of het zelfstandig interpreteren van efficiëntie.</p><div class="grid grid-2"><div class="protocol-card"><h3>Gebruik CSS voor</h3><ul><li>Drempeltempo-voorschriften</li><li>Herhaal 100/200/400 stimulatie</li><li>Gepersonaliseerd <a href="/nl/training-zones/">zonestructuur</a></li><li><a href="/nl/stss-calculator/">sTSS</a> en <a href="/nl/training-load/">beheer van de lading</a></li><li>Het volgen van de aerobe voortgang gedurende een seizoen</li></ul></div><div class="protocol-card"><h3>Gebruik CSS niet alleen voor</h3><ul><li>Verschillende zwembadlengtes vergelijken alsof ze identiek zijn</li><li>Het vergelijken van zwemmers met zeer verschillende techniekprofielen</li><li>Slagkwaliteit beoordelen zonder <a href="/nl/stroke-mechanics/">slagmechanica</a></li><li>Efficiëntie beoordelen zonder context <a href="/nl/efficiency/">SWOLF</a></li><li>Ervan uitgaande dat het tempo in open water exact overeenkomt met het CSS-tempo van het zwembad</li></ul></div></div><h2>CSS testen in 4 praktische stappen</h2><div class="grid grid-2"><div class="protocol-card"><h3>📋 Standaardprotocol</h3><ol class="protocol-steps"><li><strong>Goed opwarmen</strong><p>Zwem gemakkelijk 300-800 meter, voeg oefeningen toe en voeg een paar gecontroleerde bouwinspanningen toe vóór de test.</p></li><li><strong>Zwem een tijdrit van 400 meter</strong><p>Gebruik een duwstart, geen duik. Het doel is je snelste duurzame 400 meter, niet een roekeloze eerste 100.</p></li><li><strong>Herstel volledig</strong><p><span class="highlight-text">Neem 5-10 minuten</span> gemakkelijke of volledige rust. Onvolledig herstel is een van de snelste manieren om het resultaat te verpesten.</p></li><li><strong>Zwem een tijdrit van 200 meter</strong><p>Gebruik opnieuw een duwstart en noteer de tijd nauwkeurig. Uw tempo op 200 meter moet aanzienlijk sneller zijn dan uw tempo op 400 meter.</p></li></ol></div><div class="protocol-card"><h3>⚠️ De meest voorkomende testfouten</h3><div class="mistake-list"><div class="mistake-item"><h4>Slecht tempo op de 400 meter</h4><p><strong>Probleem:</strong> Je gaat te hard naar buiten en vervaagt dan slecht.</p><p><strong>Resultaat:</strong> De 400 meter stops weerspiegelen de duurzame tempokwaliteit.</p><p><strong>Oplossing:</strong> Streef naar gelijkmatige of licht negatieve splitsingen.</p></div><div class="mistake-item"><h4>Onvoldoende herstel</h4><p><strong>Probleem:</strong> Vermoeidheid maakt de 200 meter kunstmatig langzaam.</p><p><strong>Resultaat:</strong> CSS raakt vervormd en uw trainingszones verschuiven.</p><p><strong>Oplossing:</strong> Wacht tot de ademhaling onder controle is en het herstel voltooid voelt.</p></div><div class="mistake-item"><h4>Gemengde omstandigheden</h4><p><strong>Probleem:</strong> Verschillende zwembadlengtes, grote afzetveranderingen of sleephulpmiddelen veranderen de testomgeving.</p><p><strong>Resultaat:</strong> Je vergelijkt cijfers die niet echt vergelijkbaar zijn.</p><p><strong>Oplossing:</strong> Houd de omstandigheden van test tot test zo consistent mogelijk.</p></div></div></div></div><div class="callout callout-tip mt-xl"><h3>🔄 Frequentie opnieuw testen</h3><p>Test CSS elke keer opnieuw <strong>6-8 weken</strong>, of na een betekenisvol blok gericht op drempelwaarde, uithoudingsvermogen of techniekconsolidatie. Het punt is niet het voortdurend testen. Het punt is dat je één benchmark consequent genoeg gebruikt om verandering te zien.</p></div><h2>CSS-berekeningsformule</h2><div class="formula-box"><h3>Formule</h3><div class="formula">
+                CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
+            </div><div class="formula-explanation"><p>Waar:</p><ul><li>D₁ = 200 meter</li><li>D₂ = 400 meter</li><li>T₁ = Tijd voor 200m (in seconden)</li><li>T₂ = Tijd voor 400m (in seconden)</li></ul></div><h3 class="mt-lg">Vereenvoudigd voor tempo per 100 meter</h3><div class="formula">
+                CSS-tempo/100 m (seconden) = (T₄₀₀ - T₂₀₀) / 2
+            </div></div><h3>Uitgewerkt voorbeeld</h3><div class="example-box"><h4>Testresultaten</h4><ul><li>400m tijd: <strong>6:08</strong> (368 seconden)</li><li>200m tijd: <strong>2:30</strong> (150 seconden)</li></ul><h4>Stap 1: Bereken het CSS-tempo</h4><div class="calculation">
+                CSS-tempo/100m = (368 - 150) / 2<br/>
+                CSS-tempo/100m = 218/2<br/>
+                CSS-tempo/100m = <strong>109 seconden = 1:49 per 100 meter</strong></div><h4>Stap 2: Converteer indien nodig naar snelheid</h4><div class="calculation">
+                CSS = 100/109<br/>
+                CSS = <strong>0,917 m/s</strong></div></div><div class="callout callout-info"><h3>Uitgewerkt voorbeeld: hoe u dat resultaat kunt gebruiken</h3><p>Als uw CSS dat is <strong>1:49/100m</strong>, zouden uw drempelherhalingen in de buurt van dat tempo moeten clusteren, uw <a href="/nl/training-zones/">zone tafel</a> moet daaruit worden opgebouwd, en jouw <a href="/nl/stss-calculator/">sTSS berekeningen</a> moet dit gebruiken als de noemer van de temporeferentie.</p></div><h2 class="mt-3xl">Gratis CSS-calculator</h2><p class="lead">Bereken direct uw kritische zwemsnelheid en gepersonaliseerde trainingszones</p><div class="css-calculator"><form id="cssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label class="form-label" for="time400">400m tijd (mm:ss)</label><input aria-describedby="time400-help" aria-required="true" class="form-input" id="time400" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="6:08" type="text"/><small class="form-help" id="time400-help">Formaat: minuten:seconden (bijvoorbeeld 6:08)</small><div class="form-error" id="time400-error"></div></div><div class="form-group"><label class="form-label" for="time200">200m tijd (mm:ss)</label><input aria-describedby="time200-help" aria-required="true" class="form-input" id="time200" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="2:30" type="text"/><small class="form-help" id="time200-help">Formaat: minuten:seconden (bijvoorbeeld 2:30)</small><div class="form-error" id="time200-error"></div></div><div class="calculator-buttons"><button class="btn btn-primary" id="calculateBtn" type="submit">Bereken CSS</button><button class="btn btn-ghost" id="resetBtn" type="reset">Duidelijk</button></div></div></form><div aria-live="polite" class="calculator-results hidden" id="cssResults"><h3>Jouw resultaten</h3><div class="results-summary"><div class="result-item"><div class="result-label">Kritieke zwemsnelheid</div><div class="css-result-value" id="cssValue">--</div></div><div class="result-item"><div class="result-label">CSS-tempo per 100m</div><div class="css-result-value" id="cssPace">--</div></div></div><div class="zones-result"><h4>Jouw gepersonaliseerde trainingszones</h4><p class="mb-md text-secondary">
+                        Op basis van uw CSS zijn dit uw trainingszones in tempo per 100 meter:
+                    </p><div id="zonesTable"></div></div></div></div><h2 class="mt-3xl">Trainingszones gebaseerd op CSS</h2><div class="callout callout-info"><p><strong>Belangrijk:</strong> Het zwemtempo wordt gemeten als <em>tijd per afstand</em>. Dat betekent een <strong>hoger percentage = langzamer tempo</strong>, terwijl een <strong>lager percentage = sneller tempo</strong>. Dit is het tegenovergestelde van veel hardloop- en fietsintensiteitsgrafieken.</p></div><div class="zones-table-container"><table class="zones-table"><thead><tr><th>Zone</th><th>Naam</th><th>% van CSS-tempo</th><th>Voorbeeld voor CSS 1:40/100m</th><th>RPE</th><th>Hoofddoel</th></tr></thead><tbody><tr class="zone-1"><td><strong>1</strong></td><td>Herstel</td><td>&gt;108%</td><td>&gt;1:48/100m</td><td>2-3/10</td><td>Gemakkelijk herstel, techniek resetten, warming-up, cool-down</td></tr><tr class="zone-2"><td><strong>2</strong></td><td>Aërobe basis</td><td>104-108%</td><td>1:44-1:48/100m</td><td>4-5/10</td><td>Aërobe ondersteuning, herhaalbaarheid, volumeregeling</td></tr><tr class="zone-3"><td><strong>3</strong></td><td>Tempo</td><td>99-103%</td><td>1:39-1:43/100m</td><td>6-7/10</td><td>Gecontroleerd kwaliteitswerk dat voldoet aan de eisen van het racetempo</td></tr><tr class="zone-4"><td><strong>4</strong></td><td>Drempel (CSS)</td><td>96-100%</td><td>1:36-1:40/100m</td><td>7-8/10</td><td>Drempelontwikkeling en tempoduurzaamheid</td></tr><tr class="zone-5"><td><strong>5</strong></td><td>VO2 / Anaeroob</td><td>&lt;96%</td><td>&lt;1:36/100m</td><td>9-10/10</td><td>Topsnelheid, VO2-stress, lactaattolerantie</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>🎯 Praktisch zonegebruik</h3><ul><li><strong>Zone 2:</strong> waar de meeste zwemmers duurzaam volume opbouwen</li><li><strong>Zone 3:</strong> nuttig voor gecontroleerde kwaliteit en transitiewerk</li><li><strong>Zone 4:</strong> waar CSS direct nuttig wordt voor drempelsets</li><li><strong>Zone 5:</strong> waar CSS niet langer het hele verhaal is en sprint- / krachtkenmerken er meer toe doen</li></ul></div><h2>Hoe CSS te gebruiken in echte training</h2><div class="application-grid"><div class="application-item"><h3>1️⃣ Tempodrempelsets</h3><p>Gebruik CSS om te stoppen met raden. Sets als 8x100, 5x200 of 3x400 zijn logischer als u het beoogde tempo kent en dit netjes kunt vasthouden.</p></div><div class="application-item"><h3>2️⃣ Verbind Pace met sTSS</h3><p>CSS geeft betekenis aan jouw <a href="/nl/stss-calculator/">sTSS</a>. Moeilijke sessies en gemakkelijke sessies gaan niet meer samen met dezelfde vage werklast.</p></div><div class="application-item"><h3>3️⃣ Houd de voortgang beter bij</h3><p>Als CSS sneller wordt terwijl uw sessies onder controle blijven, verbetert uw drempelzwemconditie waarschijnlijk.</p></div><div class="application-item"><h3>4️⃣ Ontwikkel betere tempogewoonten</h3><p>CSS leert je herhalend werk met controle te zwemmen in plaats van elke harde set in een tempo-instorting te veranderen.</p></div></div><div class="protocol-card"><h3>Voorbeelden van CSS-georiënteerde sessie-ideeën</h3><ul><li><strong>Drempelbehoud:</strong> 8x100 in CSS-tempo met korte rust</li><li><strong>Snelheid duurzaamheid:</strong> 5x200 rond CSS-tempo met consistente splitsingen</li><li><strong>Aërobe ondersteuning:</strong> 3x400 iets langzamer dan CSS-tempo met gecontroleerd aantal slagen</li><li><strong>Techniek + tempo:</strong> wissel 100 meter af bij CSS-inspanning met 50 meter eenvoudige technische reset</li></ul><p>Dit zijn voorbeelden, geen universele voorschriften. Het punt is dat CSS je een stabiele pacing-taal geeft.</p></div><h2>CSS, SWOLF en efficiëntie</h2><p>CSS vertelt het je <strong>hoe snel</strong> je kunt op de drempel zwemmen. <a href="/nl/efficiency/">SWOLF- en efficiëntiestatistieken</a> vertellen je iets anders: hoe zuinig je door het water beweegt. Ze vullen elkaar aan, maar zijn niet uitwisselbaar.</p><div class="callout callout-warning"><h3>Vergelijk SWOLF niet blindelings</h3><p>Een lagere SWOLF is niet altijd 'beter' voor alle zwemmers, sessies, slagen of zwembadopstellingen. Gebruik <a href="/nl/efficiency/">efficiëntiestatistieken</a> als context naast CSS, streekkwaliteit en herhaalbaarheid, niet als een op zichzelf staand rankinghulpmiddel.</p></div><h2>Typische CSS-waarden per niveau</h2><div class="levels-comparison"><div class="level-card"><h3>🥇 Elite-afstandszwemmers</h3><div class="pace-value">1,5-1,8 m/s</div><div class="pace-equivalent">0:56-1:07 per 100m</div><p>Zwemmers van nationaal en internationaal niveau met een hoog trainingsvolume, sterke techniek en jarenlang gestructureerd werk.</p></div><div class="level-card"><h3>🏊 Competitieve leeftijdsgroep</h3><div class="pace-value">1,2-1,5 m/s</div><div class="pace-equivalent">1:07-1:23 per 100m</div><p>Competitieve club-, universiteits- en meesterzwemmers die consistent trainen en regelmatig racen.</p></div><div class="level-card"><h3>🏃 Triatleten en fitnesszwemmers</h3><div class="pace-value">0,9-1,2 m/s</div><div class="pace-equivalent">1:23-1:51 per 100m</div><p>Zwemmers met regelmatige training, bruikbare techniek en voldoende volume om te profiteren van een op tempo gebaseerde structuur.</p></div><div class="level-card"><h3>🌊 Zwemmers ontwikkelen</h3><div class="pace-value">&lt;0,9 m/s</div><div class="pace-equivalent">&gt;1:51 per 100m</div><p>Zwemmers bouwen nog steeds aan techniek, zelfvertrouwen en aerobe duurzaamheid. CSS kan nog steeds helpen, maar de techniek blijft doorslaggevend.</p></div></div><h2>Wetenschappelijke validatie</h2><div class="research-highlight"><h3>Wakayoshi et al. en de praktische case voor CSS</h3><p>CSS werd op grote schaal gebruikt omdat het coaches en zwemmers een praktijkvriendelijke benchmark bood die goed bij drempelgerelateerde prestatiemarkers paste zonder dat herhaalde lactaattests in het laboratorium nodig waren.</p><ul class="research-findings"><li><strong>Praktisch:</strong> herhaalbaar door eenvoudige pooltests</li><li><strong>Nuttig:</strong> dicht genoeg bij drempelrelevante stimulatie voor programmering</li><li><strong>Bruikbaar:</strong> gemakkelijk opnieuw te testen en bij te werken gedurende een seizoen</li><li><strong>Verbonden:</strong> direct bruikbaar voor trainingszones, tempo en het volgen van de belasting</li></ul><div class="citation"><p><strong>Fundamentele papieren:</strong></p><ol><li>Wakayoshi K, et al. (1992). "Bepaling en validiteit van de kritische snelheid als index voor de zwemprestaties van de wedstrijdzwemmer."</li><li>Wakayoshi K, et al. (1992). "Een eenvoudige methode om de kritische snelheid te bepalen als drempel voor zwemvermoeidheid bij wedstrijdzwemmen."</li><li>Wakayoshi K, et al. (1993). "Vertegenwoordigt de kritische zwemsnelheid de trainingsintensiteit bij maximale lactaat-steady state?"</li></ol></div></div><h2>Veelgestelde vragen</h2><div class="protocol-card"><h3>Hoe vaak moet ik CSS opnieuw testen?</h3><p>Elke 6-8 weken is een goede standaard. Test alleen eerder opnieuw als de training veel is veranderd of als uw huidige zones duidelijk niet goed aanvoelen.</p><h3>Is CSS hetzelfde als lactaatdrempel?</h3><p>Niet precies. CSS is een veldschatting die wordt gebruikt als een praktische benchmark voor het drempeltempo. Het is nuttig omdat het herhaalbaar en uitvoerbaar is, niet omdat het laboratoriumtesten perfect vervangt.</p><h3>Kan ik CSS gebruiken voor pacing in open water?</h3><p>Gebruik het als startreferentie, niet als letterlijke garantie. Waarnemen, tekenen, hakken, wetsuits en navigatie veranderen allemaal hoe het tempo zich in open water gedraagt.</p><h3>Kunnen beginners CSS gebruiken?</h3><p>Ja, maar het resultaat wordt nuttiger naarmate de techniek en het tempo verbeteren. Zeer nieuwe zwemmers hebben vaak een consistente slag- en pacing nodig voordat CSS zeer stabiel wordt.</p><h3>Moet ik mijn CSS rechtstreeks vergelijken met die van iemand anders?</h3><p>Alleen voorzichtig. Poollengte, push-offs, weerstand, tempovaardigheid en techniekkwaliteit hebben allemaal invloed op het resultaat. CSS is het krachtigst als een persoonlijke maatstaf in de loop van de tijd.</p></div><div class="callout mt-2xl"><h3>Gebruik CSS als middelpunt van het cluster Zwemstatistieken</h3><p>Als CSS uw tempo-anker is, zijn de volgende pagina's die u kunt gebruiken:</p><ul><li><a href="/nl/training-zones/">Trainingszones</a> om CSS te vertalen naar sessie-intentie</li><li><a href="/nl/stss-calculator/">sTSS rekenmachine</a> om stress te kwantificeren</li><li><a href="/nl/training-load/">Trainingsbelasting</a> om conditie, vermoeidheid en vorm te monitoren</li><li><a href="/nl/efficiency/">Efficiëntie en SWOLF</a> om techniekcontext toe te voegen</li></ul></div><div class="mt-xl text-center"><a class="btn btn-primary" href="/nl/training-zones/">Gebruik CSS om trainingszones in te stellen →</a><a class="btn btn-secondary" href="/nl/stss-calculator/">Bereken de zwemstressscore →</a></div></article></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="css"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Kritieke zwemsnelheid (CSS): rekenmachine, test en zones</h2><p class="ai-citation-answer">Kritische zwemsnelheid (CSS) is een praktische schatting van uw drempelzwemtempo, meestal berekend op basis van een tijdrit van 400m en 200m. Zwemmers gebruiken CSS om trainingszones in te stellen, het tempo van herhalingsoefeningen te bepalen en sTSS en de analyse van de trainingsbelasting te verankeren.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-04-02</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>kritische zwemsnelheid · CSS rekenmachine · CSS testen · zwemtrainingszones · drempel zwemtempo</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../nl/bibliography/">
+          
+          Bibliografie
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Downloaden</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Download in de App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Download in de App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="ONTDEK HET OP Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="ONTDEK HET OP Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Beschikbaar in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    Korean
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာဘာသာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link active"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Српски
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    Chinese
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Swim Analytics. Alle rechten voorbehouden
+            </p><ul class="footer-legal"><li><a href="/nl/privacy/">Privacy</a></li><li><a href="/nl/terms/">Voorwaarden</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Deze website gebruikt cookies om je ervaring te verbeteren.</p><a href="/nl/privacy/" class="text-sm">Meer informatie</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Weigeren</button><button id="cookie-accept" class="btn btn-primary btn-small">Accepteren</button></div></div></div><script src="../../assets/js/core.min.js?v=8ddce8bb" defer></script><script src="../../assets/js/search.min.js?v=8ddce8bb" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>
