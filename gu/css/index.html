@@ -1,0 +1,860 @@
+<!DOCTYPE html><html lang="gu" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>ક્રિટિકલ સ્વિમ સ્પીડ (CSS): કેલ્ક્યુલેટર, ટેસ્ટ અને ઝોન</title><meta name="description" content="ક્રિટિકલ સ્વિમ સ્પીડ (CSS) નું પરીક્ષણ કેવી રીતે કરવું તે જાણો, 400m અને 200m સમયના અજમાયશમાંથી ગતિની ગણતરી કરો, સ્વિમ તાલીમ ઝોન સેટ કરો અને sTSS અને તાલીમ લોડ માટે..."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="નિર્ણાયક તરવાની ઝડપ, CSS કેલ્ક્યુલેટર, CSS પરીક્ષણ, સ્વિમિંગ તાલીમ ઝોન, થ્રેશોલ્ડ તરવાની ગતિ, sTSS"><link rel="canonical" href="https://swim.analyticszone.app/gu/css/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-04-02T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/gu/css/"><meta property="og:title" content="ક્રિટિકલ સ્વિમ સ્પીડ (CSS): કેલ્ક્યુલેટર, ટેસ્ટ અને ઝોન"><meta property="og:description" content="ક્રિટિકલ સ્વિમ સ્પીડ (CSS) નું પરીક્ષણ કેવી રીતે કરવું તે જાણો, 400m અને 200m સમયના અજમાયશમાંથી ગતિની ગણતરી કરો, સ્વિમ તાલીમ ઝોન સેટ કરો અને sTSS અને તાલીમ લોડ માટે..."><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="gu_IN"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/gu/css/"><meta name="twitter:title" content="ક્રિટિકલ સ્વિમ સ્પીડ (CSS): કેલ્ક્યુલેટર, ટેસ્ટ અને ઝોન"><meta name="twitter:description" content="ક્રિટિકલ સ્વિમ સ્પીડ (CSS) નું પરીક્ષણ કેવી રીતે કરવું તે જાણો, 400m અને 200m સમયના અજમાયશમાંથી ગતિની ગણતરી કરો, સ્વિમ તાલીમ ઝોન સેટ કરો અને sTSS અને તાલીમ લોડ માટે..."><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="af"
+    href="https://swim.analyticszone.app/af/css/"><link rel="alternate" hreflang="am"
+    href="https://swim.analyticszone.app/am/css/"><link rel="alternate" hreflang="ar"
+    href="https://swim.analyticszone.app/ar/css/"><link rel="alternate" hreflang="bg"
+    href="https://swim.analyticszone.app/bg/css/"><link rel="alternate" hreflang="bn"
+    href="https://swim.analyticszone.app/bn/css/"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/css/"><link rel="alternate" hreflang="cs"
+    href="https://swim.analyticszone.app/cs/css/"><link rel="alternate" hreflang="da"
+    href="https://swim.analyticszone.app/da/css/"><link rel="alternate" hreflang="de"
+    href="https://swim.analyticszone.app/de/css/"><link rel="alternate" hreflang="el"
+    href="https://swim.analyticszone.app/el/css/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/css/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/css/"><link rel="alternate" hreflang="et"
+    href="https://swim.analyticszone.app/et/css/"><link rel="alternate" hreflang="fa"
+    href="https://swim.analyticszone.app/fa/css/"><link rel="alternate" hreflang="fi"
+    href="https://swim.analyticszone.app/fi/css/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/css/"><link rel="alternate" hreflang="gu"
+    href="https://swim.analyticszone.app/gu/css/"><link rel="alternate" hreflang="ha"
+    href="https://swim.analyticszone.app/ha/css/"><link rel="alternate" hreflang="he"
+    href="https://swim.analyticszone.app/he/css/"><link rel="alternate" hreflang="hi"
+    href="https://swim.analyticszone.app/hi/css/"><link rel="alternate" hreflang="hr"
+    href="https://swim.analyticszone.app/hr/css/"><link rel="alternate" hreflang="hu"
+    href="https://swim.analyticszone.app/hu/css/"><link rel="alternate" hreflang="id"
+    href="https://swim.analyticszone.app/id/css/"><link rel="alternate" hreflang="is"
+    href="https://swim.analyticszone.app/is/css/"><link rel="alternate" hreflang="it"
+    href="https://swim.analyticszone.app/it/css/"><link rel="alternate" hreflang="ja"
+    href="https://swim.analyticszone.app/ja/css/"><link rel="alternate" hreflang="km"
+    href="https://swim.analyticszone.app/km/css/"><link rel="alternate" hreflang="kn"
+    href="https://swim.analyticszone.app/kn/css/"><link rel="alternate" hreflang="ko"
+    href="https://swim.analyticszone.app/ko/css/"><link rel="alternate" hreflang="lt"
+    href="https://swim.analyticszone.app/lt/css/"><link rel="alternate" hreflang="lv"
+    href="https://swim.analyticszone.app/lv/css/"><link rel="alternate" hreflang="ms"
+    href="https://swim.analyticszone.app/ms/css/"><link rel="alternate" hreflang="my"
+    href="https://swim.analyticszone.app/my/css/"><link rel="alternate" hreflang="nb"
+    href="https://swim.analyticszone.app/nb/css/"><link rel="alternate" hreflang="nl"
+    href="https://swim.analyticszone.app/nl/css/"><link rel="alternate" hreflang="pl"
+    href="https://swim.analyticszone.app/pl/css/"><link rel="alternate" hreflang="pt"
+    href="https://swim.analyticszone.app/pt/css/"><link rel="alternate" hreflang="pt-br"
+    href="https://swim.analyticszone.app/pt-br/css/"><link rel="alternate" hreflang="ro"
+    href="https://swim.analyticszone.app/ro/css/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/css/"><link rel="alternate" hreflang="sk"
+    href="https://swim.analyticszone.app/sk/css/"><link rel="alternate" hreflang="sl"
+    href="https://swim.analyticszone.app/sl/css/"><link rel="alternate" hreflang="sr"
+    href="https://swim.analyticszone.app/sr/css/"><link rel="alternate" hreflang="sv"
+    href="https://swim.analyticszone.app/sv/css/"><link rel="alternate" hreflang="sw"
+    href="https://swim.analyticszone.app/sw/css/"><link rel="alternate" hreflang="ta"
+    href="https://swim.analyticszone.app/ta/css/"><link rel="alternate" hreflang="te"
+    href="https://swim.analyticszone.app/te/css/"><link rel="alternate" hreflang="th"
+    href="https://swim.analyticszone.app/th/css/"><link rel="alternate" hreflang="tl"
+    href="https://swim.analyticszone.app/tl/css/"><link rel="alternate" hreflang="tr"
+    href="https://swim.analyticszone.app/tr/css/"><link rel="alternate" hreflang="uk"
+    href="https://swim.analyticszone.app/uk/css/"><link rel="alternate" hreflang="ur"
+    href="https://swim.analyticszone.app/ur/css/"><link rel="alternate" hreflang="vi"
+    href="https://swim.analyticszone.app/vi/css/"><link rel="alternate" hreflang="yo"
+    href="https://swim.analyticszone.app/yo/css/"><link rel="alternate" hreflang="zh"
+    href="https://swim.analyticszone.app/zh/css/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/css/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=26b71a7b"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "logo": "https://swim.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+swim@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/swimanalytics",
+    
+    "https://apps.apple.com/us/app/swim-analytics/id6753306284",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "gu"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Swim Analytics",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://swim.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "હોમ",
+      "item": "https://swim.analyticszone.app/gu/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "શીખો",
+      "item": "https://swim.analyticszone.app/gu/getting-started/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "CSS",
+      "item": "https://swim.analyticszone.app/gu/css/"
+    }
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "ક્રિટિકલ સ્વિમ સ્પીડ (CSS): કેલ્ક્યુલેટર, ટેસ્ટ અને ઝોન",
+  "description": "ક્રિટિકલ સ્વિમ સ્પીડ (CSS) નું પરીક્ષણ કેવી રીતે કરવું તે જાણો, 400m અને 200m સમયના અજમાયશમાંથી ગતિની ગણતરી કરો, સ્વિમ તાલીમ ઝોન સેટ કરો અને sTSS અને તાલીમ લોડ માટે...",
+  "url": "https://swim.analyticszone.app/gu/css/",
+  "inLanguage": "gu",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Swim Analytics",
+    "url": "https://swim.analyticszone.app"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-04-02",
+  "keywords": ["નિર્ણાયક તરવાની ઝડપ", "CSS કેલ્ક્યુલેટર", "CSS પરીક્ષણ", "સ્વિમિંગ તાલીમ ઝોન", "થ્રેશોલ્ડ તરવાની ગતિ", "sTSS"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "નિર્ણાયક તરવાની ઝડપ"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CSS કેલ્ક્યુલેટર"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CSS પરીક્ષણ"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "સ્વિમિંગ તાલીમ ઝોન"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "થ્રેશોલ્ડ તરવાની ગતિ"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "sTSS"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ક્રિટિકલ સ્વિમ સ્પીડ (CSS): કેલ્ક્યુલેટર, ટેસ્ટ અને ઝોન",
+  "description": "ક્રિટિકલ સ્વિમ સ્પીડ (CSS) નું પરીક્ષણ કેવી રીતે કરવું તે જાણો, 400m અને 200m સમયના અજમાયશમાંથી ગતિની ગણતરી કરો, સ્વિમ તાલીમ ઝોન સેટ કરો અને sTSS અને તાલીમ લોડ માટે...",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Swim Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://swim.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-04-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://swim.analyticszone.app/gu/css/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "ક્રિટિકલ સ્વિમ સ્પીડ (CSS): કેલ્ક્યુલેટર, ટેસ્ટ અને ઝોન",
+  "description": "ક્રિટિકલ સ્વિમ સ્પીડ (CSS) નું પરીક્ષણ કેવી રીતે કરવું તે જાણો, 400m અને 200m સમયના અજમાયશમાંથી ગતિની ગણતરી કરો, સ્વિમ તાલીમ ઝોન સેટ કરો અને sTSS અને તાલીમ લોડ માટે...",
+  "url": "https://swim.analyticszone.app/gu/css/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "WebBrowser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">સામગ્રી પર જાઓ</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/gu/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/gu/" 
+                                aria-current="">
+                                હોમ
+                            </a></li><li class="has-submenu" ><a href="/gu/getting-started/" class="nav-label">શીખો</a><ul class="submenu"><li><a href="/gu/getting-started/" 
+                                        aria-current="">
+                                        શરૂઆત કરો
+                                    </a></li><li><a href="/gu/css/" class="active" 
+                                        aria-current="page">
+                                        CSS
+                                    </a></li><li><a href="/gu/training-zones/" 
+                                        aria-current="">
+                                        તાલીમ ઝોન
+                                    </a></li><li><a href="/gu/training-load/" 
+                                        aria-current="">
+                                        તાલીમ લોડ
+                                    </a></li><li><a href="/gu/stss-calculator/" 
+                                        aria-current="">
+                                        sTSS કેલ્ક્યુલેટર
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/gu/research/" class="nav-label">વિજ્ઞાન</a><ul class="submenu"><li><a href="/gu/research/" 
+                                        aria-current="">
+                                        સંશોધન
+                                    </a></li><li><a href="/gu/formulas/" 
+                                        aria-current="">
+                                        ફોર્મ્યુલા
+                                    </a></li><li><a href="/gu/efficiency/" 
+                                        aria-current="">
+                                        કાર્યક્ષમતા
+                                    </a></li><li><a href="/gu/stroke-mechanics/" 
+                                        aria-current="">
+                                        સ્ટ્રોક મિકેનિક્સ
+                                    </a></li><li><a href="/gu/bibliography/" 
+                                        aria-current="">
+                                        ગ્રંથસૂચિ
+                                    </a></li></ul></li><li><a href="/gu/contact/" 
+                                aria-current="">
+                                સંપર્ક
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="ભાષા પસંદ કરો"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" selected>
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            Korean
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာဘာသာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Српски
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            Chinese
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="મેનુ ટૉગલ કરો"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/gu/">હોમ</a></li><li><a href="/gu/getting-started/">શીખો</a></li><li><span aria-current="page">CSS</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>ક્રિટિકલ સ્વિમ સ્પીડ (CSS)</h1><p class="lead">પ્રેક્ટિકલ પેસ બેન્ચમાર્ક કે જે સ્વિમિંગ પ્રશિક્ષણ ઝોન, થ્રેશોલ્ડ સેટ અને તાલીમ લોડ વિશ્લેષણને એન્કર કરે છે</p></div></section><section class="section"><div class="container container-narrow"><div class="quick-answer" itemscope="" itemtype="https://schema.org/Answer"><h2>ઝડપી જવાબ</h2><div itemprop="text"><p><strong>ક્રિટિકલ સ્વિમ સ્પીડ (CSS)</strong> તમારી ટકાઉ થ્રેશોલ્ડ તરવાની ગતિનો ક્ષેત્ર-પરીક્ષણ અંદાજ છે. મોટાભાગના તરવૈયાઓ તેની ગણતરી a થી કરે છે <strong>400m + 200m સમય અજમાયશ</strong>, પછી સેટ કરવા માટે પરિણામનો ઉપયોગ કરો <a href="/gu/training-zones/">તાલીમ ઝોન</a>, પેસ થ્રેશોલ્ડ સેટ અને પાવર <a href="/gu/stss-calculator/">sTSS</a> અને <a href="/gu/training-load/">તાલીમ લોડ</a> વિશ્લેષણ</p><ul><li><strong>શ્રેષ્ઠ ઉપયોગ:</strong> થ્રેશોલ્ડ તાલીમ, પુનરાવર્તિત પેસિંગ અને લોડ ટ્રેકિંગ</li><li><strong>લાક્ષણિક અર્થઘટન:</strong> સખત, નિયંત્રિત કાર્ય માટે લગભગ સૌથી ઝડપી ગતિ તમે એરોબિકલી ટકાવી શકો છો</li><li><strong>તેનો આંધળો ઉપયોગ કરશો નહીં:</strong> ખરાબ પેસિંગ, અપૂર્ણ પુનઃપ્રાપ્તિ, વિવિધ પૂલ સ્થિતિઓ અથવા ડ્રેગ એઇડ્સ પરિણામને વિકૃત કરી શકે છે</li><li><strong>કેડન્સનું ફરીથી પરીક્ષણ કરો:</strong> દર 6-8 અઠવાડિયામાં, અથવા અર્થપૂર્ણ તાલીમ બ્લોક પછી</li></ul></div></div><div class="callout callout-success mb-xl"><h2>કી ટેકવેઝ</h2><ul class="key-points"><li><strong>CSS શું છે:</strong> તરવૈયાઓ માટે વ્યવહારુ થ્રેશોલ્ડ ગતિ અંદાજ, સરળ ક્ષેત્ર પરીક્ષણથી બનેલ છે</li><li><strong>શા માટે તે મહત્વનું છે:</strong> CSS અનુમાનથી સ્વિમિંગ તાલીમને પુનરાવર્તિત પેસિંગ અને બહેતર લોડ નિયંત્રણમાં ફેરવે છે</li><li><strong>તે શું અનલૉક કરે છે:</strong><a href="/gu/training-zones/">ઝોન</a>, <a href="/gu/stss-calculator/">sTSS</a>, <a href="/gu/training-load/">પ્રદર્શન વ્યવસ્થાપન</a>, અને સ્પષ્ટ પ્રગતિ તપાસો</li><li><strong>તે શું કરતું નથી:</strong> ટેકનિક વિશ્લેષણ બદલો, ખુલ્લા-પાણી સંદર્ભ, અથવા <a href="/gu/efficiency/">કાર્યક્ષમતા અર્થઘટન</a></li><li><strong>શ્રેષ્ઠ આગલું પગલું:</strong> CSSનું સારી રીતે પરીક્ષણ કરો, પછી તમારા થ્રેશોલ્ડ અને એરોબિક કાર્યને સંરચિત કરવા માટે તેનો ઉપયોગ કરો</li></ul></div><article itemscope="" itemtype="https://schema.org/Article"><p class="lead">જો તમે તમારા પેસિંગ એન્કર તરીકે માત્ર એક સ્વિમ મેટ્રિક રાખો છો, તો CSS રાખો. તે સંપૂર્ણ નથી અને તે સંપૂર્ણ શારીરિક પ્રયોગશાળા પરીક્ષણ નથી, પરંતુ તે વ્યવહારુ, પુનરાવર્તિત અને સીધા ઉપયોગી છે. તે સંયોજન એટલે જ CSS એ ડેટા-આધારિત સ્વિમ તાલીમની કરોડરજ્જુ રહે છે.</p><p>મોટાભાગના તરવૈયાઓ માટે, <strong>જટિલ સ્વિમ ઝડપ</strong> કાચા સમયની અજમાયશ અને રોજિંદા તાલીમ નિર્ણયો વચ્ચેનો સેતુ છે. તે પાંચ મહત્વપૂર્ણ પ્રશ્નોના જવાબમાં મદદ કરે છે:</p><ul><li>વાસ્તવમાં થ્રેશોલ્ડ સેટ કેટલા ઝડપી હોવા જોઈએ?</li><li>દરેકમાં કઈ ગતિ શ્રેણી છે <a href="/gu/training-zones/">સ્વિમ ઝોન</a>?</li><li>મારે 100, 200 અને 400નું પુનરાવર્તન કેવી રીતે કરવું જોઈએ?</li><li>હું સ્વિમિંગ સ્ટ્રેસને કેવી રીતે માપી શકું <a href="/gu/stss-calculator/">sTSS</a>?</li><li>શું મારી એરોબિક સ્વિમ ફિટનેસ યોગ્ય દિશામાં આગળ વધી રહી છે?</li></ul><h2>શું સીએસએસ પગલાં</h2><p><strong>CSS એ સખત એરોબિક સ્વિમ ગતિનો વ્યવહારુ અંદાજ છે</strong>, સામાન્ય રીતે 400m અને 200m સમય અજમાયશમાંથી ઉતરી આવે છે. કોચિંગની ભાષામાં, તેને સંરચિત પૂલ તાલીમ માટે ઘણી વખત તમારી થ્રેશોલ્ડ ગતિ તરીકે ગણવામાં આવે છે: વાંધો પૂરતો ઝડપી, પુનરાવર્તિત કરવા માટે પૂરતો નિયંત્રિત અને આસપાસ ઝોન બનાવવા માટે પૂરતો સ્થિર.</p><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>પાસા</th><th>વ્યવહારુ જવાબ</th></tr></thead><tbody><tr class="highlight-row"><td><strong>CSS શું માપે છે</strong></td><td>સતત એરોબિક કાર્ય માટે તમારી ફીલ્ડ-અંદાજિત થ્રેશોલ્ડ તરવાની ગતિ</td></tr><tr><td><strong>શ્રેષ્ઠ ઉપયોગ</strong></td><td>તાલીમ ઝોન, થ્રેશોલ્ડ સેટ, ગતિ લક્ષ્યો અને સેટિંગ <a href="/gu/training-load/">તાલીમ લોડ</a></td></tr><tr><td><strong>સામાન્ય ભૂલ</strong></td><td>એક ખરાબ પરીક્ષણને કાયમી સત્ય તરીકે ગણવું અથવા પૂલની લંબાઈ, આરામ અને પેસિંગ ગુણવત્તાને ધ્યાનમાં લીધા વિના CSS નો ઉપયોગ કરવો</td></tr><tr><td><strong>સંબંધિત મેટ્રિક્સ</strong></td><td><a href="/gu/training-zones/">તાલીમ ઝોન</a>, <a href="/gu/stss-calculator/">sTSS</a>, <a href="/gu/training-load/">CTL/ATL/TSB</a>, અને <a href="/gu/efficiency/">SWOLF / કાર્યક્ષમતા</a></td></tr></tbody></table></div><div class="callout callout-info"><h3>🎯 ઉપયોગી માનસિક મોડલ</h3><p>CSS ને તમારા તરીકે વિચારો <strong>ઓપરેટિંગ પેસ બેન્ચમાર્ક</strong>, જાદુઈ નંબર નથી. તે ગતિ સંદર્ભ છે જે તમારા બાકીના સ્વિમ મેટ્રિક્સને સુસંગત બનાવે છે.</p></div><h2>શા માટે CSS બાબતો</h2><p>CSS મહત્વપૂર્ણ છે કારણ કે તે એક્ઝેક્યુશન સાથે શરીરવિજ્ઞાનને જોડે છે. ઘણા તરવૈયાઓ જાણે છે કે તેઓએ "હાર્ડ સેટ" અથવા "ટેમ્પો સેશન" કર્યું છે પરંતુ તે કહી શકતા નથી કે ગતિ યોગ્ય હતી કે નહીં. CSS તમને બેંચમાર્ક આપીને તે સમસ્યાને ઠીક કરે છે તમે સત્ર પછી સત્રનો ઉપયોગ કરી શકો છો.</p><div class="application-grid"><div class="application-item"><h3>🏊 તાલીમ ઝોન</h3><p>CSS તમને સ્વચ્છ એન્કર આપે છે <a href="/gu/training-zones/">સ્વિમ ઝોન</a>, તેથી સરળ કાર્ય સરળ રહે છે અને થ્રેશોલ્ડ કાર્ય લક્ષ્ય રહે છે.</p></div><div class="application-item"><h3>📊 તાલીમ લોડ</h3><p>ઉપયોગ કરી શકાય તેવા CSS વિના, <a href="/gu/stss-calculator/">sTSS</a> અને <a href="/gu/training-load/">પ્રદર્શન સંચાલન મેટ્રિક્સ</a> તેમનો અર્થ ગુમાવે છે.</p></div><div class="application-item"><h3>⏱️ પુનરાવર્તિત પેસિંગ</h3><p>CSS તમને માત્ર લાગણી પર આધાર રાખવાને બદલે વધુ સુસંગતતા સાથે 100s, 200s અને 400s ને આગળ વધારવામાં મદદ કરે છે.</p></div><div class="application-item"><h3>📈 પ્રગતિ તપાસો</h3><p>જ્યારે CSS સુધારે છે, ત્યારે તમારી થ્રેશોલ્ડ ગતિ વધુ ઝડપથી આગળ વધે છે. તે એક મજબૂત સંકેત છે કે એરોબિક સ્વિમ ફિટનેસમાં પણ સુધારો થઈ રહ્યો છે.</p></div></div><div class="warning-box"><strong>⚠️ જટિલ નિર્ભરતા:</strong> જો તમારું CSS ખોટું છે, તો તમારા ઝોન, sTSS અને પર્ફોર્મન્સ-મેનેજમેન્ટ નંબર્સ ખોટી દિશામાં જશે. ખરાબ ઇનપુટ ખરાબ વિશ્લેષણ પેદા કરે છે.
+</div><h2>CSS શેના માટે સારું છે અને શું નથી</h2><p><strong>CSS આ માટે ઉત્તમ છે:</strong> થ્રેશોલ્ડ સેટ, એરોબિક ગુણવત્તા કાર્ય, ઝોન સેટિંગ અને સ્વિમ-વિશિષ્ટ લોડ ટ્રેકિંગ.</p><p><strong>CSS આ માટે પૂરતું નથી:</strong> સ્પ્રિન્ટ પ્રોફાઇલિંગ, સ્ટ્રોક ટેકનિક નિદાન, ચલ પરિસ્થિતિઓમાં ઓપન-વોટર રેસ એક્ઝિક્યુશન, અથવા તેની પોતાની રીતે કાર્યક્ષમતાનું અર્થઘટન.</p><div class="grid grid-2"><div class="protocol-card"><h3>માટે CSS નો ઉપયોગ કરો</h3><ul><li>થ્રેશોલ્ડ પેસ પ્રિસ્ક્રિપ્શનો</li><li>100/200/400 પેસિંગનું પુનરાવર્તન કરો</li><li>વ્યક્તિગત કરેલ <a href="/gu/training-zones/">ઝોન માળખું</a></li><li><a href="/gu/stss-calculator/">sTSS</a> અને <a href="/gu/training-load/">લોડ મેનેજમેન્ટ</a></li><li>સમગ્ર સિઝનમાં એરોબિક પ્રગતિને ટ્રેકિંગ</li></ul></div><div class="protocol-card"><h3>માટે એકલા CSS નો ઉપયોગ કરશો નહીં</h3><ul><li>વિવિધ પૂલની લંબાઈની સરખામણી કરવી જાણે કે તેઓ સમાન હોય</li><li>તરવૈયાઓની તુલના ખૂબ જ અલગ તકનીકી પ્રોફાઇલ્સ સાથે કરવી</li><li>વિના સ્ટ્રોક ગુણવત્તા નક્કી <a href="/gu/stroke-mechanics/">સ્ટ્રોક મિકેનિક્સ</a></li><li>આસપાસના સંદર્ભ વિના કાર્યક્ષમતાનું મૂલ્યાંકન કરવું <a href="/gu/efficiency/">SWOLF</a></li><li>ઓપન-વોટર પેસ પૂલ CSS પેસ સાથે બરાબર મેળ ખાશે એમ ધારી રહ્યા છીએ</li></ul></div></div><h2>4 પ્રેક્ટિકલ સ્ટેપ્સમાં CSS કેવી રીતે ચકાસવું</h2><div class="grid grid-2"><div class="protocol-card"><h3>📋 માનક પ્રોટોકોલ</h3><ol class="protocol-steps"><li><strong>યોગ્ય રીતે ગરમ કરો</strong><p>300-800m સરળતાથી સ્વિમ કરો, કવાયતનો સમાવેશ કરો અને પરીક્ષણ પહેલાં થોડા નિયંત્રિત બિલ્ડ પ્રયાસો ઉમેરો.</p></li><li><strong>400m ટાઈમ ટ્રાયલ સ્વિમ કરો</strong><p>પુશ સ્ટાર્ટનો ઉપયોગ કરો, ડાઈવ નહીં. ધ્યેય એ તમારું સૌથી ઝડપી ટકાઉ 400m છે, અવિચારી પ્રથમ 100 નથી.</p></li><li><strong>સંપૂર્ણપણે પુનઃપ્રાપ્ત</strong><p><span class="highlight-text">5-10 મિનિટ લો</span> સરળ અથવા સંપૂર્ણ આરામ. અપૂર્ણ પુનઃપ્રાપ્તિ એ પરિણામને બગાડવાની સૌથી ઝડપી રીતોમાંની એક છે.</p></li><li><strong>200m ટાઈમ ટ્રાયલ સ્વિમ કરો</strong><p>ફરીથી પુશ સ્ટાર્ટનો ઉપયોગ કરો અને સમયને ચોક્કસ રીતે રેકોર્ડ કરો. તમારી 200m ગતિ તમારી 400m ગતિ કરતાં અર્થપૂર્ણ રીતે ઝડપી હોવી જોઈએ.</p></li></ol></div><div class="protocol-card"><h3>⚠️ સૌથી સામાન્ય પરીક્ષણ ભૂલો</h3><div class="mistake-list"><div class="mistake-item"><h4>ખરાબ 400m પેસિંગ</h4><p><strong>સમસ્યા:</strong> તમે ખૂબ સખત બહાર જાઓ, પછી ખરાબ રીતે ઝાંખું.</p><p><strong>પરિણામ:</strong> 400m સ્ટોપ્સ ટકાઉ ગતિ ગુણવત્તાને પ્રતિબિંબિત કરે છે.</p><p><strong>ઠીક કરો:</strong> સમાન અથવા સહેજ નકારાત્મક વિભાજન માટે લક્ષ્ય રાખો.</p></div><div class="mistake-item"><h4>અપૂરતી પુનઃપ્રાપ્તિ</h4><p><strong>સમસ્યા:</strong> થાક 200 મીટરને કૃત્રિમ રીતે ધીમું બનાવે છે.</p><p><strong>પરિણામ:</strong> CSS વિકૃત થઈ જાય છે અને તમારા પ્રશિક્ષણ ઝોન ડ્રિફ્ટ થાય છે.</p><p><strong>ઠીક કરો:</strong> શ્વાસ નિયંત્રિત થાય અને પુનઃપ્રાપ્તિ પૂર્ણ થાય ત્યાં સુધી રાહ જુઓ.</p></div><div class="mistake-item"><h4>મિશ્ર સ્થિતિ</h4><p><strong>સમસ્યા:</strong> પૂલની વિવિધ લંબાઈ, મોટા પુશ-ઑફ ફેરફારો અથવા ડ્રેગ એઇડ્સ પરીક્ષણ વાતાવરણને બદલે છે.</p><p><strong>પરિણામ:</strong> તમે એવી સંખ્યાઓની તુલના કરો છો જે ખરેખર તુલનાત્મક નથી.</p><p><strong>ઠીક કરો:</strong> પરિક્ષણથી પરીક્ષણ સુધી શક્ય તેટલી સુસંગત સ્થિતિ રાખો.</p></div></div></div></div><div class="callout callout-tip mt-xl"><h3>🔄 રીટેસ્ટિંગ ફ્રીક્વન્સી</h3><p>દર વખતે CSSનું ફરી પરીક્ષણ કરો <strong>6-8 અઠવાડિયા</strong>, અથવા થ્રેશોલ્ડ, સહનશક્તિ અથવા તકનીકી એકત્રીકરણ પર કેન્દ્રિત અર્થપૂર્ણ બ્લોક પછી. મુદ્દો સતત પરીક્ષણનો નથી. મુદ્દો એ છે કે પરિવર્તન જોવા માટે સતત એક બેન્ચમાર્કનો ઉપયોગ કરવો.</p></div><h2>CSS ગણતરી ફોર્મ્યુલા</h2><div class="formula-box"><h3>ફોર્મ્યુલા</h3><div class="formula">
+                CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
+            </div><div class="formula-explanation"><p>ક્યાં:</p><ul><li>D₁ = 200 મીટર</li><li>D₂ = 400 મીટર</li><li>T₁ = 200m માટે સમય (સેકન્ડમાં)</li><li>T₂ = 400m માટે સમય (સેકન્ડમાં)</li></ul></div><h3 class="mt-lg">પેસ પ્રતિ 100m માટે સરળ</h3><div class="formula">
+                CSS પેસ/100m (સેકન્ડ) = (T₄₀₀ - T₂₀₀) / 2
+            </div></div><h3>કાર્ય કરેલ ઉદાહરણ</h3><div class="example-box"><h4>પરીક્ષણ પરિણામો</h4><ul><li>400m સમય: <strong>6:08</strong> (368 સેકન્ડ)</li><li>200m સમય: <strong>2:30</strong> (150 સેકન્ડ)</li></ul><h4>પગલું 1: CSS ગતિની ગણતરી કરો</h4><div class="calculation">
+                CSS પેસ/100m = (368 - 150) / 2<br/>
+                CSS પેસ/100m = 218/2<br/>
+                CSS પેસ/100m = <strong>109 સેકન્ડ = 1:49 પ્રતિ 100 મી</strong></div><h4>પગલું 2: જો જરૂરી હોય તો ઝડપમાં કન્વર્ટ કરો</h4><div class="calculation">
+                CSS = 100/109<br/>
+                CSS = <strong>0.917 m/s</strong></div></div><div class="callout callout-info"><h3>કાર્ય કરેલ ઉદાહરણ: તે પરિણામનો ઉપયોગ કેવી રીતે કરવો</h3><p>જો તમારું CSS છે <strong>1:49/100 મી</strong>, તમારા થ્રેશોલ્ડનું પુનરાવર્તન તે ગતિની નજીક ક્લસ્ટર હોવું જોઈએ, તમારા <a href="/gu/training-zones/">ઝોન ટેબલ</a> તેમાંથી બાંધવું જોઈએ, અને તમારા <a href="/gu/stss-calculator/">sTSS ગણતરીઓ</a> તેનો ઉપયોગ છેદ ગતિ સંદર્ભ તરીકે કરવો જોઈએ.</p></div><h2 class="mt-3xl">મફત CSS કેલ્ક્યુલેટર</h2><p class="lead">તમારી ક્રિટિકલ સ્વિમ સ્પીડ અને વ્યક્તિગત તાલીમ ઝોનની તરત જ ગણતરી કરો</p><div class="css-calculator"><form id="cssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label class="form-label" for="time400">400m સમય (mm:ss)</label><input aria-describedby="time400-help" aria-required="true" class="form-input" id="time400" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="6:08" type="text"/><small class="form-help" id="time400-help">ફોર્મેટ: મિનિટ: સેકન્ડ્સ (ઉદાહરણ તરીકે, 6:08)</small><div class="form-error" id="time400-error"></div></div><div class="form-group"><label class="form-label" for="time200">200m સમય (mm:ss)</label><input aria-describedby="time200-help" aria-required="true" class="form-input" id="time200" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="2:30" type="text"/><small class="form-help" id="time200-help">ફોર્મેટ: મિનિટ: સેકન્ડ્સ (ઉદાહરણ તરીકે, 2:30)</small><div class="form-error" id="time200-error"></div></div><div class="calculator-buttons"><button class="btn btn-primary" id="calculateBtn" type="submit">CSS ની ગણતરી કરો</button><button class="btn btn-ghost" id="resetBtn" type="reset">સાફ કરો</button></div></div></form><div aria-live="polite" class="calculator-results hidden" id="cssResults"><h3>તમારા પરિણામો</h3><div class="results-summary"><div class="result-item"><div class="result-label">જટિલ સ્વિમ ઝડપ</div><div class="css-result-value" id="cssValue">--</div></div><div class="result-item"><div class="result-label">CSS પેસ પ્રતિ 100m</div><div class="css-result-value" id="cssPace">--</div></div></div><div class="zones-result"><h4>તમારા વ્યક્તિગત તાલીમ ઝોન</h4><p class="mb-md text-secondary">
+                        તમારા CSSના આધારે, અહીં તમારા તાલીમ ઝોન પ્રતિ 100m ગતિમાં છે:
+                    </p><div id="zonesTable"></div></div></div></div><h2 class="mt-3xl">CSS પર આધારિત તાલીમ ઝોન</h2><div class="callout callout-info"><p><strong>મહત્વપૂર્ણ:</strong> તરવાની ગતિ તરીકે માપવામાં આવે છે <em>અંતર દીઠ સમય</em>. તેનો અર્થ એ કે એ <strong>ઉચ્ચ ટકાવારી = ધીમી ગતિ</strong>, જ્યારે એ <strong>ઓછી ટકાવારી = ઝડપી ગતિ</strong>. આ ઘણા રન અને બાઇક તીવ્રતા ચાર્ટની વિરુદ્ધ છે.</p></div><div class="zones-table-container"><table class="zones-table"><thead><tr><th>ઝોન</th><th>નામ</th><th>CSS પેસનો %</th><th>CSS 1:40/100m માટેનું ઉદાહરણ</th><th>RPE</th><th>મુખ્ય હેતુ</th></tr></thead><tbody><tr class="zone-1"><td><strong>1</strong></td><td>પુનઃપ્રાપ્તિ</td><td>&gt;108%</td><td>&gt;1:48/100મી</td><td>2-3/10</td><td>સરળ પુનઃપ્રાપ્તિ, ટેકનિક રીસેટ, વોર્મ-અપ, કૂલ-ડાઉન</td></tr><tr class="zone-2"><td><strong>2</strong></td><td>એરોબિક બેઝ</td><td>104-108%</td><td>1:44-1:48/100મી</td><td>4-5/10</td><td>એરોબિક સપોર્ટ, પુનરાવર્તિતતા, વોલ્યુમ નિયંત્રણ</td></tr><tr class="zone-3"><td><strong>3</strong></td><td>ટેમ્પો</td><td>99-103%</td><td>1:39-1:43/100મી</td><td>6-7/10</td><td>રેસ-પેસ માંગની નજીક નિયંત્રિત ગુણવત્તાયુક્ત કાર્ય</td></tr><tr class="zone-4"><td><strong>4</strong></td><td>થ્રેશોલ્ડ (CSS)</td><td>96-100%</td><td>1:36-1:40/100મી</td><td>7-8/10</td><td>થ્રેશોલ્ડ વિકાસ અને ગતિ ટકાઉપણું</td></tr><tr class="zone-5"><td><strong>5</strong></td><td>VO2 / એનારોબિક</td><td>&lt;96%</td><td>&lt;1:36/100 મી</td><td>9-10/10</td><td>ટોપ-એન્ડ સ્પીડ, VO2 તણાવ, લેક્ટેટ સહિષ્ણુતા</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>🎯 પ્રાયોગિક ઝોનનો ઉપયોગ</h3><ul><li><strong>ઝોન 2:</strong> જ્યાં મોટાભાગના તરવૈયાઓ ટકાઉ વોલ્યુમ બનાવે છે</li><li><strong>ઝોન 3:</strong> નિયંત્રિત ગુણવત્તા અને સંક્રમણ કાર્ય માટે ઉપયોગી</li><li><strong>ઝોન 4:</strong> જ્યાં સીએસએસ સીધો જ થ્રેશોલ્ડ સેટ માટે ઉપયોગી બને છે</li><li><strong>ઝોન 5:</strong> જ્યાં CSS સંપૂર્ણ વાર્તા બનવાનું બંધ કરે છે અને સ્પ્રિન્ટ / પાવર લક્ષણો વધુ મહત્વ ધરાવે છે</li></ul></div><h2>વાસ્તવિક તાલીમમાં CSS નો ઉપયોગ કેવી રીતે કરવો</h2><div class="application-grid"><div class="application-item"><h3>1️⃣ પેસ થ્રેશોલ્ડ સેટ</h3><p>અનુમાન લગાવવાનું બંધ કરવા માટે CSS નો ઉપયોગ કરો. 8x100, 5x200 અથવા 3x400 જેવા સેટ્સ વધુ અર્થપૂર્ણ બને છે જ્યારે તમે ગતિ લક્ષ્યને જાણો છો અને તેને સ્વચ્છ રીતે પકડી શકો છો.</p></div><div class="application-item"><h3>2️⃣ Pace ને sTSS સાથે કનેક્ટ કરો</h3><p>CSS તમારા માટે અર્થ આપે છે <a href="/gu/stss-calculator/">sTSS</a>. સખત સત્રો અને સરળ સત્રો સમાન અસ્પષ્ટ વર્કલોડમાં ભળવાનું બંધ કરે છે.</p></div><div class="application-item"><h3>3️⃣ પ્રગતિને વધુ સારી રીતે ટ્રૅક કરો</h3><p>જો તમારા સત્રો નિયંત્રિત રહે ત્યારે CSS ઝડપી બને છે, તો તમારી થ્રેશોલ્ડ સ્વિમ ફિટનેસમાં સુધારો થવાની સંભાવના છે.</p></div><div class="application-item"><h3>4️⃣ વધુ સારી પેસિંગ આદતો બનાવો</h3><p>CSS તમને દરેક હાર્ડ સેટને પેસિંગ કોલેપ્સમાં ફેરવવાને બદલે નિયંત્રણ સાથે પુનરાવર્તિત કાર્યને તરવાનું શીખવે છે.</p></div></div><div class="protocol-card"><h3>નમૂના CSS-ઓરિએન્ટેડ સત્ર વિચારો</h3><ul><li><strong>થ્રેશોલ્ડ જાળવણી:</strong> ટૂંકા આરામ સાથે CSS ગતિએ 8x100</li><li><strong>ગતિ ટકાઉપણું:</strong> સતત વિભાજન સાથે CSS ગતિની આસપાસ 5x200</li><li><strong>એરોબિક સપોર્ટ:</strong> નિયંત્રિત સ્ટ્રોક કાઉન્ટ સાથે CSS ગતિ કરતાં 3x400 સહેજ ધીમી</li><li><strong>તકનીક + પેસિંગ:</strong> 50m સરળ તકનીકી રીસેટ સાથે CSS પ્રયાસ પર વૈકલ્પિક 100m</li></ul><p>આ ઉદાહરણો છે, સાર્વત્રિક પ્રિસ્ક્રિપ્શનો નથી. મુદ્દો એ છે કે CSS તમને સ્થિર પેસિંગ ભાષા આપે છે.</p></div><h2>CSS, SWOLF, અને કાર્યક્ષમતા</h2><p>CSS તમને કહે છે <strong>કેટલી ઝડપી</strong> તમે થ્રેશોલ્ડ પર તરી શકો છો. <a href="/gu/efficiency/">SWOLF અને કાર્યક્ષમતા મેટ્રિક્સ</a> તમને કંઈક અલગ કહો: તમે પાણીમાંથી કેવી રીતે આર્થિક રીતે આગળ વધી રહ્યા છો. તેઓ એકબીજાના પૂરક છે, પરંતુ તેઓ વિનિમયક્ષમ નથી.</p><div class="callout callout-warning"><h3>SWOLF આંધળી રીતે સરખામણી કરશો નહીં</h3><p>તરવૈયાઓ, સત્રો, સ્ટ્રોક અથવા પૂલ સેટઅપમાં નીચું SWOLF હંમેશા "વધુ સારું" હોતું નથી. ઉપયોગ કરો <a href="/gu/efficiency/">કાર્યક્ષમતા મેટ્રિક્સ</a> CSS, સ્ટ્રોક ગુણવત્તા અને પુનરાવર્તિતતાની સાથે સંદર્ભ તરીકે, એકલ રેન્કિંગ સાધન તરીકે નહીં.</p></div><h2>સ્તર દ્વારા લાક્ષણિક CSS મૂલ્યો</h2><div class="levels-comparison"><div class="level-card"><h3>🥇 એલિટ ડિસ્ટન્સ તરવૈયા</h3><div class="pace-value">1.5-1.8 m/s</div><div class="pace-equivalent">0:56-1:07 પ્રતિ 100મી</div><p>ઉચ્ચ પ્રશિક્ષણ વોલ્યુમ, મજબૂત ટેકનિક અને વર્ષોના માળખાગત કાર્ય સાથે રાષ્ટ્રીય અને આંતરરાષ્ટ્રીય સ્તરના તરવૈયાઓ.</p></div><div class="level-card"><h3>🏊 સ્પર્ધાત્મક વય-જૂથ</h3><div class="pace-value">1.2-1.5 m/s</div><div class="pace-equivalent">1:07-1:23 પ્રતિ 100મી</div><p>સ્પર્ધાત્મક ક્લબ, કૉલેજ અને માસ્ટર્સ તરવૈયાઓ જે સતત તાલીમ આપે છે અને નિયમિતપણે રેસ કરે છે.</p></div><div class="level-card"><h3>🏃 ટ્રાયથ્લેટ્સ અને ફિટનેસ તરવૈયા</h3><div class="pace-value">0.9-1.2 m/s</div><div class="pace-equivalent">1:23-1:51 પ્રતિ 100મી</div><p>નિયમિત પ્રશિક્ષણ, ઉપયોગી ટેકનિક અને ગતિ-આધારિત માળખાથી લાભ મેળવવા માટે પૂરતા પ્રમાણમાં તરવૈયાઓ.</p></div><div class="level-card"><h3>🌊 વિકાસશીલ તરવૈયા</h3><div class="pace-value">&lt;0.9 m/s</div><div class="pace-equivalent">&gt;1:51 પ્રતિ 100મી</div><p>તરવૈયાઓ હજી પણ તકનીક, આત્મવિશ્વાસ અને એરોબિક ટકાઉપણું બનાવે છે. CSS હજુ પણ મદદ કરી શકે છે, પરંતુ ટેકનિક નિર્ણાયક રહે છે.</p></div></div><h2>વૈજ્ઞાનિક માન્યતા</h2><div class="research-highlight"><h3>Wakayoshi એટ અલ. અને CSS માટે પ્રેક્ટિકલ કેસ</h3><p>સીએસએસનો વ્યાપકપણે ઉપયોગ થયો કારણ કે તે કોચ અને તરવૈયાઓને ફિલ્ડ-ફ્રેન્ડલી બેન્ચમાર્ક ઓફર કરે છે જે થ્રેશોલ્ડ-સંબંધિત પ્રદર્શન માર્કર્સ સાથે વારંવાર લેબ લેક્ટેટ પરીક્ષણની જરૂર વગર સારી રીતે ટ્રેક કરે છે.</p><ul class="research-findings"><li><strong>વ્યવહારુ:</strong> સરળ પૂલ પરીક્ષણમાંથી પુનરાવર્તિત</li><li><strong>ઉપયોગી:</strong> પ્રોગ્રામિંગ માટે થ્રેશોલ્ડ-સંબંધિત પેસિંગ માટે પૂરતી નજીક</li><li><strong>ક્રિયાપાત્ર:</strong> સમગ્ર સિઝનમાં ફરીથી પરીક્ષણ અને અપડેટ કરવા માટે સરળ</li><li><strong>કનેક્ટેડ:</strong> તાલીમ ઝોન, પેસિંગ અને લોડ ટ્રેકિંગ માટે સીધા જ ઉપયોગી</li></ul><div class="citation"><p><strong>પાયાના કાગળો:</strong></p><ol><li>Wakayoshi K, એટ અલ. (1992). "સ્પર્ધાત્મક તરવૈયામાં સ્વિમિંગ પ્રદર્શનના સૂચક તરીકે નિર્ણાયક વેગનું નિર્ધારણ અને માન્યતા."</li><li>Wakayoshi K, એટ અલ. (1992). "સ્પર્ધાત્મક સ્વિમિંગમાં સ્વિમિંગ થાક થ્રેશોલ્ડ તરીકે નિર્ણાયક ગતિ નક્કી કરવા માટેની એક સરળ પદ્ધતિ."</li><li>Wakayoshi K, એટ અલ. (1993). "શું નિર્ણાયક સ્વિમિંગ વેગ મહત્તમ લેક્ટેટ સ્થિર સ્થિતિમાં કસરતની તીવ્રતા દર્શાવે છે?"</li></ol></div></div><h2>વારંવાર પૂછાતા પ્રશ્નો</h2><div class="protocol-card"><h3>મારે કેટલી વાર CSS રિટેસ્ટ કરવું જોઈએ?</h3><p>દર 6-8 અઠવાડિયે એક સારો ડિફોલ્ટ છે. જો તાલીમમાં ઘણો ફેરફાર થયો હોય અથવા તમારા વર્તમાન ઝોનને સ્પષ્ટપણે ખોટું લાગે તો જ જલ્દીથી ફરીથી પરીક્ષણ કરો.</p><h3>શું CSS એ લેક્ટેટ થ્રેશોલ્ડ સમાન છે?</h3><p>બરાબર નથી. CSS એ એક ક્ષેત્ર અંદાજ છે જેનો ઉપયોગ વ્યવહારિક થ્રેશોલ્ડ પેસ બેન્ચમાર્ક તરીકે થાય છે. તે ઉપયોગી છે કારણ કે તે પુનરાવર્તિત અને કાર્યક્ષમ છે, એટલા માટે નહીં કે તે લેબ પરીક્ષણને સંપૂર્ણ રીતે બદલે છે.</p><h3>શું હું ઓપન-વોટર પેસિંગ માટે CSS નો ઉપયોગ કરી શકું?</h3><p>તેનો ઉપયોગ પ્રારંભિક સંદર્ભ તરીકે કરો, શાબ્દિક ગેરંટી નહીં. જોવાનું, ડ્રાફ્ટિંગ, ચોપ, વેટસુટ્સ અને નેવિગેશન બધું જ ખુલ્લા પાણીમાં ગતિ કેવી રીતે વર્તે છે તે બદલાય છે.</p><h3>શું નવા નિશાળીયા CSS નો ઉપયોગ કરી શકે છે?</h3><p>હા, પરંતુ ટેકનિક અને પેસિંગમાં સુધારો થતાં પરિણામ વધુ ઉપયોગી બને છે. ખૂબ જ નવા તરવૈયાઓને CSS અત્યંત સ્થિર બને તે પહેલાં ઘણીવાર સ્ટ્રોક અને પેસિંગ સાતત્યની જરૂર પડે છે.</p><h3>શું મારે મારા સીએસએસની સીધી સરખામણી બીજા કોઈની સાથે કરવી જોઈએ?</h3><p>માત્ર સાવધાનીપૂર્વક. પૂલની લંબાઈ, પુશ-ઓફ, ડ્રેગ, પેસિંગ કૌશલ્ય અને ટેકનિકની ગુણવત્તા આ બધું પરિણામને અસર કરે છે. CSS સમય જતાં વ્યક્તિગત માપદંડ તરીકે સૌથી શક્તિશાળી છે.</p></div><div class="callout mt-2xl"><h3>સ્વિમ મેટ્રિક્સ ક્લસ્ટરના કેન્દ્ર તરીકે CSS નો ઉપયોગ કરો</h3><p>જો CSS તમારું પેસિંગ એન્કર છે, તો ઉપયોગ કરવા માટેના આગલા પૃષ્ઠો છે:</p><ul><li><a href="/gu/training-zones/">તાલીમ ઝોન</a> CSS ને સત્રના ઉદ્દેશ્યમાં અનુવાદિત કરવા માટે</li><li><a href="/gu/stss-calculator/">sTSS કેલ્ક્યુલેટર</a> તણાવનું પ્રમાણ નક્કી કરવા</li><li><a href="/gu/training-load/">તાલીમ લોડ</a> ફિટનેસ, થાક અને ફોર્મનું નિરીક્ષણ કરવા માટે</li><li><a href="/gu/efficiency/">કાર્યક્ષમતા અને SWOLF</a> તકનીકી સંદર્ભ ઉમેરવા માટે</li></ul></div><div class="mt-xl text-center"><a class="btn btn-primary" href="/gu/training-zones/">તાલીમ ઝોન સેટ કરવા માટે CSS નો ઉપયોગ કરો →</a><a class="btn btn-secondary" href="/gu/stss-calculator/">સ્વિમ સ્ટ્રેસ સ્કોરની ગણતરી કરો →</a></div></article></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="css"><div class="container ai-citation-shell"><h2 class="ai-citation-title">ક્રિટિકલ સ્વિમ સ્પીડ (CSS): કેલ્ક્યુલેટર, ટેસ્ટ અને ઝોન</h2><p class="ai-citation-answer">ક્રિટિકલ સ્વિમ સ્પીડ (CSS) એ તમારી થ્રેશોલ્ડ તરવાની ગતિનો વ્યવહારુ અંદાજ છે, જે સામાન્ય રીતે 400m અને 200m સમય અજમાયશમાંથી ગણવામાં આવે છે. તરવૈયાઓ CSS નો ઉપયોગ પ્રશિક્ષણ ઝોન સેટ કરવા, પુનરાવર્તિત કાર્યની ગતિ અને એન્કર sTSS અને તાલીમ લોડ વિશ્લેષણ માટે કરે છે.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-04-02</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>નિર્ણાયક તરવાની ઝડપ · CSS કેલ્ક્યુલેટર · CSS પરીક્ષણ · સ્વિમિંગ તાલીમ ઝોન · થ્રેશોલ્ડ તરવાની ગતિ</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../gu/bibliography/">
+          
+          ગ્રંથસૂચિ
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">ડાઉનલોડ કરો</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="App Store પર ડાઉનલોડ કરો"><img src="../../assets/images/badge-app-store.svg"
+                            alt="App Store પર ડાઉનલોડ કરો" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="તેને Google Play પર મેળવો"><img src="../../assets/images/badge-google-play.svg"
+                            alt="તેને Google Play પર મેળવો" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">માં ઉપલબ્ધ છે</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link active"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    Korean
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာဘာသာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Српски
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    Chinese
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Swim Analytics. તમામ હકો અનામત
+            </p><ul class="footer-legal"><li><a href="/gu/privacy/">ગોપનીયતા</a></li><li><a href="/gu/terms/">શરતો</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>આ વેબસાઇટ તમારા અનુભવને સુધારવા માટે કૂકીઝનો ઉપયોગ કરે છે.</p><a href="/gu/privacy/" class="text-sm">વધુ જાણો</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">નામંજૂર કરો</button><button id="cookie-accept" class="btn btn-primary btn-small">સ્વીકારો</button></div></div></div><script src="../../assets/js/core.min.js?v=26b71a7b" defer></script><script src="../../assets/js/search.min.js?v=26b71a7b" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>
