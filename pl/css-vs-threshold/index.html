@@ -1,0 +1,793 @@
+<!DOCTYPE html><html lang="pl" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Krytyczna prędkość pływania (CSS) vs tempo progowe (T-Pace)</title><meta name="description" content="Porównaj krytyczną prędkość pływania (CSS) i tempo progowe (T-Pace) dla stref pływania, tempa triathlonowego i treningu interwałowego. Dowiedz się, jakiego wskaźnika użyć."><meta name="author" content="Albert Arnó"><meta name="keywords" content="krytyczna prędkość pływania a tempo progowe, progowe tempo pływania, krytyczna prędkość pływania, T-Pace, strefy treningu pływackiego, triathlonowe tempo pływania"><link rel="canonical" href="https://swim.analyticszone.app/pl/css-vs-threshold/"><meta property="article:published_time" content="2026-04-05T10:00:00Z"><meta property="article:modified_time" content="2026-04-10T14:30:00Z"><meta property="article:author" content="Albert Arnó"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/pl/css-vs-threshold/"><meta property="og:title" content="Krytyczna prędkość pływania (CSS) vs tempo progowe (T-Pace)"><meta property="og:description" content="Porównaj krytyczną prędkość pływania (CSS) i tempo progowe (T-Pace) dla stref pływania, tempa triathlonowego i treningu interwałowego. Dowiedz się, jakiego wskaźnika użyć."><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="pl_PL"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/pl/css-vs-threshold/"><meta name="twitter:title" content="Krytyczna prędkość pływania (CSS) vs tempo progowe (T-Pace)"><meta name="twitter:description" content="Porównaj krytyczną prędkość pływania (CSS) i tempo progowe (T-Pace) dla stref pływania, tempa triathlonowego i treningu interwałowego. Dowiedz się, jakiego wskaźnika użyć."><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/css-vs-threshold/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/css-vs-threshold/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/css-vs-threshold/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/css-vs-threshold/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/css-vs-threshold/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/css-vs-threshold/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=ca03ad9e"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "logo": "https://swim.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+swim@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/swimanalytics",
+    
+    "https://apps.apple.com/us/app/swim-analytics/id6753306284",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "pl"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Swim Analytics",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://swim.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "Albert Arnó"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Krytyczna prędkość pływania (CSS) vs tempo progowe (T-Pace)",
+  "description": "Porównaj krytyczną prędkość pływania (CSS) i tempo progowe (T-Pace) dla stref pływania, tempa triathlonowego i treningu interwałowego. Dowiedz się, jakiego wskaźnika użyć.",
+  "url": "https://swim.analyticszone.app/pl/css-vs-threshold/",
+  "inLanguage": "pl",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Swim Analytics",
+    "url": "https://swim.analyticszone.app"
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-10",
+  "keywords": ["krytyczna prędkość pływania a tempo progowe", "progowe tempo pływania", "krytyczna prędkość pływania", "T-Pace", "strefy treningu pływackiego", "triathlonowe tempo pływania"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "krytyczna prędkość pływania a tempo progowe"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "progowe tempo pływania"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "krytyczna prędkość pływania"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "T-Pace"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "strefy treningu pływackiego"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "triathlonowe tempo pływania"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Krytyczna prędkość pływania (CSS) vs tempo progowe (T-Pace)",
+  "description": "Porównaj krytyczną prędkość pływania (CSS) i tempo progowe (T-Pace) dla stref pływania, tempa triathlonowego i treningu interwałowego. Dowiedz się, jakiego wskaźnika użyć.",
+  "author": {
+    "@type": "Person",
+    "name": "Albert Arnó",
+    "url": "https://albertarno.net/",
+    "sameAs": ["https://onmedic.com/", "https://albertarno.net/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Swim Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://swim.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-10",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://swim.analyticszone.app/pl/css-vs-threshold/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    
+    {
+      "@type": "Question",
+      "name": "Czy CSS to to samo, co tempo progowe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nie. S\u0105 to powi\u0105zane koncepcje prog\u00f3w, ale nie s\u0105 tym samym testem. Tempo progowe zwykle wynika z jednego d\u0142u\u017cszego p\u0142ywania, natomiast CSS jest obliczane na podstawie dw\u00f3ch wysi\u0142k\u00f3w i daje bardziej powtarzaln\u0105 kotwic\u0119 do pracy interwa\u0142owej."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Co jest lepsze do triathlonu i stymulacji na wodach otwartych?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSS jest zwykle lepszym punktem wyj\u015bcia, poniewa\u017c odzwierciedla zr\u00f3wnowa\u017cone tempo bez nadmiernie satysfakcjonuj\u0105cej szybko\u015bci w kr\u00f3tkim okresie. Tempo progowe mo\u017ce by\u0107 nadal przydatne w przypadku d\u0142ugich, sta\u0142ych p\u0142ywa\u0144, ale CSS jest zwykle \u0142atwiejszy do przekszta\u0142cenia w docelowe tempo i prac\u0119 strefow\u0105."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Jak przej\u015b\u0107 od tempa progowego do stref p\u0142ywania opartych na CSS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "U\u017cyj nast\u0119pnego testu na 400 m i 200 m, aby ustawi\u0107 CSS, a nast\u0119pnie opracuj interwa\u0142 kotwicy wok\u00f3\u0142 tej liczby. Je\u015bli ju\u017c trenujesz w T-Pace, por\u00f3wnaj obydwa liczby i skorzystaj z przewodnika CSS oraz stref treningu p\u0142ywania, aby odbudowa\u0107 swoje serie wok\u00f3\u0142 powtarzalnego tempa aerobowego."
+      }
+    }
+    
+  ]
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Przejdź do treści</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/pl/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/pl/" 
+                                aria-current="">
+                                Strona Główna
+                            </a></li><li class="has-submenu" ><a href="/pl/getting-started/" class="nav-label">Ucz Się</a><ul class="submenu"><li><a href="/pl/getting-started/" 
+                                        aria-current="">
+                                        Rozpocznij
+                                    </a></li><li><a href="/pl/css/" 
+                                        aria-current="">
+                                        CSS
+                                    </a></li><li><a href="/pl/training-zones/" 
+                                        aria-current="">
+                                        Strefy Treningowe
+                                    </a></li><li><a href="/pl/training-load/" 
+                                        aria-current="">
+                                        Obciążenie Treningowe
+                                    </a></li><li><a href="/pl/stss-calculator/" 
+                                        aria-current="">
+                                        Kalkulator sTSS
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/pl/research/" class="nav-label">Nauka</a><ul class="submenu"><li><a href="/pl/research/" 
+                                        aria-current="">
+                                        Badania
+                                    </a></li><li><a href="/pl/formulas/" 
+                                        aria-current="">
+                                        Formuły
+                                    </a></li><li><a href="/pl/efficiency/" 
+                                        aria-current="">
+                                        Wydajność
+                                    </a></li><li><a href="/pl/stroke-mechanics/" 
+                                        aria-current="">
+                                        Mechanika Ruchu
+                                    </a></li><li><a href="/pl/bibliography/" 
+                                        aria-current="">
+                                        Bibliografia
+                                    </a></li></ul></li><li><a href="/pl/contact/" 
+                                aria-current="">
+                                Kontakt
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Wybierz język"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            Korean
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာဘာသာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" selected>
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Српски
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            Chinese
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Przełącz menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Krytyczna prędkość pływania (CSS) a tempo progowe: które z nich ma znaczenie?</h1><p class="lead">Przez lata „Threshold Pace” (T-Pace) był złotym standardem. W 2026 r. przejście na krytyczną prędkość pływania (CSS) na nowo zdefiniuje sposób, w jaki sportowcy ustalają tempo sesji i przewidują zmęczenie w dniu wyścigu.</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl" id="quick-answer"><h2>🎯 Szybka odpowiedź</h2><p><strong>Tempo T (tempo progowe)</strong> to ogólne szacunkowe tempo, jakie możesz utrzymać przez godzinę, często używane do wyznaczania szerokich stref treningowych. Jest to „praktyczny”, ale mniej szczegółowy wskaźnik.</p><p><strong>CSS (krytyczna prędkość pływania)</strong> to próg „funkcjonalny” wyliczony matematycznie z dwóch różnych odległości (np. 400 m i 200 m). Jest to teoretyczne tempo, które możesz utrzymać bez uderzania w „ścianę”. Jeśli jesteś pływakiem wytrzymałościowym lub triatlonistą, Twój CSS jest najważniejszą liczbą w Twoim programie treningowym.</p></div><h2 class="mt-2xl">Zmiana roku 2026: od wysiłku do fizjologii</h2><p class="mb-md">Radzenie sobie ze zmęczeniem na basenie jest niezwykle trudne w porównaniu z jazdą na rowerze czy bieganiem. Bez miernika mocy tempo jest jedynym wyznacznikiem intensywności. Podczas gdy wielu pływaków w dalszym ciągu polega na oldschoolowych tempach jazdy na czas na 1500 m, nowoczesny coaching przeniósł się do <strong>Dwuodległościowy model CSS</strong>.</p><p class="mb-xl">Główna różnica polega na tym <strong>Precyzja a postrzegany wysiłek</strong>. Tempo T oparte na pojedynczym długim wysiłku często angażuje Twój umysł bardziej niż próg metaboliczny. CSS obliczony na podstawie dwóch różnych punktów na „krzywej tempa i czasu trwania” pokazuje rzeczywisty limit aerobowy silnika.</p></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">Porównanie metryczne</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">Tempo progowe (tempo T)</h3><div class="card-content"><p><strong>„Prosta” metryka</strong></p><p class="mt-sm">T-Pace zwykle wyznacza się na podstawie pojedynczego maksymalnego wysiłku na dystansie 1500 m lub 1000 m. Reprezentuje Twoją „czerwoną linię” umożliwiającą ciągłe pływanie.</p><ul class="mt-md"><li><strong>Plusy:</strong> Proste do zrozumienia. Jeden test, jeden numer. Świetne do długich, ciągłych serii.</li><li><strong>Wady:</strong> Wysoka wrażliwość na błędy stymulacji. Nie uwzględnia tego, jak szybko blakniesz pod wpływem zmęczenia. Traktuje każdego pływaka biegnącego w tym samym tempie na 1500 m, jak mającego ten sam profil fizjologiczny.</li></ul></div></div><div class="card"><h3 class="card-title">Krytyczna prędkość pływania (CSS)</h3><div class="card-content"><p><strong>Metryka „funkcjonalna”.</strong></p><p class="mt-sm">CSS to wyprowadzenie matematyczne oparte na dwóch dystansach (zwykle maksymalny wysiłek to 400 m i 200 m).</p><ul class="mt-md"><li><strong>Plusy:</strong> Usuwa błąd stymulacji. Lepiej przewiduje Twoje zachowanie w odstępach czasu. Zapewnia obiektywny „pułap aerobowy”.</li><li><strong>Wady:</strong> Wymaga dwóch oddzielnych testów. Nieco bardziej złożona matematyka (obliczana automatycznie w Swim Analytics). Wymaga, aby badania były wykonywane przy stałym odpoczynku.</li></ul></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-xl">Dlaczego Delta ma znaczenie</h2><p class="mb-md">„Delta” to różnica między tempem na 400 m a tempem na 200 m. Obaj pływacy mogą mieć tempo T wynoszące 1:40/100 m, ale ich profile CSS mogą wyglądać następująco:</p><div class="grid grid-2 mb-xl"><div class="card bg-gray-50 border-none shadow-sm"><div class="card-content"><h3 class="visually-hidden" aria-hidden="true" data-az-a11y="inserted"></h3><h4 class="mb-sm">Pływak A („Diesel”)</h4><p>Mała delta pomiędzy 200 m a 400 m. Pływak ten charakteryzuje się bardzo wysoką wydajnością aerobową, ale mniejszą szybkością sprintu. Ich CSS jest bardzo zbliżony do ich T-Pace.</p></div></div><div class="card bg-gray-50 border-none shadow-sm"><div class="card-content"><h4 class="mb-sm">Pływak B („Sprinter”)</h4><p>Duża delta. Świetna prędkość na 200 m, ale znacznie spada na 400 m. Ich CSS będzie niższy niż sugeruje T-Pace. Jeśli spróbują trenować w typowym „tempie T”, będą stale przegrzewać swój system beztlenowy.</p></div></div></div><div class="callout callout-info mb-xl"><h3>📈 Formuła CSS</h3><p><strong>CSS = (D1 - D2) / (T1 - T2)</strong></p><p class="mt-sm">Gdzie D1/D2 to dwie odległości, a T1/T2 to czasy w sekundach. Ujawnia to „nachylenie” Twojego zrównoważonego tempa bez hałasu początkowego wzrostu beztlenowego.</p></div><h3>Jak przeprowadzić test CSS (krok po kroku)</h3><p class="mb-md">Aby obliczyć swój CSS, musisz wykonać dwie maksymalne próby w różnych dniach (lub z pełną regeneracją pomiędzy nimi) w standardowej puli:</p><ol class="mb-xl"><li><strong>Rozgrzewka:</strong> Wykonaj dokładną, standardową rozgrzewkę (zazwyczaj od 400 m do 600 m mieszanych ruchów i ćwiczeń), aby przygotować swoje ciało.</li><li><strong>Próba 1 (wysiłek maksymalny 400 m):</strong> Przepłyń 400 m tak szybko, jak to możliwe. Zapisz dokładny czas. Staraj się utrzymywać tempo, aby nie wypalić się na pierwszych 100 m.</li><li><strong>Aktywne odzyskiwanie:</strong> Przepłyń 100 m do 200 m bardzo łatwo wypłukując kwas mlekowy, a następnie zrób 5–10 minut odpoczynku.</li><li><strong>Próba 2 (maksymalny wysiłek na 200 m):</strong> Przepłyń 200 m przy absolutnie maksymalnym wysiłku. Zapisz dokładny czas.</li><li><strong>Oblicz:</strong> Zamień swoje czasy na sekundy i zastosuj powyższy wzór lub użyj kalkulatora CSS w Swim Analytics, aby obliczyć swoje tempo na 100 m.</li></ol><h2>Którego powinieneś użyć?</h2><h3>Użyj tempa progowego (T-Pace), jeśli:</h3><ul class="mb-md"><li>Dopiero zaczynasz trening oparty na tempie.</li><li>Wykonujesz tylko długie, ciągłe pływanie (otwarte wody 3 km+).</li><li>Nie chcesz zajmować się wieloma sesjami testowymi.</li></ul><h3>Użyj krytycznej prędkości pływania (CSS), jeśli:</h3><ul class="mb-xl"><li><strong>Triatloniści i pływacy maratońscy:</strong> Aby uniknąć „wypalenia świecy” na zbyt wczesnym etapie wyścigu.</li><li><strong>Trening interwałowy:</strong> Aby ustawić konkretne strefy CSS + 2s lub CSS - 1s, które faktycznie działają.</li><li><strong>Postęp śledzenia:</strong> CSS jest bardziej wrażliwy na poprawę aerobiku niż ogólny test na 1000 m.</li></ul><h2>Często zadawane pytania dotyczące tempa progowego i CSS</h2><h3>Czy CSS to to samo, co tempo progowe?</h3><p>Nie. Są to powiązane koncepcje progów, ale nie są tym samym testem. Tempo progowe zwykle wynika z jednego dłuższego pływania, natomiast CSS jest obliczane na podstawie dwóch wysiłków i daje bardziej powtarzalną kotwicę do pracy interwałowej.</p><h3>Co jest lepsze do triathlonu i stymulacji na wodach otwartych?</h3><p>CSS jest zwykle lepszym punktem wyjścia, ponieważ odzwierciedla zrównoważone tempo bez nadmiernie satysfakcjonującej szybkości w krótkim okresie. Tempo progowe może być nadal przydatne w przypadku długich, stałych pływań, ale CSS jest zwykle łatwiejszy do przekształcenia w docelowe tempo i pracę strefową.</p><h3>Jak przejść od tempa progowego do stref pływania opartych na CSS?</h3><p>Użyj następnego testu na 400 m i 200 m, aby ustawić CSS, a następnie opracuj interwał kotwicy wokół tej liczby. Jeśli już trenujesz w T-Pace, porównaj obydwa liczby i skorzystaj z przewodnika CSS oraz stref treningu pływania, aby odbudować swoje serie wokół powtarzalnego tempa aerobowego.</p><div class="mt-2xl text-center"><h3 class="mb-md">Przestań zgadywać, jakie są strefy basenu.</h3><p class="mb-md">Swim Analytics pomaga przekształcić CSS w praktyczne strefy basenu, tempo interwałowe i wyraźniejszy obraz pułapu aerobowego w miarę upływu czasu.</p><a class="btn btn-primary btn-large" href="https://apps.apple.com/us/app/swim-analytics/id6753306284" rel="noopener" target="_blank">Pobierz dla iOS</a></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Dowiedz się więcej</h2><div class="grid grid-3 mt-md"><div class="card"><div class="card-content"><h3>Nauka CSS</h3><p>Szczegółowy przewodnik na temat obliczania krytycznej prędkości pływania i dlaczego jest to „moc krytyczna” dla wody.</p><a class="btn btn-secondary btn-small mt-md" href="/pl/css/">Zobacz Przewodnik CSS →</a></div></div><div class="card"><div class="card-content"><h3>Strefy treningu pływackiego</h3><p>Jak używać CSS lub T-Pace, aby ustawić dokładne strefy intensywności dla każdego zestawu basenowego.</p><a class="btn btn-secondary btn-small mt-md" href="/pl/training-zones/">Zobacz Przewodnik po strefach →</a></div></div><div class="card"><div class="card-content"><h3>CSS Calculator and Test Guide</h3><p>Użyj formuły CSS, przykładów tempa i przepływu pracy podczas testowania, aby przekształcić trening oparty na progach w powtarzalne strefy pływania.</p><a class="btn btn-secondary btn-small mt-md" href="/pl/css/">Otwórz Przewodnik CSS →</a></div></div></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Albert Arnó</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p><a href="https://albertarno.net/" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 500; text-decoration: underline; color: var(--color-primary, #3182ce);">
+          🔗 About the author
+        </a></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="css-vs-threshold"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Krytyczna prędkość pływania (CSS) vs tempo progowe (T-Pace)</h2><p class="ai-citation-answer">Tempo progowe (T-Pace) to ogólne oszacowanie maksymalnego wysiłku w ciągu 60 minut, podczas gdy krytyczna prędkość pływania (CSS) to próg funkcjonalny wyprowadzony matematycznie z dwóch oddzielnych dystansów testowych. CSS jest dokładniejszy przy ustalaniu stref treningu interwałowego.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-04-10</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>krytyczna prędkość pływania a tempo progowe · progowe tempo pływania · krytyczna prędkość pływania · T-Pace · strefy treningu pływackiego</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../pl/bibliography/">
+          
+          Bibliografia
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Pobierać</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Pobierz na App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Pobierz na App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Pobierz go w Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="Pobierz go w Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Dostępne w</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    Korean
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာဘာသာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link active"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Српски
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    Chinese
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Swim Analytics. Wszelkie prawa zastrzeżone
+            </p><ul class="footer-legal"><li><a href="/pl/privacy/">Prywatność</a></li><li><a href="/pl/terms/">Warunki</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Ta strona używa plików cookie, aby poprawić Twoje wrażenia.</p><a href="/pl/privacy/" class="text-sm">Dowiedz się więcej</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Odrzuć</button><button id="cookie-accept" class="btn btn-primary btn-small">Akceptuj</button></div></div></div><script src="../../assets/js/core.min.js?v=ca03ad9e" defer></script><script src="../../assets/js/search.min.js?v=ca03ad9e" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

@@ -1,0 +1,793 @@
+<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>اہم تیراکی کی رفتار (CSS) بمقابلہ تھریشولڈ پیس (T-Pace)</title><meta name="description" content="تیراکی کے زونز، ٹرائیتھلون پیسنگ، اور وقفہ کی تربیت کے لیے کریٹیکل سوئم اسپیڈ (CSS) اور تھریشولڈ پیس (T-Pace) کا موازنہ کریں۔ جانیں کہ کون سا میٹرک استعمال کرنا ہے۔"><meta name="author" content="Albert Arnó"><meta name="keywords" content="اہم تیراکی کی رفتار بمقابلہ حد کی رفتار, تیراکی کی حد کی رفتار, اہم تیراکی کی رفتار, ٹی پیس, تیراکی کی تربیت کے زون, ٹرائیتھلون تیراکی کی رفتار"><link rel="canonical" href="https://swim.analyticszone.app/ur/css-vs-threshold/"><meta property="article:published_time" content="2026-04-05T10:00:00Z"><meta property="article:modified_time" content="2026-04-10T14:30:00Z"><meta property="article:author" content="Albert Arnó"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/ur/css-vs-threshold/"><meta property="og:title" content="اہم تیراکی کی رفتار (CSS) بمقابلہ تھریشولڈ پیس (T-Pace)"><meta property="og:description" content="تیراکی کے زونز، ٹرائیتھلون پیسنگ، اور وقفہ کی تربیت کے لیے کریٹیکل سوئم اسپیڈ (CSS) اور تھریشولڈ پیس (T-Pace) کا موازنہ کریں۔ جانیں کہ کون سا میٹرک استعمال کرنا ہے۔"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="ur_PK"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/ur/css-vs-threshold/"><meta name="twitter:title" content="اہم تیراکی کی رفتار (CSS) بمقابلہ تھریشولڈ پیس (T-Pace)"><meta name="twitter:description" content="تیراکی کے زونز، ٹرائیتھلون پیسنگ، اور وقفہ کی تربیت کے لیے کریٹیکل سوئم اسپیڈ (CSS) اور تھریشولڈ پیس (T-Pace) کا موازنہ کریں۔ جانیں کہ کون سا میٹرک استعمال کرنا ہے۔"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/css-vs-threshold/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/css-vs-threshold/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/css-vs-threshold/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/css-vs-threshold/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/css-vs-threshold/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/css-vs-threshold/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=ca03ad9e"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "logo": "https://swim.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+swim@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/swimanalytics",
+    
+    "https://apps.apple.com/us/app/swim-analytics/id6753306284",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "ur"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Swim Analytics",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://swim.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "Albert Arnó"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "اہم تیراکی کی رفتار (CSS) بمقابلہ تھریشولڈ پیس (T-Pace)",
+  "description": "تیراکی کے زونز، ٹرائیتھلون پیسنگ، اور وقفہ کی تربیت کے لیے کریٹیکل سوئم اسپیڈ (CSS) اور تھریشولڈ پیس (T-Pace) کا موازنہ کریں۔ جانیں کہ کون سا میٹرک استعمال کرنا ہے۔",
+  "url": "https://swim.analyticszone.app/ur/css-vs-threshold/",
+  "inLanguage": "ur",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Swim Analytics",
+    "url": "https://swim.analyticszone.app"
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-10",
+  "keywords": ["اہم تیراکی کی رفتار بمقابلہ حد کی رفتار", "تیراکی کی حد کی رفتار", "اہم تیراکی کی رفتار", "ٹی پیس", "تیراکی کی تربیت کے زون", "ٹرائیتھلون تیراکی کی رفتار"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "اہم تیراکی کی رفتار بمقابلہ حد کی رفتار"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "تیراکی کی حد کی رفتار"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "اہم تیراکی کی رفتار"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "ٹی پیس"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "تیراکی کی تربیت کے زون"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "ٹرائیتھلون تیراکی کی رفتار"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "اہم تیراکی کی رفتار (CSS) بمقابلہ تھریشولڈ پیس (T-Pace)",
+  "description": "تیراکی کے زونز، ٹرائیتھلون پیسنگ، اور وقفہ کی تربیت کے لیے کریٹیکل سوئم اسپیڈ (CSS) اور تھریشولڈ پیس (T-Pace) کا موازنہ کریں۔ جانیں کہ کون سا میٹرک استعمال کرنا ہے۔",
+  "author": {
+    "@type": "Person",
+    "name": "Albert Arnó",
+    "url": "https://albertarno.net/",
+    "sameAs": ["https://onmedic.com/", "https://albertarno.net/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Swim Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://swim.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-10",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://swim.analyticszone.app/ur/css-vs-threshold/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    
+    {
+      "@type": "Question",
+      "name": "\u06a9\u06cc\u0627 \u0633\u06cc \u0627\u06cc\u0633 \u0627\u06cc\u0633 \u062a\u06be\u0631\u06cc\u0634\u0648\u0644\u0688 \u0631\u0641\u062a\u0627\u0631 \u062c\u06cc\u0633\u06cc \u06c1\u06d2\u061f",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "\u0646\u06c1\u06cc\u06ba\u06d4 \u062d\u062f \u06a9\u06cc \u0631\u0641\u062a\u0627\u0631 \u0639\u0627\u0645 \u0637\u0648\u0631 \u067e\u0631 \u0627\u06cc\u06a9 \u0637\u0648\u06cc\u0644 \u062a\u06cc\u0631\u0627\u06a9\u06cc \u0633\u06d2 \u0622\u062a\u06cc \u06c1\u06d2\u060c \u062c\u0628 \u06a9\u06c1 CSS \u06a9\u0627 \u062d\u0633\u0627\u0628 \u062f\u0648 \u06a9\u0648\u0634\u0634\u0648\u06ba \u0633\u06d2 \u06a9\u06cc\u0627 \u062c\u0627\u062a\u0627 \u06c1\u06d2 \u0627\u0648\u0631 \u0648\u0642\u0641\u06c1 \u06a9\u06d2 \u06a9\u0627\u0645 \u06a9\u06d2 \u0644\u06cc\u06d2 \u0632\u06cc\u0627\u062f\u06c1 \u0642\u0627\u0628\u0644 \u062a\u06a9\u0631\u0627\u0631 \u0627\u06cc\u0646\u06a9\u0631 \u0641\u0631\u0627\u06c1\u0645 \u06a9\u0631\u062a\u0627 \u06c1\u06d2\u06d4"
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "\u0679\u0631\u0627\u0626\u06cc\u062a\u06be\u0644\u0648\u0646 \u0627\u0648\u0631 \u0627\u0648\u067e\u0646 \u0648\u0627\u0679\u0631 \u067e\u06cc\u0633\u0646\u06af \u06a9\u06d2 \u0644\u06cc\u06d2 \u06a9\u0648\u0646 \u0633\u0627 \u0628\u06c1\u062a\u0631 \u06c1\u06d2\u061f",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSS \u0639\u0627\u0645 \u0637\u0648\u0631 \u067e\u0631 \u0628\u06c1\u062a\u0631 \u0646\u0642\u0637\u06c1 \u0622\u063a\u0627\u0632 \u06c1\u0648\u062a\u0627 \u06c1\u06d2 \u06a9\u06cc\u0648\u0646\u06a9\u06c1 \u06cc\u06c1 \u0642\u0644\u06cc\u0644 \u0645\u062f\u062a\u06cc \u0631\u0641\u062a\u0627\u0631 \u0633\u06d2 \u0632\u06cc\u0627\u062f\u06c1 \u0641\u0627\u0626\u062f\u06c1 \u0645\u0646\u062f \u0628\u063a\u06cc\u0631 \u067e\u0627\u0626\u06cc\u062f\u0627\u0631 \u0631\u0641\u062a\u0627\u0631 \u06a9\u06cc \u0639\u06a9\u0627\u0633\u06cc \u06a9\u0631\u062a\u0627 \u06c1\u06d2\u06d4 \u062a\u06be\u0631\u06cc\u0634\u0648\u0644\u0688 \u0631\u0641\u062a\u0627\u0631 \u0627\u0628 \u0628\u06be\u06cc \u0637\u0648\u06cc\u0644 \u0645\u0633\u062a\u062d\u06a9\u0645 \u062a\u06cc\u0631\u0627\u06a9\u06cc \u06a9\u06d2 \u0644\u06cc\u06d2 \u06a9\u0627\u0631\u0622\u0645\u062f \u062b\u0627\u0628\u062a \u06c1\u0648 \u0633\u06a9\u062a\u06cc \u06c1\u06d2\u060c \u0644\u06cc\u06a9\u0646 \u0633\u06cc \u0627\u06cc\u0633 \u0627\u06cc\u0633 \u06a9\u0648 \u067e\u06cc\u0633\u0646\u06af \u0627\u06c1\u062f\u0627\u0641 \u0627\u0648\u0631 \u0632\u0648\u0646 \u06a9\u06d2 \u06a9\u0627\u0645 \u0645\u06cc\u06ba \u062a\u0628\u062f\u06cc\u0644 \u06a9\u0631\u0646\u0627 \u0639\u0627\u0645 \u0637\u0648\u0631 \u067e\u0631 \u0622\u0633\u0627\u0646 \u06c1\u0648\u062a\u0627 \u06c1\u06d2\u06d4"
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "\u0645\u06cc\u06ba \u062d\u062f \u06a9\u06cc \u0631\u0641\u062a\u0627\u0631 \u0633\u06d2 CSS \u067e\u0631 \u0645\u0628\u0646\u06cc \u062a\u06cc\u0631\u0627\u06a9\u06cc \u06a9\u06d2 \u0639\u0644\u0627\u0642\u0648\u06ba \u0645\u06cc\u06ba \u06a9\u06cc\u0633\u06d2 \u062c\u0627 \u0633\u06a9\u062a\u0627 \u06c1\u0648\u06ba\u061f",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSS \u0633\u06cc\u0679 \u06a9\u0631\u0646\u06d2 \u06a9\u06d2 \u0644\u06cc\u06d2 \u0627\u067e\u0646\u0627 \u0627\u06af\u0644\u0627 400m \u0627\u0648\u0631 200m \u0679\u06cc\u0633\u0679 \u0627\u0633\u062a\u0639\u0645\u0627\u0644 \u06a9\u0631\u06cc\u06ba\u060c \u067e\u06be\u0631 \u0627\u0633 \u0646\u0645\u0628\u0631 \u06a9\u06d2 \u0627\u0631\u062f \u06af\u0631\u062f \u0627\u06cc\u0646\u06a9\u0631 \u0648\u0642\u0641\u06c1 \u06a9\u0627\u0645 \u06a9\u0631\u06cc\u06ba\u06d4 \u0627\u06af\u0631 \u0622\u067e \u067e\u06c1\u0644\u06d2 \u0633\u06d2 \u06c1\u06cc T-Pace \u06a9\u06d2 \u0630\u0631\u06cc\u0639\u06d2 \u062a\u0631\u0628\u06cc\u062a \u062d\u0627\u0635\u0644 \u06a9\u0631 \u0686\u06a9\u06d2 \u06c1\u06cc\u06ba\u060c \u062a\u0648 \u062f\u0648\u0646\u0648\u06ba \u0646\u0645\u0628\u0631\u0648\u06ba \u06a9\u0627 \u0645\u0648\u0627\u0632\u0646\u06c1 \u06a9\u0631\u06cc\u06ba \u0627\u0648\u0631 CSS \u06af\u0627\u0626\u06cc\u0688 \u06a9\u06d2 \u0639\u0644\u0627\u0648\u06c1 \u062a\u06cc\u0631\u0627\u06a9\u06cc \u06a9\u06d2 \u062a\u0631\u0628\u06cc\u062a\u06cc \u0632\u0648\u0646\u0632 \u06a9\u0627 \u0627\u0633\u062a\u0639\u0645\u0627\u0644 \u06a9\u0631\u06cc\u06ba \u062a\u0627\u06a9\u06c1 \u0622\u067e \u06a9\u06d2 \u0633\u06cc\u0679 \u062f\u0648\u0628\u0627\u0631\u06c1 \u0642\u0627\u0628\u0644 \u062a\u06a9\u0631\u0627\u0631 \u0627\u06cc\u0631\u0648\u0628\u06a9 \u0631\u0641\u062a\u0627\u0631 \u06a9\u06d2 \u0627\u0631\u062f \u06af\u0631\u062f \u062f\u0648\u0628\u0627\u0631\u06c1 \u0628\u0646\u0627\u0626\u06d2 \u062c\u0627\u0626\u06cc\u06ba\u06d4"
+      }
+    }
+    
+  ]
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">सामग्री पर जाएं</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/ur/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/ur/" 
+                                aria-current="">
+                                होम
+                            </a></li><li class="has-submenu" ><a href="/ur/getting-started/" class="nav-label">सीखें</a><ul class="submenu"><li><a href="/ur/getting-started/" 
+                                        aria-current="">
+                                        शुरू करें
+                                    </a></li><li><a href="/ur/css/" 
+                                        aria-current="">
+                                        سی ایس ایس
+                                    </a></li><li><a href="/ur/training-zones/" 
+                                        aria-current="">
+                                        प्रशिक्षण क्षेत्र
+                                    </a></li><li><a href="/ur/training-load/" 
+                                        aria-current="">
+                                        प्रशिक्षण भार
+                                    </a></li><li><a href="/ur/stss-calculator/" 
+                                        aria-current="">
+                                        sTSS कैलकुलेटर
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/ur/research/" class="nav-label">विज्ञान</a><ul class="submenu"><li><a href="/ur/research/" 
+                                        aria-current="">
+                                        अनुसंधान
+                                    </a></li><li><a href="/ur/formulas/" 
+                                        aria-current="">
+                                        सूत्र
+                                    </a></li><li><a href="/ur/efficiency/" 
+                                        aria-current="">
+                                        दक्षता
+                                    </a></li><li><a href="/ur/stroke-mechanics/" 
+                                        aria-current="">
+                                        स्ट्रोक मैकेनिक्स
+                                    </a></li><li><a href="/ur/bibliography/" 
+                                        aria-current="">
+                                        ग्रंथ सूची
+                                    </a></li></ul></li><li><a href="/ur/contact/" 
+                                aria-current="">
+                                संपर्क
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="भाषा चुनें"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            Korean
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာဘာသာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Српски
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" selected>
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            Chinese
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="मेनू टॉगल करें"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>اہم تیراکی کی رفتار (CSS) بمقابلہ تھریشولڈ پیس: کون سا اہم ہے؟</h1><p class="lead">سالوں سے، "تھریش ہولڈ پیس" (T-Pace) سونے کا معیار تھا۔ 2026 میں، کریٹیکل سوئم اسپیڈ (CSS) میں تبدیلی اس بات کی وضاحت کر رہی ہے کہ ایتھلیٹ کس طرح اپنے سیشن کو تیز کرتے ہیں اور ریس ڈے کی تھکاوٹ کا اندازہ لگاتے ہیں۔</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl" id="quick-answer"><h2>🎯 فوری جواب</h2><p><strong>T-Pace (تھریش ہولڈ پیس)</strong> اس رفتار کا ایک عمومی تخمینہ ہے جسے آپ ایک گھنٹہ تک برقرار رکھ سکتے ہیں، جو اکثر وسیع تربیتی زون قائم کرنے کے لیے استعمال ہوتا ہے۔ یہ ایک "عملی" لیکن کم دانے دار میٹرک ہے۔</p><p><strong>CSS (تنقید تیراکی کی رفتار)</strong> دو مختلف فاصلوں (مثلاً 400m اور 200m) سے ریاضیاتی طور پر اخذ کردہ "فعال" حد ہے۔ یہ وہ نظریاتی رفتار ہے جسے آپ "دیوار" سے ٹکرائے بغیر برقرار رکھ سکتے ہیں۔ اگر آپ برداشت کرنے والے تیراک یا ٹرائی ایتھلیٹ ہیں، تو آپ کا CSS آپ کے تربیتی پروگرام میں سب سے اہم نمبر ہے۔</p></div><h2 class="mt-2xl">2026 شفٹ: کوشش سے فزیالوجی تک</h2><p class="mb-md">پول میں تھکاوٹ کا انتظام سائیکل چلانے یا چلانے کے مقابلے میں بدنام زمانہ مشکل ہے۔ پاور میٹر کے بغیر، رفتار ہماری شدت کے لیے واحد پراکسی ہے۔ اگرچہ بہت سے تیراک اب بھی پرانے اسکول کی 1500m "ٹائم ٹرائل" رفتار پر انحصار کرتے ہیں، لیکن جدید کوچنگ نے <strong>دو فاصلاتی CSS ماڈل</strong>.</p><p class="mb-xl">بنیادی فرق یہ ہے۔ <strong>درستگی بمقابلہ سمجھی کوشش</strong>. ایک طویل کوشش پر مبنی ایک T-Pace اکثر آپ کی ذہنی ہمت کو آپ کی میٹابولک حد سے زیادہ پکڑ لیتا ہے۔ CSS، جو آپ کے "Pace-Dureation Curve" پر دو الگ الگ پوائنٹس سے شمار کیا جاتا ہے، آپ کے انجن کی اصل ایروبک حد کو ظاہر کرتا ہے۔</p></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">میٹرک موازنہ</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">تھریشولڈ پیس (T-Pace)</h3><div class="card-content"><p><strong>"سادہ" میٹرک</strong></p><p class="mt-sm">T-Pace عام طور پر ایک واحد 1500m یا 1000m زیادہ سے زیادہ کوشش سے اخذ کیا جاتا ہے۔ یہ مسلسل تیراکی کے لیے آپ کی "ریڈ لائن" کی نمائندگی کرتا ہے۔</p><ul class="mt-md"><li><strong>فوائد:</strong> سمجھنے میں آسان۔ ایک ٹیسٹ، ایک نمبر۔ طویل، مسلسل سیٹ کے لئے بہت اچھا.</li><li><strong>نقصانات:</strong> پیسنگ کی غلطیوں کے لیے انتہائی حساس۔ اس بات کا حساب نہیں ہے کہ آپ تھکاوٹ کے تحت کتنی تیزی سے ختم ہوتے ہیں۔ ہر تیراک کے ساتھ اسی 1500 میٹر کی رفتار کے ساتھ برتاؤ کرتا ہے جیسا کہ ایک ہی جسمانی پروفائل رکھتا ہے۔</li></ul></div></div><div class="card"><h3 class="card-title">اہم تیراکی کی رفتار (CSS)</h3><div class="card-content"><p><strong>"فنکشنل" میٹرک</strong></p><p class="mt-sm">CSS ایک ریاضیاتی اخذ ہے جو دو فاصلوں پر مبنی ہے (عام طور پر 400m اور 200m زیادہ سے زیادہ کوشش)۔</p><ul class="mt-md"><li><strong>فوائد:</strong> پیسنگ تعصب کو ہٹاتا ہے۔ وقفوں میں آپ کے رویے کی بہتر پیش گوئی کرنا۔ ایک مقصد "ایروبک چھت" فراہم کرتا ہے۔</li><li><strong>نقصانات:</strong> دو الگ الگ ٹیسٹ کی ضرورت ہے۔ قدرے زیادہ پیچیدہ ریاضی (سوئم تجزیات میں خودکار حساب کتاب)۔ ٹیسٹوں کو مستقل آرام کے ساتھ کرنے کی ضرورت ہے۔</li></ul></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-xl">ڈیلٹا کیوں اہمیت رکھتا ہے۔</h2><p class="mb-md">"ڈیلٹا" آپ کی 400m رفتار اور آپ کی 200m رفتار کے درمیان فرق ہے۔ دو تیراکوں کی T-Pace 1:40/100m ہو سکتی ہے، لیکن ان کے CSS پروفائلز اس طرح نظر آ سکتے ہیں:</p><div class="grid grid-2 mb-xl"><div class="card bg-gray-50 border-none shadow-sm"><div class="card-content"><h3 class="visually-hidden" aria-hidden="true" data-az-a11y="inserted"></h3><h4 class="mb-sm">تیراک اے ("دی ڈیزل")</h4><p>200m اور 400m کے درمیان چھوٹا ڈیلٹا۔ اس تیراک کی ایروبک کارکردگی بہت زیادہ ہے لیکن اسپرنٹ کی رفتار کم ہے۔ ان کا CSS ان کی T-Pace کے بہت قریب ہے۔</p></div></div><div class="card bg-gray-50 border-none shadow-sm"><div class="card-content"><h4 class="mb-sm">تیراکی B ("The Sprinter")</h4><p>بڑا ڈیلٹا۔ زبردست 200m رفتار لیکن 400m پر نمایاں طور پر گرتی ہے۔ ان کا CSS ان کے T-Pace کی تجویز سے کم ہوگا۔ اگر وہ عام "T-Pace" پر تربیت کرنے کی کوشش کرتے ہیں تو وہ اپنے انیروبک نظام کو مسلسل زیادہ پکائیں گے۔</p></div></div></div><div class="callout callout-info mb-xl"><h3>📈 CSS فارمولا</h3><p><strong>CSS = (D1 - D2) / (T1 - T2)</strong></p><p class="mt-sm">جہاں D1/D2 دو فاصلے ہیں اور T1/T2 سیکنڈ میں اوقات ہیں۔ یہ آپ کے ابتدائی انیروبک اضافے کے شور کے بغیر آپ کی پائیدار رفتار کی "ڈھلوان" کو ظاہر کرتا ہے۔</p></div><h3>سی ایس ایس ٹیسٹ کیسے کریں (مرحلہ بہ قدم)</h3><p class="mb-md">اپنے CSS کا حساب لگانے کے لیے، آپ کو معیاری پول میں مختلف دنوں (یا درمیان میں مکمل بحالی کے ساتھ) دو زیادہ سے زیادہ ٹرائلز کرنے کی ضرورت ہے:</p><ol class="mb-xl"><li><strong>وارم اپ:</strong> اپنے جسم کو تیار کرنے کے لیے ایک مکمل، معیاری وارم اپ (عام طور پر 400m سے 600m مخلوط سٹروک اور بلڈز) انجام دیں۔</li><li><strong>آزمائش 1 (400m زیادہ سے زیادہ کوشش):</strong> جتنی جلدی ممکن ہو 400m تیراکی کریں۔ صحیح وقت ریکارڈ کریں۔ اپنے آپ کو تیز کریں تاکہ آپ پہلے 100 میٹر میں جل نہ جائیں۔</li><li><strong>فعال بحالی:</strong> لیکٹک ایسڈ کو باہر نکالنے کے لیے 100m سے 200m تک تیرنا بہت آسان ہے، اس کے بعد 5-10 منٹ آرام کریں۔</li><li><strong>آزمائش 2 (200m زیادہ سے زیادہ کوشش):</strong> زیادہ سے زیادہ کوشش کے ساتھ 200 میٹر تیراکی کریں۔ صحیح وقت ریکارڈ کریں۔</li><li><strong>حساب لگانا:</strong> اپنے اوقات کو سیکنڈوں میں تبدیل کریں اور اوپر دیا گیا فارمولہ لاگو کریں، یا تیراکی کے تجزیات میں سی ایس ایس کیلکولیٹر ٹول کا استعمال کریں تاکہ آپ کی 100 میٹر کی رفتار حاصل کریں۔</li></ol><h2>آپ کو کون سا استعمال کرنا چاہئے؟</h2><h3>تھریشولڈ پیس (T-Pace) استعمال کریں اگر:</h3><ul class="mb-md"><li>آپ صرف رفتار پر مبنی تربیت کے ساتھ شروعات کر رہے ہیں۔</li><li>آپ صرف لمبی، مسلسل تیراکی کرتے ہیں (کھلا پانی 3km+)۔</li><li>آپ متعدد ٹیسٹنگ سیشنز سے نمٹنا نہیں چاہتے ہیں۔</li></ul><h3>کریٹیکل سوئم اسپیڈ (CSS) استعمال کریں اگر:</h3><ul class="mb-xl"><li><strong>ٹرائی ایتھلیٹس اور میراتھن تیراک:</strong> ریس میں بہت جلد "موم بتی جلانے" سے بچنے کے لیے۔</li><li><strong>وقفہ کی تربیت:</strong> مخصوص CSS + 2s یا CSS - 1s زون قائم کرنے کے لیے جو اصل میں کام کرتے ہیں۔</li><li><strong>ٹریکنگ کی پیشرفت:</strong> CSS عام 1000m ٹیسٹ کے مقابلے ایروبک بہتری کے لیے زیادہ حساس ہے۔</li></ul><h2>تھریشولڈ پیس بمقابلہ CSS FAQ</h2><h3>کیا سی ایس ایس تھریشولڈ رفتار جیسی ہے؟</h3><p>نہیں۔ حد کی رفتار عام طور پر ایک طویل تیراکی سے آتی ہے، جب کہ CSS کا حساب دو کوششوں سے کیا جاتا ہے اور وقفہ کے کام کے لیے زیادہ قابل تکرار اینکر فراہم کرتا ہے۔</p><h3>ٹرائیتھلون اور اوپن واٹر پیسنگ کے لیے کون سا بہتر ہے؟</h3><p>CSS عام طور پر بہتر نقطہ آغاز ہوتا ہے کیونکہ یہ قلیل مدتی رفتار سے زیادہ فائدہ مند بغیر پائیدار رفتار کی عکاسی کرتا ہے۔ تھریشولڈ رفتار اب بھی طویل مستحکم تیراکی کے لیے کارآمد ثابت ہو سکتی ہے، لیکن سی ایس ایس کو پیسنگ اہداف اور زون کے کام میں تبدیل کرنا عام طور پر آسان ہوتا ہے۔</p><h3>میں حد کی رفتار سے CSS پر مبنی تیراکی کے علاقوں میں کیسے جا سکتا ہوں؟</h3><p>CSS سیٹ کرنے کے لیے اپنا اگلا 400m اور 200m ٹیسٹ استعمال کریں، پھر اس نمبر کے ارد گرد اینکر وقفہ کام کریں۔ اگر آپ پہلے سے ہی T-Pace کے ذریعے تربیت حاصل کر چکے ہیں، تو دونوں نمبروں کا موازنہ کریں اور CSS گائیڈ کے علاوہ تیراکی کے تربیتی زونز کا استعمال کریں تاکہ آپ کے سیٹ دوبارہ قابل تکرار ایروبک رفتار کے ارد گرد دوبارہ بنائے جائیں۔</p><div class="mt-2xl text-center"><h3 class="mb-md">اپنے پول زونز کا اندازہ لگانا بند کریں۔</h3><p class="mb-md">تیراکی کے تجزیات آپ کو CSS کو پریکٹیکل پول زونز، وقفہ پیسنگ، اور وقت کے ساتھ ساتھ آپ کی ایروبک چھت کے واضح نظارے میں تبدیل کرنے میں مدد کرتا ہے۔</p><a class="btn btn-primary btn-large" href="https://apps.apple.com/us/app/swim-analytics/id6753306284" rel="noopener" target="_blank">iOS کے لیے ڈاؤن لوڈ کریں۔</a></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>مزید جانیں</h2><div class="grid grid-3 mt-md"><div class="card"><div class="card-content"><h3>سی ایس ایس کی سائنس</h3><p>تفصیلی گائیڈ اس بارے میں کہ کس طرح اہم تیراکی کی رفتار کا حساب لگایا جاتا ہے اور یہ پانی کے لیے "کریٹیکل پاور" کیوں ہے۔</p><a class="btn btn-secondary btn-small mt-md" href="/ur/css/">سی ایس ایس گائیڈ → دیکھیں</a></div></div><div class="card"><div class="card-content"><h3>تیراکی کے تربیتی زون</h3><p>ہر پول سیٹ کے لیے درست شدت والے زون سیٹ کرنے کے لیے اپنے CSS یا T-Pace کا استعمال کیسے کریں۔</p><a class="btn btn-secondary btn-small mt-md" href="/ur/training-zones/">زون گائیڈ دیکھیں →</a></div></div><div class="card"><div class="card-content"><h3>سی ایس ایس کیلکولیٹر اور ٹیسٹ گائیڈ</h3><p>تھریشولڈ طرز کی تربیت کو دوبارہ قابل تیراکی کے علاقوں میں تبدیل کرنے کے لیے CSS فارمولہ، پیسنگ مثالیں، اور ٹیسٹنگ ورک فلو کا استعمال کریں۔</p><a class="btn btn-secondary btn-small mt-md" href="/ur/css/">سی ایس ایس گائیڈ → کھولیں۔</a></div></div></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Albert Arnó</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p><a href="https://albertarno.net/" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 500; text-decoration: underline; color: var(--color-primary, #3182ce);">
+          🔗 About the author
+        </a></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="css-vs-threshold"><div class="container ai-citation-shell"><h2 class="ai-citation-title">اہم تیراکی کی رفتار (CSS) بمقابلہ تھریشولڈ پیس (T-Pace)</h2><p class="ai-citation-answer">تھریشولڈ پیس (T-Pace) آپ کی 60 منٹ کی زیادہ سے زیادہ کوشش کا ایک عمومی تخمینہ ہے، جبکہ کریٹیکل سوئم اسپیڈ (CSS) دو الگ الگ ٹیسٹ فاصلوں سے ریاضی کے لحاظ سے اخذ کردہ فنکشنل تھریشولڈ ہے۔ سی ایس ایس وقفہ ٹریننگ زونز کی ترتیب کے لیے زیادہ درست ہے۔</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-04-10</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>اہم تیراکی کی رفتار بمقابلہ حد کی رفتار · تیراکی کی حد کی رفتار · اہم تیراکی کی رفتار · ٹی پیس · تیراکی کی تربیت کے زون</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../ur/bibliography/">
+          
+          ग्रंथ सूची
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">ڈاؤن لوڈ کریں۔</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="App Store پر ڈاؤن لوڈ کریں۔"><img src="../../assets/images/badge-app-store.svg"
+                            alt="App Store پر ڈاؤن لوڈ کریں۔" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="اسے Google Play پر حاصل کریں۔"><img src="../../assets/images/badge-google-play.svg"
+                            alt="اسے Google Play پر حاصل کریں۔" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">میں دستیاب ہے۔</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    Korean
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာဘာသာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Српски
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link active"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    Chinese
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Swim Analytics. सर्वाधिकार सुरक्षित
+            </p><ul class="footer-legal"><li><a href="/ur/privacy/">गोपनीयता</a></li><li><a href="/ur/terms/">शर्तें</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>यह वेबसाइट आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग करती है।</p><a href="/ur/privacy/" class="text-sm">और जानें</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">अस्वीकार करें</button><button id="cookie-accept" class="btn btn-primary btn-small">स्वीकार करें</button></div></div></div><script src="../../assets/js/core.min.js?v=ca03ad9e" defer></script><script src="../../assets/js/search.min.js?v=ca03ad9e" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

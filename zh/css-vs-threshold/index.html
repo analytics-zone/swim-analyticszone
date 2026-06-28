@@ -1,0 +1,793 @@
+<!DOCTYPE html><html lang="zh" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>临界游泳速度 (CSS) 与阈值配速 (T-Pace)</title><meta name="description" content="比较游泳区、铁人三项配速和间歇训练的临界游泳速度 (CSS) 和阈值配速 (T-Pace)。了解要使用哪个指标。"><meta name="author" content="Albert Arnó"><meta name="keywords" content="临界游泳速度与阈值配速, 游泳阈值配速, 临界游泳速度, T-佩斯, 游泳训练区, 铁人三项游泳配速"><link rel="canonical" href="https://swim.analyticszone.app/zh/css-vs-threshold/"><meta property="article:published_time" content="2026-04-05T10:00:00Z"><meta property="article:modified_time" content="2026-04-10T14:30:00Z"><meta property="article:author" content="Albert Arnó"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/zh/css-vs-threshold/"><meta property="og:title" content="临界游泳速度 (CSS) 与阈值配速 (T-Pace)"><meta property="og:description" content="比较游泳区、铁人三项配速和间歇训练的临界游泳速度 (CSS) 和阈值配速 (T-Pace)。了解要使用哪个指标。"><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/zh/css-vs-threshold/"><meta name="twitter:title" content="临界游泳速度 (CSS) 与阈值配速 (T-Pace)"><meta name="twitter:description" content="比较游泳区、铁人三项配速和间歇训练的临界游泳速度 (CSS) 和阈值配速 (T-Pace)。了解要使用哪个指标。"><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/css-vs-threshold/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/css-vs-threshold/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/css-vs-threshold/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/css-vs-threshold/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/css-vs-threshold/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/css-vs-threshold/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=ca03ad9e"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "logo": "https://swim.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+swim@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/swimanalytics",
+    
+    "https://apps.apple.com/us/app/swim-analytics/id6753306284",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "zh"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Swim Analytics",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://swim.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "Albert Arnó"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "临界游泳速度 (CSS) 与阈值配速 (T-Pace)",
+  "description": "比较游泳区、铁人三项配速和间歇训练的临界游泳速度 (CSS) 和阈值配速 (T-Pace)。了解要使用哪个指标。",
+  "url": "https://swim.analyticszone.app/zh/css-vs-threshold/",
+  "inLanguage": "zh",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Swim Analytics",
+    "url": "https://swim.analyticszone.app"
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-10",
+  "keywords": ["临界游泳速度与阈值配速", "游泳阈值配速", "临界游泳速度", "T-佩斯", "游泳训练区", "铁人三项游泳配速"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "临界游泳速度与阈值配速"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "游泳阈值配速"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "临界游泳速度"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "T-佩斯"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "游泳训练区"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "铁人三项游泳配速"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "临界游泳速度 (CSS) 与阈值配速 (T-Pace)",
+  "description": "比较游泳区、铁人三项配速和间歇训练的临界游泳速度 (CSS) 和阈值配速 (T-Pace)。了解要使用哪个指标。",
+  "author": {
+    "@type": "Person",
+    "name": "Albert Arnó",
+    "url": "https://albertarno.net/",
+    "sameAs": ["https://onmedic.com/", "https://albertarno.net/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Swim Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://swim.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-10",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://swim.analyticszone.app/zh/css-vs-threshold/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    
+    {
+      "@type": "Question",
+      "name": "CSS \u4e0e\u9608\u503c\u901f\u5ea6\u76f8\u540c\u5417\uff1f",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "\u4e0d\u3002\u5b83\u4eec\u662f\u76f8\u5173\u7684\u9608\u503c\u6982\u5ff5\uff0c\u4f46\u4e0d\u662f\u540c\u4e00\u4e2a\u6d4b\u8bd5\u3002\u9608\u503c\u914d\u901f\u901a\u5e38\u6765\u81ea\u4e00\u6b21\u8f83\u957f\u7684\u6e38\u6cf3\uff0c\u800c CSS \u5219\u6839\u636e\u4e24\u6b21\u52aa\u529b\u8ba1\u7b97\u5f97\u51fa\uff0c\u5e76\u4e3a\u95f4\u6b47\u8bad\u7ec3\u63d0\u4f9b\u4e86\u66f4\u5177\u53ef\u91cd\u590d\u6027\u7684\u951a\u70b9\u3002"
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "\u94c1\u4eba\u4e09\u9879\u548c\u5f00\u653e\u6c34\u57df\u914d\u901f\u54ea\u4e2a\u66f4\u597d\uff1f",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSS \u901a\u5e38\u662f\u66f4\u597d\u7684\u8d77\u70b9\uff0c\u56e0\u4e3a\u5b83\u53cd\u6620\u4e86\u53ef\u6301\u7eed\u7684\u6b65\u4f10\uff0c\u800c\u4e0d\u4f1a\u8fc7\u5ea6\u5956\u52b1\u77ed\u671f\u901f\u5ea6\u3002\u9608\u503c\u914d\u901f\u5bf9\u4e8e\u957f\u65f6\u95f4\u7a33\u5b9a\u6e38\u6cf3\u4ecd\u7136\u6709\u7528\uff0c\u4f46 CSS \u901a\u5e38\u66f4\u5bb9\u6613\u8f6c\u6362\u4e3a\u914d\u901f\u76ee\u6807\u548c\u533a\u57df\u5de5\u4f5c\u3002"
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "\u5982\u4f55\u4ece\u9608\u503c\u901f\u5ea6\u8f6c\u79fb\u5230\u57fa\u4e8e CSS \u7684\u6e38\u6cf3\u533a\u57df\uff1f",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "\u4f7f\u7528\u4e0b\u4e00\u4e2a 400m \u548c 200m \u6d4b\u8bd5\u6765\u8bbe\u7f6e CSS\uff0c\u7136\u540e\u56f4\u7ed5\u8be5\u6570\u5b57\u8bbe\u7f6e\u951a\u5b9a\u95f4\u9694\u3002\u5982\u679c\u60a8\u5df2\u7ecf\u901a\u8fc7 T-Pace \u8fdb\u884c\u8bad\u7ec3\uff0c\u8bf7\u6bd4\u8f83\u8fd9\u4e24\u4e2a\u6570\u5b57\u5e76\u4f7f\u7528 CSS \u6307\u5357\u548c\u6e38\u6cf3\u8bad\u7ec3\u533a\u56f4\u7ed5\u53ef\u91cd\u590d\u7684\u6709\u6c27\u914d\u901f\u91cd\u5efa\u60a8\u7684\u7ec4\u6570\u3002"
+      }
+    }
+    
+  ]
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">跳到内容</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/zh/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/zh/" 
+                                aria-current="">
+                                首页
+                            </a></li><li class="has-submenu" ><a href="/zh/getting-started/" class="nav-label">学习</a><ul class="submenu"><li><a href="/zh/getting-started/" 
+                                        aria-current="">
+                                        开始
+                                    </a></li><li><a href="/zh/css/" 
+                                        aria-current="">
+                                        CSS
+                                    </a></li><li><a href="/zh/training-zones/" 
+                                        aria-current="">
+                                        训练区间
+                                    </a></li><li><a href="/zh/training-load/" 
+                                        aria-current="">
+                                        训练负荷
+                                    </a></li><li><a href="/zh/stss-calculator/" 
+                                        aria-current="">
+                                        sTSS计算器
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/zh/research/" class="nav-label">科学</a><ul class="submenu"><li><a href="/zh/research/" 
+                                        aria-current="">
+                                        研究
+                                    </a></li><li><a href="/zh/formulas/" 
+                                        aria-current="">
+                                        公式
+                                    </a></li><li><a href="/zh/efficiency/" 
+                                        aria-current="">
+                                        效率
+                                    </a></li><li><a href="/zh/stroke-mechanics/" 
+                                        aria-current="">
+                                        划水技术
+                                    </a></li><li><a href="/zh/bibliography/" 
+                                        aria-current="">
+                                        参考文献
+                                    </a></li></ul></li><li><a href="/zh/contact/" 
+                                aria-current="">
+                                联系
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="选择语言"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            Korean
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာဘာသာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Српски
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" selected>
+                            Chinese
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="切换菜单"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>临界游泳速度 (CSS) 与阈值配速：哪一个重要？</h1><p class="lead">多年来，“阈值速度”(T-Pace) 一直是黄金标准。 2026 年，向临界游泳速度 (CSS) 的转变将重新定义运动员如何调整训练节奏和预测比赛日疲劳程度。</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl" id="quick-answer"><h2>🎯 快速回答</h2><p><strong>T 步速（阈值步速）</strong> 是对您可以维持一小时的配速的一般估计，通常用于设置广泛的训练区域。这是一个“实用”但不太细粒度的指标。</p><p><strong>CSS（临界游泳速度）</strong> 是从两个不同距离（例如 400m 和 200m）以数学方式得出的“功能”阈值。这是您在不撞到“墙”的情况下可以维持的理论速度。如果您是耐力游泳运动员或铁人三项运动员，CSS 是您训练计划中最重要的数字。</p></div><h2 class="mt-2xl">2026 年的转变：从努力到生理</h2><p class="mb-md">与骑自行车或跑步相比，在泳池中控制疲劳是众所周知的困难。如果没有功率计，配速是我们衡量强度的唯一指标。虽然许多游泳运动员仍然依赖老式的 1500 米“计时赛”配速，但现代教练已经转向 <strong>两距离 CSS 模型</strong>.</p><p class="mb-xl">主要区别是 <strong>精确度与感知努力</strong>。基于单次长时间努力的 T-Pace 往往比新陈代谢阈值更能激发您的精神毅力。 CSS 根据“步速-持续时间曲线”上的两个不同点计算得出，揭示了引擎的实际有氧极限。</p></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">指标比较</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">阈值配速（T 配速）</h3><div class="card-content"><p><strong>“简单”指标</strong></p><p class="mt-sm">T-Pace 通常源自单次 1500m 或 1000m 最大努力。它代表您连续游泳的“红线”。</p><ul class="mt-md"><li><strong>优点：</strong> 简单易懂。一项测试，一个数字。非常适合长时间、连续的训练。</li><li><strong>缺点：</strong> 对起搏错误高度敏感。不考虑您在疲劳情况下褪色的速度。以相同的 1500m 配速对待每位游泳运动员，使其具有相同的生理特征。</li></ul></div></div><div class="card"><h3 class="card-title">临界游泳速度 (CSS)</h3><div class="card-content"><p><strong>“功能”指标</strong></p><p class="mt-sm">CSS 是基于两个距离（通常是 400m 和 200m 最大努力）的数学推导。</p><ul class="mt-md"><li><strong>优点：</strong> 消除节奏偏差。更好地预测您的间歇行为。提供客观的“有氧上限”。</li><li><strong>缺点：</strong> 需要两个单独的测试。稍微复杂的数学（在游泳分析中自动计算）。要求在持续休息的情况下进行测试。</li></ul></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-xl">为什么三角洲很重要</h2><p class="mb-md">“Delta”是 400m 配速与 200m 配速之间的差异。两名游泳运动员的 T 步速可能均为 1:40/100m，但他们的 CSS 配置文件可能如下所示：</p><div class="grid grid-2 mb-xl"><div class="card bg-gray-50 border-none shadow-sm"><div class="card-content"><h3 class="visually-hidden" aria-hidden="true" data-az-a11y="inserted"></h3><h4 class="mb-sm">游泳运动员A（“柴油机”）</h4><p>200m 至 400m 之间的小三角洲。这位游泳运动员的有氧效率非常高，但冲刺速度较低。他们的 CSS 非常接近他们的 T-Pace。</p></div></div><div class="card bg-gray-50 border-none shadow-sm"><div class="card-content"><h4 class="mb-sm">游泳运动员B（“短跑运动员”）</h4><p>大三角洲。 200m 速度很好，但 400m 速度明显下降。他们的 CSS 将低于 T-Pace 建议的水平。如果他们尝试以通用的“T-Pace”进行训练，他们的无氧系统就会不断过度运转。</p></div></div></div><div class="callout callout-info mb-xl"><h3>📈 CSS 公式</h3><p><strong>CSS = (D1 - D2) / (T1 - T2)</strong></p><p class="mt-sm">其中 D1/D2 是两个距离，T1/T2 是以秒为单位的时间。这揭示了您可持续配速的“斜率”，而没有最初无氧激增的噪音。</p></div><h3>如何执行 CSS 测试（分步）</h3><p class="mb-md">要计算您的 CSS，您需要在不同的日子（或之间完全恢复）在标准池中执行两次最大试验：</p><ol class="mb-xl"><li><strong>热身：</strong> 进行彻底、标准化的热身（通常为 400m 至 600m 的混合划水和训练），为您的身体做好准备。</li><li><strong>试验 1（400m 最大努力）：</strong> 尽可能快地游400m。记录准确的时间。调整自己的节奏，以免在前 100 米中精疲力尽。</li><li><strong>主动恢复：</strong> 游泳100m到200m很容易排出乳酸，然后休息5-10分钟。</li><li><strong>试验 2（200m 最大努力）：</strong> 以绝对最大努力游200m。记录准确的时间。</li><li><strong>计算：</strong> 将您的时间转换为秒并应用上面的公式，或者使用 Swim Analytics 中的 CSS 计算器工具来计算您的 100m 配速。</li></ol><h2>您应该使用哪个？</h2><h3>如果出现以下情况，请使用阈值配速 (T-Pace)：</h3><ul class="mb-md"><li>您刚刚开始基于配速的训练。</li><li>您只能进行长时间、连续的游泳（开放水域 3 公里以上）。</li><li>您不想处理多个测试会话。</li></ul><h3>在以下情况下使用临界游泳速度 (CSS)：</h3><ul class="mb-xl"><li><strong>铁人三项运动员和马拉松游泳运动员：</strong> 避免在比赛中过早“燃烧蜡烛”。</li><li><strong>间歇训练：</strong> 设置实际有效的特定 CSS + 2s 或 CSS - 1s 区域。</li><li><strong>跟踪进度：</strong> CSS 对有氧运动的改善比一般的 1000m 测试更敏感。</li></ul><h2>阈值速度与 CSS 常见问题解答</h2><h3>CSS 与阈值速度相同吗？</h3><p>不。它们是相关的阈值概念，但不是同一个测试。阈值配速通常来自一次较长的游泳，而 CSS 则根据两次努力计算得出，并为间歇训练提供了更具可重复性的锚点。</p><h3>铁人三项和开放水域配速哪个更好？</h3><p>CSS 通常是更好的起点，因为它反映了可持续的步伐，而不会过度奖励短期速度。阈值配速对于长时间稳定游泳仍然有用，但 CSS 通常更容易转换为配速目标和区域工作。</p><h3>如何从阈值速度转移到基于 CSS 的游泳区域？</h3><p>使用下一个 400m 和 200m 测试来设置 CSS，然后围绕该数字设置锚定间隔。如果您已经通过 T-Pace 进行训练，请比较这两个数字并使用 CSS 指南和游泳训练区围绕可重复的有氧配速重建您的组数。</p><div class="mt-2xl text-center"><h3 class="mb-md">别再猜测你的泳池区域了。</h3><p class="mb-md">游泳分析可帮助您将 CSS 转化为实用的泳池区域、间歇配速，并随着时间的推移更清晰地了解您的有氧上限。</p><a class="btn btn-primary btn-large" href="https://apps.apple.com/us/app/swim-analytics/id6753306284" rel="noopener" target="_blank">下载 iOS</a></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>了解更多</h2><div class="grid grid-3 mt-md"><div class="card"><div class="card-content"><h3>CSS 的科学</h3><p>有关如何计算临界游泳速度以及为什么它是水的“临界功率”的详细指南。</p><a class="btn btn-secondary btn-small mt-md" href="/zh/css/">查看 CSS 指南 →</a></div></div><div class="card"><div class="card-content"><h3>游泳训练区</h3><p>如何使用 CSS 或 T-Pace 为每个泳池组设置准确的强度区域。</p><a class="btn btn-secondary btn-small mt-md" href="/zh/training-zones/">查看区域指南 →</a></div></div><div class="card"><div class="card-content"><h3>CSS 计算器和测试指南</h3><p>使用 CSS 公式、配速示例和测试工作流程将阈值式训练转换为可重复的游泳区域。</p><a class="btn btn-secondary btn-small mt-md" href="/zh/css/">打开 CSS 指南 →</a></div></div></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Albert Arnó</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p><a href="https://albertarno.net/" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 500; text-decoration: underline; color: var(--color-primary, #3182ce);">
+          🔗 About the author
+        </a></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="css-vs-threshold"><div class="container ai-citation-shell"><h2 class="ai-citation-title">临界游泳速度 (CSS) 与阈值配速 (T-Pace)</h2><p class="ai-citation-answer">阈值配速 (T-Pace) 是对您 60 分钟最大努力的一般估计，而临界游泳速度 (CSS) 是根据两个单独的测试距离以数学方式得出的功能阈值。 CSS 对于设置间歇训练区域更加准确。</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-04-10</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>临界游泳速度与阈值配速 · 游泳阈值配速 · 临界游泳速度 · T-佩斯 · 游泳训练区</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../zh/bibliography/">
+          
+          参考文献
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">下载</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="在 App Store 上下载"><img src="../../assets/images/badge-app-store.svg"
+                            alt="在 App Store 上下载" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="在 Google Play 上获取"><img src="../../assets/images/badge-google-play.svg"
+                            alt="在 Google Play 上获取" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">可用于</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    Korean
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာဘာသာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Српски
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link active"
+                    hreflang="zh" >
+                    Chinese
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Swim Analytics. 版权所有
+            </p><ul class="footer-legal"><li><a href="/zh/privacy/">隐私</a></li><li><a href="/zh/terms/">条款</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>本网站使用cookies改善您的体验。</p><a href="/zh/privacy/" class="text-sm">了解更多</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">拒绝</button><button id="cookie-accept" class="btn btn-primary btn-small">接受</button></div></div></div><script src="../../assets/js/core.min.js?v=ca03ad9e" defer></script><script src="../../assets/js/search.min.js?v=ca03ad9e" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

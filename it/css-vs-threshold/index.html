@@ -1,0 +1,793 @@
+<!DOCTYPE html><html lang="it" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Velocità critica di nuoto (CSS) e ritmo di soglia (T-Pace)</title><meta name="description" content="Confronta la velocità critica di nuoto (CSS) e il ritmo di soglia (T-Pace) per le zone di nuoto, il ritmo del triathlon e l&#39;allenamento a intervalli. Scopri quale metrica utilizzare."><meta name="author" content="Albert Arnó"><meta name="keywords" content="velocità critica di nuoto rispetto al ritmo soglia, ritmo soglia del nuoto, velocità di nuoto critica, T-Pace, zone di allenamento per il nuoto, ritmo di nuoto del triathlon"><link rel="canonical" href="https://swim.analyticszone.app/it/css-vs-threshold/"><meta property="article:published_time" content="2026-04-05T10:00:00Z"><meta property="article:modified_time" content="2026-04-10T14:30:00Z"><meta property="article:author" content="Albert Arnó"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/it/css-vs-threshold/"><meta property="og:title" content="Velocità critica di nuoto (CSS) e ritmo di soglia (T-Pace)"><meta property="og:description" content="Confronta la velocità critica di nuoto (CSS) e il ritmo di soglia (T-Pace) per le zone di nuoto, il ritmo del triathlon e l&#39;allenamento a intervalli. Scopri quale metrica utilizzare."><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="it_IT"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/it/css-vs-threshold/"><meta name="twitter:title" content="Velocità critica di nuoto (CSS) e ritmo di soglia (T-Pace)"><meta name="twitter:description" content="Confronta la velocità critica di nuoto (CSS) e il ritmo di soglia (T-Pace) per le zone di nuoto, il ritmo del triathlon e l&#39;allenamento a intervalli. Scopri quale metrica utilizzare."><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/css-vs-threshold/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/css-vs-threshold/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/css-vs-threshold/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/css-vs-threshold/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/css-vs-threshold/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/css-vs-threshold/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=ca03ad9e"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "logo": "https://swim.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+swim@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/swimanalytics",
+    
+    "https://apps.apple.com/us/app/swim-analytics/id6753306284",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "it"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Swim Analytics",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://swim.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "Albert Arnó"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Velocità critica di nuoto (CSS) e ritmo di soglia (T-Pace)",
+  "description": "Confronta la velocità critica di nuoto (CSS) e il ritmo di soglia (T-Pace) per le zone di nuoto, il ritmo del triathlon e l&#39;allenamento a intervalli. Scopri quale metrica utilizzare.",
+  "url": "https://swim.analyticszone.app/it/css-vs-threshold/",
+  "inLanguage": "it",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Swim Analytics",
+    "url": "https://swim.analyticszone.app"
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-10",
+  "keywords": ["velocità critica di nuoto rispetto al ritmo soglia", "ritmo soglia del nuoto", "velocità di nuoto critica", "T-Pace", "zone di allenamento per il nuoto", "ritmo di nuoto del triathlon"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "velocità critica di nuoto rispetto al ritmo soglia"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "ritmo soglia del nuoto"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "velocità di nuoto critica"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "T-Pace"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "zone di allenamento per il nuoto"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "ritmo di nuoto del triathlon"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Velocità critica di nuoto (CSS) e ritmo di soglia (T-Pace)",
+  "description": "Confronta la velocità critica di nuoto (CSS) e il ritmo di soglia (T-Pace) per le zone di nuoto, il ritmo del triathlon e l&#39;allenamento a intervalli. Scopri quale metrica utilizzare.",
+  "author": {
+    "@type": "Person",
+    "name": "Albert Arnó",
+    "url": "https://albertarno.net/",
+    "sameAs": ["https://onmedic.com/", "https://albertarno.net/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Swim Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://swim.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-10",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://swim.analyticszone.app/it/css-vs-threshold/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    
+    {
+      "@type": "Question",
+      "name": "Il CSS \u00e8 uguale al ritmo soglia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Sono concetti di soglia correlati, ma non sono lo stesso test. Il ritmo di soglia di solito deriva da una nuotata pi\u00f9 lunga, mentre il CSS viene calcolato da due sforzi e fornisce un\u0027ancora pi\u00f9 ripetibile per il lavoro a intervalli."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Cos\u0027\u00e8 meglio per il triathlon e il ritmo in acque libere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il CSS \u00e8 solitamente il punto di partenza migliore perch\u00e9 riflette un ritmo sostenibile senza premiare eccessivamente la velocit\u00e0 a breve termine. Il ritmo di soglia pu\u00f2 ancora essere utile per le nuotate lunghe e costanti, ma il CSS \u00e8 solitamente pi\u00f9 facile da convertire in obiettivi di ritmo e lavoro a zone."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Come posso passare dal ritmo soglia alle zone di nuoto basate su CSS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Utilizza il tuo prossimo test di 400 e 200 metri per impostare il CSS, quindi l\u0027intervallo di ancoraggio lavora attorno a quel numero. Se ti alleni gi\u00e0 con T-Pace, confronta entrambi i numeri e utilizza la guida CSS pi\u00f9 le zone di allenamento per il nuoto per ricostruire le tue serie attorno a un ritmo aerobico ripetibile."
+      }
+    }
+    
+  ]
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Vai al contenuto</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/it/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/it/" 
+                                aria-current="">
+                                Casa
+                            </a></li><li class="has-submenu" ><a href="/it/getting-started/" class="nav-label">Impara</a><ul class="submenu"><li><a href="/it/getting-started/" 
+                                        aria-current="">
+                                        Inizia
+                                    </a></li><li><a href="/it/css/" 
+                                        aria-current="">
+                                        CSS
+                                    </a></li><li><a href="/it/training-zones/" 
+                                        aria-current="">
+                                        Zone
+                                    </a></li><li><a href="/it/training-load/" 
+                                        aria-current="">
+                                        Carico
+                                    </a></li><li><a href="/it/stss-calculator/" 
+                                        aria-current="">
+                                        Calcolatore sTSS
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/it/research/" class="nav-label">Scienza</a><ul class="submenu"><li><a href="/it/research/" 
+                                        aria-current="">
+                                        Ricerca
+                                    </a></li><li><a href="/it/formulas/" 
+                                        aria-current="">
+                                        Formule
+                                    </a></li><li><a href="/it/efficiency/" 
+                                        aria-current="">
+                                        Efficienza
+                                    </a></li><li><a href="/it/stroke-mechanics/" 
+                                        aria-current="">
+                                        Meccanica
+                                    </a></li><li><a href="/it/bibliography/" 
+                                        aria-current="">
+                                        Bibliografia
+                                    </a></li></ul></li><li><a href="/it/contact/" 
+                                aria-current="">
+                                Contatto
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Seleziona lingua"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" selected>
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            Korean
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာဘာသာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Српски
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            Chinese
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Attiva/disattiva menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Velocità critica di nuoto (CSS) e ritmo di soglia: quale conta?</h1><p class="lead">Per anni il "Threshold Pace" (T-Pace) è stato il gold standard. Nel 2026, il passaggio alla Critical Swim Speed ​​(CSS) sta ridefinendo il modo in cui gli atleti ritmicamente le loro sessioni e prevedono l’affaticamento del giorno della gara.</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl" id="quick-answer"><h2>🎯 La risposta rapida</h2><p><strong>T-Pace (pace soglia)</strong> è una stima generale del ritmo che puoi mantenere per un'ora, spesso utilizzata per impostare zone di allenamento ampie. È una metrica "pratica" ma meno granulare.</p><p><strong>CSS (velocità critica di nuoto)</strong> è la soglia "funzionale" derivata matematicamente da due diverse distanze (ad esempio, 400 m e 200 m). È il ritmo teorico che puoi sostenere senza sbattere contro il "Muro". Se sei un nuotatore di resistenza o un triatleta, il tuo CSS è il numero più importante nel tuo programma di allenamento.</p></div><h2 class="mt-2xl">Il cambiamento del 2026: dallo sforzo alla fisiologia</h2><p class="mb-md">Gestire la fatica in piscina è notoriamente difficile rispetto al ciclismo o alla corsa. Senza un misuratore di potenza, il ritmo è il nostro unico indicatore dell’intensità. Mentre molti nuotatori si affidano ancora ai ritmi da “cronometro” dei 1500 metri della vecchia scuola, gli allenatori moderni si sono spostati verso <strong>Modello CSS a due distanze</strong>.</p><p class="mb-xl">La differenza principale è <strong>Precisione vs. sforzo percepito</strong>. Un T-Pace basato su un singolo sforzo lungo spesso cattura la tua grinta mentale più della tua soglia metabolica. Il CSS, calcolato da due punti distinti sulla "Curva ritmo-durata", rivela l'effettivo limite aerobico del tuo motore.</p></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">Confronto metrico</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">Stimolazione soglia (stimolazione T)</h3><div class="card-content"><p><strong>La metrica "semplice".</strong></p><p class="mt-sm">Il T-Pace viene solitamente ricavato da un singolo sforzo massimale di 1500 o 1000 metri. Rappresenta la tua "Redline" per una nuotata continua.</p><ul class="mt-md"><li><strong>Pro:</strong> Semplice da capire. Un test, un numero. Ottimo per set lunghi e continui.</li><li><strong>Contro:</strong> Altamente sensibile agli errori di stimolazione. Non tiene conto della velocità con cui svanisci sotto la fatica. Tratta ogni nuotatore con lo stesso ritmo di 1500 metri come se avesse lo stesso profilo fisiologico.</li></ul></div></div><div class="card"><h3 class="card-title">Velocità critica di nuoto (CSS)</h3><div class="card-content"><p><strong>La metrica "funzionale".</strong></p><p class="mt-sm">Il CSS è una derivazione matematica basata su due distanze (tipicamente uno sforzo massimo di 400 me 200 m).</p><ul class="mt-md"><li><strong>Pro:</strong> Rimuove il bias di stimolazione. Prevede meglio il tuo comportamento a intervalli. Fornisce un "tetto aerobico" oggettivo.</li><li><strong>Contro:</strong> Richiede due test separati. Matematica leggermente più complessa (calcolata automaticamente in Swim Analytics). Richiede che i test vengano eseguiti con un riposo costante.</li></ul></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-xl">Perché il Delta è importante</h2><p class="mb-md">Il "Delta" è la differenza tra il ritmo dei 400 metri e quello dei 200 metri. Due nuotatori potrebbero avere entrambi un T-Pace di 1:40/100 m, ma i loro profili CSS potrebbero assomigliare a questo:</p><div class="grid grid-2 mb-xl"><div class="card bg-gray-50 border-none shadow-sm"><div class="card-content"><h3 class="visually-hidden" aria-hidden="true" data-az-a11y="inserted"></h3><h4 class="mb-sm">Nuotatore A ("Il Diesel")</h4><p>Piccolo delta tra 200 e 400 m. Questo nuotatore ha un'efficienza aerobica molto elevata ma una velocità di sprint inferiore. Il loro CSS è molto vicino al loro T-Pace.</p></div></div><div class="card bg-gray-50 border-none shadow-sm"><div class="card-content"><h4 class="mb-sm">Nuotatore B ("Il velocista")</h4><p>Grande delta. Ottima velocità sui 200 metri, ma diminuisce notevolmente sui 400 metri. Il loro CSS sarà inferiore a quanto suggerito dal T-Pace. Se provano ad allenarsi con un generico "T-Pace", cuoceranno costantemente il loro sistema anaerobico.</p></div></div></div><div class="callout callout-info mb-xl"><h3>📈 La formula CSS</h3><p><strong>CSS = (D1 - D2) / (T1 - T2)</strong></p><p class="mt-sm">Dove D1/D2 sono le due distanze e T1/T2 sono i tempi in secondi. Ciò rivela la "pendenza" del tuo ritmo sostenibile senza il rumore della tua impennata anaerobica iniziale.</p></div><h3>Come eseguire il test CSS (passo dopo passo)</h3><p class="mb-md">Per calcolare il tuo CSS, devi eseguire due prove massimali in giorni diversi (o con recupero completo nel mezzo) in un pool standard:</p><ol class="mb-xl"><li><strong>Riscaldamento:</strong> Esegui un riscaldamento approfondito e standardizzato (in genere da 400 a 600 m di bracciate e movimenti misti) per preparare il tuo corpo.</li><li><strong>Prova 1 (sforzo massimo di 400 m):</strong> Nuota per 400 metri il più velocemente possibile. Registra l'ora esatta. Tieni il ritmo in modo da non esaurirti nei primi 100 metri.</li><li><strong>Recupero attivo:</strong> Nuota per 100-200 metri in modo molto facile per eliminare l'acido lattico, seguito da 5-10 minuti di riposo.</li><li><strong>Prova 2 (sforzo massimo di 200 m):</strong> Nuota per 200 metri al massimo sforzo assoluto. Registra l'ora esatta.</li><li><strong>Calcola:</strong> Converti i tuoi tempi in secondi e applica la formula sopra oppure utilizza lo strumento di calcolo CSS in Swim Analytics per ottenere il tuo ritmo di ritmo sui 100 metri.</li></ol><h2>Quale dovresti usare?</h2><h3>Utilizzare il ritmo di soglia (T-Pace) se:</h3><ul class="mb-md"><li>Hai appena iniziato con l'allenamento basato sul ritmo.</li><li>Esegui solo nuotate lunghe e continue (3 km in acque libere +).</li><li>Non vuoi affrontare più sessioni di test.</li></ul><h3>Utilizza la velocità critica di nuoto (CSS) se:</h3><ul class="mb-xl"><li><strong>Triatleti e nuotatori maratoneti:</strong> Per evitare di "bruciare la candela" troppo presto in una gara.</li><li><strong>Allenamento a intervalli:</strong> Per impostare zone CSS + 2 o CSS - 1 specifiche che funzionano effettivamente.</li><li><strong>Monitoraggio dei progressi:</strong> Il CSS è più sensibile ai miglioramenti aerobici rispetto a un test generico di 1000 metri.</li></ul><h2>Domande frequenti su Ritmo soglia e CSS</h2><h3>Il CSS è uguale al ritmo soglia?</h3><p>No. Sono concetti di soglia correlati, ma non sono lo stesso test. Il ritmo di soglia di solito deriva da una nuotata più lunga, mentre il CSS viene calcolato da due sforzi e fornisce un'ancora più ripetibile per il lavoro a intervalli.</p><h3>Cos'è meglio per il triathlon e il ritmo in acque libere?</h3><p>Il CSS è solitamente il punto di partenza migliore perché riflette un ritmo sostenibile senza premiare eccessivamente la velocità a breve termine. Il ritmo di soglia può ancora essere utile per le nuotate lunghe e costanti, ma il CSS è solitamente più facile da convertire in obiettivi di ritmo e lavoro a zone.</p><h3>Come posso passare dal ritmo soglia alle zone di nuoto basate su CSS?</h3><p>Utilizza il tuo prossimo test di 400 e 200 metri per impostare il CSS, quindi l'intervallo di ancoraggio lavora attorno a quel numero. Se ti alleni già con T-Pace, confronta entrambi i numeri e utilizza la guida CSS più le zone di allenamento per il nuoto per ricostruire le tue serie attorno a un ritmo aerobico ripetibile.</p><div class="mt-2xl text-center"><h3 class="mb-md">Smetti di indovinare le zone della tua piscina.</h3><p class="mb-md">Swim Analytics ti aiuta a trasformare i CSS in pratiche zone della piscina, ritmo a intervalli e una visione più chiara del tuo massimale aerobico nel tempo.</p><a class="btn btn-primary btn-large" href="https://apps.apple.com/us/app/swim-analytics/id6753306284" rel="noopener" target="_blank">Scarica per iOS</a></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Scopri di più</h2><div class="grid grid-3 mt-md"><div class="card"><div class="card-content"><h3>La scienza dei CSS</h3><p>Guida dettagliata su come viene calcolata la velocità critica di nuoto e perché è il "potere critico" per l'acqua.</p><a class="btn btn-secondary btn-small mt-md" href="/it/css/">Visualizza la guida CSS →</a></div></div><div class="card"><div class="card-content"><h3>Zone di allenamento per il nuoto</h3><p>Come utilizzare il CSS o il T-Pace per impostare zone di intensità precise per ogni set di piscine.</p><a class="btn btn-secondary btn-small mt-md" href="/it/training-zones/">Visualizza la guida alle zone →</a></div></div><div class="card"><div class="card-content"><h3>Calcolatore CSS e guida al test</h3><p>Utilizza la formula CSS, gli esempi di ritmo e il flusso di lavoro dei test per convertire l'allenamento in stile soglia in zone di nuoto ripetibili.</p><a class="btn btn-secondary btn-small mt-md" href="/it/css/">Apri la Guida CSS →</a></div></div></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Albert Arnó</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p><a href="https://albertarno.net/" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 500; text-decoration: underline; color: var(--color-primary, #3182ce);">
+          🔗 About the author
+        </a></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="css-vs-threshold"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Velocità critica di nuoto (CSS) e ritmo di soglia (T-Pace)</h2><p class="ai-citation-answer">Il ritmo di soglia (T-Pace) è una stima generale del tuo sforzo massimo di 60 minuti, mentre la velocità critica di nuoto (CSS) è una soglia funzionale derivata matematicamente da due distanze di test separate. I CSS sono più accurati nell&#39;impostare le zone di allenamento a intervalli.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-04-10</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>velocità critica di nuoto rispetto al ritmo soglia · ritmo soglia del nuoto · velocità di nuoto critica · T-Pace · zone di allenamento per il nuoto</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../it/bibliography/">
+          
+          Bibliografia
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Scarica</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Scarica su App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Scarica su App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="DISPONIBILE SU Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="DISPONIBILE SU Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Disponibile in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link active"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    Korean
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာဘာသာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Српски
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    Chinese
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Swim Analytics. Tutti i diritti riservati
+            </p><ul class="footer-legal"><li><a href="/it/privacy/">Privacy</a></li><li><a href="/it/terms/">Termini</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Questo sito utilizza cookie per migliorare la tua esperienza.</p><a href="/it/privacy/" class="text-sm">Scopri di più</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Rifiuta</button><button id="cookie-accept" class="btn btn-primary btn-small">Accetta</button></div></div></div><script src="../../assets/js/core.min.js?v=ca03ad9e" defer></script><script src="../../assets/js/search.min.js?v=ca03ad9e" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

@@ -1,0 +1,793 @@
+<!DOCTYPE html><html lang="hu" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Kritikus úszási sebesség (CSS) vs küszöbtempó (T-Pace)</title><meta name="description" content="Hasonlítsa össze a kritikus úszási sebességet (CSS) és a küszöbtempót (T-Pace) az úszási zónákhoz, a triatlon ingerléshez és az intervallum edzéshez. Ismerje meg, melyik mérőszámot használja."><meta name="author" content="Albert Arnó"><meta name="keywords" content="kritikus úszási sebesség vs küszöbtempó, úszásküszöb tempó, kritikus úszási sebesség, T-Pace, úszóedzési zónák, triatlon úszás tempózás"><link rel="canonical" href="https://swim.analyticszone.app/hu/css-vs-threshold/"><meta property="article:published_time" content="2026-04-05T10:00:00Z"><meta property="article:modified_time" content="2026-04-10T14:30:00Z"><meta property="article:author" content="Albert Arnó"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/hu/css-vs-threshold/"><meta property="og:title" content="Kritikus úszási sebesség (CSS) vs küszöbtempó (T-Pace)"><meta property="og:description" content="Hasonlítsa össze a kritikus úszási sebességet (CSS) és a küszöbtempót (T-Pace) az úszási zónákhoz, a triatlon ingerléshez és az intervallum edzéshez. Ismerje meg, melyik mérőszámot használja."><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="hu_HU"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/hu/css-vs-threshold/"><meta name="twitter:title" content="Kritikus úszási sebesség (CSS) vs küszöbtempó (T-Pace)"><meta name="twitter:description" content="Hasonlítsa össze a kritikus úszási sebességet (CSS) és a küszöbtempót (T-Pace) az úszási zónákhoz, a triatlon ingerléshez és az intervallum edzéshez. Ismerje meg, melyik mérőszámot használja."><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/css-vs-threshold/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/css-vs-threshold/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/css-vs-threshold/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/css-vs-threshold/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/css-vs-threshold/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/css-vs-threshold/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=ca03ad9e"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "logo": "https://swim.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+swim@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/swimanalytics",
+    
+    "https://apps.apple.com/us/app/swim-analytics/id6753306284",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "hu"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Swim Analytics",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://swim.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "Albert Arnó"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Kritikus úszási sebesség (CSS) vs küszöbtempó (T-Pace)",
+  "description": "Hasonlítsa össze a kritikus úszási sebességet (CSS) és a küszöbtempót (T-Pace) az úszási zónákhoz, a triatlon ingerléshez és az intervallum edzéshez. Ismerje meg, melyik mérőszámot használja.",
+  "url": "https://swim.analyticszone.app/hu/css-vs-threshold/",
+  "inLanguage": "hu",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Swim Analytics",
+    "url": "https://swim.analyticszone.app"
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-10",
+  "keywords": ["kritikus úszási sebesség vs küszöbtempó", "úszásküszöb tempó", "kritikus úszási sebesség", "T-Pace", "úszóedzési zónák", "triatlon úszás tempózás"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "kritikus úszási sebesség vs küszöbtempó"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "úszásküszöb tempó"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "kritikus úszási sebesség"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "T-Pace"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "úszóedzési zónák"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "triatlon úszás tempózás"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Kritikus úszási sebesség (CSS) vs küszöbtempó (T-Pace)",
+  "description": "Hasonlítsa össze a kritikus úszási sebességet (CSS) és a küszöbtempót (T-Pace) az úszási zónákhoz, a triatlon ingerléshez és az intervallum edzéshez. Ismerje meg, melyik mérőszámot használja.",
+  "author": {
+    "@type": "Person",
+    "name": "Albert Arnó",
+    "url": "https://albertarno.net/",
+    "sameAs": ["https://onmedic.com/", "https://albertarno.net/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Swim Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://swim.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-10",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://swim.analyticszone.app/hu/css-vs-threshold/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    
+    {
+      "@type": "Question",
+      "name": "A CSS ugyanaz, mint a k\u00fcsz\u00f6btemp\u00f3?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nem. Ezek rokon k\u00fcsz\u00f6bfogalmak, de nem ugyanaz a teszt. A k\u00fcsz\u00f6btemp\u00f3 \u00e1ltal\u00e1ban egy hosszabb \u00fasz\u00e1sb\u00f3l ad\u00f3dik, m\u00edg a CSS-t k\u00e9t er\u0151fesz\u00edt\u00e9sb\u0151l sz\u00e1m\u00edtj\u00e1k, \u00e9s megism\u00e9telhet\u0151bb horgonyt ad az intervallummunk\u00e1hoz."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Melyik a jobb triatlonhoz \u00e9s ny\u00edltv\u00edzi temp\u00f3z\u00e1shoz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A CSS \u00e1ltal\u00e1ban a jobb kiindul\u00e1si pont, mert fenntarthat\u00f3 temp\u00f3t t\u00fckr\u00f6z an\u00e9lk\u00fcl, hogy a r\u00f6vid t\u00e1v\u00fa sebess\u00e9get t\u00faljutalmazn\u00e1. A k\u00fcsz\u00f6btemp\u00f3 tov\u00e1bbra is hasznos lehet hossz\u00fa, egyenletes \u00fasz\u00e1sokn\u00e1l, de a CSS-t \u00e1ltal\u00e1ban k\u00f6nnyebb ingerl\u00e9si c\u00e9lokk\u00e1 \u00e9s z\u00f3namunk\u00e1v\u00e1 alak\u00edtani."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Hogyan l\u00e9phetek \u00e1t a k\u00fcsz\u00f6btemp\u00f3r\u00f3l a CSS-alap\u00fa \u00fasz\u00f3z\u00f3n\u00e1kra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Haszn\u00e1lja a k\u00f6vetkez\u0151 400 \u00e9s 200 m\u00e9teres tesztet a CSS be\u00e1ll\u00edt\u00e1s\u00e1hoz, majd r\u00f6gz\u00edtse az intervallumot a sz\u00e1m k\u00f6r\u00fcl. Ha m\u00e1r edz T-Pace m\u00f3dszerrel, hasonl\u00edtsa \u00f6ssze mindk\u00e9t sz\u00e1mot, \u00e9s haszn\u00e1lja a CSS \u00fatmutat\u00f3t, valamint az \u00fasz\u00e1si edz\u00e9si z\u00f3n\u00e1kat, hogy a sorozatait ism\u00e9telhet\u0151 aerob temp\u00f3 k\u00f6r\u00e9 \u00e9p\u00edtse \u00fajra."
+      }
+    }
+    
+  ]
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Ugrás a tartalomra</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/hu/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/hu/" 
+                                aria-current="">
+                                Kezdőlap
+                            </a></li><li class="has-submenu" ><a href="/hu/getting-started/" class="nav-label">Tanulás</a><ul class="submenu"><li><a href="/hu/getting-started/" 
+                                        aria-current="">
+                                        Kezdő lépések
+                                    </a></li><li><a href="/hu/css/" 
+                                        aria-current="">
+                                        CSS
+                                    </a></li><li><a href="/hu/training-zones/" 
+                                        aria-current="">
+                                        Edzési zónák
+                                    </a></li><li><a href="/hu/training-load/" 
+                                        aria-current="">
+                                        Edzési terhelés
+                                    </a></li><li><a href="/hu/stss-calculator/" 
+                                        aria-current="">
+                                        sTSS kalkulátor
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/hu/research/" class="nav-label">Tudomány</a><ul class="submenu"><li><a href="/hu/research/" 
+                                        aria-current="">
+                                        Kutatás
+                                    </a></li><li><a href="/hu/formulas/" 
+                                        aria-current="">
+                                        Képletek
+                                    </a></li><li><a href="/hu/efficiency/" 
+                                        aria-current="">
+                                        Hatékonyság
+                                    </a></li><li><a href="/hu/stroke-mechanics/" 
+                                        aria-current="">
+                                        Technika
+                                    </a></li><li><a href="/hu/bibliography/" 
+                                        aria-current="">
+                                        Bibliográfia
+                                    </a></li></ul></li><li><a href="/hu/contact/" 
+                                aria-current="">
+                                Kapcsolat
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Nyelv kiválasztása"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" selected>
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            Korean
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာဘာသာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Српски
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            Chinese
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Menü váltása"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Kritikus úszási sebesség (CSS) vs. küszöbtempó: melyik számít?</h1><p class="lead">Évekig a "Treshold Pace" (T-Pace) volt az arany standard. 2026-ban a kritikus úszási sebességre (CSS) való átállás újradefiniálja a sportolók edzési tempóját és a versenynapi fáradtság előrejelzését.</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl" id="quick-answer"><h2>🎯 A gyors válasz</h2><p><strong>T-Pace (Treshold Pace)</strong> az egy órán keresztül fenntartható tempó általános becslése, amelyet gyakran széles edzési zónák beállítására használnak. Ez egy „praktikus”, de kevésbé szemcsés mérőszám.</p><p><strong>CSS (kritikus úszási sebesség)</strong> a "funkcionális" küszöb két különböző távolságból (pl. 400m és 200m) matematikailag származtatott. Ez az az elméleti tempó, amelyet a „fal” ütközése nélkül is fenntarthat. Ha Ön állóképességi úszó vagy triatlonista, akkor a CSS a legfontosabb szám az edzésprogramjában.</p></div><h2 class="mt-2xl">A 2026-os műszak: az erőfeszítéstől a fiziológiáig</h2><p class="mb-md">A fáradtság kezelése a medencében köztudottan nehéz a kerékpározáshoz vagy a futáshoz képest. Teljesítménymérő nélkül a tempó az egyetlen intenzitásmérőnk. Míg sok úszó még mindig a régi iskola 1500 méteres "időmérő" tempóira támaszkodik, a modern edzőképzés átkerült a <strong>Kéttávú CSS-modell</strong>.</p><p class="mb-xl">A fő különbség az <strong>Pontosság vs. észlelt erőfeszítés</strong>. Az egyetlen hosszú erőfeszítésen alapuló T-Pace gyakran jobban megragadja a mentális erőt, mint az anyagcsere-küszöböt. A CSS, amelyet a "Pace-Duration Curve" két különböző pontjából számítanak ki, felfedi a motor tényleges aerob határát.</p></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">Metrikus összehasonlítás</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">Küszöb tempó (T-Pace)</h3><div class="card-content"><p><strong>Az "egyszerű" metrika</strong></p><p class="mt-sm">A T-Pace általában egyetlen 1500 vagy 1000 méteres maximális erőfeszítésből származik. Ez a folyamatos úszás „Vörösvonalát” jelenti.</p><ul class="mt-md"><li><strong>Előnyök:</strong> Egyszerűen érthető. Egy teszt, egy szám. Kiváló hosszú, folyamatos sorozatokhoz.</li><li><strong>Hátrányok:</strong> Nagyon érzékeny az ingerlési hibákra. Nem veszi figyelembe, hogy milyen gyorsan fakul a fáradtság hatására. Minden úszót ugyanolyan 1500 méteres tempóval kezel, mint aki azonos fiziológiai profillal rendelkezik.</li></ul></div></div><div class="card"><h3 class="card-title">Kritikus úszási sebesség (CSS)</h3><div class="card-content"><p><strong>A „funkcionális” mérőszám</strong></p><p class="mt-sm">A CSS egy matematikai levezetés, amely két távolságon (általában egy 400 méteren és egy 200 méteres maximális erőfeszítésen) alapul.</p><ul class="mt-md"><li><strong>Előnyök:</strong> Eltávolítja az ingerlési torzítást. Időközönként jobban megjósolja viselkedését. Objektív "aerob plafont" biztosít.</li><li><strong>Hátrányok:</strong> Két külön tesztet igényel. Valamivel összetettebb matematika (automatikusan számítva a Swim Analyticsben). A vizsgálatokat következetes pihenéssel kell elvégezni.</li></ul></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-xl">Miért számít a Delta?</h2><p class="mb-md">A „delta” a különbség a 400 méteres és a 200 méteres tempó között. Lehet, hogy két úszó T-Pace-je 1:40/100 m, de a CSS-profiljuk így nézhet ki:</p><div class="grid grid-2 mb-xl"><div class="card bg-gray-50 border-none shadow-sm"><div class="card-content"><h3 class="visually-hidden" aria-hidden="true" data-az-a11y="inserted"></h3><h4 class="mb-sm">Úszó A ("The Diesel")</h4><p>Kis delta 200m és 400m között. Ennek az úszónak nagyon magas az aerob hatékonysága, de alacsonyabb a sprintsebessége. CSS-jük nagyon közel áll a T-Pace-hez.</p></div></div><div class="card bg-gray-50 border-none shadow-sm"><div class="card-content"><h4 class="mb-sm">B úszó ("The Sprinter")</h4><p>Nagy delta. Nagy 200 méteres sebesség, de 400 méteren jelentősen csökken. CSS-jük alacsonyabb lesz, mint azt a T-Pace sugallja. Ha megpróbálnak egy általános "T-Pace" szerint edzeni, akkor folyamatosan túlfűtik az anaerob rendszerüket.</p></div></div></div><div class="callout callout-info mb-xl"><h3>📈 A CSS-képlet</h3><p><strong>CSS = (D1 - D2) / (T1 - T2)</strong></p><p class="mt-sm">Ahol D1/D2 a két távolság, T1/T2 pedig az idők másodpercben. Ez felfedi fenntartható tempójának „lejtőjét” a kezdeti anaerob hullámzás zaja nélkül.</p></div><h3>A CSS-teszt végrehajtása (lépésről lépésre)</h3><p class="mb-md">A CSS kiszámításához két maximális próbát kell végrehajtania különböző napokon (vagy a kettő között teljes helyreállítással) egy szabványos készletben:</p><ol class="mb-xl"><li><strong>Bemelegítés:</strong> Végezzen alapos, szabványos bemelegítést (jellemzően 400-600 méter vegyes mozdulatokkal és építkezésekkel), hogy felkészítse testét.</li><li><strong>1. próba (400 m maximális erőkifejtés):</strong> A lehető leggyorsabban ússzon 400 métert. Jegyezze fel a pontos időt. Tempózza magát, hogy ne égjen ki az első 100 méteren.</li><li><strong>Aktív helyreállítás:</strong> Ússzon 100-200 métert, nagyon könnyen öblítse le a tejsavat, majd 5-10 perc pihenő következik.</li><li><strong>2. próba (200 m maximális erőkifejtés):</strong> Ússz 200 métert abszolút maximális erőkifejtéssel. Jegyezze fel a pontos időt.</li><li><strong>Számítsa ki:</strong> Váltsa át az időket másodpercekre, és alkalmazza a fenti képletet, vagy használja a Swim Analytics CSS-számítóeszközét a 100 méteres tempójának kiszámításához.</li></ol><h2>Melyiket érdemes használni?</h2><h3>Használja a Threshol Pace (T-Pace) funkciót, ha:</h3><ul class="mb-md"><li>Még csak most kezdi a tempóalapú edzést.</li><li>Csak hosszú, folyamatos úszásokat végezhet (nyílt vízen 3 km+).</li><li>Nem szeretne több tesztelési munkamenettel foglalkozni.</li></ul><h3>Használjon kritikus úszási sebességet (CSS), ha:</h3><ul class="mb-xl"><li><strong>Triatlonosok és maratonúszók:</strong> Hogy elkerüljük a versenyen túl korai „égetni a gyertyát”.</li><li><strong>Intervallum edzés:</strong> A ténylegesen működő konkrét CSS + 2s vagy CSS - 1s zónák beállítása.</li><li><strong>Haladás nyomon követése:</strong> A CSS érzékenyebb az aerob fejlesztésekre, mint az általános 1000 méteres teszt.</li></ul><h2>Threshold Pace vs CSS GYIK</h2><h3>A CSS ugyanaz, mint a küszöbtempó?</h3><p>Nem. Ezek rokon küszöbfogalmak, de nem ugyanaz a teszt. A küszöbtempó általában egy hosszabb úszásból adódik, míg a CSS-t két erőfeszítésből számítják, és megismételhetőbb horgonyt ad az intervallummunkához.</p><h3>Melyik a jobb triatlonhoz és nyíltvízi tempózáshoz?</h3><p>A CSS általában a jobb kiindulási pont, mert fenntartható tempót tükröz anélkül, hogy a rövid távú sebességet túljutalmazná. A küszöbtempó továbbra is hasznos lehet hosszú, egyenletes úszásoknál, de a CSS-t általában könnyebb ingerlési célokká és zónamunkává alakítani.</p><h3>Hogyan léphetek át a küszöbtempóról a CSS-alapú úszózónákra?</h3><p>Használja a következő 400 és 200 méteres tesztet a CSS beállításához, majd rögzítse az intervallumot a szám körül. Ha már edz T-Pace módszerrel, hasonlítsa össze mindkét számot, és használja a CSS útmutatót, valamint az úszási edzési zónákat, hogy a sorozatait ismételhető aerob tempó köré építse újra.</p><div class="mt-2xl text-center"><h3 class="mb-md">Hagyd abba a medencezónáid találgatását.</h3><p class="mb-md">A Swim Analytics segítségével a CSS-t praktikus medencezónákká alakíthatja, intervallum ingerlést és az idő múlásával tisztábban látja az aerob plafont.</p><a class="btn btn-primary btn-large" href="https://apps.apple.com/us/app/swim-analytics/id6753306284" rel="noopener" target="_blank">Letöltés iOS számára</a></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>További információ</h2><div class="grid grid-3 mt-md"><div class="card"><div class="card-content"><h3>A CSS tudománya</h3><p>Részletes útmutató a kritikus úszási sebesség kiszámításáról, és arról, hogy miért ez a „kritikus ereje” a víz számára.</p><a class="btn btn-secondary btn-small mt-md" href="/hu/css/">CSS útmutató megtekintése →</a></div></div><div class="card"><div class="card-content"><h3>Úszásoktatási zónák</h3><p>A CSS vagy a T-Pace használata pontos intenzitási zónák beállítására minden medencekészlethez.</p><a class="btn btn-secondary btn-small mt-md" href="/hu/training-zones/">Zónák útmutató megtekintése →</a></div></div><div class="card"><div class="card-content"><h3>CSS kalkulátor és teszt útmutató</h3><p>Használja a CSS-képletet, az ingerlési példákat és a tesztelési munkafolyamatot, hogy a küszöb-stílusú edzést megismételhető úszózónákká alakítsa.</p><a class="btn btn-secondary btn-small mt-md" href="/hu/css/">Nyissa meg a CSS útmutatót →</a></div></div></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Albert Arnó</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p><a href="https://albertarno.net/" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 500; text-decoration: underline; color: var(--color-primary, #3182ce);">
+          🔗 About the author
+        </a></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="css-vs-threshold"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Kritikus úszási sebesség (CSS) vs küszöbtempó (T-Pace)</h2><p class="ai-citation-answer">A Threshold Pace (T-Pace) a 60 perces maximális erőfeszítés általános becslése, míg a Critical Swim Speed ​​(CSS) egy matematikailag levezetett funkcionális küszöb két különböző teszttávolságból. A CSS pontosabb az intervallum edzési zónák beállítására.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-04-10</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>kritikus úszási sebesség vs küszöbtempó · úszásküszöb tempó · kritikus úszási sebesség · T-Pace · úszóedzési zónák</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../hu/bibliography/">
+          
+          Bibliográfia
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Letöltés</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Töltse le a App Store-ről"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Töltse le a App Store-ről" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Szerezd meg a Google Playen"><img src="../../assets/images/badge-google-play.svg"
+                            alt="Szerezd meg a Google Playen" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Elérhető:</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link active"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    Korean
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာဘာသာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Српски
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    Chinese
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Swim Analytics. Minden jog fenntartva
+            </p><ul class="footer-legal"><li><a href="/hu/privacy/">Adatvédelem</a></li><li><a href="/hu/terms/">Feltételek</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Ez a weboldal sütiket használ a felhasználói élmény javítása érdekében.</p><a href="/hu/privacy/" class="text-sm">Tudj meg többet</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Elutasítás</button><button id="cookie-accept" class="btn btn-primary btn-small">Elfogadás</button></div></div></div><script src="../../assets/js/core.min.js?v=ca03ad9e" defer></script><script src="../../assets/js/search.min.js?v=ca03ad9e" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

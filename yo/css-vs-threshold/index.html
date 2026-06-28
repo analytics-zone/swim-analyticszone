@@ -1,0 +1,793 @@
+<!DOCTYPE html><html lang="yo" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Iyara We to Lominu (CSS) vs Pace Ibẹrẹ (T-Pace)</title><meta name="description" content="Ṣe afiwe Iyara Swim Critical (CSS) ati Pace Ilẹ-ilẹ (T-Pace) fun awọn agbegbe iwẹ, pacing triathlon, ati ikẹkọ aarin. Kọ ẹkọ metiriki wo lati lo."><meta name="author" content="Albert Arnó"><meta name="keywords" content="lominu ni we iyara vs ala Pace, odo ala Pace, lominu ni we iyara, T-Pace, awọn agbegbe ikẹkọ we, triathlon we pacing"><link rel="canonical" href="https://swim.analyticszone.app/yo/css-vs-threshold/"><meta property="article:published_time" content="2026-04-05T10:00:00Z"><meta property="article:modified_time" content="2026-04-10T14:30:00Z"><meta property="article:author" content="Albert Arnó"><meta property="og:type" content="article"><meta property="og:url" content="https://swim.analyticszone.app/yo/css-vs-threshold/"><meta property="og:title" content="Iyara We to Lominu (CSS) vs Pace Ibẹrẹ (T-Pace)"><meta property="og:description" content="Ṣe afiwe Iyara Swim Critical (CSS) ati Pace Ilẹ-ilẹ (T-Pace) fun awọn agbegbe iwẹ, pacing triathlon, ati ikẹkọ aarin. Kọ ẹkọ metiriki wo lati lo."><meta property="og:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="yo_NG"><meta property="og:site_name" content="Swim Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://swim.analyticszone.app/yo/css-vs-threshold/"><meta name="twitter:title" content="Iyara We to Lominu (CSS) vs Pace Ibẹrẹ (T-Pace)"><meta name="twitter:description" content="Ṣe afiwe Iyara Swim Critical (CSS) ati Pace Ilẹ-ilẹ (T-Pace) fun awọn agbegbe iwẹ, pacing triathlon, ati ikẹkọ aarin. Kọ ẹkọ metiriki wo lati lo."><meta name="twitter:image" content="https://swim.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@swimanalytics"><meta name="twitter:creator" content="@swimanalytics"><link rel="alternate" hreflang="ca"
+    href="https://swim.analyticszone.app/ca/css-vs-threshold/"><link rel="alternate" hreflang="en"
+    href="https://swim.analyticszone.app/en/css-vs-threshold/"><link rel="alternate" hreflang="es"
+    href="https://swim.analyticszone.app/es/css-vs-threshold/"><link rel="alternate" hreflang="fr"
+    href="https://swim.analyticszone.app/fr/css-vs-threshold/"><link rel="alternate" hreflang="ru"
+    href="https://swim.analyticszone.app/ru/css-vs-threshold/"><link rel="alternate" hreflang="x-default"
+    href="https://swim.analyticszone.app/en/css-vs-threshold/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6753306284"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=ca03ad9e"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "logo": "https://swim.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+swim@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/swimanalytics",
+    
+    "https://apps.apple.com/us/app/swim-analytics/id6753306284",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Swim Analytics",
+  "url": "https://swim.analyticszone.app",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "yo"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Swim Analytics",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://swim.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "Albert Arnó"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/swim-analytics/id6753306284"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Iyara We to Lominu (CSS) vs Pace Ibẹrẹ (T-Pace)",
+  "description": "Ṣe afiwe Iyara Swim Critical (CSS) ati Pace Ilẹ-ilẹ (T-Pace) fun awọn agbegbe iwẹ, pacing triathlon, ati ikẹkọ aarin. Kọ ẹkọ metiriki wo lati lo.",
+  "url": "https://swim.analyticszone.app/yo/css-vs-threshold/",
+  "inLanguage": "yo",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Swim Analytics",
+    "url": "https://swim.analyticszone.app"
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-10",
+  "keywords": ["lominu ni we iyara vs ala Pace", "odo ala Pace", "lominu ni we iyara", "T-Pace", "awọn agbegbe ikẹkọ we", "triathlon we pacing"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "lominu ni we iyara vs ala Pace"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "odo ala Pace"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "lominu ni we iyara"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "T-Pace"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "awọn agbegbe ikẹkọ we"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "triathlon we pacing"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Iyara We to Lominu (CSS) vs Pace Ibẹrẹ (T-Pace)",
+  "description": "Ṣe afiwe Iyara Swim Critical (CSS) ati Pace Ilẹ-ilẹ (T-Pace) fun awọn agbegbe iwẹ, pacing triathlon, ati ikẹkọ aarin. Kọ ẹkọ metiriki wo lati lo.",
+  "author": {
+    "@type": "Person",
+    "name": "Albert Arnó",
+    "url": "https://albertarno.net/",
+    "sameAs": ["https://onmedic.com/", "https://albertarno.net/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Swim Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://swim.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-10",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://swim.analyticszone.app/yo/css-vs-threshold/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    
+    {
+      "@type": "Question",
+      "name": "Nj\u1eb9 CSS j\u1eb9 kanna bi iyara ala bi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rara. W\u1ecdn j\u1eb9 aw\u1ecdn im\u1ecdran ala-il\u1eb9 ti o ni ibatan, \u1e63ugb\u1ecdn w\u1ecdn kii \u1e63e idanwo kanna. Pace ala maa n wa lati odo gigun kan, lakoko ti CSS \u1e63e i\u1e63iro lati aw\u1ecdn akitiyan meji ati pe o funni ni oran atunwi di\u1eb9 sii fun i\u1e63\u1eb9 aarin."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Ewo ni o dara jul\u1ecd fun triathlon ati \u1e63i\u1e63an omi-\u00ecm\u1ecd?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSS maa n j\u1eb9 aaye ib\u1eb9r\u1eb9 ti o dara jul\u1ecd nitori pe o \u1e63e afihan iyara alagbero laisi iyara akoko kukuru ti o ni ere pup\u1ecd. Iyara \u1eb9nu-\u1ecdna tun le wulo fun aw\u1ecdn wiw\u1eb9 gigun, \u1e63ugb\u1ecdn CSS nigbagbogbo r\u1ecdrun lati yipada si aw\u1ecdn ibi-af\u1eb9de pacing ati i\u1e63\u1eb9 agbegbe."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Bawo ni MO \u1e63e gbe lati iyara iloro si aw\u1ecdn agbegbe iw\u1eb9 orisun CSS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lo idanwo 400m ati 200m at\u1eb9le r\u1eb9 lati \u1e63eto CSS, l\u1eb9hinna i\u1e63\u1eb9 aarin igbaduro ni ayika n\u1ecdmba y\u1eb9n. Ti o ba ti \u1e63e ik\u1eb9k\u1ecd t\u1eb9l\u1eb9 nipas\u1eb9 T-Pace, \u1e63e afiwe aw\u1ecdn n\u1ecdmba mejeeji ki o lo it\u1ecds\u1ecdna CSS p\u1eb9lu aw\u1ecdn agbegbe ik\u1eb9k\u1ecd wiw\u1eb9 lati tun aw\u1ecdn eto r\u1eb9 \u1e63e ni ayika iyara aerobic ti o le tun \u1e63e."
+      }
+    }
+    
+  ]
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Fo si akoonu</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/yo/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Swim Analytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Swim Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/yo/" 
+                                aria-current="">
+                                Ile
+                            </a></li><li class="has-submenu" ><a href="/yo/getting-started/" class="nav-label">Kọ</a><ul class="submenu"><li><a href="/yo/getting-started/" 
+                                        aria-current="">
+                                        Bibẹrẹ
+                                    </a></li><li><a href="/yo/css/" 
+                                        aria-current="">
+                                        CSS
+                                    </a></li><li><a href="/yo/training-zones/" 
+                                        aria-current="">
+                                        Awọn agbegbe ikẹkọ
+                                    </a></li><li><a href="/yo/training-load/" 
+                                        aria-current="">
+                                        Ẹru ikẹkọ
+                                    </a></li><li><a href="/yo/stss-calculator/" 
+                                        aria-current="">
+                                        Onínọmbà sTSS
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/yo/research/" class="nav-label">Imọ-jinlẹ</a><ul class="submenu"><li><a href="/yo/research/" 
+                                        aria-current="">
+                                        Iwadi
+                                    </a></li><li><a href="/yo/formulas/" 
+                                        aria-current="">
+                                        Awọn agbekalẹ
+                                    </a></li><li><a href="/yo/efficiency/" 
+                                        aria-current="">
+                                        Iṣẹ ṣiṣe
+                                    </a></li><li><a href="/yo/stroke-mechanics/" 
+                                        aria-current="">
+                                        Mechanics ti Stroke
+                                    </a></li><li><a href="/yo/bibliography/" 
+                                        aria-current="">
+                                        Iwe itan
+                                    </a></li></ul></li><li><a href="/yo/contact/" 
+                                aria-current="">
+                                Kan si
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Yan ede"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            Korean
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာဘာသာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Српски
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" selected>
+                            Yorùbá
+                        </option><option value="zh" >
+                            Chinese
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://run.analyticszone.app" class="suite-app-link">Run Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Yi akojọ aṣayan pada"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Iyara We to Lominu (CSS) vs. Pace Ibalẹ: Ewo Ni Pataki?</h1><p class="lead">Fun awọn ọdun, "Iwọn Iwọn" (T-Pace) jẹ idiwọn goolu. Ni ọdun 2026, iyipada si Iyara Swim Critical (CSS) n ṣe atuntu bi awọn elere idaraya ṣe n yara awọn akoko wọn ati asọtẹlẹ rirẹ ọjọ-ije.</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl" id="quick-answer"><h2>🎯 Idahun Yara naa</h2><p><strong>T-Pace (Iwọn Ilọsiwaju)</strong> jẹ iṣiro gbogbogbo ti iyara ti o le ṣetọju fun wakati kan, nigbagbogbo lo fun ṣeto awọn agbegbe ikẹkọ gbooro. O ti wa ni a "wulo" sugbon kere granular metric.</p><p><strong>CSS (Iyara we to ṣe pataki)</strong> jẹ ala “iṣẹ-ṣiṣe” ti a gba ni mathematiki lati awọn ijinna meji ti o yatọ (fun apẹẹrẹ, 400m ati 200m). O ti wa ni awọn tumq si Pace ti o le fowosowopo lai kọlu awọn "Odi." Ti o ba jẹ oluwẹwẹ ifarada tabi ẹlẹrin-mẹta, CSS rẹ jẹ nọmba pataki julọ ninu eto ikẹkọ rẹ.</p></div><h2 class="mt-2xl">Iyipada 2026: Lati Igbiyanju si Ẹkọ-ara</h2><p class="mb-md">Ṣiṣakoso rirẹ ninu adagun-odo jẹ olokiki ti o nira ni akawe si gigun kẹkẹ tabi ṣiṣe. Laisi mita agbara, iyara jẹ aṣoju nikan wa fun kikankikan. Lakoko ti ọpọlọpọ awọn odo tun gbekele ile-iwe atijọ 1500m “idanwo akoko-akoko”, ikẹkọ ode oni ti lọ si <strong>Meji-ijinna CSS Awoṣe</strong>.</p><p class="mb-xl">Iyatọ akọkọ ni <strong>Konge vs akitiyan ti a ti fiyesi</strong>. T-Pace ti o da lori igbiyanju gigun kan nigbagbogbo n gba grit ọpọlọ rẹ diẹ sii ju ala ti iṣelọpọ rẹ. CSS, ti a ṣe iṣiro lati awọn aaye ọtọtọ meji lori “Pace-Duration Curve” rẹ ṣe afihan opin aerobic gangan ti ẹrọ rẹ.</p></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">Ifiwera Metiriki</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">Iyara Ipele (T-Pace)</h3><div class="card-content"><p><strong>Metiriki "rọrun".</strong></p><p class="mt-sm">T-Pace ti wa ni maa yo lati kan nikan 1500m tabi 1000m o pọju akitiyan . O duro rẹ "Redline" fun a lemọlemọfún we.</p><ul class="mt-md"><li><strong>Aleebu:</strong> Rọrun lati ni oye. Idanwo kan, nọmba kan. Nla fun gun, lemọlemọfún tosaaju.</li><li><strong>Kosi:</strong> Ni ifarabalẹ ga si awọn aṣiṣe pacing. Ko ṣe akọọlẹ fun bi o ṣe yara ti o rọ labẹ rirẹ. Ṣe itọju gbogbo oluwẹwẹ pẹlu iyara 1500m kanna bi nini profaili ti ẹkọ iṣe-ara kanna.</li></ul></div></div><div class="card"><h3 class="card-title">Iyara we to ṣe pataki (CSS)</h3><div class="card-content"><p><strong>Metiriki "Iṣẹ-ṣiṣe".</strong></p><p class="mt-sm">CSS jẹ itọsẹ mathematiki ti o da lori awọn ijinna meji (paapaa 400m ati igbiyanju 200m ti o pọju).</p><ul class="mt-md"><li><strong>Aleebu:</strong> Yọ aibikita pacing kuro. Dara julọ ṣe asọtẹlẹ ihuwasi rẹ ni awọn aaye arin. Pese ohun idi "aerobic aja."</li><li><strong>Kosi:</strong> Nilo meji lọtọ igbeyewo. Iṣiro-diẹ idiju diẹ sii (iṣiro-laifọwọyi ni Awọn atupale we). Nilo awọn idanwo lati ṣe pẹlu isinmi deede.</li></ul></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-xl">Kí nìdí Delta ọrọ</h2><p class="mb-md">“Delta” jẹ iyatọ laarin iyara 400m rẹ ati iyara 200m rẹ. Awọn oluwẹwẹ meji le mejeeji ni T-Pace ti 1:40/100m, ṣugbọn awọn profaili CSS wọn le dabi eyi:</p><div class="grid grid-2 mb-xl"><div class="card bg-gray-50 border-none shadow-sm"><div class="card-content"><h3 class="visually-hidden" aria-hidden="true" data-az-a11y="inserted"></h3><h4 class="mb-sm">Swimmer A ("The Diesel")</h4><p>Delta kekere laarin 200m ati 400m. Oluwẹwẹ yii ni ṣiṣe aerobic ti o ga pupọ ṣugbọn iyara isunmi kekere. CSS wọn wa nitosi T-Pace wọn.</p></div></div><div class="card bg-gray-50 border-none shadow-sm"><div class="card-content"><h4 class="mb-sm">Swimmer B ("The Sprinter")</h4><p>Delta nla. Iyara 200m nla ṣugbọn o lọ silẹ ni pataki lori 400m. CSS wọn yoo kere ju T-Pace wọn ni imọran. Ti wọn ba gbiyanju lati ṣe ikẹkọ ni “T-Pace” jeneriki, wọn yoo maa se eto anaerobic wọn nigbagbogbo.</p></div></div></div><div class="callout callout-info mb-xl"><h3>📈 Ilana CSS</h3><p><strong>CSS = (D1 - D2) / (T1 - T2)</strong></p><p class="mt-sm">Nibo ni D1/D2 jẹ awọn ijinna meji ati T1/T2 jẹ awọn akoko ni iṣẹju-aaya. Eyi ṣe afihan “itẹ” ti iyara alagbero rẹ laisi ariwo ti iṣẹ abẹ anaerobic akọkọ rẹ.</p></div><h3>Bii o ṣe le Ṣe Idanwo CSS (Igbese-nipasẹ-Igbese)</h3><p class="mb-md">Lati ṣe iṣiro CSS rẹ, o nilo lati ṣe awọn idanwo ti o pọju meji ni awọn ọjọ oriṣiriṣi (tabi pẹlu imularada ni kikun laarin) ni adagun-odo kan:</p><ol class="mb-xl"><li><strong>Igbagbo:</strong> Ṣe igbona ni kikun, iwọnwọn (nigbagbogbo 400m si 600m ti awọn ikọlu adalu ati kọ) lati ṣeto ara rẹ.</li><li><strong>Idanwo 1 (Igbiyanju 400m ti o pọju):</strong> We 400m ni yarayara bi o ti ṣee. Ṣe igbasilẹ akoko gangan. Pace ara rẹ ki o ma ba sun ni 100m akọkọ.</li><li><strong>Imularada lọwọ:</strong> We 100m si 200m rọrun pupọ lati yọ jade lactic acid, atẹle nipa iṣẹju 5-10 ti isinmi.</li><li><strong>Idanwo 2 (Igbiyanju ti o pọju 200m):</strong> We 200m ni idi ti o pọju akitiyan. Ṣe igbasilẹ akoko gangan.</li><li><strong>Ṣe iṣiro:</strong> Yipada awọn akoko rẹ si iṣẹju-aaya ki o lo agbekalẹ ti o wa loke, tabi lo ohun elo iṣiro CSS ni Awọn itupalẹ Swim lati gba iyara 100m rẹ.</li></ol><h2>Ewo Ni O yẹ O Lo?</h2><h3>Lo Pace Ibẹrẹ (T-Pace) ti o ba jẹ:</h3><ul class="mb-md"><li>O kan bẹrẹ pẹlu ikẹkọ ti o da lori iyara.</li><li>Iwọ nikan ṣe gigun, awọn iwẹ lemọlemọfún (Omi Ṣii 3km+).</li><li>O ko fẹ lati ṣe pẹlu awọn akoko idanwo pupọ.</li></ul><h3>Lo Iyara we Lominu (CSS) ti o ba jẹ:</h3><ul class="mb-xl"><li><strong>Mẹta-mẹta &amp; Marathon Swimmers:</strong> Lati yago fun “sisun abẹla” ni kutukutu ere-ije kan.</li><li><strong>Ikẹkọ aarin:</strong> Lati ṣeto CSS + 2s kan pato tabi CSS - awọn agbegbe 1s ti o ṣiṣẹ gaan.</li><li><strong>Ilọsiwaju titele:</strong> CSS ṣe akiyesi diẹ sii si awọn ilọsiwaju aerobic ju idanwo jeneriki 1000m lọ.</li></ul><h2>Ala Pace vs CSS FAQ</h2><h3>Njẹ CSS jẹ kanna bi iyara ala bi?</h3><p>Rara. Wọn jẹ awọn imọran ala-ilẹ ti o ni ibatan, ṣugbọn wọn kii ṣe idanwo kanna. Pace ala maa n wa lati odo gigun kan, lakoko ti CSS ṣe iṣiro lati awọn akitiyan meji ati pe o funni ni oran atunwi diẹ sii fun iṣẹ aarin.</p><h3>Ewo ni o dara julọ fun triathlon ati ṣiṣan omi-ìmọ?</h3><p>CSS maa n jẹ aaye ibẹrẹ ti o dara julọ nitori pe o ṣe afihan iyara alagbero laisi iyara akoko kukuru ti o ni ere pupọ. Iyara ẹnu-ọna tun le wulo fun awọn wiwẹ gigun, ṣugbọn CSS nigbagbogbo rọrun lati yipada si awọn ibi-afẹde pacing ati iṣẹ agbegbe.</p><h3>Bawo ni MO ṣe gbe lati iyara iloro si awọn agbegbe iwẹ orisun CSS?</h3><p>Lo idanwo 400m ati 200m atẹle rẹ lati ṣeto CSS, lẹhinna iṣẹ aarin igbaduro ni ayika nọmba yẹn. Ti o ba ti ṣe ikẹkọ tẹlẹ nipasẹ T-Pace, ṣe afiwe awọn nọmba mejeeji ki o lo itọsọna CSS pẹlu awọn agbegbe ikẹkọ wiwẹ lati tun awọn eto rẹ ṣe ni ayika iyara aerobic ti o le tun ṣe.</p><div class="mt-2xl text-center"><h3 class="mb-md">Duro lafaimo awọn agbegbe adagun-odo rẹ.</h3><p class="mb-md">Awọn atupale wewe ṣe iranlọwọ fun ọ lati yi CSS pada si awọn agbegbe adagun-odo ti o wulo, fifẹ aarin, ati wiwo ti o han gbangba ti aja aerobic rẹ ni akoko pupọ.</p><a class="btn btn-primary btn-large" href="https://apps.apple.com/us/app/swim-analytics/id6753306284" rel="noopener" target="_blank">Ṣe igbasilẹ fun iOS</a></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Kọ ẹkọ diẹ sii</h2><div class="grid grid-3 mt-md"><div class="card"><div class="card-content"><h3>Imọ ti CSS</h3><p>Itọsọna alaye lori bii Iyara Swim Critical ti ṣe iṣiro ati idi ti o jẹ “Agbara Pataki” fun omi.</p><a class="btn btn-secondary btn-small mt-md" href="/yo/css/">Wo Itọsọna CSS →</a></div></div><div class="card"><div class="card-content"><h3>Awọn agbegbe Ikẹkọ Odo</h3><p>Bii o ṣe le lo CSS tabi T-Pace rẹ lati ṣeto awọn agbegbe kikankikan deede fun gbogbo ṣeto adagun-odo.</p><a class="btn btn-secondary btn-small mt-md" href="/yo/training-zones/">Wo Itọsọna Awọn agbegbe →</a></div></div><div class="card"><div class="card-content"><h3>Ẹrọ iṣiro CSS ati Itọsọna Idanwo</h3><p>Lo agbekalẹ CSS, awọn apẹẹrẹ pacing, ati ṣiṣayẹwo ṣiṣiṣẹsẹhin lati ṣe iyipada ikẹkọ ara-ọna si awọn agbegbe iwẹ ti o le tun ṣe.</p><a class="btn btn-secondary btn-small mt-md" href="/yo/css/">Ṣii Itọsọna CSS →</a></div></div></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Albert Arnó</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p><a href="https://albertarno.net/" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 500; text-decoration: underline; color: var(--color-primary, #3182ce);">
+          🔗 About the author
+        </a></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="css-vs-threshold"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Iyara We to Lominu (CSS) vs Pace Ibẹrẹ (T-Pace)</h2><p class="ai-citation-answer">Pace Ala (T-Pace) jẹ iṣiro gbogbogbo ti igbiyanju iṣẹju 60 ti o pọju, lakoko ti Iyara Swim Critical (CSS) jẹ iloro iṣẹ ṣiṣe ti mathematiki lati awọn ijinna idanwo lọtọ meji. CSS jẹ deede diẹ sii fun ṣeto awọn agbegbe ikẹkọ aarin.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-04-10</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>lominu ni we iyara vs ala Pace · odo ala Pace · lominu ni we iyara · T-Pace · awọn agbegbe ikẹkọ we</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../yo/bibliography/">
+          
+          Iwe itan
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Swim Analytics</h2><p>Track Critical Swim Speed, Training Stress Score, and performance metrics with Swim Analytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Gba lati ayelujara</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/swim-analytics/id6753306284" target="_blank" rel="noopener"
+                        aria-label="Ṣe igbasilẹ lori App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Ṣe igbasilẹ lori App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.swimanalytics" target="_blank" rel="noopener"
+                        aria-label="Gba lori Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="Gba lori Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Wa ninu</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    Korean
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာဘာသာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Српски
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link active"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    Chinese
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Swim Analytics. Gbogbo ẹtọ ni a tọju
+            </p><ul class="footer-legal"><li><a href="/yo/privacy/">Ikọkọ</a></li><li><a href="/yo/terms/">Awọn ofin</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Oju opo wẹẹbu yi nlo awọn kukisi lati mu iriri rẹ dara si.</p><a href="/yo/privacy/" class="text-sm">Kọ diẹ sii</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Kọ</button><button id="cookie-accept" class="btn btn-primary btn-small">Gba</button></div></div></div><script src="../../assets/js/core.min.js?v=ca03ad9e" defer></script><script src="../../assets/js/search.min.js?v=ca03ad9e" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-PMPRFNH360" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>
